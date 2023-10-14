@@ -1,0 +1,51 @@
+* {
+  overscroll-behavior: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #111111;
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(20deg, #111111, #302f31);
+  font-size: x-large;
+  text-align: center;
+  margin: 0;
+}
+
+/* Styles for the header containing the logo */
+.header {
+  text-align: center;
+  margin-bottom: 20px; /* Add space between the logo and construction icons */
+}
+
+/* Style for the logo */
+.bear-logo {
+  width: 200px; /* Adjust the width to your preference */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens here */
+  .bear-logo {
+    width: 150px; /* Adjust the logo size for mobile */
+  }
+  .content {
+    font-size: 1.5em; /* Adjust the icon size for mobile */
+  }
+}
+
+.footer-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #474747; /* Text color for the footer */
+  padding: 10px;
+}
