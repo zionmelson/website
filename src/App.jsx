@@ -1,13 +1,7 @@
 import bear from "./assets/bear.png";
 import Footer from "./components/Footer";
-import Alert from "./components/Alert";
-import Profile from "./components/Profile";
 
 import "./App.css";
-
-function testAlerts() {}
-function testProfile() {}
-function testExpProfile() {}
 
 function App() {
   return (
