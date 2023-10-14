@@ -10,6 +10,7 @@ function App() {
         <img src={bear} className="bear-logo" alt="logo" />
       </div>
       <div className="content"></div>
+
       <div className="footer-content">
         <Footer />
       </div>

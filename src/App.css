@@ -1,9 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik+Mono+One&display=swap");
+
 * {
   overscroll-behavior: none;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #111111;
+  font-family: "Inter", sans-serif;
 }
 
 .App {
@@ -12,7 +11,12 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(20deg, #111111, #302f31);
+  background: linear-gradient(
+    135deg,
+    rgba(18, 18, 18) 0%,
+    rgb(30, 45, 70) 61%,
+    rgba(45, 64, 105) 100%
+  );
   font-size: x-large;
   text-align: center;
   margin: 0;
@@ -21,24 +25,18 @@ body::-webkit-scrollbar-thumb {
 /* Styles for the header containing the logo */
 .header {
   text-align: center;
-  margin-bottom: 20px; /* Add space between the logo and construction icons */
+}
+
+.content {
+  color: #ffffff; /* Text color for the construction icons */
+  font-size: 0.8em; /* Adjust the icon size */
+  margin: 0;
 }
 
 /* Style for the logo */
 .bear-logo {
   width: 200px; /* Adjust the width to your preference */
   height: auto; /* Maintain the aspect ratio */
-}
-
-/* Media query for mobile responsiveness */
-@media (max-width: 768px) {
-  /* Adjust styles for smaller screens here */
-  .bear-logo {
-    width: 150px; /* Adjust the logo size for mobile */
-  }
-  .content {
-    font-size: 1.5em; /* Adjust the icon size for mobile */
-  }
 }
 
 .footer-content {
@@ -48,4 +46,12 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   color: #474747; /* Text color for the footer */
   padding: 10px;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens here */
+  .bear-logo {
+    width: 150px; /* Adjust the logo size for mobile */
+  }
 }
