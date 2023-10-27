@@ -1,3 +1,56 @@
-.copywrite {
-  font-size: x-small;
+.navbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  top: 0;
+  border-bottom: 1px solid #686868;
+  background-color: #222;
+}
+
+.text {
+  width: 35%;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.7rem;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.social {
+  width: 3rem;
+}
+
+.nav-logo {
+  width: 6rem;
+}
+
+.logo-circle {
+  width: 4rem;
+  background: linear-gradient(20deg, #111111, #302f31);
+  border-radius: 100%;
+  margin: 1rem;
 }
