@@ -28,6 +28,7 @@
   border: 1px solid #686868;
   border-radius: 0.5rem;
   padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 .startup-box {
@@ -37,21 +38,16 @@
   padding: 1rem;
 }
 
+.intro-content {
+  display: flex;
+  flex-direction: row;
+}
+
 .profile {
   width: 45rem;
   position: absolute;
   bottom: 12rem;
   right: 42rem;
-}
-
-.intro {
-  width: 90%;
-  border: 1px solid #686868;
-  border-radius: 0.5rem;
-  padding: 1rem;
-
-  display: flex;
-  flex-direction: row;
 }
 
 .context-text-focus {

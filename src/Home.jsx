@@ -1,20 +1,32 @@
-// import bear from "./assets/bear.svg";
+import bear from "./assets/bear.svg";
 // import filter from "./assets/filter.svg";
 // import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 // import { FaReact } from "react-icons/fa";
-
-import Navbar from "./components/Navbar";
-
-// import Footer from "./components/Footer";
 
 import "./App.css";
 
 function Home() {
   return (
     <div className="App">
-      <Navbar />
       <div className="main">
-        <div className="box">we are learnmutiny!</div>
+        <div className="box">
+          <div className="intro-content">
+            <img src={bear} className="logo" alt="bear" />
+            <div className="content-text">
+              <h1 className="h1">join the future of startups</h1>{" "}
+              <h2 className="h2">developers on learnmutiny are paid</h2>
+            </div>
+          </div>
+        </div>
+        <div className="box">
+          <div className="intro-content">
+            <img src={bear} className="logo" alt="bear" />
+            <div className="content-text">
+              <h1 className="h1">join the future of startups</h1>{" "}
+              <h2 className="h2">developers on learnmutiny are paid</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -23,7 +35,7 @@ function Home() {
 export default Home;
 
 // <div className="intro">
-//           <img src={bear} className="logo" alt="bear" />
+//
 //           <div className="content-text">
 //             {" "}
 //             <h1 className="h1">join the future of startups</h1>
@@ -72,5 +84,5 @@ export default Home;
 //         </div>
 
 {
-  /* <Footer /> */
+  /* */
 }

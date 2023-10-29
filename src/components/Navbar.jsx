@@ -12,13 +12,13 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <ul className="navigation">
-        <li>
+        <li className="nav-text">
           <a href="/">home</a>
         </li>
-        <li>
+        <li className="nav-startup-text">
           <a href="/startup">startups</a>
         </li>
-        <li>
+        <li className="nav-text">
           {" "}
           {/* change this in production */}
           <a href="https://learnmutiny-sigma.vercel.app/">login</a>

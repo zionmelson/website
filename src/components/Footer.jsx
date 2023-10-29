@@ -10,10 +10,18 @@ export default function Footer() {
     <div className="footer">
       <p>© 2023 learnmutiny. All rights reserved.</p>
       <div className="socials">
-        <img className="social" src={Instagram} alt="instagram" />
-        <img className="social" src={Github} alt="github" />
-        <img className="social" src={Linkedin} alt="linkedin" />
-        <img className="social" src={X} alt="x" />
+        <a href="https://www.instagram.com/learnmutiny/">
+          <img className="social" src={Instagram} alt="instagram" />
+        </a>
+        <a href="https://www.github.com/learnmutiny-io/">
+          <img className="social" src={Github} alt="github" />
+        </a>
+        <a href="https://www.linkedin.com/company/learnmutiny/">
+          <img className="social" src={Linkedin} alt="linkedin" />
+        </a>
+        <a href="https://www.twitter.com/learnmutiny/">
+          <img className="social" src={X} alt="x" />
+        </a>
       </div>
     </div>
   );

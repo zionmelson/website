@@ -1,10 +1,8 @@
-// import bear from "../assets/bear.svg";
+import bear from "../assets/bear.svg";
+import { AiFillApple, AiFillAndroid } from "react-icons/ai";
+import { FaReact } from "react-icons/fa";
+
 // import filter from "../assets/filter.svg";
-// import { AiFillApple, AiFillAndroid } from "react-icons/ai";
-// import { FaReact } from "react-icons/fa";
-
-import Navbar from "../components/Navbar";
-
 // import Footer from "./components/Footer";
 
 import "../App.css";
@@ -12,10 +10,26 @@ import "../App.css";
 function Startup() {
   return (
     <div className="App">
-      <Navbar />
       <div className="main">
         <div className="startup-box">
-          we are learnmutiny for <span className="span">startups</span>
+          <div className="intro-content">
+            <img src={bear} className="logo" alt="bear" />
+            <div className="content-text">
+              <h1 className="h1">
+                we source and vet qualified and reputable tech talent for your{" "}
+                <span className="span">startup</span>
+              </h1>
+              <h2 className="h2">
+                we are a team based in the atlanta and our priority is to help
+                aid startups by providing them talented web developers.
+              </h2>{" "}
+              <div className="icons">
+                <AiFillAndroid className="icon" />
+                <AiFillApple className="icon" />
+                <FaReact className="icon" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
