@@ -20,7 +20,8 @@ export default function Navbar() {
         </li>
         <li>
           {" "}
-          <a href="/">login</a>
+          {/* change this in production */}
+          <a href="https://learnmutiny-sigma.vercel.app/">login</a>
         </li>
       </ul>
       {pathname !== "undefined" && pathname === "/startup" ? (
