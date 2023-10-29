@@ -14,7 +14,7 @@ function Home() {
     <div className="App">
       <Navbar />
       <div className="main">
-        <div className="box">we are learnmutiny</div>
+        <div className="box">we are learnmutiny!</div>
       </div>
     </div>
   );
