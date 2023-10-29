@@ -1,6 +1,7 @@
 import bear from "./assets/bear.svg";
 import filter from "./assets/filter.svg";
 import Navbar from "./components/Navbar";
+import StartupNavbar from "./components/StartupNavbar";
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 
@@ -9,17 +10,21 @@ import { FaReact } from "react-icons/fa";
 import "./App.css";
 
 function App() {
+  const pathname = window.location.pathname;
+  console.log(pathname);
+
   return (
     <div className="App">
-      <Navbar />
+      {/* {
+        pathname === "/" ? <Navbar /> : <StartupNavbar>
+      } */}
       <div className="main">
         <div className="intro">
           <img src={bear} className="logo" alt="bear" />
-
           <div className="content-text">
             {" "}
             <h1 className="h1">
-              we source and vet qualified tech talent for your{" "}
+              we source and vet qualified and reputable tech talent for your{" "}
               <span className="span">startup</span>
             </h1>
             <h2 className="h2">

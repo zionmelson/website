@@ -45,12 +45,17 @@
 }
 
 .nav-logo {
-  width: 6rem;
+  width: 12rem;
 }
 
-.logo-circle {
-  width: 4rem;
-  background: linear-gradient(20deg, #111111, #302f31);
-  border-radius: 100%;
+.logo-background {
+  width: 12rem;
+  height: 4rem;
+  background: linear-gradient(20deg, #111111, #2d4069);
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 1rem;
+  padding: 1rem;
 }

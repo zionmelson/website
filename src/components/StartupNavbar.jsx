@@ -1,7 +1,7 @@
 import "./Components.css";
-import learnmutiny from "../assets/learnmutiny.svg";
+import startup from "../assets/startup.svg";
 
-export default function Navbar() {
+export default function StartupNavbar() {
   return (
     <div className="navbar">
       <ul className="text">
@@ -18,8 +18,8 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="logo-background">
-        <a href="/">
-          <img src={learnmutiny} className="nav-logo" alt="logo" />
+        <a href="/startup">
+          <img src={startup} className="nav-logo" alt="logo" />
         </a>
       </div>
     </div>
