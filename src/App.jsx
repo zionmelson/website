@@ -15,9 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      {/* {
-        pathname === "/" ? <Navbar /> : <StartupNavbar>
-      } */}
+      {pathname !== "undefined" && pathname === "/" ? (
+        <Navbar />
+      ) : (
+        <StartupNavbar />
+      )}
       <div className="main">
         <div className="intro">
           <img src={bear} className="logo" alt="bear" />
