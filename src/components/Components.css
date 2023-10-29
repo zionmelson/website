@@ -4,20 +4,19 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding-right: 5rem;
-  padding-left: 5rem;
+  padding-right: 8rem;
+  padding-left: 9rem;
   top: 0;
-  border-bottom: 1px solid #686868;
   background-color: #222;
 }
 
-.text {
+.navigation {
   width: 35%;
   font-size: 1.1rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  gap: 2rem;
   flex-direction: row;
-  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -44,11 +43,19 @@
   width: 3rem;
 }
 
-.nav-logo {
+.normal-logo {
   width: 12rem;
+  height: 4rem;
+  background: linear-gradient(20deg, #111111, #302f31);
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
 }
 
-.logo-background {
+.startup-logo {
   width: 12rem;
   height: 4rem;
   background: linear-gradient(20deg, #111111, #2d4069);
@@ -58,4 +65,129 @@
   justify-content: center;
   margin: 1rem;
   padding: 1rem;
+}
+
+.full-logo {
+  width: 14rem;
+}
+
+.bear-logo {
+  display: none;
+}
+
+.navigation-buttons {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation-button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .navigation-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .normal-logo {
+    background: linear-gradient(20deg, #111111, #302f31);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .startup-logo {
+    background: linear-gradient(20deg, #111111, #2d4069);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .full-logo {
+    display: none;
+  }
+
+  .bear-logo {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation-button {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .navigation-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .normal-logo {
+    background: linear-gradient(20deg, #111111, #302f31);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .startup-logo {
+    background: linear-gradient(20deg, #111111, #2d4069);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .full-logo {
+    display: none;
+  }
+
+  .bear-logo {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media (min-width: 1500px) {
 }

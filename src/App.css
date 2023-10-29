@@ -2,9 +2,10 @@
 
 * {
   overscroll-behavior: none;
+  box-sizing: border-box;
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  scroll-behavior: smooth;
 }
 
 .App {
@@ -15,12 +16,25 @@
 
 .main {
   width: 100%;
-  margin: 6rem;
-  margin-top: 8rem;
+  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.box {
+  width: 80%;
+  border: 1px solid #686868;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.startup-box {
+  width: 80%;
+  border: 1px solid #5dc4ff;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
 
 .profile {
@@ -32,38 +46,43 @@
 
 .intro {
   width: 90%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
   border: 1px solid #686868;
   border-radius: 0.5rem;
-}
+  padding: 1rem;
 
-.logo {
-  width: 30rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .context-text-focus {
   width: 90%;
+  border: 1px solid #686868;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  border: 1px solid #686868;
-  border-radius: 0.5rem;
+
   margin-top: 5rem;
 }
 
 .context-text-focus-two {
   width: 90%;
+  border: 1px solid #686868;
+  border-radius: 0.5rem;
   padding: 1rem;
+
   display: flex;
   flex-direction: row;
   margin-top: 5rem;
-  border: 1px solid #686868;
   gap: 2rem;
-  border-radius: 0.5rem;
+}
+
+.logo {
+  width: 30rem;
 }
 
 .focus {
