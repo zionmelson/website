@@ -18,10 +18,7 @@ export default function Contact() {
             <img src={zia} className="headshots" alt="support" />
 
             <h2 className="h2">
-              email:{" "}
-              <a className="span-link" href="mailto:support@learnmutiny.io">
-                support@learnmutiny.io{" "}
-              </a>
+              email: <span className="span-link">support@learnmutiny.io </span>
             </h2>
 
             <h2 className="h2">
@@ -29,6 +26,8 @@ export default function Contact() {
               <a
                 className="span-link"
                 href="https://calendly.com/learnmutiny/support"
+                target="_blank"
+                rel="noreferrer"
               >
                 calendly
               </a>

@@ -24,7 +24,13 @@ export default function Navbar() {
         <li className="nav-text">
           {" "}
           {/* change this in production */}
-          <a href="https://learnmutiny-sigma.vercel.app/">login</a>
+          <a
+            href="https://learnmutiny-sigma.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            login
+          </a>
         </li>
       </ul>
       {pathname !== "undefined" && pathname === "/startup" ? (

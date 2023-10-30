@@ -83,6 +83,7 @@
 
 .span-link {
   text-decoration: underline;
+  cursor: help;
   transition: all 0.3s ease-in;
 }
 
