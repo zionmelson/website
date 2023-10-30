@@ -185,6 +185,25 @@
     width: 100%;
     display: block;
   }
+
+  .footer {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .social {
+    width: 2rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -223,6 +242,17 @@
 
   .startup-logo {
     background: linear-gradient(20deg, #111111, #2d4069);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .support-logo {
+    background: linear-gradient(20deg, #111111, #664657);
     width: 3.5rem;
     height: 3.5rem;
     margin: 1rem;

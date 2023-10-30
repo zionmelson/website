@@ -16,13 +16,7 @@ export default function Contact() {
           <div className="vertical-content">
             <h1 className="h1">ready to join?</h1>
             <h2 className="h2">
-              <span
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
+              <span className="vertical-content">
                 hey it&apos;s zia, and i&apos;m here to help you get you access
                 to{" "}
                 <span className="emoji-container">
