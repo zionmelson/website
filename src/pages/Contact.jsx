@@ -26,7 +26,7 @@ export default function Contact() {
             </h2>
             <img src={zia} className="headshots" alt="support" />
             <h2 className="h2">
-              send me over your resume.
+              send us over your resume.
               <br />
               email: <span className="span-link">support@learnmutiny.io </span>
             </h2>
