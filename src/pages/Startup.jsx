@@ -11,7 +11,7 @@ function Startup() {
     <div className="App">
       <div className="main">
         <div className="startup-box">
-          <div className="intro-content">
+          <div className="horizontal-content">
             <img src={bear} className="logo" alt="bear" />
             <div className="content-text">
               <h1 className="h1">
@@ -35,7 +35,7 @@ function Startup() {
           </div>
         </div>
         <div className="startup-box">
-          <div className="matching-content">
+          <div className="vertical-content">
             {" "}
             <h1 className="h1">our matching model</h1>
             <img src={filter} className="logo" alt="bear" />

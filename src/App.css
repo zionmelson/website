@@ -39,12 +39,16 @@
   margin-bottom: 3rem;
 }
 
-.intro-content {
+.horizontal-content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  gap: 3rem;
 }
 
-.matching-content {
+.vertical-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,16 +71,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  border: 1px solid #686868;
 }
 
 .headshots {
-  width: 25rem;
-  border: 1px solid #686868;
+  width: 20rem;
 }
 
 .span {
   color: #5dc4ff;
+}
+
+.span-link {
+  text-decoration: underline;
+}
+
+.span-link:hover {
+  color: #ffa3d4;
 }
 
 .h1 {

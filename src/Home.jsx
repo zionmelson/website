@@ -12,16 +12,16 @@ function Home() {
     <div className="App">
       <div className="main">
         <div className="box">
-          <div className="intro-content">
-            <img src={bear} className="logo" alt="bear" />
+          <div className="horizontal-content">
             <div className="content-text">
               <h1 className="h1">join the future of startups</h1>{" "}
               <h2 className="h2">developers on learnmutiny are paid</h2>
             </div>
+            <img src={bear} className="logo" alt="bear" />
           </div>
         </div>
         <div className="box">
-          <div className="matching-content">
+          <div className="vertical-content">
             <h1 className="h1">meet the founders</h1>
             <div className="headshot-content">
               <div className="headshot">
