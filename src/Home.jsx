@@ -2,6 +2,9 @@ import bear from "./assets/bear.svg";
 import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
 import mu from "./assets/mu.svg";
+import money from "./assets/money.svg";
+import link from "./assets/link.svg";
+import git from "./assets/git.svg";
 // import filter from "./assets/filter.svg";
 // import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 // import { FaReact } from "react-icons/fa";
@@ -19,19 +22,62 @@ function Home() {
                 curious devs recruit for startups with learnmutiny
               </h1>{" "}
               <h2 className="h2">developers on learnmutiny are paid</h2>
+              <h1 className="h1">build up your mu profile</h1>
+              <h2 className="h2">developers on learnmutiny are paid</h2>
             </div>
             <img src={bear} className="logo" alt="bear" />
           </div>
         </div>
         <div className="box">
           <div className="vertical-content">
-            <h1 className="h1">build up your mu profile</h1>
             <div className="horizontal-content-small">
-              <img src={mu} className="logo" alt="mu" />
-              <h2 className="h2-para">
-                each mu tracks and guages your technical skills and displays
-                them to top startups in the atlanta area.
-              </h2>
+              <div className="vertical-content">
+                {" "}
+                <img src={mu} className="logo" alt="mu" />
+                <img src={money} className="logo" alt="money" />
+              </div>
+              <div className="vertical-content">
+                <div className="vertical-content">
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                    }}
+                  >
+                    {" "}
+                    connect your mu with
+                    <a href="https:github.com" target="_blank" rel="noreferrer">
+                      <span className="emoji-container">
+                        <img src={git} className="emoji" alt="mu" /> Github
+                      </span>{" "}
+                    </a>
+                    and{" "}
+                    <a
+                      href="https:linkedin.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="emoji-container">
+                        {" "}
+                        <img src={link} className="emoji" alt="mu" /> LinkedIn
+                      </span>
+                    </a>
+                  </span>
+
+                  <h2 className="h2-para">
+                    each mu tracks and guages your technical skills and displays
+                    them to top startups in the atlanta area.
+                  </h2>
+                </div>
+                <div className="vertical-content">
+                  <h1 className="h1">earn with your mu profile</h1>
+                  <h2 className="h2-para">
+                    each mu tracks and guages your technical skills and displays
+                    them to top startups in the atlanta area.
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>

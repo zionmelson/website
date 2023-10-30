@@ -1,6 +1,7 @@
 import "./Components.css";
 
 import bear from "../assets/bear.svg";
+import support from "../assets/support.svg";
 import startup from "../assets/startup.svg";
 import learnmutiny from "../assets/learnmutiny.svg";
 
@@ -41,10 +42,17 @@ export default function Navbar() {
         </a>
       ) : (
         <a href="/">
-          <div className="normal-logo">
-            <img src={learnmutiny} className="full-logo" alt="logo" />
-            <img src={bear} className="bear-logo" alt="logo" />
-          </div>
+          {pathname !== "undefined" && pathname === "/" ? (
+            <div className="normal-logo">
+              <img src={learnmutiny} className="full-logo" alt="logo" />
+              <img src={bear} className="bear-logo" alt="logo" />
+            </div>
+          ) : (
+            <div className="support-logo">
+              <img src={support} className="full-logo" alt="logo" />
+              <img src={bear} className="bear-logo" alt="logo" />
+            </div>
+          )}
         </a>
       )}
       <div className="navigation-buttons">

@@ -68,11 +68,11 @@
   justify-content: center;
   margin: 1rem;
   padding: 1rem;
+  border: 0.2rem solid #686868;
 }
 
 .normal-logo:hover {
-  border: 1.5px solid #664657;
-  background: linear-gradient(20deg, #111111, #664657);
+  background: linear-gradient(20deg, #111111, #686868);
 }
 
 .startup-logo {
@@ -85,11 +85,28 @@
   justify-content: center;
   margin: 1rem;
   padding: 1rem;
+  border: 0.2rem solid #5dc4ff;
 }
 
 .startup-logo:hover {
-  border: 1.5px solid #2d4069;
   background: linear-gradient(20deg, #111111, #2d4069);
+}
+
+.support-logo {
+  width: 12rem;
+  height: 4rem;
+  background: linear-gradient(20deg, #111111, #302f31);
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: 0.2rem solid #ffa3d4;
+}
+
+.support-logo:hover {
+  background: linear-gradient(20deg, #111111, #664657);
 }
 
 .full-logo {
@@ -140,6 +157,17 @@
 
   .startup-logo {
     background: linear-gradient(20deg, #111111, #2d4069);
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .support-logo {
+    background: linear-gradient(20deg, #111111, #664657);
     width: 3.5rem;
     height: 3.5rem;
     margin: 1rem;

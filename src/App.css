@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
 
 * {
   overscroll-behavior: none;
   box-sizing: border-box;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: Open Sans, sans-serif;
   color: #fff;
 }
 
@@ -34,6 +34,14 @@
 .startup-box {
   width: 80%;
   border: 1px solid #5dc4ff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+.support-box {
+  width: 80%;
+  border: 1px solid #ffa3d4;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 3rem;
@@ -73,6 +81,33 @@
 
 .logo {
   width: 30rem;
+}
+
+.emoji {
+  width: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.emoji-container {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #111111;
+  padding: 0.5rem;
+  padding-left: 0.1rem;
+  border-radius: 60rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  transition: all 0.2s ease-in;
+}
+
+.emoji-container:hover {
+  background-color: #e0e0e0;
+  color: #111111;
+  cursor: pointer;
 }
 
 .headshot {

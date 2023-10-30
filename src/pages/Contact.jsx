@@ -4,6 +4,7 @@
 // import { FaReact } from "react-icons/fa";
 
 import zia from "../assets/zia.svg";
+import bear from "../assets/bear.svg";
 
 import "../App.css";
 
@@ -11,12 +12,23 @@ export default function Contact() {
   return (
     <div className="App">
       <div className="main">
-        <div className="box">
+        <div className="support-box">
           <div className="vertical-content">
             <h1 className="h1">ready to join?</h1>
             <h2 className="h2">
-              hey it&apos;s zia, and i&apos;m here to help you get you access to
-              learnmutiny.
+              <span
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                }}
+              >
+                hey it&apos;s zia, and i&apos;m here to help you get you access
+                to{" "}
+                <span className="emoji-container">
+                  <img src={bear} className="emoji" alt="mu" /> learnmutiny
+                </span>
+              </span>
             </h2>
             <img src={zia} className="headshots" alt="support" />
             <h2 className="h2">
@@ -25,7 +37,7 @@ export default function Contact() {
               email: <span className="span-link">support@learnmutiny.io </span>
             </h2>
             <h2 className="h2">
-              or schedule a time to chat with us:{" "}
+              and schedule a time to chat with us:{" "}
               <a
                 className="span-link"
                 href="https://calendly.com/learnmutiny/support"
