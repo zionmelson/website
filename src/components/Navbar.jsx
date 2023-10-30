@@ -19,6 +19,9 @@ export default function Navbar() {
           <a href="/startup">startups</a>
         </li>
         <li className="nav-text">
+          <a href="/contact">contact</a>
+        </li>
+        <li className="nav-text">
           {" "}
           {/* change this in production */}
           <a href="https://learnmutiny-sigma.vercel.app/">login</a>

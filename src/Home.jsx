@@ -1,4 +1,6 @@
 import bear from "./assets/bear.svg";
+import zion from "./assets/zion.svg";
+import max from "./assets/max.svg";
 // import filter from "./assets/filter.svg";
 // import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 // import { FaReact } from "react-icons/fa";
@@ -19,11 +21,17 @@ function Home() {
           </div>
         </div>
         <div className="box">
-          <div className="intro-content">
-            <img src={bear} className="logo" alt="bear" />
-            <div className="content-text">
-              <h1 className="h1">join the future of startups</h1>{" "}
-              <h2 className="h2">developers on learnmutiny are paid</h2>
+          <div className="matching-content">
+            <h1 className="h1">meet the founders</h1>
+            <div className="headshot-content">
+              <div className="headshot">
+                <img src={zion} className="headshots" alt="zion" />
+                <h2 className="h2">zion</h2>
+              </div>
+              <div className="headshot">
+                <img src={max} className="headshots" alt="max" />
+                <h2 className="h2">max</h2>
+              </div>
             </div>
           </div>
         </div>

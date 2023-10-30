@@ -2,8 +2,7 @@ import bear from "../assets/bear.svg";
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 
-// import filter from "../assets/filter.svg";
-// import Footer from "./components/Footer";
+import filter from "../assets/filter.svg";
 
 import "../App.css";
 
@@ -28,7 +27,24 @@ function Startup() {
                 <AiFillApple className="icon" />
                 <FaReact className="icon" />
               </div>
+              <h2 className="h2">
+                we target the best college student talent from the top
+                universities in the metro atlanta area.
+              </h2>
             </div>
+          </div>
+        </div>
+        <div className="startup-box">
+          <div className="matching-content">
+            {" "}
+            <h1 className="h1">our matching model</h1>
+            <img src={filter} className="logo" alt="bear" />
+            <h2 className="h2">
+              we know that early stage startups have the difficult task of
+              finding the perfect team to help them grow, because of this we
+              crafted our sourcing strategy around on key metric,{" "}
+              <span className="span">data</span>.
+            </h2>
           </div>
         </div>
       </div>
@@ -55,10 +71,10 @@ export default Startup;
 //     <AiFillApple className="icon" />
 //     <FaReact className="icon" />
 //   </div>
-//   <h2 className="h2">
-//     we target the best college student talent from the top
-//     universities in the metro atlanta area.
-//   </h2>
+// <h2 className="h2">
+//   we target the best college student talent from the top
+//   universities in the metro atlanta area.
+// </h2>
 // </div>
 // </div>
 // <div className="focus">
@@ -68,23 +84,4 @@ export default Startup;
 //     our focus is not to just place you with a developer, but to take
 //     the extra step and personalize the entire hiring process.
 //   </h2>
-// </div>
-// <div className="context-text-focus-two">
-//   {" "}
-//   <img src={filter} className="logo" alt="bear" />
-//   <div className="">
-//     <h1 className="h1">our matching model</h1>
-//     <h2 className="h2">
-//       we know that early stage startups have the difficult task of
-//       finding the perfect team to help them grow, because of this we
-//       crafted our sourcing strategy around on key metric,{" "}
-//       <span className="span">data</span>.
-//     </h2>
-//     <h2 className="h2">
-//       not only are we taking that extra step to understand the exact
-//       needs of your startup, it is a requirement that all developers
-//       that we source go through a both qualative and quantative
-//       assessment to ensure that they are a good fit for your startup.
-//     </h2>
-//   </div>
 // </div>

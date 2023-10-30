@@ -7,7 +7,7 @@
   padding-right: 9rem;
   padding-left: 9rem;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(15, 15, 15, 0.6);
 }
 
 .footer {
@@ -94,7 +94,6 @@
 
 .full-logo {
   width: 14rem;
-  border: 1.5px solid #664657;
 }
 
 .bear-logo {
