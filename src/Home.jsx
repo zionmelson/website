@@ -55,13 +55,17 @@ function Home() {
                 >
                   {" "}
                   connect your mu with
-                  <a href="https:github.com" target="_blank" rel="noreferrer">
+                  <a href="https://github.com" target="_blank" rel="noreferrer">
                     <span className="emoji-container">
                       <img src={git} className="emoji" alt="mu" /> Github
                     </span>{" "}
                   </a>
                   <p className="and">and</p>{" "}
-                  <a href="https:linkedin.com" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <span className="emoji-container">
                       {" "}
                       <img src={link} className="emoji" alt="mu" /> LinkedIn
