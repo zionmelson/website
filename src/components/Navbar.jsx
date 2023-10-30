@@ -18,16 +18,15 @@ export default function Navbar() {
         <li className="nav-startup-text">
           <a href="/startup">startups</a>
         </li>
-        <li className="nav-text">
+        {/* <li className="nav-text">
           <a href="/contact">contact</a>
-        </li>
+        </li> */}
         <li className="nav-text">
           {" "}
           {/* change this in production */}
           <a
-            href="https://learnmutiny-sigma.vercel.app/"
-            target="_blank"
-            rel="noreferrer"
+            // href="https://learnmutiny-sigma.vercel.app/"
+            href="/contact"
           >
             login
           </a>

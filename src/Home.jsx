@@ -1,6 +1,7 @@
 import bear from "./assets/bear.svg";
 import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
+import mu from "./assets/mu.svg";
 // import filter from "./assets/filter.svg";
 // import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 // import { FaReact } from "react-icons/fa";
@@ -14,10 +15,24 @@ function Home() {
         <div className="box">
           <div className="horizontal-content">
             <div className="content-text">
-              <h1 className="h1">join the future of startups</h1>{" "}
+              <h1 className="h1">
+                curious devs recruit for startups with learnmutiny
+              </h1>{" "}
               <h2 className="h2">developers on learnmutiny are paid</h2>
             </div>
             <img src={bear} className="logo" alt="bear" />
+          </div>
+        </div>
+        <div className="box">
+          <div className="vertical-content">
+            <h1 className="h1">build up your mu profile</h1>
+            <div className="horizontal-content-small">
+              <img src={mu} className="logo" alt="mu" />
+              <h2 className="h2-para">
+                each mu tracks and guages your technical skills and displays
+                them to top startups in the atlanta area.
+              </h2>
+            </div>
           </div>
         </div>
         <div className="box">

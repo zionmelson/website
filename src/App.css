@@ -48,6 +48,15 @@
   gap: 3rem;
 }
 
+.horizontal-content-small {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  gap: 1rem;
+}
+
 .vertical-content {
   display: flex;
   flex-direction: column;
@@ -83,7 +92,6 @@
 
 .span-link {
   text-decoration: underline;
-  cursor: help;
   transition: all 0.3s ease-in;
 }
 
@@ -100,6 +108,12 @@
 .h2 {
   font-size: 1rem;
   margin: 1rem;
+}
+
+.h2-para {
+  font-size: 1rem;
+  margin: 1rem;
+  text-align: start;
 }
 
 .icons {

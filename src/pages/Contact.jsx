@@ -13,16 +13,19 @@ export default function Contact() {
       <div className="main">
         <div className="box">
           <div className="vertical-content">
-            <h1 className="h1">any questions?</h1>
-            <h2 className="h2">get in contact with our support team</h2>
-            <img src={zia} className="headshots" alt="support" />
-
+            <h1 className="h1">ready to join?</h1>
             <h2 className="h2">
+              hey it&apos;s zia, and i&apos;m here to help you get you access to
+              learnmutiny.
+            </h2>
+            <img src={zia} className="headshots" alt="support" />
+            <h2 className="h2">
+              send me over your resume.
+              <br />
               email: <span className="span-link">support@learnmutiny.io </span>
             </h2>
-
             <h2 className="h2">
-              schedule a time to chat with us:{" "}
+              or schedule a time to chat with us:{" "}
               <a
                 className="span-link"
                 href="https://calendly.com/learnmutiny/support"
