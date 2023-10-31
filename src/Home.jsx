@@ -36,10 +36,10 @@ function Home() {
             </h2>
             <h3 className="h3" style={{ marginBottom: "1rem" }}>
               as a student our platform is completely free to use. we plug you
-              in to the startup world by connecting you with startups who are
-              looking to hire talented students. we connect you to the founders
-              directly, saving you time and freeing you your time to do what you
-              do best, code.
+              in to the startup ecosystem by connecting you with startups who
+              are looking to hire talented students. we connect you to the
+              founders directly, taking the recruiting hardships away from you
+              and freeing up your time to do what you do best, code.
             </h3>
           </div>
         </div>
@@ -63,25 +63,23 @@ function Home() {
               devs get paid with learnmutiny
             </h2>
             <h3 className="h3" style={{ marginBottom: "1rem" }}>
-              As a student our platform is completely free to use. We help plug
-              you in to the startup world by connecting you to companies who are
-              looking to hire talented students. We connect you to the founders
-              directly, by matching your skills to a startup. Saving you time
-              and freeing you up to do what you do best, code.
+              as a student our platform is completely free to use. we connect
+              you to the founders directly, taking the recruiting hardships away
+              from you and freeing up your time to do what you do best, code.
             </h3>
           </div>
         </div>
       </div>
       {/* mu desktop */}
       <div className="box">
-        <div className="vertical-content">
+        <div className="vertical-content" style={{ marginBottom: "1rem" }}>
           <h1 className="h1" style={{ margin: "1rem" }}>
             build up your mu profile
           </h1>
           <img src={black} className="logo" alt="mu" />
         </div>
         <div className="vertical-content">
-          <h2 className="h2">
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
             <span className="horizontal-content-small">
               connect your mu with{" "}
               <a href="https://github.com" target="_blank" rel="noreferrer">
@@ -98,7 +96,7 @@ function Home() {
               </a>
             </span>
           </h2>
-          <h2 className="h3">
+          <h2 className="h3" style={{ marginBottom: "1rem" }}>
             you simply sign up by creating a mu profile. you connect your
             LinkedIn and Github so we can use that data to pair you with
             startups and to get you paid!
@@ -111,8 +109,13 @@ function Home() {
           <h1 className="h1" style={{ margin: "1rem" }}>
             earn with your mu profile
           </h1>
-          <img src={blackmoney} className="logo" alt="mu" />
-          <h2 className="h3">
+          <img
+            src={blackmoney}
+            className="logo"
+            alt="mu"
+            style={{ marginBottom: "1rem" }}
+          />
+          <h2 className="h3" style={{ marginBottom: "1rem" }}>
             as you continue to learn and improve, startups will reach out and
             look at your information. for every look you get, we pay you.
           </h2>
@@ -124,9 +127,16 @@ function Home() {
           <h1 className="h1" style={{ margin: "1rem" }}>
             rack up attributes
           </h1>
-          <img src={attributes} className="logo" alt="attributes" />
-          <h2 className="h2">attributes are gifted to you from founders</h2>
-          <h3 className="h3"></h3>
+          <img
+            src={attributes}
+            className="logo"
+            style={{ marginBottom: "1rem" }}
+            alt="attributes"
+          />
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            attributes are gifted to you from founders
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}></h3>
         </div>
       </div>
       {/* mu phone */}
@@ -134,43 +144,31 @@ function Home() {
         <div className="horizontal-content-small">
           <div className="vertical-content">
             <h1 className="h1" style={{ margin: "1rem" }}>
-              build up your mu profile
+              build up your mu
             </h1>
             <img src={black} className="logo" alt="mu" />
           </div>
-          <div className="vertical-content">
-            <h2
-              className="h2"
-              style={{
-                gap: 0,
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: "center",
-                marginBottom: "0.8rem",
-              }}
+          <div className="vertical-content" style={{ marginBottom: "1rem" }}>
+            <span
+              className="horizontal-content-small"
+              style={{ marginBottom: "1rem" }}
             >
-              <span
-                style={{
-                  gap: 0,
-                }}
-                className="horizontal-content"
-              >
-                {" "}
-                connect your mu with
-                <a href="https://github.com" target="_blank" rel="noreferrer">
-                  <span className="emoji-container">
-                    <img src={git} className="emoji" alt="mu" /> Github
-                  </span>{" "}
-                </a>
-                <p className="and">and</p>{" "}
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                  <span className="emoji-container">
-                    {" "}
-                    <img src={link} className="emoji" alt="mu" /> LinkedIn
-                  </span>
-                </a>
-              </span>
-            </h2>
+              {" "}
+              connect your mu with
+              <a href="https://github.com" target="_blank" rel="noreferrer">
+                <span className="emoji-container">
+                  <img src={git} className="emoji" alt="mu" /> Github
+                </span>{" "}
+              </a>
+              <p className="and">and</p>{" "}
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                <span className="emoji-container">
+                  {" "}
+                  <img src={link} className="emoji" alt="mu" /> LinkedIn
+                </span>
+              </a>
+            </span>
+
             <h2 className="h3">
               you simply sign up by creating a mu profile. you connect your
               LinkedIn and Github so we can use that data to pair you with
@@ -183,49 +181,97 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ margin: "1rem" }}>
-            earn with your mu profile
+            earn with your mu
           </h1>
-          <img src={blackmoney} className="logo" alt="mu" />
-
-          <h2 className="h3">
-            you simply sign up by creating a mu profile. you connect your
-            LinkedIn and Github so we can use that data to pair you with
-            startups and to get you paid! as you continue to learn and improve,
-            startups will reach out and look at your information. for every look
-            you get, we pay you.
+          <img
+            src={blackmoney}
+            className="logo"
+            alt="mu"
+            style={{ marginBottom: "1rem" }}
+          />
+          <h2 className="h3" style={{ marginBottom: "1rem" }}>
+            as you continue to learn and improve, startups will reach out and
+            look at your information. for every look you get, we pay you.
           </h2>
+        </div>
+      </div>
+      {/* attributes phone */}
+      <div className="box-mobile">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ margin: "1rem" }}>
+            rack up attributes
+          </h1>
+          <img
+            src={attributes}
+            className="logo"
+            style={{ marginBottom: "1rem" }}
+            alt="attributes"
+          />
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            attributes are gifted to you from founders
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}></h3>
         </div>
       </div>
       {/* founders desktop */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">meet the founders</h1>
-          <div className="headshot-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            meet the founders
+          </h1>
+          <div className="horizontal-content">
             <div className="headshot">
               <img src={zion} className="headshots" alt="zion" />
-              <h2 className="h3">zion</h2>
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                zion
+              </h2>
             </div>
             <div className="headshot">
               <img src={max} className="headshots" alt="max" />
-              <h2 className="h3">max</h2>
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                max
+              </h2>
             </div>
           </div>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            zion and max are atlanta natives became invested in the uplifting
+            the startup ecosystem and understood first-hand, the struggles of
+            starting a company from scratch.
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            learnmutiny is our way of giving back to the startup community and
+            turning ATL into the tech hub of the southeast (represent).
+          </h3>
         </div>
       </div>
       {/* founders phone */}
       <div className="box-mobile">
         <div className="vertical-content">
-          <h1 className="h1">meet the founders</h1>
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            meet the founders
+          </h1>
           <div className="vertical-content">
             <div className="headshot">
               <img src={zion} className="headshots" alt="zion" />
-              <h2 className="h2">zion</h2>
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                zion
+              </h2>
             </div>
             <div className="headshot">
               <img src={max} className="headshots" alt="max" />
-              <h2 className="h2">max</h2>
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                max
+              </h2>
             </div>
           </div>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            zion and max are atlanta natives became invested in the uplifting
+            the startup ecosystem.
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            learnmutiny is our way of turning ATL into the southeast tech hub
+            (represent).
+          </h3>
         </div>
       </div>
     </div>

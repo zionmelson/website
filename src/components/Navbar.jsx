@@ -38,20 +38,19 @@ export default function Navbar() {
           <div className="navigation-screen">
             <div className="links">
               <a href="/">
-                <div className="emoji-container">
-                  <h2 className="h2">home</h2>{" "}
-                </div>{" "}
+                <div className="link-container">
+                  <h3 className="h3">home</h3>
+                </div>
               </a>
               <a href="/startup">
-                {" "}
-                <div className="emoji-container">
-                  <h2 className="h2">startup</h2>
-                </div>{" "}
+                <div className="link-container">
+                  <h3 className="h3">startup</h3>
+                </div>
               </a>
               <a href="/contact">
-                <div className="emoji-container">
-                  <h2 className="h2">login</h2>
-                </div>{" "}
+                <div className="link-container">
+                  <h3 className="h3">login</h3>
+                </div>
               </a>
             </div>
           </div>

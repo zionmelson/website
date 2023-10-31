@@ -185,7 +185,7 @@
 
 .h3 {
   font-size: 1rem;
-  width: 50%;
+  width: 55%;
 }
 
 .icons {
@@ -251,7 +251,7 @@
     display: block;
     width: 90%;
     margin: 1rem;
-    border: 0.2rem solid #686868;
+    margin-bottom: 3rem;
     padding: 1rem;
     border-radius: 0.5rem;
   }
@@ -265,15 +265,16 @@
   }
 
   .h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 90%;
   }
 
   .h2 {
     font-size: 1rem;
   }
 
-  .h2-para {
-    text-align: center;
+  .h3 {
+    width: 90%;
   }
 
   .horizontal-content {
@@ -298,6 +299,19 @@
 
   .emoji {
     width: 2.2rem;
+  }
+
+  .link-container {
+    min-width: 10rem;
+    height: 2.5rem;
+    background-color: #302f31;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .emoji-container {
@@ -341,8 +355,6 @@
     width: 90%;
     margin: 3rem;
     padding: 1rem;
-    border-bottom: 0.2rem solid #686868;
-    border-top: 0.2rem solid #686868;
   }
 
   .startup-box-mobile {
@@ -354,11 +366,16 @@
   }
 
   .h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+  }
+
+  .h3 {
+    font-size: 1rem;
+    width: 75%;
   }
 
   .horizontal-content {
@@ -393,6 +410,20 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in;
+  }
+
+  .link-container {
+    min-width: 15rem;
+    height: 3.5rem;
+    font-size: 1.2rem;
+    background-color: #302f31;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .and {
