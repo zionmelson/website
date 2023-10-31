@@ -1,6 +1,6 @@
 import "./Components.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import bear from "../assets/bear.svg";
 import support from "../assets/support.svg";
@@ -12,90 +12,107 @@ import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 125) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsNavOpen(!isNavOpen);
 
   const pathname = window.location.pathname;
   return (
-    <div className="navbar">
-      {isNavOpen && (
-        <div className="navigation-screen">
-          <div className="links">
-            <a href="/">
-              <div className="emoji-container">
-                <h2 className="h2">home</h2>{" "}
-              </div>{" "}
-            </a>
-            <a href="/startup">
-              {" "}
-              <div className="emoji-container">
-                <h2 className="h2">startup</h2>
-              </div>{" "}
-            </a>
-            <a href="/contact">
-              <div className="emoji-container">
-                <h2 className="h2">login</h2>
-              </div>{" "}
-            </a>
+    <>
+      <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        {isNavOpen && (
+          <div className="navigation-screen">
+            <div className="links">
+              <a href="/">
+                <div className="emoji-container">
+                  <h2 className="h2">home</h2>{" "}
+                </div>{" "}
+              </a>
+              <a href="/startup">
+                {" "}
+                <div className="emoji-container">
+                  <h2 className="h2">startup</h2>
+                </div>{" "}
+              </a>
+              <a href="/contact">
+                <div className="emoji-container">
+                  <h2 className="h2">login</h2>
+                </div>{" "}
+              </a>
+            </div>
           </div>
-        </div>
-      )}
-      <ul className="navigation">
-        <li className="nav-text">
-          <a href="/">home</a>
-        </li>
-        <li className="nav-startup-text">
-          <a href="/startup">startups</a>
-        </li>
-        {/* <li className="nav-text">
+        )}
+        <ul className="navigation">
+          <li className="nav-text">
+            <a href="/">home</a>
+          </li>
+          <li className="nav-startup-text">
+            <a href="/startup">startups</a>
+          </li>
+          {/* <li className="nav-text">
           <a href="/contact">contact</a>
         </li> */}
-        <li className="nav-text">
-          {" "}
-          {/* change this in production */}
-          <a
-            // href="https://learnmutiny-sigma.vercel.app/"
-            href="/contact"
-          >
-            login
+          <li className="nav-text">
+            {" "}
+            {/* change this in production */}
+            <a
+              // href="https://learnmutiny-sigma.vercel.app/"
+              href="/contact"
+            >
+              login
+            </a>
+          </li>
+        </ul>
+        {pathname !== "undefined" && pathname === "/startup" ? (
+          <a href="/startup">
+            <div className="startup-logo">
+              <img src={startup} className="full-logo" alt="logo" />
+              <img src={bear} className="bear-logo" alt="logo" />
+            </div>
           </a>
-        </li>
-      </ul>
-      {pathname !== "undefined" && pathname === "/startup" ? (
-        <a href="/startup">
-          <div className="startup-logo">
-            <img src={startup} className="full-logo" alt="logo" />
-            <img src={bear} className="bear-logo" alt="logo" />
+        ) : (
+          <a href="/">
+            {pathname !== "undefined" && pathname === "/" ? (
+              <div className="normal-logo">
+                <img src={learnmutiny} className="full-logo" alt="logo" />
+                <img src={bear} className="bear-logo" alt="logo" />
+              </div>
+            ) : (
+              <div className="support-logo">
+                <img src={support} className="full-logo" alt="logo" />
+                <img src={bear} className="bear-logo" alt="logo" />
+              </div>
+            )}
+          </a>
+        )}
+        {isNavOpen ? (
+          <div className="navigation-buttons-mobile">
+            <button onClick={toggleMenu}>
+              <FaBars className="navigation-button" />
+            </button>
           </div>
-        </a>
-      ) : (
-        <a href="/">
-          {pathname !== "undefined" && pathname === "/" ? (
-            <div className="normal-logo">
-              <img src={learnmutiny} className="full-logo" alt="logo" />
-              <img src={bear} className="bear-logo" alt="logo" />
-            </div>
-          ) : (
-            <div className="support-logo">
-              <img src={support} className="full-logo" alt="logo" />
-              <img src={bear} className="bear-logo" alt="logo" />
-            </div>
-          )}
-        </a>
-      )}
-      {isNavOpen ? (
-        <div className="navigation-buttons-mobile">
-          <button onClick={toggleMenu}>
-            <FaBars className="navigation-button" />
-          </button>
-        </div>
-      ) : (
-        <div className="navigation-buttons">
-          <button onClick={toggleMenu}>
-            <FaBars className="navigation-button" />
-          </button>
-        </div>
-      )}
-    </div>
+        ) : (
+          <div className="navigation-buttons">
+            <button onClick={toggleMenu}>
+              <FaBars className="navigation-button" />
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }

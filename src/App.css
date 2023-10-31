@@ -268,10 +268,10 @@
   .support-box-mobile {
     display: block;
     width: 90%;
-    margin: 1rem;
-    border: 0.2rem solid #686868;
+    margin: 3rem;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border-bottom: 0.2rem solid #686868;
+    border-top: 0.2rem solid #686868;
   }
 
   .startup-box-mobile {

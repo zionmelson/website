@@ -13,14 +13,14 @@ function Home() {
     <div className="App">
       <div className="main">
         <div className="box">
-          <div className="horizontal-content">
+          <div className="vertical-content">
             <div className="vertical-content">
               <h1 className="h1" style={{ margin: "1rem" }}>
-                devs get paid with learnmutiny
+                join learnmutiny
               </h1>{" "}
-              <h2 className="h2">developers on learnmutiny are paid</h2>
+              <h2 className="h2">devs get paid with learnmutiny</h2>
+              <img src={bear} className="logo" alt="bear" />
             </div>
-            <img src={bear} className="logo" alt="bear" />
           </div>
         </div>
         <div className="box-mobile">
@@ -146,17 +146,19 @@ function Home() {
                 each mu tracks and guages your technical skills and displays
                 them to top startups in the atlanta area.
               </h2>
-              <div className="vertical-content">
-                <h1 className="h1" style={{ margin: "1rem" }}>
-                  earn with your mu profile
-                </h1>
-                <img src={money} className="logo" alt="money" />
-                <h2 className="h2-para">
-                  as you continue to learn your mu will rack up profile looks,
-                  which can be converted into cash.
-                </h2>
-              </div>
             </div>
+          </div>
+        </div>
+        <div className="box-mobile">
+          <div className="vertical-content">
+            <h1 className="h1" style={{ margin: "1rem" }}>
+              earn with your mu profile
+            </h1>
+            <img src={money} className="logo" alt="money" />
+            <h2 className="h2-para">
+              as you continue to learn your mu will rack up profile looks, which
+              can be converted into cash.
+            </h2>
           </div>
         </div>
         <div className="box">
