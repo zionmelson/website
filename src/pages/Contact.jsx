@@ -5,7 +5,7 @@ import "../App.css";
 
 export default function Contact() {
   return (
-    <div className="App">
+    <div className="App-light">
       <div className="main">
         <div className="support-box">
           <div className="vertical-content">
@@ -17,7 +17,7 @@ export default function Contact() {
               >
                 hey it&apos;s zia, and i&apos;m here to help you get you access
                 to{" "}
-                <span className="emoji-container">
+                <span className="emoji-container-light">
                   <img src={bear} className="emoji" alt="mu" /> learnmutiny
                 </span>
               </span>
@@ -56,7 +56,7 @@ export default function Contact() {
               >
                 hey it&apos;s zia, and i&apos;m here to help you get you access
                 to{" "}
-                <span className="emoji-container">
+                <span className="emoji-container-light">
                   <img src={bear} className="emoji" alt="mu" /> learnmutiny
                 </span>
               </span>

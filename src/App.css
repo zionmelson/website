@@ -1,17 +1,28 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Open+Sans&display=swap");
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 
 * {
   overscroll-behavior: none;
   box-sizing: border-box;
   margin: 0;
-  font-family: Open Sans, sans-serif;
-  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .App {
   display: flex;
   min-height: 100vh;
   background: linear-gradient(20deg, #111111, #302f31);
+  color: #ffffff;
+}
+
+.App-light {
+  background: linear-gradient(20deg, #ffffff, #9f9da0);
+  color: #000;
 }
 
 .main {
@@ -27,11 +38,11 @@
   width: 80%;
   border-radius: 0.5rem;
   padding: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
 
 .startup-box {
-  width: 80%;
+  width: 90%;
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 3rem;
@@ -73,7 +84,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
 }
 
@@ -95,6 +106,7 @@
 
 .emoji-container {
   height: 2rem;
+  font-size: 1rem;
   display: flex;
   flex-direction: row;
   background-color: #111111;
@@ -115,6 +127,29 @@
   cursor: pointer;
 }
 
+.emoji-container-light {
+  height: 2rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #5f5f5f;
+  padding: 0.5rem;
+  padding-left: 0.1rem;
+  border-radius: 60rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.emoji-container-light:hover {
+  background-color: #e0e0e0;
+  color: #111111;
+  cursor: pointer;
+}
+
 .headshot {
   display: flex;
   flex-direction: column;
@@ -128,6 +163,7 @@
 
 .span {
   color: #5dc4ff;
+  font-family: "Inter", sans-serif;
 }
 
 .span-link {
@@ -140,15 +176,15 @@
 }
 
 .h1 {
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
 }
 
 .h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
-.h2-para {
+.h3 {
   font-size: 1rem;
   text-align: start;
 }
@@ -164,6 +200,10 @@
   width: 3.5rem;
   height: 3.5rem;
   margin: 1rem;
+}
+
+.icon:hover {
+  color: #5dc4ff;
 }
 
 @media (max-width: 767px) {
@@ -197,12 +237,11 @@
   }
 
   .h1 {
-    font-size: 1.5rem;
-    width: 100%;
+    font-size: 2.5rem;
   }
 
   .h2 {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .h2-para {
@@ -234,10 +273,10 @@
   }
 
   .emoji-container {
-    width: 8rem;
+    min-width: 6rem;
     height: 2rem;
     background-color: #9696965a;
-    padding: 0;
+    padding: 0.3;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in;
@@ -326,5 +365,27 @@
 
   .and {
     display: none;
+  }
+}
+
+@media (min-width: 1500px) {
+  .h1 {
+    font-size: 4rem;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  .box {
+    width: 80%;
+  }
+
+  .startup-box {
+    width: 85%;
+  }
+
+  .logo {
+    width: 40rem;
   }
 }

@@ -57,16 +57,16 @@ export default function Navbar() {
           </div>
         )}
         <ul className="navigation">
-          <li className="nav-text">
+          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             <a href="/">home</a>
           </li>
-          <li className="nav-startup-text">
+          <li className={`nav-startup-text ${scrolled ? "text-scrolled" : ""}`}>
             <a href="/startup">startups</a>
           </li>
           {/* <li className="nav-text">
           <a href="/contact">contact</a>
         </li> */}
-          <li className="nav-text">
+          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             {" "}
             {/* change this in production */}
             <a
@@ -79,7 +79,7 @@ export default function Navbar() {
         </ul>
         {pathname !== "undefined" && pathname === "/startup" ? (
           <a href="/startup">
-            <div className="startup-logo">
+            <div className={`startup-logo ${scrolled ? "logo-scrolled" : ""}`}>
               <img src={startup} className="full-logo" alt="logo" />
               <img src={bear} className="bear-logo" alt="logo" />
             </div>
@@ -87,12 +87,14 @@ export default function Navbar() {
         ) : (
           <a href="/">
             {pathname !== "undefined" && pathname === "/" ? (
-              <div className="normal-logo">
+              <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
                 <img src={learnmutiny} className="full-logo" alt="logo" />
                 <img src={bear} className="bear-logo" alt="logo" />
               </div>
             ) : (
-              <div className="support-logo">
+              <div
+                className={`support-logo ${scrolled ? "logo-scrolled" : ""}`}
+              >
                 <img src={support} className="full-logo" alt="logo" />
                 <img src={bear} className="bear-logo" alt="logo" />
               </div>

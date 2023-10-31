@@ -9,15 +9,15 @@ import "../App.css";
 
 function Startup() {
   return (
-    <div className="App">
+    <div className="App-light">
       <div className="main">
         <div className="startup-box">
           <div className="horizontal-content">
             <img src={bear} className="logo" alt="bear" />
             <div className="content-text">
               <h1 className="h1">
-                we source and vet qualified and reputable tech talent for your{" "}
-                <span className="span">startup</span>
+                we source and vet qualified and reputable developer talent for
+                your <span className="span">tech startup</span>
               </h1>
               <h2 className="h2">
                 we are a team based in the atlanta and our priority is to help
