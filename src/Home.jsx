@@ -5,9 +5,6 @@ import mu from "./assets/mu.svg";
 import money from "./assets/money.svg";
 import link from "./assets/link.svg";
 import git from "./assets/git.svg";
-// import filter from "./assets/filter.svg";
-// import { AiFillApple, AiFillAndroid } from "react-icons/ai";
-// import { FaReact } from "react-icons/fa";
 
 import "./App.css";
 
@@ -24,6 +21,17 @@ function Home() {
               <h2 className="h2">developers on learnmutiny are paid</h2>
             </div>
             <img src={bear} className="logo" alt="bear" />
+          </div>
+        </div>
+        <div className="box-mobile">
+          <div className="horizontal-content">
+            <div className="vertical-content">
+              <h1 className="h1" style={{ margin: "1rem" }}>
+                devs get paid with learnmutiny
+              </h1>{" "}
+              <img src={bear} className="logo" alt="bear" />
+              <h2 className="h2">developers on learnmutiny are paid</h2>
+            </div>
           </div>
         </div>
         <div className="box">
@@ -89,10 +97,87 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="box-mobile">
+          <div className="horizontal-content-small">
+            <div className="vertical-content">
+              <h1 className="h1" style={{ margin: "1rem" }}>
+                build up your mu profile
+              </h1>
+              <img src={mu} className="logo" alt="mu" />
+            </div>
+            <div className="vertical-content">
+              <h2
+                className="h2"
+                style={{
+                  gap: 0,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  marginBottom: "0.8rem",
+                }}
+              >
+                <span
+                  style={{
+                    gap: 0,
+                  }}
+                  className="horizontal-content"
+                >
+                  {" "}
+                  connect your mu with
+                  <a href="https://github.com" target="_blank" rel="noreferrer">
+                    <span className="emoji-container">
+                      <img src={git} className="emoji" alt="mu" /> Github
+                    </span>{" "}
+                  </a>
+                  <p className="and">and</p>{" "}
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container">
+                      {" "}
+                      <img src={link} className="emoji" alt="mu" /> LinkedIn
+                    </span>
+                  </a>
+                </span>
+              </h2>
+              <h2 className="h2-para">
+                each mu tracks and guages your technical skills and displays
+                them to top startups in the atlanta area.
+              </h2>
+              <div className="vertical-content">
+                <h1 className="h1" style={{ margin: "1rem" }}>
+                  earn with your mu profile
+                </h1>
+                <img src={money} className="logo" alt="money" />
+                <h2 className="h2-para">
+                  as you continue to learn your mu will rack up profile looks,
+                  which can be converted into cash.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="box">
           <div className="vertical-content">
             <h1 className="h1">meet the founders</h1>
             <div className="headshot-content">
+              <div className="headshot">
+                <img src={zion} className="headshots" alt="zion" />
+                <h2 className="h2">zion</h2>
+              </div>
+              <div className="headshot">
+                <img src={max} className="headshots" alt="max" />
+                <h2 className="h2">max</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="box-mobile">
+          <div className="vertical-content">
+            <h1 className="h1">meet the founders</h1>
+            <div className="vertical-content">
               <div className="headshot">
                 <img src={zion} className="headshots" alt="zion" />
                 <h2 className="h2">zion</h2>

@@ -315,4 +315,13 @@
 }
 
 @media (min-width: 1500px) {
+  .navbar {
+    padding-right: 12rem;
+    padding-left: 12rem;
+  }
+
+  .footer {
+    padding-right: 12rem;
+    padding-left: 12rem;
+  }
 }
