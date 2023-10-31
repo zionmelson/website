@@ -21,7 +21,11 @@ function App() {
         <div className={theme ? "App" : "App-light"} id={theme ? "" : "light"}>
           <Navbar />
           <button onClick={toggleMode} className="theme-button">
-            here
+            {theme ? (
+              <h3 className="h3">darkmode</h3>
+            ) : (
+              <h3 className="h3">lightmode</h3>
+            )}
           </button>
           <Routes>
             <Route path="/" element={<Home />} />

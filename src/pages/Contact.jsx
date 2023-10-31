@@ -12,7 +12,7 @@ export default function Contact() {
           <h2 className="h2">
             <span className="vertical-content" style={{ marginBottom: "1rem" }}>
               hey it&apos;s zia, and i&apos;m here to help you get you access to{" "}
-              <span className="emoji-container">
+              <span className="emoji-container" style={{ marginTop: "1rem" }}>
                 <img src={bear} className="emoji" alt="mu" /> learnmutiny
               </span>
             </span>
@@ -23,12 +23,12 @@ export default function Contact() {
             alt="support"
             style={{ marginBottom: "1rem" }}
           />
-          <h2 className="h2">
+          <h3 className="h3">
             send us over your resume.
             <br />
             email: <span className="span-link">support@learnmutiny.io </span>
-          </h2>
-          <h2 className="h2">
+          </h3>
+          <h3 className="h3">
             and schedule a time to chat with us:{" "}
             <a
               className="span-link"
@@ -38,7 +38,7 @@ export default function Contact() {
             >
               calendly
             </a>
-          </h2>
+          </h3>
         </div>
       </div>
       <div className="support-box-mobile">

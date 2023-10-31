@@ -77,10 +77,9 @@
 .horizontal-content-small {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .vertical-content {
@@ -118,9 +117,6 @@
   border-radius: 60rem;
   align-items: center;
   justify-content: center;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-  margin-top: 0.5rem;
   transition: all 0.2s ease-in;
 }
 
@@ -142,9 +138,6 @@
   border-radius: 60rem;
   align-items: center;
   justify-content: center;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-  margin-top: 0.5rem;
   transition: all 0.2s ease-in;
 }
 
@@ -182,15 +175,17 @@
 .h1 {
   font-size: 3rem;
   font-family: Inter, sans-serif;
+  width: 80%;
 }
 
 .h2 {
   font-size: 1.2rem;
+  width: 80%;
 }
 
 .h3 {
   font-size: 1rem;
-  text-align: start;
+  width: 50%;
 }
 
 .icons {
@@ -211,12 +206,27 @@
 }
 
 .theme-button {
-  position: absolute;
+  width: 10rem;
+  border-radius: 0.5rem;
   display: flex;
   align-content: center;
   justify-content: center;
   margin-top: 10rem;
   margin-left: 10rem;
+  background-color: #272727;
+  padding: 0.5rem;
+}
+
+#light .theme-button {
+  width: 10rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-left: 12rem;
+  background-color: #c6c6c6;
+  padding: 0.5rem;
 }
 
 @media (max-width: 767px) {
@@ -391,7 +401,7 @@
 
 @media (min-width: 1500px) {
   .h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .h2 {
@@ -404,7 +414,7 @@
   }
 
   .startup-box {
-    width: 80%;
+    width: 90%;
     margin-bottom: 15rem;
   }
 
@@ -423,6 +433,6 @@
     align-content: center;
     justify-content: center;
     margin-top: 10rem;
-    margin-left: 13rem;
+    margin-left: 12rem;
   }
 }
