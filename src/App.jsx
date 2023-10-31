@@ -1,3 +1,4 @@
+import { useState, createContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Startup from "./pages/Startup";
@@ -8,16 +9,28 @@ import Footer from "./components/Footer";
 
 import "./App.css";
 
+export const ThemeContext = createContext(null);
+
 function App() {
+  const [theme, setTheme] = useState(true);
+
+  const toggleMode = () => setTheme(!theme);
   return (
     <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/startup" element={<Startup />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
+      <ThemeContext.Provider value={{ toggleMode }}>
+        <div className={theme ? "App" : "App-light"} id={theme ? "" : "light"}>
+          <Navbar />
+          <button onClick={toggleMode} className="theme-button">
+            here
+          </button>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/startup" element={<Startup />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </div>
+      </ThemeContext.Provider>
     </>
   );
 }

@@ -9,6 +9,7 @@
   background-color: rgba(15, 15, 15, 0.3);
   backdrop-filter: blur(5px);
   transition: all 0.5s linear;
+  color: #fff;
 }
 
 .footer {
@@ -18,7 +19,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 0.7rem;
-  background-color: rgba(217, 217, 217, 0.9);
+  background-color: rgba(15, 15, 15, 0.3);
   color: #fff;
   display: flex;
   text-align: center;
@@ -37,10 +38,35 @@
 }
 
 .scrolled {
+  background-color: rgba(19, 19, 19, 0.9);
+  height: 4rem;
+  color: #fff;
+  align-items: flex-end;
+}
+
+#light .scrolled {
   background-color: rgba(217, 217, 217, 0.9);
   height: 4rem;
-  color: #111111;
   align-items: flex-end;
+}
+
+#light .text-scrolled {
+  color: #111111;
+}
+
+#light .footer {
+  width: 100%;
+  padding-right: 9rem;
+  padding-left: 9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.7rem;
+  background-color: rgba(217, 217, 217, 0.9);
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-text,
@@ -50,7 +76,7 @@
 }
 
 .text-scrolled {
-  color: #111111;
+  color: #fff;
 }
 
 .nav-text:hover {
@@ -234,6 +260,21 @@
     padding-bottom: 1rem;
     font-size: 0.4rem;
     background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #light .footer {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 0.4rem;
+    background-color: rgba(217, 217, 217, 0.9);
     color: #fff;
     display: flex;
     text-align: center;
