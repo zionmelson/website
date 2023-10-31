@@ -16,7 +16,10 @@ export default function Contact() {
           <div className="vertical-content">
             <h1 className="h1">ready to join?</h1>
             <h2 className="h2">
-              <span className="vertical-content">
+              <span
+                className="vertical-content"
+                style={{ marginBottom: "1rem" }}
+              >
                 hey it&apos;s zia, and i&apos;m here to help you get you access
                 to{" "}
                 <span className="emoji-container">

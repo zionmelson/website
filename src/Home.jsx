@@ -19,7 +19,7 @@ function Home() {
           <div className="horizontal-content">
             <div className="vertical-content">
               <h1 className="h1" style={{ margin: "1rem" }}>
-                curious devs recruit for startups with learnmutiny
+                devs get paid with learnmutiny
               </h1>{" "}
               <h2 className="h2">developers on learnmutiny are paid</h2>
             </div>
