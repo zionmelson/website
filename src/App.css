@@ -208,6 +208,7 @@
 .theme-button {
   width: 10rem;
   border-radius: 0.5rem;
+  position: absolute;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -224,7 +225,7 @@
   align-content: center;
   justify-content: center;
   margin-top: 10rem;
-  margin-left: 12rem;
+  margin-left: 10rem;
   background-color: #c6c6c6;
   padding: 0.5rem;
 }
@@ -434,5 +435,17 @@
     justify-content: center;
     margin-top: 10rem;
     margin-left: 12rem;
+  }
+
+  #light .theme-button {
+    width: 10rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-left: 12rem;
+    background-color: #c6c6c6;
+    padding: 0.5rem;
   }
 }
