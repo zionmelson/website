@@ -73,7 +73,7 @@
 .nav-text,
 .nav-startup-text {
   color: #fff;
-  transition: all 0.8s linear;
+  transition: all 0.3s linear;
 }
 
 .text-scrolled {

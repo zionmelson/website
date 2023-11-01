@@ -269,7 +269,7 @@ function Home() {
                   style={{ marginBottom: "1rem", marginTop: "1rem" }}
                 >
                   <span className="horizontal-content-small">
-                    maxmillan
+                    maxmillian
                     <a
                       href="https://www.linkedin.com/in/mxmilan/"
                       target="_blank"
@@ -366,7 +366,7 @@ function Home() {
                 style={{ marginBottom: "1rem", marginTop: "1rem" }}
               >
                 <span className="horizontal-content-small">
-                  maxmillan
+                  maxmillian
                   <a
                     href="https://linkedin.com/in/mxmilan"
                     target="_blank"
@@ -397,7 +397,7 @@ function Home() {
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            ion and max are atlanta natives and are invested in the uplifting
+            zion and max are atlanta natives and are invested in the uplifting
             the startup ecosystem and are here to establish the startup hub here
             in atlanta.
           </h2>

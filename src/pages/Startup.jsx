@@ -2,7 +2,10 @@ import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 
 import startup from "../assets/sProfile.svg";
-import filter from "../assets/filter.svg";
+
+import small from "../assets/small.svg";
+import medium from "../assets/medium.svg";
+import unicorn from "../assets/unicorn.svg";
 
 import "../App.css";
 
@@ -24,9 +27,9 @@ function Startup() {
             startups by providing them talented web developers.
           </h2>{" "}
           <div className="icons">
-            <AiFillAndroid className="icon" />
-            <AiFillApple className="icon" />
-            <FaReact className="icon" />
+            <AiFillAndroid id="android" className="icon" />
+            <AiFillApple id="apple" className="icon" />
+            <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we target the best college student talent from the top universities
@@ -49,9 +52,9 @@ function Startup() {
             startups by providing them talented web developers.
           </h2>{" "}
           <div className="icons">
-            <AiFillAndroid className="icon" />
-            <AiFillApple className="icon" />
-            <FaReact className="icon" />
+            <AiFillAndroid id="android" className="icon" />
+            <AiFillApple id="apple" className="icon" />
+            <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we target the best college student talent from the top universities
@@ -94,12 +97,6 @@ function Startup() {
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             our matching model
           </h1>
-          <img
-            src={filter}
-            className="large-logo"
-            alt="bear"
-            style={{ marginBottom: "1rem" }}
-          />
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we know that early stage startups have the difficult task of finding
             the perfect team to help them grow, because of this we crafted our
@@ -115,18 +112,210 @@ function Startup() {
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             our matching model
           </h1>
-          <img
-            src={filter}
-            className="large-logo"
-            alt="bear"
-            style={{ marginBottom: "1rem" }}
-          />
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             early stage startups have the difficult task of finding the perfect
             team, so we crafted our sourcing strategy around{" "}
             <span className="span">developer data</span> to find the best
             possible hire.
           </h2>
+        </div>
+      </div>
+      {/* pricing desktop */}
+      <div className="startup-box">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            pricing
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            our rates are as follows:
+          </h2>
+          <div className="horizontal-content-small">
+            <div
+              className="vertical-content"
+              style={{
+                border: "2px solid #5dc4ff",
+                borderRadius: "2rem",
+                padding: "1rem",
+                margin: "1rem",
+              }}
+            >
+              <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
+                small company
+              </h2>
+              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  $0 - $2,000
+                </span>{" "}
+                contract value (per employee)
+              </h3>
+              <h1 className="h1">12%</h1>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                of contract value
+              </h3>
+              <img src={small} className="logo" alt="small" />
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                border: "2px solid #5dc4ff",
+                borderRadius: "2rem",
+                padding: "1rem",
+                margin: "1rem",
+              }}
+            >
+              <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
+                startup
+              </h2>
+              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  $2,000 - $4,000
+                </span>{" "}
+                contract value (per employee)
+              </h3>
+              <h1 className="h1">11%</h1>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                of contract value
+              </h3>
+              <img src={medium} className="logo" alt="medium" />
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                border: "2px solid #5dc4ff",
+                borderRadius: "2rem",
+                padding: "1rem",
+                margin: "1rem",
+              }}
+            >
+              <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
+                unicorn
+              </h2>
+              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  $5,000+
+                </span>{" "}
+                contract value (per employee)
+              </h3>
+              <h1 className="h1">10%</h1>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                of contract value
+              </h3>
+              <img src={unicorn} className="logo" alt="unicorn" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* pricing phone */}
+      <div className="startup-box-mobile">
+        {" "}
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            pricing
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            our rates are as follows:
+          </h2>
+          <div className="horizontal-content-small">
+            <div
+              className="vertical-content"
+              style={{
+                border: "2px solid #5dc4ff",
+                borderRadius: "2rem",
+                padding: "1rem",
+                margin: "1rem",
+              }}
+            >
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                small company
+              </h2>
+              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  $0 - $2,000
+                </span>{" "}
+                contract value (per employee)
+              </h3>
+              <h1 className="h1">12%</h1>
+              <h3 className="h3" style={{ marginBottom: "1rem" }}>
+                of contract value
+              </h3>
+              <img src={small} className="logo" alt="small" />
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                border: "2px solid #5dc4ff",
+                borderRadius: "2rem",
+                padding: "1rem",
+                margin: "1rem",
+              }}
+            >
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                startup
+              </h2>
+              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  $2,000 - $4,000
+                </span>{" "}
+                contract value (per employee)
+              </h3>
+              <h1 className="h1">11%</h1>
+              <h3 className="h3" style={{ marginBottom: "1rem" }}>
+                of contract value
+              </h3>
+              <img src={medium} className="logo" alt="medium" />
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                border: "2px solid #5dc4ff",
+                borderRadius: "2rem",
+                padding: "1rem",
+                margin: "1rem",
+              }}
+            >
+              <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                unicorn
+              </h2>
+              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  $5,000+
+                </span>{" "}
+                contract value (per employee)
+              </h3>
+              <h1 className="h1">10%</h1>
+              <h3 className="h3" style={{ marginBottom: "1rem" }}>
+                of contract value
+              </h3>
+              <img src={unicorn} className="logo" alt="unicorn" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
