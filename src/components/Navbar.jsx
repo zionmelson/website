@@ -44,7 +44,7 @@ export default function Navbar() {
               </a>
               <a href="/startup">
                 <div className="link-container">
-                  <h3 className="h3">startup</h3>
+                  <h3 className="h3">startups</h3>
                 </div>
               </a>
               <a href="/contact">

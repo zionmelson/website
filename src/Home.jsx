@@ -1,6 +1,7 @@
 import bear from "./assets/bear.svg";
 import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
+import insta from "./assets/insta.svg";
 
 import black from "./assets/black.svg";
 import blackmoney from "./assets/blackmoney.svg";
@@ -222,21 +223,83 @@ function Home() {
           <div className="horizontal-content">
             <div className="headshot">
               <img src={zion} className="headshots" alt="zion" />
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                zion
+              <h2
+                className="h2"
+                style={{ marginBottom: "1rem", marginTop: "1rem" }}
+              >
+                <span className="horizontal-content-small">
+                  zion
+                  <a
+                    href="https://github.com/zionmelson"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      <img src={git} className="emoji" alt="mu" />
+                    </span>{" "}
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/zionmelson"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      {" "}
+                      <img src={link} className="emoji" alt="mu" />
+                    </span>
+                  </a>
+                  <a
+                    href="https://instagram.com/zionmelson"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      {" "}
+                      <img src={insta} className="emoji" alt="mu" />{" "}
+                    </span>
+                  </a>
+                </span>
               </h2>
             </div>
-            <div className="headshot">
-              <img src={max} className="headshots" alt="max" />
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                max
-              </h2>
+            <div className="horizontal-content">
+              <div className="headshot">
+                <img src={max} className="headshots" alt="max" />
+                <h2
+                  className="h2"
+                  style={{ marginBottom: "1rem", marginTop: "1rem" }}
+                >
+                  <span className="horizontal-content-small">
+                    maxmillan
+                    <a
+                      href="https://www.linkedin.com/in/mxmilan/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="emoji-container" style={{ padding: 0 }}>
+                        {" "}
+                        <img src={link} className="emoji" alt="mu" />
+                      </span>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/_mxmilan/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <span className="emoji-container" style={{ padding: 0 }}>
+                        {" "}
+                        <img src={insta} className="emoji" alt="mu" />{" "}
+                      </span>
+                    </a>
+                  </span>
+                </h2>
+              </div>
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            zion and max are atlanta natives became invested in the uplifting
-            the startup ecosystem and understood first-hand, the struggles of
-            starting a company from scratch.
+            zion and max are atlanta natives and are invested in the uplifting
+            the startup ecosystem, understanding the struggles of starting a
+            company from scratch first-hand, zion and max are here to establish
+            the startup hub in atlanta.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             learnmutiny is our way of giving back to the startup community and
@@ -253,20 +316,90 @@ function Home() {
           <div className="vertical-content">
             <div className="headshot">
               <img src={zion} className="headshots" alt="zion" />
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                zion
+              <h2
+                className="h2"
+                style={{ marginBottom: "1rem", marginTop: "1rem" }}
+              >
+                <span className="horizontal-content-small">
+                  zion
+                  <a
+                    href="https://github.com/zionmelson"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      <img src={git} className="emoji" alt="mu" />
+                    </span>{" "}
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/zionmelson"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      {" "}
+                      <img src={link} className="emoji" alt="mu" />
+                    </span>
+                  </a>
+                  <a
+                    href="https://instagram.com/zionmelson"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      {" "}
+                      <img
+                        src={insta}
+                        style={{ width: "1.5rem" }}
+                        className="emoji"
+                        alt="mu"
+                      />
+                    </span>
+                  </a>
+                </span>
               </h2>
             </div>
             <div className="headshot">
               <img src={max} className="headshots" alt="max" />
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                max
+              <h2
+                className="h2"
+                style={{ marginBottom: "1rem", marginTop: "1rem" }}
+              >
+                <span className="horizontal-content-small">
+                  maxmillan
+                  <a
+                    href="https://linkedin.com/in/mxmilan"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      {" "}
+                      <img src={link} className="emoji" alt="mu" />
+                    </span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/_mxmilan/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="emoji-container" style={{ padding: 0 }}>
+                      {" "}
+                      <img
+                        src={insta}
+                        className="emoji"
+                        style={{ width: "1.5rem" }}
+                        alt="mu"
+                      />
+                    </span>
+                  </a>
+                </span>
               </h2>
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            zion and max are atlanta natives became invested in the uplifting
-            the startup ecosystem.
+            ion and max are atlanta natives and are invested in the uplifting
+            the startup ecosystem and are here to establish the startup hub here
+            in atlanta.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             learnmutiny is our way of turning ATL into the southeast tech hub
