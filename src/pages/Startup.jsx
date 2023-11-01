@@ -157,7 +157,7 @@ function Startup() {
                 </a>
                 contract value (per employee)
               </h3>
-              <h1 className="h1">12%</h1>
+              <h1 className="h1">15%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
@@ -193,7 +193,7 @@ function Startup() {
                 </a>
                 contract value (per employee)
               </h3>
-              <h1 className="h1">11%</h1>
+              <h1 className="h1">12%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
@@ -279,7 +279,7 @@ function Startup() {
                 </a>
                 contract value (per employee)
               </h3>
-              <h1 className="h1">12%</h1>
+              <h1 className="h1">15%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
                 of contract value
               </h3>
@@ -312,7 +312,7 @@ function Startup() {
                 </a>
                 contract value (per employee)
               </h3>
-              <h1 className="h1">11%</h1>
+              <h1 className="h1">12%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
                 of contract value
               </h3>
