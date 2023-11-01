@@ -11,6 +11,7 @@
   backdrop-filter: blur(5px);
   transition: 0.3s linear;
   color: #fff;
+  z-index: 1;
 }
 
 .footer {
