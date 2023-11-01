@@ -192,6 +192,10 @@
   width: 55%;
 }
 
+.h4 {
+  font-family: Inter, sans-serif;
+}
+
 .icons {
   display: flex;
   flex-direction: row;
@@ -292,7 +296,8 @@
   }
 
   .h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    width: 90%;
   }
 
   .h3 {

@@ -39,43 +39,23 @@ export default function Navbar() {
             <div className="links">
               <a href="/">
                 <div className="link-container">
-                  <h3 className="h3">home</h3>
+                  <h4 className="h4">home</h4>
                 </div>
               </a>
               <a href="/startup">
                 <div className="link-container">
-                  <h3 className="h3">startups</h3>
+                  <h4 className="h4">startups</h4>
                 </div>
               </a>
               <a href="/contact">
                 <div className="link-container">
-                  <h3 className="h3">login</h3>
+                  <h4 className="h4">login</h4>
                 </div>
               </a>
             </div>
           </div>
         )}
-        <ul className="navigation">
-          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
-            <a href="/">home</a>
-          </li>
-          <li className={`nav-startup-text ${scrolled ? "text-scrolled" : ""}`}>
-            <a href="/startup">startups</a>
-          </li>
-          {/* <li className="nav-text">
-          <a href="/contact">contact</a>
-        </li> */}
-          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
-            {" "}
-            {/* change this in production */}
-            <a
-              // href="https://learnmutiny-sigma.vercel.app/"
-              href="/contact"
-            >
-              login
-            </a>
-          </li>
-        </ul>
+
         {pathname !== "undefined" && pathname === "/startup" ? (
           <a href="/startup">
             <div className={`startup-logo ${scrolled ? "logo-scrolled" : ""}`}>
@@ -100,6 +80,27 @@ export default function Navbar() {
             )}
           </a>
         )}
+        <ul className="navigation">
+          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
+            <a href="/">
+              <h4 className="h4">home</h4>
+            </a>
+          </li>
+          <li className={`nav-startup-text ${scrolled ? "text-scrolled" : ""}`}>
+            <a href="/startup">
+              <h4 className="h4">startups</h4>
+            </a>
+          </li>
+          {/* <li className="nav-text">
+          <a href="/contact">contact</a>
+        </li> */}
+          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
+            {" "}
+            <a href="/contact">
+              <h4 className="h4">login</h4>
+            </a>
+          </li>
+        </ul>
         {isNavOpen ? (
           <div className="navigation-buttons-mobile">
             <button onClick={toggleMenu}>

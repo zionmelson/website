@@ -3,13 +3,15 @@ import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
 import insta from "./assets/insta.svg";
 
-import black from "./assets/black.svg";
-import blackmoney from "./assets/blackmoney.svg";
+// import black from "./assets/black.svg";
+// import blackmoney from "./assets/blackmoney.svg";
+// import attributes from "./assets/attributes.svg";
+
 // import white from "./assets/white.svg";
 // import whitemoney from "./assets/whitemoney.svg";
 import link from "./assets/link.svg";
 import git from "./assets/git.svg";
-import attributes from "./assets/attributes.svg";
+import calen from "./assets/calen.svg";
 
 import "./App.css";
 
@@ -39,10 +41,42 @@ function Home() {
               as a student our platform is completely free to use. we plug you
               in to the startup ecosystem by connecting you with startups who
               are looking to hire talented students. we connect you to the
-              founders directly, taking the recruiting hardships away from you
-              and freeing up your time to do what you do best, code.
+              founders directly, taking the recruiting hardships away and
+              freeing up your time to do what you do best, code.
             </h3>
           </div>
+        </div>
+      </div>
+      {/* value desktop*/}
+      <div className="box">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            more about us
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "55%" }}>
+            we are excited to meet with you during your developer journey and we
+            are ready to give you a headstart in your career.
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            at learnmutiny our passion is matching you to startups that expand
+            your expertise, get you paid, and give you meaningful tasks that get
+            you passionate about computer science. it could be working on AI,
+            cloud infrastructure, designing websites, app building, or anything
+            in between.
+          </h3>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we connect you to companies who are doing just that.
+          </h2>
+          <a
+            href="https://calendly.com/learnmutiny/showcase"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
       {/* logo phone */}
@@ -66,13 +100,44 @@ function Home() {
             <h3 className="h3" style={{ marginBottom: "1rem" }}>
               as a student our platform is completely free to use. we connect
               you to the founders directly, taking the recruiting hardships away
-              from you and freeing up your time to do what you do best, code.
+              and freeing up your time to do what you do best, code.
             </h3>
           </div>
         </div>
       </div>
+      {/* value phone*/}
+      <div className="box-mobile">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            more about us
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we are excited to meet with you during your developer journey.
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            at learnmutiny our passion is matching you to startups that expand
+            your expertise & get you paid. we source some of the top
+            opportunities in the city where teams are working on AI, cloud
+            infrastructure, designing websites, app building, and anything in
+            between.
+          </h3>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            want to learn more?
+          </h2>
+          <a
+            href="https://calendly.com/learnmutiny/showcase"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
+        </div>
+      </div>
       {/* mu desktop */}
-      <div className="box">
+      {/* <div className="box">
         <div className="vertical-content" style={{ marginBottom: "1rem" }}>
           <h1 className="h1" style={{ margin: "1rem" }}>
             build up your mu profile
@@ -83,13 +148,21 @@ function Home() {
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             <span className="horizontal-content-small">
               connect your mu with{" "}
-              <a href="https://github.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/learnmutiny-io"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="emoji-container">
                   <img src={git} className="emoji" alt="mu" /> Github
                 </span>{" "}
               </a>
               <p className="and">and</p>{" "}
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://linkedin.com/company/learnmutiny"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="emoji-container">
                   {" "}
                   <img src={link} className="emoji" alt="mu" /> LinkedIn
@@ -103,9 +176,9 @@ function Home() {
             startups and to get you paid!
           </h2>
         </div>
-      </div>
+      </div> */}
       {/* money desktop */}
-      <div className="box">
+      {/* <div className="box">
         <div className="vertical-content">
           <h1 className="h1" style={{ margin: "1rem" }}>
             earn with your mu profile
@@ -121,9 +194,9 @@ function Home() {
             look at your information. for every look you get, we pay you.
           </h2>
         </div>
-      </div>
+      </div> */}
       {/* attributes desktop */}
-      <div className="box">
+      {/* <div className="box">
         <div className="vertical-content">
           <h1 className="h1" style={{ margin: "1rem" }}>
             rack up attributes
@@ -139,9 +212,9 @@ function Home() {
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}></h3>
         </div>
-      </div>
+      </div> */}
       {/* mu phone */}
-      <div className="box-mobile">
+      {/* <div className="box-mobile">
         <div className="horizontal-content-small">
           <div className="vertical-content">
             <h1 className="h1" style={{ margin: "1rem" }}>
@@ -156,13 +229,21 @@ function Home() {
             >
               {" "}
               connect your mu with
-              <a href="https://github.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://github.com/learnmutiny-io"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="emoji-container">
                   <img src={git} className="emoji" alt="mu" /> Github
                 </span>{" "}
               </a>
               <p className="and">and</p>{" "}
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+              <a
+                href="https://linkedin.com/company/learnmutiny"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <span className="emoji-container">
                   {" "}
                   <img src={link} className="emoji" alt="mu" /> LinkedIn
@@ -177,9 +258,9 @@ function Home() {
             </h2>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* money phone */}
-      <div className="box-mobile">
+      {/* <div className="box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ margin: "1rem" }}>
             earn with your mu
@@ -195,9 +276,9 @@ function Home() {
             look at your information. for every look you get, we pay you.
           </h2>
         </div>
-      </div>
+      </div> */}
       {/* attributes phone */}
-      <div className="box-mobile">
+      {/* <div className="box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ margin: "1rem" }}>
             rack up attributes
@@ -213,7 +294,7 @@ function Home() {
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}></h3>
         </div>
-      </div>
+      </div> */}
       {/* founders desktop */}
       <div className="box">
         <div className="vertical-content">

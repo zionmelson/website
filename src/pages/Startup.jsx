@@ -1,7 +1,7 @@
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 
-import startup from "../assets/sProfile.svg";
+// import startup from "../assets/sProfile.svg";
 
 import small from "../assets/small.svg";
 import medium from "../assets/medium.svg";
@@ -63,7 +63,7 @@ function Startup() {
         </div>
       </div>
       {/* startup-mu desktop */}
-      <div className="startup-box">
+      {/* <div className="startup-box">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             create your startup profile
@@ -75,9 +75,9 @@ function Startup() {
             </h2>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* startup-mu phone */}
-      <div className="startup-box-mobile">
+      {/* <div className="startup-box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             create your startup mu
@@ -89,7 +89,7 @@ function Startup() {
             </h2>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* matching-algo desktop */}
       <div className="startup-box">
         <div className="vertical-content">
@@ -143,12 +143,18 @@ function Startup() {
                 small company
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "0.5rem" }}
+                <a
+                  href="https://calendly.com/learnmutiny/company-intro"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  $0 - $2,000
-                </span>{" "}
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    $0 - $2,000
+                  </span>{" "}
+                </a>
                 contract value (per employee)
               </h3>
               <h1 className="h1">12%</h1>
@@ -173,12 +179,18 @@ function Startup() {
                 startup
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "0.5rem" }}
+                <a
+                  href="https://calendly.com/learnmutiny/company-intro"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  $2,000 - $4,000
-                </span>{" "}
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    $2,000 - $5,000
+                  </span>{" "}
+                </a>
                 contract value (per employee)
               </h3>
               <h1 className="h1">11%</h1>
@@ -203,12 +215,18 @@ function Startup() {
                 unicorn
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "0.5rem" }}
+                <a
+                  href="https://calendly.com/learnmutiny/company-intro"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  $5,000+
-                </span>{" "}
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    $5,000+
+                  </span>{" "}
+                </a>
                 contract value (per employee)
               </h3>
               <h1 className="h1">10%</h1>
@@ -247,12 +265,18 @@ function Startup() {
                 small company
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "0.5rem" }}
+                <a
+                  href="https://calendly.com/learnmutiny/company-intro"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  $0 - $2,000
-                </span>{" "}
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    $0 - $2,000
+                  </span>{" "}
+                </a>
                 contract value (per employee)
               </h3>
               <h1 className="h1">12%</h1>
@@ -274,12 +298,18 @@ function Startup() {
                 startup
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "0.5rem" }}
+                <a
+                  href="https://calendly.com/learnmutiny/company-intro"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  $2,000 - $4,000
-                </span>{" "}
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    $2,000 - $5,000
+                  </span>{" "}
+                </a>
                 contract value (per employee)
               </h3>
               <h1 className="h1">11%</h1>
@@ -301,12 +331,18 @@ function Startup() {
                 unicorn
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "0.5rem" }}
+                <a
+                  href="https://calendly.com/learnmutiny/company-intro"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  $5,000+
-                </span>{" "}
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    $5,000+
+                  </span>{" "}
+                </a>
                 contract value (per employee)
               </h3>
               <h1 className="h1">10%</h1>

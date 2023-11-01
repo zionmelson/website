@@ -22,9 +22,9 @@ function App() {
           <Navbar />
           <button onClick={toggleMode} className="theme-button">
             {theme ? (
-              <h3 className="h3">darkmode</h3>
+              <h4 className="h4">darkmode</h4>
             ) : (
-              <h3 className="h3">lightmode</h3>
+              <h4 className="h4">lightmode</h4>
             )}
           </button>
           <Routes>
