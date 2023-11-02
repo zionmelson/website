@@ -139,10 +139,10 @@ function Startup() {
             our matching model
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we know finding the perfect team is daunting, that&apos;s why at
-            learnmutiny we look to take a deeper approach into the world of
-            staffing, we&apos;ve crafted our sourcing strategy around one key
-            metric, data <span className="span">data</span>.
+            we know finding the perfect team is daunting, at learnmutiny we take
+            a deeper approach into the world of staffing, we&apos;ve crafted our
+            sourcing strategy around one key metric,{" "}
+            <span className="span">data</span>.
           </h2>
           <h3 className="h3" style={{ width: "75%" }}>
             our goal is to make it as painless as possible to build your idea or
