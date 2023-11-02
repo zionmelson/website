@@ -145,12 +145,11 @@ function Startup() {
             metric, data <span className="span">data</span>.
           </h2>
           <h3 className="h3" style={{ width: "75%" }}>
-            our goal is to make it as easy and simple as possible to build your
-            idea or continue growing your company. we source and vet every
-            developer, taking time to understand in depth: their skills,
-            personality, and passion. this allows us to find the right developer
-            for your individual needs, whether you&apos;re a technical founder
-            or not.
+            our goal is to make it as painless as possible to build your idea or
+            continue growing your company. we source and vet every developer,
+            taking time to understand in depth: their skills, personality, and
+            passion. this allows us to find the right developer for your
+            individual needs, whether you&apos;re a technical founder or not.
           </h3>
         </div>
       </div>
@@ -168,8 +167,8 @@ function Startup() {
             possible hire.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "80%" }}>
-            our goal is to make it as easy and simple as possible to build your
-            idea or continue growing your company.
+            our goal is to make it as painless as possible to build your idea or
+            continue growing your company.
           </h3>
           <h3 className="h3">
             {" "}
