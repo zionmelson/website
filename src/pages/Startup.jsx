@@ -17,6 +17,7 @@ import {
 import small from "../assets/small.svg";
 import maxP from "../assets/maxP.svg";
 import bearP from "../assets/bearP.svg";
+import calen from "../assets/calen.svg";
 
 import "../App.css";
 
@@ -34,8 +35,8 @@ function Startup() {
             <span className="span">tech startup</span>
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we are a team based in the atlanta and our priority is to help aid
-            startups by providing them talented web developers.
+            we are an atlanta based team whose mission is to help aid startups
+            by providing them with talented web developers.
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
@@ -43,8 +44,8 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
-            we specifically target cutting edge college full-stack web developer
-            talent from the top universities in the metro atlanta area.
+            we specifically targeting talented full-stack college web developers
+            from top universities in the atlanta area.
           </h2>
           <div className="icons">
             <FaPython id="python" className="icon" />
@@ -70,8 +71,8 @@ function Startup() {
             <span className="span">tech startup</span>
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we are a team based in the atlanta and our priority is to help aid
-            startups by providing them talented web developers.
+            we are an atlanta based team whose mission is to help aid startups
+            by providing them with talented web developers.
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
@@ -79,8 +80,8 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specifically target cutting edge college full-stack web developer
-            talent from the top universities in the metro atlanta area.
+            we specifically targeting talented full-stack college web developers
+            from top universities in the atlanta area.
           </h2>
           <div className="icons">
             <FaDocker
@@ -138,10 +139,10 @@ function Startup() {
             our matching model
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we know that early stage startups have the difficult task of finding
-            the perfect team to help them grow, because of this we crafted our
-            sourcing strategy around on key metric,{" "}
-            <span className="span">data</span>.
+            we know finding the perfect team is daunting, that&apos;s why at
+            learnmutiny we look to take a deeper approach into the world of
+            staffing, we&apos;ve crafted our sourcing strategy around one key
+            metric, data <span className="span">data</span>.
           </h2>
           <h3 className="h3" style={{ width: "75%" }}>
             our goal is to make it as easy and simple as possible to build your
@@ -301,11 +302,24 @@ function Startup() {
               <img src={bearP} className="logo" alt="unicorn" />
             </div>
           </div>
-          <h2 className="h2">
-            we know hiring students can be complicated, so we are also here to
-            help advise decision making when it comes to pricing, and paying
-            student developers.
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we know hiring students can be complicated, we are also here to help
+            advise decision making when it comes to pricing, and paying student
+            developers.
           </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            find your next co-founder with learnmutiny.
+          </h3>
+          <a
+            href="https://calendly.com/learnmutiny/company-intro"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
       {/* pricing phone */}
@@ -419,10 +433,23 @@ function Startup() {
               <img src={bearP} className="logo" alt="unicorn" />
             </div>
           </div>
-          <h2 className="h2">
-            hiring students can be complicated, so also help advise decision
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            hiring students can be complicated, we also help advise decision
             making when it comes to and paying student developers.
           </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            find your next dev with learnmutiny{" "}
+          </h3>
+          <a
+            href="https://calendly.com/learnmutiny/company-intro"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
     </div>
