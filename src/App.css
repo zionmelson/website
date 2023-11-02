@@ -212,22 +212,66 @@
 
 #android:hover {
   color: #32de84;
-  cursor: pointer;
 }
 
 #apple:hover {
   color: #000;
-  cursor: pointer;
-}
-
-#light #apple:hover {
-  color: #ffffff;
-  cursor: pointer;
 }
 
 #react:hover {
   color: #61dafb;
-  cursor: pointer;
+}
+
+#python:hover {
+  color: #3e7bac;
+}
+
+#rust:hover {
+  color: #e15b28;
+}
+
+#js:hover {
+  color: #eddd67;
+}
+
+#angular:hover {
+  color: #c3002f;
+}
+
+#docker:hover {
+  color: #3262e5;
+}
+
+#solidity:hover {
+  color: #464972;
+}
+
+#laravel:hover {
+  color: #ff2d20;
+}
+
+#npm:hover {
+  color: #bc423b;
+}
+
+#node:hover {
+  color: #669c4f;
+}
+
+#light #apple:hover {
+  color: #ffffff;
+}
+
+#light #python:hover {
+  color: #ffd641;
+}
+
+#light #angular:hover {
+  color: #dd0031;
+}
+
+#light #solidity:hover {
+  color: #63668d;
 }
 
 .theme-button {

@@ -1,11 +1,22 @@
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
+import {
+  FaAngular,
+  FaPython,
+  FaRust,
+  FaJs,
+  FaDocker,
+  FaEthereum,
+  FaLaravel,
+  FaNpm,
+  FaNode,
+} from "react-icons/fa";
 
 // import startup from "../assets/sProfile.svg";
 
 import small from "../assets/small.svg";
-import medium from "../assets/medium.svg";
-import unicorn from "../assets/unicorn.svg";
+import maxP from "../assets/maxP.svg";
+import bearP from "../assets/bearP.svg";
 
 import "../App.css";
 
@@ -22,7 +33,7 @@ function Startup() {
             we source and vet qualified and reputable developer talent for your{" "}
             <span className="span">tech startup</span>
           </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we are a team based in the atlanta and our priority is to help aid
             startups by providing them talented web developers.
           </h2>{" "}
@@ -31,10 +42,21 @@ function Startup() {
             <AiFillApple id="apple" className="icon" />
             <FaReact id="react" className="icon" />
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we target the best college student talent from the top universities
-            in the metro atlanta area.
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
+            we specifically target cutting edge college full-stack web developer
+            talent from the top universities in the metro atlanta area.
           </h2>
+          <div className="icons">
+            <FaPython id="python" className="icon" />
+            <FaRust id="rust" className="icon" />
+            <FaJs id="js" className="icon" />
+            <FaAngular id="angular" className="icon" />
+            <FaDocker id="docker" className="icon" />
+            <FaEthereum id="solidity" className="icon" />
+            <FaLaravel id="laravel" className="icon" />
+            <FaNpm id="npm" className="icon" />
+            <FaNode id="node" className="icon" />
+          </div>
         </div>
       </div>
       {/* startup-intro phone */}
@@ -57,9 +79,27 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we target the best college student talent from the top universities
-            in the metro atlanta area.
+            we specifically target cutting edge college full-stack web developer
+            talent from the top universities in the metro atlanta area.
           </h2>
+          <div className="icons">
+            <FaDocker
+              id="docker"
+              className="icon"
+              style={{ margin: "0.6rem" }}
+            />
+            <FaEthereum
+              id="solidity"
+              className="icon"
+              style={{ margin: "0.6rem" }}
+            />
+            <FaLaravel
+              id="laravel"
+              className="icon"
+              style={{ margin: "0.6rem" }}
+            />
+            <FaNode id="node" className="icon" style={{ margin: "0.6rem" }} />
+          </div>
         </div>
       </div>
       {/* startup-mu desktop */}
@@ -103,6 +143,14 @@ function Startup() {
             sourcing strategy around on key metric,{" "}
             <span className="span">data</span>.
           </h2>
+          <h3 className="h3" style={{ width: "75%" }}>
+            our goal is to make it as easy and simple as possible to build your
+            idea or continue growing your company. we source and vet every
+            developer, taking time to understand in depth: their skills,
+            personality, and passion. this allows us to find the right developer
+            for your individual needs, whether you&apos;re a technical founder
+            or not.
+          </h3>
         </div>
       </div>
       {/* matching-algo phone */}
@@ -118,6 +166,17 @@ function Startup() {
             <span className="span">developer data</span> to find the best
             possible hire.
           </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem", width: "80%" }}>
+            our goal is to make it as easy and simple as possible to build your
+            idea or continue growing your company.
+          </h3>
+          <h3 className="h3">
+            {" "}
+            we source and vet every developer, taking time to understand in
+            depth: their skills, personality, and passion. this allows us to
+            find the right developer for your individual needs, whether
+            you&apos;re a technical founder or not.
+          </h3>
         </div>
       </div>
       {/* pricing desktop */}
@@ -129,7 +188,10 @@ function Startup() {
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             our rates are as follows:
           </h2>
-          <div className="horizontal-content-small">
+          <div
+            className="horizontal-content-small"
+            style={{ marginBottom: "1rem" }}
+          >
             <div
               className="vertical-content"
               style={{
@@ -200,7 +262,7 @@ function Startup() {
               >
                 of contract value
               </h3>
-              <img src={medium} className="logo" alt="medium" />
+              <img src={maxP} className="logo" alt="medium" />
             </div>
             <div
               className="vertical-content"
@@ -236,9 +298,14 @@ function Startup() {
               >
                 of contract value
               </h3>
-              <img src={unicorn} className="logo" alt="unicorn" />
+              <img src={bearP} className="logo" alt="unicorn" />
             </div>
           </div>
+          <h2 className="h2">
+            we know hiring students can be complicated, so we are also here to
+            help advise decision making when it comes to pricing, and paying
+            student developers.
+          </h2>
         </div>
       </div>
       {/* pricing phone */}
@@ -316,7 +383,7 @@ function Startup() {
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
                 of contract value
               </h3>
-              <img src={medium} className="logo" alt="medium" />
+              <img src={maxP} className="logo" alt="medium" />
             </div>
             <div
               className="vertical-content"
@@ -349,9 +416,13 @@ function Startup() {
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
                 of contract value
               </h3>
-              <img src={unicorn} className="logo" alt="unicorn" />
+              <img src={bearP} className="logo" alt="unicorn" />
             </div>
           </div>
+          <h2 className="h2">
+            hiring students can be complicated, so also help advise decision
+            making when it comes to and paying student developers.
+          </h2>
         </div>
       </div>
     </div>

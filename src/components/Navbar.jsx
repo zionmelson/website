@@ -8,7 +8,7 @@ import startup from "../assets/startup.svg";
 import learnmutiny from "../assets/learnmutiny.svg";
 
 import { FaBars } from "react-icons/fa";
-// import { AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCloseCircle } from "react-icons/ai";
 
 export default function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -104,7 +104,7 @@ export default function Navbar() {
         {isNavOpen ? (
           <div className="navigation-buttons-mobile">
             <button onClick={toggleMenu}>
-              <FaBars className="navigation-button" />
+              <AiFillCloseCircle className="navigation-button" />
             </button>
           </div>
         ) : (

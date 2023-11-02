@@ -37,7 +37,7 @@ function Home() {
             <h2 className="h2" style={{ marginBottom: "1rem" }}>
               devs get paid with learnmutiny
             </h2>
-            <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
               as a student our platform is completely free to use. we plug you
               in to the startup ecosystem by connecting you with startups who
               are looking to hire talented students. we connect you to the
@@ -53,11 +53,11 @@ function Home() {
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             more about us
           </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "55%" }}>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we are excited to meet with you during your developer journey and we
             are ready to give you a headstart in your career.
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+          <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
             at learnmutiny our passion is matching you to startups that expand
             your expertise, get you paid, and give you meaningful tasks that get
             you passionate about computer science. it could be working on AI,
@@ -379,8 +379,7 @@ function Home() {
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             zion and max are atlanta natives and are invested in the uplifting
             the startup ecosystem, understanding the struggles of starting a
-            company from scratch first-hand, zion and max are here to establish
-            the startup hub in atlanta.
+            company from scratch first-hand.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             learnmutiny is our way of giving back to the startup community and
@@ -479,8 +478,7 @@ function Home() {
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             zion and max are atlanta natives and are invested in the uplifting
-            the startup ecosystem and are here to establish the startup hub here
-            in atlanta.
+            the startup ecosystem.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             learnmutiny is our way of turning ATL into the southeast tech hub
