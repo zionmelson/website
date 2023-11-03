@@ -27,10 +27,13 @@ function App() {
   return (
     <>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <div className={theme ? "App" : "App-light"} id={theme ? "" : "light"}>
+        <div
+          className={theme === "" ? "App" : "App-light"}
+          id={theme === "" ? "" : "light"}
+        >
           <Navbar />
           <button onClick={toggleTheme} className="theme-button">
-            {theme ? (
+            {theme === "" ? (
               <h4 className="h4">darkmode</h4>
             ) : (
               <h4 className="h4">lightmode</h4>

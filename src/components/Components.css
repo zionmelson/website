@@ -193,6 +193,13 @@
     justify-content: center;
   }
 
+  #light .scrolled {
+    background-color: rgba(217, 217, 217, 0.9);
+    height: 4rem;
+    color: #fff;
+    align-items: center;
+  }
+
   .navigation {
     display: none;
   }

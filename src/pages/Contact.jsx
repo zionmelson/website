@@ -90,18 +90,18 @@ export default function Contact() {
       {/* FAQ desktop */}
       <div className="support-box">
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+          {/* <h1 className="h1" style={{ marginBottom: "1rem" }}>
             FAQ
-          </h1>
+          </h1> */}
         </div>
       </div>
       {/* FAQ phone */}
       <div className="support-box-mobile">
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+          {/* <h1 className="h1" style={{ marginBottom: "1rem" }}>
             FAQ
           </h1>
-          <div className="faq"></div>
+          <div className="faq"></div> */}
         </div>
       </div>
     </div>
