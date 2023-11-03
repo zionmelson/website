@@ -3,6 +3,9 @@ import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
 import insta from "./assets/insta.svg";
 
+import Lottie from "lottie-react";
+import animation from "./assets/animate.json";
+
 // import black from "./assets/black.svg";
 // import blackmoney from "./assets/blackmoney.svg";
 // import attributes from "./assets/attributes.svg";
@@ -30,21 +33,23 @@ function Home() {
       {/* intro desktop */}
       <div className="box">
         <div className="vertical-content">
-          <div className="vertical-content">
-            <h1 className="h1" style={{ marginBottom: "1rem" }}>
-              join learnmutiny
-            </h1>
-            <h2 className="h2" style={{ marginBottom: "1rem" }}>
-              devs get paid with learnmutiny
-            </h2>
-            <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
-              as a student our platform is completely free to use. we plug you
-              in to the startup ecosystem by connecting you with startups who
-              are looking to hire talented students. we connect you to the
-              founders directly, taking the recruiting hardships away and
-              freeing up your time to do what you do best, code.
-            </h3>
-          </div>
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            join learnmutiny
+          </h1>
+          <h2 className="h2">devs get paid with learnmutiny</h2>
+          <Lottie
+            animationData={animation}
+            style={{
+              width: "20%",
+            }}
+          />
+          <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
+            as a student our platform is completely free to use. we plug you in
+            to the startup ecosystem by connecting you with startups who are
+            looking to hire talented students. we connect you to the founders
+            directly, taking the recruiting hardships away and freeing up your
+            time to do what you do best, code.
+          </h3>
         </div>
       </div>
       {/* value desktop*/}
@@ -90,19 +95,22 @@ function Home() {
       {/* intro phone */}
       <div className="box-mobile">
         <div className="vertical-content">
-          <div className="vertical-content">
-            <h1 className="h1" style={{ marginBottom: "1rem" }}>
-              join learnmutiny
-            </h1>
-            <h2 className="h2" style={{ marginBottom: "1rem" }}>
-              devs get paid with learnmutiny
-            </h2>
-            <h3 className="h3" style={{ marginBottom: "1rem" }}>
-              as a student our platform is completely free to use. we connect
-              you to the founders directly, taking the recruiting hardships away
-              and freeing up your time to do what you do best, code.
-            </h3>
-          </div>
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            join learnmutiny
+          </h1>
+          <h2 className="h2">devs get paid with learnmutiny</h2>
+          <Lottie
+            animationData={animation}
+            style={{
+              marginBottom: "1rem",
+              width: "60%",
+            }}
+          />
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            as a student our platform is completely free to use. we connect you
+            to the founders directly, taking the recruiting hardships away and
+            freeing up your time to do what you do best, code.
+          </h3>
         </div>
       </div>
       {/* value phone*/}

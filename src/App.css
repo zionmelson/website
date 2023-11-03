@@ -26,6 +26,7 @@
   background: linear-gradient(20deg, #ffffff, #9f9da0);
   color: #302f31;
   transition: all 0.5s linear;
+  min-height: 100vh;
 }
 
 .main {
@@ -210,12 +211,20 @@
   transition: all 0.2s linear;
 }
 
+.icon:hover {
+  transform: scale(1.1);
+}
+
+#support:hover {
+  background: #ffa3d4;
+}
+
 #android:hover {
   color: #32de84;
 }
 
 #apple:hover {
-  color: #000;
+  color: #b3b3b3;
 }
 
 #react:hover {
@@ -306,6 +315,10 @@
   }
 
   .theme-button {
+    display: none;
+  }
+
+  #light .theme-button {
     display: none;
   }
 

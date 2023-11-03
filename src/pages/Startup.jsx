@@ -12,12 +12,13 @@ import {
   FaNode,
 } from "react-icons/fa";
 
-// import startup from "../assets/sProfile.svg";
-
 import small from "../assets/small.svg";
 import maxP from "../assets/maxP.svg";
 import bearP from "../assets/bearP.svg";
 import calen from "../assets/calen.svg";
+
+import Lottie from "lottie-react";
+import animation from "../assets/animate2.json";
 
 import "../App.css";
 
@@ -144,12 +145,19 @@ function Startup() {
             sourcing strategy around one key metric,{" "}
             <span className="span">data</span>.
           </h2>
+          <Lottie
+            animationData={animation}
+            style={{
+              marginBottom: "1rem",
+              width: "20%",
+            }}
+          />
           <h3 className="h3" style={{ width: "75%" }}>
             our goal is to make it as painless as possible to build your idea or
             continue growing your company. we source and vet every developer,
-            taking time to understand in depth: their skills, personality, and
-            passion. this allows us to find the right developer for your
-            individual needs, whether you&apos;re a technical founder or not.
+            taking time to understand their skills, personality, and passion.
+            this allows us to find the right developer for your individual
+            needs, whether you&apos;re a technical founder or not.
           </h3>
         </div>
       </div>
@@ -170,12 +178,19 @@ function Startup() {
             our goal is to make it as painless as possible to build your idea or
             continue growing your company.
           </h3>
+          <Lottie
+            animationData={animation}
+            style={{
+              marginBottom: "1rem",
+              width: "60%",
+            }}
+          />
           <h3 className="h3">
             {" "}
-            we source and vet every developer, taking time to understand in
-            depth: their skills, personality, and passion. this allows us to
-            find the right developer for your individual needs, whether
-            you&apos;re a technical founder or not.
+            we source and vet every developer, taking time to understand their
+            skills, personality, and passion. this allows us to find the right
+            developer for your individual needs, whether you&apos;re a technical
+            founder or not.
           </h3>
         </div>
       </div>

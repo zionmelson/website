@@ -21,7 +21,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 0.7rem;
-  background-color: rgba(15, 15, 15, 0.3);
+  background-color: rgba(15, 15, 15, 0.5);
   color: #fff;
   display: flex;
   text-align: center;
@@ -97,6 +97,10 @@
   width: 3rem;
 }
 
+.social:hover {
+  transform: scale(1.1);
+}
+
 .normal-logo {
   width: 12rem;
   height: 4rem;
@@ -167,6 +171,10 @@
 }
 
 .navigation-buttons {
+  display: none;
+}
+
+.terms-mobile {
   display: none;
 }
 
@@ -288,6 +296,21 @@
 
   .social {
     width: 2rem;
+  }
+
+  .terms {
+    display: none;
+  }
+
+  .terms-mobile {
+    display: block;
+  }
+
+  .foot-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 

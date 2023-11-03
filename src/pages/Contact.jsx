@@ -1,5 +1,6 @@
 import zia from "../assets/zia.svg";
 import bear from "../assets/bear.svg";
+import calen from "../assets/calen.svg";
 
 import "../App.css";
 
@@ -26,22 +27,24 @@ export default function Contact() {
             alt="support"
             style={{ marginBottom: "1rem" }}
           />
-          <h3 className="h3">
-            send us over your resume.
-            <br />
-            email: <span className="span-link">support@learnmutiny.io </span>
+          <h3 className="h3">send your resume to</h3>
+          <span className="emoji-container" id="support">
+            <img src={bear} className="emoji" alt="mu" />
+            support@learnmutiny.io{" "}
+          </span>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            and schedule a time to chat with us
           </h3>
-          <h3 className="h3">
-            and schedule a time to chat with us:{" "}
-            <a
-              className="span-link"
-              href="https://calendly.com/learnmutiny/support"
-              target="_blank"
-              rel="noreferrer"
-            >
-              calendly
-            </a>
-          </h3>
+          <a
+            href="https://calendly.com/learnmutiny/showcase"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
       {/* support phone */}
@@ -64,22 +67,24 @@ export default function Contact() {
             alt="support"
             style={{ marginBottom: "1rem" }}
           />
-          <h3 className="h3">
-            send us over your resume.
-            <br />
-            email: <span className="span-link">support@learnmutiny.io </span>
+          <h3 className="h3">send your resume to</h3>
+          <span className="emoji-container" id="support">
+            <img src={bear} className="emoji" alt="mu" />
+            support@learnmutiny.io{" "}
+          </span>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            and schedule a time to chat with us
           </h3>
-          <h3 className="h3">
-            and schedule a time to chat with us:{" "}
-            <a
-              className="span-link"
-              href="https://calendly.com/learnmutiny/support"
-              target="_blank"
-              rel="noreferrer"
-            >
-              calendly
-            </a>
-          </h3>
+          <a
+            href="https://calendly.com/learnmutiny/showcase"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
       {/* FAQ desktop */}
