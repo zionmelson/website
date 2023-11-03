@@ -93,16 +93,6 @@ export default function Contact() {
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             FAQ
           </h1>
-          <div className="faq">
-            <h2 className="h2">how does learnmutiny source devs?</h2>
-          </div>
-          <div className="faq">
-            {" "}
-            <h2 className="h2">are these devs good?</h2>
-          </div>
-          <div className="faq">
-            <h2 className="h2">when can these devs start working?</h2>
-          </div>
         </div>
       </div>
       {/* FAQ phone */}
