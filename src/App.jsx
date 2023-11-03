@@ -5,6 +5,7 @@ import Startup from "./pages/Startup";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Error from "./pages/Error";
+import Privacy from "./pages/Privacy";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -40,6 +41,7 @@ function App() {
             <Route path="/startup" element={<Startup />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>

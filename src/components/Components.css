@@ -178,6 +178,13 @@
   display: none;
 }
 
+.foot-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 @media (max-width: 767px) {
   .navbar {
     padding-right: 1.5rem;

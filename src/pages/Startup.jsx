@@ -1,6 +1,6 @@
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
-import { FaReact } from "react-icons/fa";
 import {
+  FaReact,
   FaAngular,
   FaPython,
   FaRust,

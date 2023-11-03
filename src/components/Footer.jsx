@@ -10,20 +10,28 @@ export default function Footer() {
     <div className="footer">
       <div className="foot-cont">
         <p>© 2023 learnmutiny. All rights reserved.</p>
-        <a href="/terms" className="span-link">
-          <p className="terms-mobile">Terms of Service | Privacy Policy</p>
+        {/* <a href="/terms" className="span-link">
+          <p className="terms-mobile">Terms of Service</p>
         </a>
+        <a href="/privacy" className="span-link">
+          <p className="terms-mobile">Privacy Policy</p>
+        </a>
+
+        <a href="/terms" className="span-link">
+          <p className="terms">Terms of Service</p>
+        </a>
+        <a href="/privacy" className="span-link">
+          <p className="terms">Privacy Policy</p>
+        </a> */}
       </div>
-      <a href="/terms" className="span-link">
-        <p className="terms">Terms of Service | Privacy Policy</p>
-      </a>
       <div className="socials">
         <a
           href="https://www.instagram.com/learnmutiny/"
           target="_blank"
           rel="noreferrer"
+          className="social"
         >
-          <img className="social" src={Instagram} alt="instagram" />
+          <img src={Instagram} alt="instagram" />
         </a>
         <a
           href="https://www.github.com/learnmutiny-io/"
