@@ -229,7 +229,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    $0 - $2,000
+                    $0 - $5,000
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -265,7 +265,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    $2,000 - $5,000
+                    $5,000 - $15,000
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -301,7 +301,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    $5,000+
+                    $15,000+
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -369,7 +369,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    $0 - $2,000
+                    $0 - $5,000
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -402,7 +402,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    $2,000 - $5,000
+                    $5,000 - $15,000
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -435,7 +435,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    $5,000+
+                    $15,000+
                   </span>{" "}
                 </a>
                 contract value (per employee)
