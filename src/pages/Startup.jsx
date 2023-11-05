@@ -229,7 +229,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    <h4 className="h4">$0 - $5,000</h4>
+                    <h4 className="h4">$0 - $15,000</h4>
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -265,7 +265,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    <h4 className="h4">$5,000 - $15,000</h4>
+                    <h4 className="h4">$15,000 - $50,000</h4>
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -301,7 +301,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    <h4 className="h4">$15,000+</h4>
+                    <h4 className="h4">$50,000+</h4>
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -369,7 +369,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    <h4 className="h4">$0 - $5,000</h4>
+                    <h4 className="h4">$0 - $15,000</h4>
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -402,7 +402,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    <h4 className="h4">$5,000 - $15,000</h4>
+                    <h4 className="h4">$15,000 - $50,000</h4>
                   </span>{" "}
                 </a>
                 contract value (per employee)
@@ -435,7 +435,7 @@ function Startup() {
                     className="emoji-container"
                     style={{ marginBottom: "0.5rem" }}
                   >
-                    <h4 className="h4">$15,000+</h4>
+                    <h4 className="h4">$50,000+</h4>
                   </span>{" "}
                 </a>
                 contract value (per employee)
