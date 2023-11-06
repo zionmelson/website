@@ -217,7 +217,7 @@ function Startup() {
               }}
             >
               <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
-                small company
+                internship
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
                 <a
@@ -253,7 +253,7 @@ function Startup() {
               }}
             >
               <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
-                startup
+                contracted
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
                 <a
@@ -289,7 +289,7 @@ function Startup() {
               }}
             >
               <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
-                unicorn
+                full-time
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
                 <a
@@ -357,7 +357,7 @@ function Startup() {
               }}
             >
               <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                small company
+                internship
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
                 <a
@@ -390,7 +390,7 @@ function Startup() {
               }}
             >
               <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                startup
+                contracted
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
                 <a
@@ -423,7 +423,7 @@ function Startup() {
               }}
             >
               <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                unicorn
+                full-time
               </h2>
               <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
                 <a
