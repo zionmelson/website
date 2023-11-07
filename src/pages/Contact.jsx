@@ -14,9 +14,7 @@ export default function Contact() {
             getting connected
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            <span className="vertical-content">
-              hey it&apos;s zia, and i&apos;m here to help you get you access to
-            </span>
+            hey it&apos;s zia, and i&apos;m here to help you get you access to
           </h2>
           <span className="emoji-container" style={{ marginBottom: "1rem" }}>
             <img src={bear} className="emoji" alt="mu" /> learnmutiny
@@ -44,10 +42,15 @@ export default function Contact() {
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             or email us
           </h2>
-          <span className="emoji-container" id="support">
+          <span
+            className="emoji-container"
+            id="support"
+            style={{ marginBottom: "1rem" }}
+          >
             <img src={bear} className="emoji" id="support" alt="mu" />
             support@learnmutiny.io
           </span>
+          <h3 className="h3">until it&apos;s done.</h3>
         </div>
       </div>
       {/* support phone */}
@@ -57,9 +60,7 @@ export default function Contact() {
             getting connected
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            <span className="vertical-content">
-              hey it&apos;s zia, and i&apos;m here to help you get you access to
-            </span>
+            hey it&apos;s zia, and i&apos;m here to help you get you access to
           </h2>
           <span className="emoji-container" style={{ marginBottom: "1rem" }}>
             <img src={bear} className="emoji" alt="mu" /> learnmutiny
@@ -87,10 +88,15 @@ export default function Contact() {
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             or email us
           </h2>
-          <span className="emoji-container" id="support">
+          <span
+            className="emoji-container"
+            id="support"
+            style={{ marginBottom: "1rem" }}
+          >
             <img src={bear} className="emoji" alt="mu" />
             support@learnmutiny.io
           </span>
+          <h3 className="h3">until it&apos;s done.</h3>
         </div>
       </div>
     </div>
