@@ -187,7 +187,7 @@ function Startup() {
             pricing
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our staffing fees for full-time positions are as follows:
+            our staffing fees for full-time positions:
           </h2>
           <div
             className="horizontal-content-small"
@@ -317,7 +317,7 @@ function Startup() {
             pricing
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our staffing fees for full-time positions are as follows:
+            our staffing fees for full-time positions:
           </h2>
           <div className="horizontal-content-small">
             <div
