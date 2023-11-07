@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 
 import small from "../assets/small.svg";
-import maxP from "../assets/maxP.svg";
+import startups from "../assets/startups.svg";
 import bearP from "../assets/bearP.svg";
 import calen from "../assets/calen.svg";
 
@@ -216,23 +216,25 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
-                internship
-              </h2>
-              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+              <h4
+                className="h4"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
+                project cost
+              </h4>
+              <h3
+                className="h3"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
                 <a
                   href="https://calendly.com/learnmutiny/company-intro"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "0.5rem" }}
-                  >
+                  <span className="emoji-container">
                     <h4 className="h4">up to $12,500</h4>
                   </span>{" "}
                 </a>
-                contract value (per employee)
               </h3>
               <h1 className="h1">15%</h1>
               <h3
@@ -252,23 +254,25 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
-                contracted
-              </h2>
-              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+              <h4
+                className="h4"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
+                project cost
+              </h4>
+              <h3
+                className="h3"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
                 <a
                   href="https://calendly.com/learnmutiny/company-intro"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "0.5rem" }}
-                  >
+                  <span className="emoji-container">
                     <h4 className="h4">$12,500 to $25,000</h4>
                   </span>{" "}
                 </a>
-                contract value (per employee)
               </h3>
               <h1 className="h1">12%</h1>
               <h3
@@ -277,7 +281,7 @@ function Startup() {
               >
                 of contract value
               </h3>
-              <img src={maxP} className="logo" alt="medium" />
+              <img src={startups} className="logo" alt="medium" />
             </div>
             <div
               className="vertical-content"
@@ -288,23 +292,25 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h2 className="h2" style={{ marginBottom: "0.7rem" }}>
-                full-time
-              </h2>
-              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+              <h4
+                className="h4"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
+                project cost
+              </h4>
+              <h3
+                className="h3"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
                 <a
                   href="https://calendly.com/learnmutiny/company-intro"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "0.5rem" }}
-                  >
+                  <span className="emoji-container">
                     <h4 className="h4">$25,000 plus</h4>
                   </span>{" "}
                 </a>
-                contract value (per employee)
               </h3>
               <h1 className="h1">10%</h1>
               <h3
@@ -356,23 +362,25 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                internship
-              </h2>
-              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+              <h4
+                className="h4"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
+                project cost
+              </h4>
+              <h3
+                className="h3"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
                 <a
                   href="https://calendly.com/learnmutiny/company-intro"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "0.5rem" }}
-                  >
+                  <span className="emoji-container">
                     <h4 className="h4">up to $12,500</h4>
                   </span>{" "}
                 </a>
-                contract value (per employee)
               </h3>
               <h1 className="h1">15%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
@@ -389,29 +397,31 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                contracted
-              </h2>
-              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+              <h4
+                className="h4"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
+                project cost
+              </h4>
+              <h3
+                className="h3"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
                 <a
                   href="https://calendly.com/learnmutiny/company-intro"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "0.5rem" }}
-                  >
+                  <span className="emoji-container">
                     <h4 className="h4">$12,500 to $25,000</h4>
                   </span>{" "}
                 </a>
-                contract value (per employee)
               </h3>
               <h1 className="h1">12%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
                 of contract value
               </h3>
-              <img src={maxP} className="logo" alt="medium" />
+              <img src={startups} className="logo" alt="medium" />
             </div>
             <div
               className="vertical-content"
@@ -422,23 +432,25 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                full-time
-              </h2>
-              <h3 className="h3" style={{ marginBottom: "1rem", width: "90%" }}>
+              <h4
+                className="h4"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
+                project cost
+              </h4>
+              <h3
+                className="h3"
+                style={{ marginBottom: "0.5rem", width: "90%" }}
+              >
                 <a
                   href="https://calendly.com/learnmutiny/company-intro"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "0.5rem" }}
-                  >
+                  <span className="emoji-container">
                     <h4 className="h4">$25,000 plus</h4>
                   </span>{" "}
                 </a>
-                contract value (per employee)
               </h3>
               <h1 className="h1">10%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
