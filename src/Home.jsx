@@ -42,9 +42,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
-            we place developers at startups who have raised pre-seed to series B
-            funding rounds and are looking to hire a technical lead to amplify
-            their internal development processes.
+            we target startups who have raised pre-seed to series B funding
+            rounds and are looking to hire a technical lead to amplify their
+            internal development processes.
           </h3>
         </div>
       </div>
@@ -57,11 +57,11 @@ function Home() {
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we take a different approach to recruiting
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
+          <h3 className="h3" style={{ marginBottom: "1rem", width: "75%" }}>
             at learnmutiny our mission is to match you with companies that align
             with your career goals. <br />
             we look to place intillegent technical leaders at startups that are
-            working in niche areas of technology.
+            working in up and coming areas of technology.
           </h3>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             currently looking for your next position?
@@ -101,9 +101,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            we place developers at startups who have raised pre-seed to series B
-            funding rounds and are looking to hire a technical lead to amplify
-            their internal development processes.
+            we target startups who have raised pre-seed to series B funding
+            rounds and are looking to hire a technical lead to amplify their
+            internal development processes.
           </h3>
         </div>
       </div>
@@ -118,7 +118,7 @@ function Home() {
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "85%" }}>
             at learnmutiny our mission is to place intillegent technical leaders
-            at startups that are working in niche areas of technology.
+            at startups that are working in up and coming areas of technology.
           </h3>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             looking for your next position?
