@@ -12,9 +12,9 @@ import {
   FaNode,
 } from "react-icons/fa";
 
-import small from "../assets/small.svg";
+import smallstartups from "../assets/smallstartups.svg";
 import startups from "../assets/startups.svg";
-import bearP from "../assets/bearP.svg";
+import largestartups from "../assets/largestartups.svg";
 import calen from "../assets/calen.svg";
 
 import Lottie from "lottie-react";
@@ -32,21 +32,20 @@ function Startup() {
             className="h1"
             style={{ marginBottom: "1rem", marginTop: "5rem" }}
           >
-            we source and vet qualified and reputable developer talent for your{" "}
-            <span className="span">tech startup</span>
+            find a <span className="span">CTO</span> for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we are an atlanta based team whose mission is to help aid startups
-            by providing them with talented web developers.
+            we specialzie in placing technical leaders in critical roles at
+            promising startups
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
             <AiFillApple id="apple" className="icon" />
             <FaReact id="react" className="icon" />
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
-            we specifically target talented full-stack college web developers
-            from top universities in the atlanta area.
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
+            we specifically target vetted full-stack senior web developers from
+            the atlanta area
           </h2>
           <div className="icons">
             <FaPython id="python" className="icon" />
@@ -68,12 +67,11 @@ function Startup() {
             className="h1"
             style={{ marginBottom: "1rem", marginTop: "2rem" }}
           >
-            we source and vet qualified tech talent for your{" "}
-            <span className="span">tech startup</span>
+            find <span className="span">cost</span> developers for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we are an atlanta based team whose mission is to help aid startups
-            by providing them with talented web developers.
+            we specialzie in placing technical leaders in critical roles at
+            promising startups
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
@@ -81,8 +79,8 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specifically target talented full-stack college web developers
-            from top universities in the atlanta area.
+            we specifically target full-stack senior web developers from the
+            atlanta area
           </h2>
           <div className="icons">
             <FaDocker
@@ -140,10 +138,8 @@ function Startup() {
             our matching model
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we know finding the perfect team is daunting, at learnmutiny we take
-            a deeper approach into the world of staffing, we&apos;ve crafted our
-            sourcing strategy around one key metric,{" "}
-            <span className="span">data</span>.
+            expanding teams are difficult, at learnmutiny we excel at placing
+            professionals that compliment the exact needs of your company
           </h2>
           <Lottie
             animationData={animation}
@@ -153,11 +149,9 @@ function Startup() {
             }}
           />
           <h3 className="h3" style={{ width: "75%" }}>
-            our goal is to make it as painless as possible to build your idea or
-            continue growing your company. we source and vet every developer,
-            taking time to understand their skills, personality, and passion.
-            this allows us to find the right developer for your individual
-            needs, whether you&apos;re a technical founder or not.
+            all of our professionals are vetted and have a proven track record
+            of industry expertice leading successful teams and developing
+            projects.
           </h3>
         </div>
       </div>
@@ -169,15 +163,9 @@ function Startup() {
             our matching model
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            early stage startups have the difficult task of finding the perfect
-            team, so we crafted our sourcing strategy around{" "}
-            <span className="span">developer data</span> to find the best
-            possible hire.
+            expanding teams are difficult, at learnmutiny we excel at placing
+            professionals that compliment the exact needs of your company
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem", width: "80%" }}>
-            our goal is to make it as painless as possible to build your idea or
-            continue growing your company.
-          </h3>
           <Lottie
             animationData={animation}
             style={{
@@ -186,11 +174,9 @@ function Startup() {
             }}
           />
           <h3 className="h3">
-            {" "}
-            we source and vet every developer, taking time to understand their
-            skills, personality, and passion. this allows us to find the right
-            developer for your individual needs, whether you&apos;re a technical
-            founder or not.
+            all of our professionals are vetted and have a proven track record
+            of industry expertice leading successful teams and developing
+            projects.
           </h3>
         </div>
       </div>
@@ -201,7 +187,7 @@ function Startup() {
             pricing
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our rates are as follows:
+            our staffing fees for full-time positions are as follows:
           </h2>
           <div
             className="horizontal-content-small"
@@ -216,12 +202,6 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h4
-                className="h4"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                project cost
-              </h4>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -232,18 +212,18 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">up to $12,500</h4>
+                    <h4 className="h4">starting at $75,000</h4>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">15%</h1>
+              <h1 className="h1">18%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                of contract value
+                staffing fee
               </h3>
-              <img src={small} className="logo" alt="small" />
+              <img src={smallstartups} className="logo" alt="small" />
             </div>
             <div
               className="vertical-content"
@@ -254,12 +234,6 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h4
-                className="h4"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                project cost
-              </h4>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -270,16 +244,16 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$12,500 to $25,000</h4>
+                    <h4 className="h4">$75,000 to $175,000</h4>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">12%</h1>
+              <h1 className="h1">15%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                of contract value
+                staffing fee
               </h3>
               <img src={startups} className="logo" alt="medium" />
             </div>
@@ -292,12 +266,6 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h4
-                className="h4"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                project cost
-              </h4>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -308,27 +276,26 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$25,000 plus</h4>
+                    <h4 className="h4">upwards of $175,000</h4>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">10%</h1>
+              <h1 className="h1">12%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                of contract value
+                staffing fee
               </h3>
-              <img src={bearP} className="logo" alt="unicorn" />
+              <img src={largestartups} className="logo" alt="unicorn" />
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we know hiring students can be complicated, we are also here to help
-            advise decision making when it comes to pricing, and paying student
-            developers.
+            we know the hiring process can be stressful, because of this we work
+            closely with your team to ensure successful placement
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            find your next co-founder with learnmutiny.
+            find your next co-founder with learnmutiny
           </h3>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
@@ -350,7 +317,7 @@ function Startup() {
             pricing
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our rates are as follows:
+            our staffing fees for full-time positions are as follows:
           </h2>
           <div className="horizontal-content-small">
             <div
@@ -362,12 +329,6 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h4
-                className="h4"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                project cost
-              </h4>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -378,15 +339,15 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">up to $12,500</h4>
+                    <h2 className="h2">starting at $75,000</h2>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">15%</h1>
+              <h1 className="h1">18%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
-                of contract value
+                staffing fee
               </h3>
-              <img src={small} className="logo" alt="small" />
+              <img src={smallstartups} className="logo" alt="small" />
             </div>
             <div
               className="vertical-content"
@@ -397,12 +358,6 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h4
-                className="h4"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                project cost
-              </h4>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -413,13 +368,13 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$12,500 to $25,000</h4>
+                    <h2 className="h2">$75,000 to $175,000</h2>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">12%</h1>
+              <h1 className="h1">15%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
-                of contract value
+                staffing fee
               </h3>
               <img src={startups} className="logo" alt="medium" />
             </div>
@@ -432,12 +387,6 @@ function Startup() {
                 margin: "1rem",
               }}
             >
-              <h4
-                className="h4"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                project cost
-              </h4>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -448,23 +397,23 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$25,000 plus</h4>
+                    <h2 className="h2">upwards of $175,000</h2>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">10%</h1>
+              <h1 className="h1">12%</h1>
               <h3 className="h3" style={{ marginBottom: "1rem" }}>
-                of contract value
+                staffing fee
               </h3>
-              <img src={bearP} className="logo" alt="unicorn" />
+              <img src={largestartups} className="logo" alt="unicorn" />
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            hiring students can be complicated, we also help advise decision
-            making when it comes to and paying student developers.
+            we know the hiring process can be stressful, because of this we work
+            closely with your team to ensure successful placement
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            find your next dev with learnmutiny{" "}
+            find your next co-founder with learnmutiny{" "}
           </h3>
           <a
             href="https://calendly.com/learnmutiny/company-intro"

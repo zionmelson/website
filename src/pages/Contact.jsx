@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="support-box">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            ready to join?
+            getting connected
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             <span className="vertical-content">
@@ -27,31 +27,34 @@ export default function Contact() {
             alt="support"
             style={{ marginBottom: "1rem" }}
           />
-          <h3 className="h3">send your resume to</h3>
-          <span className="emoji-container" id="support">
-            <img src={bear} className="emoji" alt="mu" />
-            support@learnmutiny.io{" "}
-          </span>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            and schedule a time to chat with us
-          </h3>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            schedule a time to chat with us
+          </h2>
           <a
             href="https://calendly.com/learnmutiny/showcase"
             target="_blank"
             rel="noreferrer"
+            style={{ marginBottom: "1rem" }}
           >
             <span className="emoji-container">
               <img src={calen} className="emoji" alt="mu" />
               Calendly
             </span>
           </a>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            or email us
+          </h2>
+          <span className="emoji-container" id="support">
+            <img src={bear} className="emoji" id="support" alt="mu" />
+            support@learnmutiny.io
+          </span>
         </div>
       </div>
       {/* support phone */}
       <div className="support-box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            ready to join?
+            getting connected
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             <span className="vertical-content">
@@ -67,41 +70,27 @@ export default function Contact() {
             alt="support"
             style={{ marginBottom: "1rem" }}
           />
-          <h3 className="h3">send your resume to</h3>
-          <span className="emoji-container" id="support">
-            <img src={bear} className="emoji" alt="mu" />
-            support@learnmutiny.io{" "}
-          </span>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            and schedule a time to chat with us
-          </h3>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            schedule a time to chat with us
+          </h2>
           <a
             href="https://calendly.com/learnmutiny/showcase"
             target="_blank"
             rel="noreferrer"
+            style={{ marginBottom: "1rem" }}
           >
             <span className="emoji-container">
               <img src={calen} className="emoji" alt="mu" />
               Calendly
             </span>
           </a>
-        </div>
-      </div>
-      {/* FAQ desktop */}
-      <div className="support-box">
-        <div className="vertical-content">
-          {/* <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            FAQ
-          </h1> */}
-        </div>
-      </div>
-      {/* FAQ phone */}
-      <div className="support-box-mobile">
-        <div className="vertical-content">
-          {/* <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            FAQ
-          </h1>
-          <div className="faq"></div> */}
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            or email us
+          </h2>
+          <span className="emoji-container" id="support">
+            <img src={bear} className="emoji" alt="mu" />
+            support@learnmutiny.io
+          </span>
         </div>
       </div>
     </div>

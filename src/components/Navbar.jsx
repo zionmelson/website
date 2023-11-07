@@ -49,7 +49,7 @@ export default function Navbar() {
               </a>
               <a href="/contact">
                 <div className="link-container">
-                  <h4 className="h4">login</h4>
+                  <h4 className="h4">contact</h4>
                 </div>
               </a>
             </div>
@@ -97,7 +97,7 @@ export default function Navbar() {
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             {" "}
             <a href="/contact">
-              <h4 className="h4">login</h4>
+              <h4 className="h4">contact</h4>
             </a>
           </li>
         </ul>

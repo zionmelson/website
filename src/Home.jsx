@@ -1,7 +1,6 @@
 import bear from "./assets/bear.svg";
 import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
-import insta from "./assets/insta.svg";
 
 import Lottie from "lottie-react";
 import animation from "./assets/animate.json";
@@ -13,7 +12,6 @@ import animation from "./assets/animate.json";
 // import white from "./assets/white.svg";
 // import whitemoney from "./assets/whitemoney.svg";
 import link from "./assets/link.svg";
-import git from "./assets/git.svg";
 import calen from "./assets/calen.svg";
 
 import "./App.css";
@@ -33,10 +31,10 @@ function Home() {
       {/* intro desktop */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            join learnmutiny
+          <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
+            find your next full-time position with learnmutiny
           </h1>
-          <h2 className="h2">devs get paid with learnmutiny</h2>
+          <h2 className="h2">we place technical leads and CTOs at startups</h2>
           <Lottie
             animationData={animation}
             style={{
@@ -44,11 +42,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
-            as a student our platform is completely free to use. we plug you in
-            to the startup ecosystem by connecting you with startups who are
-            looking to hire talented students. we connect you to the founders
-            directly, taking the recruiting hardships away and freeing up your
-            time to do what you do best, code.
+            we place developers at startups who have raised pre-seed to series B
+            funding rounds and are looking to hire a technical lead to amplify
+            their internal development processes.
           </h3>
         </div>
       </div>
@@ -56,21 +52,19 @@ function Home() {
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            more about us
+            more about learnmutiny
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we are excited to meet with you during your developer journey and we
-            are ready to give you a headstart in your career.
+            we take a different approach to recruiting
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
-            at learnmutiny our passion is matching you to startups that expand
-            your expertise, get you paid, and give you meaningful tasks that get
-            you passionate about computer science. it could be working on AI,
-            cloud infrastructure, designing websites, app building, or anything
-            in between.
+            at learnmutiny our mission is to match you with companies that align
+            with your career goals. <br />
+            we look to place intillegent technical leaders at startups that are
+            working in niche areas of technology.
           </h3>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we connect you to companies who are doing just that.
+            currently looking for your next position?
           </h2>
           <a
             href="https://calendly.com/learnmutiny/showcase"
@@ -96,9 +90,9 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            join learnmutiny
+            find your next <br /> full-time position with learnmutiny
           </h1>
-          <h2 className="h2">devs get paid with learnmutiny</h2>
+          <h2 className="h2">we place technical leads and CTOs at startups</h2>
           <Lottie
             animationData={animation}
             style={{
@@ -107,9 +101,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            as a student our platform is completely free to use. we connect you
-            to the founders directly, taking the recruiting hardships away and
-            freeing up your time to do what you do best, code.
+            we place developers at startups who have raised pre-seed to series B
+            funding rounds and are looking to hire a technical lead to amplify
+            their internal development processes.
           </h3>
         </div>
       </div>
@@ -120,17 +114,14 @@ function Home() {
             more about us
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we are excited to meet with you during your developer journey.
+            we take a different approach to recruiting
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            at learnmutiny our passion is matching you to startups that expand
-            your expertise & get you paid. we source some of the top
-            opportunities in the city where teams are working on AI, cloud
-            infrastructure, designing websites, app building, and anything in
-            between.
+          <h3 className="h3" style={{ marginBottom: "1rem", width: "85%" }}>
+            at learnmutiny our mission is to place intillegent technical leaders
+            at startups that are working in niche areas of technology.
           </h3>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            want to learn more?
+            looking for your next position?
           </h2>
           <a
             href="https://calendly.com/learnmutiny/showcase"
@@ -319,15 +310,6 @@ function Home() {
                 <span className="horizontal-content-small">
                   zion
                   <a
-                    href="https://github.com/zionmelson"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      <img src={git} className="emoji" alt="mu" />
-                    </span>{" "}
-                  </a>
-                  <a
                     href="https://linkedin.com/in/zionmelson"
                     target="_blank"
                     rel="noreferrer"
@@ -335,16 +317,6 @@ function Home() {
                     <span className="emoji-container" style={{ padding: 0 }}>
                       {" "}
                       <img src={link} className="emoji" alt="mu" />
-                    </span>
-                  </a>
-                  <a
-                    href="https://instagram.com/zionmelson"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      {" "}
-                      <img src={insta} className="emoji" alt="mu" />{" "}
                     </span>
                   </a>
                 </span>
@@ -369,25 +341,15 @@ function Home() {
                         <img src={link} className="emoji" alt="mu" />
                       </span>
                     </a>
-                    <a
-                      href="https://www.instagram.com/_mxmilan/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="emoji-container" style={{ padding: 0 }}>
-                        {" "}
-                        <img src={insta} className="emoji" alt="mu" />{" "}
-                      </span>
-                    </a>
                   </span>
                 </h2>
               </div>
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            zion and max are atlanta natives and are invested in the uplifting
-            the startup ecosystem, understanding the struggles of starting a
-            company from scratch first-hand.
+            zion and max are atlanta natives who are invested in the uplifting
+            the startup ecosystem by sourcing high caliber tech talent for
+            innovative startups
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             learnmutiny is our way of giving back to the startup community and
@@ -411,15 +373,6 @@ function Home() {
                 <span className="horizontal-content-small">
                   zion
                   <a
-                    href="https://github.com/zionmelson"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      <img src={git} className="emoji" alt="mu" />
-                    </span>{" "}
-                  </a>
-                  <a
                     href="https://linkedin.com/in/zionmelson"
                     target="_blank"
                     rel="noreferrer"
@@ -427,21 +380,6 @@ function Home() {
                     <span className="emoji-container" style={{ padding: 0 }}>
                       {" "}
                       <img src={link} className="emoji" alt="mu" />
-                    </span>
-                  </a>
-                  <a
-                    href="https://instagram.com/zionmelson"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      {" "}
-                      <img
-                        src={insta}
-                        style={{ width: "1.5rem" }}
-                        className="emoji"
-                        alt="mu"
-                      />
                     </span>
                   </a>
                 </span>
@@ -465,26 +403,11 @@ function Home() {
                       <img src={link} className="emoji" alt="mu" />
                     </span>
                   </a>
-                  <a
-                    href="https://www.instagram.com/_mxmilan/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      {" "}
-                      <img
-                        src={insta}
-                        className="emoji"
-                        style={{ width: "1.5rem" }}
-                        alt="mu"
-                      />
-                    </span>
-                  </a>
                 </span>
               </h2>
             </div>
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "80%" }}>
             zion and max are atlanta natives and are invested in the uplifting
             the startup ecosystem.
           </h2>
