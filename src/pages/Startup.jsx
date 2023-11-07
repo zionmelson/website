@@ -45,7 +45,7 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
-            we specifically targeting talented full-stack college web developers
+            we specifically target talented full-stack college web developers
             from top universities in the atlanta area.
           </h2>
           <div className="icons">
@@ -81,7 +81,7 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specifically targeting talented full-stack college web developers
+            we specifically target talented full-stack college web developers
             from top universities in the atlanta area.
           </h2>
           <div className="icons">
