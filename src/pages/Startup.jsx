@@ -118,7 +118,7 @@ function Startup() {
             we specifically target full-stack senior web developers from the
             atlanta area
           </h2>
-          <div className="icons">
+          <div className="icons" style={{ marginBottom: "2rem" }}>
             <FaDocker
               id="docker"
               className="icon"
@@ -136,6 +136,19 @@ function Startup() {
             />
             <FaNode id="node" className="icon" style={{ margin: "0.6rem" }} />
           </div>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            meet with us
+          </h2>
+          <a
+            href="https://calendly.com/learnmutiny/company-intro"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
       {/* startup-mu desktop */}
