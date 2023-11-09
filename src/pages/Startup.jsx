@@ -137,7 +137,7 @@ function Startup() {
             <FaNode id="node" className="icon" style={{ margin: "0.6rem" }} />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            meet with us
+            hire with us
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
