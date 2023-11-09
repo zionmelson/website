@@ -11,6 +11,8 @@ import {
   FaNpm,
   FaNode,
 } from "react-icons/fa";
+import { gsap } from "gsap";
+import SplitType from "split-type";
 
 import smallstartups from "../assets/smallstartups.svg";
 import startups from "../assets/startups.svg";
@@ -23,6 +25,33 @@ import animation from "../assets/animate2.json";
 import "../App.css";
 
 function Startup() {
+  const positions = gsap.utils.toArray("#position");
+  const time = gsap.timeline();
+
+  positions.forEach((position) => {
+    const splitText = new SplitType(position);
+
+    time
+      .from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontFamily: "Inter, sans-serif",
+          y: 40,
+        },
+        "<"
+      )
+      .to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontFamily: "Inter, sans-serif",
+          y: -40,
+        },
+        "<2"
+      );
+  });
+
   return (
     <div className="main">
       {/* startup-intro desktop */}
@@ -30,9 +59,26 @@ function Startup() {
         <div className="vertical-content">
           <h1
             className="h1"
-            style={{ marginBottom: "1rem", marginTop: "5rem" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "row",
+              alignItems: "flex-end",
+              textAlign: "center",
+              marginBottom: "1rem",
+              marginTop: "5rem",
+              borderBottom: "2px solid #5dc4ff",
+            }}
           >
-            find a <span className="span">CTO</span> for your startup
+            find a
+            <div className="wrapper">
+              <h1 id="position">CTO</h1>
+              <h1 id="position">Tech Lead</h1>
+              <h1 id="position">Full-Stack Engineer</h1>
+              <h1 id="position">Front-End Engineer</h1>
+              <h1 id="position">Back-End Engineer</h1>
+            </div>
+            for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we specialzie in placing technical leaders in critical roles at
@@ -150,7 +196,7 @@ function Startup() {
           />
           <h3 className="h3" style={{ width: "75%" }}>
             all of our professionals are vetted and have a proven track record
-            of industry expertice leading successful teams and developing
+            of industry expertise leading successful teams and developing
             projects.
           </h3>
         </div>
@@ -175,7 +221,7 @@ function Startup() {
           />
           <h3 className="h3">
             all of our professionals are vetted and have a proven track record
-            of industry expertice leading successful teams and developing
+            of industry expertise leading successful teams and developing
             projects.
           </h3>
         </div>

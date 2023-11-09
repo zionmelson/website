@@ -20,12 +20,15 @@
     "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "firebase": "^9.22.1",
+    "gsap": "^3.12.2",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.11.2",
-    "react-use": "^17.4.0"
+    "react-use": "^17.4.0",
+    "split-text-js": "^1.0.3",
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

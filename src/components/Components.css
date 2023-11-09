@@ -71,6 +71,7 @@
 }
 
 .nav-text,
+.nav-support-text,
 .nav-startup-text {
   color: #fff;
   transition: all 0.3s linear;
@@ -81,11 +82,15 @@
 }
 
 .nav-text:hover {
-  color: #ffa3d4;
+  color: #686868;
 }
 
 .nav-startup-text:hover {
   color: #5dc4ff;
+}
+
+.nav-support-text:hover {
+  color: #ffa3d4;
 }
 
 .socials {

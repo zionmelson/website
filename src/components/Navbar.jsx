@@ -94,7 +94,7 @@ export default function Navbar() {
           {/* <li className="nav-text">
           <a href="/contact">contact</a>
         </li> */}
-          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
+          <li className={`nav-support-text ${scrolled ? "text-scrolled" : ""}`}>
             {" "}
             <a href="/contact">
               <h4 className="h4">contact</h4>
