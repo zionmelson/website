@@ -261,7 +261,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">starting at $75,000</h4>
+                    <h4 className="h4">$75,000 to $125,000</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -270,7 +270,7 @@ function Startup() {
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                staffing fee
+                of total salary
               </h3>
               <img src={smallstartups} className="logo" alt="small" />
             </div>
@@ -293,7 +293,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$75,000 to $175,000</h4>
+                    <h4 className="h4">$125,000 to $175,000</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -302,7 +302,7 @@ function Startup() {
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                staffing fee
+                of total salary
               </h3>
               <img src={startups} className="logo" alt="medium" />
             </div>
@@ -334,7 +334,7 @@ function Startup() {
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                staffing fee
+                of total salary
               </h3>
               <img src={largestartups} className="logo" alt="unicorn" />
             </div>
@@ -390,16 +390,18 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">starting at $75,000</h4>
+                    <h4 className="h4">$75,000 to $125,000</h4>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">18%</h1>
+              <h1 className="h1" style={{ fontSize: "2rem" }}>
+                18%
+              </h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                staffing fee
+                of total salary
               </h3>
               <img src={smallstartups} className="logo" alt="small" />
             </div>
@@ -422,16 +424,18 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$75,000 to $175,000</h4>
+                    <h4 className="h4">$125,000 to $175,000</h4>
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">15%</h1>
+              <h1 className="h1" style={{ fontSize: "2rem" }}>
+                15%
+              </h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                staffing fee
+                of total salary
               </h3>
               <img src={startups} className="logo" alt="medium" />
             </div>
@@ -458,12 +462,14 @@ function Startup() {
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">12%</h1>
+              <h1 className="h1" style={{ fontSize: "2rem" }}>
+                12%
+              </h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                staffing fee
+                of total salary
               </h3>
               <img src={largestartups} className="logo" alt="unicorn" />
             </div>

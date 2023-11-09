@@ -151,7 +151,7 @@
 }
 
 #light .startup-logo:hover {
-  background: linear-gradient(20deg, #111111, #4b1806);
+  background: linear-gradient(20deg, #111111, #2d4069);
 }
 
 .support-logo {
@@ -276,7 +276,7 @@
   }
 
   #light .startup-logo {
-    background: linear-gradient(20deg, #111111, #4b1806);
+    background: linear-gradient(20deg, #111111, #2d4069);
   }
 
   .support-logo {
