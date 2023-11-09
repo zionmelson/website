@@ -89,6 +89,10 @@
   color: #5dc4ff;
 }
 
+#light .nav-startup-text:hover {
+  color: #ff4405;
+}
+
 .nav-support-text:hover {
   color: #ffa3d4;
 }
@@ -138,8 +142,16 @@
   transition: 0.3s linear;
 }
 
+#light .startup-logo {
+  border: 0.2rem solid #686868;
+}
+
 .startup-logo:hover {
   background: linear-gradient(20deg, #111111, #2d4069);
+}
+
+#light .startup-logo:hover {
+  background: linear-gradient(20deg, #111111, #4b1806);
 }
 
 .support-logo {
@@ -261,6 +273,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  #light .startup-logo {
+    background: linear-gradient(20deg, #111111, #4b1806);
   }
 
   .support-logo {

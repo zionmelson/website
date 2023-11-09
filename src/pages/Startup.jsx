@@ -11,8 +11,8 @@ import {
   FaNpm,
   FaNode,
 } from "react-icons/fa";
-import { gsap } from "gsap";
-import SplitType from "split-type";
+// import { gsap } from "gsap";
+// import SplitType from "split-type";
 
 import smallstartups from "../assets/smallstartups.svg";
 import startups from "../assets/startups.svg";
@@ -25,32 +25,32 @@ import animation from "../assets/animate2.json";
 import "../App.css";
 
 function Startup() {
-  const positions = gsap.utils.toArray("#position");
-  const time = gsap.timeline();
+  // const positions = gsap.utils.toArray("#position");
+  // const time = gsap.timeline();
 
-  positions.forEach((position) => {
-    const splitText = new SplitType(position);
+  // positions.forEach((position) => {
+  //   const splitText = new SplitType(position);
 
-    time
-      .from(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontFamily: "Inter, sans-serif",
-          y: 40,
-        },
-        "<"
-      )
-      .to(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontFamily: "Inter, sans-serif",
-          y: -40,
-        },
-        "<2"
-      );
-  });
+  //   time
+  //     .from(
+  //       splitText.chars,
+  //       {
+  //         opacity: 0,
+  //         fontFamily: "Inter, sans-serif",
+  //         y: 40,
+  //       },
+  //       "<"
+  //     )
+  //     .to(
+  //       splitText.chars,
+  //       {
+  //         opacity: 0,
+  //         fontFamily: "Inter, sans-serif",
+  //         y: -40,
+  //       },
+  //       "<2"
+  //     );
+  // });
 
   return (
     <div className="main">
@@ -60,25 +60,12 @@ function Startup() {
           <h1
             className="h1"
             style={{
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "row",
-              alignItems: "flex-end",
-              textAlign: "center",
-              marginBottom: "1rem",
               marginTop: "5rem",
-              borderBottom: "2px solid #5dc4ff",
+              marginBottom: "1rem",
             }}
           >
-            find a
-            <div className="wrapper">
-              <h1 id="position">CTO</h1>
-              <h1 id="position">Tech Lead</h1>
-              <h1 id="position">Full-Stack Engineer</h1>
-              <h1 id="position">Front-End Engineer</h1>
-              <h1 id="position">Back-End Engineer</h1>
-            </div>
-            for your startup
+            find a <span className="span">senior tech lead</span> for your
+            startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we specialzie in placing technical leaders in critical roles at
@@ -111,9 +98,12 @@ function Startup() {
         <div className="vertical-content">
           <h1
             className="h1"
-            style={{ marginBottom: "1rem", marginTop: "2rem" }}
+            style={{
+              marginBottom: "1rem",
+            }}
           >
-            find <span className="span">cost</span> developers for your startup
+            find a <span className="span">senior tech lead</span> for your
+            startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we specialzie in placing technical leaders in critical roles at
@@ -241,8 +231,8 @@ function Startup() {
           >
             <div
               className="vertical-content"
+              id="startup-box"
               style={{
-                border: "2px solid #5dc4ff",
                 borderRadius: "2rem",
                 padding: "1rem",
                 margin: "1rem",
@@ -273,8 +263,8 @@ function Startup() {
             </div>
             <div
               className="vertical-content"
+              id="startup-box"
               style={{
-                border: "2px solid #5dc4ff",
                 borderRadius: "2rem",
                 padding: "1rem",
                 margin: "1rem",
@@ -305,8 +295,8 @@ function Startup() {
             </div>
             <div
               className="vertical-content"
+              id="startup-box"
               style={{
-                border: "2px solid #5dc4ff",
                 borderRadius: "2rem",
                 padding: "1rem",
                 margin: "1rem",
@@ -357,7 +347,6 @@ function Startup() {
       </div>
       {/* pricing phone */}
       <div className="startup-box-mobile">
-        {" "}
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             pricing
@@ -365,11 +354,14 @@ function Startup() {
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             our staffing fees for full-time positions:
           </h2>
-          <div className="horizontal-content-small">
+          <div
+            className="horizontal-content-small"
+            style={{ marginBottom: "1rem" }}
+          >
             <div
               className="vertical-content"
+              id="startup-box"
               style={{
-                border: "2px solid #5dc4ff",
                 borderRadius: "2rem",
                 padding: "1rem",
                 margin: "1rem",
@@ -385,20 +377,23 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h2 className="h2">starting at $75,000</h2>
+                    <h4 className="h4">starting at $75,000</h4>
                   </span>{" "}
                 </a>
               </h3>
               <h1 className="h1">18%</h1>
-              <h3 className="h3" style={{ marginBottom: "1rem" }}>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
                 staffing fee
               </h3>
               <img src={smallstartups} className="logo" alt="small" />
             </div>
             <div
               className="vertical-content"
+              id="startup-box"
               style={{
-                border: "2px solid #5dc4ff",
                 borderRadius: "2rem",
                 padding: "1rem",
                 margin: "1rem",
@@ -414,20 +409,23 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h2 className="h2">$75,000 to $175,000</h2>
+                    <h4 className="h4">$75,000 to $175,000</h4>
                   </span>{" "}
                 </a>
               </h3>
               <h1 className="h1">15%</h1>
-              <h3 className="h3" style={{ marginBottom: "1rem" }}>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
                 staffing fee
               </h3>
               <img src={startups} className="logo" alt="medium" />
             </div>
             <div
               className="vertical-content"
+              id="startup-box"
               style={{
-                border: "2px solid #5dc4ff",
                 borderRadius: "2rem",
                 padding: "1rem",
                 margin: "1rem",
@@ -443,12 +441,15 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h2 className="h2">upwards of $175,000</h2>
+                    <h4 className="h4">upwards of $175,000</h4>
                   </span>{" "}
                 </a>
               </h3>
               <h1 className="h1">12%</h1>
-              <h3 className="h3" style={{ marginBottom: "1rem" }}>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
                 staffing fee
               </h3>
               <img src={largestartups} className="logo" alt="unicorn" />
@@ -459,7 +460,7 @@ function Startup() {
             closely with your team to ensure successful placement
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            find your next co-founder with learnmutiny{" "}
+            find your next co-founder with learnmutiny
           </h3>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
