@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Error from "./pages/Error";
 import Privacy from "./pages/Privacy";
+import { Analytics } from "@vercel/analytics/react";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -49,6 +50,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        <Analytics />
       </ThemeContext.Provider>
     </>
   );
