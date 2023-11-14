@@ -47,7 +47,7 @@ export default function Contact() {
             id="support"
             style={{ marginBottom: "1rem" }}
           >
-            <img src={bear} className="emoji" id="support" alt="mu" />
+            <img src={bear} className="emoji" alt="mu" />
             support@learnmutiny.io
           </span>
           <h3 className="h3">until it&apos;s done.</h3>

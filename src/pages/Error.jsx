@@ -6,11 +6,11 @@ export default function Error() {
   return (
     <div className="main">
       <div className="vertical-content" style={{ marginTop: "3rem" }}>
-        <h1 className="h1" style={{ width: "100%", marginBottom: "1rem" }}>
+        <h2 className="h2" style={{ width: "100%", marginBottom: "1rem" }}>
           where are you going? 🧐
-        </h1>
+        </h2>
         <a href="/">
-          <span className="emoji-container" id="support">
+          <span className="emoji-container">
             <img src={bear} className="emoji" alt="mu" />
             get back to safety
           </span>
