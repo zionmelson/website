@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="footer">
       <div className="foot-cont">
         <p>© 2023 learnmutiny. All rights reserved.</p>
-        {/* <a href="/terms" className="span-link">
+        <a href="/terms" className="span-link">
           <p className="terms-mobile">Terms of Service</p>
         </a>
         <a href="/privacy" className="span-link">
@@ -22,7 +22,7 @@ export default function Footer() {
         </a>
         <a href="/privacy" className="span-link">
           <p className="terms">Privacy Policy</p>
-        </a> */}
+        </a>
       </div>
       <div className="socials">
         <a

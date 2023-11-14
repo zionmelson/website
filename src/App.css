@@ -182,7 +182,7 @@
   width: 90%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -240,6 +240,11 @@
 
 .h4 {
   font-family: Inter, sans-serif;
+}
+
+.h5 {
+  font-family: Inter, sans-serif;
+  font-size: 0.8rem;
 }
 
 .icons {
