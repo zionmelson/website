@@ -261,7 +261,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$75,000 to $125,000</h4>
+                    <h4 className="h4">view prices</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -293,7 +293,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$125,000 to $175,000</h4>
+                    <h4 className="h4">view prices</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -325,7 +325,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">upwards of $175,000</h4>
+                    <h4 className="h4">view prices</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -390,7 +390,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$75,000 to $125,000</h4>
+                    <h4 className="h4">view prices</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -424,7 +424,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">$125,000 to $175,000</h4>
+                    <h4 className="h4">view prices</h4>
                   </span>{" "}
                 </a>
               </h3>
@@ -458,7 +458,7 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">upwards of $175,000</h4>
+                    <h4 className="h4">view prices</h4>
                   </span>{" "}
                 </a>
               </h3>
