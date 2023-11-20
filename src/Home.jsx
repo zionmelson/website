@@ -1,4 +1,5 @@
 import bear from "./assets/bear.svg";
+import inverse from "./assets/inverse.svg";
 import zion from "./assets/zion.svg";
 import max from "./assets/max.svg";
 
@@ -24,7 +25,8 @@ function Home() {
       <div className="box">
         <div className="vertical-content">
           <div className="vertical-content">
-            <img src={bear} className="logo" alt="bear" />
+            <img src={bear} className="logo" id="logo" alt="bear" />
+            <img src={inverse} className="logo" id="light-logo" alt="inverse" />
           </div>
         </div>
       </div>
@@ -82,7 +84,13 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content">
           <div className="vertical-content">
-            <img src={bear} className="logo" alt="bear" />
+            <img src={bear} className="logo" id="logo" alt="bear" />
+            <img
+              src={inverse}
+              className="logo"
+              id="light-logo"
+              alt="inverse"
+            />{" "}
           </div>
         </div>
       </div>
