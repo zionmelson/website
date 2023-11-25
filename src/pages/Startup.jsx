@@ -14,9 +14,7 @@ import {
 // import { gsap } from "gsap";
 // import SplitType from "split-type";
 
-import smallstartups from "../assets/smallstartups.svg";
 import startups from "../assets/startups.svg";
-import largestartups from "../assets/largestartups.svg";
 import calen from "../assets/calen.svg";
 
 import Lottie from "lottie-react";
@@ -265,39 +263,7 @@ function Startup() {
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">18%</h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of total salary
-              </h3>
-              <img src={smallstartups} className="logo" alt="small" />
-            </div>
-            <div
-              className="vertical-content"
-              id="startup-box"
-              style={{
-                borderRadius: "2rem",
-                padding: "1rem",
-                margin: "1rem",
-              }}
-            >
-              <h3
-                className="h3"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                <a
-                  href="https://calendly.com/learnmutiny/company-intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="emoji-container">
-                    <h4 className="h4">view prices</h4>
-                  </span>{" "}
-                </a>
-              </h3>
-              <h1 className="h1">15%</h1>
+              <h1 className="h1">25%%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
@@ -305,38 +271,6 @@ function Startup() {
                 of total salary
               </h3>
               <img src={startups} className="logo" alt="medium" />
-            </div>
-            <div
-              className="vertical-content"
-              id="startup-box"
-              style={{
-                borderRadius: "2rem",
-                padding: "1rem",
-                margin: "1rem",
-              }}
-            >
-              <h3
-                className="h3"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                <a
-                  href="https://calendly.com/learnmutiny/company-intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="emoji-container">
-                    <h4 className="h4">view prices</h4>
-                  </span>{" "}
-                </a>
-              </h3>
-              <h1 className="h1">12%</h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of total salary
-              </h3>
-              <img src={largestartups} className="logo" alt="unicorn" />
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -368,130 +302,49 @@ function Startup() {
             our staffing fees for full-time positions:
           </h2>
           <div
-            className="horizontal-content-small"
-            style={{ marginBottom: "1rem" }}
+            className="vertical-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              padding: "1rem",
+              margin: "1rem",
+            }}
           >
-            <div
-              className="vertical-content"
-              id="startup-box"
-              style={{
-                borderRadius: "2rem",
-                padding: "1rem",
-                margin: "1rem",
-              }}
-            >
-              <h3
-                className="h3"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
+            <h3 className="h3" style={{ marginBottom: "0.5rem", width: "90%" }}>
+              <a
+                href="https://calendly.com/learnmutiny/company-intro"
+                target="_blank"
+                rel="noreferrer"
               >
-                <a
-                  href="https://calendly.com/learnmutiny/company-intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="emoji-container">
-                    <h4 className="h4">view prices</h4>
-                  </span>{" "}
-                </a>
-              </h3>
-              <h1 className="h1" style={{ fontSize: "2rem" }}>
-                18%
-              </h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of total salary
-              </h3>
-              <img src={smallstartups} className="logo" alt="small" />
-            </div>
-            <div
-              className="vertical-content"
-              id="startup-box"
-              style={{
-                borderRadius: "2rem",
-                padding: "1rem",
-                margin: "1rem",
-              }}
-            >
-              <h3
-                className="h3"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                <a
-                  href="https://calendly.com/learnmutiny/company-intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="emoji-container">
-                    <h4 className="h4">view prices</h4>
-                  </span>{" "}
-                </a>
-              </h3>
-              <h1 className="h1" style={{ fontSize: "2rem" }}>
-                15%
-              </h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of total salary
-              </h3>
-              <img src={startups} className="logo" alt="medium" />
-            </div>
-            <div
-              className="vertical-content"
-              id="startup-box"
-              style={{
-                borderRadius: "2rem",
-                padding: "1rem",
-                margin: "1rem",
-              }}
-            >
-              <h3
-                className="h3"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                <a
-                  href="https://calendly.com/learnmutiny/company-intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="emoji-container">
-                    <h4 className="h4">view prices</h4>
-                  </span>{" "}
-                </a>
-              </h3>
-              <h1 className="h1" style={{ fontSize: "2rem" }}>
-                12%
-              </h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of total salary
-              </h3>
-              <img src={largestartups} className="logo" alt="unicorn" />
-            </div>
+                <span className="emoji-container">
+                  <h4 className="h4">view prices</h4>
+                </span>{" "}
+              </a>
+            </h3>
+            <h1 className="h1">25%</h1>
+            <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
+              of total salary
+            </h3>
+            <img src={startups} className="logo" alt="medium" />
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we know the hiring process can be stressful, because of this we work
-            closely with your team to ensure successful placement
-          </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            find your next co-founder with learnmutiny
-          </h3>
-          <a
-            href="https://calendly.com/learnmutiny/company-intro"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="emoji-container">
-              <img src={calen} className="emoji" alt="mu" />
-              Calendly
-            </span>
-          </a>
         </div>
+        <h2 className="h2" style={{ marginBottom: "1rem" }}>
+          we know the hiring process can be stressful, because of this we work
+          closely with your team to ensure successful placement
+        </h2>
+        <h3 className="h3" style={{ marginBottom: "1rem" }}>
+          find your next co-founder with learnmutiny
+        </h3>
+        <a
+          href="https://calendly.com/learnmutiny/company-intro"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="emoji-container">
+            <img src={calen} className="emoji" alt="mu" />
+            Calendly
+          </span>
+        </a>
       </div>
     </div>
   );
