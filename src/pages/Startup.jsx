@@ -263,7 +263,7 @@ function Startup() {
                   </span>{" "}
                 </a>
               </h3>
-              <h1 className="h1">25%%</h1>
+              <h1 className="h1">25%</h1>
               <h3
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
