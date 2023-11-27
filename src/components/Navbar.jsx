@@ -3,7 +3,6 @@ import "./Components.css";
 import { useState, useEffect } from "react";
 
 import bear from "../assets/bear.svg";
-import support from "../assets/support.svg";
 import startup from "../assets/startup.svg";
 import learnmutiny from "../assets/learnmutiny.svg";
 
@@ -71,10 +70,8 @@ export default function Navbar() {
                 <img src={bear} className="bear-logo" alt="logo" />
               </div>
             ) : (
-              <div
-                className={`support-logo ${scrolled ? "logo-scrolled" : ""}`}
-              >
-                <img src={support} className="full-logo" alt="logo" />
+              <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
+                <img src={learnmutiny} className="full-logo" alt="logo" />
                 <img src={bear} className="bear-logo" alt="logo" />
               </div>
             )}

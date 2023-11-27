@@ -11,6 +11,8 @@ import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+import Joesph from "./pages/developers/2e31c0";
+
 import "./App.css";
 
 export const ThemeContext = createContext(null);
@@ -33,11 +35,16 @@ function App() {
           id={theme === "" ? "" : "light"}
         >
           <Navbar />
+
           <button onClick={toggleTheme} className="theme-button">
             {theme === "" ? (
-              <h4 className="h4">darkmode</h4>
+              <h4 className="h4" style={{ color: "#302f31" }}>
+                darkmode
+              </h4>
             ) : (
-              <h4 className="h4">lightmode</h4>
+              <h4 className="h4" style={{ color: "#fff" }}>
+                lightmode
+              </h4>
             )}
           </button>
           <Routes>
@@ -46,6 +53,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/developers/2e31c0" element={<Joesph />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
