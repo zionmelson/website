@@ -16,5 +16,5 @@ test("Custom Browser Check", async ({ page }) => {
   expect(responseTwo?.status()).toBeLessThan(400);
 
   // get screenshot of developer page
-  await page.screenshot({ path: "screenshot.jpg" });
+  await page.screenshot({ path: "screenshot2.jpg" });
 });
