@@ -1,8 +1,8 @@
-export default function Josh() {
+export default function Peafy() {
   return (
     <div className="main">
       <div className="vertical-content">
-        <h1 className="h1">Josh Trinidad</h1>
+        <h1 className="h1">Peafy Doodoofish</h1>
       </div>
     </div>
   );

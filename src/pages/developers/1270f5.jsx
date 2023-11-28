@@ -1,8 +1,8 @@
-export default function Dan() {
+export default function Chewlu() {
   return (
     <div className="main">
       <div className="vertical-content">
-        <h1 className="h1">Dan Seagren</h1>
+        <h1 className="h1">Chewlu Boogerbrain</h1>
       </div>
     </div>
   );

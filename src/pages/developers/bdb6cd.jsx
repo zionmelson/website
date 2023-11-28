@@ -1,8 +1,8 @@
-export default function Royce() {
+export default function Bushspitz() {
   return (
     <div className="main">
       <div className="vertical-content">
-        <h1 className="h1">Royce Arockiasamy</h1>
+        <h1 className="h1">Bushspitz Wigglebottom</h1>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-export default function Dasha() {
+export default function Gootu() {
   return (
     <div className="main">
       <div className="vertical-content">
-        <h1 className="h1">Dasha Praylor</h1>
+        <h1 className="h1">Gootu Snotborn</h1>
       </div>
     </div>
   );
