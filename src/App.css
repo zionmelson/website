@@ -607,6 +607,10 @@
   border-radius: 1rem;
 }
 
+#weird-div {
+  margin-right: 20rem;
+}
+
 @media (max-width: 767px) {
   .main {
     padding-top: 6rem;
@@ -870,7 +874,11 @@
     justify-content: center;
     margin-top: 10rem;
     margin-left: 12rem;
-    background-color: #c6c6c6;
+    background-color: #302f31;
     padding: 0.5rem;
+  }
+
+  #weird-div {
+    margin-right: 43rem;
   }
 }
