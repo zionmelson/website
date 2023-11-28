@@ -20,14 +20,13 @@
   background: linear-gradient(20deg, #111111, #302f31);
   color: #ffffff;
   transition: all 0.5s linear;
-
   #light-logo {
     display: none;
   }
 }
 
 .App-light {
-  background: linear-gradient(20deg, #ffffff, #9f9da0);
+  background: linear-gradient(20deg, #ffffff, #5dc4ff);
   color: #302f31;
   transition: all 0.5s linear;
   min-height: 100vh;
@@ -119,6 +118,12 @@
   padding: 0;
 }
 
+.emoji-2 {
+  width: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
 .emoji-container {
   height: 2rem;
   font-size: 1rem;
@@ -126,7 +131,6 @@
   flex-direction: row;
   background-color: #111111;
   padding: 0.5rem;
-  padding-left: 0.1rem;
   border-radius: 60rem;
   align-items: center;
   justify-content: center;
@@ -144,10 +148,9 @@
   font-size: 1rem;
   display: flex;
   flex-direction: row;
-  background-color: #5f5f5f;
+  background-color: #302f31;
   color: #fff;
   padding: 0.5rem;
-  padding-left: 0.1rem;
   border-radius: 60rem;
   align-items: center;
   justify-content: center;
@@ -156,7 +159,8 @@
 
 #light .emoji-container:hover {
   background-color: #e0e0e0;
-  color: #111111;
+  color: #302f31;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -202,7 +206,7 @@
 }
 
 #light #startup-box {
-  border: 2px solid #ff4405;
+  border: 2px solid #d5892a;
 }
 
 .span {
@@ -211,7 +215,7 @@
 }
 
 #light .span {
-  color: #ff4405;
+  color: #099400;
   font-family: Inter, sans-serif;
 }
 
@@ -227,7 +231,6 @@
 .h1 {
   font-size: 3rem;
   font-family: Inter, sans-serif;
-  width: 80%;
 }
 
 .h1-sub {
@@ -243,7 +246,6 @@
 
 .h3 {
   font-size: 1rem;
-  width: 55%;
 }
 
 .h4 {
@@ -277,68 +279,251 @@
   background: #ffa3d4;
 }
 
+#light #support:hover {
+  background: #ffa3d4;
+  color: #302f31;
+}
+
 #android:hover {
   color: #32de84;
+}
+
+#android-container:hover {
+  background-color: #32de84;
+  color: #fff;
+}
+
+#light #andriod-container:hover {
+  background-color: #32de84;
+  color: #fff;
 }
 
 #apple:hover {
   color: #b3b3b3;
 }
 
-#react:hover {
-  color: #61dafb;
-}
-
-#python:hover {
-  color: #3e7bac;
-}
-
-#rust:hover {
-  color: #e15b28;
-}
-
-#js:hover {
-  color: #eddd67;
-}
-
-#angular:hover {
-  color: #c3002f;
-}
-
-#docker:hover {
-  color: #3262e5;
-}
-
-#solidity:hover {
-  color: #464972;
-}
-
-#laravel:hover {
-  color: #ff2d20;
-}
-
-#npm:hover {
-  color: #bc423b;
-}
-
-#node:hover {
-  color: #669c4f;
+#apple-container:hover {
+  background-color: #b3b3b3;
+  color: #fff;
 }
 
 #light #apple:hover {
   color: #ffffff;
 }
 
+#light #apple-container:hover {
+  background-color: #b3b3b3;
+  color: #302f31;
+}
+
+#react:hover {
+  color: #61dafb;
+}
+
+#react-container:hover {
+  background-color: #61dafb;
+  color: #fff;
+}
+
+#light #react-container:hover {
+  background-color: #61dafb;
+  color: #fff;
+}
+
+#python:hover {
+  color: #3e7bac;
+}
+
+#python-container:hover {
+  background-color: #3e7bac;
+  color: #fff;
+}
+
 #light #python:hover {
   color: #ffd641;
+}
+
+#light #python-container:hover {
+  background-color: #ffd641;
+  color: #fff;
+}
+
+#rust:hover {
+  color: #e15b28;
+}
+
+#rust-container:hover {
+  background-color: #e15b28;
+  color: #fff;
+}
+
+#light #rust-container:hover {
+  background-color: #e15b28;
+  color: #fff;
+}
+
+#mysql:hover {
+  color: #00638e;
+}
+
+#mysql-container:hover {
+  background-color: #00638e;
+  color: #fff;
+}
+
+#light #mysql:hover {
+  color: #00638e;
+}
+
+#light #mysql-container:hover {
+  background-color: #00638e;
+  color: #fff;
+}
+
+#js:hover {
+  color: #f0dc4e;
+}
+
+#js-container:hover {
+  background-color: #f0dc4e;
+  color: #fff;
+}
+
+#light #js:hover {
+  color: #f0dc4e;
+}
+
+#light #js-container:hover {
+  background-color: #f0dc4e;
+  color: #fff;
+}
+
+#ts:hover {
+  color: #007cd2;
+}
+
+#ts-container:hover {
+  background-color: #007cd2;
+  color: #fff;
+}
+
+#light #ts:hover {
+  color: #007cd2;
+}
+
+#light #ts-container:hover {
+  background-color: #007cd2;
+  color: #fff;
+}
+
+#graphql:hover {
+  color: #fa0daf;
+}
+
+#graphql-container:hover {
+  background-color: #fa0daf;
+  color: #fff;
+}
+
+#light #graphql:hover {
+  color: #fa0daf;
+}
+
+#light #graphql-container:hover {
+  background-color: #fa0daf;
+  color: #fff;
+}
+
+#angular:hover {
+  color: #c3002f;
+}
+
+#angular-container:hover {
+  background-color: #c3002f;
+  color: #fff;
 }
 
 #light #angular:hover {
   color: #dd0031;
 }
 
+#light #angular-container:hover {
+  background-color: #c3002f;
+  color: #fff;
+}
+
+#docker:hover {
+  color: #3262e5;
+}
+
+#docker-container:hover {
+  background-color: #3262e5;
+  color: #fff;
+}
+
+#light #docker-container:hover {
+  background-color: #3262e5;
+  color: #fff;
+}
+
+#solidity:hover {
+  color: #464972;
+}
+
+#solidity-container:hover {
+  background-color: #464972;
+  color: #fff;
+}
+
 #light #solidity:hover {
   color: #63668d;
+}
+
+#light #solidity-container:hover {
+  background-color: #464972;
+  color: #fff;
+}
+
+#laravel:hover {
+  color: #ff2d20;
+}
+
+#laravel-container:hover {
+  background-color: #ff2d20;
+  color: #fff;
+}
+
+#light #laravel-container:hover {
+  background-color: #ff2d20;
+  color: #fff;
+}
+
+#npm:hover {
+  color: #bc423b;
+}
+
+#npm-container:hover {
+  background-color: #bc423b;
+  color: #fff;
+}
+
+#light #npm-container:hover {
+  background-color: #bc423b;
+  color: #fff;
+}
+
+#node:hover {
+  color: #669c4f;
+}
+
+#node-container:hover {
+  background-color: #669c4f;
+  color: #fff;
+}
+
+#light #node-container:hover {
+  background-color: #669c4f;
+  color: #fff;
 }
 
 .theme-button {
@@ -350,7 +535,7 @@
   justify-content: center;
   margin-top: 10rem;
   margin-left: 10rem;
-  background-color: #272727;
+  background-color: #e0e0e0;
   padding: 0.5rem;
   z-index: 0;
 }
@@ -363,7 +548,7 @@
   justify-content: center;
   margin-top: 10rem;
   margin-left: 10rem;
-  background-color: #c6c6c6;
+  background-color: #302f31;
   padding: 0.5rem;
 }
 
@@ -376,6 +561,50 @@
   &:nth-of-type(5) {
     color: #5dc4ff;
   }
+}
+
+#csuite:hover {
+  background-color: #1e4d68;
+  color: #ffffff;
+}
+
+#light #csuite:hover {
+  background-color: #1e4d68;
+  color: #ffffff;
+}
+
+#senior:hover {
+  background-color: #681e1e;
+  color: #ffffff;
+}
+
+#light #senior:hover {
+  background-color: #681e1e;
+  color: #ffffff;
+}
+
+#midtier:hover {
+  background-color: #f4ff5d6f;
+  color: #ffffff;
+}
+
+#light #midtier:hover {
+  background-color: #f4ff5daf;
+  color: #302f31;
+}
+
+#junior:hover {
+  background-color: #1e6827;
+  color: #ffffff;
+}
+
+#light #junior:hover {
+  background-color: #1e6827;
+  color: #ffffff;
+}
+
+#video {
+  border-radius: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -478,7 +707,7 @@
   .emoji-container {
     min-width: 6rem;
     height: 2rem;
-    background-color: #9696965a;
+    background-color: #000;
     padding: 0.3;
     align-items: center;
     justify-content: center;
@@ -491,6 +720,10 @@
 
   .and {
     display: none;
+  }
+
+  #video {
+    border-radius: 0.5rem;
   }
 }
 
@@ -566,7 +799,7 @@
   .emoji-container {
     width: 12rem;
     height: 2.5rem;
-    background-color: #9696965a;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;

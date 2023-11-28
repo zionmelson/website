@@ -75,8 +75,7 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we specifically target vetted full-stack senior web developers from
-            the atlanta area
+            we specifically target vetted full-stack senior web developers
           </h2>
           <div className="icons">
             <FaPython id="python" className="icon" />
@@ -113,8 +112,7 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specifically target full-stack senior web developers from the
-            atlanta area
+            we specifically target full-stack senior web developers
           </h2>
           <div className="icons" style={{ marginBottom: "2rem" }}>
             <FaDocker
@@ -249,6 +247,13 @@ function Startup() {
                 margin: "1rem",
               }}
             >
+              <h1 className="h1">25%</h1>
+              <h3
+                className="h3"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                of total salary
+              </h3>
               <h3
                 className="h3"
                 style={{ marginBottom: "0.5rem", width: "90%" }}
@@ -259,16 +264,9 @@ function Startup() {
                   rel="noreferrer"
                 >
                   <span className="emoji-container">
-                    <h4 className="h4">view prices</h4>
+                    <h4 className="h4">view salaries</h4>
                   </span>{" "}
                 </a>
-              </h3>
-              <h1 className="h1">25%</h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of total salary
               </h3>
               <img src={startups} className="logo" alt="medium" />
             </div>
@@ -310,6 +308,10 @@ function Startup() {
               margin: "1rem",
             }}
           >
+            <h1 className="h1">25%</h1>
+            <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
+              of total salary
+            </h3>
             <h3 className="h3" style={{ marginBottom: "0.5rem", width: "90%" }}>
               <a
                 href="https://calendly.com/learnmutiny/company-intro"
@@ -317,13 +319,9 @@ function Startup() {
                 rel="noreferrer"
               >
                 <span className="emoji-container">
-                  <h4 className="h4">view prices</h4>
+                  <h4 className="h4">view salaries</h4>
                 </span>{" "}
               </a>
-            </h3>
-            <h1 className="h1">25%</h1>
-            <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
-              of total salary
             </h3>
             <img src={startups} className="logo" alt="medium" />
           </div>

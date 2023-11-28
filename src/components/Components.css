@@ -41,12 +41,12 @@
 .scrolled {
   background-color: rgba(19, 19, 19, 0.9);
   height: 4rem;
-  color: #fff;
+
   align-items: flex-end;
 }
 
 #light .scrolled {
-  background-color: rgba(217, 217, 217, 0.9);
+  background-color: #5dc4ff2a;
   height: 4rem;
   align-items: flex-end;
 }
@@ -90,7 +90,7 @@
 }
 
 #light .nav-startup-text:hover {
-  color: #ff4405;
+  color: #d5892a;
 }
 
 .nav-support-text:hover {
@@ -143,7 +143,7 @@
 }
 
 #light .startup-logo {
-  border: 0.2rem solid #686868;
+  border: 0.2rem solid #099400;
 }
 
 .startup-logo:hover {
@@ -151,25 +151,7 @@
 }
 
 #light .startup-logo:hover {
-  background: linear-gradient(20deg, #111111, #2d4069);
-}
-
-.support-logo {
-  width: 12rem;
-  height: 4rem;
-  background: linear-gradient(20deg, #111111, #302f31);
-  border-radius: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  padding: 1rem;
-  border: 0.2rem solid #ffa3d4;
-  transition: 0.3s linear;
-}
-
-.support-logo:hover {
-  background: linear-gradient(20deg, #111111, #664657);
+  background: linear-gradient(20deg, #111111, #5e3c12);
 }
 
 .full-logo {
