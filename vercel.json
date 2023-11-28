@@ -1,10 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": { "cache": false }
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
