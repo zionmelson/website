@@ -1,39 +1,59 @@
-// import { useState } from "react";
+import { useState } from "react";
 import {
-  // FaPause,
-  // FaPlay,
+  FaPause,
+  FaPlay,
   FaVolumeUp,
   FaVolumeDown,
   FaVolumeMute,
 } from "react-icons/fa";
 
 import calen from "../../assets/calen.svg";
+
 import react from "../../assets/react.svg";
 import angul from "../../assets/angul.svg";
 import node from "../../assets/node.svg";
 import js from "../../assets/js.svg";
 import mysql from "../../assets/mysql.svg";
+import linux from "../../assets/linux.svg";
 
-export default function Joesph() {
-  // const [videoPaused, setVideoPaused] = useState(true);
-  // const [videoElement, setVideoElement] = useState(null);
+export default function Zoowee() {
+  const [videoPaused, setVideoPaused] = useState(true);
+  const [videoElement, setVideoElement] = useState(null);
 
-  // const toggleVideo = () => {
-  //   console.log(videoElement);
-  //   console.log(videoElement.paused);
+  const toggleVideo = () => {
+    console.log(videoElement);
+    console.log(videoElement.paused);
 
-  //   if (videoElement) {
-  //     if (videoElement.paused) {
-  //       videoElement.play();
-  //       console.log("play");
-  //       setVideoPaused(true);
-  //     } else {
-  //       videoElement.pause();
-  //       console.log("pause");
-  //       setVideoPaused(false);
-  //     }
-  //   }
-  // };
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+        console.log("play");
+        setVideoPaused(true);
+      } else {
+        videoElement.pause();
+        console.log("pause");
+        setVideoPaused(false);
+      }
+    }
+  };
+
+  const muteVideo = () => {
+    if (videoElement) {
+      videoElement.volume = 0;
+    }
+  };
+
+  const halfVolume = () => {
+    if (videoElement) {
+      videoElement.volume = 0.5;
+    }
+  };
+
+  const fullVolume = () => {
+    if (videoElement) {
+      videoElement.volume = 1;
+    }
+  };
 
   return (
     <div className="main">
@@ -69,18 +89,17 @@ export default function Joesph() {
                 full-stack developer
               </h3>
 
-              {/* <video
+              <video
                 id="video"
                 width="650"
                 autoPlay
-                muted
                 loop
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/testVid.mp4" type="video/mp4" />
+                <source src="/src/assets/zoowee.mp4" type="video/mp4" />
                 Your browser does not support HTML video.
-              </video> */}
+              </video>
               <div
                 className="horizontal-content"
                 style={{ marginBottom: "2rem" }}
@@ -88,19 +107,37 @@ export default function Joesph() {
                 <button
                   onClick={(e) => {
                     e.preventDefault();
-                    // toggleVideo();
+                    toggleVideo();
                   }}
                   style={{ fontSize: "1.5rem" }}
                 >
-                  {/* {videoPaused ? <FaPlay /> : <FaPause />} */}
+                  {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button style={{ fontSize: "1.5rem" }}>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    muteVideo();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
                   <FaVolumeMute />
                 </button>
-                <button style={{ fontSize: "1.5rem" }}>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    halfVolume();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
                   <FaVolumeDown />
                 </button>
-                <button style={{ fontSize: "1.5rem" }}>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    fullVolume();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
                   <FaVolumeUp />
                 </button>
               </div>
@@ -174,6 +211,16 @@ export default function Joesph() {
                   >
                     <img src={node} className="emoji-2" alt="calendar" />
                     Node.js
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={linux} className="emoji-2" alt="calendar" />
+                    Linux
                   </span>
                   <span
                     className="emoji-container"
@@ -467,17 +514,16 @@ export default function Joesph() {
             full-stack developer
           </h3>
           <div className="horizontal-content">
-            {/* <video
+            <video
               id="video"
               autoPlay
-              muted
               loop
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/testVid.mp4" type="video/mp4" />
+              <source src="/src/assets/zoowee.mp4" type="video/mp4" />
               Your browser does not support HTML video.
-            </video> */}
+            </video>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
               target="_blank"
@@ -512,19 +558,37 @@ export default function Joesph() {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  // toggleVideo();
+                  toggleVideo();
                 }}
                 style={{ fontSize: "2rem" }}
               >
-                {/* {videoPaused ? <FaPlay /> : <FaPause />} */}
+                {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button style={{ fontSize: "2rem" }}>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  muteVideo();
+                }}
+                style={{ fontSize: "2rem" }}
+              >
                 <FaVolumeMute />
               </button>
-              <button style={{ fontSize: "2rem" }}>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  halfVolume();
+                }}
+                style={{ fontSize: "2rem" }}
+              >
                 <FaVolumeDown />
               </button>
-              <button style={{ fontSize: "2rem" }}>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  fullVolume();
+                }}
+                style={{ fontSize: "2rem" }}
+              >
                 <FaVolumeUp />
               </button>
             </div>
@@ -595,6 +659,16 @@ export default function Joesph() {
                   >
                     <img src={node} className="emoji-2" alt="calendar" />
                     Node.js
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={linux} className="emoji-2" alt="calendar" />
+                    Linux
                   </span>
                   <span
                     className="emoji-container"

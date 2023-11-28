@@ -389,8 +389,48 @@
   color: #fff;
 }
 
+#light #js:hover {
+  color: #f0dc4e;
+}
+
 #light #js-container:hover {
   background-color: #f0dc4e;
+  color: #fff;
+}
+
+#ts:hover {
+  color: #007cd2;
+}
+
+#ts-container:hover {
+  background-color: #007cd2;
+  color: #fff;
+}
+
+#light #ts:hover {
+  color: #007cd2;
+}
+
+#light #ts-container:hover {
+  background-color: #007cd2;
+  color: #fff;
+}
+
+#graphql:hover {
+  color: #fa0daf;
+}
+
+#graphql-container:hover {
+  background-color: #fa0daf;
+  color: #fff;
+}
+
+#light #graphql:hover {
+  color: #fa0daf;
+}
+
+#light #graphql-container:hover {
+  background-color: #fa0daf;
   color: #fff;
 }
 
@@ -523,6 +563,26 @@
   }
 }
 
+#csuite:hover {
+  background-color: #1e4d68;
+  color: #ffffff;
+}
+
+#light #csuite:hover {
+  background-color: #1e4d68;
+  color: #ffffff;
+}
+
+#senior:hover {
+  background-color: #681e1e;
+  color: #ffffff;
+}
+
+#light #senior:hover {
+  background-color: #681e1e;
+  color: #ffffff;
+}
+
 #midtier:hover {
   background-color: #f4ff5d6f;
   color: #ffffff;
@@ -533,8 +593,18 @@
   color: #302f31;
 }
 
+#junior:hover {
+  background-color: #1e6827;
+  color: #ffffff;
+}
+
+#light #junior:hover {
+  background-color: #1e6827;
+  color: #ffffff;
+}
+
 #video {
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -650,6 +720,10 @@
 
   .and {
     display: none;
+  }
+
+  #video {
+    border-radius: 0.5rem;
   }
 }
 

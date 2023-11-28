@@ -1,3 +1,2 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
-*.svg filter=lfs diff=lfs merge=lfs -text
-src/assets/testVid.mp4 filter=lfs diff=lfs merge=lfs -text
+

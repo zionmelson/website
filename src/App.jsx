@@ -11,7 +11,13 @@ import { Analytics } from "@vercel/analytics/react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import Joesph from "./pages/developers/2e31c0";
+import Fluffy from "./pages/developers/dcb916";
+import Peaberry from "./pages/developers/62328c";
+import Trashwee from "./pages/developers/27ff01";
+import Buritt from "./pages/developers/601892";
+import Flapberry from "./pages/developers/672957";
+import Gummoo from "./pages/developers/0459bb";
+import Zoowee from "./pages/developers/2e31c0";
 
 import "./App.css";
 
@@ -53,7 +59,13 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
-            <Route path="/developers/2e31c0" element={<Joesph />} />
+            <Route path="/developers/2e31c0" element={<Zoowee />} />
+            <Route path="/developers/601892" element={<Buritt />} />
+            <Route path="/developers/27ff01" element={<Trashwee />} />
+            <Route path="/developers/62328c" element={<Peaberry />} />
+            <Route path="/developers/672957" element={<Flapberry />} />
+            <Route path="/developers/0459bb" element={<Gummoo />} />
+            <Route path="/developers/dcb916" element={<Fluffy />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
