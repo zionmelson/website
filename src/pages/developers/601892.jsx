@@ -325,7 +325,8 @@ export default function Buritt() {
           </div>
           <div
             className="vertical-content"
-            style={{ alignItems: "flex-start", marginRight: "20rem" }}
+            id="weird-div"
+            style={{ alignItems: "flex-start" }}
           >
             <h1
               className="h1-sub"
