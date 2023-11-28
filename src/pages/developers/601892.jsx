@@ -595,7 +595,7 @@ export default function Buritt() {
                   id="senior"
                   style={{ width: "90%", marginBottom: "1rem" }}
                 >
-                  mid-tier
+                  senior
                 </span>
                 <div
                   className="horizontal-content-small"
