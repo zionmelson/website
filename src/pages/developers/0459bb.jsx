@@ -7,6 +7,9 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import Lottie from "lottie-react";
+import voice from "../../assets/voice.json";
+
 import calen from "../../assets/calen.svg";
 
 import python from "../../assets/python.svg";
@@ -64,41 +67,32 @@ export default function Gummoo() {
             className="horizontal-content"
             style={{ alignItems: "flex-start", marginBottom: "1rem" }}
           >
-            <div
-              className="vertical-content"
-              style={{
-                width: "100%",
-
-                alignItems: "flex-start",
-              }}
-            >
-              <h1
-                className="h1"
+            <div className="vertical-content">
+              <div
+                className="vertical-content"
                 style={{
                   marginTop: "3rem",
                 }}
               >
-                Gummoo Hooperbottom
-              </h1>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "1rem",
-                }}
-              >
-                full-stack developer
-              </h3>
-
-              <video
-                id="video"
+                <h1 className="h1">Gummoo Hooperbottom</h1>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "1rem",
+                  }}
+                >
+                  full-stack developer
+                </h3>
+              </div>
+              <Lottie animationData={voice} />
+              <audio
                 autoPlay
-                loop
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/gummoo.mp4" type="video/mp4" />
+                <source src="/src/assets/gummoo.mp3" type="audio/mp3" />
                 Your browser does not support HTML video.
-              </video>
+              </audio>
               <div
                 className="horizontal-content"
                 style={{ marginBottom: "2rem" }}
@@ -146,7 +140,7 @@ export default function Gummoo() {
               style={{
                 padding: "1rem",
                 width: "50rem",
-                marginTop: "5rem",
+                marginTop: "3rem",
               }}
             >
               <div
@@ -530,16 +524,16 @@ export default function Gummoo() {
             full-stack developer
           </h3>
           <div className="horizontal-content">
-            <video
-              id="video"
+            <Lottie animationData={voice} />
+
+            <audio
               autoPlay
-              loop
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/gummoo.mp4" type="video/mp4" />
+              <source src="/src/assets/gummoo.mp3" type="audio/mpeg" />
               Your browser does not support HTML video.
-            </video>
+            </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
               target="_blank"

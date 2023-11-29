@@ -7,6 +7,9 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import Lottie from "lottie-react";
+import voice from "../../assets/voice.json";
+
 import calen from "../../assets/calen.svg";
 
 import react from "../../assets/react.svg";
@@ -17,7 +20,7 @@ import mysql from "../../assets/mysql.svg";
 import linux from "../../assets/linux.svg";
 
 export default function Zoowee() {
-  const [videoPaused, setVideoPaused] = useState(true);
+  const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
 
   const toggleVideo = () => {
@@ -64,42 +67,33 @@ export default function Zoowee() {
             className="horizontal-content"
             style={{ alignItems: "flex-start", marginBottom: "1rem" }}
           >
-            <div
-              className="vertical-content"
-              style={{
-                width: "100%",
-
-                alignItems: "flex-start",
-              }}
-            >
-              <h1
-                className="h1"
+            <div className="vertical-content">
+              <div
+                className="vertical-content"
                 style={{
-                  marginTop: "3rem",
+                  marginTop: "5rem",
                 }}
               >
-                Zoowee Blubberworth
-              </h1>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "1rem",
-                }}
-              >
-                full-stack developer
-              </h3>
-
-              <video
-                id="video"
-                width="650"
+                <h1 className="h1">Zoowee Blubberworth</h1>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "1rem",
+                  }}
+                >
+                  full-stack developer
+                </h3>
+              </div>
+              <Lottie animationData={voice} />
+              <audio
                 autoPlay
-                loop
                 ref={(el) => setVideoElement(el)}
-                style={{ marginBottom: "1rem" }}
+                style={{ marginBottom: "0.5rem" }}
               >
-                <source src="/src/assets/zoowee.mp4" type="video/mp4" />
+                <source src="/src/assets/zoowee.mp3" type="audio/mpeg" />
                 Your browser does not support HTML video.
-              </video>
+              </audio>
+
               <div
                 className="horizontal-content"
                 style={{ marginBottom: "2rem" }}
@@ -164,7 +158,7 @@ export default function Zoowee() {
                   id="midtier"
                   style={{ width: "90%", marginBottom: "1rem" }}
                 >
-                  mid-tier
+                  base level
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -514,16 +508,15 @@ export default function Zoowee() {
             full-stack developer
           </h3>
           <div className="horizontal-content">
-            <video
-              id="video"
+            <Lottie animationData={voice} />
+            <audio
               autoPlay
-              loop
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/zoowee.mp4" type="video/mp4" />
+              <source src="/src/assets/zoowee.mp3" type="audio/mpeg" />
               Your browser does not support HTML video.
-            </video>
+            </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
               target="_blank"
@@ -612,7 +605,7 @@ export default function Zoowee() {
                   id="midtier"
                   style={{ width: "90%", marginBottom: "1rem" }}
                 >
-                  mid-tier
+                  base level
                 </span>
                 <div
                   className="horizontal-content-small"

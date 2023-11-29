@@ -18,6 +18,7 @@ import Buritt from "./pages/developers/601892";
 import Flapberry from "./pages/developers/672957";
 import Gummoo from "./pages/developers/0459bb";
 import Zoowee from "./pages/developers/2e31c0";
+import Stinkroid from "./pages/developers/c29e3b";
 
 import "./App.css";
 
@@ -66,6 +67,7 @@ function App() {
             <Route path="/developers/672957" element={<Flapberry />} />
             <Route path="/developers/0459bb" element={<Gummoo />} />
             <Route path="/developers/dcb916" element={<Fluffy />} />
+            <Route path="/developers/c29e3b" element={<Stinkroid />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
