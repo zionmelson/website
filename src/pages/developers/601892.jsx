@@ -7,6 +7,8 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import buritt from "../../assets/buritt.mp3";
+
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
 
@@ -91,7 +93,7 @@ export default function Buritt() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/buritt.mp3" type="audio/mpeg" />
+                <source src={buritt} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -523,7 +525,7 @@ export default function Buritt() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/buritt.mp3" type="audio/mpeg" />
+              <source src={buritt} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a

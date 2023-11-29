@@ -7,6 +7,8 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import fluffy from "../../assets/fluffy.mp3";
+
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
 
@@ -94,7 +96,7 @@ export default function Fluffy() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/fluffy.mp3" type="audio/mpeg" />
+                <source src={fluffy} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -595,7 +597,7 @@ export default function Fluffy() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/fluffy.mp3" type="audio/mpeg" />
+              <source src={fluffy} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a

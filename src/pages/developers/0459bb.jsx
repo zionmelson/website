@@ -7,6 +7,8 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import gummoo from "../../assets/gummoo.mp3";
+
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
 
@@ -90,7 +92,7 @@ export default function Gummoo() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/gummoo.mp3" type="audio/mp3" />
+                <source src={gummoo} type="audio/mp3" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -531,7 +533,7 @@ export default function Gummoo() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/gummoo.mp3" type="audio/mpeg" />
+              <source src={gummoo} type="audio/mp3" />
               Your browser does not support HTML video.
             </audio>
             <a

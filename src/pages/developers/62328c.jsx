@@ -7,6 +7,8 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import peaberry from "../../assets/peaberry.mp3";
+
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
 
@@ -91,7 +93,7 @@ export default function Peaberry() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/peaberry.mp3" type="audio/mpeg" />
+                <source src={peaberry} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -542,7 +544,7 @@ export default function Peaberry() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/peaberry.mp3" type="audio/mpeg" />
+              <source src={peaberry} type="audio/mpeg" />
             </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
