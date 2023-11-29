@@ -7,6 +7,8 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import trashwee from "../../assets/trashwee.mp3";
+
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
 
@@ -90,7 +92,7 @@ export default function Trashwee() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/trashwee.mp3" type="audio/mpeg" />
+                <source src={trashwee} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -526,12 +528,13 @@ export default function Trashwee() {
           </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
+
             <audio
               autoPlay
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/trashwee.mp3" type="audio/mpeg" />
+              <source src={trashwee} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a

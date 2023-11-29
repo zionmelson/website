@@ -7,6 +7,8 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import stinkroid from "../../assets/stinkroid.mp3";
+
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
 
@@ -97,7 +99,7 @@ export default function Stinkroid() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "0.5rem" }}
               >
-                <source src="/src/assets/stinkroid.mp3" type="audio/mpeg" />
+                <source src={stinkroid} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
 
@@ -643,7 +645,7 @@ export default function Stinkroid() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/stinkroid.mp3" type="audio/mpeg" />
+              <source src={stinkroid} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a
