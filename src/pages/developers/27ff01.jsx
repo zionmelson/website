@@ -526,6 +526,7 @@ export default function Trashwee() {
           </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
+
             <audio
               autoPlay
               ref={(el) => setVideoElement(el)}
