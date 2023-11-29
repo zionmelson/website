@@ -7,6 +7,9 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import Lottie from "lottie-react";
+import voice from "../../assets/voice.json";
+
 import calen from "../../assets/calen.svg";
 
 import react from "../../assets/react.svg";
@@ -65,42 +68,32 @@ export default function Peaberry() {
             className="horizontal-content"
             style={{ alignItems: "flex-start", marginBottom: "1rem" }}
           >
-            <div
-              className="vertical-content"
-              style={{
-                width: "100%",
-
-                alignItems: "flex-start",
-              }}
-            >
-              <h1
-                className="h1"
+            <div className="vertical-content">
+              <div
+                className="vertical-content"
                 style={{
-                  marginTop: "3rem",
+                  marginTop: "5rem",
                 }}
               >
-                Peaberry Wigglewhistle
-              </h1>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "1rem",
-                }}
-              >
-                full-stack developer
-              </h3>
-
-              <video
-                id="video"
-                width="650"
+                <h1 className="h1">Peaberry Wigglewhistle</h1>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "1rem",
+                  }}
+                >
+                  full-stack developer
+                </h3>
+              </div>
+              <Lottie animationData={voice} />
+              <audio
                 autoPlay
-                loop
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/peaberry.mp4" type="video/mp4" />
+                <source src="/src/assets/peaberry.mp3" type="audio/mpeg" />
                 Your browser does not support HTML video.
-              </video>
+              </audio>
               <div
                 className="horizontal-content"
                 style={{ marginBottom: "2rem" }}
@@ -148,7 +141,7 @@ export default function Peaberry() {
               style={{
                 padding: "1rem",
                 width: "50rem",
-                marginTop: "5rem",
+                marginTop: "3rem",
               }}
             >
               <div
@@ -351,8 +344,11 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Architected NFT games, generative NFT collections, no code
-              interactive NFT smart contract generators, and an NFT marketplace.
+              NFT Ecosystem Architecture: Architected a comprehensive NFT
+              ecosystem, including NFT games, generative NFT collections,
+              no-code interactive NFT smart contract generators, and an NFT
+              marketplace. Demonstrated expertise in designing and implementing
+              complex, decentralized solutions.
             </h3>
             <h3
               className="h3"
@@ -361,9 +357,11 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Coached team members to follow Agile methodologies, coding best
-              practices, and leverage artificial intelligence to enhance
-              effectiveness.
+              Agile Coaching and Best Practices: Actively coached team members
+              in adopting Agile methodologies, coding best practices, and
+              integrating artificial intelligence to enhance overall
+              effectiveness. Fostered a collaborative and innovative development
+              environment, driving continuous improvement.
             </h3>
             <h3
               className="h3"
@@ -372,10 +370,12 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Deployed high performing and scalable solutions using Docker,
-              Hasura, Nuxt SSR, Vue.js, GraphQL, Postgres, and serverless
-              functions. Managed VMs and continuous deployment pipelines on
-              Azure and Google Cloud.
+              Technology Stack and Deployment Management: Deployed
+              high-performing and scalable solutions utilizing a technology
+              stack that included Docker, Hasura, Nuxt SSR, Vue.js, GraphQL,
+              Postgres, and serverless functions. Managed virtual machines and
+              established continuous deployment pipelines on both Azure and
+              Google Cloud, showcasing proficiency in cloud platforms.
             </h3>
             <h3
               className="h3"
@@ -384,13 +384,15 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Improved developer UX with the introduction of CI, PNPM monorepos,
-              Eslint and Prettier.
+              Developer Experience Enhancement: Improved developer experience by
+              implementing continuous integration, PNPM monorepos, Eslint, and
+              Prettier. Introduced tools and practices to streamline development
+              processes and maintain code quality.
             </h3>
           </div>
           <div
             className="vertical-content"
-            style={{ alignItems: "flex-start", marginRight: "20rem" }}
+            style={{ alignItems: "flex-start" }}
           >
             <h1
               className="h1-sub"
@@ -416,8 +418,24 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Recruited, coached, and led developers as we built highly scalable
-              and modern enterprise software solutions.
+              Team Leadership and Development: Successfully recruited, coached,
+              and led a team of developers in the creation of highly scalable
+              and modern enterprise software solutions. Demonstrated strong
+              leadership skills to nurture talent, foster collaboration, and
+              drive collective success.
+            </h3>
+            <h3
+              className="h3"
+              style={{
+                marginBottom: "0.5rem",
+                textAlign: "left",
+              }}
+            >
+              Agile Methodologies Implementation: Spearheaded the implementation
+              of Agile methodologies within the development process. As a
+              result, revenue experienced remarkable growth, more than doubling
+              within a single year. Applied Agile principles to enhance project
+              efficiency, adaptability, and client satisfaction.
             </h3>
             <h3
               className="h3"
@@ -426,8 +444,11 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Spearheading the implementation of Agile methodologies, revenue
-              was more than doubled within a single year.
+              Enterprise Software Solutions: Played a pivotal role in the design
+              and development of enterprise-level software solutions. Leveraged
+              expertise in software architecture to create scalable, robust, and
+              innovative solutions that met the demands of modern business
+              environments.
             </h3>
           </div>
           <div
@@ -458,9 +479,11 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Architected enterprise mobile and web applications. Used state of
-              the art technologies such as React, Angular, Ionic Framework,
-              Redux, and Node.js.
+              Architectural Leadership: Spearheaded the architectural design of
+              enterprise-grade mobile and web applications, utilizing
+              cutting-edge technologies such as React, Angular, Ionic Framework,
+              Redux, and Node.js. Demonstrated expertise in creating robust and
+              scalable solutions that align with industry best practices.
             </h3>
             <h3
               className="h3"
@@ -469,7 +492,11 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Deployed a private blockchain testnet and wallet app.
+              Blockchain Deployment: Successfully deployed a private blockchain
+              testnet and developed a wallet application, showcasing proficiency
+              in blockchain technology. Implemented secure and efficient
+              solutions to meet the demands of the rapidly evolving blockchain
+              landscape.
             </h3>
             <h3
               className="h3"
@@ -478,9 +505,12 @@ export default function Peaberry() {
                 textAlign: "left",
               }}
             >
-              Happy clients recommended our services across multiple industries:
-              Real estate, learning management systems, prescription drugs,
-              online eBook library, medical gas, oil and gas, reverse logistics…
+              Client Satisfaction and Recommendations: Achieved high levels of
+              client satisfaction across diverse industries, including real
+              estate, learning management systems, prescription drugs, online
+              eBook libraries, medical gas, and oil and gas. Clients from
+              various sectors recommended our services, highlighting the quality
+              and impact of our solutions.
             </h3>
           </div>
         </div>
@@ -506,16 +536,14 @@ export default function Peaberry() {
             full-stack developer
           </h3>
           <div className="horizontal-content">
-            <video
-              id="video"
+            <Lottie animationData={voice} />
+            <audio
               autoPlay
-              loop
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/peaberry.mp4" type="video/mp4" />
-              Your browser does not support HTML video.
-            </video>
+              <source src="/src/assets/peaberry.mp3" type="audio/mpeg" />
+            </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
               target="_blank"
@@ -776,9 +804,11 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Architected NFT games, generative NFT collections, no code
-                interactive NFT smart contract generators, and an NFT
-                marketplace.
+                NFT Ecosystem Architecture: Architected a comprehensive NFT
+                ecosystem, including NFT games, generative NFT collections,
+                no-code interactive NFT smart contract generators, and an NFT
+                marketplace. Demonstrated expertise in designing and
+                implementing complex, decentralized solutions.
               </h3>
               <h3
                 className="h3"
@@ -787,9 +817,11 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Coached team members to follow Agile methodologies, coding best
-                practices, and leverage artificial intelligence to enhance
-                effectiveness.
+                Agile Coaching and Best Practices: Actively coached team members
+                in adopting Agile methodologies, coding best practices, and
+                integrating artificial intelligence to enhance overall
+                effectiveness. Fostered a collaborative and innovative
+                development environment, driving continuous improvement.
               </h3>
               <h3
                 className="h3"
@@ -798,10 +830,12 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Deployed high performing and scalable solutions using Docker,
-                Hasura, Nuxt SSR, Vue.js, GraphQL, Postgres, and serverless
-                functions. Managed VMs and continuous deployment pipelines on
-                Azure and Google Cloud.
+                Technology Stack and Deployment Management: Deployed
+                high-performing and scalable solutions utilizing a technology
+                stack that included Docker, Hasura, Nuxt SSR, Vue.js, GraphQL,
+                Postgres, and serverless functions. Managed virtual machines and
+                established continuous deployment pipelines on both Azure and
+                Google Cloud, showcasing proficiency in cloud platforms.
               </h3>
               <h3
                 className="h3"
@@ -810,8 +844,10 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Improved developer UX with the introduction of CI, PNPM
-                monorepos, Eslint and Prettier.
+                Developer Experience Enhancement: Improved developer experience
+                by implementing continuous integration, PNPM monorepos, Eslint,
+                and Prettier. Introduced tools and practices to streamline
+                development processes and maintain code quality.
               </h3>
             </div>
             <div
@@ -842,8 +878,25 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Recruited, coached, and led developers as we built highly
-                scalable and modern enterprise software solutions.
+                Team Leadership and Development: Successfully recruited,
+                coached, and led a team of developers in the creation of highly
+                scalable and modern enterprise software solutions. Demonstrated
+                strong leadership skills to nurture talent, foster
+                collaboration, and drive collective success.
+              </h3>
+              <h3
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                  textAlign: "left",
+                }}
+              >
+                Agile Methodologies Implementation: Spearheaded the
+                implementation of Agile methodologies within the development
+                process. As a result, revenue experienced remarkable growth,
+                more than doubling within a single year. Applied Agile
+                principles to enhance project efficiency, adaptability, and
+                client satisfaction.
               </h3>
               <h3
                 className="h3"
@@ -852,8 +905,11 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Spearheading the implementation of Agile methodologies, revenue
-                was more than doubled within a single year.
+                Enterprise Software Solutions: Played a pivotal role in the
+                design and development of enterprise-level software solutions.
+                Leveraged expertise in software architecture to create scalable,
+                robust, and innovative solutions that met the demands of modern
+                business environments.
               </h3>
             </div>
             <div
@@ -884,9 +940,12 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Architected enterprise mobile and web applications. Used state
-                of the art technologies such as React, Angular, Ionic Framework,
-                Redux, and Node.js.
+                Architectural Leadership: Spearheaded the architectural design
+                of enterprise-grade mobile and web applications, utilizing
+                cutting-edge technologies such as React, Angular, Ionic
+                Framework, Redux, and Node.js. Demonstrated expertise in
+                creating robust and scalable solutions that align with industry
+                best practices.
               </h3>
               <h3
                 className="h3"
@@ -895,7 +954,11 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Deployed a private blockchain testnet and wallet app.
+                Blockchain Deployment: Successfully deployed a private
+                blockchain testnet and developed a wallet application,
+                showcasing proficiency in blockchain technology. Implemented
+                secure and efficient solutions to meet the demands of the
+                rapidly evolving blockchain landscape.
               </h3>
               <h3
                 className="h3"
@@ -904,10 +967,12 @@ export default function Peaberry() {
                   textAlign: "left",
                 }}
               >
-                Happy clients recommended our services across multiple
-                industries: Real estate, learning management systems,
-                prescription drugs, online eBook library, medical gas, oil and
-                gas, reverse logistics…
+                Client Satisfaction and Recommendations: Achieved high levels of
+                client satisfaction across diverse industries, including real
+                estate, learning management systems, prescription drugs, online
+                eBook libraries, medical gas, and oil and gas. Clients from
+                various sectors recommended our services, highlighting the
+                quality and impact of our solutions.
               </h3>
             </div>
           </div>

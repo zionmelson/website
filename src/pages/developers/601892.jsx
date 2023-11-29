@@ -7,6 +7,9 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import Lottie from "lottie-react";
+import voice from "../../assets/voice.json";
+
 import calen from "../../assets/calen.svg";
 
 import python from "../../assets/python.svg";
@@ -65,42 +68,32 @@ export default function Buritt() {
             className="horizontal-content"
             style={{ alignItems: "flex-start", marginBottom: "1rem" }}
           >
-            <div
-              className="vertical-content"
-              style={{
-                width: "100%",
-
-                alignItems: "flex-start",
-              }}
-            >
-              <h1
-                className="h1"
+            <div className="vertical-content">
+              <div
+                className="vertical-content"
                 style={{
                   marginTop: "3rem",
                 }}
               >
-                Buritt Noseface
-              </h1>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "1rem",
-                }}
-              >
-                full-stack developer
-              </h3>
-
-              <video
-                id="video"
-                width="650"
+                <h1 className="h1">Buritt Noseface</h1>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "1rem",
+                  }}
+                >
+                  full-stack developer
+                </h3>
+              </div>
+              <Lottie animationData={voice} />
+              <audio
                 autoPlay
-                loop
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/buritt.mp4" type="video/mp4" />
+                <source src="/src/assets/buritt.mp3" type="audio/mpeg" />
                 Your browser does not support HTML video.
-              </video>
+              </audio>
               <div
                 className="horizontal-content"
                 style={{ marginBottom: "2rem" }}
@@ -148,7 +141,7 @@ export default function Buritt() {
               style={{
                 padding: "1rem",
                 width: "50rem",
-                marginTop: "5rem",
+                marginTop: "3rem",
               }}
             >
               <div
@@ -325,7 +318,6 @@ export default function Buritt() {
           </div>
           <div
             className="vertical-content"
-            id="weird-div"
             style={{ alignItems: "flex-start" }}
           >
             <h1
@@ -352,8 +344,35 @@ export default function Buritt() {
                 textAlign: "left",
               }}
             >
-              Reworked, maintained and built on top of existing software systems
-              using Python and Javascript applications.
+              Software Rework: Successfully reworked existing software systems
+              using Python and JavaScript applications. Demonstrated proficiency
+              in enhancing and optimizing codebases, contributing to improved
+              system performance and functionality.
+            </h3>
+            <h3
+              className="h3"
+              style={{
+                marginBottom: "0.5rem",
+                textAlign: "left",
+              }}
+            >
+              Contract Development: Acted as a contracted software developer
+              with a primary focus on Python. Undertook specific projects,
+              delivering tailored solutions and meeting project requirements
+              within the designated time frame.
+            </h3>
+            <h3
+              className="h3"
+              style={{
+                marginBottom: "2rem",
+                textAlign: "left",
+              }}
+            >
+              Maintenance and Upgrades: Played a key role in maintaining and
+              upgrading existing software, utilizing a tech stack that included
+              Python, JavaScript, and Linux. Implemented updates and
+              improvements to ensure the software&apos;s relevance and
+              efficiency over time.
             </h3>
           </div>
           <div
@@ -498,16 +517,15 @@ export default function Buritt() {
             full-stack developer
           </h3>
           <div className="horizontal-content">
-            <video
-              id="video"
+            <Lottie animationData={voice} />
+            <audio
               autoPlay
-              loop
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/buritt.mp4" type="video/mp4" />
+              <source src="/src/assets/buritt.mp3" type="audio/mpeg" />
               Your browser does not support HTML video.
-            </video>
+            </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
               target="_blank"
@@ -768,8 +786,35 @@ export default function Buritt() {
                   textAlign: "left",
                 }}
               >
-                Reworked, maintained and built on top of existing software
-                systems using Python and Javascript applications.
+                Software Rework: Successfully reworked existing software systems
+                using Python and JavaScript applications. Demonstrated
+                proficiency in enhancing and optimizing codebases, contributing
+                to improved system performance and functionality.
+              </h3>
+              <h3
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                  textAlign: "left",
+                }}
+              >
+                Contract Development: Acted as a contracted software developer
+                with a primary focus on Python. Undertook specific projects,
+                delivering tailored solutions and meeting project requirements
+                within the designated time frame.
+              </h3>
+              <h3
+                className="h3"
+                style={{
+                  marginBottom: "2rem",
+                  textAlign: "left",
+                }}
+              >
+                Maintenance and Upgrades: Played a key role in maintaining and
+                upgrading existing software, utilizing a tech stack that
+                included Python, JavaScript, and Linux. Implemented updates and
+                improvements to ensure the software&apos;s relevance and
+                efficiency over time.
               </h3>
             </div>
             <div

@@ -7,6 +7,9 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
+import Lottie from "lottie-react";
+import voice from "../../assets/voice.json";
+
 import calen from "../../assets/calen.svg";
 
 import python from "../../assets/python.svg";
@@ -20,7 +23,7 @@ import gcp from "../../assets/gcp.svg";
 import django from "../../assets/django.svg";
 import ts from "../../assets/ts.svg";
 
-export default function Flufffy() {
+export default function Fluffy() {
   const [videoPaused, setVideoPaused] = useState(true);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -68,42 +71,32 @@ export default function Flufffy() {
             className="horizontal-content"
             style={{ alignItems: "flex-start", marginBottom: "1rem" }}
           >
-            <div
-              className="vertical-content"
-              style={{
-                width: "100%",
-
-                alignItems: "flex-start",
-              }}
-            >
-              <h1
-                className="h1"
+            <div className="vertical-content">
+              <div
+                className="vertical-content"
                 style={{
-                  marginTop: "3rem",
+                  marginTop: "5rem",
                 }}
               >
-                Flufffy Gloomkins
-              </h1>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "1rem",
-                }}
-              >
-                full-stack developer
-              </h3>
-
-              <video
-                id="video"
-                width="650"
+                <h1 className="h1">Fluffy Gloomkins</h1>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "1rem",
+                  }}
+                >
+                  full-stack developer
+                </h3>
+              </div>
+              <Lottie animationData={voice} />
+              <audio
                 autoPlay
-                loop
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src="/src/assets/fluffy.mp4" type="video/mp4" />
+                <source src="/src/assets/fluffy.mp3" type="audio/mpeg" />
                 Your browser does not support HTML video.
-              </video>
+              </audio>
               <div
                 className="horizontal-content"
                 style={{ marginBottom: "2rem" }}
@@ -151,7 +144,7 @@ export default function Flufffy() {
               style={{
                 padding: "1rem",
                 width: "50rem",
-                marginTop: "5rem",
+                marginTop: "3rem",
               }}
             >
               <div
@@ -585,7 +578,7 @@ export default function Flufffy() {
               marginBottom: "1rem",
             }}
           >
-            Flufffy Gloomkins
+            Fluffy Gloomkins
           </h1>
           <h3
             className="h3"
@@ -596,16 +589,15 @@ export default function Flufffy() {
             full-stack developer
           </h3>
           <div className="horizontal-content">
-            <video
-              id="video"
+            <Lottie animationData={voice} />
+            <audio
               autoPlay
-              loop
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src="/src/assets/fluffy.mp4" type="video/mp4" />
+              <source src="/src/assets/fluffy.mp3" type="audio/mpeg" />
               Your browser does not support HTML video.
-            </video>
+            </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
               target="_blank"
