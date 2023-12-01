@@ -193,9 +193,9 @@
   }
 
   #light .scrolled {
-    background-color: rgba(217, 217, 217, 0.9);
+    background-color: #5dc4ff2a;
     height: 4rem;
-    color: #fff;
+    color: #000;
     align-items: center;
   }
 

@@ -325,24 +325,24 @@ function Startup() {
             </h3>
             <img src={startups} className="logo" alt="medium" />
           </div>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we know the hiring process can be stressful, because of this we work
+            closely with your team to ensure successful placement
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            find your next co-founder with learnmutiny
+          </h3>
+          <a
+            href="https://calendly.com/learnmutiny/company-intro"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
-        <h2 className="h2" style={{ marginBottom: "1rem" }}>
-          we know the hiring process can be stressful, because of this we work
-          closely with your team to ensure successful placement
-        </h2>
-        <h3 className="h3" style={{ marginBottom: "1rem" }}>
-          find your next co-founder with learnmutiny
-        </h3>
-        <a
-          href="https://calendly.com/learnmutiny/company-intro"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span className="emoji-container">
-            <img src={calen} className="emoji" alt="mu" />
-            Calendly
-          </span>
-        </a>
       </div>
     </div>
   );
