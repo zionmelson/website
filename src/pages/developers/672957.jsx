@@ -86,7 +86,6 @@ export default function Flapberry() {
               </div>
               <Lottie animationData={voice} />
               <audio
-                autoPlay
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
@@ -480,7 +479,6 @@ export default function Flapberry() {
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
-              autoPlay
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
