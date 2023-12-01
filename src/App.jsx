@@ -27,7 +27,7 @@ export const ThemeContext = createContext(null);
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
 
-  theme === "light";
+  setTheme("light");
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
