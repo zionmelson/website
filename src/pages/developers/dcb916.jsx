@@ -92,7 +92,6 @@ export default function Fluffy() {
               </div>
               <Lottie animationData={voice} />
               <audio
-                autoPlay
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
@@ -593,7 +592,6 @@ export default function Fluffy() {
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
-              autoPlay
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >

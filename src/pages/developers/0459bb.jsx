@@ -88,7 +88,6 @@ export default function Gummoo() {
               </div>
               <Lottie animationData={voice} />
               <audio
-                autoPlay
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
@@ -529,7 +528,6 @@ export default function Gummoo() {
             <Lottie animationData={voice} />
 
             <audio
-              autoPlay
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >

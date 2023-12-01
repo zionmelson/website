@@ -95,7 +95,6 @@ export default function Stinkroid() {
               </div>
               <Lottie animationData={voice} />
               <audio
-                autoPlay
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "0.5rem" }}
               >
@@ -641,7 +640,6 @@ export default function Stinkroid() {
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
-              autoPlay
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
