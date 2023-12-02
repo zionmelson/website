@@ -11,8 +11,12 @@ export default function Privacy() {
           privacy policy
         </h1>
       </div>
-      <div className="privacy">
-        <p className="h5" style={{ width: "80%" }}>
+      <p className="h5" style={{ marginBottom: "1rem" }}>
+        IF YOU DO NOT ACCEPT THIS PRIVACY POLICY, THEN YOU ARE NOT AUTHORIZED TO
+        USE THIS SITE!
+      </p>
+      <div className="privacy" style={{ marginBottom: "1rem" }}>
+        <p className="h5">
           At learnmutiny Limited Liability Company (“learnmutiny”), we respect
           your concerns about privacy. This Privacy Policy describes what
           information we collect about you, how we collect it, how we use it,
@@ -30,10 +34,6 @@ export default function Privacy() {
           disclosures of information about you) that are described in this
           Privacy Policy.
         </p>
-        <p className="h5">
-          IF YOU DO NOT ACCEPT THIS PRIVACY POLICY, THEN YOU ARE NOT AUTHORIZED
-          TO USE THIS SITE!
-        </p>
       </div>
       <div className="privacy">
         <h4 className="h4">1. What information do we collect?</h4>
@@ -43,11 +43,11 @@ export default function Privacy() {
           collect certain information from or about you in connection with your
           use of, or your submissions directly to us or via the Site (together,
           “Collected Information”), including, but not limited to, your name,
-          e-mail address, mailing address, telephone number, device, and region.
-          In addition, we and our Service Providers may retain the content of,
-          and metadata regarding, any correspondence you may have with us or our
-          representatives, regardless of the mode of communication by which such
-          correspondence was made.
+          e-mail address, mailing address, telephone number, device, social
+          platforms, and region. In addition, we and our Service Providers may
+          retain the content of, and metadata regarding, any correspondence you
+          may have with us or our representatives, regardless of the mode of
+          communication by which such correspondence was made.
         </p>
         <p className="h4">(b) Information collected via technology.</p>
         <p className="h5" style={{ marginBottom: "0.5rem" }}>

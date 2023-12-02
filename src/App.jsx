@@ -25,7 +25,7 @@ import "./App.css";
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
