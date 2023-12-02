@@ -82,7 +82,11 @@
 }
 
 .nav-text:hover {
-  color: #686868;
+  color: #898989;
+}
+
+#light .nav-text:hover {
+  color: #3a3a3a;
 }
 
 .nav-startup-text:hover {
@@ -90,7 +94,7 @@
 }
 
 #light .nav-startup-text:hover {
-  color: #d5892a;
+  color: #5dc4ff;
 }
 
 .nav-support-text:hover {
