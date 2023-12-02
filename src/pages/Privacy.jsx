@@ -11,7 +11,14 @@ export default function Privacy() {
           privacy policy
         </h1>
       </div>
-      <p className="h5" style={{ marginBottom: "1rem" }}>
+      <p
+        className="h5"
+        style={{
+          marginRight: "2rem",
+          marginLeft: "2rem",
+          marginBottom: "1rem",
+        }}
+      >
         IF YOU DO NOT ACCEPT THIS PRIVACY POLICY, THEN YOU ARE NOT AUTHORIZED TO
         USE THIS SITE!
       </p>
