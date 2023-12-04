@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import gummoo from "../../assets/gummoo.mp3";
+import richards from "../../assets/richards.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -21,7 +21,7 @@ import docker from "../../assets/docker.svg";
 import kuber from "../../assets/kuber.svg";
 import figma from "../../assets/figma.svg";
 
-export default function Gummoo() {
+export default function Richards() {
   const [videoPaused, setVideoPaused] = useState(true);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -76,7 +76,7 @@ export default function Gummoo() {
                   marginTop: "3rem",
                 }}
               >
-                <h1 className="h1">Gummoo Hooperbottom</h1>
+                <h1 className="h1">Reed Richards</h1>
                 <h3
                   className="h3"
                   style={{
@@ -91,7 +91,7 @@ export default function Gummoo() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src={gummoo} type="audio/mp3" />
+                <source src={richards} type="audio/mp3" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -514,7 +514,7 @@ export default function Gummoo() {
               marginBottom: "1rem",
             }}
           >
-            Gummoo Hooperbottom
+            Reed Richards
           </h1>
           <h3
             className="h3"
@@ -531,7 +531,7 @@ export default function Gummoo() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={gummoo} type="audio/mp3" />
+              <source src={richards} type="audio/mp3" />
               Your browser does not support HTML video.
             </audio>
             <a

@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import fluffy from "../../assets/fluffy.mp3";
+import savage from "../../assets/savage.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -24,8 +24,11 @@ import kuber from "../../assets/kuber.svg";
 import gcp from "../../assets/gcp.svg";
 import django from "../../assets/django.svg";
 import ts from "../../assets/ts.svg";
+import ruby from "../../assets/ruby.svg";
+import flutter from "../../assets/flutter.svg";
+import linux from "../../assets/linux.svg";
 
-export default function Fluffy() {
+export default function Savage() {
   const [videoPaused, setVideoPaused] = useState(true);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -80,7 +83,7 @@ export default function Fluffy() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Fluffy Gloomkins</h1>
+                <h1 className="h1">Clark Savage</h1>
                 <h3
                   className="h3"
                   style={{
@@ -95,7 +98,7 @@ export default function Fluffy() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src={fluffy} type="audio/mpeg" />
+                <source src={savage} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -205,6 +208,16 @@ export default function Fluffy() {
                       padding: "1rem",
                     }}
                   >
+                    <img src={linux} className="emoji-2" alt="calendar" />
+                    Linux
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
                     <img src={kotlin} className="emoji-2" alt="calendar" />
                     Kotlin{" "}
                   </span>
@@ -261,6 +274,33 @@ export default function Fluffy() {
                   >
                     <img src={kuber} className="emoji-2" alt="calendar" />
                     Kubernetes
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      display: "flex",
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={ruby} className="emoji-2" alt="calendar" />
+                    Ruby
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="flutter-container"
+                    style={{
+                      display: "flex",
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={flutter} className="emoji-2" alt="calendar" />
+                    Flutter
                   </span>
                   <span
                     className="emoji-container"
@@ -395,7 +435,7 @@ export default function Fluffy() {
                 textAlign: "left",
               }}
             >
-              Technology Focus: Led a skilled team in Rust and Golang,
+              Technology Focus: Led a skilled team in Rust and Go-Lang,
               developing Android and iOS apps for fintech, healthcare, and
               robotic manufacturing.
             </h3>
@@ -484,9 +524,10 @@ export default function Fluffy() {
                 textAlign: "left",
               }}
             >
-              Golang Microservices on GCP: Led the implementation of new
-              features in Golang for microservices, deployed on the Google Cloud
-              Platform (GCP), showcasing proficiency in modern technologies.
+              Go-Lang Microservices on GCP: Led the implementation of new
+              features in Go-Lang for microservices, deployed on the Google
+              Cloud Platform (GCP), showcasing proficiency in modern
+              technologies.
             </h3>
           </div>
           <div
@@ -579,7 +620,7 @@ export default function Fluffy() {
               marginBottom: "1rem",
             }}
           >
-            Fluffy Gloomkins
+            Clark Savage
           </h1>
           <h3
             className="h3"
@@ -595,7 +636,7 @@ export default function Fluffy() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={fluffy} type="audio/mpeg" />
+              <source src={savage} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a
@@ -729,8 +770,18 @@ export default function Fluffy() {
                       padding: "1rem",
                     }}
                   >
+                    <img src={linux} className="emoji-2" alt="calendar" />
+                    Linux
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
                     <img src={kotlin} className="emoji-2" alt="calendar" />
-                    Kotlin{" "}
+                    Kotlin
                   </span>
                   <span
                     className="emoji-container"
@@ -785,6 +836,33 @@ export default function Fluffy() {
                   >
                     <img src={kuber} className="emoji-2" alt="calendar" />
                     Kubernetes
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      display: "flex",
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={ruby} className="emoji-2" alt="calendar" />
+                    Ruby
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="flutter-container"
+                    style={{
+                      display: "flex",
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={flutter} className="emoji-2" alt="calendar" />
+                    Flutter
                   </span>
                   <span
                     className="emoji-container"
@@ -905,7 +983,7 @@ export default function Fluffy() {
                   textAlign: "left",
                 }}
               >
-                Technology Focus: Led a skilled team in Rust and Golang,
+                Technology Focus: Led a skilled team in Rust and Go-Lang,
                 developing Android and iOS apps for fintech, healthcare, and
                 robotic manufacturing.
               </h3>
@@ -994,8 +1072,8 @@ export default function Fluffy() {
                   textAlign: "left",
                 }}
               >
-                Golang Microservices on GCP: Led the implementation of new
-                features in Golang for microservices, deployed on the Google
+                Go-Lang Microservices on GCP: Led the implementation of new
+                features in Go-Lang for microservices, deployed on the Google
                 Cloud Platform (GCP), showcasing proficiency in modern
                 technologies.
               </h3>

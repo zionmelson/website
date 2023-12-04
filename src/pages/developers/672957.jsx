@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import flapberry from "../../assets/flapberry.mp3";
+import blaze from "../../assets/blaze.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -19,7 +19,7 @@ import ts from "../../assets/ts.svg";
 import python from "../../assets/python.svg";
 import flask from "../../assets/flask.svg";
 
-export default function Flapberry() {
+export default function Blaze() {
   const [videoPaused, setVideoPaused] = useState(true);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -74,7 +74,7 @@ export default function Flapberry() {
                   marginTop: "3rem",
                 }}
               >
-                <h1 className="h1">Flapberry Fudgewhistle</h1>
+                <h1 className="h1">Jonathan Blaze</h1>
                 <h3
                   className="h3"
                   style={{
@@ -89,7 +89,7 @@ export default function Flapberry() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src={flapberry} type="audio/mpeg" />
+                <source src={blaze} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -466,7 +466,7 @@ export default function Flapberry() {
               marginBottom: "1rem",
             }}
           >
-            Flapberry Fudgewhistle
+            Jonathan Blaze
           </h1>
           <h3
             className="h3"
@@ -482,7 +482,7 @@ export default function Flapberry() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={flapberry} type="audio/mpeg" />
+              <source src={blaze} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a
@@ -570,10 +570,10 @@ export default function Flapberry() {
                 </h2>
                 <span
                   className="emoji-container"
-                  id="midtier"
+                  id="senior"
                   style={{ width: "90%", marginBottom: "1rem" }}
                 >
-                  mid-tier
+                  senior
                 </span>
                 <div
                   className="horizontal-content-small"

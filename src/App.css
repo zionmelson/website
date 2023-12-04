@@ -484,6 +484,42 @@
   color: #fff;
 }
 
+#vue:hover {
+  color: #00bb7f;
+}
+
+#light #vue:hover {
+  color: #00bb7f;
+}
+
+#vue-container:hover {
+  background-color: #00bb7f;
+  color: #fff;
+}
+
+#light #vue-container:hover {
+  background-color: #00bb7f;
+  color: #fff;
+}
+
+#flutter:hover {
+  color: #00c8fd;
+}
+
+#light #flutter:hover {
+  color: #00c8fd;
+}
+
+#flutter-container:hover {
+  background-color: #00c8fd;
+  color: #fff;
+}
+
+#light #flutter-container:hover {
+  background-color: #00c8fd;
+  color: #fff;
+}
+
 #laravel:hover {
   color: #ff2d20;
 }
@@ -523,6 +559,24 @@
 
 #light #node-container:hover {
   background-color: #669c4f;
+  color: #fff;
+}
+
+#dotnet:hover {
+  color: #5729dd;
+}
+
+#light #dotnet:hover {
+  color: #5729dd;
+}
+
+#dotnet-container:hover {
+  background-color: #5729dd;
+  color: #fff;
+}
+
+#light #dotnet-container:hover {
+  background-color: #5729dd;
   color: #fff;
 }
 

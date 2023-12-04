@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import peaberry from "../../assets/peaberry.mp3";
+import laing from "../../assets/laing.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -21,8 +21,12 @@ import azure from "../../assets/azure.svg";
 import gcp from "../../assets/gcp.svg";
 import sol from "../../assets/sol.svg";
 import graph from "../../assets/graph.svg";
+import postgres from "../../assets/postgres.svg";
+import docker from "../../assets/docker.svg";
+import hasura from "../../assets/hasura.svg";
+import vue from "../../assets/vue.svg";
 
-export default function Peaberry() {
+export default function Laing() {
   const [videoPaused, setVideoPaused] = useState(true);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -77,7 +81,7 @@ export default function Peaberry() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Peaberry Wigglewhistle</h1>
+                <h1 className="h1">Scott Laing</h1>
                 <h3
                   className="h3"
                   style={{
@@ -92,7 +96,7 @@ export default function Peaberry() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src={peaberry} type="audio/mpeg" />
+                <source src={laing} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -232,6 +236,64 @@ export default function Peaberry() {
                   >
                     <img src={gcp} className="emoji-2" alt="calendar" />
                     Google Cloud
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={postgres} className="emoji-2" alt="calendar" />
+                    Postgres
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={hasura} className="emoji-2" alt="calendar" />
+                    Hasura
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="vue-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={vue} className="emoji-2" alt="calendar" />
+                    Vue
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="docker-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={docker} className="emoji-2" alt="calendar" />
+                    Docker
                   </span>
                   <span
                     className="emoji-container"
@@ -526,7 +588,7 @@ export default function Peaberry() {
               marginBottom: "1rem",
             }}
           >
-            Peaberry Wigglewhistle
+            Scott Laing
           </h1>
           <h3
             className="h3"
@@ -542,7 +604,7 @@ export default function Peaberry() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={peaberry} type="audio/mpeg" />
+              <source src={laing} type="audio/mpeg" />
             </audio>
             <a
               href="https://calendly.com/learnmutiny/company-final-steps"
@@ -705,6 +767,64 @@ export default function Peaberry() {
                   >
                     <img src={gcp} className="emoji-2" alt="calendar" />
                     Google Cloud
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={postgres} className="emoji-2" alt="calendar" />
+                    Postgres
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={hasura} className="emoji-2" alt="calendar" />
+                    Hasura
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="vue-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={vue} className="emoji-2" alt="calendar" />
+                    Vue
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="docker-container"
+                    style={{
+                      display: "flex",
+
+                      marginBottom: "1rem",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      textAlign: "center",
+                    }}
+                  >
+                    <img src={docker} className="emoji-2" alt="calendar" />
+                    Docker
                   </span>
                   <span
                     className="emoji-container"
