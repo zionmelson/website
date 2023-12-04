@@ -4,6 +4,7 @@ import Home from "./Home";
 import Startup from "./pages/Startup";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
+import Developer from "./pages/Developer";
 import Error from "./pages/Error";
 import Privacy from "./pages/Privacy";
 import { Analytics } from "@vercel/analytics/react";
@@ -60,6 +61,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/developers/:id" element={<Developer />} />
+
             <Route path="/developers/2e31c0" element={<Zoowee />} />
             <Route path="/developers/601892" element={<Buritt />} />
             <Route path="/developers/27ff01" element={<Trashwee />} />
