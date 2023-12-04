@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import buritt from "../../assets/buritt.mp3";
+import rogers from "../../assets/rogers.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -22,7 +22,7 @@ import docker from "../../assets/docker.svg";
 import go from "../../assets/go.svg";
 import terra from "../../assets/terra.svg";
 
-export default function Buritt() {
+export default function Rogers() {
   const [videoPaused, setVideoPaused] = useState(true);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -77,7 +77,7 @@ export default function Buritt() {
                   marginTop: "3rem",
                 }}
               >
-                <h1 className="h1">Buritt Noseface</h1>
+                <h1 className="h1">Steven Rogers</h1>
                 <h3
                   className="h3"
                   style={{
@@ -92,7 +92,7 @@ export default function Buritt() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "1rem" }}
               >
-                <source src={buritt} type="audio/mpeg" />
+                <source src={rogers} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
@@ -507,7 +507,7 @@ export default function Buritt() {
               marginBottom: "1rem",
             }}
           >
-            Buritt Noseface
+            Steven Rogers
           </h1>
           <h3
             className="h3"
@@ -523,7 +523,7 @@ export default function Buritt() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={buritt} type="audio/mpeg" />
+              <source src={rogers} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a

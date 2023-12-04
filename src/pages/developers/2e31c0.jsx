@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import zoowee from "../../assets/zoowee.mp3";
+import queen from "../../assets/queen.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -21,7 +21,7 @@ import js from "../../assets/js.svg";
 import mysql from "../../assets/mysql.svg";
 import linux from "../../assets/linux.svg";
 
-export default function Zoowee() {
+export default function Queen() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -76,7 +76,7 @@ export default function Zoowee() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Zoowee Blubberworth</h1>
+                <h1 className="h1">Oliver Queen</h1>
                 <h3
                   className="h3"
                   style={{
@@ -91,7 +91,7 @@ export default function Zoowee() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "0.5rem" }}
               >
-                <source src={zoowee} type="audio/mpeg" />
+                <source src={queen} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
 
@@ -498,7 +498,7 @@ export default function Zoowee() {
               marginBottom: "1rem",
             }}
           >
-            Zoowee Blubberworth
+            Oliver Queen
           </h1>
           <h3
             className="h3"
@@ -514,7 +514,7 @@ export default function Zoowee() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={zoowee} type="audio/mpeg" />
+              <source src={queen} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a

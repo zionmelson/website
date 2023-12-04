@@ -7,7 +7,7 @@ import {
   FaVolumeMute,
 } from "react-icons/fa";
 
-import stinkroid from "../../assets/stinkroid.mp3";
+import wilson from "../../assets/wilson.mp3";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/voice.json";
@@ -28,7 +28,7 @@ import kuber from "../../assets/kuber.svg";
 import postgres from "../../assets/postgres.svg";
 import node from "../../assets/node.svg";
 
-export default function Stinkroid() {
+export default function Wilson() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
 
@@ -83,7 +83,7 @@ export default function Stinkroid() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Stinkroid Noodleshine</h1>
+                <h1 className="h1">Samuel Wilson</h1>
                 <h3
                   className="h3"
                   style={{
@@ -98,7 +98,7 @@ export default function Stinkroid() {
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "0.5rem" }}
               >
-                <source src={stinkroid} type="audio/mpeg" />
+                <source src={wilson} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
 
@@ -627,7 +627,7 @@ export default function Stinkroid() {
               marginBottom: "1rem",
             }}
           >
-            Stinkroid Noodleshine
+            Samuel Wilson
           </h1>
           <h3
             className="h3"
@@ -643,7 +643,7 @@ export default function Stinkroid() {
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={stinkroid} type="audio/mpeg" />
+              <source src={wilson} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <a
