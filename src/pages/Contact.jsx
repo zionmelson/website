@@ -1,5 +1,5 @@
-import bear from "../assets/bear.svg";
-import calen from "../assets/calen.svg";
+import bear from "../assets/svg/bear.svg";
+import calen from "../assets/svg/calen.svg";
 
 import "../App.css";
 
@@ -20,7 +20,7 @@ export default function Contact() {
             schedule a time to chat with us
           </h2>
           <a
-            href="https://calendly.com/learnmutiny/showcase"
+            href="https://calendly.com/learnmutiny/support"
             target="_blank"
             rel="noreferrer"
             style={{ marginBottom: "1rem" }}
@@ -58,7 +58,7 @@ export default function Contact() {
             schedule a time to chat with us
           </h2>
           <a
-            href="https://calendly.com/learnmutiny/showcase"
+            href="https://calendly.com/learnmutiny/support"
             target="_blank"
             rel="noreferrer"
             style={{ marginBottom: "1rem" }}

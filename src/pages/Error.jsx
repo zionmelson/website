@@ -1,4 +1,4 @@
-import bear from "../assets/bear.png";
+import bear from "../assets/png/bear.png";
 
 import "../App.css";
 

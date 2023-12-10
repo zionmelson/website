@@ -3,7 +3,6 @@ import {
   FaReact,
   FaAngular,
   FaPython,
-  FaRust,
   FaJs,
   FaDocker,
   FaEthereum,
@@ -14,11 +13,11 @@ import {
 // import { gsap } from "gsap";
 // import SplitType from "split-type";
 
-import startups from "../assets/startups.svg";
-import calen from "../assets/calen.svg";
+import startups from "../assets/svg/startups.svg";
+import calen from "../assets/svg/calen.svg";
 
 import Lottie from "lottie-react";
-import animation from "../assets/animate2.json";
+import animation from "../assets/json/animate2.json";
 
 import "../App.css";
 
@@ -54,20 +53,19 @@ function Startup() {
     <div className="main">
       {/* startup-intro desktop */}
       <div className="startup-box">
-        <div className="vertical-content">
+        <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1
             className="h1"
             style={{
-              marginTop: "5rem",
               marginBottom: "1rem",
             }}
           >
-            find a <span className="span">senior tech lead</span> for your
+            find a <span className="span">senior full-stack</span> for your
             startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we specialzie in placing technical leaders in critical roles at
-            promising startups
+            we specialize in placing developers in critical roles at promising
+            startups
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
@@ -77,17 +75,28 @@ function Startup() {
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we specifically target vetted full-stack senior web developers
           </h2>
-          <div className="icons">
-            <FaPython id="python" className="icon" />
-            <FaRust id="rust" className="icon" />
+          <div className="icons" style={{ marginBottom: "1rem" }}>
+            <FaLaravel id="laravel" className="icon" />
             <FaJs id="js" className="icon" />
             <FaAngular id="angular" className="icon" />
+            <FaPython id="python" className="icon" />
             <FaDocker id="docker" className="icon" />
             <FaEthereum id="solidity" className="icon" />
-            <FaLaravel id="laravel" className="icon" />
             <FaNpm id="npm" className="icon" />
-            <FaNode id="node" className="icon" />
           </div>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            recruit your next developer with learnmutiny
+          </h2>
+          <a
+            href="https://calendly.com/learnmutiny/company-intro"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <img src={calen} className="emoji" alt="mu" />
+              Calendly
+            </span>
+          </a>
         </div>
       </div>
       {/* startup-intro phone */}
@@ -99,12 +108,12 @@ function Startup() {
               marginBottom: "1rem",
             }}
           >
-            find a <span className="span">senior tech lead</span> for your
+            find a <span className="span">senior full-stack</span> for your
             startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specialzie in placing technical leaders in critical roles at
-            promising startups
+            we specialize in placing developers in critical roles at promising
+            startups
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
@@ -133,7 +142,7 @@ function Startup() {
             <FaNode id="node" className="icon" style={{ margin: "0.6rem" }} />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            hire with us
+            recruit your next developer with learnmutiny
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
@@ -147,34 +156,6 @@ function Startup() {
           </a>
         </div>
       </div>
-      {/* startup-mu desktop */}
-      {/* <div className="startup-box">
-        <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            create your startup profile
-          </h1>
-          <div className="vertical-content">
-            <img src={startup} className="logo" alt="startup" />
-            <h2 className="h3" style={{ marginBottom: "1rem" }}>
-              your startup profile will reflect your company
-            </h2>
-          </div>
-        </div>
-      </div> */}
-      {/* startup-mu phone */}
-      {/* <div className="startup-box-mobile">
-        <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            create your startup mu
-          </h1>
-          <div className="vertical-content">
-            <img src={startup} className="logo" alt="startup" />
-            <h2 className="h3" style={{ marginBottom: "1rem" }}>
-              your startup profile will reflect your company
-            </h2>
-          </div>
-        </div>
-      </div> */}
       {/* matching-algo desktop */}
       <div className="startup-box">
         <div className="vertical-content">
@@ -183,7 +164,7 @@ function Startup() {
             our matching model
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            expanding teams are difficult, at learnmutiny we excel at placing
+            expanding teams can be difficult, at learnmutiny we excel at placing
             professionals that compliment the exact needs of your company
           </h2>
           <Lottie
@@ -194,9 +175,8 @@ function Startup() {
             }}
           />
           <h3 className="h3" style={{ width: "75%" }}>
-            all of our professionals are vetted and have a proven track record
-            of industry expertise leading successful teams and developing
-            projects.
+            all of our developers are vetted and have a proven track record of
+            industry expertise leading successful teams and developing projects.
           </h3>
         </div>
       </div>
@@ -208,7 +188,7 @@ function Startup() {
             our matching model
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            expanding teams are difficult, at learnmutiny we excel at placing
+            expanding teams can be difficult, at learnmutiny we excel at placing
             professionals that compliment the exact needs of your company
           </h2>
           <Lottie
@@ -219,9 +199,8 @@ function Startup() {
             }}
           />
           <h3 className="h3">
-            all of our professionals are vetted and have a proven track record
-            of industry expertise leading successful teams and developing
-            projects.
+            all of our developers are vetted and have a proven track record of
+            industry expertise leading successful teams and developing projects.
           </h3>
         </div>
       </div>
@@ -232,7 +211,7 @@ function Startup() {
             pricing
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our staffing fees for full-time positions:
+            our direct-to-hire fee for full-time positions:
           </h2>
           <div
             className="horizontal-content-small"
@@ -252,7 +231,7 @@ function Startup() {
                 className="h3"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                of total salary
+                of annual salary
               </h3>
               <h3
                 className="h3"
@@ -271,13 +250,20 @@ function Startup() {
               <img src={startups} className="logo" alt="medium" />
             </div>
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
             we know the hiring process can be stressful, because of this we work
             closely with your team to ensure successful placement
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            find your next co-founder with learnmutiny
+            learnmutiny will refund a pro-rated portion of the fee paid if
+            placement fails within the first 60 days
           </h3>
+          <h2
+            className="h2"
+            style={{ marginBottom: "1rem", marginTop: "2rem" }}
+          >
+            meet with the team to start the process
+          </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
             target="_blank"
@@ -297,7 +283,7 @@ function Startup() {
             pricing
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our staffing fees for full-time positions:
+            our direct-to-hire fee for full-time positions:
           </h2>
           <div
             className="vertical-content"
@@ -310,8 +296,9 @@ function Startup() {
           >
             <h1 className="h1">25%</h1>
             <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
-              of total salary
+              of annaul salary
             </h3>
+
             <h3 className="h3" style={{ marginBottom: "0.5rem", width: "90%" }}>
               <a
                 href="https://calendly.com/learnmutiny/company-intro"
@@ -330,8 +317,15 @@ function Startup() {
             closely with your team to ensure successful placement
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            find your next co-founder with learnmutiny
+            learnmutiny will refund a pro-rated portion of the fee paid if
+            placement fails within the first 60 days{" "}
           </h3>
+          <h2
+            className="h2"
+            style={{ marginBottom: "1rem", marginTop: "2rem" }}
+          >
+            meet with the team to start the process
+          </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
             target="_blank"

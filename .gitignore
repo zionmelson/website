@@ -13,6 +13,7 @@ developerHash.json
 *.local
 .env
 .eslintrc.cjs
+api
 
 # Editor directories and files
 .vscode/*

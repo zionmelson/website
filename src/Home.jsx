@@ -1,12 +1,23 @@
-import bear from "./assets/bear.svg";
-import inverse from "./assets/inverse.svg";
-import zion from "./assets/zion.svg";
-import max from "./assets/max.svg";
+import {
+  FaAngular,
+  FaPython,
+  FaRust,
+  FaJs,
+  FaDocker,
+  FaEthereum,
+  FaLaravel,
+  FaNpm,
+  FaNode,
+} from "react-icons/fa";
+
+import zion from "./assets/svg/zion.svg";
+import max from "./assets/svg/max.svg";
+import atlanta from "./assets/svg/atlanta.svg";
 
 import Lottie from "lottie-react";
-import animation from "./assets/animate.json";
-import link from "./assets/link.svg";
-import calen from "./assets/calen.svg";
+import animation from "./assets/json/animate.json";
+import link from "./assets/svg/link.svg";
+import calen from "./assets/svg/calen.svg";
 
 import "./App.css";
 
@@ -14,32 +25,25 @@ function Home() {
   return (
     //
     <div className="main">
-      {/* logo desktop */}
-      <div className="box">
-        <div className="vertical-content">
-          <div className="vertical-content">
-            <img src={bear} className="logo" id="logo" alt="bear" />
-            <img src={inverse} className="logo" id="light-logo" alt="inverse" />
-          </div>
-        </div>
-      </div>
       {/* intro desktop */}
       <div className="box">
-        <div className="vertical-content">
+        <div className="vertical-content" style={{ marginTop: "2.5rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
-            find your next full-time position with learnmutiny
+            we source senior full-stack developers at startups
           </h1>
-          <h2 className="h2">we place technical leads and CTOs at startups</h2>
+          <h2 className="h2">
+            find your next full-time position with learnmutiny
+          </h2>
           <Lottie
             animationData={animation}
             style={{
               width: "20%",
             }}
           />
-          <h3 className="h3" style={{ marginBottom: "1rem", width: "70%" }}>
-            we target startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a technical lead to amplify their
-            internal development processes.
+          <h3 className="h3" style={{ marginBottom: "1rem", width: "65%" }}>
+            we source for startups who have raised pre-seed to series B funding
+            rounds and are looking to hire a full-stack lead developer to
+            amplify their internal development processes.
           </h3>
         </div>
       </div>
@@ -47,19 +51,30 @@ function Home() {
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            more about learnmutiny
+            looking for your next position?
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we take a different approach to recruiting
+            we take a different approach to sourcing
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "75%" }}>
             at learnmutiny our mission is to match you with companies that align
             with your career goals. <br />
-            we look to place intillegent technical leaders at startups that are
-            working in up and coming areas of technology.
+            we place full-stack developers at startups that are working in up
+            and coming areas of technology.
           </h3>
+          <div className="icons" style={{ marginBottom: "1rem" }}>
+            <FaPython id="python" className="icon" />
+            <FaRust id="rust" className="icon" />
+            <FaJs id="js" className="icon" />
+            <FaAngular id="angular" className="icon" />
+            <FaDocker id="docker" className="icon" />
+            <FaEthereum id="solidity" className="icon" />
+            <FaLaravel id="laravel" className="icon" />
+            <FaNpm id="npm" className="icon" />
+            <FaNode id="node" className="icon" />
+          </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            currently looking for your next position?
+            schedule a developer introduction with us
           </h2>
           <a
             href="https://calendly.com/learnmutiny/showcase"
@@ -73,27 +88,15 @@ function Home() {
           </a>
         </div>
       </div>
-      {/* logo phone */}
-      <div className="box-mobile">
-        <div className="vertical-content">
-          <div className="vertical-content">
-            <img src={bear} className="logo" id="logo" alt="bear" />
-            <img
-              src={inverse}
-              className="logo"
-              id="light-logo"
-              alt="inverse"
-            />{" "}
-          </div>
-        </div>
-      </div>
       {/* intro phone */}
       <div className="box-mobile">
-        <div className="vertical-content">
+        <div className="vertical-content" style={{ marginTop: "2rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            find your next <br /> full-time position with learnmutiny
+            we source senior full-stack developers at startups
           </h1>
-          <h2 className="h2">we place technical leads and CTOs at startups</h2>
+          <h2 className="h2">
+            find your next full-time position with learnmutiny
+          </h2>
           <Lottie
             animationData={animation}
             style={{
@@ -102,9 +105,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            we target startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a technical lead to amplify their
-            internal development processes.
+            we source for startups who have raised pre-seed to series B funding
+            rounds and are looking to hire a full-stack lead developer to
+            amplify their internal development processes.
           </h3>
         </div>
       </div>
@@ -112,17 +115,23 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            more about us
+            looking for your next position?
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we take a different approach to recruiting
+            we take a different approach to sourcing
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "85%" }}>
-            at learnmutiny our mission is to place intillegent technical leaders
-            at startups that are working in up and coming areas of technology.
+            at learnmutiny our mission is to place full-stack developers at
+            startups that are working in up and coming areas of technology.
           </h3>
+          <div className="icons" style={{ marginBottom: "1rem" }}>
+            <FaPython id="python" className="icon" />
+            <FaRust id="rust" className="icon" />
+            <FaJs id="js" className="icon" />
+            <FaNode id="node" className="icon" />
+          </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            looking for your next position?
+            schedule a developer intro with us
           </h2>
           <a
             href="https://calendly.com/learnmutiny/showcase"
@@ -413,9 +422,11 @@ function Home() {
             the startup ecosystem.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            learnmutiny is our way of turning ATL into the southeast tech hub
-            (represent).
+            learnmutiny is our way of turning ATL into the southeast tech hub.
           </h3>
+          <span className="emoji-container" style={{ padding: 0 }}>
+            <img src={atlanta} className="emoji" alt="mu" />
+          </span>
         </div>
       </div>
     </div>
