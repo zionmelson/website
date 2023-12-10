@@ -22,33 +22,6 @@ import animation from "../assets/json/animate2.json";
 import "../App.css";
 
 function Startup() {
-  // const positions = gsap.utils.toArray("#position");
-  // const time = gsap.timeline();
-
-  // positions.forEach((position) => {
-  //   const splitText = new SplitType(position);
-
-  //   time
-  //     .from(
-  //       splitText.chars,
-  //       {
-  //         opacity: 0,
-  //         fontFamily: "Inter, sans-serif",
-  //         y: 40,
-  //       },
-  //       "<"
-  //     )
-  //     .to(
-  //       splitText.chars,
-  //       {
-  //         opacity: 0,
-  //         fontFamily: "Inter, sans-serif",
-  //         y: -40,
-  //       },
-  //       "<2"
-  //     );
-  // });
-
   return (
     <div className="main">
       {/* startup-intro desktop */}
@@ -58,10 +31,11 @@ function Startup() {
             className="h1"
             style={{
               marginBottom: "1rem",
+              width: "60%",
             }}
           >
-            find a <span className="span">senior full-stack</span> for your
-            startup
+            find a <span className="span">senior full-stack developer</span> for
+            your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we specialize in placing developers in critical roles at promising
@@ -106,10 +80,11 @@ function Startup() {
             className="h1"
             style={{
               marginBottom: "1rem",
+              width: "100%",
             }}
           >
-            find a <span className="span">senior full-stack</span> for your
-            startup
+            find a <span className="span">senior full-stack developer</span> for
+            your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we specialize in placing developers in critical roles at promising
