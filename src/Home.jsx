@@ -27,7 +27,7 @@ function Home() {
     <div className="main">
       {/* intro desktop */}
       <div className="box">
-        <div className="vertical-content" style={{ marginTop: "2.5rem" }}>
+        <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
             we source senior full-stack developers at startups
           </h1>
