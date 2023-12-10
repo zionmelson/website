@@ -29,7 +29,7 @@ function Home() {
       <div className="box">
         <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
-            we source senior full-stack developers at startups
+            we source senior full-stack developers for startups
           </h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny
@@ -92,7 +92,7 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content" style={{ marginTop: "2rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            we source senior full-stack developers at startups
+            we source senior full-stack developers for startups
           </h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny
