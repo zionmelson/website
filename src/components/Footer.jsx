@@ -1,7 +1,7 @@
-import Instagram from "../assets/instagram.svg";
-import Github from "../assets/github.svg";
-import Linkedin from "../assets/linkedin.svg";
-import X from "../assets/X.svg";
+import Instagram from "../assets/svg/instagram.svg";
+import Github from "../assets/svg/github.svg";
+import Linkedin from "../assets/svg/linkedin.svg";
+import X from "../assets/svg/X.svg";
 
 import "./Components.css";
 

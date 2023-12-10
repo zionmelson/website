@@ -2,9 +2,9 @@ import "./Components.css";
 
 import { useState, useEffect } from "react";
 
-import bear from "../assets/bear.svg";
-import startup from "../assets/startup.svg";
-import learnmutiny from "../assets/learnmutiny.svg";
+import bear from "../assets/svg/bear.svg";
+import startup from "../assets/svg/startup.svg";
+import learnmutiny from "../assets/svg/learnmutiny.svg";
 
 import { FaBars } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";

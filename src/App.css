@@ -120,7 +120,7 @@
 
 .emoji-2 {
   width: 1.5rem;
-  margin: 0;
+  margin-right: 0.5rem;
   padding: 0;
 }
 
@@ -284,6 +284,16 @@
   color: #302f31;
 }
 
+#ai-container:hover {
+  background-color: #1bb5bd;
+  color: #fff;
+}
+
+#light #ai-container:hover {
+  background-color: #1bb5bd;
+  color: #fff;
+}
+
 #android:hover {
   color: #32de84;
 }
@@ -384,7 +394,7 @@
   color: #f0dc4e;
 }
 
-#js-container:hover {
+#javascript-container:hover {
   background-color: #f0dc4e;
   color: #fff;
 }
@@ -393,7 +403,7 @@
   color: #f0dc4e;
 }
 
-#light #js-container:hover {
+#light #javascript-container:hover {
   background-color: #f0dc4e;
   color: #fff;
 }
@@ -402,7 +412,7 @@
   color: #007cd2;
 }
 
-#ts-container:hover {
+#typescript-container:hover {
   background-color: #007cd2;
   color: #fff;
 }
@@ -411,7 +421,7 @@
   color: #007cd2;
 }
 
-#light #ts-container:hover {
+#light #typescript-container:hover {
   background-color: #007cd2;
   color: #fff;
 }
