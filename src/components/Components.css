@@ -41,7 +41,6 @@
 .scrolled {
   background-color: rgba(19, 19, 19, 0.9);
   height: 4rem;
-
   align-items: flex-end;
 }
 
@@ -143,7 +142,7 @@
   margin: 1rem;
   padding: 1rem;
   border: 0.2rem solid #5dc4ff;
-  transition: 0.1s linear;
+  transition: 0.3s linear;
 }
 
 #light .startup-logo {
