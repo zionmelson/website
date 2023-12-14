@@ -41,6 +41,22 @@ const hotjarVersion = 6;
 Hotjar.init(siteId, hotjarVersion);
 
 function App() {
+  useEffect(() => {
+    if ("sw" in navigator) {
+      navigator.serviceWorker
+        .register("./sw.js")
+        .then((registration) => {
+          console.log(
+            "Service Worker registered with scope:",
+            registration.scope
+          );
+        })
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
+        });
+    }
+  }, []);
+
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
 
   useEffect(() => {

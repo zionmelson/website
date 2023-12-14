@@ -112,6 +112,10 @@
   width: 20rem;
 }
 
+.partner-logo {
+  width: 15rem;
+}
+
 .emoji {
   width: 2rem;
   margin: 0;
@@ -206,7 +210,7 @@
 }
 
 #light #startup-box {
-  border: 2px solid #d5892a;
+  border: 2px solid #099400;
 }
 
 .span {
@@ -258,6 +262,33 @@
 }
 
 .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.partnersL {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#light .partners {
+  display: none;
+}
+
+#light .partnersL {
+  display: block;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -792,6 +823,10 @@
 
   #video {
     border-radius: 0.5rem;
+  }
+
+  .partner-logo {
+    width: 6rem;
   }
 }
 

@@ -10,8 +10,14 @@ import {
   FaNpm,
   FaNode,
 } from "react-icons/fa";
-// import { gsap } from "gsap";
-// import SplitType from "split-type";
+
+import goodie from "../assets/svg/goodie.svg";
+import capitalize from "../assets/svg/capitalize.svg";
+import circadian from "../assets/svg/circadian.svg";
+
+import goodieL from "../assets/svg/goodieL.svg";
+import capitalizeL from "../assets/svg/capitalizeL.svg";
+import circadianL from "../assets/svg/circadianL.svg";
 
 import startups from "../assets/svg/startups.svg";
 import calen from "../assets/svg/calen.svg";
@@ -31,7 +37,7 @@ function Startup() {
             className="h1"
             style={{
               marginBottom: "1rem",
-              width: "60%",
+              width: "70%",
             }}
           >
             find a <span className="span">senior full-stack developer</span> for
@@ -229,15 +235,58 @@ function Startup() {
             we know the hiring process can be stressful, because of this we work
             closely with your team to ensure successful placement
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+          <h3 className="h3" style={{ marginBottom: "3rem" }}>
             learnmutiny will refund a pro-rated portion of the fee paid if
             placement fails within the first 60 days
           </h3>
+          <h2 className="h2">trusted by</h2>
+          <div className="partners" style={{ marginBottom: "1rem" }}>
+            <a
+              href="https://goodienation.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={goodie} className="partner-logo" alt="goodie" />
+            </a>
+            <a
+              href="https://www.capitalizevc.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={capitalize} className="partner-logo" alt="capitalize" />
+            </a>
+            <a href="https://circadian.vc/" target="_blank" rel="noreferrer">
+              <img src={circadian} className="partner-logo" alt="circadian" />
+            </a>
+          </div>
+          <div className="partnersL" style={{ marginBottom: "1rem" }}>
+            <a
+              href="https://goodienation.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={goodieL} className="partner-logo" alt="goodie" />
+            </a>
+            <a
+              href="https://www.capitalizevc.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={capitalizeL}
+                className="partner-logo"
+                alt="capitalize"
+              />
+            </a>
+            <a href="https://circadian.vc/" target="_blank" rel="noreferrer">
+              <img src={circadianL} className="partner-logo" alt="circadian" />
+            </a>
+          </div>
           <h2
             className="h2"
             style={{ marginBottom: "1rem", marginTop: "2rem" }}
           >
-            meet with the team to start the process
+            meet with our team to start the source
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
@@ -291,15 +340,58 @@ function Startup() {
             we know the hiring process can be stressful, because of this we work
             closely with your team to ensure successful placement
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+          <h3 className="h3" style={{ marginBottom: "2rem" }}>
             learnmutiny will refund a pro-rated portion of the fee paid if
             placement fails within the first 60 days{" "}
           </h3>
+          <h2 className="h2">trusted by</h2>
+          <div className="partners" style={{ marginBottom: "1rem" }}>
+            <a
+              href="https://goodienation.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={goodie} className="partner-logo" alt="goodie" />
+            </a>
+            <a
+              href="https://www.capitalizevc.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={capitalize} className="partner-logo" alt="capitalize" />
+            </a>
+            <a href="https://circadian.vc/" target="_blank" rel="noreferrer">
+              <img src={circadian} className="partner-logo" alt="circadian" />
+            </a>
+          </div>
+          <div className="partnersL" style={{ marginBottom: "1rem" }}>
+            <a
+              href="https://goodienation.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={goodieL} className="partner-logo" alt="goodie" />
+            </a>
+            <a
+              href="https://www.capitalizevc.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={capitalizeL}
+                className="partner-logo"
+                alt="capitalize"
+              />
+            </a>
+            <a href="https://circadian.vc/" target="_blank" rel="noreferrer">
+              <img src={circadianL} className="partner-logo" alt="circadian" />
+            </a>
+          </div>
           <h2
             className="h2"
-            style={{ marginBottom: "1rem", marginTop: "2rem" }}
+            style={{ marginBottom: "1rem", marginTop: "1rem" }}
           >
-            meet with the team to start the process
+            meet with our team to start the source
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
