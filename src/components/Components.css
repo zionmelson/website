@@ -143,7 +143,7 @@
   margin: 1rem;
   padding: 1rem;
   border: 0.2rem solid #5dc4ff;
-  transition: 0.3s linear;
+  transition: 0.1s linear;
 }
 
 #light .startup-logo {
@@ -155,11 +155,32 @@
 }
 
 #light .startup-logo:hover {
-  background: linear-gradient(20deg, #111111, #5e3c12);
+  background: linear-gradient(20deg, #111111, #066100);
+}
+
+.og-logo {
+  width: 14rem;
+  transition: 1s linear;
 }
 
 .full-logo {
   width: 14rem;
+  transition: 1s linear;
+}
+
+.light-logo {
+  display: none;
+  transition: 1s linear;
+}
+
+#light .full-logo {
+  display: none;
+  transition: 1s linear;
+}
+
+#light .light-logo {
+  display: block;
+  transition: 1s linear;
 }
 
 .logo-scrolled {
@@ -262,7 +283,17 @@
   }
 
   #light .startup-logo {
-    background: linear-gradient(20deg, #111111, #2d4069);
+    background: linear-gradient(20deg, #111111, #066100);
+  }
+
+  .light-logo {
+    display: none;
+    transition: 1s linear;
+  }
+
+  #light .light-logo {
+    display: none;
+    transition: 1s linear;
   }
 
   .support-logo {
@@ -277,6 +308,10 @@
   }
 
   .full-logo {
+    display: none;
+  }
+
+  .og-logo {
     display: none;
   }
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import bear from "../assets/svg/bear.svg";
 import startup from "../assets/svg/startup.svg";
+import startupL from "../assets/svg/startupsL.svg";
 import learnmutiny from "../assets/svg/learnmutiny.svg";
 
 import { FaBars } from "react-icons/fa";
@@ -59,6 +60,7 @@ export default function Navbar() {
           <a href="/startup">
             <div className={`startup-logo ${scrolled ? "logo-scrolled" : ""}`}>
               <img src={startup} className="full-logo" alt="logo" />
+              <img src={startupL} className="light-logo" alt="logo" />
               <img src={bear} className="bear-logo" alt="logo" />
             </div>
           </a>
@@ -66,12 +68,12 @@ export default function Navbar() {
           <a href="/">
             {pathname !== "undefined" && pathname === "/" ? (
               <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
-                <img src={learnmutiny} className="full-logo" alt="logo" />
+                <img src={learnmutiny} className="og-logo" alt="logo" />
                 <img src={bear} className="bear-logo" alt="logo" />
               </div>
             ) : (
               <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
-                <img src={learnmutiny} className="full-logo" alt="logo" />
+                <img src={learnmutiny} className="og-logo" alt="logo" />
                 <img src={bear} className="bear-logo" alt="logo" />
               </div>
             )}
