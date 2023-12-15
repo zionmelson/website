@@ -703,8 +703,28 @@
   border-radius: 1rem;
 }
 
-#weird-div {
-  margin-right: 20rem;
+#p {
+  margin: 0;
+  line-height: 0;
+}
+
+#ph {
+  margin: 0;
+  line-height: 0;
+}
+
+.chars {
+  font-weight: 900;
+  font-size: 3rem;
+  font-family: Inter, sans-serif;
+  color: #5dc4ff;
+}
+
+#light .chars {
+  font-weight: 900;
+  font-size: 3rem;
+  font-family: Inter, sans-serif;
+  color: #099400;
 }
 
 @media (max-width: 767px) {
@@ -748,6 +768,18 @@
   .h1 {
     font-size: 1.8rem;
     width: 95%;
+  }
+
+  .chars {
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-family: Inter, sans-serif;
+  }
+
+  #light .chars {
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-family: Inter, sans-serif;
   }
 
   .h2 {
