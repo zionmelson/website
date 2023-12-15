@@ -326,7 +326,7 @@ export default function Lucas() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    independent contractor
+                    full-time
                   </span>
                   <span
                     className="emoji-container"
@@ -752,7 +752,7 @@ export default function Lucas() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    independent contractor
+                    full-time
                   </span>
                   <span
                     className="emoji-container"
