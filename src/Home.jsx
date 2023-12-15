@@ -19,9 +19,87 @@ import animation from "./assets/json/animate.json";
 import link from "./assets/svg/link.svg";
 import calen from "./assets/svg/calen.svg";
 
+import gsap from "gsap";
+import SplitText from "split-text-js";
+
 import "./App.css";
+import { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    const technologies = gsap.utils.toArray("#p");
+    const tl = gsap.timeline({ repeat: -1 });
+
+    technologies.forEach((technology) => {
+      const splitText = new SplitText(technology);
+
+      splitText.chars.forEach((char) => {
+        char.classList.add(`chars`);
+      });
+
+      tl.from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          rotateX: -90,
+          y: 80,
+          stagger: 0.02,
+        },
+        "<"
+      ).to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          rotateX: 90,
+          y: -80,
+          stagger: 0.02,
+        },
+        "<1.6"
+      );
+    });
+
+    return () => tl.kill();
+  }, []);
+
+  useEffect(() => {
+    const technologies = gsap.utils.toArray("#ph");
+    const tl = gsap.timeline({ repeat: -1 });
+
+    technologies.forEach((technology) => {
+      const splitText = new SplitText(technology);
+
+      splitText.chars.forEach((char) => {
+        char.classList.add(`chars`);
+      });
+
+      tl.from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: 80,
+          rotateX: -90,
+          stagger: 0.02,
+        },
+        "<"
+      ).to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: -80,
+          rotateX: 90,
+          stagger: 0.02,
+        },
+        "<1.6"
+      );
+    });
+
+    return () => tl.kill();
+  }, []);
+
   return (
     //
     <div className="main">
@@ -29,7 +107,35 @@ function Home() {
       <div className="box">
         <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
-            we source senior full-stack developers for startups
+            we source senior
+            <span>
+              <div
+                className="text-wrapper"
+                style={{ marginTop: "1.5rem", marginBottom: "1rem" }}
+              >
+                <p id="p">Go-Lang</p>
+                <p id="p">Python</p>
+                <p id="p">Rust</p>
+                <p id="p">Javascript</p>
+                <p id="p">C++</p>
+                <p id="p">AWS</p>
+                <p id="p">Docker</p>
+                <p id="p">Solidity</p>
+                <p id="p">Kubernetes</p>
+                <p id="p">Node.js</p>
+                <p id="p">GCP</p>
+                <p id="p">Azure Cloud</p>
+                <p id="p">.NET</p>
+                <p id="p">Django</p>
+                <p id="p">Postgres</p>
+                <p id="p">MySQL</p>
+                <p id="p">MongoDB</p>
+                <p id="p">C#</p>
+                <p id="p">Kotlin</p>
+                <p id="p">Java</p>
+              </div>
+            </span>
+            developers for startups
           </h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny
@@ -92,7 +198,35 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content" style={{ marginTop: "2rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            we source senior full-stack developers for startups
+            we source senior
+            <span>
+              <div
+                className="text-wrapper"
+                style={{ marginTop: "1rem", marginBottom: "1rem" }}
+              >
+                <p id="ph">Go-Lang</p>
+                <p id="ph">Python</p>
+                <p id="ph">Rust</p>
+                <p id="ph">Javascript</p>
+                <p id="ph">C++</p>
+                <p id="ph">AWS</p>
+                <p id="ph">Docker</p>
+                <p id="ph">Solidity</p>
+                <p id="ph">Kubernetes</p>
+                <p id="ph">Node.js</p>
+                <p id="ph">GCP</p>
+                <p id="ph">Azure Cloud</p>
+                <p id="ph">.NET</p>
+                <p id="ph">Django</p>
+                <p id="ph">Postgres</p>
+                <p id="ph">MySQL</p>
+                <p id="ph">MongoDB</p>
+                <p id="ph">C#</p>
+                <p id="ph">Kotlin</p>
+                <p id="ph">Java</p>
+              </div>
+            </span>
+            developers for startups
           </h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny

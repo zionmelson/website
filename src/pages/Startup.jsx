@@ -25,9 +25,87 @@ import calen from "../assets/svg/calen.svg";
 import Lottie from "lottie-react";
 import animation from "../assets/json/animate2.json";
 
+import gsap from "gsap";
+import SplitText from "split-text-js";
+import { useEffect } from "react";
+
 import "../App.css";
 
 function Startup() {
+  useEffect(() => {
+    const technologies = gsap.utils.toArray("#p");
+    const tl = gsap.timeline({ repeat: -1 });
+
+    technologies.forEach((technology) => {
+      const splitText = new SplitText(technology);
+
+      splitText.chars.forEach((char) => {
+        char.classList.add(`chars`);
+      });
+
+      tl.from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: 60,
+          rotateX: -35,
+          stagger: 0.02,
+        },
+        "<"
+      ).to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: -60,
+          rotateX: 35,
+          stagger: 0.02,
+        },
+        "<1.8"
+      );
+    });
+
+    return () => tl.kill();
+  }, []);
+
+  useEffect(() => {
+    const technologies = gsap.utils.toArray("#ph");
+    const tl = gsap.timeline({ repeat: -1 });
+
+    technologies.forEach((technology) => {
+      const splitText = new SplitText(technology);
+
+      splitText.chars.forEach((char) => {
+        char.classList.add(`chars`);
+      });
+
+      tl.from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: 60,
+          rotateX: -35,
+          stagger: 0.02,
+        },
+        "<"
+      ).to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: -60,
+          rotateX: 35,
+          stagger: 0.02,
+        },
+        "<1.6"
+      );
+    });
+
+    return () => tl.kill();
+  }, []);
+
   return (
     <div className="main">
       {/* startup-intro desktop */}
@@ -37,11 +115,56 @@ function Startup() {
             className="h1"
             style={{
               marginBottom: "1rem",
-              width: "70%",
             }}
           >
-            find a <span className="span">senior full-stack developer</span> for
-            your startup
+            find a senior
+            <span>
+              <div
+                className="text-wrapper"
+                style={{
+                  marginTop: "1.5rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <p className="h1" id="p">
+                  full-stack developer
+                </p>
+                <p className="h1" id="p">
+                  front-end developer
+                </p>
+                <p className="h1" id="p">
+                  back-end developer
+                </p>
+                <p className="h1" id="p">
+                  machine learning engineer
+                </p>
+                <p className="h1" id="p">
+                  blockchain architect
+                </p>
+                <p className="h1" id="p">
+                  cloud engineer
+                </p>
+                <p className="h1" id="p">
+                  devops engineer
+                </p>
+                <p className="h1" id="p">
+                  mobile developer
+                </p>
+                <p className="h1" id="p">
+                  software engineer
+                </p>
+                <p className="h1" id="p">
+                  data scientist
+                </p>
+                <p className="h1" id="p">
+                  software architect
+                </p>
+                <p className="h1" id="p">
+                  database administrator
+                </p>
+              </div>
+            </span>{" "}
+            for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             we specialize in placing developers in critical roles at promising
@@ -89,8 +212,54 @@ function Startup() {
               width: "100%",
             }}
           >
-            find a <span className="span">senior full-stack developer</span> for
-            your startup
+            find a senior
+            <span>
+              <div
+                className="text-wrapper"
+                style={{
+                  marginTop: "1rem",
+                  marginBottom: "1rem",
+                }}
+              >
+                <p className="h1" id="ph">
+                  full-stack developer
+                </p>
+                <p className="h1" id="ph">
+                  front-end developer
+                </p>
+                <p className="h1" id="ph">
+                  back-end developer
+                </p>
+                <p className="h1" id="ph">
+                  machine learning dev
+                </p>
+                <p className="h1" id="ph">
+                  blockchain architect
+                </p>
+                <p className="h1" id="ph">
+                  cloud engineer
+                </p>
+                <p className="h1" id="ph">
+                  devops engineer
+                </p>
+                <p className="h1" id="ph">
+                  mobile developer
+                </p>
+                <p className="h1" id="ph">
+                  software engineer
+                </p>
+                <p className="h1" id="ph">
+                  data scientist
+                </p>
+                <p className="h1" id="ph">
+                  software architect
+                </p>
+                <p className="h1" id="ph">
+                  database admin
+                </p>
+              </div>
+            </span>{" "}
+            for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we specialize in placing developers in critical roles at promising
