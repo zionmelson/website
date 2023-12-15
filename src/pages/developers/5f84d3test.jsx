@@ -1,20 +1,19 @@
+import { useState } from "react";
+import {
+  FaPause,
+  FaPlay,
+  FaVolumeUp,
+  FaVolumeDown,
+  FaVolumeMute,
+} from "react-icons/fa";
 
-  import { useState } from "react";
-  import {
-    FaPause,
-    FaPlay,
-    FaVolumeUp,
-    FaVolumeDown,
-    FaVolumeMute,
-  } from "react-icons/fa";
+import barnes from "../../assets/mp3/barnes.mp3";
+import calen from "../../assets/svg/calen.svg";
 
-  import barnes from "../../assets/mp3/barnes.mp3";
-  import calen from "../../assets/svg/calen.svg";
-  
-  import Lottie from "lottie-react";
-  import voice from "../../assets/json/voice.json";
-  
-  import ruby from "../../assets/svg/ruby.svg";
+import Lottie from "lottie-react";
+import voice from "../../assets/json/voice.json";
+
+import ruby from "../../assets/svg/ruby.svg";
 import react from "../../assets/svg/react.svg";
 import mongodb from "../../assets/svg/mongodb.svg";
 import postgres from "../../assets/svg/postgres.svg";
@@ -24,147 +23,152 @@ import javascript from "../../assets/svg/javascript.svg";
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
 
-  export default function Barnes() {
+export default function Barnes() {
+  const [videoPaused, setVideoPaused] = useState(false);
+  const [videoElement, setVideoElement] = useState(null);
 
-    const [videoPaused, setVideoPaused] = useState(false);
-    const [videoElement, setVideoElement] = useState(null);
-  
-    const toggleVideo = () => {
-      console.log(videoElement);
-      console.log(videoElement.paused);
-  
-      if (videoElement) {
-        if (videoElement.paused) {
-          videoElement.play();
-          console.log("play");
-          setVideoPaused(true);
-        } else {
-          videoElement.pause();
-          console.log("pause");
-          setVideoPaused(false);
-        }
+  const toggleVideo = () => {
+    console.log(videoElement);
+    console.log(videoElement.paused);
+
+    if (videoElement) {
+      if (videoElement.paused) {
+        videoElement.play();
+        console.log("play");
+        setVideoPaused(true);
+      } else {
+        videoElement.pause();
+        console.log("pause");
+        setVideoPaused(false);
       }
-    };
-  
-    const muteVideo = () => {
-      if (videoElement) {
-        videoElement.volume = 0;
-      }
-    };
-  
-    const halfVolume = () => {
-      if (videoElement) {
-        videoElement.volume = 0.5;
-      }
-    };
-  
-    const fullVolume = () => {
-      if (videoElement) {
-        videoElement.volume = 1;
-      }
-    };
-  
-    return (
-      <div className="main">
-        {/* desktop */}
-        <div className="box">
-          <div className="vertical-content">
-            <div
-              className="horizontal-content"
-              style={{ alignItems: "flex-start", marginBottom: "1rem" }}
-            >
-              <div className="vertical-content">
-                <div
-                  className="vertical-content"
-                  style={{
-                    marginTop: "5rem",
-                  }}
-                >
-                  <h1 className="h1">James Barnes</h1>
-                  <h3
-                    className="h3"
-                    style={{
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    full-stack developer
-                  </h3>
-                </div>
-                <Lottie animationData={voice} />
-                <audio
-                  ref={(el) => setVideoElement(el)}
-                  style={{ marginBottom: "0.5rem" }}
-                >
-                  <source src={barnes} type="audio/mpeg" />
-                  Your browser does not support HTML video.
-                </audio>
-                <div
-                  className="horizontal-content"
-                  style={{ marginBottom: "2rem" }}
-                >
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toggleVideo();
-                    }}
-                    style={{ fontSize: "1.5rem" }}
-                  >
-                    {videoPaused ? <FaPlay /> : <FaPause />}
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      muteVideo();
-                    }}
-                    style={{ fontSize: "1.5rem" }}
-                  >
-                    <FaVolumeMute />
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      halfVolume();
-                    }}
-                    style={{ fontSize: "1.5rem" }}
-                  >
-                    <FaVolumeDown />
-                  </button>
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault();
-                      fullVolume();
-                    }}
-                    style={{ fontSize: "1.5rem" }}
-                  >
-                    <FaVolumeUp />
-                  </button>
-                </div>
-              </div>
+    }
+  };
+
+  const muteVideo = () => {
+    if (videoElement) {
+      videoElement.volume = 0;
+    }
+  };
+
+  const halfVolume = () => {
+    if (videoElement) {
+      videoElement.volume = 0.5;
+    }
+  };
+
+  const fullVolume = () => {
+    if (videoElement) {
+      videoElement.volume = 1;
+    }
+  };
+
+  return (
+    <div className="main">
+      {/* desktop */}
+      <div className="box">
+        <div className="vertical-content">
+          <div
+            className="horizontal-content"
+            style={{ alignItems: "flex-start", marginBottom: "1rem" }}
+          >
+            <div className="vertical-content">
               <div
                 className="vertical-content"
                 style={{
-                  padding: "1rem",
-                  marginTop: "2rem",
+                  marginTop: "5rem",
                 }}
               >
-                <div
-                  className="vertical-content"
+                <h1 className="h1">James Barnes</h1>
+                <h3
+                  className="h3"
                   style={{
+                    marginBottom: "1rem",
+                  }}
+                >
+                  full-stack developer
+                </h3>
+              </div>
+              <Lottie animationData={voice} />
+              <audio
+                ref={(el) => setVideoElement(el)}
+                style={{ marginBottom: "0.5rem" }}
+              >
+                <source src={barnes} type="audio/mpeg" />
+                Your browser does not support HTML video.
+              </audio>
+              <div
+                className="horizontal-content"
+                style={{ marginBottom: "2rem" }}
+              >
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleVideo();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  {videoPaused ? <FaPlay /> : <FaPause />}
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    muteVideo();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  <FaVolumeMute />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    halfVolume();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  <FaVolumeDown />
+                </button>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    fullVolume();
+                  }}
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  <FaVolumeUp />
+                </button>
+              </div>
+              <span className="emoji-container" style={{ padding: "1rem" }}>
+                play me 😄
+              </span>
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                padding: "1rem",
+                marginTop: "2rem",
+              }}
+            >
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                }}
+              >
+                <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                  coding ability details
+                </h2>
+                <span
+                  className="emoji-container"
+                  id="midtier"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
                     width: "100%",
                   }}
                 >
-                  <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                    coding ability details
-                  </h2>
-                  <span
-                    className="emoji-container"
-                    id=
-                    "midtier"         
-                    style={{ marginBottom: "1rem", padding: "1rem", width: "100%" }}
-                  >
-                    base level
-                  </span>
-                  <div
+                  base level developer
+                </span>
+                <div
                   className="horizontal-content-small"
                   style={{
                     width: "100%",
@@ -177,8 +181,7 @@ import css from "../../assets/svg/css.svg";
                     margin: 0,
                   }}
                 >
-                
-                    <span
+                  <span
                     className="emoji-container"
                     id="ruby-container"
                     style={{
@@ -190,7 +193,7 @@ import css from "../../assets/svg/css.svg";
                     Ruby
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="react-container"
                     style={{
@@ -202,7 +205,7 @@ import css from "../../assets/svg/css.svg";
                     React
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="mongodb-container"
                     style={{
@@ -214,7 +217,7 @@ import css from "../../assets/svg/css.svg";
                     MongoDB
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="postgres-container"
                     style={{
@@ -226,7 +229,7 @@ import css from "../../assets/svg/css.svg";
                     Postgres
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="vue-container"
                     style={{
@@ -238,7 +241,7 @@ import css from "../../assets/svg/css.svg";
                     Vue
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="python-container"
                     style={{
@@ -250,7 +253,7 @@ import css from "../../assets/svg/css.svg";
                     Python
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="javascript-container"
                     style={{
@@ -262,7 +265,7 @@ import css from "../../assets/svg/css.svg";
                     Javascript
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="html-container"
                     style={{
@@ -274,7 +277,7 @@ import css from "../../assets/svg/css.svg";
                     HTML
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="css-container"
                     style={{
@@ -285,57 +288,8 @@ import css from "../../assets/svg/css.svg";
                     <img src={css} className="emoji-2" alt="calendar" />
                     CSS
                   </span>
-                  </div>
-                  <div
-                  className="horizontal-content-small"
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "row",
-                    flexWrap: "wrap",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: 0,
-                    margin: 0,
-                  }}
-                >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "1rem", padding: "1rem" }}
-                  >
-                  4+ years of experience
-                  </span>
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "1rem", padding: "1rem" }}
-                  >
-                  bootcamp
-                  </span>
-                  </div>
                 </div>
-                <div className="vertical-content" style={{ width: "100%" }}>
-                  <h2 className="h2" style={{ marginBottom: "1rem" }}>
-                    desired workplace details
-                  </h2>
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "1rem", padding: "1rem" }}
-                  >
-                  <h4 className="h4">minimum salary: $65,000</h4>
-                  </span>
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "1rem", padding: "1rem" }}
-                  >
-                  <h4 className="h4">maxmimum salary: $80,000</h4>
-                  </span>
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "1rem", padding: "1rem" }}
-                  >
-                    <h4 className="h4">located: atlanta, ga</h4>
-                  </span>
-                  <div
+                <div
                   className="horizontal-content-small"
                   style={{
                     width: "100%",
@@ -348,7 +302,56 @@ import css from "../../assets/svg/css.svg";
                     margin: 0,
                   }}
                 >
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "1rem", padding: "1rem" }}
+                  >
+                    4+ years of experience
+                  </span>
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "1rem", padding: "1rem" }}
+                  >
+                    bootcamp
+                  </span>
+                </div>
+              </div>
+              <div className="vertical-content" style={{ width: "100%" }}>
+                <h2 className="h2" style={{ marginBottom: "1rem" }}>
+                  desired workplace details
+                </h2>
                 <span
+                  className="emoji-container"
+                  style={{ marginBottom: "1rem", padding: "1rem" }}
+                >
+                  <h4 className="h4">minimum salary: $65,000</h4>
+                </span>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "1rem", padding: "1rem" }}
+                >
+                  <h4 className="h4">maxmimum salary: $80,000</h4>
+                </span>
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "1rem", padding: "1rem" }}
+                >
+                  <h4 className="h4">located: atlanta, ga</h4>
+                </span>
+                <div
+                  className="horizontal-content-small"
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 0,
+                    margin: 0,
+                  }}
+                >
+                  <span
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
@@ -361,30 +364,30 @@ import css from "../../assets/svg/css.svg";
                     remote
                   </span>
                 </div>
-                </div>
-                <a
-                  href="https://calendly.com/learnmutiny/company-final-steps"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{
-                    width: "100%",
-                    alignContent: "center",
-                    justifyContent: "center",
-                    display: "flex",
-                    marginTop: "1rem",
-                  }}
-                >
-                  <span
-                    className="emoji-container"
-                    style={{ marginBottom: "1rem", width: "100%" }}
-                  >
-                    <img src={calen} className="emoji-2" alt="calen" />
-                    Meet with developer
-                  </span>
-                </a>
               </div>
+              <a
+                href="https://calendly.com/learnmutiny/company-final-steps"
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  width: "100%",
+                  alignContent: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                  marginTop: "1rem",
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{ marginBottom: "1rem" }}
+                >
+                  <img src={calen} className="emoji-2" alt="calen" />
+                  Meet with me
+                </span>
+              </a>
             </div>
-            <div
+          </div>
+          <div
             className="vertical-content"
             style={{
               width: "100%",
@@ -393,118 +396,122 @@ import css from "../../assets/svg/css.svg";
               padding: "1rem",
             }}
           >
-            
             <div
               className="vertical-content"
-              style={{ 
+              style={{
                 alignItems: "flex-start",
                 textAlign: "left",
-                marginBottom: "2rem" 
+                marginBottom: "2rem",
               }}
             >
-              <h1
-                className="h1-sub"
-                
+              <h1 className="h1-sub">IT Support Specialist</h1>
+              <h2 className="h2">3 mos</h2>
+
+              <h3
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
               >
-              IT Support Specialist
-            </h1>
-            <h2
-              className="h2"
-            
-            >
-              3 mos
-            </h2>
-            
+                Remote Support Coordination: Responded to support requests from
+                poll-workers at 25+ different locations across Douglasville.
+                Provided remote assistance to troubleshoot issues with election
+                machines and computers running on Linux servers throughout the
+                election process.
+              </h3>
               <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Remote Support Coordination: Responded to support requests from poll-workers at 25+ different locations across Douglasville. Provided remote assistance to troubleshoot issues with election machines and computers running on Linux servers throughout the election process.
-            </h3> 
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Network Integration and Troubleshooting: Linked election
+                machines and computers to cloud networks, ensuring seamless
+                connectivity and troubleshooting any network-related issues.
+                Played a crucial role in maintaining the integrity and
+                functionality of the systems during the election.
+              </h3>
               <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Network Integration and Troubleshooting: Linked election machines and computers to cloud networks, ensuring seamless connectivity and troubleshooting any network-related issues. Played a crucial role in maintaining the integrity and functionality of the systems during the election.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Software Installation and Distribution: Installed election software on over 300 tablets and machines, ensuring proper functionality and adherence to security protocols. Distributed configured devices to polling locations, contributing to the smooth operation of the election process.
-            </h3> 
-          </div> 
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Software Installation and Distribution: Installed election
+                software on over 300 tablets and machines, ensuring proper
+                functionality and adherence to security protocols. Distributed
+                configured devices to polling locations, contributing to the
+                smooth operation of the election process.
+              </h3>
+            </div>
             <div
               className="vertical-content"
-              style={{ 
+              style={{
                 alignItems: "flex-start",
                 textAlign: "left",
-                marginBottom: "2rem" 
+                marginBottom: "2rem",
               }}
             >
-              <h1
-                className="h1-sub"
-                
+              <h1 className="h1-sub">Development Bootcamp</h1>
+              <h2 className="h2">6 mos</h2>
+
+              <h3
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
               >
-              Development Bootcamp
-            </h1>
-            <h2
-              className="h2"
-            
-            >
-              6 mos
-            </h2>
-            
+                Language Mastery: Showcased advanced proficiency in Ruby,
+                serving as the primary language for comprehensive front-end and
+                back-end development tasks. Engaged in a variety of projects to
+                enhance and apply skills in real-world scenarios.
+              </h3>
               <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Language Mastery: Showcased advanced proficiency in Ruby, serving as the primary language for comprehensive front-end and back-end development tasks. Engaged in a variety of projects to enhance and apply skills in real-world scenarios.
-            </h3> 
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Interactive Language Learning Game: Led the development of an
+                immersive Japanese language learning game, catering to users
+                from beginner to advanced proficiency levels. The project
+                involved the utilization of React for dynamic interfaces, CSS
+                and HTML for engaging visuals, and Vite for efficient module
+                bundling.
+              </h3>
               <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Interactive Language Learning Game: Led the development of an immersive Japanese language learning game, catering to users from beginner to advanced proficiency levels. The project involved the utilization of React for dynamic interfaces, CSS and HTML for engaging visuals, and Vite for efficient module bundling.
-            </h3> 
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Global News Aggregator: Engineered a sophisticated web
+                application offering a unique global news aggregation
+                experience. Users can seamlessly follow diverse topics from news
+                outlets worldwide. Technologies employed include Rails for
+                robust backend functionality, CSS and HTML for responsive
+                design, and JavaScript for interactive features. Postgresql was
+                utilized for efficient data management.
+              </h3>
               <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Global News Aggregator: Engineered a sophisticated web application offering a unique global news aggregation experience. Users can seamlessly follow diverse topics from news outlets worldwide. Technologies employed include Rails for robust backend functionality, CSS and HTML for responsive design, and JavaScript for interactive features. Postgresql was utilized for efficient data management.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Jetpack Rental Platform: Conceptualized and implemented an innovative AirBnB parody clone specializing in the rental of personal jetpacks. Leveraged a technology stack encompassing Rails for backend logic, CSS and HTML for an intuitive user interface, JavaScript for dynamic functionality, webpack for efficient module bundling, and Postgresql for robust database management.
-            </h3> 
-          </div>
-              </div>
+                className="h3"
+                style={{
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Jetpack Rental Platform: Conceptualized and implemented an
+                innovative AirBnB parody clone specializing in the rental of
+                personal jetpacks. Leveraged a technology stack encompassing
+                Rails for backend logic, CSS and HTML for an intuitive user
+                interface, JavaScript for dynamic functionality, webpack for
+                efficient module bundling, and Postgresql for robust database
+                management.
+              </h3>
+            </div>
           </div>
         </div>
-        {/* mobile */}
+      </div>
+      {/* mobile */}
       <div className="box-mobile">
         <div className="vertical-content">
           <h1
@@ -514,7 +521,7 @@ import css from "../../assets/svg/css.svg";
               marginBottom: "1rem",
             }}
           >
-          James Barnes
+            James Barnes
           </h1>
           <h3
             className="h3"
@@ -582,6 +589,9 @@ import css from "../../assets/svg/css.svg";
                 <FaVolumeUp />
               </button>
             </div>
+            <span className="emoji-container" style={{ padding: "1rem" }}>
+              play me 😄
+            </span>
             <div
               className="vertical-content"
               style={{
@@ -600,9 +610,13 @@ import css from "../../assets/svg/css.svg";
                 <span
                   className="emoji-container"
                   id="midtier"
-                  style={{ marginBottom: "1rem", padding: "1rem", width: "100%" }}
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    width: "100%",
+                  }}
                 >
-                  base level
+                  base level developer
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -617,8 +631,7 @@ import css from "../../assets/svg/css.svg";
                     margin: 0,
                   }}
                 >
-                
-                    <span
+                  <span
                     className="emoji-container"
                     id="ruby-container"
                     style={{
@@ -630,7 +643,7 @@ import css from "../../assets/svg/css.svg";
                     Ruby
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="react-container"
                     style={{
@@ -642,7 +655,7 @@ import css from "../../assets/svg/css.svg";
                     React
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="mongodb-container"
                     style={{
@@ -654,7 +667,7 @@ import css from "../../assets/svg/css.svg";
                     MongoDB
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="postgres-container"
                     style={{
@@ -666,7 +679,7 @@ import css from "../../assets/svg/css.svg";
                     Postgres
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="vue-container"
                     style={{
@@ -678,7 +691,7 @@ import css from "../../assets/svg/css.svg";
                     Vue
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="python-container"
                     style={{
@@ -690,7 +703,7 @@ import css from "../../assets/svg/css.svg";
                     Python
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="javascript-container"
                     style={{
@@ -702,7 +715,7 @@ import css from "../../assets/svg/css.svg";
                     Javascript
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="html-container"
                     style={{
@@ -714,7 +727,7 @@ import css from "../../assets/svg/css.svg";
                     HTML
                   </span>
 
-                    <span
+                  <span
                     className="emoji-container"
                     id="css-container"
                     style={{
@@ -739,17 +752,17 @@ import css from "../../assets/svg/css.svg";
                     margin: 0,
                   }}
                 >
-                <span
+                  <span
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                  4+ years of experience
+                    4+ years of experience
                   </span>
                   <span
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                  bootcamp
+                    bootcamp
                   </span>
                 </div>
               </div>
@@ -791,13 +804,13 @@ import css from "../../assets/svg/css.svg";
                     margin: 0,
                   }}
                 >
-                <span
-                  className="emoji-container"
-                  style={{ marginBottom: "1rem", padding: "1rem" }}
-                >
-                  full-time
-                </span>
-                <span
+                  <span
+                    className="emoji-container"
+                    style={{ marginBottom: "1rem", padding: "1rem" }}
+                  >
+                    full-time
+                  </span>
+                  <span
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
@@ -817,10 +830,10 @@ import css from "../../assets/svg/css.svg";
                   >
                     <span
                       className="emoji-container"
-                      style={{ marginBottom: "1rem", width: "100%" }}
+                      style={{ marginBottom: "1rem" }}
                     >
                       <img src={calen} className="emoji-2" alt="calen" />
-                      Meet with developer
+                      Meet with me
                     </span>
                   </a>
                 </div>
@@ -834,114 +847,122 @@ import css from "../../assets/svg/css.svg";
                 alignItems: "flex-start",
               }}
             >
-            
-            <div
-              className="vertical-content"
-              style={{ alignItems: "flex-start",
-              textAlign: "left",
-              marginBottom: "2rem" }}
-            >
-              <h1
-                className="h1-sub"
-              
+              <div
+                className="vertical-content"
+                style={{
+                  alignItems: "flex-start",
+                  textAlign: "left",
+                  marginBottom: "2rem",
+                }}
               >
-              IT Support Specialist
-            </h1>
-            <h2
-              className="h2"
-             
-            >
-              3 mos
-            </h2>
-            
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Remote Support Coordination: Responded to support requests from poll-workers at 25+ different locations across Douglasville. Provided remote assistance to troubleshoot issues with election machines and computers running on Linux servers throughout the election process.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Network Integration and Troubleshooting: Linked election machines and computers to cloud networks, ensuring seamless connectivity and troubleshooting any network-related issues. Played a crucial role in maintaining the integrity and functionality of the systems during the election.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Software Installation and Distribution: Installed election software on over 300 tablets and machines, ensuring proper functionality and adherence to security protocols. Distributed configured devices to polling locations, contributing to the smooth operation of the election process.
-            </h3>
-          </div> 
-            <div
-              className="vertical-content"
-              style={{ alignItems: "flex-start",
-              textAlign: "left",
-              marginBottom: "2rem" }}
-            >
-              <h1
-                className="h1-sub"
-              
-              >
-              Development Bootcamp
-            </h1>
-            <h2
-              className="h2"
-             
-            >
-              6 mos
-            </h2>
-            
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Language Mastery: Showcased advanced proficiency in Ruby, serving as the primary language for comprehensive front-end and back-end development tasks. Engaged in a variety of projects to enhance and apply skills in real-world scenarios.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Interactive Language Learning Game: Led the development of an immersive Japanese language learning game, catering to users from beginner to advanced proficiency levels. The project involved the utilization of React for dynamic interfaces, CSS and HTML for engaging visuals, and Vite for efficient module bundling.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Global News Aggregator: Engineered a sophisticated web application offering a unique global news aggregation experience. Users can seamlessly follow diverse topics from news outlets worldwide. Technologies employed include Rails for robust backend functionality, CSS and HTML for responsive design, and JavaScript for interactive features. Postgresql was utilized for efficient data management.
-            </h3> 
-              <h3
-              className="h3"
-              style={{
-                marginBottom: "0.5rem",
-               
-              }}
-            >
-              Jetpack Rental Platform: Conceptualized and implemented an innovative AirBnB parody clone specializing in the rental of personal jetpacks. Leveraged a technology stack encompassing Rails for backend logic, CSS and HTML for an intuitive user interface, JavaScript for dynamic functionality, webpack for efficient module bundling, and Postgresql for robust database management.
-            </h3>
-          </div>
+                <h1 className="h1-sub">IT Support Specialist</h1>
+                <h2 className="h2">3 mos</h2>
+
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Remote Support Coordination: Responded to support requests
+                  from poll-workers at 25+ different locations across
+                  Douglasville. Provided remote assistance to troubleshoot
+                  issues with election machines and computers running on Linux
+                  servers throughout the election process.
+                </h3>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Network Integration and Troubleshooting: Linked election
+                  machines and computers to cloud networks, ensuring seamless
+                  connectivity and troubleshooting any network-related issues.
+                  Played a crucial role in maintaining the integrity and
+                  functionality of the systems during the election.
+                </h3>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Software Installation and Distribution: Installed election
+                  software on over 300 tablets and machines, ensuring proper
+                  functionality and adherence to security protocols. Distributed
+                  configured devices to polling locations, contributing to the
+                  smooth operation of the election process.
+                </h3>
               </div>
+              <div
+                className="vertical-content"
+                style={{
+                  alignItems: "flex-start",
+                  textAlign: "left",
+                  marginBottom: "2rem",
+                }}
+              >
+                <h1 className="h1-sub">Development Bootcamp</h1>
+                <h2 className="h2">6 mos</h2>
+
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Language Mastery: Showcased advanced proficiency in Ruby,
+                  serving as the primary language for comprehensive front-end
+                  and back-end development tasks. Engaged in a variety of
+                  projects to enhance and apply skills in real-world scenarios.
+                </h3>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Interactive Language Learning Game: Led the development of an
+                  immersive Japanese language learning game, catering to users
+                  from beginner to advanced proficiency levels. The project
+                  involved the utilization of React for dynamic interfaces, CSS
+                  and HTML for engaging visuals, and Vite for efficient module
+                  bundling.
+                </h3>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Global News Aggregator: Engineered a sophisticated web
+                  application offering a unique global news aggregation
+                  experience. Users can seamlessly follow diverse topics from
+                  news outlets worldwide. Technologies employed include Rails
+                  for robust backend functionality, CSS and HTML for responsive
+                  design, and JavaScript for interactive features. Postgresql
+                  was utilized for efficient data management.
+                </h3>
+                <h3
+                  className="h3"
+                  style={{
+                    marginBottom: "0.5rem",
+                  }}
+                >
+                  Jetpack Rental Platform: Conceptualized and implemented an
+                  innovative AirBnB parody clone specializing in the rental of
+                  personal jetpacks. Leveraged a technology stack encompassing
+                  Rails for backend logic, CSS and HTML for an intuitive user
+                  interface, JavaScript for dynamic functionality, webpack for
+                  efficient module bundling, and Postgresql for robust database
+                  management.
+                </h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-      </div>
-    )}
- 
+    </div>
+  );
+}

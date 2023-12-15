@@ -142,6 +142,9 @@ export default function Wilson() {
                   <FaVolumeUp />
                 </button>
               </div>
+              <span className="emoji-container" style={{ padding: "1rem" }}>
+                play me 😄
+              </span>
             </div>
             <div
               className="vertical-content"
@@ -168,7 +171,7 @@ export default function Wilson() {
                     width: "100%",
                   }}
                 >
-                  senior
+                  senior developer
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -441,10 +444,10 @@ export default function Wilson() {
               >
                 <span
                   className="emoji-container"
-                  style={{ marginBottom: "1rem", width: "100%" }}
+                  style={{ marginBottom: "1rem" }}
                 >
                   <img src={calen} className="emoji-2" alt="calen" />
-                  Meet with developer
+                  Meet with me
                 </span>
               </a>
             </div>
@@ -708,6 +711,9 @@ export default function Wilson() {
                 <FaVolumeUp />
               </button>
             </div>
+            <span className="emoji-container" style={{ padding: "1rem" }}>
+              play me 😄
+            </span>
             <div
               className="vertical-content"
               style={{
@@ -732,7 +738,7 @@ export default function Wilson() {
                     width: "100%",
                   }}
                 >
-                  senior
+                  senior developer
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -1006,10 +1012,10 @@ export default function Wilson() {
                   >
                     <span
                       className="emoji-container"
-                      style={{ marginBottom: "1rem", width: "100%" }}
+                      style={{ marginBottom: "1rem" }}
                     >
                       <img src={calen} className="emoji-2" alt="calen" />
-                      Meet with developer
+                      Meet with me
                     </span>
                   </a>
                 </div>
