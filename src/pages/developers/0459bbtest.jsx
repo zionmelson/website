@@ -140,6 +140,9 @@ export default function Richards() {
                   <FaVolumeUp />
                 </button>
               </div>
+              <span className="emoji-container" style={{ padding: "1rem" }}>
+                play me 😄
+              </span>
             </div>
             <div
               className="vertical-content"
@@ -159,14 +162,14 @@ export default function Richards() {
                 </h2>
                 <span
                   className="emoji-container"
-                  id="senior"
+                  id="csuite"
                   style={{
                     marginBottom: "1rem",
                     padding: "1rem",
                     width: "100%",
                   }}
                 >
-                  senior
+                  c-suite developer
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -410,10 +413,10 @@ export default function Richards() {
               >
                 <span
                   className="emoji-container"
-                  style={{ marginBottom: "1rem", width: "100%" }}
+                  style={{ marginBottom: "1rem" }}
                 >
                   <img src={calen} className="emoji-2" alt="calen" />
-                  Meet with developer
+                  Meet with me
                 </span>
               </a>
             </div>
@@ -671,6 +674,9 @@ export default function Richards() {
                 <FaVolumeUp />
               </button>
             </div>
+            <span className="emoji-container" style={{ padding: "1rem" }}>
+              play me 😄
+            </span>
             <div
               className="vertical-content"
               style={{
@@ -688,14 +694,14 @@ export default function Richards() {
                 </h2>
                 <span
                   className="emoji-container"
-                  id="senior"
+                  id="csuite"
                   style={{
                     marginBottom: "1rem",
                     padding: "1rem",
                     width: "100%",
                   }}
                 >
-                  senior
+                  c-suite developer
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -940,10 +946,10 @@ export default function Richards() {
                   >
                     <span
                       className="emoji-container"
-                      style={{ marginBottom: "1rem", width: "100%" }}
+                      style={{ marginBottom: "1rem" }}
                     >
                       <img src={calen} className="emoji-2" alt="calen" />
-                      Meet with developer
+                      Meet with me
                     </span>
                   </a>
                 </div>
