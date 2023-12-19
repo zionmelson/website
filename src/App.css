@@ -706,11 +706,15 @@
 #p {
   margin: 0;
   line-height: 0;
+  height: 0;
+  width: auto;
 }
 
 #ph {
   margin: 0;
   line-height: 0;
+  height: 0;
+  width: auto;
 }
 
 .chars {

@@ -108,10 +108,10 @@ function Home() {
         <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
             we source senior
-            <span>
+            <div>
               <div
                 className="text-wrapper"
-                style={{ marginTop: "1.5rem", marginBottom: "1rem" }}
+                style={{ marginTop: "1.1rem", marginBottom: "1.3rem" }}
               >
                 <p id="p">Go-Lang</p>
                 <p id="p">Python</p>
@@ -133,8 +133,14 @@ function Home() {
                 <p id="p">C#</p>
                 <p id="p">Kotlin</p>
                 <p id="p">Java</p>
+                <p id="p">Flutter</p>
+                <p id="p">React</p>
+                <p id="p">Vue</p>
+                <p id="p">React Native</p>
+                <p id="p">Swift</p>
+                <p id="p">C</p>
               </div>
-            </span>
+            </div>
             developers for startups
           </h1>
           <h2 className="h2">
@@ -199,33 +205,37 @@ function Home() {
         <div className="vertical-content" style={{ marginTop: "2rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             we source senior
-            <span>
-              <div
-                className="text-wrapper"
-                style={{ marginTop: "1rem", marginBottom: "1rem" }}
-              >
-                <p id="ph">Go-Lang</p>
-                <p id="ph">Python</p>
-                <p id="ph">Rust</p>
-                <p id="ph">Javascript</p>
-                <p id="ph">C++</p>
-                <p id="ph">AWS</p>
-                <p id="ph">Docker</p>
-                <p id="ph">Solidity</p>
-                <p id="ph">Kubernetes</p>
-                <p id="ph">Node.js</p>
-                <p id="ph">GCP</p>
-                <p id="ph">Azure Cloud</p>
-                <p id="ph">.NET</p>
-                <p id="ph">Django</p>
-                <p id="ph">Postgres</p>
-                <p id="ph">MySQL</p>
-                <p id="ph">MongoDB</p>
-                <p id="ph">C#</p>
-                <p id="ph">Kotlin</p>
-                <p id="ph">Java</p>
-              </div>
-            </span>
+            <div
+              className="text-wrapper"
+              style={{ marginTop: "1rem", marginBottom: "1rem" }}
+            >
+              <p id="ph">Go-Lang</p>
+              <p id="ph">Python</p>
+              <p id="ph">Rust</p>
+              <p id="ph">Javascript</p>
+              <p id="ph">C++</p>
+              <p id="ph">AWS</p>
+              <p id="ph">Docker</p>
+              <p id="ph">Solidity</p>
+              <p id="ph">Kubernetes</p>
+              <p id="ph">Node.js</p>
+              <p id="ph">GCP</p>
+              <p id="ph">Azure Cloud</p>
+              <p id="ph">.NET</p>
+              <p id="ph">Django</p>
+              <p id="ph">Postgres</p>
+              <p id="ph">MySQL</p>
+              <p id="ph">MongoDB</p>
+              <p id="ph">C#</p>
+              <p id="ph">Kotlin</p>
+              <p id="ph">Java</p>
+              <p id="ph">Flutter</p>
+              <p id="ph">React</p>
+              <p id="ph">Vue</p>
+              <p id="ph">React Native</p>
+              <p id="ph">Swift</p>
+              <p id="ph">C</p>
+            </div>
             developers for startups
           </h1>
           <h2 className="h2">
