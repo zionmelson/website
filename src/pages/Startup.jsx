@@ -118,52 +118,50 @@ function Startup() {
             }}
           >
             find a senior
-            <span>
-              <div
-                className="text-wrapper"
-                style={{
-                  marginTop: "1.5rem",
-                  marginBottom: "1rem",
-                }}
-              >
-                <p className="h1" id="p">
-                  full-stack developer
-                </p>
-                <p className="h1" id="p">
-                  front-end developer
-                </p>
-                <p className="h1" id="p">
-                  back-end developer
-                </p>
-                <p className="h1" id="p">
-                  machine learning engineer
-                </p>
-                <p className="h1" id="p">
-                  blockchain architect
-                </p>
-                <p className="h1" id="p">
-                  cloud engineer
-                </p>
-                <p className="h1" id="p">
-                  devops engineer
-                </p>
-                <p className="h1" id="p">
-                  mobile developer
-                </p>
-                <p className="h1" id="p">
-                  software engineer
-                </p>
-                <p className="h1" id="p">
-                  data scientist
-                </p>
-                <p className="h1" id="p">
-                  software architect
-                </p>
-                <p className="h1" id="p">
-                  database administrator
-                </p>
-              </div>
-            </span>{" "}
+            <div
+              className="text-wrapper"
+              style={{
+                marginTop: "1rem",
+                marginBottom: "1rem",
+              }}
+            >
+              <p className="h1" id="p">
+                full-stack developer
+              </p>
+              <p className="h1" id="p">
+                front-end developer
+              </p>
+              <p className="h1" id="p">
+                back-end developer
+              </p>
+              <p className="h1" id="p">
+                machine learning engineer
+              </p>
+              <p className="h1" id="p">
+                blockchain architect
+              </p>
+              <p className="h1" id="p">
+                cloud engineer
+              </p>
+              <p className="h1" id="p">
+                devops engineer
+              </p>
+              <p className="h1" id="p">
+                mobile developer
+              </p>
+              <p className="h1" id="p">
+                software engineer
+              </p>
+              <p className="h1" id="p">
+                data scientist
+              </p>
+              <p className="h1" id="p">
+                software architect
+              </p>
+              <p className="h1" id="p">
+                database administrator
+              </p>
+            </div>
             for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
@@ -213,52 +211,50 @@ function Startup() {
             }}
           >
             find a senior
-            <span>
-              <div
-                className="text-wrapper"
-                style={{
-                  marginTop: "1rem",
-                  marginBottom: "1rem",
-                }}
-              >
-                <p className="h1" id="ph">
-                  full-stack developer
-                </p>
-                <p className="h1" id="ph">
-                  front-end developer
-                </p>
-                <p className="h1" id="ph">
-                  back-end developer
-                </p>
-                <p className="h1" id="ph">
-                  machine learning dev
-                </p>
-                <p className="h1" id="ph">
-                  blockchain architect
-                </p>
-                <p className="h1" id="ph">
-                  cloud engineer
-                </p>
-                <p className="h1" id="ph">
-                  devops engineer
-                </p>
-                <p className="h1" id="ph">
-                  mobile developer
-                </p>
-                <p className="h1" id="ph">
-                  software engineer
-                </p>
-                <p className="h1" id="ph">
-                  data scientist
-                </p>
-                <p className="h1" id="ph">
-                  software architect
-                </p>
-                <p className="h1" id="ph">
-                  database admin
-                </p>
-              </div>
-            </span>{" "}
+            <div
+              className="text-wrapper"
+              style={{
+                marginTop: "1rem",
+                marginBottom: "1rem",
+              }}
+            >
+              <p className="h1" id="ph">
+                full-stack developer
+              </p>
+              <p className="h1" id="ph">
+                front-end developer
+              </p>
+              <p className="h1" id="ph">
+                back-end developer
+              </p>
+              <p className="h1" id="ph">
+                machine learning dev
+              </p>
+              <p className="h1" id="ph">
+                blockchain architect
+              </p>
+              <p className="h1" id="ph">
+                cloud engineer
+              </p>
+              <p className="h1" id="ph">
+                devops engineer
+              </p>
+              <p className="h1" id="ph">
+                mobile developer
+              </p>
+              <p className="h1" id="ph">
+                software engineer
+              </p>
+              <p className="h1" id="ph">
+                data scientist
+              </p>
+              <p className="h1" id="ph">
+                software architect
+              </p>
+              <p className="h1" id="ph">
+                database admin
+              </p>
+            </div>
             for your startup
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
