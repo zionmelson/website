@@ -400,29 +400,9 @@ function Startup() {
             learnmutiny will refund a pro-rated portion of the fee paid if
             placement fails within the first 60 days
           </h3>
-          <h2 className="h2">trusted by</h2>
-          <div className="partners" style={{ marginBottom: "1rem" }}>
-            <a
-              href="https://goodienation.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={goodie} className="partner-logo" alt="goodie" />
-            </a>
-            <a
-              href="https://www.capitalizevc.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={capitalize} className="partner-logo" alt="capitalize" />
-            </a>
-            <a href="https://circadian.vc/" target="_blank" rel="noreferrer">
-              <img src={circadian} className="partner-logo" alt="circadian" />
-            </a>
-          </div>
           <h2
             className="h2"
-            style={{ marginBottom: "1rem", marginTop: "2rem" }}
+            style={{ marginBottom: "1rem", marginTop: "1rem" }}
           >
             meet with our team to start the source
           </h2>
