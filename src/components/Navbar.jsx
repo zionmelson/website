@@ -52,6 +52,11 @@ export default function Navbar() {
                   <h4 className="h4">contact</h4>
                 </div>
               </a>
+              <a href="/developers">
+                <div className="link-container">
+                  <h4 className="h4">developers</h4>
+                </div>
+              </a>
             </div>
           </div>
         )}
@@ -90,13 +95,16 @@ export default function Navbar() {
               <h4 className="h4">startups</h4>
             </a>
           </li>
-          {/* <li className="nav-text">
-          <a href="/contact">contact</a>
-        </li> */}
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             {" "}
             <a href="/contact">
               <h4 className="h4">contact</h4>
+            </a>
+          </li>
+          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
+            {" "}
+            <a href="/developers">
+              <h4 className="h4">developers</h4>
             </a>
           </li>
         </ul>

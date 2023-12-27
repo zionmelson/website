@@ -534,6 +534,23 @@ export default function Grimm() {
               </h3>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
       </div>
       {/* mobile */}
@@ -1014,6 +1031,23 @@ export default function Grimm() {
             </div>
           </div>
         </div>
+        <a
+          href="https://calendly.com/learnmutiny/company-final-steps"
+          target="_blank"
+          rel="noreferrer"
+          style={{
+            width: "100%",
+            alignContent: "center",
+            justifyContent: "center",
+            display: "flex",
+            marginTop: "1rem",
+          }}
+        >
+          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+            <img src={calen} className="emoji-2" alt="calen" />
+            Meet with me
+          </span>
+        </a>
       </div>
     </div>
   );

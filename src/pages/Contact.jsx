@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="main">
       {/* support desktop */}
       <div className="support-box">
-        <div className="vertical-content">
+        <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             getting connected
           </h1>

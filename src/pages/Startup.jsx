@@ -11,10 +11,6 @@ import {
   FaNode,
 } from "react-icons/fa";
 
-import goodie from "../assets/svg/goodie.svg";
-import capitalize from "../assets/svg/capitalize.svg";
-import circadian from "../assets/svg/circadian.svg";
-
 import startups from "../assets/svg/startups.svg";
 import calen from "../assets/svg/calen.svg";
 
