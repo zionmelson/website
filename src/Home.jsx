@@ -202,7 +202,7 @@ function Home() {
       </div>
       {/* intro phone */}
       <div className="box-mobile">
-        <div className="vertical-content" style={{ marginTop: "2rem" }}>
+        <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             we source senior
             <div

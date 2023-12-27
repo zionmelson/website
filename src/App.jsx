@@ -2,12 +2,14 @@ import { useState, createContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Startup from "./pages/Startup";
+import Developers from "./pages/Developers";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Error from "./pages/Error";
 import Privacy from "./pages/Privacy";
 
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Hotjar from "@hotjar/browser";
 
 import Navbar from "./components/Navbar";
@@ -92,6 +94,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/developers" element={<Developers />} />
 
             <Route path="/developers/62328c" element={<Liang />} />
             <Route path="/developers/8a6ca5" element={<Lucas />} />
@@ -118,6 +121,7 @@ function App() {
         </div>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </ThemeContext.Provider>
     </>
   );
