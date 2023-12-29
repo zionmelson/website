@@ -41,12 +41,11 @@
 .scrolled {
   background-color: rgba(19, 19, 19, 0.9);
   height: 4rem;
-  color: #fff;
   align-items: flex-end;
 }
 
 #light .scrolled {
-  background-color: rgba(217, 217, 217, 0.9);
+  background-color: #5dc4ff2a;
   height: 4rem;
   align-items: flex-end;
 }
@@ -82,7 +81,11 @@
 }
 
 .nav-text:hover {
-  color: #686868;
+  color: #898989;
+}
+
+#light .nav-text:hover {
+  color: #3a3a3a;
 }
 
 .nav-startup-text:hover {
@@ -90,7 +93,7 @@
 }
 
 #light .nav-startup-text:hover {
-  color: #ff4405;
+  color: #099400;
 }
 
 .nav-support-text:hover {
@@ -143,7 +146,7 @@
 }
 
 #light .startup-logo {
-  border: 0.2rem solid #686868;
+  border: 0.2rem solid #099400;
 }
 
 .startup-logo:hover {
@@ -151,29 +154,32 @@
 }
 
 #light .startup-logo:hover {
-  background: linear-gradient(20deg, #111111, #2d4069);
+  background: linear-gradient(20deg, #111111, #066100);
 }
 
-.support-logo {
-  width: 12rem;
-  height: 4rem;
-  background: linear-gradient(20deg, #111111, #302f31);
-  border-radius: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  padding: 1rem;
-  border: 0.2rem solid #ffa3d4;
-  transition: 0.3s linear;
-}
-
-.support-logo:hover {
-  background: linear-gradient(20deg, #111111, #664657);
+.og-logo {
+  width: 14rem;
+  transition: 1s linear;
 }
 
 .full-logo {
   width: 14rem;
+  transition: 1s linear;
+}
+
+.light-logo {
+  display: none;
+  transition: 1s linear;
+}
+
+#light .full-logo {
+  display: none;
+  transition: 1s linear;
+}
+
+#light .light-logo {
+  display: block;
+  transition: 1s linear;
 }
 
 .logo-scrolled {
@@ -211,9 +217,9 @@
   }
 
   #light .scrolled {
-    background-color: rgba(217, 217, 217, 0.9);
+    background-color: #5dc4ff2a;
     height: 4rem;
-    color: #fff;
+    color: #000;
     align-items: center;
   }
 
@@ -276,7 +282,17 @@
   }
 
   #light .startup-logo {
-    background: linear-gradient(20deg, #111111, #2d4069);
+    background: linear-gradient(20deg, #111111, #066100);
+  }
+
+  .light-logo {
+    display: none;
+    transition: 1s linear;
+  }
+
+  #light .light-logo {
+    display: none;
+    transition: 1s linear;
   }
 
   .support-logo {
@@ -291,6 +307,10 @@
   }
 
   .full-logo {
+    display: none;
+  }
+
+  .og-logo {
     display: none;
   }
 

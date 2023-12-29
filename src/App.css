@@ -20,14 +20,13 @@
   background: linear-gradient(20deg, #111111, #302f31);
   color: #ffffff;
   transition: all 0.5s linear;
-
   #light-logo {
     display: none;
   }
 }
 
 .App-light {
-  background: linear-gradient(20deg, #ffffff, #9f9da0);
+  background: linear-gradient(20deg, #ffffff, #5dc4ff);
   color: #302f31;
   transition: all 0.5s linear;
   min-height: 100vh;
@@ -83,12 +82,29 @@
   gap: 3rem;
 }
 
+.dev-info {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #111111, #302f31);
+}
+
+#light .dev-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(235deg, #b8e5ff, #5dc4ff);
+}
+
 .horizontal-content-small {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 
 .vertical-content {
@@ -97,6 +113,26 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.dev-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+}
+
+#light .dev-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #302f31;
+  border-radius: 1rem;
 }
 
 .headshot-content {
@@ -113,9 +149,19 @@
   width: 20rem;
 }
 
+.partner-logo {
+  width: 15rem;
+}
+
 .emoji {
   width: 2rem;
   margin: 0;
+  padding: 0;
+}
+
+.emoji-2 {
+  width: 1.5rem;
+  margin-right: 0.5rem;
   padding: 0;
 }
 
@@ -126,11 +172,26 @@
   flex-direction: row;
   background-color: #111111;
   padding: 0.5rem;
-  padding-left: 0.1rem;
   border-radius: 60rem;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease-in;
+  padding: 1rem;
+}
+
+#light .emoji-container {
+  height: 2rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #302f31;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 60rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+  padding: 1rem;
 }
 
 .emoji-container:hover {
@@ -139,24 +200,10 @@
   cursor: pointer;
 }
 
-#light .emoji-container {
-  height: 2rem;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: row;
-  background-color: #5f5f5f;
-  color: #fff;
-  padding: 0.5rem;
-  padding-left: 0.1rem;
-  border-radius: 60rem;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease-in;
-}
-
 #light .emoji-container:hover {
   background-color: #e0e0e0;
-  color: #111111;
+  color: #302f31;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -202,7 +249,7 @@
 }
 
 #light #startup-box {
-  border: 2px solid #ff4405;
+  border: 2px solid #099400;
 }
 
 .span {
@@ -211,7 +258,7 @@
 }
 
 #light .span {
-  color: #ff4405;
+  color: #099400;
   font-family: Inter, sans-serif;
 }
 
@@ -227,7 +274,6 @@
 .h1 {
   font-size: 3rem;
   font-family: Inter, sans-serif;
-  width: 80%;
 }
 
 .h1-sub {
@@ -243,7 +289,6 @@
 
 .h3 {
   font-size: 1rem;
-  width: 55%;
 }
 
 .h4 {
@@ -262,11 +307,46 @@
   align-items: center;
 }
 
+.partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.partnersL {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#light .partners {
+  display: none;
+}
+
+#light .partnersL {
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon {
   width: 3.5rem;
   height: 3.5rem;
   margin: 1rem;
   transition: all 0.2s linear;
+}
+
+.icon-active {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1rem;
+  transition: all 0.2s linear;
+  scale: 1.1;
 }
 
 .icon:hover {
@@ -277,68 +357,413 @@
   background: #ffa3d4;
 }
 
+#light #support:hover {
+  background: #ffa3d4;
+  color: #302f31;
+}
+
+#ai-container:hover {
+  background-color: #1bb5bd;
+  color: #fff;
+}
+
+#light #ai-container:hover {
+  background-color: #1bb5bd;
+  color: #fff;
+}
+
 #android:hover {
   color: #32de84;
+}
+
+#android-active {
+  color: #32de84;
+}
+
+#android-container:hover {
+  background-color: #32de84;
+  color: #fff;
+}
+
+#light #andriod-container:hover {
+  background-color: #32de84;
+  color: #fff;
 }
 
 #apple:hover {
   color: #b3b3b3;
 }
 
-#react:hover {
-  color: #61dafb;
+#apple-active {
+  color: #b3b3b3;
 }
 
-#python:hover {
-  color: #3e7bac;
-}
-
-#rust:hover {
-  color: #e15b28;
-}
-
-#js:hover {
-  color: #eddd67;
-}
-
-#angular:hover {
-  color: #c3002f;
-}
-
-#docker:hover {
-  color: #3262e5;
-}
-
-#solidity:hover {
-  color: #464972;
-}
-
-#laravel:hover {
-  color: #ff2d20;
-}
-
-#npm:hover {
-  color: #bc423b;
-}
-
-#node:hover {
-  color: #669c4f;
+#apple-container:hover {
+  background-color: #b3b3b3;
+  color: #fff;
 }
 
 #light #apple:hover {
   color: #ffffff;
 }
 
+#light #apple-container:hover {
+  background-color: #b3b3b3;
+  color: #302f31;
+}
+
+#react:hover {
+  color: #61dafb;
+}
+
+#react-active {
+  color: #61dafb;
+}
+
+#react-container:hover {
+  background-color: #61dafb;
+  color: #fff;
+}
+
+#light #react-container:hover {
+  background-color: #61dafb;
+  color: #fff;
+}
+
+#python:hover {
+  color: #3e7bac;
+}
+
+#python-active {
+  color: #3e7bac;
+}
+
+#python-container:hover {
+  background-color: #3e7bac;
+  color: #fff;
+}
+
 #light #python:hover {
   color: #ffd641;
+}
+
+#light #python-active {
+  color: #ffd641;
+}
+
+#light #python-container:hover {
+  background-color: #ffd641;
+  color: #fff;
+}
+
+#rust:hover {
+  color: #e15b28;
+}
+
+#rust-active {
+  color: #e15b28;
+}
+
+#rust-container:hover {
+  background-color: #e15b28;
+  color: #fff;
+}
+
+#light #rust-container:hover {
+  background-color: #e15b28;
+  color: #fff;
+}
+
+#mysql:hover {
+  color: #00638e;
+}
+
+#mysql-active {
+  color: #00638e;
+}
+
+#mysql-container:hover {
+  background-color: #00638e;
+  color: #fff;
+}
+
+#light #mysql:hover {
+  color: #00638e;
+}
+
+#light #mysql-container:hover {
+  background-color: #00638e;
+  color: #fff;
+}
+
+#js:hover {
+  color: #f0dc4e;
+}
+
+#js-active {
+  color: #f0dc4e;
+}
+
+#javascript-container:hover {
+  background-color: #f0dc4e;
+  color: #fff;
+}
+
+#light #js:hover {
+  color: #f0dc4e;
+}
+
+#light #javascript-container:hover {
+  background-color: #f0dc4e;
+  color: #fff;
+}
+
+#ts:hover {
+  color: #007cd2;
+}
+
+#ts-active {
+  color: #007cd2;
+}
+
+#typescript-container:hover {
+  background-color: #007cd2;
+  color: #fff;
+}
+
+#light #ts:hover {
+  color: #007cd2;
+}
+
+#light #typescript-container:hover {
+  background-color: #007cd2;
+  color: #fff;
+}
+
+#graphql:hover {
+  color: #fa0daf;
+}
+
+#graphql-active {
+  color: #fa0daf;
+}
+
+#graphql-container:hover {
+  background-color: #fa0daf;
+  color: #fff;
+}
+
+#light #graphql:hover {
+  color: #fa0daf;
+}
+
+#light #graphql-container:hover {
+  background-color: #fa0daf;
+  color: #fff;
+}
+
+#angular:hover {
+  color: #c3002f;
+}
+
+#angular-active {
+  color: #c3002f;
+}
+
+#angular-container:hover {
+  background-color: #c3002f;
+  color: #fff;
 }
 
 #light #angular:hover {
   color: #dd0031;
 }
 
+#light #angular-container:hover {
+  background-color: #c3002f;
+  color: #fff;
+}
+
+#docker:hover {
+  color: #3262e5;
+}
+
+#docker-active {
+  color: #3262e5;
+}
+
+#docker-container:hover {
+  background-color: #3262e5;
+  color: #fff;
+}
+
+#light #docker-container:hover {
+  background-color: #3262e5;
+  color: #fff;
+}
+
+#solidity:hover {
+  color: #464972;
+}
+
+#solidity-active {
+  color: #464972;
+}
+
+#solidity-container:hover {
+  background-color: #464972;
+  color: #fff;
+}
+
 #light #solidity:hover {
   color: #63668d;
+}
+
+#light #solidity-container:hover {
+  background-color: #464972;
+  color: #fff;
+}
+
+#vue:hover {
+  color: #00bb7f;
+}
+
+#vue-active {
+  color: #00bb7f;
+}
+
+#light #vue:hover {
+  color: #00bb7f;
+}
+
+#vue-container:hover {
+  background-color: #00bb7f;
+  color: #fff;
+}
+
+#light #vue-container:hover {
+  background-color: #00bb7f;
+  color: #fff;
+}
+
+#flutter:hover {
+  color: #00c8fd;
+}
+
+#flutter-active {
+  color: #00c8fd;
+}
+
+#light #flutter:hover {
+  color: #00c8fd;
+}
+
+#flutter-container:hover {
+  background-color: #00c8fd;
+  color: #fff;
+}
+
+#light #flutter-container:hover {
+  background-color: #00c8fd;
+  color: #fff;
+}
+
+#laravel:hover {
+  color: #ff2d20;
+}
+
+#laravel-active {
+  color: #ff2d20;
+}
+
+#laravel-container:hover {
+  background-color: #ff2d20;
+  color: #fff;
+}
+
+#light #laravel-container:hover {
+  background-color: #ff2d20;
+  color: #fff;
+}
+
+#npm:hover {
+  color: #bc423b;
+}
+
+#npm-active {
+  color: #bc423b;
+}
+
+#npm-container:hover {
+  background-color: #bc423b;
+  color: #fff;
+}
+
+#light #npm-container:hover {
+  background-color: #bc423b;
+  color: #fff;
+}
+
+#node:hover {
+  color: #669c4f;
+}
+
+#node-active {
+  color: #669c4f;
+}
+
+#node-container:hover {
+  background-color: #669c4f;
+  color: #fff;
+}
+
+#light #node-container:hover {
+  background-color: #669c4f;
+  color: #fff;
+}
+
+#dotnet:hover {
+  color: #5729dd;
+}
+
+#dotnet-active {
+  color: #5729dd;
+}
+
+#light #dotnet:hover {
+  color: #5729dd;
+}
+
+#dotnet-container:hover {
+  background-color: #5729dd;
+  color: #fff;
+}
+
+#light #dotnet-container:hover {
+  background-color: #5729dd;
+  color: #fff;
+}
+
+#go:hover {
+  color: #25d9e3;
+}
+
+#go-active {
+  color: #25d9e3;
+}
+
+#go-container:hover {
+  background-color: #25d9e3;
+  color: #fff;
+}
+
+#light #go:hover {
+  color: #25d9e3;
+}
+
+#light #go-container:hover {
+  background-color: #25d9e3;
+  color: #fff;
 }
 
 .theme-button {
@@ -350,7 +775,7 @@
   justify-content: center;
   margin-top: 10rem;
   margin-left: 10rem;
-  background-color: #272727;
+  background-color: #e0e0e0;
   padding: 0.5rem;
   z-index: 0;
 }
@@ -363,7 +788,7 @@
   justify-content: center;
   margin-top: 10rem;
   margin-left: 10rem;
-  background-color: #c6c6c6;
+  background-color: #302f31;
   padding: 0.5rem;
 }
 
@@ -376,6 +801,116 @@
   &:nth-of-type(5) {
     color: #5dc4ff;
   }
+}
+
+#csuite:hover {
+  background-color: #1e4d68;
+  color: #ffffff;
+}
+
+#light #csuite:hover {
+  background-color: #1e4d68;
+  color: #ffffff;
+}
+
+#senior:hover {
+  background-color: #681e1e;
+  color: #ffffff;
+}
+
+#light #senior:hover {
+  background-color: #681e1e;
+  color: #ffffff;
+}
+
+#midtier:hover {
+  background-color: #f4ff5d6f;
+  color: #ffffff;
+}
+
+#light #midtier:hover {
+  background-color: #f4ff5daf;
+  color: #302f31;
+}
+
+#junior:hover {
+  background-color: #1e6827;
+  color: #ffffff;
+}
+
+#light #junior:hover {
+  background-color: #1e6827;
+  color: #ffffff;
+}
+
+#star-container:hover {
+  background-color: #f4ff5d6f;
+  color: #ffffff;
+}
+
+#light #star-container:hover {
+  background-color: #f4ff5daf;
+  color: #302f31;
+}
+
+#video {
+  border-radius: 1rem;
+}
+
+#p {
+  margin: 0;
+  line-height: 0;
+  height: 0;
+  width: auto;
+}
+
+#ph {
+  margin: 0;
+  line-height: 0;
+  height: 0;
+  width: auto;
+}
+
+.chars {
+  font-weight: 900;
+  font-size: 3rem;
+  font-family: Inter, sans-serif;
+  color: #5dc4ff;
+}
+
+.select {
+  width: 95%;
+  padding: 0.2rem;
+  border: "1px";
+  border-radius: 0.5rem;
+  background: #302f31;
+}
+
+#light .select {
+  width: 95%;
+  padding: 0.2rem;
+  border: "1px";
+  border-radius: 0.5rem;
+  background: #302f31;
+}
+
+#light .chars {
+  font-weight: 900;
+  font-size: 3rem;
+  font-family: Inter, sans-serif;
+  color: #099400;
+}
+
+.hide {
+  display: none;
+}
+
+#light .hide {
+  display: none;
+}
+
+.mobile {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -419,6 +954,18 @@
   .h1 {
     font-size: 1.8rem;
     width: 95%;
+  }
+
+  .chars {
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-family: Inter, sans-serif;
+  }
+
+  #light .chars {
+    font-weight: 900;
+    font-size: 1.8rem;
+    font-family: Inter, sans-serif;
   }
 
   .h2 {
@@ -478,7 +1025,7 @@
   .emoji-container {
     min-width: 6rem;
     height: 2rem;
-    background-color: #9696965a;
+    background-color: #000;
     padding: 0.3;
     align-items: center;
     justify-content: center;
@@ -491,6 +1038,26 @@
 
   .and {
     display: none;
+  }
+
+  #video {
+    border-radius: 0.5rem;
+  }
+
+  .partner-logo {
+    width: 6rem;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .select {
+    color: #fff;
   }
 }
 
@@ -566,7 +1133,7 @@
   .emoji-container {
     width: 12rem;
     height: 2.5rem;
-    background-color: #9696965a;
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -637,7 +1204,11 @@
     justify-content: center;
     margin-top: 10rem;
     margin-left: 12rem;
-    background-color: #c6c6c6;
+    background-color: #302f31;
     padding: 0.5rem;
+  }
+
+  #weird-div {
+    margin-right: 43rem;
   }
 }
