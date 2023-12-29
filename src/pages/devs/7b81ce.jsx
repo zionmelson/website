@@ -26,7 +26,7 @@ export default function Parker() {
         >
           <div className="vertical-content">
             <h2 className="h2" style={{ width: "100%" }}>
-              Peter Parker
+              Phillip Javert
             </h2>
             <h3 className="h3">atlanta, ga</h3>
             <a
@@ -184,7 +184,7 @@ export default function Parker() {
           <div className="vertical-content">
             <div className="vertical-content" style={{ marginBottom: "1rem" }}>
               <h1 className="h1" style={{ width: "100%" }}>
-                Peter Parker
+                Phillip Javert
               </h1>
               <h2 className="h2">atlanta, ga</h2>
               <a
