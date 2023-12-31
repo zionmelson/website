@@ -89,15 +89,10 @@ export default function Terms() {
           2.1 learnmutiny Fees. learnmutiny charges Clients a fee for the
           performance of Services (&quot;Fee&quot;). When a Client pays Fees for
           Services to learnmutiny, learnmutiny pays its Talent based upon the
-          terms of learnmutiny’s agreement with any such Talent.{" "}
+          terms of learnmutiny’s agreement with any such Talent.
         </p>
         <p className="h5" style={{ marginBottom: "0.5rem" }}>
-          2.2 Invoices. learnmutiny will invoice you for Fees for Services
-          performed by Talent. You agree to pay all Fees invoiced to you by
-          learnmutiny in accordance with the terms of this Agreement.{" "}
-        </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
-          2.3 Payment Methods. Client hereby authorizes learnmutiny to run, or
+          2.2 Payment Methods. Client hereby authorizes learnmutiny to run, or
           have run, credit card authorizations on all credit cards provided by
           Client, to store credit card details as Clientʼs method of payment for
           Services, and to charge Clientʼs credit card (or any other form of
@@ -106,7 +101,7 @@ export default function Terms() {
         </p>
         <p className="h5" style={{ marginBottom: "0.5rem" }}>
           2.3 Non-Payment. If Client fails to pay amounts due under this
-          Agreement, whether by cancelling Clientʼs credit card, initiating an
+          Agreement, whether by canceling Clientʼs credit card, initiating an
           improper chargeback or any other means, Clientʼs learnmutiny account
           will be suspended, no additional payments will be processed, and any
           work-in-progress will be stopped. Without limiting other available
@@ -271,14 +266,17 @@ export default function Terms() {
           address that you provide); (ii) a posting on the Site; or (iii) by you
           via email to support@learnmutiny.io or to such other addresses as
           learnmutiny may specify in writing. The date of receipt will be deemed
-          the date on which such notice is transmitted. 15.4 Modifications. No
-          modification or amendment to this Agreement will be binding upon
-          learnmutiny unless in a written instrument signed by a duly authorized
-          representative of learnmutiny. For the purposes of this Section 15.4,
-          a written instrument will expressly exclude electronic communications
-          such as email and electronic notices but will include facsimiles. 15.5
-          No Waiver. The failure or delay of either party to exercise or enforce
-          any right or claim does not constitute a waiver of such right or claim
+          the date on which such notice is transmitted.
+        </p>
+        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+          15.4 Modifications. No modification or amendment to this Agreement
+          will be binding upon learnmutiny unless in a written instrument signed
+          by a duly authorized representative of learnmutiny. For the purposes
+          of this Section 15.4, a written instrument will expressly exclude
+          electronic communications such as email and electronic notices but
+          will include facsimiles. 15.5 No Waiver. The failure or delay of
+          either party to exercise or enforce any right or claim does not
+          constitute a waiver of such right or claim
         </p>
       </div>
     </div>

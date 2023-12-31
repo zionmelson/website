@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="foot-cont">
-        <p>© 2023 learnmutiny. All rights reserved.</p>
+        <p>© 2024 learnmutiny. All rights reserved.</p>
         <a href="/terms" className="span-link">
           <p className="terms-mobile">Terms of Service</p>
         </a>
