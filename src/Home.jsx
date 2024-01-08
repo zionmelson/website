@@ -56,7 +56,7 @@ function Home() {
           y: -80,
           stagger: 0.02,
         },
-        "<1.6"
+        "<1.8"
       );
     });
 
@@ -93,7 +93,7 @@ function Home() {
           rotateX: 90,
           stagger: 0.02,
         },
-        "<1.6"
+        "<1.8"
       );
     });
 
@@ -107,41 +107,28 @@ function Home() {
       <div className="box">
         <div className="vertical-content" style={{ marginTop: "3rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
-            we source senior
-            <div>
-              <div
-                className="text-wrapper"
-                style={{ marginTop: "1.1rem", marginBottom: "1.3rem" }}
-              >
-                <p id="p">Go-Lang</p>
-                <p id="p">Python</p>
-                <p id="p">Rust</p>
-                <p id="p">Javascript</p>
-                <p id="p">C++</p>
-                <p id="p">AWS</p>
-                <p id="p">Docker</p>
-                <p id="p">Solidity</p>
-                <p id="p">Kubernetes</p>
-                <p id="p">Node.js</p>
-                <p id="p">GCP</p>
-                <p id="p">Azure Cloud</p>
-                <p id="p">.NET</p>
-                <p id="p">Django</p>
-                <p id="p">Postgres</p>
-                <p id="p">MySQL</p>
-                <p id="p">MongoDB</p>
-                <p id="p">C#</p>
-                <p id="p">Kotlin</p>
-                <p id="p">Java</p>
-                <p id="p">Flutter</p>
-                <p id="p">React</p>
-                <p id="p">Vue</p>
-                <p id="p">React Native</p>
-                <p id="p">Swift</p>
-                <p id="p">C</p>
-              </div>
+            we source senior engineers for
+            <div
+              style={{
+                marginTop: "1.5rem",
+                marginBottom: "1.5rem",
+                width: "100%",
+              }}
+            >
+              <p id="p">FinTech</p>
+              <p id="p">Black Owned</p>
+              <p id="p">Healthcare</p>
+              <p id="p">Blockchain</p>
+              <p id="p">B2B SaaS</p>
+              <p id="p">Women Owned</p>
+              <p id="p">E-Commerce</p>
+              <p id="p">Machine Learning</p>
+              <p id="p">Latina Owned</p>
+              <p id="p">Cyber Security</p>
+              <p id="p">EdTech</p>
+              <p id="p">Social Networking</p>
             </div>
-            developers for startups
+            startup companies
           </h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny
@@ -204,39 +191,31 @@ function Home() {
       <div className="box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            we source senior
-            <div
-              className="text-wrapper"
-              style={{ marginTop: "1rem", marginBottom: "1rem" }}
-            >
-              <p id="ph">Go-Lang</p>
-              <p id="ph">Python</p>
-              <p id="ph">Rust</p>
-              <p id="ph">Javascript</p>
-              <p id="ph">C++</p>
-              <p id="ph">AWS</p>
-              <p id="ph">Docker</p>
-              <p id="ph">Solidity</p>
-              <p id="ph">Kubernetes</p>
-              <p id="ph">Node.js</p>
-              <p id="ph">GCP</p>
-              <p id="ph">Azure Cloud</p>
-              <p id="ph">.NET</p>
-              <p id="ph">Django</p>
-              <p id="ph">Postgres</p>
-              <p id="ph">MySQL</p>
-              <p id="ph">MongoDB</p>
-              <p id="ph">C#</p>
-              <p id="ph">Kotlin</p>
-              <p id="ph">Java</p>
-              <p id="ph">Flutter</p>
-              <p id="ph">React</p>
-              <p id="ph">Vue</p>
-              <p id="ph">React Native</p>
-              <p id="ph">Swift</p>
-              <p id="ph">C</p>
+            we source senior engineers for
+            <div>
+              <div
+                className="text-wrapper"
+                style={{
+                  marginTop: "1.2rem",
+                  marginBottom: "1.2rem",
+                  width: "100%",
+                }}
+              >
+                <p id="ph">Healthcare</p>
+                <p id="ph">FinTech</p>
+                <p id="ph">Black Owned</p>
+                <p id="ph">Blockchain</p>
+                <p id="ph">B2B SaaS</p>
+                <p id="ph">Women Owned</p>
+                <p id="ph">E-Commerce</p>
+                <p id="ph">Machine Learning</p>
+                <p id="ph">Latina Owned</p>
+                <p id="ph">Cyber Security</p>
+                <p id="ph">EdTech</p>
+                <p id="ph">Social Networking</p>
+              </div>
             </div>
-            developers for startups
+            startup companies
           </h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny

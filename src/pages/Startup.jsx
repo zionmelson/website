@@ -113,15 +113,15 @@ function Startup() {
             <div
               className="text-wrapper"
               style={{
-                marginTop: "1rem",
-                marginBottom: "1rem",
+                marginTop: "1.5rem",
+                marginBottom: "1.5rem",
               }}
             >
               <p className="h1" id="p">
                 full-stack developer
               </p>
               <p className="h1" id="p">
-                front-end developer
+                systems engineer
               </p>
               <p className="h1" id="p">
                 back-end developer
@@ -137,9 +137,6 @@ function Startup() {
               </p>
               <p className="h1" id="p">
                 devops engineer
-              </p>
-              <p className="h1" id="p">
-                mobile developer
               </p>
               <p className="h1" id="p">
                 software engineer
@@ -206,15 +203,15 @@ function Startup() {
             <div
               className="text-wrapper"
               style={{
-                marginTop: "1rem",
-                marginBottom: "1rem",
+                marginTop: "1.2rem",
+                marginBottom: "1.2rem",
               }}
             >
               <p className="h1" id="ph">
                 full-stack developer
               </p>
               <p className="h1" id="ph">
-                front-end developer
+                systems engineer
               </p>
               <p className="h1" id="ph">
                 back-end developer
@@ -230,9 +227,6 @@ function Startup() {
               </p>
               <p className="h1" id="ph">
                 devops engineer
-              </p>
-              <p className="h1" id="ph">
-                mobile developer
               </p>
               <p className="h1" id="ph">
                 software engineer
