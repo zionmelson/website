@@ -43,7 +43,7 @@ import {
   Nels,
   Fre,
   Smit,
-} from "./devs";
+} from "./previews";
 
 import "./App.css";
 
