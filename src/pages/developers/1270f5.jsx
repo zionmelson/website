@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 import spencer from "../../assets/mp3/spencer.mp3";
 import calen from "../../assets/svg/calen.svg";
@@ -28,6 +22,7 @@ import python from "../../assets/svg/python.svg";
 export default function Spencer() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -43,24 +38,6 @@ export default function Spencer() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -80,15 +57,9 @@ export default function Spencer() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Jonathan Spencer</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  Jonathan Spencer{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
@@ -100,7 +71,7 @@ export default function Spencer() {
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -111,41 +82,22 @@ export default function Spencer() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -154,6 +106,10 @@ export default function Spencer() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -338,11 +294,20 @@ export default function Spencer() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    self-taught
+                    self taught
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -425,149 +390,205 @@ export default function Spencer() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Full Stack Engineer</h1>
-              <h2 className="h2">2 yrs</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">Full Stack Engineer</h1>
+                <h2 className="h2">2 yrs</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Front-End Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Proficient in front-end development, utilizing skills in
+                    JavaScript and React.js to create engaging and responsive
+                    user interfaces.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Front-End Development: Proficient in front-end development,
-                utilizing skills in JavaScript and React.js to create engaging
-                and responsive user interfaces.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Node.js and GraphQL Expertise: Experienced in backend
-                development using Node.js and GraphQL, contributing to the
-                development of robust and scalable server-side applications.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Test Automation: Well-versed in test automation methodologies,
-                ensuring the reliability and stability of software through
-                systematic testing processes.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Versatile Skill Set: Possesses a versatile skill set, including
-                product design, entrepreneurship, and a strong background in
-                software and product development, contributing to a holistic
-                understanding of the development lifecycle.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Node.js and GraphQL Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Experienced in backend development using Node.js and
+                    GraphQL, contributing to the development of robust and
+                    scalable server-side applications.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Test Automation:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Well-versed in test automation methodologies, ensuring the
+                    reliability and stability of software through systematic
+                    testing processes.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Versatile Skill Set:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Possesses a versatile skill set, including product design,
+                    entrepreneurship, and a strong background in software and
+                    product development, contributing to a holistic
+                    understanding of the development lifecycle.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Software Integration Engineer</h1>
-              <h2 className="h2">5 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Software Integration Engineer</h1>
+                <h2 className="h2">5 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">API Integration Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the successful integration of diverse 3rd party APIs
+                    (Slack, Quickbooks, Netsuite, Carbone) into the platform,
+                    expanding its capabilities and integrating new features
+                    seamlessly.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                API Integration Leadership: Led the successful integration of
-                diverse 3rd party APIs (Slack, Quickbooks, Netsuite, Carbone)
-                into the platform, expanding its capabilities and integrating
-                new features seamlessly.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                End-to-End Development Expertise: Developed robust frontend and
-                backend capabilities, including connectors for integrated APIs,
-                using a versatile tech stack (React, Typescript, GraphQL,
-                Python, Flask), ensuring comprehensive and efficient system
-                enhancements.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                DevOps and Cloud Optimization: Streamlined CI/CD workflows
-                through Github Actions, optimizing the development lifecycle.
-                Collaborated with AWS products (S3, EKS, SMS) to extend cloud
-                offerings, improve application performance, and ensure system
-                reliability.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">End-to-End Development Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Developed robust frontend and backend capabilities,
+                    including connectors for integrated APIs, using a versatile
+                    tech stack (React, Typescript, GraphQL, Python, Flask),
+                    ensuring comprehensive and efficient system enhancements.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">DevOps and Cloud Optimization:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Streamlined CI/CD workflows through Github Actions,
+                    optimizing the development lifecycle. Collaborated with AWS
+                    products (S3, EKS, SMS) to extend cloud offerings, improve
+                    application performance, and ensure system reliability.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Software Engineer</h1>
-              <h2 className="h2">1 yr 7 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Software Engineer</h1>
+                <h2 className="h2">1 yr & 7 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">API Maintenance and Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Managed the continuous maintenance and updates of backend
+                    API services, implementing new full-stack features for both
+                    mobile users and Loop&apos;s cloud-based web platform,
+                    ensuring ongoing system optimization.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                API Maintenance and Development: Managed the continuous
-                maintenance and updates of backend API services, implementing
-                new full-stack features for both mobile users and Loop&apos;s
-                cloud-based web platform, ensuring ongoing system optimization.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Security Solutions Implementation: Spearheaded the development
-                of GDPR-compliant unidirectional encryption solutions for end
-                users using AWS&apos; encryption SDK, ensuring robust data
-                security and privacy measures.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Innovative Development and Mentoring: Pioneered the creation of
-                a localized docker container for multiple AWS services,
-                enhancing local development and testing capabilities. Led the
-                writing of unit and integration tests for the entire API suite,
-                employing Chai + Sinon. Oversaw and mentored junior engineers,
-                providing guidance in code review and architecture optimization.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Security Solutions Implementation:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Spearheaded the development of GDPR-compliant unidirectional
+                    encryption solutions for end users using AWS&apos;
+                    encryption SDK, ensuring robust data security and privacy
+                    measures.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Innovative Development and Mentoring:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Pioneered the creation of a localized docker container for
+                    multiple AWS services, enhancing local development and
+                    testing capabilities. Led the writing of unit and
+                    integration tests for the entire API suite, employing Chai +
+                    Sinon. Oversaw and mentored junior engineers, providing
+                    guidance in code review and architecture optimization.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -601,14 +622,6 @@ export default function Spencer() {
           >
             Jonathan Spencer
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
@@ -639,35 +652,15 @@ export default function Spencer() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -680,6 +673,10 @@ export default function Spencer() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -864,11 +861,20 @@ export default function Spencer() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    self-taught
+                    self taught
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -949,175 +955,199 @@ export default function Spencer() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className="job-content" onClick={() => setActiveJob(1)}>
                 <h1 className="h1-sub">Full Stack Engineer</h1>
                 <h2 className="h2">2 yrs</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Front-End Development: Proficient in front-end development,
-                  utilizing skills in JavaScript and React.js to create engaging
-                  and responsive user interfaces.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Node.js and GraphQL Expertise: Experienced in backend
-                  development using Node.js and GraphQL, contributing to the
-                  development of robust and scalable server-side applications.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Test Automation: Well-versed in test automation methodologies,
-                  ensuring the reliability and stability of software through
-                  systematic testing processes.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Versatile Skill Set: Possesses a versatile skill set,
-                  including product design, entrepreneurship, and a strong
-                  background in software and product development, contributing
-                  to a holistic understanding of the development lifecycle.
-                </h3>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Front-End Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Proficient in front-end development, utilizing skills in
+                    JavaScript and React.js to create engaging and responsive
+                    user interfaces.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Node.js and GraphQL Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Experienced in backend development using Node.js and
+                    GraphQL, contributing to the development of robust and
+                    scalable server-side applications.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Test Automation:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Well-versed in test automation methodologies, ensuring the
+                    reliability and stability of software through systematic
+                    testing processes.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Versatile Skill Set:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Possesses a versatile skill set, including product design,
+                    entrepreneurship, and a strong background in software and
+                    product development, contributing to a holistic
+                    understanding of the development lifecycle.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Software Integration Engineer</h1>
                 <h2 className="h2">5 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  API Integration Leadership: Led the successful integration of
-                  diverse 3rd party APIs (Slack, Quickbooks, Netsuite, Carbone)
-                  into the platform, expanding its capabilities and integrating
-                  new features seamlessly.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  End-to-End Development Expertise: Developed robust frontend
-                  and backend capabilities, including connectors for integrated
-                  APIs, using a versatile tech stack (React, Typescript,
-                  GraphQL, Python, Flask), ensuring comprehensive and efficient
-                  system enhancements.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  DevOps and Cloud Optimization: Streamlined CI/CD workflows
-                  through Github Actions, optimizing the development lifecycle.
-                  Collaborated with AWS products (S3, EKS, SMS) to extend cloud
-                  offerings, improve application performance, and ensure system
-                  reliability.
-                </h3>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
               >
-                <h1 className="h1-sub">Software Engineer</h1>
-                <h2 className="h2">1 yr 7 mos</h2>
+                <div className="job-description">
+                  <h2 className="h2">API Integration Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the successful integration of diverse 3rd party APIs
+                    (Slack, Quickbooks, Netsuite, Carbone) into the platform,
+                    expanding its capabilities and integrating new features
+                    seamlessly.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  API Maintenance and Development: Managed the continuous
-                  maintenance and updates of backend API services, implementing
-                  new full-stack features for both mobile users and Loop&apos;s
-                  cloud-based web platform, ensuring ongoing system
-                  optimization.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Security Solutions Implementation: Spearheaded the development
-                  of GDPR-compliant unidirectional encryption solutions for end
-                  users using AWS&apos; encryption SDK, ensuring robust data
-                  security and privacy measures.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Innovative Development and Mentoring: Pioneered the creation
-                  of a localized docker container for multiple AWS services,
-                  enhancing local development and testing capabilities. Led the
-                  writing of unit and integration tests for the entire API
-                  suite, employing Chai + Sinon. Oversaw and mentored junior
-                  engineers, providing guidance in code review and architecture
-                  optimization.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">End-to-End Development Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Developed robust frontend and backend capabilities,
+                    including connectors for integrated APIs, using a versatile
+                    tech stack (React, Typescript, GraphQL, Python, Flask),
+                    ensuring comprehensive and efficient system enhancements.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">DevOps and Cloud Optimization:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Streamlined CI/CD workflows through Github Actions,
+                    optimizing the development lifecycle. Collaborated with AWS
+                    products (S3, EKS, SMS) to extend cloud offerings, improve
+                    application performance, and ensure system reliability.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Software Engineer</h1>
+                <h2 className="h2">1 yr & 7 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">API Maintenance and Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Managed the continuous maintenance and updates of backend
+                    API services, implementing new full-stack features for both
+                    mobile users and Loop&apos;s cloud-based web platform,
+                    ensuring ongoing system optimization.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Security Solutions Implementation:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Spearheaded the development of GDPR-compliant unidirectional
+                    encryption solutions for end users using AWS&apos;
+                    encryption SDK, ensuring robust data security and privacy
+                    measures.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Innovative Development and Mentoring:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Pioneered the creation of a localized docker container for
+                    multiple AWS services, enhancing local development and
+                    testing capabilities. Led the writing of unit and
+                    integration tests for the entire API suite, employing Chai +
+                    Sinon. Oversaw and mentored junior engineers, providing
+                    guidance in code review and architecture optimization.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

@@ -8,6 +8,8 @@ import elastic from "../../assets/svg/elastic.svg";
 import postgres from "../../assets/svg/postgres.svg";
 import star from "../../assets/svg/star.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Grimm() {
@@ -156,7 +158,6 @@ export default function Grimm() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -167,6 +168,7 @@ export default function Grimm() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -186,7 +188,7 @@ export default function Grimm() {
               <h1 className="h1" style={{ width: "100%" }}>
                 Benjamin Grimm
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">hawaii</h2>
               <a
                 href="https://learnmutiny.io/developers/27ff01"
                 target="_blank"
@@ -314,7 +316,6 @@ export default function Grimm() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -325,6 +326,7 @@ export default function Grimm() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

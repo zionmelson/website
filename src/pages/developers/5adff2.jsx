@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 import douglas from "../../assets/mp3/douglas.mp3";
 import calen from "../../assets/svg/calen.svg";
@@ -27,6 +21,7 @@ import docker from "../../assets/svg/docker.svg";
 export default function Douglas() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -42,24 +37,6 @@ export default function Douglas() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -79,15 +56,9 @@ export default function Douglas() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Arthur Douglas</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  Arthur Douglas{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
@@ -99,7 +70,7 @@ export default function Douglas() {
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -110,41 +81,22 @@ export default function Douglas() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -153,6 +105,10 @@ export default function Douglas() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -329,7 +285,16 @@ export default function Douglas() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -412,100 +377,140 @@ export default function Douglas() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Python Developer</h1>
-              <h2 className="h2">2 yrs 3 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">Python Developer</h1>
+                <h2 className="h2">2 yr & 3 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Python Application Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the development of a Python application designed to
+                    score products based on their competitive performance.
+                    Consolidated multiple legacy applications into a unified
+                    system, involving a comprehensive review of existing
+                    functionality and the introduction of new features to meet
+                    business requirements.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Python Application Development: Led the development of a Python
-                application designed to score products based on their
-                competitive performance. Consolidated multiple legacy
-                applications into a unified system, involving a comprehensive
-                review of existing functionality and the introduction of new
-                features to meet business requirements.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                System Optimization and Hosting: Successfully hosted the scoring
-                system on AWS EC2, leveraging a MySQL database for efficient
-                data storage and retrieval. Implemented performance
-                improvements, resulting in more thorough product comparisons at
-                a reduced cost.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Technology Stack and Process Improvement: Utilized Pandas for
-                most calculations and integrated NetworkX for specialized cases
-                requiring graph theory. Introduced enhanced testing conventions,
-                optimizing the QA process and contributing to a reduction in
-                defects. Proficiently employed technologies such as Docker, Git,
-                NumPy, and SciPy, showcasing a well-rounded skill set in Python
-                development.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">System Optimization and Hosting:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully hosted the scoring system on AWS EC2,
+                    leveraging a MySQL database for efficient data storage and
+                    retrieval. Implemented performance improvements, resulting
+                    in more thorough product comparisons at a reduced cost.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Technology Stack and Process Improvement:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Utilized Pandas for most calculations and integrated
+                    NetworkX for specialized cases requiring graph theory.
+                    Introduced enhanced testing conventions, optimizing the QA
+                    process and contributing to a reduction in defects.
+                    Proficiently employed technologies such as Docker, Git,
+                    NumPy, and SciPy, showcasing a well-rounded skill set in
+                    Python development.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Full-Stack Web Development Instructor</h1>
-              <h2 className="h2">8 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">
+                  Full-Stack Web Development Instructor
+                </h1>
+                <h2 className="h2">8 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Curriculum Development and Revision:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led instruction in Full-Stack web development with a focus
+                    on Java and Spring Boot. Spearheaded the preparation of
+                    teaching and study materials, actively contributing to
+                    curriculum development and revision to ensure relevance and
+                    effectiveness.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Curriculum Development and Revision: Led instruction in
-                Full-Stack web development with a focus on Java and Spring Boot.
-                Spearheaded the preparation of teaching and study materials,
-                actively contributing to curriculum development and revision to
-                ensure relevance and effectiveness.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Educational Leadership: Provided leadership in the educational
-                realm, guiding students through the complexities of Full-Stack
-                web development. Leveraged expertise in Java and Spring Boot to
-                impart comprehensive knowledge and practical skills to learners.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Database Expertise: Demonstrated proficiency in databases as
-                part of the Full-Stack curriculum. Shared insights and practical
-                experiences, enhancing students&apos; understanding and
-                application of database concepts within the context of web
-                development.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Educational Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Provided leadership in the educational realm, guiding
+                    students through the complexities of Full-Stack web
+                    development. Leveraged expertise in Java and Spring Boot to
+                    impart comprehensive knowledge and practical skills to
+                    learners.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Database Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Demonstrated proficiency in databases as part of the
+                    Full-Stack curriculum. Shared insights and practical
+                    experiences, enhancing students&apos; understanding and
+                    application of database concepts within the context of web
+                    development.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -539,14 +544,6 @@ export default function Douglas() {
           >
             Arthur Douglas
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
@@ -577,35 +574,15 @@ export default function Douglas() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -618,6 +595,10 @@ export default function Douglas() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -794,7 +775,16 @@ export default function Douglas() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -875,127 +865,144 @@ export default function Douglas() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className="job-content" onClick={() => setActiveJob(1)}>
                 <h1 className="h1-sub">Python Developer</h1>
-                <h2 className="h2">2 yrs 3 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Python Application Development: Led the development of a
-                  Python application designed to score products based on their
-                  competitive performance. Consolidated multiple legacy
-                  applications into a unified system, involving a comprehensive
-                  review of existing functionality and the introduction of new
-                  features to meet business requirements.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  System Optimization and Hosting: Successfully hosted the
-                  scoring system on AWS EC2, leveraging a MySQL database for
-                  efficient data storage and retrieval. Implemented performance
-                  improvements, resulting in more thorough product comparisons
-                  at a reduced cost.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Technology Stack and Process Improvement: Utilized Pandas for
-                  most calculations and integrated NetworkX for specialized
-                  cases requiring graph theory. Introduced enhanced testing
-                  conventions, optimizing the QA process and contributing to a
-                  reduction in defects. Proficiently employed technologies such
-                  as Docker, Git, NumPy, and SciPy, showcasing a well-rounded
-                  skill set in Python development.
-                </h3>
+                <h2 className="h2">2 yr & 3 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Python Application Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the development of a Python application designed to
+                    score products based on their competitive performance.
+                    Consolidated multiple legacy applications into a unified
+                    system, involving a comprehensive review of existing
+                    functionality and the introduction of new features to meet
+                    business requirements.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">System Optimization and Hosting:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully hosted the scoring system on AWS EC2,
+                    leveraging a MySQL database for efficient data storage and
+                    retrieval. Implemented performance improvements, resulting
+                    in more thorough product comparisons at a reduced cost.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Technology Stack and Process Improvement:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Utilized Pandas for most calculations and integrated
+                    NetworkX for specialized cases requiring graph theory.
+                    Introduced enhanced testing conventions, optimizing the QA
+                    process and contributing to a reduction in defects.
+                    Proficiently employed technologies such as Docker, Git,
+                    NumPy, and SciPy, showcasing a well-rounded skill set in
+                    Python development.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">
                   Full-Stack Web Development Instructor
                 </h1>
                 <h2 className="h2">8 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Curriculum Development and Revision:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led instruction in Full-Stack web development with a focus
+                    on Java and Spring Boot. Spearheaded the preparation of
+                    teaching and study materials, actively contributing to
+                    curriculum development and revision to ensure relevance and
+                    effectiveness.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Curriculum Development and Revision: Led instruction in
-                  Full-Stack web development with a focus on Java and Spring
-                  Boot. Spearheaded the preparation of teaching and study
-                  materials, actively contributing to curriculum development and
-                  revision to ensure relevance and effectiveness.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Educational Leadership: Provided leadership in the educational
-                  realm, guiding students through the complexities of Full-Stack
-                  web development. Leveraged expertise in Java and Spring Boot
-                  to impart comprehensive knowledge and practical skills to
-                  learners.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Database Expertise: Demonstrated proficiency in databases as
-                  part of the Full-Stack curriculum. Shared insights and
-                  practical experiences, enhancing students&apos; understanding
-                  and application of database concepts within the context of web
-                  development.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">Educational Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Provided leadership in the educational realm, guiding
+                    students through the complexities of Full-Stack web
+                    development. Leveraged expertise in Java and Spring Boot to
+                    impart comprehensive knowledge and practical skills to
+                    learners.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Database Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Demonstrated proficiency in databases as part of the
+                    Full-Stack curriculum. Shared insights and practical
+                    experiences, enhancing students&apos; understanding and
+                    application of database concepts within the context of web
+                    development.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

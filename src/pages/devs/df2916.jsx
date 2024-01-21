@@ -1,15 +1,15 @@
 import calen from "../../assets/svg/calen.svg";
 
-import flutter from "../../assets/svg/flutter.svg";
-import gcp from "../../assets/svg/gcp.svg";
-import firebase from "../../assets/svg/firebase.svg";
-import dart from "../../assets/svg/dart.svg";
-import javascript from "../../assets/svg/javascript.svg";
+import java from "../../assets/svg/java.svg";
+import csharp from "../../assets/svg/csharp.svg";
+import typescript from "../../assets/svg/typescript.svg";
+import rust from "../../assets/svg/rust.svg";
+
 import logo from "../../assets/svg/learnmutiny.svg";
 
 import "../../App.css";
 
-export default function Secord() {
+export default function Nelson() {
   return (
     <>
       {/* desktop */}
@@ -25,11 +25,11 @@ export default function Secord() {
         >
           <div className="vertical-content">
             <h2 className="h2" style={{ width: "100%" }}>
-              Cliff Secord
+              Kent Nelson
             </h2>
-            <h3 className="h3">atlanta, ga</h3>
+            <h3 className="h3">memphis, tn</h3>
             <a
-              href="https://learnmutiny.io/developers/0c04a5"
+              href="https://learnmutiny.io/developers/df2916"
               target="_blank"
               rel="noreferrer"
               style={{ marginTop: "1rem" }}
@@ -55,62 +55,50 @@ export default function Secord() {
             >
               <span
                 className="emoji-container"
-                id="flutter-container"
+                id="java-container"
                 style={{
                   marginBottom: "1rem",
                   padding: "1rem",
                 }}
               >
-                <img src={flutter} className="emoji-2" alt="calendar" />
-                Flutter
+                <img src={java} className="emoji-2" alt="calendar" />
+                Java
               </span>
 
               <span
                 className="emoji-container"
-                id="gcp-container"
+                id="csharp-container"
                 style={{
                   marginBottom: "1rem",
                   padding: "1rem",
                 }}
               >
-                <img src={gcp} className="emoji-2" alt="calendar" />
-                GCP
+                <img src={csharp} className="emoji-2" alt="calendar" />
+                CSharp
               </span>
 
               <span
                 className="emoji-container"
-                id="firebase-container"
+                id="typescript-container"
                 style={{
                   marginBottom: "1rem",
                   padding: "1rem",
                 }}
               >
-                <img src={firebase} className="emoji-2" alt="calendar" />
-                Firebase
+                <img src={typescript} className="emoji-2" alt="calendar" />
+                Τypescript
               </span>
 
               <span
                 className="emoji-container"
-                id="dart-container"
+                id="rust-container"
                 style={{
                   marginBottom: "1rem",
                   padding: "1rem",
                 }}
               >
-                <img src={dart} className="emoji-2" alt="calendar" />
-                Dart
-              </span>
-
-              <span
-                className="emoji-container"
-                id="javascript-container"
-                style={{
-                  marginBottom: "1rem",
-                  padding: "1rem",
-                }}
-              >
-                <img src={javascript} className="emoji-2" alt="calendar" />
-                Javascript
+                <img src={rust} className="emoji-2" alt="calendar" />
+                Rust
               </span>
             </div>
           </div>
@@ -163,11 +151,11 @@ export default function Secord() {
           <div className="vertical-content">
             <div className="vertical-content" style={{ marginBottom: "1rem" }}>
               <h1 className="h1" style={{ width: "100%" }}>
-                Cliff Secord
+                Kent Nelson
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">memphis, tn</h2>
               <a
-                href="https://learnmutiny.io/developers/0c04a5"
+                href="https://learnmutiny.io/developers/df2916"
                 target="_blank"
                 rel="noreferrer"
                 style={{ marginTop: "1rem" }}
@@ -193,62 +181,50 @@ export default function Secord() {
               >
                 <span
                   className="emoji-container"
-                  id="flutter-container"
+                  id="java-container"
                   style={{
                     marginBottom: "1rem",
                     padding: "1rem",
                   }}
                 >
-                  <img src={flutter} className="emoji-2" alt="calendar" />
-                  Flutter
+                  <img src={java} className="emoji-2" alt="calendar" />
+                  Java
                 </span>
 
                 <span
                   className="emoji-container"
-                  id="gcp-container"
+                  id="csharp-container"
                   style={{
                     marginBottom: "1rem",
                     padding: "1rem",
                   }}
                 >
-                  <img src={gcp} className="emoji-2" alt="calendar" />
-                  GCP
+                  <img src={csharp} className="emoji-2" alt="calendar" />
+                  C#
                 </span>
 
                 <span
                   className="emoji-container"
-                  id="firebase-container"
+                  id="typescript-container"
                   style={{
                     marginBottom: "1rem",
                     padding: "1rem",
                   }}
                 >
-                  <img src={firebase} className="emoji-2" alt="calendar" />
-                  Firebase
+                  <img src={typescript} className="emoji-2" alt="calendar" />
+                  Τypescript
                 </span>
 
                 <span
                   className="emoji-container"
-                  id="dart-container"
+                  id="rust-container"
                   style={{
                     marginBottom: "1rem",
                     padding: "1rem",
                   }}
                 >
-                  <img src={dart} className="emoji-2" alt="calendar" />
-                  Dart
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="javascript-container"
-                  style={{
-                    marginBottom: "1rem",
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={javascript} className="emoji-2" alt="calendar" />
-                  Javascript
+                  <img src={rust} className="emoji-2" alt="calendar" />
+                  Rust
                 </span>
               </div>
             </div>

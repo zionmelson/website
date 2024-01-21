@@ -7,6 +7,8 @@ import python from "../../assets/svg/python.svg";
 import flask from "../../assets/svg/flask.svg";
 import django from "../../assets/svg/django.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Blaze() {
@@ -147,7 +149,6 @@ export default function Blaze() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -158,6 +159,7 @@ export default function Blaze() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -177,7 +179,7 @@ export default function Blaze() {
               <h1 className="h1" style={{ width: "100%" }}>
                 Jonathan Blaze
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">portland, or</h2>
               <a
                 href="https://learnmutiny.io/developers/672957"
                 target="_blank"
@@ -297,7 +299,6 @@ export default function Blaze() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -308,6 +309,7 @@ export default function Blaze() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

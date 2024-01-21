@@ -1,29 +1,26 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
-import secord from "../../assets/mp3/secord.mp3";
+import barnes from "../../assets/mp3/barnes.mp3";
 import calen from "../../assets/svg/calen.svg";
 
 import Lottie from "lottie-react";
 import voice from "../../assets/json/voice.json";
 
-import flutter from "../../assets/svg/flutter.svg";
-import gcp from "../../assets/svg/gcp.svg";
-import firebase from "../../assets/svg/firebase.svg";
-import dart from "../../assets/svg/dart.svg";
+import ruby from "../../assets/svg/ruby.svg";
+import react from "../../assets/svg/react.svg";
+import mongodb from "../../assets/svg/mongodb.svg";
+import postgres from "../../assets/svg/postgres.svg";
+import vue from "../../assets/svg/vue.svg";
+import python from "../../assets/svg/python.svg";
 import javascript from "../../assets/svg/javascript.svg";
 import html from "../../assets/svg/html.svg";
 import css from "../../assets/svg/css.svg";
 
-export default function Secord() {
+export default function Barnes() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -39,24 +36,6 @@ export default function Secord() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -76,27 +55,21 @@ export default function Secord() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Cliff Secord</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  James Barnes{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
                 ref={(el) => setVideoElement(el)}
                 style={{ marginBottom: "0.5rem" }}
               >
-                <source src={secord} type="audio/mpeg" />
+                <source src={barnes} type="audio/mpeg" />
                 Your browser does not support HTML video.
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -107,41 +80,22 @@ export default function Secord() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -150,6 +104,10 @@ export default function Secord() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -181,50 +139,74 @@ export default function Secord() {
                 >
                   <span
                     className="emoji-container"
-                    id="flutter-container"
+                    id="ruby-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={flutter} className="emoji-2" alt="calendar" />
-                    Flutter
+                    <img src={ruby} className="emoji-2" alt="calendar" />
+                    Ruby
                   </span>
 
                   <span
                     className="emoji-container"
-                    id="gcp-container"
+                    id="react-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={gcp} className="emoji-2" alt="calendar" />
-                    GCP
+                    <img src={react} className="emoji-2" alt="calendar" />
+                    React
                   </span>
 
                   <span
                     className="emoji-container"
-                    id="firebase-container"
+                    id="mongodb-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={firebase} className="emoji-2" alt="calendar" />
-                    Firebase
+                    <img src={mongodb} className="emoji-2" alt="calendar" />
+                    MongoDB
                   </span>
 
                   <span
                     className="emoji-container"
-                    id="dart-container"
+                    id="postgres-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={dart} className="emoji-2" alt="calendar" />
-                    Dart
+                    <img src={postgres} className="emoji-2" alt="calendar" />
+                    Postgres
+                  </span>
+
+                  <span
+                    className="emoji-container"
+                    id="vue-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={vue} className="emoji-2" alt="calendar" />
+                    Vue
+                  </span>
+
+                  <span
+                    className="emoji-container"
+                    id="python-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={python} className="emoji-2" alt="calendar" />
+                    Python
                   </span>
 
                   <span
@@ -280,7 +262,7 @@ export default function Secord() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    2+ years of experience
+                    4+ years of experience
                   </span>
                   <span
                     className="emoji-container"
@@ -290,7 +272,16 @@ export default function Secord() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -298,13 +289,13 @@ export default function Secord() {
                   className="emoji-container"
                   style={{ marginBottom: "1rem", padding: "1rem" }}
                 >
-                  <h4 className="h4">minimum salary: $100,000</h4>
+                  <h4 className="h4">minimum salary: $65,000</h4>
                 </span>
                 <span
                   className="emoji-container"
                   style={{ marginBottom: "1rem", padding: "1rem" }}
                 >
-                  <h4 className="h4">maxmimum salary: $120,000</h4>
+                  <h4 className="h4">maxmimum salary: $80,000</h4>
                 </span>
                 <span
                   className="emoji-container"
@@ -373,149 +364,157 @@ export default function Secord() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Product Manager</h1>
-              <h2 className="h2">3 yrs 4 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">IT Support Specialist</h1>
+                <h2 className="h2">3 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Remote Support Coordination:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Responded to support requests from poll-workers at 25+
+                    different locations across Douglasville. Provided remote
+                    assistance to troubleshoot issues with election machines and
+                    computers running on Linux servers throughout the election
+                    process.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Strategic Product Leadership: Formulated the vision, strategy,
-                and roadmap for …, a community-focused social platform dedicated
-                to events. Developed success metrics and conducted customer
-                interviews to shape the product direction. Designed a prototype
-                to align with … strategic goal of creating economic and communal
-                value for creators and communities.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Hands-On Engineering and Deployment: Led the end-to-end
-                development of the community-focused social platform using
-                Flutter and Firebase, deploying the product to iOS and Android
-                test stores. Demonstrated proficiency in Flutter development to
-                bring the vision to life, ensuring a seamless user experience
-                for both platforms.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Community Growth and Partnership Building: Successfully grew the
-                pre-launch community to over 3500 people, fostering organic
-                growth and engagement. Cultivated partnerships with 200+
-                creators and partners, contributing to the development of a
-                vibrant and active community around the … platform.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Network Integration and Troubleshooting:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Linked election machines and computers to cloud networks,
+                    ensuring seamless connectivity and troubleshooting any
+                    network-related issues. Played a crucial role in maintaining
+                    the integrity and functionality of the systems during the
+                    election.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Software Installation and Distribution:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Installed election software on over 300 tablets and
+                    machines, ensuring proper functionality and adherence to
+                    security protocols. Distributed configured devices to
+                    polling locations, contributing to the smooth operation of
+                    the election process.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Platform Engineer</h1>
-              <h2 className="h2">1 yr 2 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Development Bootcamp</h1>
+                <h2 className="h2">6 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Language Mastery:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Showcased advanced proficiency in Ruby, serving as the
+                    primary language for comprehensive front-end and back-end
+                    development tasks. Engaged in a variety of projects to
+                    enhance and apply skills in real-world scenarios.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Technical Onboarding Expertise: Played a pivotal role at …, a
-                fintech leader in the 1-click-checkout market for web-based
-                eCommerce. Specialized in assisting customers during onboarding,
-                ensuring a seamless integration process, and serving as the
-                first responder to immediate technical issues.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Software Implementation and Troubleshooting: Prioritized
-                responsibilities that involved implementing software solutions
-                and troubleshooting technical issues for sellers. Collaborated
-                with a diverse portfolio of over 200 clients, overseeing the
-                installation and customization of their checkout solutions.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Client Relationship Management: Managed and nurtured long-term
-                relationships with numerous clients, strategically focusing on
-                retention and consistent growth of transaction volume week over
-                week. Operated at the intersection of sales and engineering
-                teams, contributing to the overall success of Fast by ensuring
-                customer satisfaction and fostering ongoing partnerships.
-              </h3>
-            </div>
-            <div
-              className="vertical-content"
-              style={{
-                alignItems: "flex-start",
-                textAlign: "left",
-                marginBottom: "2rem",
-              }}
-            >
-              <h1 className="h1-sub">Software Developer</h1>
-              <h2 className="h2">5 mos</h2>
+                <div className="job-description">
+                  <h2 className="h2">Interactive Language Learning Game:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the development of an immersive Japanese language
+                    learning game, catering to users from beginner to advanced
+                    proficiency levels. The project involved the utilization of
+                    React for dynamic interfaces, CSS and HTML for engaging
+                    visuals, and Vite for efficient module bundling.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Full-time Immersive Development Program: Engaged in a
-                comprehensive apprenticeship at Momentum at Morehouse,
-                dedicating full-time efforts to an immersive development
-                program. The focus of the program centered on honing essential
-                skills for aspiring Software Developers.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Technical Skill Development: Participated in a curriculum that
-                reinforced proficiency in key programming languages and
-                frameworks, including HTML, CSS, JavaScript, Python, and Django.
-                Acquired hands-on experience and practical knowledge to prepare
-                for a successful career in software development.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Culminating Team Project and Demo Day: Applied acquired skills
-                in a team project, showcasing the ability to collaborate and
-                deliver results. Contributed to the cohort&apos;s success by
-                presenting the project during the cohort demo day, demonstrating
-                the practical application of learned concepts and technologies.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Global News Aggregator:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Engineered a sophisticated web application offering a unique
+                    global news aggregation experience. Users can seamlessly
+                    follow diverse topics from news outlets worldwide.
+                    Technologies employed include Rails for robust backend
+                    functionality, CSS and HTML for responsive design, and
+                    JavaScript for interactive features. Postgresql was utilized
+                    for efficient data management.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Jetpack Rental Platform:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Conceptualized and implemented an innovative AirBnB parody
+                    clone specializing in the rental of personal jetpacks.
+                    Leveraged a technology stack encompassing Rails for backend
+                    logic, CSS and HTML for an intuitive user interface,
+                    JavaScript for dynamic functionality, webpack for efficient
+                    module bundling, and Postgresql for robust database
+                    management.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -547,23 +546,15 @@ export default function Secord() {
               marginBottom: "1rem",
             }}
           >
-            Cliff Secord
+            James Barnes
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
               ref={(el) => setVideoElement(el)}
               style={{ marginBottom: "0.5rem" }}
             >
-              <source src={secord} type="audio/mpeg" />
+              <source src={barnes} type="audio/mpeg" />
               Your browser does not support HTML video.
             </audio>
             <div
@@ -587,35 +578,15 @@ export default function Secord() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -628,6 +599,10 @@ export default function Secord() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -659,50 +634,74 @@ export default function Secord() {
                 >
                   <span
                     className="emoji-container"
-                    id="flutter-container"
+                    id="ruby-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={flutter} className="emoji-2" alt="calendar" />
-                    Flutter
+                    <img src={ruby} className="emoji-2" alt="calendar" />
+                    Ruby
                   </span>
 
                   <span
                     className="emoji-container"
-                    id="gcp-container"
+                    id="react-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={gcp} className="emoji-2" alt="calendar" />
-                    GCP
+                    <img src={react} className="emoji-2" alt="calendar" />
+                    React
                   </span>
 
                   <span
                     className="emoji-container"
-                    id="firebase-container"
+                    id="mongodb-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={firebase} className="emoji-2" alt="calendar" />
-                    Firebase
+                    <img src={mongodb} className="emoji-2" alt="calendar" />
+                    MongoDB
                   </span>
 
                   <span
                     className="emoji-container"
-                    id="dart-container"
+                    id="postgres-container"
                     style={{
                       marginBottom: "1rem",
                       padding: "1rem",
                     }}
                   >
-                    <img src={dart} className="emoji-2" alt="calendar" />
-                    Dart
+                    <img src={postgres} className="emoji-2" alt="calendar" />
+                    Postgres
+                  </span>
+
+                  <span
+                    className="emoji-container"
+                    id="vue-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={vue} className="emoji-2" alt="calendar" />
+                    Vue
+                  </span>
+
+                  <span
+                    className="emoji-container"
+                    id="python-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={python} className="emoji-2" alt="calendar" />
+                    Python
                   </span>
 
                   <span
@@ -758,7 +757,7 @@ export default function Secord() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    2+ years of experience
+                    4+ years of experience
                   </span>
                   <span
                     className="emoji-container"
@@ -768,7 +767,16 @@ export default function Secord() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -779,13 +787,13 @@ export default function Secord() {
                   className="emoji-container"
                   style={{ marginBottom: "1rem", padding: "1rem" }}
                 >
-                  <h4 className="h4">minimum salary: $100,000</h4>
+                  <h4 className="h4">minimum salary: $65,000</h4>
                 </span>
                 <span
                   className="emoji-container"
                   style={{ marginBottom: "1rem", padding: "1rem" }}
                 >
-                  <h4 className="h4">maximum salary: $120,000</h4>
+                  <h4 className="h4">maximum salary: $80,000</h4>
                 </span>
                 <span
                   className="emoji-container"
@@ -849,175 +857,161 @@ export default function Secord() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
-                <h1 className="h1-sub">Product Manager</h1>
-                <h2 className="h2">3 yrs 4 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Strategic Product Leadership: Formulated the vision, strategy,
-                  and roadmap for …, a community-focused social platform
-                  dedicated to events. Developed success metrics and conducted
-                  customer interviews to shape the product direction. Designed a
-                  prototype to align with … strategic goal of creating economic
-                  and communal value for creators and communities.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Hands-On Engineering and Deployment: Led the end-to-end
-                  development of the community-focused social platform using
-                  Flutter and Firebase, deploying the product to iOS and Android
-                  test stores. Demonstrated proficiency in Flutter development
-                  to bring the vision to life, ensuring a seamless user
-                  experience for both platforms.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Community Growth and Partnership Building: Successfully grew
-                  the pre-launch community to over 3500 people, fostering
-                  organic growth and engagement. Cultivated partnerships with
-                  200+ creators and partners, contributing to the development of
-                  a vibrant and active community around the … platform.
-                </h3>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">IT Support Specialist</h1>
+                <h2 className="h2">3 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
-                <h1 className="h1-sub">Platform Engineer</h1>
-                <h2 className="h2">1 yr 2 mos</h2>
+                <div className="job-description">
+                  <h2 className="h2">Remote Support Coordination:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Responded to support requests from poll-workers at 25+
+                    different locations across Douglasville. Provided remote
+                    assistance to troubleshoot issues with election machines and
+                    computers running on Linux servers throughout the election
+                    process.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Technical Onboarding Expertise: Played a pivotal role at …, a
-                  fintech leader in the 1-click-checkout market for web-based
-                  eCommerce. Specialized in assisting customers during
-                  onboarding, ensuring a seamless integration process, and
-                  serving as the first responder to immediate technical issues.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Software Implementation and Troubleshooting: Prioritized
-                  responsibilities that involved implementing software solutions
-                  and troubleshooting technical issues for sellers. Collaborated
-                  with a diverse portfolio of over 200 clients, overseeing the
-                  installation and customization of their checkout solutions.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Client Relationship Management: Managed and nurtured long-term
-                  relationships with numerous clients, strategically focusing on
-                  retention and consistent growth of transaction volume week
-                  over week. Operated at the intersection of sales and
-                  engineering teams, contributing to the overall success of Fast
-                  by ensuring customer satisfaction and fostering ongoing
-                  partnerships.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Network Integration and Troubleshooting:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Linked election machines and computers to cloud networks,
+                    ensuring seamless connectivity and troubleshooting any
+                    network-related issues. Played a crucial role in maintaining
+                    the integrity and functionality of the systems during the
+                    election.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Software Installation and Distribution:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Installed election software on over 300 tablets and
+                    machines, ensuring proper functionality and adherence to
+                    security protocols. Distributed configured devices to
+                    polling locations, contributing to the smooth operation of
+                    the election process.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Development Bootcamp</h1>
+                <h2 className="h2">6 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
               >
-                <h1 className="h1-sub">Software Developer</h1>
-                <h2 className="h2">5 mos</h2>
+                <div className="job-description">
+                  <h2 className="h2">Language Mastery:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Showcased advanced proficiency in Ruby, serving as the
+                    primary language for comprehensive front-end and back-end
+                    development tasks. Engaged in a variety of projects to
+                    enhance and apply skills in real-world scenarios.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Full-time Immersive Development Program: Engaged in a
-                  comprehensive apprenticeship at Momentum at Morehouse,
-                  dedicating full-time efforts to an immersive development
-                  program. The focus of the program centered on honing essential
-                  skills for aspiring Software Developers.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Technical Skill Development: Participated in a curriculum that
-                  reinforced proficiency in key programming languages and
-                  frameworks, including HTML, CSS, JavaScript, Python, and
-                  Django. Acquired hands-on experience and practical knowledge
-                  to prepare for a successful career in software development.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Culminating Team Project and Demo Day: Applied acquired skills
-                  in a team project, showcasing the ability to collaborate and
-                  deliver results. Contributed to the cohort&apos;s success by
-                  presenting the project during the cohort demo day,
-                  demonstrating the practical application of learned concepts
-                  and technologies.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">Interactive Language Learning Game:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the development of an immersive Japanese language
+                    learning game, catering to users from beginner to advanced
+                    proficiency levels. The project involved the utilization of
+                    React for dynamic interfaces, CSS and HTML for engaging
+                    visuals, and Vite for efficient module bundling.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Global News Aggregator:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Engineered a sophisticated web application offering a unique
+                    global news aggregation experience. Users can seamlessly
+                    follow diverse topics from news outlets worldwide.
+                    Technologies employed include Rails for robust backend
+                    functionality, CSS and HTML for responsive design, and
+                    JavaScript for interactive features. Postgresql was utilized
+                    for efficient data management.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Jetpack Rental Platform:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Conceptualized and implemented an innovative AirBnB parody
+                    clone specializing in the rental of personal jetpacks.
+                    Leveraged a technology stack encompassing Rails for backend
+                    logic, CSS and HTML for an intuitive user interface,
+                    JavaScript for dynamic functionality, webpack for efficient
+                    module bundling, and Postgresql for robust database
+                    management.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

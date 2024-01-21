@@ -141,8 +141,8 @@ function Home() {
           />
           <h3 className="h3" style={{ marginBottom: "1rem", width: "65%" }}>
             we source for startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a full-stack lead developer to
-            amplify their internal development processes.
+            rounds and are looking to hire a lead developer to amplify their
+            internal development processes.
           </h3>
         </div>
       </div>
@@ -156,10 +156,10 @@ function Home() {
             we take a different approach to sourcing
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "75%" }}>
-            at learnmutiny our mission is to match you with companies that align
+            at learnmutiny our mission is to match you to companies that align
             with your career goals. <br />
-            we place full-stack developers at startups that are working in up
-            and coming areas of technology.
+            we place lead developers at startups that are working in up and
+            coming areas of technology.
           </h3>
           <div className="icons" style={{ marginBottom: "1rem" }}>
             <FaPython id="python" className="icon" />
@@ -229,8 +229,8 @@ function Home() {
           />
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             we source for startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a full-stack lead developer to
-            amplify their internal development processes.
+            rounds and are looking to hire a lead developer to amplify their
+            internal development processes.
           </h3>
         </div>
       </div>
@@ -244,8 +244,8 @@ function Home() {
             we take a different approach to sourcing
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem", width: "85%" }}>
-            at learnmutiny our mission is to place full-stack developers at
-            startups that are working in up and coming areas of technology.
+            at learnmutiny our mission is to place lead developers at startups
+            that are working in up and coming areas of technology.
           </h3>
           <div className="icons" style={{ marginBottom: "1rem" }}>
             <FaPython id="python" className="icon" />
@@ -321,8 +321,8 @@ function Home() {
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            zion and max are atlanta natives who are invested in the uplifting
-            the startup ecosystem by sourcing high caliber tech talent for
+            zion and max are atlanta natives who are invested in uplifting the
+            startup ecosystem by sourcing high caliber tech talent for
             innovative startups
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
@@ -382,8 +382,8 @@ function Home() {
             </div>
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "80%" }}>
-            zion and max are atlanta natives and are invested in the uplifting
-            the startup ecosystem.
+            zion and max are atlanta natives and are invested in uplifting the
+            startup ecosystem.
           </h2>
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
             learnmutiny is our way of turning ATL into the southeast tech hub.

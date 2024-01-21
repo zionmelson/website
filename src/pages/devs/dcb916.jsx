@@ -8,6 +8,8 @@ import go from "../../assets/svg/go.svg";
 import ruby from "../../assets/svg/ruby.svg";
 import star from "../../assets/svg/star.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Savage() {
@@ -156,7 +158,6 @@ export default function Savage() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -167,6 +168,7 @@ export default function Savage() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -186,7 +188,7 @@ export default function Savage() {
               <h1 className="h1" style={{ width: "100%" }}>
                 Clark Savage
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">seattle, wa</h2>
               <a
                 href="https://learnmutiny.io/developers/dcb916"
                 target="_blank"
@@ -314,7 +316,6 @@ export default function Savage() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -325,6 +326,7 @@ export default function Savage() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

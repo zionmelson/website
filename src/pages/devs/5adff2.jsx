@@ -7,6 +7,8 @@ import java from "../../assets/svg/java.svg";
 import rust from "../../assets/svg/rust.svg";
 import docker from "../../assets/svg/docker.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Douglas() {
@@ -147,7 +149,6 @@ export default function Douglas() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -158,6 +159,7 @@ export default function Douglas() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -297,7 +299,6 @@ export default function Douglas() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -308,6 +309,7 @@ export default function Douglas() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

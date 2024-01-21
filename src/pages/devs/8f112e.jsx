@@ -8,6 +8,8 @@ import postgres from "../../assets/svg/postgres.svg";
 import python from "../../assets/svg/python.svg";
 import mysql from "../../assets/svg/mysql.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Barton() {
@@ -160,7 +162,6 @@ export default function Barton() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -171,6 +172,7 @@ export default function Barton() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -190,7 +192,7 @@ export default function Barton() {
               <h1 className="h1" style={{ width: "100%" }}>
                 Clinton Barton
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">maryland</h2>
               <a
                 href="https://learnmutiny.io/developers/8f112e"
                 target="_blank"
@@ -322,7 +324,6 @@ export default function Barton() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -333,6 +334,7 @@ export default function Barton() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

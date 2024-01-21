@@ -7,6 +7,8 @@ import typescript from "../../assets/svg/typescript.svg";
 import go from "../../assets/svg/go.svg";
 import docker from "../../assets/svg/docker.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Queen() {
@@ -147,7 +149,6 @@ export default function Queen() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -158,6 +159,7 @@ export default function Queen() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -177,7 +179,7 @@ export default function Queen() {
               <h1 className="h1" style={{ width: "100%" }}>
                 Oliver Queen
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">los angeles, ca</h2>
               <a
                 href="https://learnmutiny.io/developers/2e31c0"
                 target="_blank"
@@ -297,7 +299,6 @@ export default function Queen() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -308,6 +309,7 @@ export default function Queen() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

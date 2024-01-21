@@ -8,6 +8,8 @@ import terraform from "../../assets/svg/terraform.svg";
 import java from "../../assets/svg/java.svg";
 import star from "../../assets/svg/star.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Rogers() {
@@ -156,7 +158,6 @@ export default function Rogers() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -167,6 +168,7 @@ export default function Rogers() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -314,7 +316,6 @@ export default function Rogers() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -325,6 +326,7 @@ export default function Rogers() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

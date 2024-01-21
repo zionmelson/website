@@ -7,6 +7,8 @@ import rust from "../../assets/svg/rust.svg";
 import ai from "../../assets/svg/ai.svg";
 import star from "../../assets/svg/star.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Liang() {
@@ -147,7 +149,6 @@ export default function Liang() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -158,6 +159,7 @@ export default function Liang() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -297,7 +299,6 @@ export default function Liang() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -308,6 +309,7 @@ export default function Liang() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>

@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 import queen from "../../assets/mp3/queen.mp3";
 import calen from "../../assets/svg/calen.svg";
@@ -31,6 +25,7 @@ import dotnet from "../../assets/svg/dotnet.svg";
 export default function Queen() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -46,24 +41,6 @@ export default function Queen() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -83,15 +60,9 @@ export default function Queen() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Oliver Queen</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  Oliver Queen{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
@@ -103,7 +74,7 @@ export default function Queen() {
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -114,41 +85,22 @@ export default function Queen() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -157,6 +109,10 @@ export default function Queen() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -381,7 +337,16 @@ export default function Queen() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -401,7 +366,7 @@ export default function Queen() {
                   className="emoji-container"
                   style={{ marginBottom: "1rem", padding: "1rem" }}
                 >
-                  <h4 className="h4">located: los angeles, ca</h4>
+                  <h4 className="h4">located: los angeles, ca </h4>
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -420,7 +385,7 @@ export default function Queen() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    independent contractor
+                    full-time
                   </span>
                   <span
                     className="emoji-container"
@@ -464,151 +429,208 @@ export default function Queen() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Senior Fullstack Engineer</h1>
-              <h2 className="h2">2 yrs</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">Senior Fullstack Engineer</h1>
+                <h2 className="h2">2 yrs</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Open Source Maintainer:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Actively contributed to the open-source npm package
+                    muhammara.js and currently maintains … fork. Ensured ongoing
+                    updates and enhancements to improve package functionality
+                    and reliability.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Open Source Maintainer: Actively contributed to the open-source
-                npm package muhammara.js and currently maintains … fork. Ensured
-                ongoing updates and enhancements to improve package
-                functionality and reliability.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Full-Stack Expertise and Feature Development: Applied skills
-                across the full stack, including C++, Python, Golang, and
-                TypeScript. Implemented rich features such as Angular drag and
-                drop, virtual scrolling, and reusable React components.
-                Developed innovative features like drawing lines on PDFs using
-                the Open Layers API and integrated webforms through Jotforms
-                API.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Infrastructure Management and Technology Upgrades: Managed
-                environment setup for new clients using AWS EKS, performed
-                builds with Jenkins, and orchestrated Docker containers with
-                Kubernetes (K8s). Upgraded AWS Lambda functions to Node18
-                runtime, addressing dependencies and modifying calls to
-                deprecated APIs. Successfully upgraded the app&apos;s frontend
-                to Angular 16 and the backend to Node 18, staying abreast of the
-                latest technologies.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Full-Stack Expertise and Feature Development:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Applied skills across the full stack, including C++, Python,
+                    Golang, and TypeScript. Implemented rich features such as
+                    Angular drag and drop, virtual scrolling, and reusable React
+                    components. Developed innovative features like drawing lines
+                    on PDFs using the Open Layers API and integrated webforms
+                    through Jotforms API.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Infrastructure Management and Technology Upgrades:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Managed environment setup for new clients using AWS EKS,
+                    performed builds with Jenkins, and orchestrated Docker
+                    containers with Kubernetes (K8s). Upgraded AWS Lambda
+                    functions to Node18 runtime, addressing dependencies and
+                    modifying calls to deprecated APIs. Successfully upgraded
+                    the app&apos;s frontend to Angular 16 and the backend to
+                    Node 18, staying abreast of the latest technologies.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Accountant</h1>
-              <h2 className="h2">2 yrs 4 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Accountant</h1>
+                <h2 className="h2">2 yrs & 4 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">
+                    Financial Management for Non-Profit Entities:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Maintained the general ledger for four non-profit entities,
+                    ensuring accurate and up-to-date financial records.
+                    Generated monthly financial reports for the Board of
+                    Directors to provide insights into the organizations&apos;
+                    financial health.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Financial Management for Non-Profit Entities: Maintained the
-                general ledger for four non-profit entities, ensuring accurate
-                and up-to-date financial records. Generated monthly financial
-                reports for the Board of Directors to provide insights into the
-                organizations&apos; financial health.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Financial Analysis and Issue Resolution: Discovered and
-                rectified two instances of double payments made to a vendor in a
-                prior year, demonstrating attention to detail and financial
-                acumen. Successfully negotiated a $5500 credit for the company,
-                showcasing proactive issue resolution.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Process Automation and Efficiency: Improved operational
-                efficiency by creating new invoice templates tailored for
-                Hollywood Walk of Fame star ceremonies. Implemented a C# script
-                to automate the extraction of monthly bank statements and tax
-                documents from banking websites, streamlining the financial data
-                retrieval process.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Financial Analysis and Issue Resolution:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Discovered and rectified two instances of double payments
+                    made to a vendor in a prior year, demonstrating attention to
+                    detail and financial acumen. Successfully negotiated a $5500
+                    credit for the company, showcasing proactive issue
+                    resolution.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Process Automation and Efficiency:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Improved operational efficiency by creating new invoice
+                    templates tailored for Hollywood Walk of Fame star
+                    ceremonies. Implemented a C# script to automate the
+                    extraction of monthly bank statements and tax documents from
+                    banking websites, streamlining the financial data retrieval
+                    process.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Software Engineer Intern</h1>
-              <h2 className="h2">9 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Software Engineer Intern</h1>
+                <h2 className="h2">9 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Automated Testing Contributions:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Contributed scripts for automated testing, utilizing C# and
+                    Selenium WebDriver. Expanded test suites to improve the
+                    Continuous Integration/Continuous Deployment (CI/CD)
+                    process, ensuring efficient and reliable testing procedures.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Automated Testing Contributions: Contributed scripts for
-                automated testing, utilizing C# and Selenium WebDriver. Expanded
-                test suites to improve the Continuous Integration/Continuous
-                Deployment (CI/CD) process, ensuring efficient and reliable
-                testing procedures.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                .NET Web Application Enhancement: Utilized Visual Studio to
-                address bugs and enhance features on a .NET web application.
-                Engaged in both debugging and feature development activities,
-                showcasing a comprehensive understanding of the software
-                development lifecycle.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Agile Collaboration: Actively participated in daily SCRUM
-                meetings, contributing to the Agile development process.
-                Reviewed and discussed bi-weekly sprint tasks, fostering
-                effective communication and collaboration within the development
-                team.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">.NET Web Application Enhancement:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Utilized Visual Studio to address bugs and enhance features
+                    on a .NET web application. Engaged in both debugging and
+                    feature development activities, showcasing a comprehensive
+                    understanding of the software development lifecycle.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Agile Collaboration:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Actively participated in daily SCRUM meetings, contributing
+                    to the Agile development process. Reviewed and discussed
+                    bi-weekly sprint tasks, fostering effective communication
+                    and collaboration within the development team.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -642,14 +664,6 @@ export default function Queen() {
           >
             Oliver Queen
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
@@ -680,35 +694,15 @@ export default function Queen() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -721,6 +715,10 @@ export default function Queen() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -945,7 +943,16 @@ export default function Queen() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -968,7 +975,7 @@ export default function Queen() {
                   className="emoji-container"
                   style={{ marginBottom: "1rem", padding: "1rem" }}
                 >
-                  <h4 className="h4">located: los angeles, ca</h4>
+                  <h4 className="h4">located: los angeles, ca </h4>
                 </span>
                 <div
                   className="horizontal-content-small"
@@ -987,7 +994,7 @@ export default function Queen() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    independent contractor
+                    full-time
                   </span>
                   <span
                     className="emoji-container"
@@ -1009,7 +1016,7 @@ export default function Queen() {
                   >
                     <span
                       className="emoji-container"
-                      style={{ marginBottom: "1rem", width: "100%" }}
+                      style={{ marginBottom: "1rem" }}
                     >
                       <img src={calen} className="emoji-2" alt="calen" />
                       Meet with me
@@ -1026,175 +1033,202 @@ export default function Queen() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className="job-content" onClick={() => setActiveJob(1)}>
                 <h1 className="h1-sub">Senior Fullstack Engineer</h1>
                 <h2 className="h2">2 yrs</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Open Source Maintainer: Actively contributed to the
-                  open-source npm package muhammara.js and currently maintains …
-                  fork. Ensured ongoing updates and enhancements to improve
-                  package functionality and reliability.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Full-Stack Expertise and Feature Development: Applied skills
-                  across the full stack, including C++, Python, Golang, and
-                  TypeScript. Implemented rich features such as Angular drag and
-                  drop, virtual scrolling, and reusable React components.
-                  Developed innovative features like drawing lines on PDFs using
-                  the Open Layers API and integrated webforms through Jotforms
-                  API.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Infrastructure Management and Technology Upgrades: Managed
-                  environment setup for new clients using AWS EKS, performed
-                  builds with Jenkins, and orchestrated Docker containers with
-                  Kubernetes (K8s). Upgraded AWS Lambda functions to Node18
-                  runtime, addressing dependencies and modifying calls to
-                  deprecated APIs. Successfully upgraded the app&apos;s frontend
-                  to Angular 16 and the backend to Node 18, staying abreast of
-                  the latest technologies.
-                </h3>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Open Source Maintainer:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Actively contributed to the open-source npm package
+                    muhammara.js and currently maintains … fork. Ensured ongoing
+                    updates and enhancements to improve package functionality
+                    and reliability.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Full-Stack Expertise and Feature Development:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Applied skills across the full stack, including C++, Python,
+                    Golang, and TypeScript. Implemented rich features such as
+                    Angular drag and drop, virtual scrolling, and reusable React
+                    components. Developed innovative features like drawing lines
+                    on PDFs using the Open Layers API and integrated webforms
+                    through Jotforms API.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Infrastructure Management and Technology Upgrades:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Managed environment setup for new clients using AWS EKS,
+                    performed builds with Jenkins, and orchestrated Docker
+                    containers with Kubernetes (K8s). Upgraded AWS Lambda
+                    functions to Node18 runtime, addressing dependencies and
+                    modifying calls to deprecated APIs. Successfully upgraded
+                    the app&apos;s frontend to Angular 16 and the backend to
+                    Node 18, staying abreast of the latest technologies.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Accountant</h1>
-                <h2 className="h2">2 yrs 4 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Financial Management for Non-Profit Entities: Maintained the
-                  general ledger for four non-profit entities, ensuring accurate
-                  and up-to-date financial records. Generated monthly financial
-                  reports for the Board of Directors to provide insights into
-                  the organizations&apos; financial health.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Financial Analysis and Issue Resolution: Discovered and
-                  rectified two instances of double payments made to a vendor in
-                  a prior year, demonstrating attention to detail and financial
-                  acumen. Successfully negotiated a $5500 credit for the
-                  company, showcasing proactive issue resolution.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Process Automation and Efficiency: Improved operational
-                  efficiency by creating new invoice templates tailored for
-                  Hollywood Walk of Fame star ceremonies. Implemented a C#
-                  script to automate the extraction of monthly bank statements
-                  and tax documents from banking websites, streamlining the
-                  financial data retrieval process.
-                </h3>
+                <h2 className="h2">2 yrs & 4 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">
+                    Financial Management for Non-Profit Entities:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Maintained the general ledger for four non-profit entities,
+                    ensuring accurate and up-to-date financial records.
+                    Generated monthly financial reports for the Board of
+                    Directors to provide insights into the organizations&apos;
+                    financial health.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Financial Analysis and Issue Resolution:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Discovered and rectified two instances of double payments
+                    made to a vendor in a prior year, demonstrating attention to
+                    detail and financial acumen. Successfully negotiated a $5500
+                    credit for the company, showcasing proactive issue
+                    resolution.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Process Automation and Efficiency:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Improved operational efficiency by creating new invoice
+                    templates tailored for Hollywood Walk of Fame star
+                    ceremonies. Implemented a C# script to automate the
+                    extraction of monthly bank statements and tax documents from
+                    banking websites, streamlining the financial data retrieval
+                    process.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
                 <h1 className="h1-sub">Software Engineer Intern</h1>
                 <h2 className="h2">9 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Automated Testing Contributions:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Contributed scripts for automated testing, utilizing C# and
+                    Selenium WebDriver. Expanded test suites to improve the
+                    Continuous Integration/Continuous Deployment (CI/CD)
+                    process, ensuring efficient and reliable testing procedures.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Automated Testing Contributions: Contributed scripts for
-                  automated testing, utilizing C# and Selenium WebDriver.
-                  Expanded test suites to improve the Continuous
-                  Integration/Continuous Deployment (CI/CD) process, ensuring
-                  efficient and reliable testing procedures.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  .NET Web Application Enhancement: Utilized Visual Studio to
-                  address bugs and enhance features on a .NET web application.
-                  Engaged in both debugging and feature development activities,
-                  showcasing a comprehensive understanding of the software
-                  development lifecycle.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Agile Collaboration: Actively participated in daily SCRUM
-                  meetings, contributing to the Agile development process.
-                  Reviewed and discussed bi-weekly sprint tasks, fostering
-                  effective communication and collaboration within the
-                  development team.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">.NET Web Application Enhancement:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Utilized Visual Studio to address bugs and enhance features
+                    on a .NET web application. Engaged in both debugging and
+                    feature development activities, showcasing a comprehensive
+                    understanding of the software development lifecycle.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Agile Collaboration:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Actively participated in daily SCRUM meetings, contributing
+                    to the Agile development process. Reviewed and discussed
+                    bi-weekly sprint tasks, fostering effective communication
+                    and collaboration within the development team.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

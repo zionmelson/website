@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 import wilson from "../../assets/mp3/wilson.mp3";
 import calen from "../../assets/svg/calen.svg";
@@ -31,6 +25,7 @@ import ruby from "../../assets/svg/ruby.svg";
 export default function Wilson() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -46,24 +41,6 @@ export default function Wilson() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -83,15 +60,9 @@ export default function Wilson() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Samuel Wilson</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  Samuel Wilson{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
@@ -103,7 +74,7 @@ export default function Wilson() {
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -114,41 +85,22 @@ export default function Wilson() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -157,6 +109,10 @@ export default function Wilson() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -381,7 +337,16 @@ export default function Wilson() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -464,171 +429,233 @@ export default function Wilson() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Architect and Engineering Manager</h1>
-              <h2 className="h2">2 yrs 6 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">Architect and Engineering Manager</h1>
+                <h2 className="h2">2 yrs & 6 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Strategic Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Provided strategic direction and leadership as an Architect
+                    and Engineering Manager at …, overseeing the design and
+                    development of innovative solutions to meet business
+                    objectives.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Strategic Leadership: Provided strategic direction and
-                leadership as an Architect and Engineering Manager at …,
-                overseeing the design and development of innovative solutions to
-                meet business objectives.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Team Collaboration and Management: Effectively managed and
-                collaborated with engineering teams, fostering a culture of
-                creativity and excellence to deliver high-quality products and
-                services.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Architectural Design and Implementation: Led architectural
-                design and implementation efforts, ensuring scalable and
-                efficient solutions aligned with … technological goals and
-                industry standards.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Team Collaboration and Management:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Effectively managed and collaborated with engineering teams,
+                    fostering a culture of creativity and excellence to deliver
+                    high-quality products and services.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Architectural Design and Implementation:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led architectural design and implementation efforts,
+                    ensuring scalable and efficient solutions aligned with …
+                    technological goals and industry standards.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Engineering Manager</h1>
-              <h2 className="h2">1 yr 7 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Engineering Manager</h1>
+                <h2 className="h2">1 yr & 7 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Strategic Technical Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Provided strategic technical leadership as an Engineering
+                    Manager at …, guiding the engineering team in the
+                    development of innovative solutions aligned with business
+                    objectives.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Strategic Technical Leadership: Provided strategic technical
-                leadership as an Engineering Manager at …, guiding the
-                engineering team in the development of innovative solutions
-                aligned with business objectives.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Team Collaboration and Development: Fostered a collaborative
-                team environment, encouraging effective communication and
-                cooperation among team members, and actively participated in the
-                professional development of the engineering team.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Project Oversight and Delivery: Oversaw project planning,
-                execution, and delivery, ensuring the successful alignment of
-                engineering efforts with company goals and driving efficient
-                project management practices.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Software Development Excellence: Demonstrated software
-                development excellence as a Senior Software Engineer at …,
-                actively contributing to the design and implementation of
-                sophisticated software solutions.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Code Quality Assurance: Upheld high standards of code quality,
-                adhering to best practices in software development, and played a
-                pivotal role in code reviews to maintain a robust and scalable
-                codebase.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Innovation and Collaboration: Engaged in innovative
-                problem-solving, identified and implemented creative solutions
-                to technical challenges, and collaborated cross-functionally to
-                deliver high-performance software products.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Team Collaboration and Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Fostered a collaborative team environment, encouraging
+                    effective communication and cooperation among team members,
+                    and actively participated in the professional development of
+                    the engineering team.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Project Oversight and Delivery:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Oversaw project planning, execution, and delivery, ensuring
+                    the successful alignment of engineering efforts with company
+                    goals and driving efficient project management practices.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Software Development Excellence:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Demonstrated software development excellence as a Senior
+                    Software Engineer at …, actively contributing to the design
+                    and implementation of sophisticated software solutions.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Code Quality Assurance:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Upheld high standards of code quality, adhering to best
+                    practices in software development, and played a pivotal role
+                    in code reviews to maintain a robust and scalable codebase.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Innovation and Collaboration:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Engaged in innovative problem-solving, identified and
+                    implemented creative solutions to technical challenges, and
+                    collaborated cross-functionally to deliver high-performance
+                    software products.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Senior Frontend Platform Engineer</h1>
-              <h2 className="h2">1 yr 2 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Frontend Platform Engineer</h1>
+                <h2 className="h2">1 yr & 2 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Platform Optimization:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led platform optimization initiatives as a Senior Frontend
+                    Platform Engineer at …, focusing on enhancing the
+                    performance, scalability, and overall user experience of the
+                    frontend systems.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Platform Optimization: Led platform optimization initiatives as
-                a Senior Frontend Platform Engineer at …, focusing on enhancing
-                the performance, scalability, and overall user experience of the
-                frontend systems.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Frontend Architecture Design: Played a key role in designing and
-                implementing robust frontend architectures, ensuring alignment
-                with industry best practices and standards for scalable and
-                maintainable code.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Cross-Functional Collaboration: Collaborated with
-                cross-functional teams to integrate frontend systems seamlessly,
-                ensuring efficient communication and coordination between
-                frontend and backend components to deliver cohesive and
-                high-quality products.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Frontend Architecture Design:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Played a key role in designing and implementing robust
+                    frontend architectures, ensuring alignment with industry
+                    best practices and standards for scalable and maintainable
+                    code.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Cross-Functional Collaboration:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Collaborated with cross-functional teams to integrate
+                    frontend systems seamlessly, ensuring efficient
+                    communication and coordination between frontend and backend
+                    components to deliver cohesive and high-quality products.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -662,14 +689,6 @@ export default function Wilson() {
           >
             Samuel Wilson
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
@@ -700,35 +719,15 @@ export default function Wilson() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -741,6 +740,10 @@ export default function Wilson() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -965,7 +968,16 @@ export default function Wilson() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -1046,195 +1058,227 @@ export default function Wilson() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className="job-content" onClick={() => setActiveJob(1)}>
                 <h1 className="h1-sub">Architect and Engineering Manager</h1>
-                <h2 className="h2">2 yrs 6 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Strategic Leadership: Provided strategic direction and
-                  leadership as an Architect and Engineering Manager at …,
-                  overseeing the design and development of innovative solutions
-                  to meet business objectives.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Team Collaboration and Management: Effectively managed and
-                  collaborated with engineering teams, fostering a culture of
-                  creativity and excellence to deliver high-quality products and
-                  services.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Architectural Design and Implementation: Led architectural
-                  design and implementation efforts, ensuring scalable and
-                  efficient solutions aligned with … technological goals and
-                  industry standards.
-                </h3>
+                <h2 className="h2">2 yrs & 6 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Strategic Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Provided strategic direction and leadership as an Architect
+                    and Engineering Manager at …, overseeing the design and
+                    development of innovative solutions to meet business
+                    objectives.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Team Collaboration and Management:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Effectively managed and collaborated with engineering teams,
+                    fostering a culture of creativity and excellence to deliver
+                    high-quality products and services.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Architectural Design and Implementation:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led architectural design and implementation efforts,
+                    ensuring scalable and efficient solutions aligned with …
+                    technological goals and industry standards.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Engineering Manager</h1>
-                <h2 className="h2">1 yr 7 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Strategic Technical Leadership: Provided strategic technical
-                  leadership as an Engineering Manager at …, guiding the
-                  engineering team in the development of innovative solutions
-                  aligned with business objectives.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Team Collaboration and Development: Fostered a collaborative
-                  team environment, encouraging effective communication and
-                  cooperation among team members, and actively participated in
-                  the professional development of the engineering team.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Project Oversight and Delivery: Oversaw project planning,
-                  execution, and delivery, ensuring the successful alignment of
-                  engineering efforts with company goals and driving efficient
-                  project management practices.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Software Development Excellence: Demonstrated software
-                  development excellence as a Senior Software Engineer at …,
-                  actively contributing to the design and implementation of
-                  sophisticated software solutions.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Code Quality Assurance: Upheld high standards of code quality,
-                  adhering to best practices in software development, and played
-                  a pivotal role in code reviews to maintain a robust and
-                  scalable codebase.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Innovation and Collaboration: Engaged in innovative
-                  problem-solving, identified and implemented creative solutions
-                  to technical challenges, and collaborated cross-functionally
-                  to deliver high-performance software products.
-                </h3>
+                <h2 className="h2">1 yr & 7 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
               >
-                <h1 className="h1-sub">Senior Frontend Platform Engineer</h1>
-                <h2 className="h2">1 yr 2 mos</h2>
+                <div className="job-description">
+                  <h2 className="h2">Strategic Technical Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Provided strategic technical leadership as an Engineering
+                    Manager at …, guiding the engineering team in the
+                    development of innovative solutions aligned with business
+                    objectives.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Platform Optimization: Led platform optimization initiatives
-                  as a Senior Frontend Platform Engineer at …, focusing on
-                  enhancing the performance, scalability, and overall user
-                  experience of the frontend systems.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Frontend Architecture Design: Played a key role in designing
-                  and implementing robust frontend architectures, ensuring
-                  alignment with industry best practices and standards for
-                  scalable and maintainable code.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Cross-Functional Collaboration: Collaborated with
-                  cross-functional teams to integrate frontend systems
-                  seamlessly, ensuring efficient communication and coordination
-                  between frontend and backend components to deliver cohesive
-                  and high-quality products.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">Team Collaboration and Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Fostered a collaborative team environment, encouraging
+                    effective communication and cooperation among team members,
+                    and actively participated in the professional development of
+                    the engineering team.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Project Oversight and Delivery:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Oversaw project planning, execution, and delivery, ensuring
+                    the successful alignment of engineering efforts with company
+                    goals and driving efficient project management practices.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Software Development Excellence:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Demonstrated software development excellence as a Senior
+                    Software Engineer at …, actively contributing to the design
+                    and implementation of sophisticated software solutions.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Code Quality Assurance:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Upheld high standards of code quality, adhering to best
+                    practices in software development, and played a pivotal role
+                    in code reviews to maintain a robust and scalable codebase.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Innovation and Collaboration:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Engaged in innovative problem-solving, identified and
+                    implemented creative solutions to technical challenges, and
+                    collaborated cross-functionally to deliver high-performance
+                    software products.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Frontend Platform Engineer</h1>
+                <h2 className="h2">1 yr & 2 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Platform Optimization:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led platform optimization initiatives as a Senior Frontend
+                    Platform Engineer at …, focusing on enhancing the
+                    performance, scalability, and overall user experience of the
+                    frontend systems.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Frontend Architecture Design:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Played a key role in designing and implementing robust
+                    frontend architectures, ensuring alignment with industry
+                    best practices and standards for scalable and maintainable
+                    code.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Cross-Functional Collaboration:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Collaborated with cross-functional teams to integrate
+                    frontend systems seamlessly, ensuring efficient
+                    communication and coordination between frontend and backend
+                    components to deliver cohesive and high-quality products.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

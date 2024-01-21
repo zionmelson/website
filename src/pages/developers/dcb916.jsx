@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 import savage from "../../assets/mp3/savage.mp3";
 import calen from "../../assets/svg/calen.svg";
@@ -30,6 +24,7 @@ import linux from "../../assets/svg/linux.svg";
 export default function Savage() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -45,24 +40,6 @@ export default function Savage() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -82,15 +59,9 @@ export default function Savage() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Clark Savage</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  Clark Savage{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
@@ -102,7 +73,7 @@ export default function Savage() {
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -113,41 +84,22 @@ export default function Savage() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -156,6 +108,10 @@ export default function Savage() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -364,11 +320,20 @@ export default function Savage() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    self-taught
+                    self taught
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -451,172 +416,239 @@ export default function Savage() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Founding Engineer</h1>
-              <h2 className="h2">1 yr 8 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">Founding Engineer</h1>
+                <h2 className="h2">1 yr & 8 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Strategic Consulting:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Established a distinguished software consulting firm,
+                    specializing in custom development, IT outsourcing, staff
+                    augmentation, and support.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Strategic Consulting: Established a distinguished software
-                consulting firm, specializing in custom development, IT
-                outsourcing, staff augmentation, and support.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Technology Focus: Led a skilled team in Rust and Golang,
-                developing Android and iOS apps for fintech, healthcare, and
-                robotic manufacturing.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Technical Proficiency: Expertise in Linux, Software
-                Architecture, Kotlin, Go, and Kubernetes for cutting-edge and
-                scalable solutions.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Client-Centric Values: Committed to craftsmanship, efficiency,
-                and good architecture, ensuring tailored solutions and client
-                satisfaction.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Collaborative Excellence: Excelled in diverse industry
-                collaboration, distinguishing the firm in a competitive market.
-                Embarked on transformative journeys, making a remarkable
-                difference for businesses.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Technology Focus:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led a skilled team in Rust and Golang, developing Android
+                    and iOS apps for fintech, healthcare, and robotic
+                    manufacturing.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Technical Proficiency:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Expertise in Linux, Software Architecture, Kotlin, Go, and
+                    Kubernetes for cutting-edge and scalable solutions.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Client-Centric Values:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Committed to craftsmanship, efficiency, and good
+                    architecture, ensuring tailored solutions and client
+                    satisfaction.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Collaborative Excellence:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Excelled in diverse industry collaboration, distinguishing
+                    the firm in a competitive market. Embarked on transformative
+                    journeys, making a remarkable difference for businesses.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Senior Full-stack Developer</h1>
-              <h2 className="h2">6 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Senior Full-stack Developer</h1>
+                <h2 className="h2">6 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Git Practices Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    In-depth experience teaching and implementing proper Git
+                    practices for both development and production environments
+                    within team settings.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Git Practices Expertise: In-depth experience teaching and
-                implementing proper Git practices for both development and
-                production environments within team settings.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Flutter Mobile Development: Successfully implemented new
-                features in Flutter for mobile applications, contributing to the
-                enhancement of user experiences.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Golang Microservices on GCP: Led the implementation of new
-                features in Golang for microservices, deployed on the Google
-                Cloud Platform (GCP), showcasing proficiency in modern
-                technologies.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Flutter Mobile Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully implemented new features in Flutter for mobile
+                    applications, contributing to the enhancement of user
+                    experiences.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Golang Microservices on GCP:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the implementation of new features in Golang for
+                    microservices, deployed on the Google Cloud Platform (GCP),
+                    showcasing proficiency in modern technologies.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Senior Software Engineer</h1>
-              <h2 className="h2">1 yr</h2>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Senior Software Engineer</h1>
+                <h2 className="h2">1 yr</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Chaos Engineering Platform:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Solely developed and implemented new features for a chaos
+                    engineering software platform on a virtual testing cellular
+                    infrastructure at AT&T Labs.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Chaos Engineering Platform: Solely developed and implemented new
-                features for a chaos engineering software platform on a virtual
-                testing cellular infrastructure at AT&T Labs.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Packet Testing Automation: Introduced a new feature to automate
-                testing of cellular infrastructure, focusing on packet delay and
-                loss, utilizing a Python backend to execute 70 cases across
-                multiple virtual network functions.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Modernization and Deployment: Successfully converted legacy code
-                to run on Docker containers, adopting Kubernetes as the
-                deployment model, and deploying applications on newly
-                provisioned servers.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                CI/CD Implementation and Refactoring: Implemented a robust CI/CD
-                pipeline, adhering to documentation standards, agile practices,
-                and conducted massive refactoring of legacy code.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Milestone Planning and Architecture Design: Led milestone
-                planning and played a key role in designing the new architecture
-                for the chaos engineering platform.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Packet Testing Automation:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Introduced a new feature to automate testing of cellular
+                    infrastructure, focusing on packet delay and loss, utilizing
+                    a Python backend to execute 70 cases across multiple virtual
+                    network functions.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Modernization and Deployment:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully converted legacy code to run on Docker
+                    containers, adopting Kubernetes as the deployment model, and
+                    deploying applications on newly provisioned servers.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">CI/CD Implementation and Refactoring:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Implemented a robust CI/CD pipeline, adhering to
+                    documentation standards, agile practices, and conducted
+                    massive refactoring of legacy code.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Milestone Planning and Architecture Design:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led milestone planning and played a key role in designing
+                    the new architecture for the chaos engineering platform.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -650,14 +682,6 @@ export default function Savage() {
           >
             Clark Savage
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
@@ -688,35 +712,15 @@ export default function Savage() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -729,6 +733,10 @@ export default function Savage() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -937,11 +945,20 @@ export default function Savage() {
                     className="emoji-container"
                     style={{ marginBottom: "1rem", padding: "1rem" }}
                   >
-                    self-taught
+                    self taught
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -1022,196 +1039,233 @@ export default function Savage() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className="job-content" onClick={() => setActiveJob(1)}>
                 <h1 className="h1-sub">Founding Engineer</h1>
-                <h2 className="h2">1 yr 8 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Strategic Consulting: Established a distinguished software
-                  consulting firm, specializing in custom development, IT
-                  outsourcing, staff augmentation, and support.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Technology Focus: Led a skilled team in Rust and Golang,
-                  developing Android and iOS apps for fintech, healthcare, and
-                  robotic manufacturing.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Technical Proficiency: Expertise in Linux, Software
-                  Architecture, Kotlin, Go, and Kubernetes for cutting-edge and
-                  scalable solutions.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Client-Centric Values: Committed to craftsmanship, efficiency,
-                  and good architecture, ensuring tailored solutions and client
-                  satisfaction.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Collaborative Excellence: Excelled in diverse industry
-                  collaboration, distinguishing the firm in a competitive
-                  market. Embarked on transformative journeys, making a
-                  remarkable difference for businesses.
-                </h3>
+                <h2 className="h2">1 yr & 8 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Strategic Consulting:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Established a distinguished software consulting firm,
+                    specializing in custom development, IT outsourcing, staff
+                    augmentation, and support.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Technology Focus:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led a skilled team in Rust and Golang, developing Android
+                    and iOS apps for fintech, healthcare, and robotic
+                    manufacturing.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Technical Proficiency:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Expertise in Linux, Software Architecture, Kotlin, Go, and
+                    Kubernetes for cutting-edge and scalable solutions.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Client-Centric Values:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Committed to craftsmanship, efficiency, and good
+                    architecture, ensuring tailored solutions and client
+                    satisfaction.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Collaborative Excellence:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Excelled in diverse industry collaboration, distinguishing
+                    the firm in a competitive market. Embarked on transformative
+                    journeys, making a remarkable difference for businesses.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Senior Full-stack Developer</h1>
                 <h2 className="h2">6 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Git Practices Expertise: In-depth experience teaching and
-                  implementing proper Git practices for both development and
-                  production environments within team settings.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Flutter Mobile Development: Successfully implemented new
-                  features in Flutter for mobile applications, contributing to
-                  the enhancement of user experiences.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Golang Microservices on GCP: Led the implementation of new
-                  features in Golang for microservices, deployed on the Google
-                  Cloud Platform (GCP), showcasing proficiency in modern
-                  technologies.
-                </h3>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Git Practices Expertise:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    In-depth experience teaching and implementing proper Git
+                    practices for both development and production environments
+                    within team settings.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Flutter Mobile Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully implemented new features in Flutter for mobile
+                    applications, contributing to the enhancement of user
+                    experiences.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Golang Microservices on GCP:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the implementation of new features in Golang for
+                    microservices, deployed on the Google Cloud Platform (GCP),
+                    showcasing proficiency in modern technologies.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
                 <h1 className="h1-sub">Senior Software Engineer</h1>
                 <h2 className="h2">1 yr</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Chaos Engineering Platform:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Solely developed and implemented new features for a chaos
+                    engineering software platform on a virtual testing cellular
+                    infrastructure at AT&T Labs.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Chaos Engineering Platform: Solely developed and implemented
-                  new features for a chaos engineering software platform on a
-                  virtual testing cellular infrastructure at AT&T Labs.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Packet Testing Automation: Introduced a new feature to
-                  automate testing of cellular infrastructure, focusing on
-                  packet delay and loss, utilizing a Python backend to execute
-                  70 cases across multiple virtual network functions.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Modernization and Deployment: Successfully converted legacy
-                  code to run on Docker containers, adopting Kubernetes as the
-                  deployment model, and deploying applications on newly
-                  provisioned servers.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  CI/CD Implementation and Refactoring: Implemented a robust
-                  CI/CD pipeline, adhering to documentation standards, agile
-                  practices, and conducted massive refactoring of legacy code.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Milestone Planning and Architecture Design: Led milestone
-                  planning and played a key role in designing the new
-                  architecture for the chaos engineering platform.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">Packet Testing Automation:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Introduced a new feature to automate testing of cellular
+                    infrastructure, focusing on packet delay and loss, utilizing
+                    a Python backend to execute 70 cases across multiple virtual
+                    network functions.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Modernization and Deployment:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully converted legacy code to run on Docker
+                    containers, adopting Kubernetes as the deployment model, and
+                    deploying applications on newly provisioned servers.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">CI/CD Implementation and Refactoring:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Implemented a robust CI/CD pipeline, adhering to
+                    documentation standards, agile practices, and conducted
+                    massive refactoring of legacy code.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Milestone Planning and Architecture Design:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led milestone planning and played a key role in designing
+                    the new architecture for the chaos engineering platform.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

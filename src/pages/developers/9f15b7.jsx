@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  FaPause,
-  FaPlay,
-  FaVolumeUp,
-  FaVolumeDown,
-  FaVolumeMute,
-} from "react-icons/fa";
+import { FaPause, FaPlay } from "react-icons/fa";
 
 import parker from "../../assets/mp3/parker.mp3";
 import calen from "../../assets/svg/calen.svg";
@@ -29,6 +23,7 @@ import flask from "../../assets/svg/flask.svg";
 export default function Parker() {
   const [videoPaused, setVideoPaused] = useState(false);
   const [videoElement, setVideoElement] = useState(null);
+  const [activeJob, setActiveJob] = useState(1);
 
   const toggleVideo = () => {
     console.log(videoElement);
@@ -44,24 +39,6 @@ export default function Parker() {
         console.log("pause");
         setVideoPaused(false);
       }
-    }
-  };
-
-  const muteVideo = () => {
-    if (videoElement) {
-      videoElement.volume = 0;
-    }
-  };
-
-  const halfVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 0.5;
-    }
-  };
-
-  const fullVolume = () => {
-    if (videoElement) {
-      videoElement.volume = 1;
     }
   };
 
@@ -81,15 +58,9 @@ export default function Parker() {
                   marginTop: "5rem",
                 }}
               >
-                <h1 className="h1">Peter Parker</h1>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "1rem",
-                  }}
-                >
-                  full-stack developer
-                </h3>
+                <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                  Peter Parker{" "}
+                </h1>
               </div>
               <Lottie animationData={voice} />
               <audio
@@ -101,7 +72,7 @@ export default function Parker() {
               </audio>
               <div
                 className="horizontal-content"
-                style={{ marginBottom: "2rem" }}
+                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
               >
                 <button
                   onClick={(e) => {
@@ -112,41 +83,22 @@ export default function Parker() {
                 >
                   {videoPaused ? <FaPlay /> : <FaPause />}
                 </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    muteVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeMute />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    halfVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeDown />
-                </button>
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    fullVolume();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  <FaVolumeUp />
-                </button>
               </div>
-              <span className="emoji-container" style={{ padding: "1rem" }}>
+              <span
+                className="emoji-container"
+                onClick={(e) => {
+                  e.preventDefault();
+                  toggleVideo();
+                }}
+                style={{ padding: "1rem" }}
+              >
                 play me 😄
               </span>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "70%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
@@ -155,6 +107,10 @@ export default function Parker() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -355,7 +311,16 @@ export default function Parker() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
                   desired workplace details
                 </h2>
@@ -438,168 +403,231 @@ export default function Parker() {
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Senior Software Engineer</h1>
-              <h2 className="h2">2 yrs 8 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(1)}>
+                <h1 className="h1-sub">Senior Software Engineer</h1>
+                <h2 className="h2">2 yrs & 8 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Application Development Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Spearheaded the development of a cutting-edge application
+                    within an AGILE framework, collaborating with a skilled team
+                    to enhance an existing microservices framework. Applied
+                    expertise in HTML5, CSS, React, Java, and Postgres to
+                    deliver effective solutions that address critical customer
+                    business challenges.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Application Development Leadership: Spearheaded the development
-                of a cutting-edge application within an AGILE framework,
-                collaborating with a skilled team to enhance an existing
-                microservices framework. Applied expertise in HTML5, CSS, React,
-                Java, and Postgres to deliver effective solutions that address
-                critical customer business challenges.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Object-Oriented Software Components: Designed and developed
-                intricate software components, leveraging a profound
-                understanding of Object-Oriented Programming (OOP) and
-                associated technologies. Ensured the seamless integration of
-                these components into the existing system, contributing to
-                enhanced functionality and performance.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                CI/CD Pipeline Governance: Led the team in the establishment and
-                management of the GitLab CI/CD Pipeline process, streamlining
-                development workflows and ensuring efficient and reliable
-                delivery. Demonstrated proficiency in CI/CD tools such as
-                Jenkins, Gitlab, and Docker, with a focus on containerization
-                using Linux Containers to create Docker images.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">Object-Oriented Software Components:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Designed and developed intricate software components,
+                    leveraging a profound understanding of Object-Oriented
+                    Programming (OOP) and associated technologies. Ensured the
+                    seamless integration of these components into the existing
+                    system, contributing to enhanced functionality and
+                    performance.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">CI/CD Pipeline Governance:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the team in the establishment and management of the
+                    GitLab CI/CD Pipeline process, streamlining development
+                    workflows and ensuring efficient and reliable delivery.
+                    Demonstrated proficiency in CI/CD tools such as Jenkins,
+                    Gitlab, and Docker, with a focus on containerization using
+                    Linux Containers to create Docker images.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Freelance Web Developer</h1>
-              <h2 className="h2">7 yrs</h2>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
+                <h1 className="h1-sub">Freelance Web Developer</h1>
+                <h2 className="h2">7 yrs</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">WordPress Website Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Worked as a freelance WordPress developer specializing in
+                    building websites tailored for small and medium-sized
+                    businesses. Led comprehensive front-end development and
+                    back-end programming for website overhauls, ensuring optimal
+                    performance and user engagement.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                WordPress Website Development: Worked as a freelance WordPress
-                developer specializing in building websites tailored for small
-                and medium-sized businesses. Led comprehensive front-end
-                development and back-end programming for website overhauls,
-                ensuring optimal performance and user engagement.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Traffic Optimization and Feature Enhancement: Successfully
-                increased web traffic by 125% through strategic improvements,
-                including enhanced navigation, dynamic media sections, and
-                integration of social media plugins. Implemented changes that
-                significantly improved the overall user experience and site
-                attractiveness.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                API Platform Development and UI Design Collaboration: Developed
-                a robust API platform to support segmentation, personalized
-                recommendations, and omni-channel messaging, contributing to a
-                more personalized and targeted user experience. Collaborated on
-                the migration of UI designs, ensuring a consistent look and feel
-                throughout the application.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Analytics Integration and Cloud Hosting: Implemented analytics
-                events essential for monitoring and optimizing the performance
-                of developed functionalities. Utilized Elementor Pro for
-                advanced page building and leveraged cloud hosting solutions to
-                ensure scalability, reliability, and optimal website speed.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Traffic Optimization and Feature Enhancement:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully increased web traffic by 125% through strategic
+                    improvements, including enhanced navigation, dynamic media
+                    sections, and integration of social media plugins.
+                    Implemented changes that significantly improved the overall
+                    user experience and site attractiveness.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    API Platform Development and UI Design Collaboration:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Developed a robust API platform to support segmentation,
+                    personalized recommendations, and omni-channel messaging,
+                    contributing to a more personalized and targeted user
+                    experience. Collaborated on the migration of UI designs,
+                    ensuring a consistent look and feel throughout the
+                    application.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Analytics Integration and Cloud Hosting:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Implemented analytics events essential for monitoring and
+                    optimizing the performance of developed functionalities.
+                    Utilized Elementor Pro for advanced page building and
+                    leveraged cloud hosting solutions to ensure scalability,
+                    reliability, and optimal website speed.
+                  </h3>
+                </div>
+              </div>
             </div>
             <div
               className="vertical-content"
               style={{
+                width: "100%",
                 alignItems: "flex-start",
                 textAlign: "left",
                 marginBottom: "2rem",
               }}
             >
-              <h1 className="h1-sub">Junior Engineer</h1>
-              <h2 className="h2">10 mos</h2>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
+                <h1 className="h1-sub">Junior Engineer</h1>
+                <h2 className="h2">10 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">VueJs Frontend Developer:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Demonstrated proficiency in VueJs framework for extensive
+                    frontend development, implementing features with a focus on
+                    user-centric design and interactivity. Applied advanced
+                    layout techniques using Flexbox and CSS Grid, ensuring
+                    responsive and visually appealing user interfaces. Utilized
+                    Material UI and Bootstrap to enhance the design and
+                    functionality of web applications.
+                  </h3>
+                </div>
 
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                VueJs Frontend Developer: Demonstrated proficiency in VueJs
-                framework for extensive frontend development, implementing
-                features with a focus on user-centric design and interactivity.
-                Applied advanced layout techniques using Flexbox and CSS Grid,
-                ensuring responsive and visually appealing user interfaces.
-                Utilized Material UI and Bootstrap to enhance the design and
-                functionality of web applications.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Virtual Machines Management and API Development: Created and
-                managed Virtual Machines to support scalable and efficient
-                application infrastructure. Developed Flask REST APIs using
-                Python and React, enabling seamless communication between the
-                frontend and backend systems. Implemented Swagger UI for
-                comprehensive API documentation, ensuring clarity and
-                accessibility for developers.
-              </h3>
-              <h3
-                className="h3"
-                style={{
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Data Management and Communication: Employed Excel and Google
-                Sheets extensively for data management and analysis, showcasing
-                strong analytical skills. Engaged in direct communication with
-                product owners, providing clear explanations of complex
-                processes in layman&apos;s terms, fostering effective
-                collaboration.
-              </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Virtual Machines Management and API Development:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Created and managed Virtual Machines to support scalable and
+                    efficient application infrastructure. Developed Flask REST
+                    APIs using Python and React, enabling seamless communication
+                    between the frontend and backend systems. Implemented
+                    Swagger UI for comprehensive API documentation, ensuring
+                    clarity and accessibility for developers.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Data Management and Communication:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Employed Excel and Google Sheets extensively for data
+                    management and analysis, showcasing strong analytical
+                    skills. Engaged in direct communication with product owners,
+                    providing clear explanations of complex processes in
+                    layman&apos;s terms, fostering effective collaboration.
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
           <a
@@ -633,14 +661,6 @@ export default function Parker() {
           >
             Peter Parker
           </h1>
-          <h3
-            className="h3"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            full-stack developer
-          </h3>
           <div className="horizontal-content">
             <Lottie animationData={voice} />
             <audio
@@ -671,35 +691,15 @@ export default function Parker() {
               >
                 {videoPaused ? <FaPlay /> : <FaPause />}
               </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  muteVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeMute />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  halfVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeDown />
-              </button>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  fullVolume();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                <FaVolumeUp />
-              </button>
             </div>
-            <span className="emoji-container" style={{ padding: "1rem" }}>
+            <span
+              className="emoji-container"
+              onClick={(e) => {
+                e.preventDefault();
+                toggleVideo();
+              }}
+              style={{ padding: "1rem" }}
+            >
               play me 😄
             </span>
             <div
@@ -712,6 +712,10 @@ export default function Parker() {
                 className="vertical-content"
                 style={{
                   width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
                 }}
               >
                 <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -912,7 +916,16 @@ export default function Parker() {
                   </span>
                 </div>
               </div>
-              <div className="vertical-content" style={{ width: "100%" }}>
+              <div
+                className="vertical-content"
+                style={{
+                  width: "100%",
+                  padding: "0.5rem",
+                  margin: "0.5rem",
+                  border: "3px solid #000",
+                  borderRadius: "1rem",
+                }}
+              >
                 <h2
                   className="h2"
                   style={{ marginBottom: "1rem", marginTop: "2rem" }}
@@ -993,194 +1006,225 @@ export default function Parker() {
                 alignItems: "flex-start",
               }}
             >
-              <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
-              >
+              <div className="job-content" onClick={() => setActiveJob(1)}>
                 <h1 className="h1-sub">Senior Software Engineer</h1>
-                <h2 className="h2">2 yrs 8 mos</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Application Development Leadership: Spearheaded the
-                  development of a cutting-edge application within an AGILE
-                  framework, collaborating with a skilled team to enhance an
-                  existing microservices framework. Applied expertise in HTML5,
-                  CSS, React, Java, and Postgres to deliver effective solutions
-                  that address critical customer business challenges.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Object-Oriented Software Components: Designed and developed
-                  intricate software components, leveraging a profound
-                  understanding of Object-Oriented Programming (OOP) and
-                  associated technologies. Ensured the seamless integration of
-                  these components into the existing system, contributing to
-                  enhanced functionality and performance.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  CI/CD Pipeline Governance: Led the team in the establishment
-                  and management of the GitLab CI/CD Pipeline process,
-                  streamlining development workflows and ensuring efficient and
-                  reliable delivery. Demonstrated proficiency in CI/CD tools
-                  such as Jenkins, Gitlab, and Docker, with a focus on
-                  containerization using Linux Containers to create Docker
-                  images.
-                </h3>
+                <h2 className="h2">2 yrs & 8 mos</h2>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 1 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">Application Development Leadership:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Spearheaded the development of a cutting-edge application
+                    within an AGILE framework, collaborating with a skilled team
+                    to enhance an existing microservices framework. Applied
+                    expertise in HTML5, CSS, React, Java, and Postgres to
+                    deliver effective solutions that address critical customer
+                    business challenges.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Object-Oriented Software Components:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Designed and developed intricate software components,
+                    leveraging a profound understanding of Object-Oriented
+                    Programming (OOP) and associated technologies. Ensured the
+                    seamless integration of these components into the existing
+                    system, contributing to enhanced functionality and
+                    performance.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">CI/CD Pipeline Governance:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Led the team in the establishment and management of the
+                    GitLab CI/CD Pipeline process, streamlining development
+                    workflows and ensuring efficient and reliable delivery.
+                    Demonstrated proficiency in CI/CD tools such as Jenkins,
+                    Gitlab, and Docker, with a focus on containerization using
+                    Linux Containers to create Docker images.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Freelance Web Developer</h1>
                 <h2 className="h2">7 yrs</h2>
-
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  WordPress Website Development: Worked as a freelance WordPress
-                  developer specializing in building websites tailored for small
-                  and medium-sized businesses. Led comprehensive front-end
-                  development and back-end programming for website overhauls,
-                  ensuring optimal performance and user engagement.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Traffic Optimization and Feature Enhancement: Successfully
-                  increased web traffic by 125% through strategic improvements,
-                  including enhanced navigation, dynamic media sections, and
-                  integration of social media plugins. Implemented changes that
-                  significantly improved the overall user experience and site
-                  attractiveness.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  API Platform Development and UI Design Collaboration:
-                  Developed a robust API platform to support segmentation,
-                  personalized recommendations, and omni-channel messaging,
-                  contributing to a more personalized and targeted user
-                  experience. Collaborated on the migration of UI designs,
-                  ensuring a consistent look and feel throughout the
-                  application.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Analytics Integration and Cloud Hosting: Implemented analytics
-                  events essential for monitoring and optimizing the performance
-                  of developed functionalities. Utilized Elementor Pro for
-                  advanced page building and leveraged cloud hosting solutions
-                  to ensure scalability, reliability, and optimal website speed.
-                </h3>
               </div>
               <div
-                className="vertical-content"
-                style={{
-                  alignItems: "flex-start",
-                  textAlign: "left",
-                  marginBottom: "2rem",
-                }}
+                className="description-content"
+                id={activeJob == 2 ? "active" : "inactive"}
               >
+                <div className="job-description">
+                  <h2 className="h2">WordPress Website Development:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Worked as a freelance WordPress developer specializing in
+                    building websites tailored for small and medium-sized
+                    businesses. Led comprehensive front-end development and
+                    back-end programming for website overhauls, ensuring optimal
+                    performance and user engagement.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Traffic Optimization and Feature Enhancement:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Successfully increased web traffic by 125% through strategic
+                    improvements, including enhanced navigation, dynamic media
+                    sections, and integration of social media plugins.
+                    Implemented changes that significantly improved the overall
+                    user experience and site attractiveness.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    API Platform Development and UI Design Collaboration:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Developed a robust API platform to support segmentation,
+                    personalized recommendations, and omni-channel messaging,
+                    contributing to a more personalized and targeted user
+                    experience. Collaborated on the migration of UI designs,
+                    ensuring a consistent look and feel throughout the
+                    application.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">
+                    Analytics Integration and Cloud Hosting:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Implemented analytics events essential for monitoring and
+                    optimizing the performance of developed functionalities.
+                    Utilized Elementor Pro for advanced page building and
+                    leveraged cloud hosting solutions to ensure scalability,
+                    reliability, and optimal website speed.
+                  </h3>
+                </div>
+              </div>
+              <div className="job-content" onClick={() => setActiveJob(3)}>
                 <h1 className="h1-sub">Junior Engineer</h1>
                 <h2 className="h2">10 mos</h2>
+              </div>
+              <div
+                className="description-content"
+                id={activeJob == 3 ? "active" : "inactive"}
+              >
+                <div className="job-description">
+                  <h2 className="h2">VueJs Frontend Developer:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Demonstrated proficiency in VueJs framework for extensive
+                    frontend development, implementing features with a focus on
+                    user-centric design and interactivity. Applied advanced
+                    layout techniques using Flexbox and CSS Grid, ensuring
+                    responsive and visually appealing user interfaces. Utilized
+                    Material UI and Bootstrap to enhance the design and
+                    functionality of web applications.
+                  </h3>
+                </div>
 
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  VueJs Frontend Developer: Demonstrated proficiency in VueJs
-                  framework for extensive frontend development, implementing
-                  features with a focus on user-centric design and
-                  interactivity. Applied advanced layout techniques using
-                  Flexbox and CSS Grid, ensuring responsive and visually
-                  appealing user interfaces. Utilized Material UI and Bootstrap
-                  to enhance the design and functionality of web applications.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Virtual Machines Management and API Development: Created and
-                  managed Virtual Machines to support scalable and efficient
-                  application infrastructure. Developed Flask REST APIs using
-                  Python and React, enabling seamless communication between the
-                  frontend and backend systems. Implemented Swagger UI for
-                  comprehensive API documentation, ensuring clarity and
-                  accessibility for developers.
-                </h3>
-                <h3
-                  className="h3"
-                  style={{
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  Data Management and Communication: Employed Excel and Google
-                  Sheets extensively for data management and analysis,
-                  showcasing strong analytical skills. Engaged in direct
-                  communication with product owners, providing clear
-                  explanations of complex processes in layman&apos;s terms,
-                  fostering effective collaboration.
-                </h3>
+                <div className="job-description">
+                  <h2 className="h2">
+                    Virtual Machines Management and API Development:
+                  </h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Created and managed Virtual Machines to support scalable and
+                    efficient application infrastructure. Developed Flask REST
+                    APIs using Python and React, enabling seamless communication
+                    between the frontend and backend systems. Implemented
+                    Swagger UI for comprehensive API documentation, ensuring
+                    clarity and accessibility for developers.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Data Management and Communication:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Employed Excel and Google Sheets extensively for data
+                    management and analysis, showcasing strong analytical
+                    skills. Engaged in direct communication with product owners,
+                    providing clear explanations of complex processes in
+                    layman&apos;s terms, fostering effective collaboration.
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
+          <a
+            href="https://calendly.com/learnmutiny/company-final-steps"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              width: "100%",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              marginTop: "1rem",
+            }}
+          >
+            <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+              <img src={calen} className="emoji-2" alt="calen" />
+              Meet with me
+            </span>
+          </a>
         </div>
-        <a
-          href="https://calendly.com/learnmutiny/company-final-steps"
-          target="_blank"
-          rel="noreferrer"
-          style={{
-            width: "100%",
-            alignContent: "center",
-            justifyContent: "center",
-            display: "flex",
-            marginTop: "1rem",
-          }}
-        >
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={calen} className="emoji-2" alt="calen" />
-            Meet with me
-          </span>
-        </a>
       </div>
     </div>
   );

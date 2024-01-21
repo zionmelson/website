@@ -29,6 +29,15 @@ import Secord from "./devs/0c04a5";
 import Parker from "./devs/9f15b7";
 import Javert from "./devs/7b81ce";
 import Barnes from "./devs/5f84d3";
+import Allen from "./devs/65f1f4";
+import Jordan from "./devs/4ba90e";
+import Wayne from "./devs/49f40f";
+import Mason from "./devs/405d4a";
+import Drake from "./devs/ae37ba";
+import Smith from "./devs/34b12a";
+import Kord from "./devs/af5bf7";
+import Nelson from "./devs/df2916";
+import Free from "./devs/de412a";
 
 import "../App.css";
 
@@ -48,9 +57,13 @@ export default function Developers() {
             style={{
               justifyContent: "center",
               alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
               padding: "1rem",
               width: "100%",
               marginBottom: "2rem",
+              border: "3px solid #000",
+              borderRadius: "1rem",
             }}
           >
             <h2 className="h2">filter by language</h2>
@@ -106,52 +119,83 @@ export default function Developers() {
             </div>
           </div>
           <div className={active === "python" ? "python-devs" : "hide"}>
+            <Savage />
+            <Wilson />
             <Liang />
-            <Richards />
             <Rogers />
+            <Richards />
+            <Secord />
             <Barnes />
             <Murdock />
+            <Spencer />
+            <Blaze />
+            <Allen />
           </div>
           <div className={active === "go" ? "go-devs" : "hide"}>
             <Savage />
+            <Drake />
             <Spencer />
             <Queen />
             <Barnes />
+            <Jordan />
           </div>
           <div className={active === "rust" ? "rust-devs" : "hide"}>
-            <Savage />
-            <Spencer />
-            <Banner />
-            <Javert />
+            <Wayne />
+            <Free />
+            <Drake />
+            <Mason />
+            <Kord />
+            <Nelson />
           </div>
           <div className={active === "js" ? "js-devs" : "hide"}>
             <Richards />
             <Liang />
-            <Parker />
             <Grimm />
+            <Savage />
+            <Banner />
+            <Parker />
             <Secord />
+            <Spencer />
+            <Allen />
           </div>
           <div className={active === "react" ? "react-devs" : "hide"}>
             <Wilson />
-            <Blaze />
             <Lucas />
+            <Richards />
+            <Liang />
+            <Drake />
+            <Grimm />
+            <Savage />
+            <Blaze />
+            <Secord />
+            <Parker />
             <Barton />
+            <Spencer />
+            <Allen />
           </div>
           <div className={active === "docker" ? "docker-devs" : "hide"}>
             <Javert />
             <Wilson />
             <Rogers />
             <Douglas />
+            <Smith />
             <Queen />
           </div>
           <div className={active === "solidity" ? "solidity-devs" : "hide"}>
             <Liang />
+            <Mason />
+            <Smith />
           </div>
           <div className={active === "node" ? "node-devs" : "hide"}>
+            <Grimm />
             <Savage />
-            <Liang />
-            <Spencer />
             <Lucas />
+            <Richards />
+            <Liang />
+            <Barton />
+            <Secord />
+            <Parker />
+            <Spencer />
           </div>
         </div>
       </div>
@@ -166,9 +210,13 @@ export default function Developers() {
             style={{
               justifyContent: "center",
               alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
               padding: "1rem",
               width: "100%",
               marginBottom: "2rem",
+              border: "3px solid #000",
+              borderRadius: "1rem",
             }}
           >
             <h2 className="h2" style={{ marginBottom: "1rem" }}>
@@ -189,52 +237,83 @@ export default function Developers() {
             </select>
           </div>
           <div className={active === "python" ? "python-devs" : "hide"}>
+            <Savage />
+            <Wilson />
             <Liang />
-            <Richards />
             <Rogers />
+            <Richards />
+            <Secord />
             <Barnes />
             <Murdock />
+            <Spencer />
+            <Blaze />
+            <Allen />
           </div>
           <div className={active === "go" ? "go-devs" : "hide"}>
             <Savage />
+            <Drake />
             <Spencer />
             <Queen />
             <Barnes />
+            <Jordan />
           </div>
           <div className={active === "rust" ? "rust-devs" : "hide"}>
-            <Savage />
-            <Spencer />
-            <Banner />
-            <Javert />
+            <Wayne />
+            <Drake />
+            <Free />
+            <Mason />
+            <Kord />
+            <Nelson />
           </div>
           <div className={active === "js" ? "js-devs" : "hide"}>
             <Richards />
             <Liang />
-            <Parker />
             <Grimm />
+            <Savage />
+            <Banner />
+            <Parker />
             <Secord />
+            <Spencer />
+            <Allen />
           </div>
           <div className={active === "react" ? "react-devs" : "hide"}>
             <Wilson />
-            <Blaze />
             <Lucas />
+            <Richards />
+            <Liang />
+            <Drake />
+            <Grimm />
+            <Savage />
+            <Blaze />
+            <Secord />
+            <Parker />
             <Barton />
+            <Spencer />
+            <Allen />
           </div>
           <div className={active === "docker" ? "docker-devs" : "hide"}>
             <Javert />
             <Wilson />
             <Rogers />
             <Douglas />
+            <Smith />
             <Queen />
           </div>
           <div className={active === "solidity" ? "solidity-devs" : "hide"}>
             <Liang />
+            <Mason />
+            <Smith />
           </div>
           <div className={active === "node" ? "node-devs" : "hide"}>
+            <Grimm />
             <Savage />
-            <Liang />
-            <Spencer />
             <Lucas />
+            <Richards />
+            <Liang />
+            <Barton />
+            <Secord />
+            <Parker />
+            <Spencer />
           </div>
         </div>
       </div>

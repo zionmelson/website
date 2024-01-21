@@ -163,7 +163,7 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we specifically target vetted full-stack senior web developers
+            we specifically target vetted senior developers
           </h2>
           <div className="icons" style={{ marginBottom: "1rem" }}>
             <FaLaravel id="laravel" className="icon" />
@@ -253,7 +253,7 @@ function Startup() {
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specifically target full-stack senior web developers
+            we specifically target senior developers
           </h2>
           <div className="icons" style={{ marginBottom: "2rem" }}>
             <FaDocker
@@ -295,7 +295,7 @@ function Startup() {
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             our matching model
           </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
             expanding teams can be difficult, at learnmutiny we excel at placing
             professionals that compliment the exact needs of your company
           </h2>
@@ -306,7 +306,7 @@ function Startup() {
               width: "20%",
             }}
           />
-          <h3 className="h3" style={{ width: "75%" }}>
+          <h3 className="h3" style={{ width: "70%" }}>
             all of our developers are vetted and have a proven track record of
             industry expertise leading successful teams and developing projects.
           </h3>
@@ -384,7 +384,7 @@ function Startup() {
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
             we know the hiring process can be stressful, because of this we work
-            closely with your team to ensure successful placement
+            closely with your team to ensure successful placements
           </h2>
           <h3 className="h3" style={{ marginBottom: "3rem" }}>
             learnmutiny will refund a pro-rated portion of the fee paid if
@@ -394,7 +394,7 @@ function Startup() {
             className="h2"
             style={{ marginBottom: "1rem", marginTop: "1rem" }}
           >
-            meet with our team to start the source
+            meet with our team to get started
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
@@ -446,7 +446,7 @@ function Startup() {
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             we know the hiring process can be stressful, because of this we work
-            closely with your team to ensure successful placement
+            closely with your team to ensure successful placements
           </h2>
           <h3 className="h3" style={{ marginBottom: "2rem" }}>
             learnmutiny will refund a pro-rated portion of the fee paid if
@@ -456,7 +456,7 @@ function Startup() {
             className="h2"
             style={{ marginBottom: "1rem", marginTop: "1rem" }}
           >
-            meet with our team to start the source
+            meet with our team to get started
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"

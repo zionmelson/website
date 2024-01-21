@@ -7,6 +7,8 @@ import docker from "../../assets/svg/docker.svg";
 import mysql from "../../assets/svg/mysql.svg";
 import azure from "../../assets/svg/azure.svg";
 
+import logo from "../../assets/svg/learnmutiny.svg";
+
 import "../../App.css";
 
 export default function Murdock() {
@@ -147,7 +149,6 @@ export default function Murdock() {
                 alignContent: "center",
                 justifyContent: "center",
                 display: "flex",
-                marginTop: "1rem",
               }}
             >
               <span
@@ -158,6 +159,7 @@ export default function Murdock() {
                 Meet with me
               </span>
             </a>
+            <img src={logo} alt="learnmutiny" />
           </div>
         </div>
       </div>
@@ -177,7 +179,7 @@ export default function Murdock() {
               <h1 className="h1" style={{ width: "100%" }}>
                 Matt Murdock
               </h1>
-              <h2 className="h2">atlanta, ga</h2>
+              <h2 className="h2">houston, tx</h2>
               <a
                 href="https://learnmutiny.io/developers/3f7099"
                 target="_blank"
@@ -297,7 +299,6 @@ export default function Murdock() {
                     alignContent: "center",
                     justifyContent: "center",
                     display: "flex",
-                    marginTop: "1rem",
                   }}
                 >
                   <span
@@ -308,6 +309,7 @@ export default function Murdock() {
                     Meet with me
                   </span>
                 </a>
+                <img src={logo} alt="learnmutiny" />
               </div>
             </div>
           </div>
