@@ -15,24 +15,35 @@ import Hotjar from "@hotjar/browser";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import Queen from "./pages/developers/2e31c0test";
-import Murdock from "./pages/developers/3f7099test";
-import Lucas from "./pages/developers/8a6ca5test";
-import Grimm from "./pages/developers/27ff01test";
-import Richards from "./pages/developers/0459bbtest";
-import Spencer from "./pages/developers/1270f5test";
-import Liang from "./pages/developers/62328ctest";
-import Douglas from "./pages/developers/5adff2test";
-import Rogers from "./pages/developers/601892test";
-import Blaze from "./pages/developers/672957test";
-import Wilson from "./pages/developers/c29e3btest";
-import Savage from "./pages/developers/dcb916test";
-import Barton from "./pages/developers/8f112etest";
-import Banner from "./pages/developers/ae6248test";
-import Secord from "./pages/developers/0c04a5test";
-import Javert from "./pages/developers/7b81cetest";
-import Barnes from "./pages/developers/5f84d3test";
-import Parker from "./pages/developers/9f15b7test";
+import {
+  Quee,
+  Murd,
+  Luca,
+  Grim,
+  Rich,
+  Spen,
+  Lian,
+  Doug,
+  Roge,
+  Blaz,
+  Wils,
+  Sava,
+  Bart,
+  Bann,
+  Seco,
+  Jave,
+  Barn,
+  Park,
+  Alle,
+  Jord,
+  Wayn,
+  Maso,
+  Drak,
+  Kor,
+  Nels,
+  Fre,
+  Smit,
+} from "./devs";
 
 import "./App.css";
 
@@ -96,25 +107,33 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/developers" element={<Developers />} />
 
-            <Route path="/developers/62328c" element={<Liang />} />
-            <Route path="/developers/8a6ca5" element={<Lucas />} />
-            <Route path="/developers/601892" element={<Rogers />} />
-            <Route path="/developers/3f7099" element={<Murdock />} />
-            <Route path="/developers/dcb916" element={<Savage />} />
-            <Route path="/developers/2e31c0" element={<Queen />} />
-            <Route path="/developers/601892" element={<Rogers />} />
-            <Route path="/developers/27ff01" element={<Grimm />} />
-            <Route path="/developers/672957" element={<Blaze />} />
-            <Route path="/developers/0459bb" element={<Richards />} />
-            <Route path="/developers/c29e3b" element={<Wilson />} />
-            <Route path="/developers/5adff2" element={<Douglas />} />
-            <Route path="/developers/1270f5" element={<Spencer />} />
-            <Route path="/developers/8f112e" element={<Barton />} />
-            <Route path="/developers/ae6248" element={<Banner />} />
-            <Route path="/developers/0c04a5" element={<Secord />} />
-            <Route path="/developers/7b81ce" element={<Javert />} />
-            <Route path="/developers/5f84d3" element={<Barnes />} />
-            <Route path="/developers/9f15b7" element={<Parker />} />
+            <Route path="/developers/62328c" element={<Lian />} />
+            <Route path="/developers/8a6ca5" element={<Luca />} />
+            <Route path="/developers/601892" element={<Roge />} />
+            <Route path="/developers/3f7099" element={<Murd />} />
+            <Route path="/developers/dcb916" element={<Sava />} />
+            <Route path="/developers/2e31c0" element={<Quee />} />
+            <Route path="/developers/27ff01" element={<Grim />} />
+            <Route path="/developers/672957" element={<Blaz />} />
+            <Route path="/developers/0459bb" element={<Rich />} />
+            <Route path="/developers/c29e3b" element={<Wils />} />
+            <Route path="/developers/5adff2" element={<Doug />} />
+            <Route path="/developers/1270f5" element={<Spen />} />
+            <Route path="/developers/8f112e" element={<Bart />} />
+            <Route path="/developers/ae6248" element={<Bann />} />
+            <Route path="/developers/0c04a5" element={<Seco />} />
+            <Route path="/developers/7b81ce" element={<Jave />} />
+            <Route path="/developers/5f84d3" element={<Barn />} />
+            <Route path="/developers/9f15b7" element={<Park />} />
+            <Route path="/developers/65f1f4" element={<Alle />} />
+            <Route path="/developers/4ba90e" element={<Jord />} />
+            <Route path="/developers/49f40f" element={<Wayn />} />
+            <Route path="/developers/405d4a" element={<Maso />} />
+            <Route path="/developers/ae37ba" element={<Drak />} />
+            <Route path="/developers/af5bf7" element={<Kor />} />
+            <Route path="/developers/df2916" element={<Nels />} />
+            <Route path="/developers/de412a" element={<Fre />} />
+            <Route path="/developers/34b12a" element={<Smit />} />
 
             <Route path="*" element={<Error />} />
           </Routes>
