@@ -14,7 +14,6 @@ developerHash.json
 .env
 .eslintrc.cjs
 api
-src/devs.js
 
 # Editor directories and files
 .vscode/*
