@@ -274,7 +274,7 @@ function Home() {
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             meet the founders
           </h1>
-          <div className="horizontal-content">
+          <div className="horizontal-content" style={{ gap: "2rem" }}>
             <div className="headshot">
               <img src={zion} className="headshots" alt="zion" />
               <h2
@@ -320,7 +320,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+          <h2 className="h2" style={{ marginBottom: "1rem", width: "90%" }}>
             zion and max are atlanta natives who are invested in uplifting the
             startup ecosystem by sourcing high caliber tech talent for
             innovative startups
