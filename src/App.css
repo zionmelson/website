@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(20deg, #111111, #302f31);
+  background: linear-gradient(20deg, #111111, #181321);
   color: #ffffff;
   transition: all 0.5s linear;
   #light-logo {
@@ -26,7 +26,7 @@
 }
 
 .App-light {
-  background: linear-gradient(20deg, #ffffff, #5dc4ff);
+  background: linear-gradient(20deg, #cbcbcb, #5cbff9);
   color: #302f31;
   transition: all 0.5s linear;
   min-height: 100vh;
@@ -72,13 +72,6 @@
   margin-bottom: 10rem;
 }
 
-.horizontal-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .dev-info {
   width: auto;
   display: flex;
@@ -112,11 +105,26 @@
   text-align: center;
 }
 
+.horizontal-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.video {
+  height: 25rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
+}
+
 .dev-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border: 2px solid #fff;
 }
 
 #light .dev-content {
@@ -125,7 +133,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 2px solid #302f31;
+  border: 2px solid #fff;
   border-radius: 1rem;
 }
 

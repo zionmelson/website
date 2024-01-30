@@ -103,7 +103,7 @@ export default function Banner() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -239,7 +239,7 @@ export default function Banner() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -611,7 +611,7 @@ export default function Banner() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -747,7 +747,7 @@ export default function Banner() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >

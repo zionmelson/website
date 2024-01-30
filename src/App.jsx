@@ -15,6 +15,10 @@ import Hotjar from "@hotjar/browser";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+// import Dana from "./pages/full/dana";
+// import Ian from "./pages/full/Ian";
+// import Jonathan from "./pages/full/Jonathan";
+
 import {
   Quee,
   Murd,
@@ -134,6 +138,10 @@ function App() {
             <Route path="/developers/df2916" element={<Nels />} />
             <Route path="/developers/de412a" element={<Fre />} />
             <Route path="/developers/34b12a" element={<Smit />} />
+
+            {/* <Route path="/developers/dana" element={<Dana />} />
+            <Route path="/developers/ian" element={<Ian />} />
+            <Route path="/developers/jonathan" element={<Jonathan />} /> */}
 
             <Route path="*" element={<Error />} />
           </Routes>
