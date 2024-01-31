@@ -6,6 +6,7 @@ import rust from "../../assets/svg/rust.svg";
 import javascript from "../../assets/svg/javascript.svg";
 import linux from "../../assets/svg/linux.svg";
 import aws from "../../assets/svg/aws.svg";
+import azure from "../../assets/svg/azure.svg";
 import gcp from "../../assets/svg/gcp.svg";
 import terraform from "../../assets/svg/terraform.svg";
 import docker from "../../assets/svg/docker.svg";
@@ -20,7 +21,9 @@ import ianVideo from "../../assets/mp4/ian.mp4";
 import ianIcon from "../../assets/png/ian.png";
 
 import Lottie from "lottie-react";
-import animation from "../../assets/json/animate2.json";
+import smile from "../../assets/json/smile.json";
+import developer from "../../assets/json/developer.json";
+import team from "../../assets/json/team.json";
 
 export default function Ian() {
   const [videoPaused, setVideoPaused] = useState(false);
@@ -146,15 +149,17 @@ export default function Ian() {
                 id="kubernetes-container"
                 style={{
                   marginTop: "0.5rem",
+                  marginBottom: "1rem",
                   padding: "1rem",
                 }}
               >
                 <img src={kubernetes} className="emoji-2" alt="calendar" />
                 Kubernetes
               </span>
+              <h5 className="h5">best attribute</h5>
               <Lottie
-                animationData={animation}
-                id="animation"
+                animationData={smile}
+                id="smile"
                 style={{
                   marginBottom: "1rem",
                   width: "50%",
@@ -222,6 +227,17 @@ export default function Ian() {
                   >
                     <img src={aws} className="emoji-2" alt="calendar" />
                     AWS
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="azure-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={azure} className="emoji-2" alt="calendar" />
+                    Azure
                   </span>
                   <span
                     className="emoji-container"
@@ -623,16 +639,6 @@ export default function Ian() {
           </div>
         </div>
       </div>
-      {/* Education */}
-      <div className="box" style={{ marginBottom: "2rem" }}>
-        <div className="work-content">
-          <h1 className="h1-sub">Education</h1>
-          <h2 className="h2">School Name</h2>
-          <h3 className="h3">School Icon</h3>
-          <h3 className="h3">Degree</h3>
-          <h3 className="h3">Graduation Date</h3>
-        </div>
-      </div>
       {/* Projects */}
       <div className="box" style={{ marginBottom: "2rem" }}>
         <div className="work-content">
@@ -644,11 +650,34 @@ export default function Ian() {
       </div>
       {/* Attributes */}
       <div className="box">
-        <div className="work-content">
-          <h1 className="h1-sub">Attributes</h1>
-          <h2 className="h2">Attributes 1</h2>
-          <h3 className="h3">Attribute Icon</h3>
-          <h3 className="h3">Attributes Description</h3>
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            Attributes
+          </h1>
+        </div>
+        <div
+          className="horizontal-content"
+          style={{ justifyContent: "space-evenly" }}
+        >
+          <div className="attribute">
+            <h1 className="h1-sub">Charismatic</h1>
+            <Lottie animationData={smile} id="smile" />
+            <h5 className="h5">Description</h5>
+          </div>
+          <div className="attribute">
+            <h1 className="h1-sub">Expert Developer</h1>
+            <Lottie
+              animationData={developer}
+              style={{ width: "70%" }}
+              id="developer"
+            />
+            <h5 className="h5">Description</h5>
+          </div>
+          <div className="attribute">
+            <h1 className="h1-sub">Team Builder</h1>
+            <Lottie animationData={team} style={{ width: "70%" }} id="team" />
+            <h5 className="h5">Description</h5>
+          </div>
         </div>
       </div>
     </dix>
