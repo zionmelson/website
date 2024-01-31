@@ -14,7 +14,6 @@ developerHash.json
 .env
 .eslintrc.cjs
 api
-src/assets/mp4
 
 # Editor directories and files
 .vscode/*
