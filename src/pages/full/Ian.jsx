@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { FaPause, FaPlay } from "react-icons/fa";
 
-import calen from "../../assets/svg/calen.svg";
-
 import python from "../../assets/svg/python.svg";
 import rust from "../../assets/svg/rust.svg";
 import javascript from "../../assets/svg/javascript.svg";
@@ -323,7 +321,7 @@ export default function Ian() {
                     Applied deep knowledge of AWS services, with a focus on AWS
                     Security, Amazon S3, Amazon EC2, AWS IAM, AWS Lambda, and
                     overall Cloud Infrastructure to provide efficient and secure
-                    solutions for Onscale's cloud-based applications.
+                    solutions for Onscale&apos;s cloud-based applications.
                   </h3>
                 </div>
                 <div className="job-description">
@@ -337,7 +335,8 @@ export default function Ian() {
                     Demonstrated expertise in cloud platforms such as Google
                     Cloud Platform (GCP), Microsoft Azure, and Kubernetes,
                     ensuring seamless integration and support across diverse
-                    cloud environments to meet the company's evolving needs.
+                    cloud environments to meet the company&apos;s evolving
+                    needs.
                   </h3>
                 </div>
 
