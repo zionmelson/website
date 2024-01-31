@@ -107,7 +107,7 @@ export default function Rogers() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -161,7 +161,6 @@ export default function Rogers() {
                     <img src={go} className="emoji-2" alt="calendar" />
                     Go
                   </span>
-
                   <span
                     className="emoji-container"
                     id="docker-container"
@@ -173,7 +172,6 @@ export default function Rogers() {
                     <img src={docker} className="emoji-2" alt="calendar" />
                     Docker
                   </span>
-
                   <span
                     className="emoji-container"
                     id="kubernetes-container"
@@ -291,7 +289,7 @@ export default function Rogers() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -653,7 +651,7 @@ export default function Rogers() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -837,7 +835,7 @@ export default function Rogers() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -890,6 +888,7 @@ export default function Rogers() {
                   >
                     remote
                   </span>
+
                   <a
                     href="https://calendly.com/learnmutiny/company-final-steps"
                     target="_blank"

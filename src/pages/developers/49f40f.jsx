@@ -1,11 +1,6 @@
 import { useState } from "react";
-import { FaPause, FaPlay } from "react-icons/fa";
 
-import wayne from "../../assets/mp3/wayne.mp3";
 import calen from "../../assets/svg/calen.svg";
-
-import Lottie from "lottie-react";
-import voice from "../../assets/json/voice.json";
 
 import rust from "../../assets/svg/rust.svg";
 import vue from "../../assets/svg/vue.svg";
@@ -15,26 +10,7 @@ import ruby from "../../assets/svg/ruby.svg";
 import aws from "../../assets/svg/aws.svg";
 
 export default function Wayne() {
-  const [videoPaused, setVideoPaused] = useState(false);
-  const [videoElement, setVideoElement] = useState(null);
   const [activeJob, setActiveJob] = useState(1);
-
-  const toggleVideo = () => {
-    console.log(videoElement);
-    console.log(videoElement.paused);
-
-    if (videoElement) {
-      if (videoElement.paused) {
-        videoElement.play();
-        console.log("play");
-        setVideoPaused(true);
-      } else {
-        videoElement.pause();
-        console.log("pause");
-        setVideoPaused(false);
-      }
-    }
-  };
 
   return (
     <div className="main">
@@ -45,65 +21,24 @@ export default function Wayne() {
             className="horizontal-content"
             style={{ alignItems: "flex-start", marginBottom: "1rem" }}
           >
-            <div className="vertical-content">
-              <div
-                className="vertical-content"
-                style={{
-                  marginTop: "5rem",
-                }}
-              >
-                <h1 className="h1" style={{ marginBottom: "1rem" }}>
-                  Bruce Wayne{" "}
-                </h1>
-              </div>
-              <Lottie animationData={voice} />
-              <audio
-                ref={(el) => setVideoElement(el)}
-                style={{ marginBottom: "0.5rem" }}
-              >
-                <source src={wayne} type="audio/mpeg" />
-                Your browser does not support HTML video.
-              </audio>
-              <div
-                className="horizontal-content"
-                style={{ marginTop: "1rem", marginBottom: "2rem", gap: "1rem" }}
-              >
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    toggleVideo();
-                  }}
-                  style={{ fontSize: "1.5rem" }}
-                >
-                  {videoPaused ? <FaPlay /> : <FaPause />}
-                </button>
-              </div>
-              <span
-                className="emoji-container"
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleVideo();
-                }}
-                style={{ padding: "1rem" }}
-              >
-                play me 😄
-              </span>
-            </div>
             <div
               className="vertical-content"
               style={{
-                width: "70%",
+                width: "100%",
                 padding: "1rem",
                 marginTop: "2rem",
               }}
             >
+              <h1 className="h1" style={{ marginBottom: "1rem" }}>
+                Bruce Wayne
+              </h1>
               <div
                 className="vertical-content"
                 style={{
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -239,7 +174,7 @@ export default function Wayne() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -410,7 +345,7 @@ export default function Wayne() {
             >
               <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Senior Software Engineer</h1>
-                <h2 className="h2">2 years</h2>
+                <h2 className="h2">2 yrs</h2>
               </div>
               <div
                 className="description-content"
@@ -578,46 +513,6 @@ export default function Wayne() {
             Bruce Wayne
           </h1>
           <div className="horizontal-content">
-            <Lottie animationData={voice} />
-            <audio
-              ref={(el) => setVideoElement(el)}
-              style={{ marginBottom: "0.5rem" }}
-            >
-              <source src={wayne} type="audio/mpeg" />
-              Your browser does not support HTML video.
-            </audio>
-            <div
-              className="horizontal-content"
-              style={{
-                marginBottom: "1rem",
-                width: "100%",
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                justifyContent: "center",
-                textAlign: "center",
-              }}
-            >
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleVideo();
-                }}
-                style={{ fontSize: "2rem" }}
-              >
-                {videoPaused ? <FaPlay /> : <FaPause />}
-              </button>
-            </div>
-            <span
-              className="emoji-container"
-              onClick={(e) => {
-                e.preventDefault();
-                toggleVideo();
-              }}
-              style={{ padding: "1rem" }}
-            >
-              play me 😄
-            </span>
             <div
               className="vertical-content"
               style={{
@@ -630,7 +525,7 @@ export default function Wayne() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -766,7 +661,7 @@ export default function Wayne() {
                   width: "100%",
                   padding: "0.5rem",
                   margin: "0.5rem",
-                  border: "3px solid #000",
+                  border: "3px solid #fff",
                   borderRadius: "1rem",
                 }}
               >
@@ -919,7 +814,7 @@ export default function Wayne() {
               </div>
               <div className="job-content" onClick={() => setActiveJob(2)}>
                 <h1 className="h1-sub">Senior Software Engineer</h1>
-                <h2 className="h2">2 years</h2>
+                <h2 className="h2">2 yrs</h2>
               </div>
               <div
                 className="description-content"
