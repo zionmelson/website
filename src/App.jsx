@@ -12,11 +12,14 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Hotjar from "@hotjar/browser";
 
+import { PiMoonStarsDuotone } from "react-icons/pi";
+import { IoPartlySunny } from "react-icons/io5";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 // import Dana from "./pages/full/dana";
-// import Ian from "./pages/full/Ian";
+import Ian from "./pages/full/Ian";
 // import Jonathan from "./pages/full/Jonathan";
 
 import {
@@ -92,17 +95,20 @@ function App() {
         >
           <Navbar />
 
-          <button onClick={toggleTheme} className="theme-button">
-            {theme === "" ? (
-              <h4 className="h4" style={{ color: "#302f31" }}>
-                darkmode
-              </h4>
-            ) : (
-              <h4 className="h4" style={{ color: "#fff" }}>
-                lightmode
-              </h4>
-            )}
-          </button>
+          {theme === "" ? (
+            <PiMoonStarsDuotone
+              className="daytime"
+              onClick={toggleTheme}
+              style={{ color: "yellow" }}
+            />
+          ) : (
+            <IoPartlySunny
+              className="daytime"
+              onClick={toggleTheme}
+              style={{ color: "#fff" }}
+            />
+          )}
+
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/startup" element={<Startup />} />
@@ -139,9 +145,9 @@ function App() {
             <Route path="/developers/de412a" element={<Fre />} />
             <Route path="/developers/34b12a" element={<Smit />} />
 
-            {/* <Route path="/developers/dana" element={<Dana />} />
+            {/* <Route path="/developers/dana" element={<Dana />} /> */}
             <Route path="/developers/ian" element={<Ian />} />
-            <Route path="/developers/jonathan" element={<Jonathan />} /> */}
+            {/* <Route path="/developers/jonathan" element={<Jonathan />} />  */}
 
             <Route path="*" element={<Error />} />
           </Routes>

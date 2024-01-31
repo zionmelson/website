@@ -161,7 +161,6 @@ export default function Rogers() {
                     <img src={go} className="emoji-2" alt="calendar" />
                     Go
                   </span>
-
                   <span
                     className="emoji-container"
                     id="docker-container"
@@ -173,7 +172,6 @@ export default function Rogers() {
                     <img src={docker} className="emoji-2" alt="calendar" />
                     Docker
                   </span>
-
                   <span
                     className="emoji-container"
                     id="kubernetes-container"
