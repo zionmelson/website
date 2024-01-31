@@ -286,6 +286,7 @@
 }
 
 #score {
+  cursor: pointer;
   transition: all 0.3s ease-in;
 }
 
@@ -1217,6 +1218,10 @@
     width: 15rem;
   }
 
+  .daytime {
+    display: none;
+  }
+
   .horizontal-content {
     flex-direction: column;
     align-items: center;
@@ -1327,10 +1332,6 @@
     padding-top: 8rem;
   }
 
-  .theme-button {
-    display: none;
-  }
-
   .box,
   .startup-box,
   .support-box {
@@ -1415,6 +1416,10 @@
     text-align: center;
   }
 
+  .desktop {
+    display: none;
+  }
+
   .and {
     display: none;
   }
@@ -1467,6 +1472,10 @@
     margin-left: 12rem;
     background-color: #302f31;
     padding: 0.5rem;
+  }
+
+  .desktop {
+    display: none;
   }
 
   #weird-div {

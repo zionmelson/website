@@ -450,6 +450,10 @@
     display: none;
   }
 
+  .og-logo {
+    display: none;
+  }
+
   .bear-logo {
     width: 100%;
     display: block;

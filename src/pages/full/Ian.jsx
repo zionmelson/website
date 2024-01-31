@@ -14,6 +14,7 @@ import kubernetes from "../../assets/svg/kubernetes.svg";
 import linkedIn from "../../assets/svg/link.svg";
 import github from "../../assets/svg/git.svg";
 import onscale from "../../assets/svg/onscale.svg";
+import pyatl from "../../assets/svg/pyatl.svg";
 
 import ianVideo from "../../assets/mp4/ian.mp4";
 import ianIcon from "../../assets/png/ian.png";
@@ -196,109 +197,98 @@ export default function Ian() {
                     2 years
                   </h3>
                 </div>
+
                 <div
                   className="horizontal-content"
                   style={{
-                    width: "70%",
-                    alignSelf: "end",
-                    justifySelf: "end",
+                    width: "60%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "end",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                    padding: 0,
+                    margin: 0,
                   }}
                 >
-                  <div
-                    className="horizontal-content"
+                  <span
+                    className="emoji-container"
+                    id="aws-container"
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      justifyContent: "end",
-                      flexWrap: "wrap",
-                      gap: "0.5rem",
-                      padding: 0,
-                      margin: 0,
+                      marginBottom: "1rem",
+                      padding: "1rem",
                     }}
                   >
-                    <span
-                      className="emoji-container"
-                      id="aws-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={aws} className="emoji-2" alt="calendar" />
-                      AWS
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="gcp-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={gcp} className="emoji-2" alt="calendar" />
-                      GCP
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="linux-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={linux} className="emoji-2" alt="calendar" />
-                      Linux
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="terraform-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={terraform} className="emoji-2" alt="calendar" />
-                      Terraform
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="docker-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={docker} className="emoji-2" alt="calendar" />
-                      Docker
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="kubernetes-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img
-                        src={kubernetes}
-                        className="emoji-2"
-                        alt="calendar"
-                      />
-                      Kubernetes
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="python-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={python} className="emoji-2" alt="calendar" />
-                      Python
-                    </span>
-                  </div>
+                    <img src={aws} className="emoji-2" alt="calendar" />
+                    AWS
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="gcp-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={gcp} className="emoji-2" alt="calendar" />
+                    GCP
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="linux-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={linux} className="emoji-2" alt="calendar" />
+                    Linux
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="terraform-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={terraform} className="emoji-2" alt="calendar" />
+                    Terraform
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="docker-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={docker} className="emoji-2" alt="calendar" />
+                    Docker
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="kubernetes-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={kubernetes} className="emoji-2" alt="calendar" />
+                    Kubernetes
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="python-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={python} className="emoji-2" alt="calendar" />
+                    Python
+                  </span>
                 </div>
               </div>
               <div
@@ -398,46 +388,54 @@ export default function Ian() {
                     1 year & 2 months
                   </h3>
                 </div>
-                <div className="horizontal-content">
-                  <div className="horizontal-content" style={{ gap: "0.5rem" }}>
-                    <span
-                      className="emoji-container"
-                      id="python-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={python} className="emoji-2" alt="calendar" />
-                      Python
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="javascript-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img
-                        src={javascript}
-                        className="emoji-2"
-                        alt="calendar"
-                      />
-                      Javascript
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="linux-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={linux} className="emoji-2" alt="calendar" />
-                      Linux
-                    </span>
-                  </div>
+
+                <div
+                  className="horizontal-content"
+                  style={{
+                    width: "60%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "end",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                    padding: 0,
+                    margin: 0,
+                  }}
+                >
+                  <span
+                    className="emoji-container"
+                    id="python-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={python} className="emoji-2" alt="calendar" />
+                    Python
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="javascript-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={javascript} className="emoji-2" alt="calendar" />
+                    Javascript
+                  </span>
+                  <span
+                    className="emoji-container"
+                    id="linux-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={linux} className="emoji-2" alt="calendar" />
+                    Linux
+                  </span>
                 </div>
               </div>
               <div
@@ -499,29 +497,128 @@ export default function Ian() {
               </div>
             </div>
           </div>
+          <div
+            className="work-content"
+            style={{
+              alignItems: "start",
+            }}
+          >
+            <div className="vertical-content">
+              <div className="horizontal-content" style={{ width: "100%" }}>
+                <div
+                  className="vertical-content"
+                  style={{
+                    alignItems: "start",
+                    justifyContent: "start",
+                    textAlign: "left",
+                  }}
+                >
+                  <h1 className="h1-sub">PyATL</h1>
+                  <h2 className="h2">Core Organizer of Atlanta Python Group</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    4 years
+                  </h3>
+                </div>
 
-          <div className="work-content">
-            <div
-              className="vertical-content"
-              style={{
-                alignItems: "start",
-                justifyContent: "start",
-                textAlign: "left",
-              }}
-            >
-              <h1 className="h1-sub">PyATL</h1>
-              <h2 className="h2">Core Organizer of Atlanta Python Group</h2>
-              <h3 className="h3">4 years</h3>
-            </div>
-            <div className="vertical-content">
-              <h3 className="h3">Job Description</h3>
-              <h3 className="h3">Job Salary</h3>
-            </div>
-            <div className="vertical-content">
-              <h2 className="h2">skill learned:</h2>
-              <h3 className="h3">skill</h3>
-              <h3 className="h3">skill</h3>
-              <h3 className="h3">skill</h3>
+                <div
+                  className="horizontal-content"
+                  style={{
+                    width: "60%",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "end",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                    padding: 0,
+                    margin: 0,
+                  }}
+                >
+                  <span
+                    className="emoji-container"
+                    id="python-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={python} className="emoji-2" alt="calendar" />
+                    Python
+                  </span>
+                </div>
+              </div>
+              <div
+                className="vertical-content"
+                style={{
+                  alignItems: "start",
+                  justifyContent: "start",
+                  textAlign: "left",
+                  width: "100%",
+                }}
+              >
+                <div className="job-description">
+                  <h2 className="h2">Event Coordination:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.2rem",
+                    }}
+                  >
+                    Orchestrated and managed key activities as a core organizer
+                    for an Atlanta Python Group, ensuring successful planning
+                    and execution of Python-focused events, meetups, and
+                    community engagements.
+                  </h3>
+                </div>
+                <div className="job-description">
+                  <h2 className="h2">Open Source Contribution:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.2rem",
+                    }}
+                  >
+                    Actively contributed to an open-source web application,
+                    employing Python Django and Javascript, to enhance
+                    functionality, optimize performance, and promote
+                    collaborative development within the broader tech community.
+                    needs.
+                  </h3>
+                </div>
+
+                <div className="job-description">
+                  <h2 className="h2">Industry Partnerships:</h2>
+                  <h3
+                    className="h3"
+                    style={{
+                      marginBottom: "0.2rem",
+                    }}
+                  >
+                    Engaged in collaborative efforts with industry leaders such
+                    as JFrog, Microsoft, and No Starch Press, fostering mutually
+                    beneficial relationships and contributing to the exchange of
+                    knowledge and resources within the technology sector.
+                  </h3>
+                </div>
+                <h2 className="h2" style={{ marginTop: "0.5rem" }}>
+                  Salary: $50,000
+                </h2>
+              </div>
+              <img
+                src={pyatl}
+                style={{
+                  alignSelf: "end",
+                  justifySelf: "end",
+                  width: "5%",
+                }}
+                alt="pyatl"
+                className="emoji"
+              />
             </div>
           </div>
         </div>
