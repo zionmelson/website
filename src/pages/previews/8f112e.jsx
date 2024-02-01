@@ -189,7 +189,7 @@ export default function Barton() {
         >
           <div className="vertical-content">
             <div className="vertical-content" style={{ marginBottom: "1rem" }}>
-              <h1 className="h1" style={{ width: "100%" }}>
+              <h1 className="h1-sub" style={{ width: "100%" }}>
                 Clinton Barton
               </h1>
               <h2 className="h2">maryland</h2>

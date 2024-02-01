@@ -185,7 +185,7 @@ export default function Grimm() {
         >
           <div className="vertical-content">
             <div className="vertical-content" style={{ marginBottom: "1rem" }}>
-              <h1 className="h1" style={{ width: "100%" }}>
+              <h1 className="h1-sub" style={{ width: "100%" }}>
                 Benjamin Grimm
               </h1>
               <h2 className="h2">hawaii</h2>

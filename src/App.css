@@ -26,7 +26,7 @@
 }
 
 .App-light {
-  background: linear-gradient(20deg, #cbcbcb, #5cbff9);
+  background: linear-gradient(20deg, #fffcfc, #5cbff9);
   color: #302f31;
   transition: all 0.5s linear;
   min-height: 100vh;
@@ -299,10 +299,12 @@
   background: linear-gradient(135deg, #111111, #222123);
   border-radius: 1rem;
   transition: all 0.4s ease-in;
+  cursor: pointer;
 }
 
 .attribute:hover {
   border-color: #e0e0e0;
+  scale: 1.05;
   transition: all 0.4s ease-in;
 }
 
@@ -320,6 +322,7 @@
   background: linear-gradient(235deg, #b8e5ff, #5dc4ff);
   border-radius: 1rem;
   transition: all 0.4s ease-in;
+  cursor: pointer;
 }
 
 #light .attribute:hover {
@@ -483,6 +486,13 @@
   cursor: pointer;
 }
 
+.github-icon {
+  width: 8rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  padding: 0;
+}
+
 .headshot {
   display: flex;
   flex-direction: column;
@@ -526,6 +536,10 @@
 
 #light #startup-box {
   border: 2px solid #099400;
+}
+
+#light #github-name {
+  color: #fff;
 }
 
 .span {
@@ -607,6 +621,73 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.tooltip {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  position: absolute;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  top: 1.5rem;
+  right: 4.2rem;
+}
+
+#light .tooltip {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  position: absolute;
+  border: 2px solid #302f31;
+  color: #302f31;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  top: 1.5rem;
+  right: 4.2rem;
+}
+
+.tooltip-bar {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #302f31;
+  background: linear-gradient(135deg, #111111, #222123);
+  position: absolute;
+  top: -2rem;
+  right: 2rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  z-index: 1;
+}
+
+#light .tooltip-bar {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #302f31;
+  background: linear-gradient(235deg, #b8e5ff, #5dc4ff);
+  position: absolute;
+  top: -2rem;
+  right: 2rem;
+  padding: 0.5rem;
+  z-index: 1;
 }
 
 .icon {
@@ -1146,6 +1227,19 @@
   width: auto;
 }
 
+.github-repo {
+  border: 1px solid #fff;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #302f31;
+  background: linear-gradient(135deg, #111111, #222123);
+}
+
+.github-repo:hover {
+  border-color: #fff;
+  transition: all 0.4s ease-in;
+}
+
 .chars {
   font-weight: 900;
   font-size: 3rem;
@@ -1193,6 +1287,17 @@
     padding-top: 6rem;
   }
 
+  .video {
+    width: 50rem;
+    height: 15rem;
+    padding: 1em;
+    border-radius: 2rem;
+    border: 3px solid #302f31;
+    background: linear-gradient(135deg, #111111, #222123);
+    transition: all 0.4s ease-in;
+    margin-bottom: 1rem;
+  }
+
   .theme-button {
     display: none;
   }
@@ -1211,7 +1316,7 @@
   .startup-box-mobile,
   .support-box-mobile {
     display: block;
-    width: 90%;
+    width: 100%;
     margin: 1rem;
     margin-bottom: 3rem;
     padding: 1rem;
@@ -1301,10 +1406,57 @@
     text-align: center;
   }
 
+  .memoji {
+    width: 10rem;
+    padding: 0;
+    transition: all 0.2s ease-in;
+    z-index: 0;
+  }
+
+  .memoji:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease-in;
+  }
+
+  .memoji-container {
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid #302f31;
+    background: linear-gradient(135deg, #111111, #222123);
+    border-radius: 60rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    transition: all 0.2s ease-in;
+    z-index: 1;
+  }
+
+  .memoji-container:hover {
+    border-color: #e0e0e0;
+    transition: all 0.2s ease-in;
+    scale: 1.1;
+  }
+
+  #light .memoji-container {
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid #fff;
+    background: linear-gradient(235deg, #b8e5ff, #5dc4ff);
+    border-radius: 60rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #light .memoji-container:hover {
+    border-color: #302f31;
+    transition: all 0.2s ease-in;
+    scale: 1.1;
+  }
+
   .emoji-container {
     min-width: 6rem;
     height: 2rem;
-    background-color: #000;
+    background-color: #333333;
     padding: 0.3;
     align-items: center;
     justify-content: center;

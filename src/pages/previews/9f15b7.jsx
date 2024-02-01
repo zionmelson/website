@@ -176,7 +176,7 @@ export default function Parker() {
         >
           <div className="vertical-content">
             <div className="vertical-content" style={{ marginBottom: "1rem" }}>
-              <h1 className="h1" style={{ width: "100%" }}>
+              <h1 className="h1-sub" style={{ width: "100%" }}>
                 Peter Parker
               </h1>
               <h2 className="h2">atlanta, ga</h2>
