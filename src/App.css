@@ -78,15 +78,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #111111, #222123);
+  background: #222123;
 }
 
 #light .dev-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(235deg, #b8e5ff, #5dc4ff);
+  color: #fff;
 }
 
 .horizontal-content-small {
@@ -110,6 +106,36 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.audio {
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 3px solid #302f31;
+  background: linear-gradient(135deg, #111111, #222123);
+  transition: all 0.4s ease-in;
+  margin-bottom: 1rem;
+}
+
+.audio:hover {
+  border-color: #e0e0e0;
+  transition: all 0.4s ease-in;
+  scale: 1.05;
+}
+
+#light .audio {
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 3px solid #fff;
+  background: linear-gradient(235deg, #b8e5ff, #5dc4ff);
+  margin-bottom: 1rem;
+}
+
+#light .audio:hover {
+  border-color: #302f31;
+  transition: all 0.4s ease-in;
 }
 
 .video {
@@ -139,6 +165,15 @@
 #light .video:hover {
   border-color: #302f31;
   transition: all 0.4s ease-in;
+}
+
+.speak {
+  transition: all 0.3s ease-in;
+}
+
+.speak:hover {
+  scale: 1.1;
+  transition: all 0.3s ease-in;
 }
 
 .dev-content {
@@ -672,7 +707,7 @@
   right: 2rem;
   border-radius: 0.5rem;
   padding: 0.5rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 #light .tooltip-bar {
@@ -783,6 +818,28 @@
 
 #light #react-container:hover {
   background-color: #61dafb;
+  color: #fff;
+}
+
+#redux:hover {
+  color: #764abc;
+}
+
+#redux-active {
+  color: #764abc;
+}
+
+#redux-container:hover {
+  background-color: #764abc;
+  color: #fff;
+}
+
+#light #redux:hover {
+  color: #764abc;
+}
+
+#light #redux-container:hover {
+  background-color: #764abc;
   color: #fff;
 }
 
@@ -1280,6 +1337,33 @@
 
 .mobile {
   display: none;
+}
+
+.company-logos {
+  overflow: hidden;
+}
+
+.logos-container {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  width: 50rem;
+}
+
+.logos-container img {
+  height: 80px;
+  width: auto;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-50rem);
+  }
+  100% {
+    transform: translateX(50rem);
+  }
 }
 
 @media (max-width: 767px) {

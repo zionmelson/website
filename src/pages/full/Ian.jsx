@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import { FaPause, FaPlay } from "react-icons/fa";
 import { useSpring, animated } from "react-spring";
 
 import calen from "../../assets/svg/calen.svg";
@@ -46,8 +45,6 @@ function Number({ n }) {
 }
 
 export default function Ian() {
-  const [videoPaused, setVideoPaused] = useState(false);
-  const [videoElement, setVideoElement] = useState(null);
   const [githubData, setGithubData] = useState({});
   const [repoData, setRepoData] = useState([]);
   const [toolTip, setToolTip] = useState(false);
@@ -57,23 +54,6 @@ export default function Ian() {
       top: 0,
       behavior: "smooth",
     });
-  };
-
-  const toggleVideo = () => {
-    console.log(videoElement);
-    console.log(videoElement.paused);
-
-    if (videoElement) {
-      if (videoElement.paused) {
-        videoElement.play();
-        console.log("play");
-        setVideoPaused(true);
-      } else {
-        videoElement.pause();
-        console.log("pause");
-        setVideoPaused(false);
-      }
-    }
   };
 
   const fetchGitHub = async () => {
@@ -114,40 +94,9 @@ export default function Ian() {
           }}
         >
           <div className="vertical-content" style={{ padding: "1rem" }}>
-            <video
-              onClick={(e) => {
-                e.preventDefault();
-                toggleVideo();
-              }}
-              ref={(el) => setVideoElement(el)}
-              className="video"
-            >
+            <video className="video" controls>
               <source autoPlay={true} src={ianVideo} type="video/mp4" />
             </video>
-            <div
-              className="horizontal-content"
-              style={{ gap: "1rem", marginTop: "1rem" }}
-            >
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleVideo();
-                }}
-                style={{ fontSize: "1.5rem" }}
-              >
-                {videoPaused ? <FaPlay /> : <FaPause />}
-              </button>
-              <span
-                className="emoji-container"
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleVideo();
-                }}
-                style={{ padding: "1rem" }}
-              >
-                play me 😄
-              </span>
-            </div>
           </div>
           <div className="vertical-content" style={{ padding: "1rem" }}>
             <div className="info-content" style={{ position: "relative" }}>
@@ -242,6 +191,42 @@ export default function Ian() {
                 }}
               />
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Attributes */}
+      <div className="box" style={{ marginBottom: "2rem" }}>
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            Attributes
+          </h1>
+        </div>
+        <div
+          className="horizontal-content"
+          style={{ justifyContent: "space-evenly" }}
+        >
+          <div className="attribute">
+            <h1 className="h1-sub">Charismatic</h1>
+            <Lottie animationData={smile} id="smile" />
+            <h5 className="h5">Creates a sense of ease around team members.</h5>
+          </div>
+          <div className="attribute">
+            <h1 className="h1-sub">Expert Developer</h1>
+            <Lottie
+              animationData={developer}
+              style={{ width: "70%" }}
+              id="developer"
+            />
+            <h5 className="h5">
+              Well versed in all things technology, both front & back-end.
+            </h5>
+          </div>
+          <div className="attribute">
+            <h1 className="h1-sub">Team Builder</h1>
+            <Lottie animationData={team} style={{ width: "70%" }} id="team" />
+            <h5 className="h5">
+              Engages team members and takes initiative to led.
+            </h5>
           </div>
         </div>
       </div>
@@ -443,7 +428,7 @@ export default function Ian() {
                   </h3>
                 </div>
                 <h2 className="h2" style={{ marginTop: "0.5rem" }}>
-                  Salary: $150,000
+                  Salary: $64,000
                 </h2>
               </div>
               <a href="https://onscale.com/" target="_blank" rel="noreferrer">
@@ -574,17 +559,14 @@ export default function Ian() {
                     knowledge and resources within the technology sector.
                   </h3>
                 </div>
-                <h2 className="h2" style={{ marginTop: "0.5rem" }}>
-                  Salary: $50,000
-                </h2>
               </div>
               <a href="https://pyatl.dev/" target="_blank" rel="noreferrer">
                 <img
                   src={pyatl}
                   style={{
-                    right: "1rem",
-                    bottom: "0.2rem",
-                    width: "5%",
+                    right: "0rem",
+                    bottom: "0rem",
+                    width: "2.5%",
                     position: "absolute",
                   }}
                   alt="pyatl"
@@ -724,14 +706,14 @@ export default function Ian() {
                 </h3>
               </div>
               <h2 className="h2" style={{ marginTop: "0.5rem" }}>
-                Salary: $120,000
+                Salary: $45 per hour
               </h2>
             </div>
           </div>
         </div>
       </div>
       {/* Projects */}
-      <div className="box" style={{ marginBottom: "2rem" }}>
+      <div className="box">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
             Projects
@@ -803,42 +785,6 @@ export default function Ian() {
             />
           </a>
         </div>
-      </div>
-      {/* Attributes */}
-      <div className="box">
-        <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            Attributes
-          </h1>
-        </div>
-        <div
-          className="horizontal-content"
-          style={{ justifyContent: "space-evenly" }}
-        >
-          <div className="attribute">
-            <h1 className="h1-sub">Charismatic</h1>
-            <Lottie animationData={smile} id="smile" />
-            <h5 className="h5">Creates a sense of ease around team members.</h5>
-          </div>
-          <div className="attribute">
-            <h1 className="h1-sub">Expert Developer</h1>
-            <Lottie
-              animationData={developer}
-              style={{ width: "70%" }}
-              id="developer"
-            />
-            <h5 className="h5">
-              Well versed in all things technology, both front & back-end.
-            </h5>
-          </div>
-          <div className="attribute">
-            <h1 className="h1-sub">Team Builder</h1>
-            <Lottie animationData={team} style={{ width: "70%" }} id="team" />
-            <h5 className="h5">
-              Engages team members and takes initiative to led.
-            </h5>
-          </div>
-        </div>
         <a
           href="https://calendly.com/learnmutiny/company-final-steps"
           target="_blank"
@@ -848,7 +794,7 @@ export default function Ian() {
             alignContent: "center",
             justifyContent: "center",
             display: "flex",
-            marginTop: "1rem",
+            marginTop: "3rem",
           }}
         >
           <span className="emoji-container" style={{ marginBottom: "1rem" }}>
@@ -882,46 +828,18 @@ export default function Ian() {
         </div>
         <div className="vertical-content">
           <div className="vertical-content" style={{ padding: "1rem" }}>
-            <video
-              onClick={(e) => {
-                e.preventDefault();
-                toggleVideo();
-              }}
-              ref={(el) => setVideoElement(el)}
-              className="video"
-            >
+            <video className="video" controls>
               <source autoPlay={true} src={ianVideo} type="video/mp4" />
             </video>
-            <div
-              className="horizontal-content"
-              style={{ gap: "1rem", marginTop: "1rem" }}
-            >
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleVideo();
-                }}
-                style={{ fontSize: "1.5rem" }}
-              >
-                {videoPaused ? <FaPlay /> : <FaPause />}
-              </button>
-              <span
-                className="emoji-container"
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleVideo();
-                }}
-                style={{ padding: "1rem" }}
-              >
-                play me 😄
-              </span>
-            </div>
           </div>
           <div className="vertical-content" style={{ padding: "1rem" }}>
             <h1 className="h1" style={{ marginBottom: "2rem" }}>
               Overview
             </h1>
-            <div className="info-content" style={{ position: "relative" }}>
+            <div
+              className="info-content"
+              style={{ position: "relative", width: "90%" }}
+            >
               {toolTip ? (
                 <div className="tooltip-bar">
                   <h5 className="h5">overall team member score</h5>
@@ -1013,6 +931,42 @@ export default function Ian() {
                 }}
               />
             </div>
+          </div>
+        </div>
+      </div>
+      {/* Attributes mobile */}
+      <div className="box-mobile" style={{ marginBottom: 0 }}>
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            Attributes
+          </h1>
+        </div>
+        <div
+          className="horizontal-content"
+          style={{ justifyContent: "space-evenly" }}
+        >
+          <div className="attribute">
+            <h1 className="h1-sub">Charismatic</h1>
+            <Lottie animationData={smile} id="smile" />
+            <h5 className="h5">Creates a sense of ease around team members.</h5>
+          </div>
+          <div className="attribute">
+            <h1 className="h1-sub">Expert Developer</h1>
+            <Lottie
+              animationData={developer}
+              style={{ width: "70%" }}
+              id="developer"
+            />
+            <h5 className="h5">
+              Well versed in all things technology, both front & back-end.
+            </h5>
+          </div>
+          <div className="attribute">
+            <h1 className="h1-sub">Team Builder</h1>
+            <Lottie animationData={team} style={{ width: "70%" }} id="team" />
+            <h5 className="h5">
+              Engages team members and takes initiative to led.
+            </h5>
           </div>
         </div>
       </div>
@@ -1220,7 +1174,7 @@ export default function Ian() {
                   </h3>
                 </div>
                 <h2 className="h2" style={{ marginTop: "0.5rem" }}>
-                  Salary: $150,000
+                  Salary: $64,000
                 </h2>
               </div>
               <a href="https://onscale.com/" target="_blank" rel="noreferrer">
@@ -1358,16 +1312,13 @@ export default function Ian() {
                     knowledge and resources within the technology sector.
                   </h3>
                 </div>
-                <h2 className="h2" style={{ marginTop: "0.5rem" }}>
-                  Salary: $50,000
-                </h2>
               </div>
               <a href="https://pyatl.dev/" target="_blank" rel="noreferrer">
                 <img
                   src={pyatl}
                   style={{
-                    right: "1rem",
-                    bottom: "0.2rem",
+                    right: "0rem",
+                    bottom: "0rem",
                     width: "10%",
                     position: "absolute",
                   }}
@@ -1520,7 +1471,7 @@ export default function Ian() {
                   </h3>
                 </div>
                 <h2 className="h2" style={{ marginTop: "0.5rem" }}>
-                  Salary: $120,000
+                  Salary: $45 per hour
                 </h2>
               </div>
             </div>
@@ -1606,42 +1557,6 @@ export default function Ian() {
               className="emoji"
             />
           </a>
-        </div>
-      </div>
-      {/* Attributes mobile */}
-      <div className="box-mobile">
-        <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            Attributes
-          </h1>
-        </div>
-        <div
-          className="horizontal-content"
-          style={{ justifyContent: "space-evenly" }}
-        >
-          <div className="attribute">
-            <h1 className="h1-sub">Charismatic</h1>
-            <Lottie animationData={smile} id="smile" />
-            <h5 className="h5">Creates a sense of ease around team members.</h5>
-          </div>
-          <div className="attribute">
-            <h1 className="h1-sub">Expert Developer</h1>
-            <Lottie
-              animationData={developer}
-              style={{ width: "70%" }}
-              id="developer"
-            />
-            <h5 className="h5">
-              Well versed in all things technology, both front & back-end.
-            </h5>
-          </div>
-          <div className="attribute">
-            <h1 className="h1-sub">Team Builder</h1>
-            <Lottie animationData={team} style={{ width: "70%" }} id="team" />
-            <h5 className="h5">
-              Engages team members and takes initiative to led.
-            </h5>
-          </div>
         </div>
         <a
           href="https://calendly.com/learnmutiny/company-final-steps"

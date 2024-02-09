@@ -18,8 +18,7 @@ import { IoPartlySunny } from "react-icons/io5";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// import Dana from "./pages/full/dana";
-import Ian from "./pages/full/Ian";
+// import Ian from "./pages/full/Ian";
 // import Jonathan from "./pages/full/Jonathan";
 
 import {
@@ -145,9 +144,8 @@ function App() {
             <Route path="/developers/de412a" element={<Fre />} />
             <Route path="/developers/34b12a" element={<Smit />} />
 
-            {/* <Route path="/developers/dana" element={<Dana />} /> */}
-            <Route path="/developers/ian" element={<Ian />} />
-            {/* <Route path="/developers/jonathan" element={<Jonathan />} />  */}
+            {/* <Route path="/developers/ian" element={<Ian />} />
+            <Route path="/developers/jonathan" element={<Jonathan />} /> */}
 
             <Route path="*" element={<Error />} />
           </Routes>
