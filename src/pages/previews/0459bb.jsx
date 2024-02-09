@@ -185,7 +185,7 @@ export default function Richards() {
         >
           <div className="vertical-content">
             <div className="vertical-content" style={{ marginBottom: "1rem" }}>
-              <h1 className="h1" style={{ width: "100%" }}>
+              <h1 className="h1-sub" style={{ width: "100%" }}>
                 Reed Richards
               </h1>
               <h2 className="h2">san francisco, ca</h2>

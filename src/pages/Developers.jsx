@@ -214,7 +214,6 @@ export default function Developers() {
               padding: "1rem",
               width: "100%",
               marginBottom: "2rem",
-              border: "3px solid #000",
               borderRadius: "1rem",
             }}
           >
