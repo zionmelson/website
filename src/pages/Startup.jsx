@@ -428,7 +428,7 @@ function Startup() {
           >
             <h1 className="h1">20%</h1>
             <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
-              of annaul salary
+              of annual salary
             </h3>
 
             <h3 className="h3" style={{ marginBottom: "0.5rem", width: "90%" }}>
