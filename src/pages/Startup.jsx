@@ -1,5 +1,5 @@
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
-import { FaReact, FaUber, FaStripeS } from "react-icons/fa";
+import { FaReact, FaUber, FaStripeS, FaDiscord } from "react-icons/fa";
 
 import { RiTwitterXFill } from "react-icons/ri";
 import { SiCashapp } from "react-icons/si";
@@ -179,6 +179,7 @@ function Startup() {
             <TbBrandAirbnb id="airbnb" className="icon" />
             <FaUber id="uber" className="icon" />
             <FaStripeS id="stripe" className="icon" />
+            <FaDiscord id="discord" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
             and place them at your startup company
