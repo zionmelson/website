@@ -105,7 +105,7 @@ function Home() {
     <div className="main">
       {/* intro desktop */}
       <div className="box">
-        <div className="vertical-content" style={{ marginTop: "3rem" }}>
+        <div className="vertical-content" style={{ marginTop: "1rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
             we source senior engineers for
             <div
@@ -140,9 +140,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem", width: "65%" }}>
-            we source for startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a lead developer to amplify their
-            internal development processes.
+            we source for startups who have raised series A to B funding rounds
+            and are looking to hire a lead developer to amplify their internal
+            development processes.
           </h3>
         </div>
       </div>
@@ -228,9 +228,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            we source for startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a lead developer to amplify their
-            internal development processes.
+            we source for startups who have raised series A to B funding rounds
+            and are looking to hire a lead developer to amplify their internal
+            development processes.
           </h3>
         </div>
       </div>
