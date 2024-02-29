@@ -107,7 +107,7 @@ function Startup() {
     <div className="main">
       {/* startup-intro desktop */}
       <div className="startup-box">
-        <div className="vertical-content" style={{ marginTop: "3rem" }}>
+        <div className="vertical-content" style={{ marginTop: "1rem" }}>
           <h1
             className="h1"
             style={{

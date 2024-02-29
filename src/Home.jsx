@@ -105,7 +105,7 @@ function Home() {
     <div className="main">
       {/* intro desktop */}
       <div className="box">
-        <div className="vertical-content" style={{ marginTop: "3rem" }}>
+        <div className="vertical-content" style={{ marginTop: "1rem" }}>
           <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
             we source senior engineers for
             <div
