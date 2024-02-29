@@ -1,21 +1,26 @@
 import { AiFillApple, AiFillAndroid } from "react-icons/ai";
-import {
-  FaReact,
-  FaAngular,
-  FaPython,
-  FaJs,
-  FaDocker,
-  FaEthereum,
-  FaLaravel,
-  FaNpm,
-  FaNode,
-} from "react-icons/fa";
+import { FaReact, FaUber, FaStripeS } from "react-icons/fa";
 
-import startups from "../assets/svg/startups.svg";
+import { RiTwitterXFill } from "react-icons/ri";
+import { SiCashapp } from "react-icons/si";
+import { FaMeta } from "react-icons/fa6";
+import { TbBrandAirbnb } from "react-icons/tb";
+
 import calen from "../assets/svg/calen.svg";
 
 import Lottie from "lottie-react";
 import animation from "../assets/json/animate2.json";
+
+import metamask from "../assets/svg/metamask.svg";
+import stock from "../assets/svg/stock.svg";
+import apple from "../assets/svg/apple.svg";
+import yc from "../assets/svg/yc.svg";
+import a16z from "../assets/svg/a16z.svg";
+import founders from "../assets/svg/founders.svg";
+
+import jonathan from "../assets/png/jonathan.png";
+import ian from "../assets/png/ian.png";
+import smiley from "../assets/png/max.png";
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
@@ -107,14 +112,15 @@ function Startup() {
             className="h1"
             style={{
               marginBottom: "1rem",
+              width: "100%",
             }}
           >
-            find a senior
+            hire a &quot;laid-off&quot; senior
             <div
               className="text-wrapper"
               style={{
-                marginTop: "1.5rem",
-                marginBottom: "1.5rem",
+                marginTop: "1.2rem",
+                marginBottom: "1.2rem",
               }}
             >
               <p className="h1" id="p">
@@ -127,7 +133,7 @@ function Startup() {
                 back-end developer
               </p>
               <p className="h1" id="p">
-                machine learning engineer
+                machine learning dev
               </p>
               <p className="h1" id="p">
                 blockchain architect
@@ -148,34 +154,191 @@ function Startup() {
                 software architect
               </p>
               <p className="h1" id="p">
-                database administrator
+                database admin
               </p>
             </div>
             for your startup
           </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we specialize in placing developers in critical roles at promising
-            startups
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we specialize in placing professional developers in critical roles
+            at startups
           </h2>{" "}
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
             <AiFillApple id="apple" className="icon" />
             <FaReact id="react" className="icon" />
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we specifically target vetted senior developers
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we source recently laid-off senior developers from tech giants and
+            unicorns
           </h2>
-          <div className="icons" style={{ marginBottom: "1rem" }}>
-            <FaLaravel id="laravel" className="icon" />
-            <FaJs id="js" className="icon" />
-            <FaAngular id="angular" className="icon" />
-            <FaPython id="python" className="icon" />
-            <FaDocker id="docker" className="icon" />
-            <FaEthereum id="solidity" className="icon" />
-            <FaNpm id="npm" className="icon" />
+          <div className="icons" style={{ marginBottom: "2rem" }}>
+            <SiCashapp id="cashapp" className="icon" />
+            <FaMeta id="meta" className="icon" />
+            <RiTwitterXFill id="X" className="icon" />
+            <TbBrandAirbnb id="airbnb" className="icon" />
+            <FaUber id="uber" className="icon" />
+            <FaStripeS id="stripe" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            recruit your next developer with learnmutiny
+            and place them at your startup company
+          </h2>
+        </div>
+      </div>
+      {/* hiring desktop */}
+      <div className="startup-box">
+        <div className="vertical-content">
+          {" "}
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            hiring laid-off talent
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            the biggest names in tech are laying off thousands of talented
+            senior engineers that are now available for hire
+          </h2>
+          <Lottie
+            animationData={animation}
+            style={{
+              marginBottom: "1rem",
+              width: "20%",
+            }}
+          />
+          <h3 className="h3">
+            we have built relationship pipelines with these engineers and can
+            work with your team to get you access to our professionals
+          </h3>
+        </div>
+      </div>
+      {/* companies desktop  */}
+      <div className="startup-box">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            venture backed clients
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we work with clients that are backed by top venture capital firms
+            and have raised their series A to B round
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            we have helped companies backed by YCombinator, Andreessen Horowitz,
+            and Founder&apos;s Fund source talent for their teams
+          </h3>
+          <div
+            className="horizontal-content-small"
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 0,
+              margin: 0,
+            }}
+          >
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={yc} className="emoji-2" alt="calendar" />
+              YCombinator
+            </span>
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={a16z} className="emoji-2" alt="calendar" />
+              Andreessen Horowitz
+            </span>
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={founders} className="emoji-2" alt="calendar" />
+              Founder&apos;s Fund
+            </span>
+          </div>
+        </div>
+      </div>
+      {/* pricing desktop */}
+      <div className="startup-box">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            head hunting costs
+          </h1>
+          <div
+            className="vertical-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              marginBottom: "1rem",
+              padding: "1rem",
+              width: "60%",
+            }}
+          >
+            <h1 className="h1">standard search</h1>
+            <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
+              $2,000 engagement
+            </h3>
+            <a
+              href="https://calendly.com/learnmutiny/company-intro"
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginBottom: "1rem" }}
+            >
+              <span className="emoji-container">
+                <h4 className="h4">contact sales</h4>
+              </span>{" "}
+            </a>
+            <h5 className="h5" style={{ width: "100%" }}>
+              with a 60-day guarantee
+            </h5>
+          </div>
+          <div
+            className="vertical-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              marginBottom: "1rem",
+              padding: "1rem",
+              width: "60%",
+            }}
+          >
+            <h1 className="h1">executive search</h1>
+            <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
+              $4,000 engagement
+            </h3>
+            <a
+              href="https://calendly.com/learnmutiny/company-intro"
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginBottom: "1rem" }}
+            >
+              <span className="emoji-container">
+                <h4 className="h4">contact sales</h4>
+              </span>{" "}
+            </a>
+            <h5 className="h5" style={{ width: "100%" }}>
+              with a 90-day guarantee
+            </h5>
+          </div>
+          <h2
+            className="h2"
+            style={{ marginBottom: "1rem", marginTop: "1rem" }}
+          >
+            meet with our team to get started
           </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
@@ -199,7 +362,7 @@ function Startup() {
               width: "100%",
             }}
           >
-            find a senior
+            hire a &quot;laid-off&quot; senior
             <div
               className="text-wrapper"
               style={{
@@ -243,85 +406,40 @@ function Startup() {
             </div>
             for your startup
           </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specialize in placing developers in critical roles at promising
-            startups
-          </h2>{" "}
+          <h2 className="h2" style={{ marginBottom: "0.5rem" }}>
+            we specialize in placing professional developers in critical roles
+            at startups
+          </h2>
           <div className="icons">
             <AiFillAndroid id="android" className="icon" />
             <AiFillApple id="apple" className="icon" />
             <FaReact id="react" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we specifically target senior developers
+            we source recently laid-off senior developers from tech giants and
+            unicorns
           </h2>
           <div className="icons" style={{ marginBottom: "2rem" }}>
-            <FaDocker
-              id="docker"
-              className="icon"
-              style={{ margin: "0.6rem" }}
-            />
-            <FaEthereum
-              id="solidity"
-              className="icon"
-              style={{ margin: "0.6rem" }}
-            />
-            <FaLaravel
-              id="laravel"
-              className="icon"
-              style={{ margin: "0.6rem" }}
-            />
-            <FaNode id="node" className="icon" style={{ margin: "0.6rem" }} />
+            <SiCashapp id="cashapp" className="icon" />
+            <FaMeta id="meta" className="icon" />
+            <RiTwitterXFill id="X" className="icon" />
+            <TbBrandAirbnb id="airbnb" className="icon" />
           </div>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            recruit your next developer with learnmutiny
+            and place them at your startup company
           </h2>
-          <a
-            href="https://calendly.com/learnmutiny/company-intro"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="emoji-container">
-              <img src={calen} className="emoji" alt="mu" />
-              Calendly
-            </span>
-          </a>
         </div>
       </div>
-      {/* matching-algo desktop */}
-      <div className="startup-box">
-        <div className="vertical-content">
-          {" "}
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            our matching model
-          </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            expanding teams can be difficult, at learnmutiny we excel at placing
-            professionals that compliment the exact needs of your company
-          </h2>
-          <Lottie
-            animationData={animation}
-            style={{
-              marginBottom: "1rem",
-              width: "20%",
-            }}
-          />
-          <h3 className="h3" style={{ width: "70%" }}>
-            all of our developers are vetted and have a proven track record of
-            industry expertise leading successful teams and developing projects.
-          </h3>
-        </div>
-      </div>
-      {/* matching-algo phone */}
+      {/* hiring phone */}
       <div className="startup-box-mobile">
         <div className="vertical-content">
           {" "}
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            our matching model
+            hiring laid-off talent
           </h1>
           <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            expanding teams can be difficult, at learnmutiny we excel at placing
-            professionals that compliment the exact needs of your company
+            the biggest names in tech are laying off thousands of talented
+            senior engineers that are now available for hire
           </h2>
           <Lottie
             animationData={animation}
@@ -330,72 +448,10 @@ function Startup() {
               width: "60%",
             }}
           />
-          <h3 className="h3">
-            all of our developers are vetted and have a proven track record of
-            industry expertise leading successful teams and developing projects.
+          <h3 className="h3" style={{ marginBottom: "2rem" }}>
+            we have built relationship pipelines with these engineers and can
+            work with your team to get you access to our professionals
           </h3>
-        </div>
-      </div>
-      {/* pricing desktop */}
-      <div className="startup-box">
-        <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            pricing
-          </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our direct-to-hire fee for full-time positions:
-          </h2>
-          <div
-            className="horizontal-content-small"
-            style={{ marginBottom: "1rem" }}
-          >
-            <div
-              className="vertical-content"
-              id="startup-box"
-              style={{
-                borderRadius: "2rem",
-                padding: "1rem",
-                margin: "1rem",
-              }}
-            >
-              <h1 className="h1">20%</h1>
-              <h3
-                className="h3"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                of annual salary
-              </h3>
-              <h3
-                className="h3"
-                style={{ marginBottom: "0.5rem", width: "90%" }}
-              >
-                <a
-                  href="https://calendly.com/learnmutiny/company-intro"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="emoji-container">
-                    <h4 className="h4">view salaries</h4>
-                  </span>{" "}
-                </a>
-              </h3>
-              <img src={startups} className="logo" alt="medium" />
-            </div>
-          </div>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "60%" }}>
-            we know the hiring process can be stressful, because of this we work
-            closely with your team to ensure successful placements
-          </h2>
-          <h3 className="h3" style={{ marginBottom: "3rem" }}>
-            learnmutiny will refund a pro-rated portion of the fee paid if
-            placement fails within the first 60 days
-          </h3>
-          <h2
-            className="h2"
-            style={{ marginBottom: "1rem", marginTop: "1rem" }}
-          >
-            meet with our team to get started
-          </h2>
           <a
             href="https://calendly.com/learnmutiny/company-intro"
             target="_blank"
@@ -408,50 +464,344 @@ function Startup() {
           </a>
         </div>
       </div>
+      {/* lay-offs phone */}
+      <div className="startup-box-mobile">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            sourced &quot;lay-offs&quot;
+          </h1>
+          <div
+            className="horizonatal-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
+              marginBottom: "3rem",
+              gap: "1rem",
+              padding: "2rem",
+              paddingBottom: "0.5rem",
+              width: "80%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <div
+              className="memoji-container"
+              style={{ position: "relative", scale: "1.2", margin: "0" }}
+            >
+              <img src={jonathan} alt="ian" className="memoji" />
+            </div>
+            <div className="horizontal-content">
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Bryce Lane
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                laid-off on December 2023
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={apple} className="emoji-2" alt="calendar" />
+                  Apple
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="horizonatal-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
+              marginBottom: "3rem",
+              gap: "1rem",
+              padding: "2rem",
+              paddingBottom: "0.5rem",
+              width: "80%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <div
+              className="memoji-container"
+              style={{ position: "relative", scale: "1.2", margin: "0" }}
+            >
+              <img src={ian} alt="ian" className="memoji" />
+            </div>
+            <div className="horizontal-content">
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Cody Ranger
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                laid-off on January 2024
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={stock} className="emoji-2" alt="calendar" />
+                  StockX
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            className="horizonatal-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
+              gap: "1rem",
+              padding: "2rem",
+              paddingBottom: "0.5rem",
+              width: "80%",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <div
+              className="memoji-container"
+              style={{
+                position: "relative",
+                scale: "1.2",
+                margin: "0",
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <img src={smiley} alt="ian" className="memoji" />
+            </div>
+            <div className="horizontal-content">
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Aymen Silver
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                laid-off on July 2023
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={metamask} className="emoji-2" alt="calendar" />
+                  Metamask
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* companies phone  */}
+      <div className="startup-box-mobile">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            venture backed clients
+          </h1>
+          <h2 className="h2" style={{ marginBottom: "1rem" }}>
+            we work with clients that are backed by top venture capital firms
+            and have raised their series A to B round
+          </h2>
+          <h3 className="h3" style={{ marginBottom: "1rem" }}>
+            we have helped companies backed by YCombinator, Andreessen Horowitz,
+            and Founder&apos;s Fund source talent for their teams
+          </h3>
+          <div
+            className="horizontal-content-small"
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 0,
+              margin: 0,
+            }}
+          >
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={yc} className="emoji-2" alt="calendar" />
+              YCombinator
+            </span>
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={a16z} className="emoji-2" alt="calendar" />
+              Andreessen Horowitz
+            </span>
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={founders} className="emoji-2" alt="calendar" />
+              Founder&apos;s Fund
+            </span>
+          </div>
+        </div>
+      </div>
       {/* pricing phone */}
       <div className="startup-box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            pricing
+            head hunting costs
           </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            our direct-to-hire fee for full-time positions:
-          </h2>
           <div
             className="vertical-content"
             id="startup-box"
             style={{
               borderRadius: "2rem",
+              marginBottom: "1rem",
               padding: "1rem",
-              margin: "1rem",
+              width: "100%",
             }}
           >
-            <h1 className="h1">20%</h1>
+            <h1 className="h1">standard search</h1>
             <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
-              of annual salary
+              $2,000 engagement
             </h3>
-
-            <h3 className="h3" style={{ marginBottom: "0.5rem", width: "90%" }}>
-              <a
-                href="https://calendly.com/learnmutiny/company-intro"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="emoji-container">
-                  <h4 className="h4">view salaries</h4>
-                </span>{" "}
-              </a>
-            </h3>
-            <img src={startups} className="logo" alt="medium" />
+            <a
+              href="https://calendly.com/learnmutiny/company-intro"
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginBottom: "1rem" }}
+            >
+              <span className="emoji-container">
+                <h4 className="h4">contact sales</h4>
+              </span>{" "}
+            </a>
+            <h5 className="h5" style={{ width: "100%" }}>
+              with a 60-day guarantee
+            </h5>
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we know the hiring process can be stressful, because of this we work
-            closely with your team to ensure successful placements
-          </h2>
-          <h3 className="h3" style={{ marginBottom: "2rem" }}>
-            learnmutiny will refund a pro-rated portion of the fee paid if
-            placement fails within the first 60 days{" "}
-          </h3>
+          <div
+            className="vertical-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              marginBottom: "1rem",
+              padding: "1rem",
+              width: "100%",
+            }}
+          >
+            <h1 className="h1">executive search</h1>
+            <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
+              $4,000 engagement
+            </h3>
+            <a
+              href="https://calendly.com/learnmutiny/company-intro"
+              target="_blank"
+              rel="noreferrer"
+              style={{ marginBottom: "1rem" }}
+            >
+              <span className="emoji-container">
+                <h4 className="h4">contact sales</h4>
+              </span>{" "}
+            </a>
+            <h5 className="h5" style={{ width: "100%" }}>
+              with a 90-day guarantee
+            </h5>
+          </div>
           <h2
             className="h2"
             style={{ marginBottom: "1rem", marginTop: "1rem" }}

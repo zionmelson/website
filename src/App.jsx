@@ -2,11 +2,15 @@ import { useState, createContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Startup from "./pages/Startup";
-import Developers from "./pages/Developers";
 import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Error from "./pages/Error";
 import Privacy from "./pages/Privacy";
+
+// import Developers from "./pages/Developers";
+// import Payment from "./pages/Payment";
+// import Failure from "./pages/Failure";
+// import Success from "./pages/Success";
 
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -21,35 +25,35 @@ import Footer from "./components/Footer";
 // import Ian from "./pages/full/Ian";
 // import Jonathan from "./pages/full/Jonathan";
 
-import {
-  Quee,
-  Murd,
-  Luca,
-  Grim,
-  Rich,
-  Spen,
-  Lian,
-  Doug,
-  Roge,
-  Blaz,
-  Wils,
-  Sava,
-  Bart,
-  Bann,
-  Seco,
-  Jave,
-  Barn,
-  Park,
-  Alle,
-  Jord,
-  Wayn,
-  Maso,
-  Drak,
-  Kor,
-  Nels,
-  Fre,
-  Smit,
-} from "./devs";
+// import {
+//   Quee,
+//   Murd,
+//   Luca,
+//   Grim,
+//   Rich,
+//   Spen,
+//   Lian,
+//   Doug,
+//   Roge,
+//   Blaz,
+//   Wils,
+//   Sava,
+//   Bart,
+//   Bann,
+//   Seco,
+//   Jave,
+//   Barn,
+//   Park,
+//   Alle,
+//   Jord,
+//   Wayn,
+//   Maso,
+//   Drak,
+//   Kor,
+//   Nels,
+//   Fre,
+//   Smit,
+// } from "./devs";
 
 import "./App.css";
 
@@ -109,12 +113,17 @@ function App() {
           )}
 
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/startup" element={<Startup />} />
+            <Route path="/" element={<Startup />} />
+            <Route path="/startup" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
-            <Route path="/developers" element={<Developers />} />
+
+            {/* <Route path="/profile-request" element={<Payment />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/cancel" element={<Failure />} /> */}
+
+            {/* <Route path="/developers" element={<Developers />} />
 
             <Route path="/developers/62328c" element={<Lian />} />
             <Route path="/developers/8a6ca5" element={<Luca />} />
@@ -142,7 +151,7 @@ function App() {
             <Route path="/developers/af5bf7" element={<Kor />} />
             <Route path="/developers/df2916" element={<Nels />} />
             <Route path="/developers/de412a" element={<Fre />} />
-            <Route path="/developers/34b12a" element={<Smit />} />
+            <Route path="/developers/34b12a" element={<Smit />} /> */}
 
             {/* <Route path="/developers/ian" element={<Ian />} />
             <Route path="/developers/jonathan" element={<Jonathan />} /> */}

@@ -744,6 +744,26 @@
   transform: scale(1.1);
 }
 
+#cashapp {
+  color: #00c805;
+}
+
+#meta {
+  color: #0081fb;
+}
+
+#X {
+  color: #fff;
+}
+
+#airbnb {
+  color: #ff5a5f;
+}
+
+#stripe {
+  color: #5433ff;
+}
+
 #support:hover {
   background: #ffa3d4;
 }

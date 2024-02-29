@@ -3,8 +3,6 @@ import "./Components.css";
 import { useState, useEffect } from "react";
 
 import bear from "../assets/svg/bear.svg";
-import startup from "../assets/svg/startup.svg";
-import startupL from "../assets/svg/startupsL.svg";
 import learnmutiny from "../assets/svg/learnmutiny.svg";
 
 import { FaBars } from "react-icons/fa";
@@ -44,7 +42,7 @@ export default function Navbar() {
               </a>
               <a href="/startup">
                 <div className="link-container">
-                  <h4 className="h4">startups</h4>
+                  <h4 className="h4">about</h4>
                 </div>
               </a>
               <a href="/contact">
@@ -64,8 +62,7 @@ export default function Navbar() {
         {pathname !== "undefined" && pathname === "/startup" ? (
           <a href="/startup">
             <div className={`startup-logo ${scrolled ? "logo-scrolled" : ""}`}>
-              <img src={startup} className="full-logo" alt="logo" />
-              <img src={startupL} className="light-logo" alt="logo" />
+              <img src={learnmutiny} className="og-logo" alt="logo" />
               <img src={bear} className="bear-logo" alt="logo" />
             </div>
           </a>
@@ -92,7 +89,7 @@ export default function Navbar() {
           </li>
           <li className={`nav-startup-text ${scrolled ? "text-scrolled" : ""}`}>
             <a href="/startup">
-              <h4 className="h4">startups</h4>
+              <h4 className="h4">about</h4>
             </a>
           </li>
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
