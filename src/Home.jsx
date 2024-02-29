@@ -140,9 +140,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem", width: "65%" }}>
-            we source for startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a lead developer to amplify their
-            internal development processes.
+            we source for startups who have raised series A to B funding rounds
+            and are looking to hire a lead developer to amplify their internal
+            development processes.
           </h3>
         </div>
       </div>
@@ -228,9 +228,9 @@ function Home() {
             }}
           />
           <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            we source for startups who have raised pre-seed to series B funding
-            rounds and are looking to hire a lead developer to amplify their
-            internal development processes.
+            we source for startups who have raised series A to B funding rounds
+            and are looking to hire a lead developer to amplify their internal
+            development processes.
           </h3>
         </div>
       </div>
