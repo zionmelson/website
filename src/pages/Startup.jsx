@@ -11,7 +11,7 @@ import calen from "../assets/svg/calen.svg";
 import Lottie from "lottie-react";
 import animation from "../assets/json/animate2.json";
 
-import metamask from "../assets/svg/metamask.svg";
+import cashapp from "../assets/svg/cashapp.svg";
 import stock from "../assets/svg/stock.svg";
 import apple from "../assets/svg/apple.svg";
 import yc from "../assets/svg/yc.svg";
@@ -20,7 +20,7 @@ import founders from "../assets/svg/founders.svg";
 
 import jonathan from "../assets/png/jonathan.png";
 import ian from "../assets/png/ian.png";
-import smiley from "../assets/png/max.png";
+import smiley from "../assets/png/silver.png";
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
@@ -277,19 +277,21 @@ function Startup() {
       <div className="startup-box">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            head hunting costs
+            engineer search costs
           </h1>
           <div
             className="vertical-content"
             id="startup-box"
             style={{
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
               borderRadius: "2rem",
               marginBottom: "1rem",
               padding: "1rem",
               width: "60%",
             }}
           >
-            <h1 className="h1">standard search</h1>
+            <h1 className="h1-sub">standard search</h1>
             <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
               $2,000 engagement
             </h3>
@@ -311,13 +313,15 @@ function Startup() {
             className="vertical-content"
             id="startup-box"
             style={{
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
               borderRadius: "2rem",
               marginBottom: "1rem",
               padding: "1rem",
               width: "60%",
             }}
           >
-            <h1 className="h1">executive search</h1>
+            <h1 className="h1-sub">executive search</h1>
             <h3 className="h3" style={{ marginBottom: "1rem", width: "100%" }}>
               $4,000 engagement
             </h3>
@@ -502,13 +506,13 @@ function Startup() {
                   width: "100%",
                 }}
               >
-                Bryce Lane
+                Frank Secord
               </h2>
               <h5
                 className="h5"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                laid-off on December 2023
+                senior back-end developer
               </h5>
               <div
                 className="horizontal-content-small"
@@ -534,6 +538,12 @@ function Startup() {
                   <img src={apple} className="emoji-2" alt="calendar" />
                   Apple
                 </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on December 2023
+                </h5>
               </div>
             </div>
           </div>
@@ -568,13 +578,13 @@ function Startup() {
                   width: "100%",
                 }}
               >
-                Cody Ranger
+                Coty Ranger
               </h2>
               <h5
                 className="h5"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                laid-off on January 2024
+                senior software engineer
               </h5>
               <div
                 className="horizontal-content-small"
@@ -600,6 +610,12 @@ function Startup() {
                   <img src={stock} className="emoji-2" alt="calendar" />
                   StockX
                 </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on January 2024
+                </h5>
               </div>
             </div>
           </div>
@@ -641,13 +657,13 @@ function Startup() {
                   width: "100%",
                 }}
               >
-                Aymen Silver
+                Pratik Silver
               </h2>
               <h5
                 className="h5"
                 style={{ marginBottom: "1rem", width: "100%" }}
               >
-                laid-off on July 2023
+                mobile engineering manager
               </h5>
               <div
                 className="horizontal-content-small"
@@ -670,9 +686,15 @@ function Startup() {
                     border: "2px solid #fff",
                   }}
                 >
-                  <img src={metamask} className="emoji-2" alt="calendar" />
-                  Metamask
+                  <img src={cashapp} className="emoji-2" alt="calendar" />
+                  Cashapp
                 </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on February 2024
+                </h5>
               </div>
             </div>
           </div>
@@ -745,12 +767,14 @@ function Startup() {
       <div className="startup-box-mobile">
         <div className="vertical-content">
           <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            head hunting costs
+            engineer search costs
           </h1>
           <div
             className="vertical-content"
             id="startup-box"
             style={{
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
               borderRadius: "2rem",
               marginBottom: "1rem",
               padding: "1rem",
@@ -779,6 +803,8 @@ function Startup() {
             className="vertical-content"
             id="startup-box"
             style={{
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
               borderRadius: "2rem",
               marginBottom: "1rem",
               padding: "1rem",
