@@ -210,6 +210,250 @@ function Startup() {
           </h3>
         </div>
       </div>
+      {/* lay-offs phone */}
+      <div className="startup-box">
+        <div className="vertical-content">
+          <h1 className="h1" style={{ marginBottom: "1rem" }}>
+            sourced &quot;lay-offs&quot;
+          </h1>
+          <div
+            className="horizonatal-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
+              marginBottom: "3rem",
+              gap: "1rem",
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div
+              className="memoji-container"
+              style={{
+                position: "relative",
+                margin: "0",
+              }}
+            >
+              <img src={jonathan} alt="ian" className="memoji" />
+            </div>
+            <div
+              className="horizontal-content"
+              style={{
+                margin: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Frank Secord
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                senior back-end developer
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={apple} className="emoji-2" alt="calendar" />
+                  Apple
+                </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on December 2023
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div
+            className="horizonatal-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
+              marginBottom: "3rem",
+              gap: "1rem",
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div
+              className="memoji-container"
+              style={{ position: "relative", margin: "0" }}
+            >
+              <img src={ian} alt="ian" className="memoji" />
+            </div>
+            <div
+              className="horizontal-content"
+              style={{
+                margin: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Coty Ranger
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                senior software engineer
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={stock} className="emoji-2" alt="calendar" />
+                  StockX
+                </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on January 2024
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div
+            className="horizonatal-content"
+            id="startup-box"
+            style={{
+              borderRadius: "2rem",
+              border: "2px solid #fff",
+              background: "linear-gradient(135deg, #111111, #404040)",
+              gap: "1rem",
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <div
+              className="memoji-container"
+              style={{
+                position: "relative",
+                margin: "0",
+              }}
+            >
+              <img src={smiley} alt="ian" className="memoji" />
+            </div>
+            <div
+              className="horizontal-content"
+              style={{
+                margin: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Pratik Silver
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                mobile engineering manager
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={cashapp} className="emoji-2" alt="calendar" />
+                  Cashapp
+                </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on February 2024
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* companies desktop  */}
       <div className="startup-box">
         <div className="vertical-content">
