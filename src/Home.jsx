@@ -1,70 +1,90 @@
-import {
-  FaAngular,
-  FaPython,
-  FaRust,
-  FaJs,
-  FaDocker,
-  FaEthereum,
-  FaLaravel,
-  FaNpm,
-  FaNode,
-} from "react-icons/fa";
-
-import zion from "./assets/svg/zion.svg";
-import max from "./assets/svg/max.svg";
-import atlanta from "./assets/svg/atlanta.svg";
+import { FaUber, FaStripeS, FaDiscord } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
+import { SiCashapp } from "react-icons/si";
+import { FaMeta } from "react-icons/fa6";
+import { TbBrandAirbnb } from "react-icons/tb";
 
 import Lottie from "lottie-react";
-import animation from "./assets/json/animate.json";
-import link from "./assets/svg/link.svg";
-import calen from "./assets/svg/calen.svg";
+import animation from "./assets/json/animate2.json";
+
+import cashapp from "./assets/svg/cashapp.svg";
+import stock from "./assets/svg/stock.svg";
+import apple from "./assets/svg/apple.svg";
+import yc from "./assets/svg/yc.svg";
+import a16z from "./assets/svg/a16z.svg";
+import founders from "./assets/svg/founders.svg";
+
+import jonathan from "./assets/png/jonathan.png";
+import ian from "./assets/png/ian.png";
+import smiley from "./assets/png/silver.png";
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
+import { useEffect, useState, useRef } from "react";
 
 import "./App.css";
-import { useEffect } from "react";
 
 function Home() {
-  useEffect(() => {
-    const technologies = gsap.utils.toArray("#p");
-    const tl = gsap.timeline({ repeat: -1 });
+  const [formData, setFormData] = useState({
+    first: "",
+    last: "",
+    email: "",
+    developer: "",
+    message: "",
+  });
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const targetRef = useRef(null);
 
-    technologies.forEach((technology) => {
-      const splitText = new SplitText(technology);
+  const scrollToTarget = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-      splitText.chars.forEach((char) => {
-        char.classList.add(`chars`);
-      });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-      tl.from(
-        splitText.chars,
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://us-central1-learnmutiny-website.cloudfunctions.net/form",
         {
-          opacity: 0,
-          fontWeight: 700,
-          rotateX: -90,
-          y: 80,
-          stagger: 0.02,
-        },
-        "<"
-      ).to(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          rotateX: 90,
-          y: -80,
-          stagger: 0.02,
-        },
-        "<1.8"
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
       );
-    });
+      const data = await response.json();
+      if (response.ok) {
+        setSubmissionStatus("success");
+        console.log(data);
 
-    return () => tl.kill();
-  }, []);
+        setFormData({
+          first: "",
+          last: "",
+          email: "",
+          developer: "",
+          message: "",
+        });
+        // You can add any additional logic for successful submission here
+      } else {
+        setSubmissionStatus("failure");
+        console.error("Error:", data);
+        // You can add any additional logic for failed submission here
+      }
+    } catch (error) {
+      setSubmissionStatus("failure");
+      console.error("Error:", error);
+      // You can add error handling logic here
+    }
+  };
 
   useEffect(() => {
-    const technologies = gsap.utils.toArray("#ph");
+    const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
 
     technologies.forEach((technology) => {
@@ -79,8 +99,8 @@ function Home() {
         {
           opacity: 0,
           fontWeight: 700,
-          y: 80,
-          rotateX: -90,
+          y: 60,
+          rotateX: -35,
           stagger: 0.02,
         },
         "<"
@@ -89,8 +109,8 @@ function Home() {
         {
           opacity: 0,
           fontWeight: 700,
-          y: -80,
-          rotateX: 90,
+          y: -60,
+          rotateX: 35,
           stagger: 0.02,
         },
         "<1.8"
@@ -101,296 +121,457 @@ function Home() {
   }, []);
 
   return (
-    //
     <div className="main">
-      {/* intro desktop */}
+      {/* startup-intro */}
       <div className="box">
-        <div className="vertical-content" style={{ marginTop: "1rem" }}>
-          <h1 className="h1" style={{ marginBottom: "1rem", width: "70%" }}>
-            we source senior engineers for
-            <div
-              style={{
-                marginTop: "1.5rem",
-                marginBottom: "1.5rem",
-                width: "100%",
-              }}
-            >
-              <p id="p">FinTech</p>
-              <p id="p">Black Owned</p>
-              <p id="p">Healthcare</p>
-              <p id="p">Blockchain</p>
-              <p id="p">B2B SaaS</p>
-              <p id="p">Women Owned</p>
-              <p id="p">E-Commerce</p>
-              <p id="p">Machine Learning</p>
-              <p id="p">Latina Owned</p>
-              <p id="p">Cyber Security</p>
-              <p id="p">EdTech</p>
-              <p id="p">Social Networking</p>
+        <div className="vertical-content">
+          <h1 className="h1">
+            hire a &quot;laid-off&quot; senior
+            <div className="span">
+              <h1 className="h1" id="gsap">
+                full-stack developer
+              </h1>
+              <h1 className="h1" id="gsap">
+                back-end developer
+              </h1>
+              <h1 className="h1" id="gsap">
+                systems engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                software architect
+              </h1>
+              <h1 className="h1" id="gsap">
+                regression engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                cloud engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                blockchain engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                devops engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                database engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                data engineer
+              </h1>
             </div>
-            startup companies
+            for your startup
           </h1>
           <h2 className="h2">
-            find your next full-time position with learnmutiny
+            we source recently laid-off senior developers from tech giants and
+            unicorns
           </h2>
-          <Lottie
-            animationData={animation}
-            style={{
-              width: "20%",
-            }}
-          />
-          <h3 className="h3" style={{ marginBottom: "1rem", width: "65%" }}>
-            we source for startups who have raised series A to B funding rounds
-            and are looking to hire a lead developer to amplify their internal
-            development processes.
-          </h3>
+          {window.screen.width > 788 ? (
+            <div className="icons" style={{ marginBottom: "2rem" }}>
+              <SiCashapp id="cashapp" className="icon" />
+              <FaMeta id="meta" className="icon" />
+              <RiTwitterXFill id="X" className="icon" />
+              <TbBrandAirbnb id="airbnb" className="icon" />
+              <FaUber id="uber" className="icon" />
+              <FaStripeS id="stripe" className="icon" />
+              <FaDiscord id="discord" className="icon" />
+            </div>
+          ) : (
+            <div className="icons" style={{ marginBottom: "2rem" }}>
+              <SiCashapp id="cashapp" className="icon" />
+              <FaMeta id="meta" className="icon" />
+              <RiTwitterXFill id="X" className="icon" />
+              <TbBrandAirbnb id="airbnb" className="icon" />
+            </div>
+          )}
+          <h2 className="h2">and place them at your startup company</h2>
+          <h5 className="h5">
+            <button className="emoji-container" onClick={scrollToTarget}>
+              hire a layoff
+            </button>
+          </h5>
         </div>
       </div>
-      {/* value desktop*/}
+      {/* hiring */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            looking for your next position?
-          </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "70%" }}>
-            we take a different approach to sourcing
+          <h1 className="h1">hiring laid-off talent</h1>
+          <h2 className="h2">
+            the biggest names in tech are laying off thousands of talented
+            senior engineers that are now available for hire
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem", width: "75%" }}>
-            at learnmutiny our mission is to match you to companies that align
-            with your career goals. <br />
-            we place lead developers at startups that are working in up and
-            coming areas of technology.
+          <Lottie animationData={animation} />
+          <h3 className="h3">
+            we have built relationship pipelines with these engineers and can
+            work with your team to get you access to our professionals
           </h3>
-          <div className="icons" style={{ marginBottom: "1rem" }}>
-            <FaPython id="python" className="icon" />
-            <FaRust id="rust" className="icon" />
-            <FaJs id="js" className="icon" />
-            <FaAngular id="angular" className="icon" />
-            <FaDocker id="docker" className="icon" />
-            <FaEthereum id="solidity" className="icon" />
-            <FaLaravel id="laravel" className="icon" />
-            <FaNpm id="npm" className="icon" />
-            <FaNode id="node" className="icon" />
-          </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            schedule a developer introduction with us
-          </h2>
-          <a
-            href="https://calendly.com/learnmutiny/showcase"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="emoji-container">
-              <img src={calen} className="emoji" alt="mu" />
-              Calendly
-            </span>
-          </a>
         </div>
       </div>
-      {/* intro phone */}
-      <div className="box-mobile">
+      {/* lay-offs */}
+      <div className="box">
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            we source senior engineers for
-            <div>
-              <div
-                className="text-wrapper"
+          <h1 className="h1">sourced &quot;lay-offs&quot;</h1>
+          <div className="layoff-content">
+            <div
+              className="memoji-container"
+              style={{
+                position: "relative",
+                margin: "0",
+              }}
+            >
+              <img src={jonathan} alt="ian" className="memoji" />
+            </div>
+            <div
+              className="horizontal-content"
+              style={{
+                margin: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className="h2"
                 style={{
-                  marginTop: "1.2rem",
-                  marginBottom: "1.2rem",
                   width: "100%",
                 }}
               >
-                <p id="ph">Healthcare</p>
-                <p id="ph">FinTech</p>
-                <p id="ph">Black Owned</p>
-                <p id="ph">Blockchain</p>
-                <p id="ph">B2B SaaS</p>
-                <p id="ph">Women Owned</p>
-                <p id="ph">E-Commerce</p>
-                <p id="ph">Machine Learning</p>
-                <p id="ph">Latina Owned</p>
-                <p id="ph">Cyber Security</p>
-                <p id="ph">EdTech</p>
-                <p id="ph">Social Networking</p>
+                Frank Secord
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                senior back-end developer
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={apple} className="emoji-2" alt="calendar" />
+                  Apple
+                </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on December 2023
+                </h5>
               </div>
             </div>
-            startup companies
-          </h1>
-          <h2 className="h2">
-            find your next full-time position with learnmutiny
-          </h2>
-          <Lottie
-            animationData={animation}
-            style={{
-              marginBottom: "1rem",
-              width: "60%",
-            }}
-          />
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            we source for startups who have raised series A to B funding rounds
-            and are looking to hire a lead developer to amplify their internal
-            development processes.
-          </h3>
-        </div>
-      </div>
-      {/* value phone*/}
-      <div className="box-mobile">
-        <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            looking for your next position?
-          </h1>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            we take a different approach to sourcing
-          </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem", width: "85%" }}>
-            at learnmutiny our mission is to place lead developers at startups
-            that are working in up and coming areas of technology.
-          </h3>
-          <div className="icons" style={{ marginBottom: "1rem" }}>
-            <FaPython id="python" className="icon" />
-            <FaRust id="rust" className="icon" />
-            <FaJs id="js" className="icon" />
-            <FaNode id="node" className="icon" />
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem" }}>
-            schedule a developer intro with us
-          </h2>
-          <a
-            href="https://calendly.com/learnmutiny/showcase"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="emoji-container">
-              <img src={calen} className="emoji" alt="mu" />
-              Calendly
-            </span>
-          </a>
+          <div className="layoff-content">
+            <div
+              className="memoji-container"
+              style={{ position: "relative", margin: "0" }}
+            >
+              <img src={ian} alt="ian" className="memoji" />
+            </div>
+            <div
+              className="horizontal-content"
+              style={{
+                margin: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Coty Ranger
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                senior software engineer
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={stock} className="emoji-2" alt="calendar" />
+                  StockX
+                </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on January 2024
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className="layoff-content">
+            <div
+              className="memoji-container"
+              style={{
+                position: "relative",
+                margin: "0",
+              }}
+            >
+              <img src={smiley} alt="ian" className="memoji" />
+            </div>
+            <div
+              className="horizontal-content"
+              style={{
+                margin: "0",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h2
+                className="h2"
+                style={{
+                  width: "100%",
+                }}
+              >
+                Pratik Silver
+              </h2>
+              <h5
+                className="h5"
+                style={{ marginBottom: "1rem", width: "100%" }}
+              >
+                mobile engineering manager
+              </h5>
+              <div
+                className="horizontal-content-small"
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img src={cashapp} className="emoji-2" alt="calendar" />
+                  Cashapp
+                </span>
+                <h5
+                  className="h5"
+                  style={{ marginBottom: "1rem", width: "100%" }}
+                >
+                  laid-off on February 2024
+                </h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      {/* founders desktop */}
+      {/* companies */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            meet the founders
-          </h1>
-          <div className="horizontal-content" style={{ gap: "2rem" }}>
-            <div className="headshot">
-              <img src={zion} className="headshots" alt="zion" />
-              <h2
-                className="h2"
-                style={{ marginBottom: "1rem", marginTop: "1rem" }}
-              >
-                <span className="horizontal-content-small">
-                  zion
-                  <a
-                    href="https://linkedin.com/in/zionmelson"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      {" "}
-                      <img src={link} className="emoji" alt="mu" />
-                    </span>
-                  </a>
-                </span>
-              </h2>
-            </div>
-            <div className="horizontal-content">
-              <div className="headshot">
-                <img src={max} className="headshots" alt="max" />
-                <h2
-                  className="h2"
-                  style={{ marginBottom: "1rem", marginTop: "1rem" }}
-                >
-                  <span className="horizontal-content-small">
-                    maxmillian
-                    <a
-                      href="https://www.linkedin.com/in/mxmilan/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <span className="emoji-container" style={{ padding: 0 }}>
-                        {" "}
-                        <img src={link} className="emoji" alt="mu" />
-                      </span>
-                    </a>
-                  </span>
-                </h2>
-              </div>
-            </div>
-          </div>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "90%" }}>
-            zion and max are atlanta natives who are invested in uplifting the
-            startup ecosystem by sourcing high caliber tech talent for
-            innovative startups
+          <h1 className="h1">venture backed clients</h1>
+          <h2 className="h2">
+            we work with clients that are backed by top venture capital firms
+            and have raised their series A to B round
           </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            learnmutiny is our way of giving back to the startup community and
-            turning ATL into the tech hub of the southeast (represent).
+          <h3 className="h3">
+            we have helped companies backed by YCombinator, Andreessen Horowitz,
+            and Founder&apos;s Fund source talent for their teams
           </h3>
+          <div
+            className="horizontal-content"
+            style={{
+              gap: "0.5rem",
+            }}
+          >
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={yc} className="emoji-2" alt="calendar" />
+              YCombinator
+            </span>
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={a16z} className="emoji-2" alt="calendar" />
+              Andreessen Horowitz
+            </span>
+            <span
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+                padding: "1rem",
+                border: "2px solid #fff",
+              }}
+            >
+              <img src={founders} className="emoji-2" alt="calendar" />
+              Founder&apos;s Fund
+            </span>
+          </div>
         </div>
       </div>
-      {/* founders phone */}
-      <div className="box-mobile">
+      {/* submit */}
+      <div className="box" ref={targetRef}>
         <div className="vertical-content">
-          <h1 className="h1" style={{ marginBottom: "1rem" }}>
-            meet the founders
-          </h1>
-          <div className="vertical-content">
-            <div className="headshot">
-              <img src={zion} className="headshots" alt="zion" />
-              <h2
-                className="h2"
-                style={{ marginBottom: "1rem", marginTop: "1rem" }}
+          <h1 className="h1">hire a &quot;lay-off&quot;</h1>
+          <form
+            className="vertical-content"
+            style={{ gap: "1rem", width: "100%", display: "flex" }}
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="text"
+              placeholder="first name"
+              className="input"
+              name="first"
+              value={formData.first}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              placeholder="last name"
+              className="input"
+              name="last"
+              value={formData.last}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              placeholder="email"
+              className="input"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <select
+              type="text"
+              placeholder="developer"
+              className="input"
+              name="developer"
+              value={formData.developer}
+              onChange={handleChange}
+              required
+            >
+              <option value="">select a engineer type</option>
+              <option value="staff">Staff Engineer</option>
+              <option value="principal">Principal Engineer</option>
+              <option value="director">Director of Engineering</option>
+              <option value="vp">VP of Engineering</option>
+              <option value="co-founder">Co-Founding Engineer</option>
+            </select>
+            <textarea
+              type="text"
+              placeholder="message (optional)"
+              className="input"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+            />
+            <button
+              className="emoji-container"
+              style={{ margin: "1rem", border: "2px solid #fff" }}
+              type="submit"
+            >
+              submit
+            </button>
+          </form>
+          {submissionStatus === "success" && (
+            <p>Form submitted successfully!</p>
+          )}
+          {submissionStatus === "failure" && (
+            <p>Failed to submit the form. Please try again.</p>
+          )}
+        </div>
+      </div>
+      {/* pricing */}
+      <div className="box">
+        <div className="vertical-content">
+          <h1 className="h1">engineer search costs</h1>
+          <div className="pricing-content">
+            <h1 className="h1">standard search</h1>
+            <h3 className="h3">$2,000 engagement</h3>
+            <a
+              href="https://calendly.com/learnmutiny/company-intro"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span
+                className="emoji-container"
+                style={{ marginBottom: "1rem" }}
               >
-                <span className="horizontal-content-small">
-                  zion
-                  <a
-                    href="https://linkedin.com/in/zionmelson"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      {" "}
-                      <img src={link} className="emoji" alt="mu" />
-                    </span>
-                  </a>
-                </span>
-              </h2>
-            </div>
-            <div className="headshot">
-              <img src={max} className="headshots" alt="max" />
-              <h2
-                className="h2"
-                style={{ marginBottom: "1rem", marginTop: "1rem" }}
-              >
-                <span className="horizontal-content-small">
-                  maxmillian
-                  <a
-                    href="https://linkedin.com/in/mxmilan"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="emoji-container" style={{ padding: 0 }}>
-                      {" "}
-                      <img src={link} className="emoji" alt="mu" />
-                    </span>
-                  </a>
-                </span>
-              </h2>
-            </div>
+                contact sales
+              </span>
+            </a>
+            <h5 className="h5">with a 60-day guarantee</h5>
           </div>
-          <h2 className="h2" style={{ marginBottom: "1rem", width: "80%" }}>
-            zion and max are atlanta natives and are invested in uplifting the
-            startup ecosystem.
-          </h2>
-          <h3 className="h3" style={{ marginBottom: "1rem" }}>
-            learnmutiny is our way of turning ATL into the southeast tech hub.
-          </h3>
-          <span className="emoji-container" style={{ padding: 0 }}>
-            <img src={atlanta} className="emoji" alt="mu" />
-          </span>
+          <div className="pricing-content">
+            <h1 className="h1">executive search</h1>
+            <h3 className="h3">$4,000 engagement</h3>
+            <a
+              href="https://calendly.com/learnmutiny/company-intro"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span
+                className="emoji-container"
+                style={{ marginBottom: "1rem" }}
+              >
+                contact sales
+              </span>
+            </a>
+            <h5 className="h5">with a 90-day guarantee</h5>
+          </div>
         </div>
       </div>
     </div>

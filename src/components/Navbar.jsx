@@ -36,19 +36,13 @@ export default function Navbar() {
           <div className="navigation-screen">
             <div className="links">
               <a href="/">
-                <div className="link-container">
-                  <h4 className="h4">home</h4>
-                </div>
+                <div className="link-container">home</div>
               </a>
               <a href="/about">
-                <div className="link-container">
-                  <h4 className="h4">about</h4>
-                </div>
+                <div className="link-container">about</div>
               </a>
-              <a href="/contact">
-                <div className="link-container">
-                  <h4 className="h4">contact</h4>
-                </div>
+              <a href="/developer">
+                <div className="link-container">developer</div>
               </a>
               {/* <a href="/developers">
                 <div className="link-container">
@@ -94,8 +88,8 @@ export default function Navbar() {
           </li>
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             {" "}
-            <a href="/contact">
-              <h4 className="h4">contact</h4>
+            <a href="/developer">
+              <h4 className="h4">developer</h4>
             </a>
           </li>
           {/* <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>

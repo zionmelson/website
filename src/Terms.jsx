@@ -1,18 +1,13 @@
-import "../App.css";
+import "./App.css";
 
 export default function Terms() {
   return (
     <div className="main">
-      <div
-        className="vertical-content"
-        style={{ marginTop: "5rem", marginBottom: "2rem" }}
-      >
-        <h1 className="h1-sub" style={{ width: "100%", marginBottom: "1rem" }}>
-          terms of service
-        </h1>
+      <div className="vertical-content">
+        <h1 className="h1">terms of service</h1>
       </div>
       <div className="privacy">
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           These Client Terms of Service (this &quot;Agreement&quot;) is a
           contract between you (&quot;you&quot;) and learnmutiny Limited
           Liability Company, a Delaware LLC (&quot;learnmutiny,&quot;
@@ -25,7 +20,7 @@ export default function Terms() {
           of the learnmutiny Platform after the effective date of a revised
           version of this Agreement constitutes your acceptance of its terms.
         </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           This Agreement includes and hereby incorporates by reference the
           agreements and policies referred to or linked herein, including our
           Privacy Policy, as such agreements and policies may be modified by
@@ -33,7 +28,7 @@ export default function Terms() {
           a conflict between the terms of such policies and agreements and the
           terms of this Agreement, the terms of this Agreement control.
         </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           YOU UNDERSTAND THAT BY REGISTERING WITH learnmutiny OR BY USING THE
           PLATFORM, YOU ARE AGREEING TO BE BOUND BY THIS AGREEMENT. IF YOU DO
           NOT ACCEPT THIS AGREEMENT IN ITS ENTIRETY, YOU MAY NOT ACCESS OR USE
@@ -60,7 +55,7 @@ export default function Terms() {
           Client and learnmutiny. learnmutiny collects payment from Clients in
           connection with their acceptance of Talent.
         </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           1.2 Eligibility. The use of the Site is available only to legal
           entities and persons who are at least eighteen (18) years old and are
           otherwise capable of forming legally binding contracts under
@@ -85,13 +80,13 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">2. PAYMENT TERMS, INVOICES AND PAYMENT METHODS.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           2.1 learnmutiny Fees. learnmutiny charges Clients a fee for the
           performance of Services (&quot;Fee&quot;). When a Client pays Fees for
           Services to learnmutiny, learnmutiny pays its Talent based upon the
           terms of learnmutiny’s agreement with any such Talent.
         </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           2.2 Payment Methods. Client hereby authorizes learnmutiny to run, or
           have run, credit card authorizations on all credit cards provided by
           Client, to store credit card details as Clientʼs method of payment for
@@ -99,7 +94,7 @@ export default function Terms() {
           payment authorized by learnmutiny or mutually agreed to between Client
           and learnmutiny).
         </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           2.3 Non-Payment. If Client fails to pay amounts due under this
           Agreement, whether by canceling Clientʼs credit card, initiating an
           improper chargeback or any other means, Clientʼs learnmutiny account
@@ -120,7 +115,7 @@ export default function Terms() {
         <h4 className="h4">
           3. SERVICE CONTRACT TERMS; WORKER CLASSIFICATION.
         </h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           3.1 You expressly acknowledge, agree and understand that: (i) the
           Platform is merely a venue where Clients can engage to learnmutiny to
           perform Services, if Clients so desire; and (ii) learnmutiny makes no
@@ -142,7 +137,7 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">4. WARRANTY DISCLAIMER.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           4.1 learnmutiny MAKES NO EXPRESS REPRESENTATIONS OR WARRANTIES WITH
           REGARD TO THE SERVICES, SITE, PLATFORM, OR ANY ACTIVITIES OR ITEMS
           RELATED TO THIS AGREEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW,
@@ -156,7 +151,7 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">5. LIMITATION OF LIABILITY.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           5.1 IN NO EVENT WILL learnmutiny BE LIABLE FOR ANY SPECIAL,
           CONSEQUENTIAL, INCIDENTAL, EXEMPLARY OR INDIRECT COSTS OR DAMAGES,
           LITIGATION COSTS, REPLACEMENT COSTS, INSTALLATION AND REMOVAL COSTS,
@@ -182,7 +177,7 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">6. INDEMNIFICATION.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           6.1 You will indemnify, defend, and hold harmless learnmutiny and its
           subsidiaries, affiliates, officers, agents, employees,
           representatives, and agents (each, an &quot;Indemnified Party&quot;)
@@ -201,7 +196,7 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">7. AUDIT RIGHTS.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           7.1 You will (i) create and maintain records to document satisfaction
           of your obligations under this Agreement and any Service Contract,
           including without limitation your service obligations and compliance
@@ -216,7 +211,7 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">8. TERM AND TERMINATION.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           8.1 Term. The term of this Agreement commences on the date of
           acceptance of this Agreement and continues in effect until terminated
           in accordance with Section 14.2. 14.2 Termination. Either party may
@@ -240,7 +235,7 @@ export default function Terms() {
       </div>
       <div className="privacy">
         <h4 className="h4">9. GENERAL.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           9.1 Entire Agreement. This Agreement, together with the other
           agreements and policies referenced herein, sets forth the entire
           agreement and understanding of the parties relating to its subject
@@ -268,7 +263,7 @@ export default function Terms() {
           learnmutiny may specify in writing. The date of receipt will be deemed
           the date on which such notice is transmitted.
         </p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           15.4 Modifications. No modification or amendment to this Agreement
           will be binding upon learnmutiny unless in a written instrument signed
           by a duly authorized representative of learnmutiny. For the purposes

@@ -1,14 +1,12 @@
-import bear from "../assets/png/bear.png";
+import bear from "./assets/png/bear.png";
 
-import "../App.css";
+import "./App.css";
 
 export default function Error() {
   return (
     <div className="main">
-      <div className="vertical-content" style={{ marginTop: "3rem" }}>
-        <h2 className="h2" style={{ width: "100%", marginBottom: "1rem" }}>
-          where are you going? 🧐
-        </h2>
+      <div className="vertical-content">
+        <h2 className="h2">where are you going? 🧐</h2>
         <a href="/">
           <span className="emoji-container">
             <img src={bear} className="emoji" alt="mu" />

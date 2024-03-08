@@ -1,28 +1,16 @@
-import "../App.css";
+import "./App.css";
 
 export default function Privacy() {
   return (
     <div className="main">
-      <div
-        className="vertical-content"
-        style={{ marginTop: "5rem", marginBottom: "2rem" }}
-      >
-        <h1 className="h1-sub" style={{ width: "100%" }}>
-          privacy policy
-        </h1>
+      <div className="vertical-content">
+        <h1 className="h1">privacy policy</h1>
       </div>
-      <p
-        className="h5"
-        style={{
-          marginRight: "2rem",
-          marginLeft: "2rem",
-          marginBottom: "1rem",
-        }}
-      >
+      <p className="h5">
         IF YOU DO NOT ACCEPT THIS PRIVACY POLICY, THEN YOU ARE NOT AUTHORIZED TO
         USE THIS SITE!
       </p>
-      <div className="privacy" style={{ marginBottom: "1rem" }}>
+      <div className="privacy">
         <p className="h5">
           At learnmutiny Limited Liability Company (“learnmutiny”), we respect
           your concerns about privacy. This Privacy Policy describes what
@@ -45,7 +33,7 @@ export default function Privacy() {
       <div className="privacy">
         <h4 className="h4">1. What information do we collect?</h4>
         <p className="h4">(a) Information you provide to us.</p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           We and our third party service providers (“Service Providers”) may
           collect certain information from or about you in connection with your
           use of, or your submissions directly to us or via the Site (together,
@@ -57,7 +45,7 @@ export default function Privacy() {
           communication by which such correspondence was made.
         </p>
         <p className="h4">(b) Information collected via technology.</p>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           The servers used to host and operate the Site may collect certain data
           pertaining to you, including data regarding the source from which you
           are directed to the Site, the equipment and communications method that
@@ -92,7 +80,7 @@ export default function Privacy() {
       </div>
       <div className="privacy">
         <h4 className="h4">2. Interest-based advertising.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           Advertising agencies, advertising networks, and other companies may
           place advertisements on the Site, and on the Internet generally, and
           may use their own cookies, web beacons, and other technology to
@@ -110,7 +98,7 @@ export default function Privacy() {
       </div>
       <div className="privacy">
         <h4 className="h4">3. How do we use your information?</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           We may use Collected Information to communicate special offers,
           promotions and information about our company to you via email or the
           telephone. If you do not wish to receive these emails you will have
@@ -138,7 +126,7 @@ export default function Privacy() {
       </div>
       <div className="privacy">
         <h4 className="h4">4. How do we use your information?</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           We collect information to provide a more personalized and relevant
           experience and high-quality services. If you give us your email
           address when you inquire about the Site or sign up, we will send you
@@ -158,7 +146,7 @@ export default function Privacy() {
         <h4 className="h4">
           5. We only share user information in the ways described below.
         </h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           We employ other companies and individuals to perform functions on our
           behalf. Examples include creating and maintaining our Site, processing
           credit card information, sending postal mail and e-mail, removing
@@ -189,7 +177,7 @@ export default function Privacy() {
       </div>
       <div className="privacy">
         <h4 className="h4">6. What choices do you have?</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           When corresponding with learnmutiny or our representatives, or when
           making a request for information or otherwise interacting with us or
           others through the Site, you choose what information to supply, what
@@ -208,7 +196,7 @@ export default function Privacy() {
         <h4 className="h4">
           7. How do we protect information collected about you?
         </h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           We have put in place certain security measures to safeguard Collected
           Information, but the storage and communication of Collected
           Information can never be completely secure. Hence, we do not guarantee
@@ -220,7 +208,7 @@ export default function Privacy() {
       </div>
       <div className="privacy">
         <h4 className="h4">8. We may change this Privacy Policy.</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           From time to time, we may change our privacy practices, and this
           Privacy Policy, because of changes in relevant and applicable legal or
           regulatory requirements, our business practices, or in our attempts to
@@ -235,7 +223,7 @@ export default function Privacy() {
       </div>
       <div className="privacy">
         <h4 className="h4">9. How can you contact learnmutiny?</h4>
-        <p className="h5" style={{ marginBottom: "0.5rem" }}>
+        <p className="h5">
           If you have questions regarding our Privacy Policy or other areas of
           our Site, please contact us. Your feedback is always welcome and
           appreciated. Learnmutiny Limited Liability Company, Email:

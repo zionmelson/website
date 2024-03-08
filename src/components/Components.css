@@ -15,18 +15,17 @@
 }
 
 .footer {
+  font-family: "Inter", sans-serif;
   width: 100%;
-  padding-right: 9rem;
-  padding-left: 9rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 0.7rem;
-  background-color: rgba(15, 15, 15, 0.5);
+  padding: 0.5rem;
+  padding-left: 4rem;
+  background: linear-gradient(20deg, #111111, #302f31);
   color: #fff;
   display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: start;
+  align-items: start;
+  justify-content: start;
 }
 
 .navigation {
@@ -106,7 +105,7 @@
 }
 
 .social {
-  width: 3rem;
+  width: 4rem;
 }
 
 .social:hover {
@@ -201,14 +200,20 @@
   display: none;
 }
 
-.foot-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
 @media (max-width: 767px) {
+  .link-container {
+    min-width: 10rem;
+    height: 2.5rem;
+    background-color: #302f31;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   .navbar {
     padding-right: 1.5rem;
     padding-left: 1.5rem;
@@ -350,7 +355,7 @@
   }
 
   .social {
-    width: 2rem;
+    width: 3rem;
   }
 
   .terms {
