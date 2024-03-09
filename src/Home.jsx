@@ -584,6 +584,7 @@ function Home() {
                 className="emoji-container"
                 style={{ margin: "1rem", border: "2px solid #fff" }}
                 type="submit"
+                onClick={scrollToTarget}
               >
                 <h4 className="h4" style={{ margin: 0 }}>
                   submit
