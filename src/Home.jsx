@@ -585,7 +585,9 @@ function Home() {
                 style={{ margin: "1rem", border: "2px solid #fff" }}
                 type="submit"
               >
-                submit
+                <h4 className="h4" style={{ margin: 0 }}>
+                  submit
+                </h4>
               </button>
             </form>
           )}
