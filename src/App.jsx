@@ -4,8 +4,8 @@ import Hotjar from "@hotjar/browser";
 import { useState, createContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
-// import { PiMoonStarsDuotone } from "react-icons/pi";
-// import { IoPartlySunny } from "react-icons/io5";
+import { PiMoonStarsDuotone } from "react-icons/pi";
+import { IoPartlySunny } from "react-icons/io5";
 
 import Home from "./Home";
 import About from "./About";
@@ -45,7 +45,7 @@ function App() {
         >
           <Navbar />
 
-          {/* {theme === "" ? (
+          {theme === "" ? (
             <PiMoonStarsDuotone
               className="daytime"
               onClick={toggleTheme}
@@ -57,7 +57,7 @@ function App() {
               onClick={toggleTheme}
               style={{ color: "#fff" }}
             />
-          )} */}
+          )}
 
           <Routes>
             <Route path="/" element={<Home />} />

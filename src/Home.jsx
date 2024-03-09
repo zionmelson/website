@@ -581,8 +581,7 @@ function Home() {
                 onChange={handleChange}
               />
               <button
-                className="emoji-container"
-                style={{ margin: "1rem", border: "2px solid #fff" }}
+                className="emoji-container-submit"
                 type="submit"
                 onClick={scrollToTarget}
               >
