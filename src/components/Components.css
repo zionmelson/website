@@ -15,8 +15,8 @@
 }
 
 .footer {
-  font-family: "Inter", sans-serif;
   width: 100%;
+  font-size: 0.7rem;
   padding: 0.5rem;
   padding-left: 4rem;
   background: linear-gradient(20deg, #111111, #302f31);
@@ -24,8 +24,8 @@
   display: flex;
   flex-direction: column;
   text-align: start;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .navigation {
@@ -43,34 +43,7 @@
   align-items: flex-end;
 }
 
-#light .scrolled {
-  background-color: #5dc4ff2a;
-  height: 4rem;
-  align-items: flex-end;
-}
-
-#light .text-scrolled {
-  color: #111111;
-}
-
-#light .footer {
-  width: 100%;
-  padding-right: 9rem;
-  padding-left: 9rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 0.7rem;
-  background-color: rgba(217, 217, 217, 0.9);
-  color: #fff;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-text,
-.nav-support-text,
-.nav-startup-text {
+.nav-text {
   color: #fff;
   transition: all 0.3s linear;
 }
@@ -81,22 +54,6 @@
 
 .nav-text:hover {
   color: #898989;
-}
-
-#light .nav-text:hover {
-  color: #3a3a3a;
-}
-
-.nav-startup-text:hover {
-  color: #5dc4ff;
-}
-
-#light .nav-startup-text:hover {
-  color: #099400;
-}
-
-.nav-support-text:hover {
-  color: #ffa3d4;
 }
 
 .socials {
@@ -130,32 +87,6 @@
   background: linear-gradient(20deg, #111111, #686868);
 }
 
-.startup-logo {
-  width: 12rem;
-  height: 4rem;
-  background: linear-gradient(20deg, #111111, #302f31);
-  border-radius: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-  padding: 1rem;
-  border: 0.2rem solid #5dc4ff;
-  transition: 0.3s linear;
-}
-
-#light .startup-logo {
-  border: 0.2rem solid #099400;
-}
-
-.startup-logo:hover {
-  background: linear-gradient(20deg, #111111, #2d4069);
-}
-
-#light .startup-logo:hover {
-  background: linear-gradient(20deg, #111111, #066100);
-}
-
 .og-logo {
   width: 14rem;
   transition: 1s linear;
@@ -163,21 +94,6 @@
 
 .full-logo {
   width: 14rem;
-  transition: 1s linear;
-}
-
-.light-logo {
-  display: none;
-  transition: 1s linear;
-}
-
-#light .full-logo {
-  display: none;
-  transition: 1s linear;
-}
-
-#light .light-logo {
-  display: block;
   transition: 1s linear;
 }
 
@@ -193,10 +109,6 @@
 }
 
 .navigation-buttons {
-  display: none;
-}
-
-.terms-mobile {
   display: none;
 }
 
@@ -219,13 +131,6 @@
     padding-left: 1.5rem;
     align-items: center;
     justify-content: center;
-  }
-
-  #light .scrolled {
-    background-color: #5dc4ff2a;
-    height: 4rem;
-    color: #000;
-    align-items: center;
   }
 
   .navigation {
@@ -275,46 +180,6 @@
     justify-content: center;
   }
 
-  .startup-logo {
-    background: linear-gradient(20deg, #111111, #2d4069);
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 1rem;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #light .startup-logo {
-    background: linear-gradient(20deg, #111111, #066100);
-  }
-
-  .light-logo {
-    display: none;
-    transition: 1s linear;
-  }
-
-  #light .light-logo {
-    display: none;
-    transition: 1s linear;
-  }
-
-  .support-logo {
-    background: linear-gradient(20deg, #111111, #664657);
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 1rem;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .full-logo {
-    display: none;
-  }
-
   .og-logo {
     display: none;
   }
@@ -326,51 +191,17 @@
 
   .footer {
     width: 100%;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 0.4rem;
+    font-size: 0.7rem;
+    padding: 0.5rem;
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     display: flex;
-    text-align: center;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-  }
-
-  #light .footer {
-    width: 100%;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 0.4rem;
-    background-color: rgba(217, 217, 217, 0.9);
-    color: #fff;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .social {
     width: 3rem;
-  }
-
-  .terms {
-    display: none;
-  }
-
-  .terms-mobile {
-    display: block;
-  }
-
-  .foot-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
   }
 }
 

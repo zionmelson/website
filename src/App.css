@@ -140,17 +140,28 @@
   padding: 1rem;
 }
 
-#light .span {
-  color: #fff;
-}
-
 .input {
-  width: 50%;
+  width: 60%;
+  font-size: 0.9rem;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding-left: 1rem;
+  border-radius: 0.4rem;
   background: #302f31;
   color: #fff;
   border: 1px solid #fff;
+}
+
+.coming-soon-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #111111, #222123);
+  border: 2px solid #fff;
 }
 
 .daytime {
@@ -163,14 +174,6 @@
 
 .logo {
   width: 30rem;
-}
-
-.large-logo {
-  width: 20rem;
-}
-
-.partner-logo {
-  width: 15rem;
 }
 
 .emoji {
@@ -233,13 +236,6 @@
   cursor: pointer;
 }
 
-.github-icon {
-  width: 8rem;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  padding: 0;
-}
-
 .headshot {
   display: flex;
   flex-direction: column;
@@ -251,19 +247,6 @@
 .headshots {
   width: 20rem;
   margin: 1rem;
-}
-
-.faq {
-  border: 2px solid #686868;
-  border-radius: 0.5rem;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .privacy {
@@ -291,40 +274,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.tooltip {
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  text-align: center;
-  position: absolute;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 5rem;
-  padding: 0.5rem;
-  top: 1.5rem;
-  right: 4.2rem;
-}
-
-.tooltip-bar {
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 3px solid #302f31;
-  background: linear-gradient(135deg, #111111, #222123);
-  position: absolute;
-  top: -2rem;
-  right: 2rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  z-index: 2;
 }
 
 .icon {
@@ -638,30 +587,6 @@
   background-color: #25d9e3;
   color: #fff;
 }
-.theme-button {
-  width: 10rem;
-  border-radius: 0.5rem;
-  position: absolute;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  margin-top: 10rem;
-  margin-left: 10rem;
-  background-color: #e0e0e0;
-  padding: 0.5rem;
-  z-index: 0;
-}
-
-#position {
-  font-size: 3rem;
-  font-family: Inter, sans-serif;
-  line-height: 0;
-  margin: 0;
-
-  &:nth-of-type(5) {
-    color: #5dc4ff;
-  }
-}
 
 #csuite:hover {
   background-color: #1e4d68;
@@ -684,57 +609,6 @@
 #star-container:hover {
   background-color: #f4ff5d6f;
   color: #ffffff;
-}
-
-#video {
-  border-radius: 1rem;
-}
-
-.github-repo {
-  border: 1px solid #fff;
-  padding: 0.3rem;
-  border-radius: 0.5rem;
-  border: 1px solid #302f31;
-  background: linear-gradient(135deg, #111111, #222123);
-}
-
-.github-repo:hover {
-  border-color: #fff;
-  transition: all 0.4s ease-in;
-}
-
-.select {
-  width: 95%;
-  padding: 0.2rem;
-  border: "1px";
-  border-radius: 0.5rem;
-  background: #302f31;
-}
-
-.hide {
-  display: none;
-}
-
-.mobile {
-  display: none;
-}
-
-.company-logos {
-  overflow: hidden;
-}
-
-.logos-container {
-  display: flex;
-  animation: scroll 15s linear infinite;
-  width: 50rem;
-}
-
-.logos-container img {
-  height: 80px;
-  width: auto;
-  margin-right: 5rem;
-  margin-left: 5rem;
-  flex-shrink: 0;
 }
 
 #bio {
@@ -790,6 +664,8 @@
 
   .input {
     width: 100%;
+    text-align: center;
+    padding: 0.5rem;
   }
 
   .large-logo {
