@@ -33,6 +33,9 @@ function Home() {
     message: "",
   });
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
+
   const targetRef = useRef(null);
 
   const scrollToTarget = () => {
@@ -47,6 +50,8 @@ function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmissionStatus(null);
+    setSubmitted(false);
     try {
       const response = await fetch(
         "https://us-central1-learnmutiny-website.cloudfunctions.net/form",
@@ -59,6 +64,8 @@ function Home() {
         }
       );
       const data = await response.json();
+      console.log(data);
+
       if (response.ok) {
         setSubmissionStatus("success");
         console.log(data);
@@ -70,15 +77,23 @@ function Home() {
           developer: "",
           message: "",
         });
+
+        setSubmitted(true);
         // You can add any additional logic for successful submission here
       } else {
         setSubmissionStatus("failure");
-        console.error("Error:", data);
+        console.error("Error:", data.error);
+        setError(data.error);
+        setSubmitted(true);
+
         // You can add any additional logic for failed submission here
       }
     } catch (error) {
       setSubmissionStatus("failure");
       console.error("Error:", error);
+
+      setSubmitted(true);
+
       // You can add error handling logic here
     }
   };
@@ -165,7 +180,7 @@ function Home() {
             we source recently laid-off senior developers from tech giants and
             unicorns
           </h2>
-          {window.screen.width > 788 ? (
+          {window.screen.width > 780 ? (
             <div className="icons" style={{ marginBottom: "2rem" }}>
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
@@ -452,85 +467,126 @@ function Home() {
                 border: "2px solid #fff",
               }}
             >
-              <img src={founders} className="emoji-2" alt="calendar" />
+              <img
+                src={founders}
+                className="emoji-2"
+                alt="calendar"
+                ref={targetRef}
+              />
               Founder&apos;s Fund
             </span>
           </div>
         </div>
       </div>
       {/* submit */}
-      <div className="box" ref={targetRef}>
+      <div className="box">
         <div className="vertical-content">
           <h1 className="h1">hire a &quot;lay-off&quot;</h1>
-          <form
-            className="vertical-content"
-            style={{ gap: "1rem", width: "100%", display: "flex" }}
-            onSubmit={handleSubmit}
-          >
-            <input
-              type="text"
-              placeholder="first name"
-              className="input"
-              name="first"
-              value={formData.first}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              placeholder="last name"
-              className="input"
-              name="last"
-              value={formData.last}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              placeholder="email"
-              className="input"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <select
-              type="text"
-              placeholder="developer"
-              className="input"
-              name="developer"
-              value={formData.developer}
-              onChange={handleChange}
-              required
+          {submitted && submissionStatus === "success" ? (
+            <>
+              <p>Thank you for your submission!</p>
+              <p> We will get back to you soon.</p>
+            </>
+          ) : (
+            <form
+              className="vertical-content"
+              style={{ gap: "1rem", width: "100%", display: "flex" }}
+              onSubmit={handleSubmit}
             >
-              <option value="">select a engineer type</option>
-              <option value="staff">Staff Engineer</option>
-              <option value="principal">Principal Engineer</option>
-              <option value="director">Director of Engineering</option>
-              <option value="vp">VP of Engineering</option>
-              <option value="co-founder">Co-Founding Engineer</option>
-            </select>
-            <textarea
-              type="text"
-              placeholder="message (optional)"
-              className="input"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-            />
-            <button
-              className="emoji-container"
-              style={{ margin: "1rem", border: "2px solid #fff" }}
-              type="submit"
-            >
-              submit
-            </button>
-          </form>
-          {submissionStatus === "success" && (
-            <p>Form submitted successfully!</p>
+              <input
+                type="text"
+                placeholder="first name"
+                className="input"
+                name="first"
+                value={formData.first}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="last name"
+                className="input"
+                name="last"
+                value={formData.last}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="company name"
+                className="input"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="email"
+                placeholder="company email"
+                className="input"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+              <select
+                type="text"
+                placeholder="company title"
+                className="input"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+                required
+              >
+                <option value="" disabled selected hidden>
+                  company title
+                </option>
+                <option value="level1">Engineer or Analyst</option>
+                <option value="level2">Associate</option>
+                <option value="level3">Director or Principal</option>
+                <option value="level4">VP or Head of Division</option>
+                <option value="level5">Co-Founder or Chief Officer</option>
+              </select>
+              <select
+                type="text"
+                placeholder="developer"
+                className="input"
+                name="developer"
+                value={formData.developer}
+                onChange={handleChange}
+                required
+              >
+                <option value="" disabled selected hidden>
+                  select a engineer type
+                </option>
+                <option value="staff">Staff Engineer</option>
+                <option value="principal">Principal Engineer</option>
+                <option value="director">Director of Engineering</option>
+                <option value="vp">VP of Engineering</option>
+                <option value="co-founder">Co-Founding Engineer</option>
+              </select>
+              <textarea
+                type="text"
+                placeholder="message (optional)"
+                className="input"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+              <button
+                className="emoji-container"
+                style={{ margin: "1rem", border: "2px solid #fff" }}
+                type="submit"
+              >
+                submit
+              </button>
+            </form>
           )}
           {submissionStatus === "failure" && (
-            <p>Failed to submit the form. Please try again.</p>
+            <>
+              <p>Failed to submit the form. Please try again.</p>
+              <p>{error}</p>
+            </>
           )}
         </div>
       </div>
