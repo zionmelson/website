@@ -44,7 +44,6 @@ function App() {
           id={theme === "" ? "" : "white"}
         >
           <Navbar />
-
           {theme === "" ? (
             <PiMoonStarsDuotone
               className="daytime"
