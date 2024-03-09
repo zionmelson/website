@@ -15,6 +15,7 @@ developerHash.json
 .eslintrc.cjs
 api
 interface.js
+emails
 
 # Editor directories and files
 .vscode/*

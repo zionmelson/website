@@ -28,7 +28,6 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsNavOpen(!isNavOpen);
 
-  const pathname = window.location.pathname;
   return (
     <>
       <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -44,44 +43,22 @@ export default function Navbar() {
               <a href="/developer">
                 <div className="link-container">developer</div>
               </a>
-              {/* <a href="/developers">
-                <div className="link-container">
-                  <h4 className="h4">developers</h4>
-                </div>
-              </a> */}
             </div>
           </div>
         )}
-
-        {pathname !== "undefined" && pathname === "/startup" ? (
-          <a href="/startup">
-            <div className={`startup-logo ${scrolled ? "logo-scrolled" : ""}`}>
-              <img src={learnmutiny} className="og-logo" alt="logo" />
-              <img src={bear} className="bear-logo" alt="logo" />
-            </div>
-          </a>
-        ) : (
-          <a href="/">
-            {pathname !== "undefined" && pathname === "/" ? (
-              <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
-                <img src={learnmutiny} className="og-logo" alt="logo" />
-                <img src={bear} className="bear-logo" alt="logo" />
-              </div>
-            ) : (
-              <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
-                <img src={learnmutiny} className="og-logo" alt="logo" />
-                <img src={bear} className="bear-logo" alt="logo" />
-              </div>
-            )}
-          </a>
-        )}
+        <a href="/">
+          <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
+            <img src={learnmutiny} className="og-logo" alt="logo" />
+            <img src={bear} className="bear-logo" alt="logo" />
+          </div>
+        </a>
         <ul className="navigation">
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             <a href="/">
               <h4 className="h4">home</h4>
             </a>
           </li>
-          <li className={`nav-startup-text ${scrolled ? "text-scrolled" : ""}`}>
+          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             <a href="/about">
               <h4 className="h4">about</h4>
             </a>
@@ -92,12 +69,6 @@ export default function Navbar() {
               <h4 className="h4">developer</h4>
             </a>
           </li>
-          {/* <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
-            {" "}
-            <a href="/developers">
-              <h4 className="h4">developers</h4>
-            </a>
-          </li> */}
         </ul>
         {isNavOpen ? (
           <div className="navigation-buttons-mobile">

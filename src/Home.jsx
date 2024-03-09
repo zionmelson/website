@@ -35,6 +35,13 @@ function Home() {
   const [submissionStatus, setSubmissionStatus] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
+  const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.screen.width < 780) {
+      setMobile(true);
+    }
+  }, []);
 
   const targetRef = useRef(null);
 
@@ -64,11 +71,12 @@ function Home() {
         }
       );
       const data = await response.json();
-      console.log(data);
+
+      console.log("data from response", data);
 
       if (response.ok) {
+        console.log("response ok", response.status);
         setSubmissionStatus("success");
-        console.log(data);
 
         setFormData({
           first: "",
@@ -79,18 +87,17 @@ function Home() {
         });
 
         setSubmitted(true);
-        // You can add any additional logic for successful submission here
       } else {
+        console.error("response error:", data.error, response.status);
         setSubmissionStatus("failure");
-        console.error("Error:", data.error);
         setError(data.error);
         setSubmitted(true);
 
         // You can add any additional logic for failed submission here
       }
     } catch (error) {
+      console.error("fetching error:", error);
       setSubmissionStatus("failure");
-      console.error("Error:", error);
 
       setSubmitted(true);
 
@@ -180,7 +187,14 @@ function Home() {
             we source recently laid-off senior developers from tech giants and
             unicorns
           </h2>
-          {window.screen.width > 780 ? (
+          {mobile ? (
+            <div className="icons" style={{ marginBottom: "2rem" }}>
+              <SiCashapp id="cashapp" className="icon" />
+              <FaMeta id="meta" className="icon" />
+              <RiTwitterXFill id="X" className="icon" />
+              <TbBrandAirbnb id="airbnb" className="icon" />
+            </div>
+          ) : (
             <div className="icons" style={{ marginBottom: "2rem" }}>
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
@@ -189,13 +203,6 @@ function Home() {
               <FaUber id="uber" className="icon" />
               <FaStripeS id="stripe" className="icon" />
               <FaDiscord id="discord" className="icon" />
-            </div>
-          ) : (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <SiCashapp id="cashapp" className="icon" />
-              <FaMeta id="meta" className="icon" />
-              <RiTwitterXFill id="X" className="icon" />
-              <TbBrandAirbnb id="airbnb" className="icon" />
             </div>
           )}
           <h2 className="h2">and place them at your startup company</h2>
@@ -538,7 +545,7 @@ function Home() {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled selected hidden>
+                <option value="" selected disabled hidden>
                   company title
                 </option>
                 <option value="level1">Engineer or Analyst</option>
@@ -556,7 +563,7 @@ function Home() {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled selected hidden>
+                <option value="" disabled hidden>
                   select a engineer type
                 </option>
                 <option value="staff">Staff Engineer</option>

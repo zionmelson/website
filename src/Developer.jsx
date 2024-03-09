@@ -5,8 +5,8 @@ import "./App.css";
 export default function Developer() {
   return (
     <div className="main">
-      <div className="vertical-content">
-        <h2 className="h2">coming soon...</h2>
+      <div className="coming-soon-container">
+        <h1 className="h1">coming soon...</h1>
         <a href="/">
           <span className="emoji-container">
             <img src={bear} className="emoji" alt="mu" />
