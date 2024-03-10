@@ -295,6 +295,11 @@ function Home() {
                   laid-off on December 2023
                 </h5>
               </div>
+              <h5 className="h5">
+                <button className="emoji-container" onClick={scrollToTarget}>
+                  hire a layoff
+                </button>
+              </h5>
             </div>
           </div>
           <div className="layoff-content">
@@ -357,6 +362,11 @@ function Home() {
                   laid-off on January 2024
                 </h5>
               </div>
+              <h5 className="h5">
+                <button className="emoji-container" onClick={scrollToTarget}>
+                  hire a layoff
+                </button>
+              </h5>
             </div>
           </div>
           <div className="layoff-content">
@@ -422,6 +432,11 @@ function Home() {
                   laid-off on February 2024
                 </h5>
               </div>
+              <h5 className="h5">
+                <button className="emoji-container" onClick={scrollToTarget}>
+                  hire a layoff
+                </button>
+              </h5>
             </div>
           </div>
         </div>
@@ -601,35 +616,25 @@ function Home() {
           <div className="pricing-content">
             <h1 className="h1">standard search</h1>
             <h3 className="h3">$2,000 engagement</h3>
-            <a
-              href="https://calendly.com/learnmutiny/company-intro"
-              target="_blank"
-              rel="noreferrer"
+            <span
+              className="emoji-container"
+              onClick={scrollToTarget}
+              style={{ marginBottom: "1rem" }}
             >
-              <span
-                className="emoji-container"
-                style={{ marginBottom: "1rem" }}
-              >
-                contact sales
-              </span>
-            </a>
+              contact sales
+            </span>
             <h5 className="h5">with a 60-day guarantee</h5>
           </div>
           <div className="pricing-content">
             <h1 className="h1">executive search</h1>
             <h3 className="h3">$4,000 engagement</h3>
-            <a
-              href="https://calendly.com/learnmutiny/company-intro"
-              target="_blank"
-              rel="noreferrer"
+            <span
+              className="emoji-container"
+              onClick={scrollToTarget}
+              style={{ marginBottom: "1rem" }}
             >
-              <span
-                className="emoji-container"
-                style={{ marginBottom: "1rem" }}
-              >
-                contact sales
-              </span>
-            </a>
+              contact sales
+            </span>
             <h5 className="h5">with a 90-day guarantee</h5>
           </div>
         </div>
