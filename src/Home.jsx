@@ -474,19 +474,14 @@ function Home() {
                 border: "2px solid #fff",
               }}
             >
-              <img
-                src={founders}
-                className="emoji-2"
-                alt="calendar"
-                ref={targetRef}
-              />
+              <img src={founders} className="emoji-2" alt="calendar" />
               Founder&apos;s Fund
             </span>
           </div>
         </div>
       </div>
       {/* submit */}
-      <div className="box">
+      <div className="box" ref={targetRef}>
         <div className="vertical-content">
           <h1 className="h1">hire a &quot;lay-off&quot;</h1>
           {submitted && submissionStatus === "success" ? (
