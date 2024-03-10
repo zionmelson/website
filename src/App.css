@@ -167,9 +167,6 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-radius: 0.5rem;
-  background: linear-gradient(135deg, #111111, #222123);
-  border: 2px solid #fff;
 }
 
 .daytime {
@@ -236,6 +233,7 @@
   justify-content: center;
   transition: all 0.2s ease-in;
   padding: 1rem;
+  border: 2px solid #fff;
 }
 
 #white .emoji-container {
