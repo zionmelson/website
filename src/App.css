@@ -122,6 +122,10 @@
   margin-bottom: 1rem;
 }
 
+#white .layoff-content {
+  color: #fff;
+}
+
 .pricing-content {
   display: flex;
   flex-direction: column;
@@ -133,6 +137,10 @@
   margin-bottom: 1rem;
   padding: 1rem;
   width: 100%;
+}
+
+#white .pricing-content {
+  color: #fff;
 }
 
 .span {
@@ -228,6 +236,25 @@
   justify-content: center;
   transition: all 0.2s ease-in;
   padding: 1rem;
+}
+
+#white .emoji-container {
+  color: #fff;
+}
+
+.emoji-container-submit {
+  height: 2rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #333333;
+  padding: 0.5rem;
+  border-radius: 60rem;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in;
+  padding: 1rem;
+  border: 2px solid #302f31;
 }
 
 .emoji-container:hover {
