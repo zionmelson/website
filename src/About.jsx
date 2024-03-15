@@ -10,8 +10,8 @@ import {
   FaNode,
 } from "react-icons/fa";
 
-import zion from "./assets/svg/zion.svg";
-import max from "./assets/svg/max.svg";
+import zion from "./assets/jpeg/zion.jpeg";
+import maxmillian from "./assets/jpeg/maxmillian.jpeg";
 import atlanta from "./assets/svg/atlanta.svg";
 
 import Lottie from "lottie-react";
@@ -73,23 +73,22 @@ function Home() {
       {/* intro */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">sourcing senior engineers for startups</h1>
+          <h1 className="h1">Sourcing senior engineers for startups</h1>
           <h2 className="h2">
             find your next full-time position with learnmutiny
           </h2>
           <Lottie animationData={animation} />
           <h3 className="h3">
-            the clients we source for have raised at least a series A to B
-            funding round, and are looking to hire a lead developer to amplify
-            their internal development processes.
+            we place laid off engineers at companies who have raised at least a
+            series A to B funding round.
           </h3>
         </div>
       </div>
       {/* value */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">looking for your next position?</h1>
-          <h2 className="h2">we take a different approach to sourcing</h2>
+          <h1 className="h1">Find your next position</h1>
+          <h2 className="h2">we take a different approach</h2>
           <h3 className="h3">
             at learnmutiny our mission is to match you to companies that align
             with your career goals. <br />
@@ -116,13 +115,14 @@ function Home() {
           )}
         </div>
       </div>
-      {/* founders */}
+      {/* partners */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">meet the founders</h1>
+          <h1 className="h1">Meet the team</h1>
           <div className="horizontal-content">
             <div className="headshot">
               <img src={zion} className="headshots" alt="zion" />
+              <h5 className="h5">zion | managing partner</h5>
               <a
                 href="https://linkedin.com/in/zionmelson"
                 target="_blank"
@@ -134,7 +134,8 @@ function Home() {
               </a>
             </div>
             <div className="headshot">
-              <img src={max} className="headshots" alt="max" />
+              <img src={maxmillian} className="headshots" alt="maxmillian" />
+              <h5 className="h5">maxmillian | managing partner</h5>
               <a
                 href="https://www.linkedin.com/in/mxmilan/"
                 target="_blank"
@@ -147,9 +148,12 @@ function Home() {
             </div>
           </div>
           <h5 className="h5" id="bio">
-            zion and max are atlanta natives who are invested in uplifting the
-            startup ecosystem in the southeast. learnmutiny is our way of giving
-            back to the startup community and turning ATL into a tech hub.
+            our team is invested in uplifting the startup ecosystem in the
+            southeast.
+          </h5>
+          <h5 className="h5" id="bio">
+            learnmutiny is giving back to the startup community and turning ATL
+            into a tech hub.
           </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
@@ -157,7 +161,7 @@ function Home() {
       {/* contact */}
       <div className="box">
         <div className="vertical-content" style={{ padding: "2rem" }}>
-          <h1 className="h1">contact us</h1>
+          <h1 className="h1">Contact us</h1>
           <span
             className="emoji-container"
             id="support"

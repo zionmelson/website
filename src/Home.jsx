@@ -1,18 +1,43 @@
-import { FaUber, FaStripeS, FaDiscord } from "react-icons/fa";
+import { FaUber, FaStripeS, FaDiscord, FaPlus, FaMinus } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SiCashapp } from "react-icons/si";
 import { FaMeta } from "react-icons/fa6";
 import { TbBrandAirbnb } from "react-icons/tb";
 
 import Lottie from "lottie-react";
-import animation from "./assets/json/animate2.json";
+import developer from "./assets/json/developer.json";
+import group from "./assets/json/group.json";
 
 import cashapp from "./assets/svg/cashapp.svg";
 import stock from "./assets/svg/stock.svg";
 import apple from "./assets/svg/apple.svg";
-import yc from "./assets/svg/yc.svg";
-import a16z from "./assets/svg/a16z.svg";
-import founders from "./assets/svg/founders.svg";
+import metamask from "./assets/svg/metamask.svg";
+import ea from "./assets/svg/ea.svg";
+import bumble from "./assets/svg/bumble.svg";
+import meta from "./assets/svg/meta.svg";
+import docusign from "./assets/svg/docusign.svg";
+import grammarly from "./assets/svg/grammarly.svg";
+import instacart from "./assets/svg/instacart.svg";
+import toast from "./assets/svg/toast.svg";
+import expedia from "./assets/svg/expedia.svg";
+import snap from "./assets/svg/snap.svg";
+import affrim from "./assets/svg/affrim.svg";
+import google from "./assets/svg/google.svg";
+import buzzfeed from "./assets/svg/buzzfeed.svg";
+import rivian from "./assets/svg/rivian.svg";
+import mozilla from "./assets/svg/mozilla.svg";
+import zoom from "./assets/svg/zoom.svg";
+import meetup from "./assets/svg/meetup.svg";
+import amazon from "./assets/svg/amazon.svg";
+import logo from "./assets/svg/logo.svg";
+import stripe from "./assets/svg/stripe.svg";
+
+import github from "./assets/svg/github.svg";
+import aws from "./assets/svg/aws.svg";
+import gcp from "./assets/svg/gcp.svg";
+import azure from "./assets/svg/azure.svg";
+import docker from "./assets/svg/docker.svg";
+import terraform from "./assets/svg/terraform.svg";
 
 import jonathan from "./assets/png/jonathan.png";
 import ian from "./assets/png/ian.png";
@@ -28,14 +53,74 @@ function Home() {
   const [formData, setFormData] = useState({
     first: "",
     last: "",
+    company: "",
     email: "",
+    title: "",
+    search: "",
     developer: "",
     message: "",
+    companies: [],
+    packages: {},
   });
+
+  const [packages, setPackages] = useState({
+    projectManager: 0,
+    seniorEngineer: 0,
+    juniorEngineer: 0,
+  });
+
+  const [companies, setCompanies] = useState([]);
+
   const [submissionStatus, setSubmissionStatus] = useState(null);
-  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
+
+  const [submitted, setSubmitted] = useState(false);
   const [mobile, setMobile] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const [sourceType, setSourceType] = useState("");
+  const [date, setDate] = useState("");
+
+  const addCompany = (newCompany) => {
+    if (
+      companies.length < 6 &&
+      !companies.find((company) => company.name === newCompany.name)
+    ) {
+      setCompanies((prevCompanies) => [...prevCompanies, newCompany]);
+      setFormData({ ...formData, companies: [...companies, newCompany] });
+
+      console.log("company added:", newCompany);
+      console.log("companies:", companies);
+    }
+  };
+
+  const addToPackages = (engineer) => {
+    setPackages((prevPackages) => ({
+      ...prevPackages,
+      [engineer]: Math.min(10, prevPackages[engineer] + 1),
+    }));
+
+    setFormData({ ...formData, packages: { ...packages, [engineer]: 1 } });
+  };
+
+  const removeFromPackages = (engineer) => {
+    setPackages((prevPackages) => ({
+      ...prevPackages,
+      [engineer]: Math.max(0, prevPackages[engineer] - 1),
+    }));
+
+    setFormData({ ...formData, packages: { ...packages, [engineer]: 0 } });
+  };
+
+  useEffect(() => {
+    const newDate = new Date().toLocaleDateString();
+    setDate(newDate);
+  }, []);
+
+  const toggleOpen = (num) => {
+    setIsOpen(num);
+  };
 
   useEffect(() => {
     if (window.screen.width < 780) {
@@ -44,6 +129,9 @@ function Home() {
   }, []);
 
   const targetRef = useRef(null);
+  const sourcedRef = useRef(null);
+  const directRef = useRef(null);
+  const projectRef = useRef(null);
 
   const scrollToTarget = () => {
     if (targetRef.current) {
@@ -51,12 +139,34 @@ function Home() {
     }
   };
 
+  const scrollToSourced = () => {
+    if (sourcedRef.current) {
+      sourcedRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToDirect = () => {
+    if (directRef.current) {
+      directRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToProject = () => {
+    if (projectRef.current) {
+      projectRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (e.target.name === "search") {
+      setSourceType(e.target.value);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     setSubmissionStatus(null);
     setSubmitted(false);
     try {
@@ -77,21 +187,24 @@ function Home() {
       if (response.ok) {
         console.log("response ok", response.status);
         setSubmissionStatus("success");
+        setSubmitted(true);
 
         setFormData({
           first: "",
           last: "",
+          company: "",
           email: "",
+          title: "",
+          search: "",
           developer: "",
           message: "",
         });
-
-        setSubmitted(true);
       } else {
         console.error("response error:", data.error, response.status);
         setSubmissionStatus("failure");
         setError(data.error);
         setSubmitted(true);
+        setLoading(false);
 
         // You can add any additional logic for failed submission here
       }
@@ -144,11 +257,11 @@ function Home() {
 
   return (
     <div className="main">
-      {/* startup-intro */}
+      {/* intro */}
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1">
-            hire a &quot;laid-off&quot; senior
+            Hire a recently laid-off
             <div className="span">
               <h1 className="h1" id="gsap">
                 full-stack developer
@@ -208,38 +321,1072 @@ function Home() {
           <h2 className="h2">and place them at your startup company</h2>
           <h5 className="h5">
             <button className="emoji-container" onClick={scrollToTarget}>
-              hire a layoff
+              hire an engineer
             </button>
           </h5>
         </div>
       </div>
-      {/* hiring */}
+      {/* sourcing */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">hiring laid-off talent</h1>
-          <h2 className="h2">
-            the biggest names in tech are laying off thousands of talented
-            senior engineers that are now available for hire
-          </h2>
-          <Lottie animationData={animation} />
-          <h3 className="h3">
-            we have built relationship pipelines with these engineers and can
-            work with your team to get you access to our professionals
-          </h3>
+          <div
+            style={{
+              width: "100%",
+              textAlign: "start",
+            }}
+          >
+            <h1 className="h1">Hiring recently laid off engineers</h1>
+            <h3 className="h3">
+              The recent major tech lay-offs have created an opportunity for
+              startup companies who need to hire, welcome new, vetted
+              engineering teams.
+            </h3>
+            <h5 className="h5">
+              At learnmutiny we have focused our work to revolve around this
+              newly shapen reality, and help make the onboarding of recent
+              lay-offs as seamless as possible.
+            </h5>
+            <div
+              style={{
+                marginTop: "1rem",
+                marginBottom: "1rem",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
+              <div>
+                <h2 className="h2">We offer 2 distinct sourcing services</h2>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => {
+                      toggleOpen(1);
+                      scrollToDirect();
+                    }}
+                  >
+                    direct-to-hire
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => {
+                      toggleOpen(2);
+                      scrollToProject();
+                    }}
+                  >
+                    project based staffing
+                  </button>
+                </h5>
+              </div>
+              <div className="stats-content">
+                {mobile ? (
+                  <>
+                    <h2>25%</h2>
+                    <h2>30%</h2>
+                    <h2>45%</h2>
+                  </>
+                ) : (
+                  <h2>Our sourcing stats</h2>
+                )}
+              </div>
+            </div>
+          </div>
+          {/* direct-to-hire */}
+          <div
+            className="vertical-content"
+            style={{ width: "100%" }}
+            ref={directRef}
+          >
+            <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
+              <h2 className="h2">Direct-to-hire placement process</h2>
+              <Lottie animationData={developer} style={{ width: "10rem" }} />
+              <div className="sourcing-info">
+                <h3 className="h3">1. Initial Due Diligence Screening</h3>
+                <h5 className="h5">
+                  We work with your team to understand the current state of your
+                  company and the role you are looking to fill.
+                </h5>
+                <h5 className="h5">
+                  Our team will work with you to understand the technical
+                  requirements and company culture fit to help us to understand
+                  the complexity of the role and help us source the ideal
+                  engineer for your team.
+                </h5>
+                <h5 className="h5">
+                  During this process our consultants will work with your team
+                  to understand the exact requirements for the role, our team is
+                  experienced with the most commonly used technologies and cloud
+                  infrastructures in the industry and can help your team
+                  understand the hidden complexities for the search.
+                </h5>
+
+                <h5 className="h5">
+                  During this process we also lay-out the timelines of each step
+                  in our sourcing process.
+                </h5>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={github} className="emoji-2" alt="calendar" />
+                  GitHub
+                </span>
+                {mobile ? (
+                  <span
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "1rem",
+                    }}
+                  >
+                    <span
+                      className="emoji-container"
+                      id="aws-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={aws} className="emoji-2" alt="calendar" />
+                      AWS
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="azure-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={azure} className="emoji-2" alt="calendar" />
+                      Azure
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="docker-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={docker} className="emoji-2" alt="calendar" />
+                      Docker
+                    </span>
+                  </span>
+                ) : (
+                  <span
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "1rem",
+                    }}
+                  >
+                    <span
+                      className="emoji-container"
+                      id="aws-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={aws} className="emoji-2" alt="calendar" />
+                      AWS
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="gcp-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={gcp} className="emoji-2" alt="calendar" />
+                      Google Cloud
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="azure-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={azure} className="emoji-2" alt="calendar" />
+                      Azure
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="docker-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={docker} className="emoji-2" alt="calendar" />
+                      Docker
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="terraform-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={terraform} className="emoji-2" alt="calendar" />
+                      Terraform
+                    </span>
+                  </span>
+                )}
+              </div>
+              {isOpen == 1 && (
+                <div className="sourcing-info">
+                  <h3 className="h3">2. Talent Source</h3>
+                  <h5 className="h5">
+                    We have pre-screened engineers that are available to join
+                    startup teams immediately, yet they may not always be the
+                    right fit for your team.
+                  </h5>
+                  <h5 className="h5">
+                    Because of this, our team will shift our pipeline towards
+                    sourcing an engineer that fits the exact requirements of our
+                    Initial Due Diligence Screening.
+                  </h5>
+                  <h5 className="h4">
+                    <button
+                      className="emoji-container"
+                      onClick={scrollToSourced}
+                    >
+                      view our sourced engineers
+                    </button>
+                  </h5>
+                  <h3 className="h3">3. Placement Procedure</h3>
+                  <h5 className="h5">
+                    Once we have identified the ideal engineer for your team, we
+                    will work with your team to schedule interviews and
+                    technical assessments.
+                  </h5>
+                  <h5 className="h5">
+                    Depending on the complexity and day-to-day requirements of
+                    the role, we will conduct either a standard or executive
+                    search.
+                  </h5>
+                  <h5 className="h5">
+                    Standard search positions typically require a lower level of
+                    experience and complexity, i.e. Staff Engineers, Principal
+                    Engineers, & Engineering Directors.
+                  </h5>
+                  <h5 className="h5">
+                    Executive search positions typically require a higher level
+                    of experience and complexity, i.e. Co-Founding Engineer, VP
+                    of Engineering, & CTOs.
+                  </h5>
+                  <h3 className="h3">4. Required Check-up</h3>
+                  <h5 className="h5">
+                    After the engineer has been placed, we check-up with your
+                    team and the engineer to ensure that the placement and
+                    culture fit works for both parties.
+                  </h5>
+                  <h5 className="h5">
+                    If the engineer is not meeting the requirements of the role,
+                    or if the culture fit is not working out, we reconduct our
+                    sourcing process and source a replacement engineer.
+                  </h5>
+                </div>
+              )}
+              {isOpen == 1 ? (
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => toggleOpen(0)}
+                  >
+                    close view
+                  </button>
+                </h5>
+              ) : (
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => toggleOpen(1)}
+                  >
+                    view full process
+                  </button>
+                </h5>
+              )}
+              <h5 className="h5" ref={projectRef}>
+                <button className="emoji-container" onClick={scrollToTarget}>
+                  hire an engineer
+                </button>
+              </h5>
+            </div>
+          </div>
+          {/* project based staffing */}
+          <div className="vertical-content" style={{ width: "100%" }}>
+            <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
+              <h2 className="h2">Project based staffing process</h2>
+              <Lottie animationData={group} style={{ width: "15rem" }} />
+              <div
+                className="sourcing-info"
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "end",
+                }}
+              >
+                <h3 className="h3">1. Initial Due Diligence Screening</h3>
+                <h5 className="h5">
+                  Within our initial due diligence screening, we aim to condense
+                  down the exact requirements and timelines for a successful
+                  project deployment.
+                </h5>
+                <h5 className="h5">
+                  During this process our consultants will work with your team
+                  to understand the current state of our application and the
+                  desired state of the application. Our team is experienced with
+                  the most commonly used technologies and cloud infrastructures
+                  in the industry, and can help your team plan accordingly for
+                  project deployment.
+                </h5>
+                <h5 className="h5">
+                  Our project based staffing source allows for teams to
+                  customize the exact positions and roles that are needed for
+                  each project. We allow for teams to select positions that are
+                  specialized for the exact requirements from your consultation
+                  as a package.
+                </h5>
+                <h5 className="h5">
+                  Within each of our project packages you can pick and choose
+                  the specificed engineers, at market salary rates, that are
+                  needed for your project.
+                </h5>
+                {mobile ? null : (
+                  <div className="due-diligence-content">
+                    <div
+                      className="horizontal-content"
+                      style={{
+                        justifyContent: "space-evenly",
+                        width: "100%",
+                      }}
+                    >
+                      <div className="horizontal-content">
+                        <div
+                          className="vertical-content"
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            width: "100%",
+                          }}
+                        >
+                          <h3 className="h3">
+                            Project Managers: {packages.projectManager}
+                          </h3>
+                          <h3 className="h3">
+                            Senior Engineers: {packages.seniorEngineer}
+                          </h3>
+                          <h3 className="h3">
+                            Junior Engineers: {packages.juniorEngineer}
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        className="vertical-content"
+                        style={{
+                          width: "50%",
+                        }}
+                      >
+                        <h5 className="h5">your team will be sourced from</h5>
+                        {companies.length > 0 ? (
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              flexWrap: "wrap",
+                              gap: "1rem",
+                            }}
+                          >
+                            {companies.map((company) => (
+                              <span
+                                className="emoji-container"
+                                id="github-container"
+                                key={company.name}
+                                style={{
+                                  padding: "1rem",
+                                }}
+                              >
+                                <img src={company.logo} className="emoji-2" />
+                                {company.name}
+                              </span>
+                            ))}
+                          </div>
+                        ) : (
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              flexWrap: "wrap",
+                              gap: "1rem",
+                            }}
+                          >
+                            <span
+                              className="emoji-container"
+                              id="github-container"
+                              style={{
+                                padding: "1rem",
+                              }}
+                            >
+                              <img src={logo} className="emoji-2" />
+                              learnmutiny.io
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+                <div
+                  className="due-diligence-content"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "start",
+                    justifyContent: "space-evenly",
+                    width: "100%",
+                  }}
+                >
+                  <div className="vertical-content">
+                    <div
+                      className="horizontal-content"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      <div className="vertical-content">
+                        <h5 className="h5">
+                          <button className="emoji-container">
+                            Project Manager
+                          </button>
+                        </h5>
+                        <div
+                          className="horizontal-content"
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            width: "100%",
+                          }}
+                        >
+                          <button
+                            className="buttons"
+                            onClick={() => removeFromPackages("projectManager")}
+                          >
+                            <FaMinus className="operator" />
+                          </button>
+                          <button
+                            className="buttons"
+                            onClick={() => addToPackages("projectManager")}
+                          >
+                            <FaPlus className="operator" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="horizontal-content"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      <div className="vertical-content">
+                        <h5 className="h5">
+                          <button className="emoji-container">
+                            Senior Engineer
+                          </button>
+                        </h5>
+                        <div
+                          className="horizontal-content"
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            width: "100%",
+                          }}
+                        >
+                          <button
+                            className="buttons"
+                            onClick={() => removeFromPackages("seniorEngineer")}
+                          >
+                            <FaMinus className="operator" />
+                          </button>
+                          <button
+                            className="buttons"
+                            onClick={() => addToPackages("seniorEngineer")}
+                          >
+                            <FaPlus className="operator" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="horizontal-content"
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        width: "100%",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      <div className="vertical-content">
+                        <h5 className="h5">
+                          <button className="emoji-container">
+                            Junior Engineer
+                          </button>
+                        </h5>
+                        <div
+                          className="horizontal-content"
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            width: "100%",
+                          }}
+                        >
+                          <button
+                            className="buttons"
+                            onClick={() => removeFromPackages("juniorEngineer")}
+                          >
+                            <FaMinus className="operator" />
+                          </button>
+                          <button
+                            className="buttons"
+                            onClick={() => addToPackages("juniorEngineer")}
+                          >
+                            <FaPlus className="operator" />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {mobile ? (
+                    <div className="vertical-content">
+                      <h5 className="h5">
+                        <button className="emoji-container">
+                          {packages.projectManager} PMs
+                        </button>
+                      </h5>
+                      <h5 className="h5">
+                        <button className="emoji-container">
+                          {packages.seniorEngineer} SEs
+                        </button>
+                      </h5>
+                      <h5 className="h5">
+                        <button className="emoji-container">
+                          {packages.juniorEngineer} JEs
+                        </button>
+                      </h5>
+                    </div>
+                  ) : (
+                    <div className="vertical-content">
+                      <h5 className="h5">from</h5>
+                      <div
+                        className="vertical-content"
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          flexWrap: "wrap",
+                          alignItems: "start",
+                          justifyContent: "end",
+                          gap: "0.5rem",
+                          width: "35rem",
+                          height: "10rem",
+                        }}
+                      >
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "StockX", logo: stock })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={stock} className="emoji-2" alt="calendar" />
+                          StockX
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() => addCompany({ name: "EA", logo: ea })}
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={ea} className="emoji-2" alt="calendar" />
+                          EA
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Apple", logo: apple })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={apple} className="emoji-2" alt="calendar" />
+                          Apple
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Amazon", logo: amazon })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={amazon}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Amazon
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Meetup", logo: meetup })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={meetup}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Meetup
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Zoom", logo: zoom })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={zoom} className="emoji-2" alt="calendar" />
+                          Zoom
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Bumble", logo: bumble })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={bumble}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Bumble
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Meta", logo: meta })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={meta} className="emoji-2" alt="calendar" />
+                          Meta
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "DocuSign", logo: docusign })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={docusign}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          DocuSign
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Expedia", logo: expedia })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={expedia}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Expedia
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Toast", logo: toast })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={toast} className="emoji-2" alt="calendar" />
+                          Toast
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Instacart", logo: instacart })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={instacart}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Instacart
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Cashapp", logo: cashapp })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={cashapp}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Cashapp
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Metamask", logo: metamask })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={metamask}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Metamask
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Bumble", logo: bumble })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={bumble}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Bumble
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Grammarly", logo: grammarly })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={grammarly}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Grammarly
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Google", logo: google })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={google}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Google
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Snapchat", logo: snap })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={snap} className="emoji-2" alt="calendar" />
+                          Snapchat
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Affrim", logo: affrim })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={affrim}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Affrim
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Buzzfeed", logo: buzzfeed })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={buzzfeed}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Buzzfeed
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Rivian", logo: rivian })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={rivian}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Rivian
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Mozilla", logo: mozilla })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={mozilla}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Mozilla
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <h5
+                  className="h5"
+                  style={{
+                    alignSelf: "end",
+                  }}
+                >
+                  <button className="emoji-container" onClick={scrollToTarget}>
+                    hire your package
+                  </button>
+                </h5>
+              </div>
+
+              {isOpen == 2 && (
+                <div className="sourcing-info">
+                  <h3 className="h3">2. Talent Source</h3>
+                  <h5 className="h5">
+                    Due to the nature of our talent pipeline, there tends to be
+                    variability in the availability of engineers for each
+                    project. We work with recently laid-off engineers that are
+                    looking to join project-based teams immediately.
+                  </h5>
+                  <h5 className="h5">
+                    Depending on job market conditions, we may have sudden
+                    influxs of engineers that are specialized in a specific
+                    technology or cloud infrastructure. Because of this, we
+                    could have a wide range of engineering talent that is ready
+                    to join project-based teams, or we could have a limited
+                    engineer talent.
+                  </h5>
+                  <h5 className="h5">
+                    <button className="emoji-container">
+                      last source: {date}
+                    </button>
+                  </h5>
+                  <h3 className="h3">3. Placement Procedure</h3>
+                  <h5 className="h5">
+                    Once we have identified the ideal engineering package for
+                    your team, we will work with your team to schedule
+                    interviews and technical assessments.
+                  </h5>
+                  <h5 className="h5">
+                    We have crafted our project based staffing to be as easy as
+                    possible for your team to onboard a new engineering team. We
+                    utilize a simple and easy to understand billing process that
+                    allows for your team to understand the exact costs of the
+                    project, and plan accordingly.
+                  </h5>
+                  <span
+                    className="emoji-container"
+                    id="aws-container"
+                    style={{
+                      marginBottom: "1rem",
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={stripe} className="emoji-2" alt="calendar" />
+                    Stripe
+                  </span>
+                  <h5 className="h5">
+                    All invoices via Stripe are sent out at the end of each
+                    month, and are due within 15 days of receipt.
+                  </h5>
+                  <h3 className="h3">4. Required Check-ups</h3>
+                  <h5 className="h5">
+                    During the duration of the project, our team check-ups with
+                    your team and our package engineers to ensure that the
+                    project checkpoints are being met.
+                  </h5>
+                </div>
+              )}
+              {isOpen == 2 ? (
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => toggleOpen(0)}
+                  >
+                    close view
+                  </button>
+                </h5>
+              ) : (
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => toggleOpen(2)}
+                  >
+                    view full process
+                  </button>
+                </h5>
+              )}
+              <h5 className="h5">
+                <button className="emoji-container" onClick={scrollToTarget}>
+                  hire a recently laid-off team
+                </button>
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
       {/* lay-offs */}
-      <div className="box">
-        <div className="vertical-content">
-          <h1 className="h1">sourced &quot;lay-offs&quot;</h1>
-          <div className="layoff-content">
-            <div
-              className="memoji-container"
-              style={{
-                position: "relative",
-                margin: "0",
-              }}
-            >
+      <div
+        className="box"
+        style={{
+          display: "flex",
+          justifyContent: "start",
+        }}
+        ref={sourcedRef}
+      >
+        <div
+          className="vertical-content"
+          style={{
+            width: "100%",
+          }}
+        >
+          <div>
+            <h1 className="h1">Recently sourced laid off engineers</h1>
+          </div>
+          <div
+            className="layoff-content"
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <div className="memoji-container">
               <img src={jonathan} alt="ian" className="memoji" />
             </div>
             <div
@@ -297,7 +1444,7 @@ function Home() {
               </div>
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire a layoff
+                  hire an engineer
                 </button>
               </h5>
             </div>
@@ -364,7 +1511,7 @@ function Home() {
               </div>
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire a layoff
+                  hire an engineer
                 </button>
               </h5>
             </div>
@@ -434,75 +1581,33 @@ function Home() {
               </div>
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire a layoff
+                  hire an engineer
                 </button>
               </h5>
             </div>
           </div>
         </div>
       </div>
-      {/* companies */}
-      <div className="box">
-        <div className="vertical-content">
-          <h1 className="h1">venture backed clients</h1>
-          <h2 className="h2">
-            we work with clients that are backed by top venture capital firms
-            and have raised their series A to B round
-          </h2>
-          <h3 className="h3">
-            we have helped companies backed by YCombinator, Andreessen Horowitz,
-            and Founder&apos;s Fund source talent for their teams
-          </h3>
-          <div
-            className="horizontal-content"
-            style={{
-              gap: "0.5rem",
-            }}
-          >
-            <span
-              className="emoji-container"
-              style={{
-                marginBottom: "1rem",
-                padding: "1rem",
-                border: "2px solid #fff",
-              }}
-            >
-              <img src={yc} className="emoji-2" alt="calendar" />
-              YCombinator
-            </span>
-            <span
-              className="emoji-container"
-              style={{
-                marginBottom: "1rem",
-                padding: "1rem",
-                border: "2px solid #fff",
-              }}
-            >
-              <img src={a16z} className="emoji-2" alt="calendar" />
-              Andreessen Horowitz
-            </span>
-            <span
-              className="emoji-container"
-              style={{
-                marginBottom: "1rem",
-                padding: "1rem",
-                border: "2px solid #fff",
-              }}
-            >
-              <img src={founders} className="emoji-2" alt="calendar" />
-              Founder&apos;s Fund
-            </span>
-          </div>
-        </div>
-      </div>
       {/* submit */}
-      <div className="box" ref={targetRef}>
-        <div className="vertical-content">
-          <h1 className="h1">hire a &quot;lay-off&quot;</h1>
+      <div
+        className="box"
+        style={{
+          display: "flex",
+          justifyContent: "start",
+          width: "100%",
+        }}
+        ref={targetRef}
+      >
+        <div className="vertical-content" style={{ width: "100%" }}>
+          {submitted && submissionStatus === "success" ? (
+            <h1 className="h1">Hired a lay-off 😉</h1>
+          ) : (
+            <h1 className="h1">Hire a lay-off</h1>
+          )}
           {submitted && submissionStatus === "success" ? (
             <>
-              <p>Thank you for your submission!</p>
-              <p> We will get back to you soon.</p>
+              <p>We have received your submission!</p>
+              <p> Our consultation team will reach out shortly.</p>
             </>
           ) : (
             <form
@@ -512,7 +1617,7 @@ function Home() {
             >
               <input
                 type="text"
-                placeholder="first name"
+                placeholder="First name"
                 className="input"
                 name="first"
                 value={formData.first}
@@ -521,7 +1626,7 @@ function Home() {
               />
               <input
                 type="text"
-                placeholder="last name"
+                placeholder="Last name"
                 className="input"
                 name="last"
                 value={formData.last}
@@ -530,7 +1635,7 @@ function Home() {
               />
               <input
                 type="text"
-                placeholder="company name"
+                placeholder="Company name"
                 className="input"
                 name="company"
                 value={formData.company}
@@ -539,7 +1644,7 @@ function Home() {
               />
               <input
                 type="email"
-                placeholder="company email"
+                placeholder="Company email"
                 className="input"
                 name="email"
                 value={formData.email}
@@ -548,7 +1653,7 @@ function Home() {
               />
               <select
                 type="text"
-                placeholder="company title"
+                placeholder="Company title"
                 className="input"
                 name="title"
                 value={formData.title}
@@ -556,35 +1661,60 @@ function Home() {
                 required
               >
                 <option value="" selected disabled hidden>
-                  company title
+                  Company title
                 </option>
-                <option value="level1">Engineer or Analyst</option>
-                <option value="level2">Associate</option>
-                <option value="level3">Director or Principal</option>
-                <option value="level4">VP or Head of Division</option>
-                <option value="level5">Co-Founder or Chief Officer</option>
+                <option value="Engineer/Analyst">Engineer or Analyst</option>
+                <option value="Associate">Associate</option>
+                <option value="Director/Principal">
+                  Director or Principal
+                </option>
+                <option value="VP/Head">VP or Head of Division</option>
+                <option value="Co-Founder">Co-Founder or Chief Officer</option>
+                <option value="other">Other</option>
               </select>
               <select
                 type="text"
-                placeholder="developer"
+                placeholder="Source type"
                 className="input"
-                name="developer"
-                value={formData.developer}
+                name="search"
+                value={formData.search}
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled hidden>
-                  select a engineer type
+                <option value="" selected disabled hidden>
+                  Source type
                 </option>
-                <option value="staff">Staff Engineer</option>
-                <option value="principal">Principal Engineer</option>
-                <option value="director">Director of Engineering</option>
-                <option value="vp">VP of Engineering</option>
-                <option value="co-founder">Co-Founding Engineer</option>
+                <option value="Direct-to-hire">Direct-to-Hire</option>
+                <option value="Project-based">Project Based Staffing</option>
               </select>
+              {sourceType === "Direct-to-hire" && (
+                <select
+                  type="text"
+                  placeholder="Developer"
+                  className="input"
+                  name="developer"
+                  value={formData.developer}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled hidden>
+                    Select a engineer type
+                  </option>
+                  <option value="Staff Engineer">Staff Engineer</option>
+                  <option value="Principal Engineer">Principal Engineer</option>
+                  <option value="Director of Engineering">
+                    Director of Engineering
+                  </option>
+                  <option value="VP of Engineering">VP of Engineering</option>
+                  <option value="Co-Founding Engineer">
+                    Co-Founding Engineer
+                  </option>
+                  <option value="CTO">CTO</option>
+                </select>
+              )}
               <textarea
                 type="text"
-                placeholder="message (optional)"
+                placeholder="Message (optional)"
                 className="input"
                 name="message"
                 value={formData.message}
@@ -596,11 +1726,12 @@ function Home() {
                 onClick={scrollToTarget}
               >
                 <h4 className="h4" style={{ margin: 0 }}>
-                  submit
+                  Submit
                 </h4>
               </button>
             </form>
           )}
+          {loading && !submitted ? <p>Submitting...</p> : null}
           {submissionStatus === "failure" && (
             <>
               <p>Failed to submit the form. Please try again.</p>
@@ -612,10 +1743,9 @@ function Home() {
       {/* pricing */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">engineer search costs</h1>
+          <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
-            <h1 className="h1">standard search</h1>
-            <h3 className="h3">$2,000 engagement</h3>
+            <h2 className="h2">Project based staffing source</h2>
             <span
               className="emoji-container"
               onClick={scrollToTarget}
@@ -623,11 +1753,10 @@ function Home() {
             >
               contact sales
             </span>
-            <h5 className="h5">with a 60-day guarantee</h5>
+            <h5 className="h5">with a 30-day guarantee</h5>
           </div>
           <div className="pricing-content">
-            <h1 className="h1">executive search</h1>
-            <h3 className="h3">$4,000 engagement</h3>
+            <h2 className="h2">Direct-to-hire source</h2>
             <span
               className="emoji-container"
               onClick={scrollToTarget}
@@ -635,7 +1764,7 @@ function Home() {
             >
               contact sales
             </span>
-            <h5 className="h5">with a 90-day guarantee</h5>
+            <h5 className="h5">with replacement guarantee</h5>
           </div>
         </div>
       </div>
