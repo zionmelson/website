@@ -96,7 +96,7 @@ function Home() {
     juniorEngineer: 0,
   });
 
-  const [bio, setBio] = useState(0);
+  const [bio, setBio] = useState(1);
 
   const [companies, setCompanies] = useState([]);
 
@@ -301,42 +301,94 @@ function Home() {
       {/* intro */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">
-            Hire a recently laid-off
-            <div className="span">
-              <h1 className="h1" id="gsap">
-                full-stack developer
-              </h1>
-              <h1 className="h1" id="gsap">
-                back-end developer
-              </h1>
-              <h1 className="h1" id="gsap">
-                systems engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                software architect
-              </h1>
-              <h1 className="h1" id="gsap">
-                regression engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                cloud engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                blockchain engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                devops engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                database engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                data engineer
-              </h1>
-            </div>
-            for your startup
-          </h1>
+          {mobile ? (
+            <h1 className="h1">
+              Hire a recently laid-off
+              <div className="span">
+                <h1 className="h1" id="gsap">
+                  full-stack developer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  back-end developer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  systems engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  software architect
+                </h1>
+                <h1 className="h1" id="gsap">
+                  regression engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  cloud engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  blockchain engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  devops engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  database engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  data engineer
+                </h1>
+                <h1 className="h1" id="gsap">
+                  project manager
+                </h1>
+                <h1 className="h1" id="gsap">
+                  designer
+                </h1>
+              </div>
+              for your startup
+            </h1>
+          ) : (
+            <h1 className="h1">
+              Hire recently laid-off
+              <div className="span">
+                <h1 className="h1" id="gsap">
+                  full-stack developers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  back-end developers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  systems engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  software architects
+                </h1>
+                <h1 className="h1" id="gsap">
+                  regression engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  cloud engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  blockchain engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  devops engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  database engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  data engineers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  project managers
+                </h1>
+                <h1 className="h1" id="gsap">
+                  designers
+                </h1>
+              </div>
+              for your startup
+            </h1>
+          )}
+
           <h2 className="h2">
             we source recently laid-off senior developers from tech giants and
             unicorns
@@ -472,6 +524,23 @@ function Home() {
                         <h5 className="h5">Companies worked with</h5>
                       </div>
                     </div>
+                    <h5
+                      className="h4"
+                      style={{
+                        marginTop: "1rem",
+                        marginBottom: "0",
+                      }}
+                    >
+                      <button
+                        className="emoji-container"
+                        onClick={() => {
+                          scrollToSourced();
+                          setBio(1);
+                        }}
+                      >
+                        view our sourced engineers
+                      </button>
+                    </h5>
                   </div>
                 </>
               ) : (
@@ -541,6 +610,7 @@ function Home() {
                 </>
               )}
             </div>
+            <h1 className="h1">Our Services</h1>
           </div>
           {/* project based staffing */}
           <div
@@ -549,7 +619,7 @@ function Home() {
             style={{ width: "100%" }}
           >
             <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
-              <h2 className="h2">Project based staffing process</h2>
+              <h2 className="h2">Project Based Staffing</h2>
               <Lottie animationData={group} style={{ width: "15rem" }} />
               <div
                 className="sourcing-info"
@@ -1290,7 +1360,7 @@ function Home() {
             ref={directRef}
           >
             <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
-              <h2 className="h2">Direct-to-hire placement process</h2>
+              <h2 className="h2">Direct-to-Hire Placements</h2>
               <Lottie animationData={developer} style={{ width: "10rem" }} />
               <div className="sourcing-info">
                 <h3 className="h3">1. Initial Due Diligence Screening</h3>
@@ -1455,7 +1525,10 @@ function Home() {
                   <h5 className="h4">
                     <button
                       className="emoji-container"
-                      onClick={scrollToSourced}
+                      onClick={() => {
+                        scrollToSourced();
+                        setBio(1);
+                      }}
                     >
                       view our sourced engineers
                     </button>
@@ -1892,6 +1965,17 @@ function Home() {
               </h5>
             </div>
           </div>
+          <h5
+            className="h4"
+            style={{
+              marginTop: "1rem",
+              marginBottom: "0",
+            }}
+          >
+            <button className="emoji-container" onClick={scrollToTarget}>
+              view more engineers
+            </button>
+          </h5>
         </div>
       </div>
       {/* submit */}
