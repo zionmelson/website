@@ -1,8 +1,18 @@
-import { FaUber, FaStripeS, FaDiscord, FaPlus, FaMinus } from "react-icons/fa";
+/* eslint-disable react/prop-types */
+import {
+  FaUber,
+  FaStripeS,
+  FaDiscord,
+  FaPlus,
+  FaMinus,
+  FaMinusCircle,
+} from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SiCashapp } from "react-icons/si";
 import { FaMeta } from "react-icons/fa6";
 import { TbBrandAirbnb } from "react-icons/tb";
+
+import { useSpring, animated } from "react-spring";
 
 import Lottie from "lottie-react";
 import developer from "./assets/json/developer.json";
@@ -49,6 +59,23 @@ import { useEffect, useState, useRef } from "react";
 
 import "./App.css";
 
+function Number({ n }) {
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: n,
+    delay: 900,
+    config: { mass: 10, tension: 20, friction: 25 },
+  });
+
+  return (
+    <animated.div
+      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+    >
+      {number.to((n) => `${n.toFixed(0)}+`)}
+    </animated.div>
+  );
+}
+
 function Home() {
   const [formData, setFormData] = useState({
     first: "",
@@ -68,6 +95,8 @@ function Home() {
     seniorEngineer: 0,
     juniorEngineer: 0,
   });
+
+  const [bio, setBio] = useState(0);
 
   const [companies, setCompanies] = useState([]);
 
@@ -93,6 +122,18 @@ function Home() {
       console.log("company added:", newCompany);
       console.log("companies:", companies);
     }
+  };
+
+  const removeCompany = (company) => {
+    setCompanies((prevCompanies) =>
+      prevCompanies.filter((prevCompany) => prevCompany.name !== company.name)
+    );
+    setFormData({
+      ...formData,
+      companies: companies.filter(
+        (prevCompany) => prevCompany.name !== company
+      ),
+    });
   };
 
   const addToPackages = (engineer) => {
@@ -355,42 +396,150 @@ function Home() {
                 justifyContent: "space-between",
               }}
             >
-              <div>
-                <h2 className="h2">We offer 2 distinct sourcing services</h2>
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => {
-                      toggleOpen(1);
-                      scrollToDirect();
-                    }}
-                  >
-                    direct-to-hire
-                  </button>
-                </h5>
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => {
-                      toggleOpen(2);
-                      scrollToProject();
-                    }}
-                  >
-                    project based staffing
-                  </button>
-                </h5>
-              </div>
-              <div className="stats-content">
-                {mobile ? (
-                  <>
-                    <h2>25%</h2>
-                    <h2>30%</h2>
-                    <h2>45%</h2>
-                  </>
-                ) : (
-                  <h2>Our sourcing stats</h2>
-                )}
-              </div>
+              {!mobile ? (
+                <>
+                  <div>
+                    <h2 className="h2">
+                      We offer 2 distinct sourcing services
+                    </h2>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => {
+                          toggleOpen(1);
+                          scrollToDirect();
+                        }}
+                      >
+                        direct-to-hire
+                      </button>
+                    </h5>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => {
+                          toggleOpen(2);
+                          scrollToProject();
+                        }}
+                      >
+                        project based staffing
+                      </button>
+                    </h5>
+                  </div>
+                  <div className="stats-content">
+                    <div
+                      className="horizontal-content"
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        width: "100%",
+                      }}
+                    >
+                      <div
+                        className="vertical-content"
+                        style={{
+                          justifyContent: "center",
+                          width: "50%",
+                        }}
+                      >
+                        <h1 className="number">
+                          <Number n={180} />
+                        </h1>
+                        <h5 className="h5">Engineers sourced</h5>
+                      </div>
+                      <div
+                        className="vertical-content"
+                        style={{
+                          justifyContent: "center",
+                          width: "50%",
+                        }}
+                      >
+                        <h1 className="number">
+                          <Number n={40} />
+                        </h1>
+                        <h5 className="h5">Engineers matched</h5>
+                      </div>
+                      <div
+                        className="vertical-content"
+                        style={{
+                          justifyContent: "center",
+                          width: "50%",
+                        }}
+                      >
+                        <h1 className="number">
+                          <Number n={10} />
+                        </h1>
+                        <h5 className="h5">Companies worked with</h5>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div>
+                    <h2 className="h2">
+                      We offer 2 distinct sourcing services
+                    </h2>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => {
+                          toggleOpen(1);
+                          scrollToDirect();
+                        }}
+                      >
+                        direct-to-hire
+                      </button>
+                    </h5>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => {
+                          toggleOpen(2);
+                          scrollToProject();
+                        }}
+                      >
+                        project based staffing
+                      </button>
+                    </h5>
+                    <div className="stats-content">
+                      <div
+                        className="vertical-content"
+                        style={{
+                          width: "50%",
+                        }}
+                      >
+                        <h1 className="number">
+                          <Number n={180} />
+                        </h1>
+                        <h5 className="h5">Engineers sourced</h5>
+                      </div>
+                      <div
+                        className="vertical-content"
+                        style={{
+                          width: "50%",
+                        }}
+                      >
+                        <h1 className="number">
+                          <Number n={40} />
+                        </h1>
+                        <h5 className="h5">Engineers matched</h5>
+                      </div>
+                      <div
+                        className="vertical-content"
+                        style={{
+                          width: "50%",
+                        }}
+                      >
+                        <h1 className="number">
+                          <Number n={10} />
+                        </h1>
+                        <h5 className="h5">Companies worked with</h5>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
           {/* direct-to-hire */}
@@ -718,12 +867,20 @@ function Home() {
                             {companies.map((company) => (
                               <span
                                 className="emoji-container"
-                                id="github-container"
                                 key={company.name}
                                 style={{
                                   padding: "1rem",
                                 }}
                               >
+                                <button
+                                  onClick={() => removeCompany(company)}
+                                  style={{
+                                    marginRight: "0.5rem",
+                                    color: "red",
+                                  }}
+                                >
+                                  <FaMinusCircle className="operator" />
+                                </button>
                                 <img src={company.logo} className="emoji-2" />
                                 {company.name}
                               </span>
@@ -1387,8 +1544,60 @@ function Home() {
             }}
           >
             <div className="memoji-container">
-              <img src={jonathan} alt="ian" className="memoji" />
+              <img src={jonathan} alt="frank" className="memoji" />
             </div>
+            {!mobile && (
+              <div
+                className="vertical-content"
+                style={{
+                  width: "50%",
+                }}
+              >
+                {bio === 1 ? (
+                  <div
+                    style={{
+                      textAlign: "start",
+                    }}
+                  >
+                    <h2
+                      className="h2"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
+                      Frank Secord
+                    </h2>
+                    <h5 className="h5">
+                      Frank is a senior Java Engineer with over 12 years of
+                      professional experience split between startups and Fortune
+                      500 companies. He has worked with some of the largest
+                      companies in the world including Linkedin, Paypal, and
+                      Apple. Frank was recently let go from Apple within the
+                      last year.
+                    </h5>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => setBio(0)}
+                      >
+                        close bio
+                      </button>
+                    </h5>
+                  </div>
+                ) : (
+                  <>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => setBio(1)}
+                      >
+                        view full bio
+                      </button>
+                    </h5>
+                  </>
+                )}
+              </div>
+            )}
             <div
               className="horizontal-content"
               style={{
@@ -1397,14 +1606,6 @@ function Home() {
                 flexDirection: "column",
               }}
             >
-              <h2
-                className="h2"
-                style={{
-                  width: "100%",
-                }}
-              >
-                Frank Secord
-              </h2>
               <h5
                 className="h5"
                 style={{ marginBottom: "1rem", width: "100%" }}
@@ -1449,13 +1650,68 @@ function Home() {
               </h5>
             </div>
           </div>
-          <div className="layoff-content">
-            <div
-              className="memoji-container"
-              style={{ position: "relative", margin: "0" }}
-            >
-              <img src={ian} alt="ian" className="memoji" />
+          <div
+            className="layoff-content"
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <div className="memoji-container">
+              <img src={ian} alt="Coty" className="memoji" />
             </div>
+            {!mobile && (
+              <div
+                className="vertical-content"
+                style={{
+                  width: "50%",
+                }}
+              >
+                {bio === 2 ? (
+                  <div
+                    style={{
+                      textAlign: "start",
+                    }}
+                  >
+                    <h2
+                      className="h2"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
+                      Coty Rothery
+                    </h2>
+                    <h5 className="h5">
+                      Coty is a highly talented self taught engineer. His
+                      experience resides in the Backend using GO, Rust, and
+                      Javascript. He was the 94th employee at StockX where he
+                      worked on everything from design of third party
+                      applications, architecture, cloud computing, and DevOps.
+                    </h5>
+
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => setBio(0)}
+                      >
+                        close bio
+                      </button>
+                    </h5>
+                  </div>
+                ) : (
+                  <>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => setBio(2)}
+                      >
+                        view full bio
+                      </button>
+                    </h5>
+                  </>
+                )}
+              </div>
+            )}
             <div
               className="horizontal-content"
               style={{
@@ -1464,14 +1720,6 @@ function Home() {
                 flexDirection: "column",
               }}
             >
-              <h2
-                className="h2"
-                style={{
-                  width: "100%",
-                }}
-              >
-                Coty Ranger
-              </h2>
               <h5
                 className="h5"
                 style={{ marginBottom: "1rem", width: "100%" }}
@@ -1516,16 +1764,70 @@ function Home() {
               </h5>
             </div>
           </div>
-          <div className="layoff-content">
-            <div
-              className="memoji-container"
-              style={{
-                position: "relative",
-                margin: "0",
-              }}
-            >
-              <img src={smiley} alt="ian" className="memoji" />
+          <div
+            className="layoff-content"
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <div className="memoji-container">
+              <img src={smiley} alt="Pratik" className="memoji" />
             </div>
+            {!mobile && (
+              <div
+                className="vertical-content"
+                style={{
+                  width: "50%",
+                }}
+              >
+                {bio === 3 ? (
+                  <div
+                    style={{
+                      textAlign: "start",
+                    }}
+                  >
+                    <h2
+                      className="h2"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
+                      Pratik Phadke
+                    </h2>
+                    <h5 className="h5">
+                      Pratik was recently laid off from Cashapp. He was a mobile
+                      engineering manager with 12 years of experience working
+                      with both Android and IOS developments. At Cash App he was
+                      involved in the processes behind the temperature changing
+                      debit card and the pink debit card. When they were
+                      released, they were the fastest growing debit cards in the
+                      world.
+                    </h5>
+
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => setBio(0)}
+                      >
+                        close bio
+                      </button>
+                    </h5>
+                  </div>
+                ) : (
+                  <>
+                    <h5 className="h5">
+                      <button
+                        className="emoji-container"
+                        onClick={() => setBio(3)}
+                      >
+                        view full bio
+                      </button>
+                    </h5>
+                  </>
+                )}
+              </div>
+            )}
             <div
               className="horizontal-content"
               style={{

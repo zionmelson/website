@@ -17,7 +17,7 @@ import atlanta from "./assets/svg/atlanta.svg";
 import Lottie from "lottie-react";
 import animation from "./assets/json/animate.json";
 import link from "./assets/svg/link.svg";
-import bear from "./assets/svg/bear.svg";
+import logo from "./assets/svg/logo.svg";
 import instagram from "./assets/svg/instagram.svg";
 import github from "./assets/svg/github.svg";
 import linkedin from "./assets/svg/linkedin.svg";
@@ -167,7 +167,7 @@ function Home() {
             id="support"
             style={{ marginBottom: "1rem" }}
           >
-            <img src={bear} className="emoji" alt="mu" />
+            <img src={logo} className="emoji" alt="mu" />
             support@learnmutiny.io
           </span>
           <div className="socials">

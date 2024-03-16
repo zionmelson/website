@@ -37,6 +37,17 @@
   font-family: Inter, sans-serif;
 }
 
+.number {
+  font-size: 2.25rem;
+  transition: all 0.2s linear;
+}
+
+.number:hover {
+  cursor: pointer;
+  scale: 1.25;
+  transition: all 0.2s linear;
+}
+
 #gsap {
   margin: 0;
   line-height: 0;
@@ -137,6 +148,10 @@
   background: linear-gradient(135deg, #111111, #404040);
   padding: 2rem;
   margin-bottom: 1rem;
+}
+
+#white .stats-content {
+  color: #fff;
 }
 
 .due-diligence-content {
@@ -415,10 +430,6 @@
 
 #discord {
   color: #7289da;
-}
-
-#support:hover {
-  background: #ffa3d4;
 }
 
 #ai-container:hover {
@@ -818,6 +829,14 @@
     width: full;
     align-items: center;
     padding: 0.5rem;
+  }
+
+  .stats-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .headshots {
