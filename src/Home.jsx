@@ -406,22 +406,22 @@ function Home() {
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(1);
-                          scrollToDirect();
+                          toggleOpen(2);
+                          scrollToProject();
                         }}
                       >
-                        direct-to-hire
+                        project based staffing
                       </button>
                     </h5>
                     <h5 className="h5">
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(2);
-                          scrollToProject();
+                          toggleOpen(1);
+                          scrollToDirect();
                         }}
                       >
-                        project based staffing
+                        direct-to-hire
                       </button>
                     </h5>
                   </div>
@@ -484,22 +484,22 @@ function Home() {
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(1);
-                          scrollToDirect();
+                          toggleOpen(2);
+                          scrollToProject();
                         }}
                       >
-                        direct-to-hire
+                        project based staffing
                       </button>
                     </h5>
                     <h5 className="h5">
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(2);
-                          scrollToProject();
+                          toggleOpen(1);
+                          scrollToDirect();
                         }}
                       >
-                        project based staffing
+                        direct-to-hire
                       </button>
                     </h5>
                     <div className="stats-content">
@@ -542,245 +542,12 @@ function Home() {
               )}
             </div>
           </div>
-          {/* direct-to-hire */}
+          {/* project based staffing */}
           <div
             className="vertical-content"
+            ref={projectRef}
             style={{ width: "100%" }}
-            ref={directRef}
           >
-            <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
-              <h2 className="h2">Direct-to-hire placement process</h2>
-              <Lottie animationData={developer} style={{ width: "10rem" }} />
-              <div className="sourcing-info">
-                <h3 className="h3">1. Initial Due Diligence Screening</h3>
-                <h5 className="h5">
-                  We work with your team to understand the current state of your
-                  company and the role you are looking to fill.
-                </h5>
-                <h5 className="h5">
-                  Our team will work with you to understand the technical
-                  requirements and company culture fit to help us to understand
-                  the complexity of the role and help us source the ideal
-                  engineer for your team.
-                </h5>
-                <h5 className="h5">
-                  During this process our consultants will work with your team
-                  to understand the exact requirements for the role, our team is
-                  experienced with the most commonly used technologies and cloud
-                  infrastructures in the industry and can help your team
-                  understand the hidden complexities for the search.
-                </h5>
-
-                <h5 className="h5">
-                  During this process we also lay-out the timelines of each step
-                  in our sourcing process.
-                </h5>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  style={{
-                    marginBottom: "1rem",
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={github} className="emoji-2" alt="calendar" />
-                  GitHub
-                </span>
-                {mobile ? (
-                  <span
-                    style={{
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "1rem",
-                    }}
-                  >
-                    <span
-                      className="emoji-container"
-                      id="aws-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={aws} className="emoji-2" alt="calendar" />
-                      AWS
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="azure-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={azure} className="emoji-2" alt="calendar" />
-                      Azure
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="docker-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={docker} className="emoji-2" alt="calendar" />
-                      Docker
-                    </span>
-                  </span>
-                ) : (
-                  <span
-                    style={{
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "1rem",
-                    }}
-                  >
-                    <span
-                      className="emoji-container"
-                      id="aws-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={aws} className="emoji-2" alt="calendar" />
-                      AWS
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="gcp-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={gcp} className="emoji-2" alt="calendar" />
-                      Google Cloud
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="azure-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={azure} className="emoji-2" alt="calendar" />
-                      Azure
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="docker-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={docker} className="emoji-2" alt="calendar" />
-                      Docker
-                    </span>
-                    <span
-                      className="emoji-container"
-                      id="terraform-container"
-                      style={{
-                        marginBottom: "1rem",
-                        padding: "1rem",
-                      }}
-                    >
-                      <img src={terraform} className="emoji-2" alt="calendar" />
-                      Terraform
-                    </span>
-                  </span>
-                )}
-              </div>
-              {isOpen == 1 && (
-                <div className="sourcing-info">
-                  <h3 className="h3">2. Talent Source</h3>
-                  <h5 className="h5">
-                    We have pre-screened engineers that are available to join
-                    startup teams immediately, yet they may not always be the
-                    right fit for your team.
-                  </h5>
-                  <h5 className="h5">
-                    Because of this, our team will shift our pipeline towards
-                    sourcing an engineer that fits the exact requirements of our
-                    Initial Due Diligence Screening.
-                  </h5>
-                  <h5 className="h4">
-                    <button
-                      className="emoji-container"
-                      onClick={scrollToSourced}
-                    >
-                      view our sourced engineers
-                    </button>
-                  </h5>
-                  <h3 className="h3">3. Placement Procedure</h3>
-                  <h5 className="h5">
-                    Once we have identified the ideal engineer for your team, we
-                    will work with your team to schedule interviews and
-                    technical assessments.
-                  </h5>
-                  <h5 className="h5">
-                    Depending on the complexity and day-to-day requirements of
-                    the role, we will conduct either a standard or executive
-                    search.
-                  </h5>
-                  <h5 className="h5">
-                    Standard search positions typically require a lower level of
-                    experience and complexity, i.e. Staff Engineers, Principal
-                    Engineers, & Engineering Directors.
-                  </h5>
-                  <h5 className="h5">
-                    Executive search positions typically require a higher level
-                    of experience and complexity, i.e. Co-Founding Engineer, VP
-                    of Engineering, & CTOs.
-                  </h5>
-                  <h3 className="h3">4. Required Check-up</h3>
-                  <h5 className="h5">
-                    After the engineer has been placed, we check-up with your
-                    team and the engineer to ensure that the placement and
-                    culture fit works for both parties.
-                  </h5>
-                  <h5 className="h5">
-                    If the engineer is not meeting the requirements of the role,
-                    or if the culture fit is not working out, we reconduct our
-                    sourcing process and source a replacement engineer.
-                  </h5>
-                </div>
-              )}
-              {isOpen == 1 ? (
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => toggleOpen(0)}
-                  >
-                    close view
-                  </button>
-                </h5>
-              ) : (
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => toggleOpen(1)}
-                  >
-                    view full process
-                  </button>
-                </h5>
-              )}
-              <h5 className="h5" ref={projectRef}>
-                <button className="emoji-container" onClick={scrollToTarget}>
-                  hire an engineer
-                </button>
-              </h5>
-            </div>
-          </div>
-          {/* project based staffing */}
-          <div className="vertical-content" style={{ width: "100%" }}>
             <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
               <h2 className="h2">Project based staffing process</h2>
               <Lottie animationData={group} style={{ width: "15rem" }} />
@@ -1516,6 +1283,243 @@ function Home() {
               </h5>
             </div>
           </div>
+          {/* direct-to-hire */}
+          <div
+            className="vertical-content"
+            style={{ width: "100%" }}
+            ref={directRef}
+          >
+            <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
+              <h2 className="h2">Direct-to-hire placement process</h2>
+              <Lottie animationData={developer} style={{ width: "10rem" }} />
+              <div className="sourcing-info">
+                <h3 className="h3">1. Initial Due Diligence Screening</h3>
+                <h5 className="h5">
+                  We work with your team to understand the current state of your
+                  company and the role you are looking to fill.
+                </h5>
+                <h5 className="h5">
+                  Our team will work with you to understand the technical
+                  requirements and company culture fit to help us to understand
+                  the complexity of the role and help us source the ideal
+                  engineer for your team.
+                </h5>
+                <h5 className="h5">
+                  During this process our consultants will work with your team
+                  to understand the exact requirements for the role, our team is
+                  experienced with the most commonly used technologies and cloud
+                  infrastructures in the industry and can help your team
+                  understand the hidden complexities for the search.
+                </h5>
+
+                <h5 className="h5">
+                  During this process we also lay-out the timelines of each step
+                  in our sourcing process.
+                </h5>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  style={{
+                    marginBottom: "1rem",
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={github} className="emoji-2" alt="calendar" />
+                  GitHub
+                </span>
+                {mobile ? (
+                  <span
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "1rem",
+                    }}
+                  >
+                    <span
+                      className="emoji-container"
+                      id="aws-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={aws} className="emoji-2" alt="calendar" />
+                      AWS
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="azure-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={azure} className="emoji-2" alt="calendar" />
+                      Azure
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="docker-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={docker} className="emoji-2" alt="calendar" />
+                      Docker
+                    </span>
+                  </span>
+                ) : (
+                  <span
+                    style={{
+                      alignItems: "center",
+                      justifyContent: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      gap: "1rem",
+                    }}
+                  >
+                    <span
+                      className="emoji-container"
+                      id="aws-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={aws} className="emoji-2" alt="calendar" />
+                      AWS
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="gcp-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={gcp} className="emoji-2" alt="calendar" />
+                      Google Cloud
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="azure-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={azure} className="emoji-2" alt="calendar" />
+                      Azure
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="docker-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={docker} className="emoji-2" alt="calendar" />
+                      Docker
+                    </span>
+                    <span
+                      className="emoji-container"
+                      id="terraform-container"
+                      style={{
+                        marginBottom: "1rem",
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={terraform} className="emoji-2" alt="calendar" />
+                      Terraform
+                    </span>
+                  </span>
+                )}
+              </div>
+              {isOpen == 1 && (
+                <div className="sourcing-info">
+                  <h3 className="h3">2. Talent Source</h3>
+                  <h5 className="h5">
+                    We have pre-screened engineers that are available to join
+                    startup teams immediately, yet they may not always be the
+                    right fit for your team.
+                  </h5>
+                  <h5 className="h5">
+                    Because of this, our team will shift our pipeline towards
+                    sourcing an engineer that fits the exact requirements of our
+                    Initial Due Diligence Screening.
+                  </h5>
+                  <h5 className="h4">
+                    <button
+                      className="emoji-container"
+                      onClick={scrollToSourced}
+                    >
+                      view our sourced engineers
+                    </button>
+                  </h5>
+                  <h3 className="h3">3. Placement Procedure</h3>
+                  <h5 className="h5">
+                    Once we have identified the ideal engineer for your team, we
+                    will work with your team to schedule interviews and
+                    technical assessments.
+                  </h5>
+                  <h5 className="h5">
+                    Depending on the complexity and day-to-day requirements of
+                    the role, we will conduct either a standard or executive
+                    search.
+                  </h5>
+                  <h5 className="h5">
+                    Standard search positions typically require a lower level of
+                    experience and complexity, i.e. Staff Engineers, Principal
+                    Engineers, & Engineering Directors.
+                  </h5>
+                  <h5 className="h5">
+                    Executive search positions typically require a higher level
+                    of experience and complexity, i.e. Co-Founding Engineer, VP
+                    of Engineering, & CTOs.
+                  </h5>
+                  <h3 className="h3">4. Required Check-up</h3>
+                  <h5 className="h5">
+                    After the engineer has been placed, we check-up with your
+                    team and the engineer to ensure that the placement and
+                    culture fit works for both parties.
+                  </h5>
+                  <h5 className="h5">
+                    If the engineer is not meeting the requirements of the role,
+                    or if the culture fit is not working out, we reconduct our
+                    sourcing process and source a replacement engineer.
+                  </h5>
+                </div>
+              )}
+              {isOpen == 1 ? (
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => toggleOpen(0)}
+                  >
+                    close view
+                  </button>
+                </h5>
+              ) : (
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    onClick={() => toggleOpen(1)}
+                  >
+                    view full process
+                  </button>
+                </h5>
+              )}
+              <h5 className="h5">
+                <button className="emoji-container" onClick={scrollToTarget}>
+                  hire an engineer
+                </button>
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
       {/* lay-offs */}
@@ -1902,9 +1906,9 @@ function Home() {
       >
         <div className="vertical-content" style={{ width: "100%" }}>
           {submitted && submissionStatus === "success" ? (
-            <h1 className="h1">Hired a lay-off 😉</h1>
+            <h1 className="h1">Hired an engineer 😉</h1>
           ) : (
-            <h1 className="h1">Hire a lay-off</h1>
+            <h1 className="h1">Hire an engineer</h1>
           )}
           {submitted && submissionStatus === "success" ? (
             <>
