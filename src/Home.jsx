@@ -2134,7 +2134,7 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
-            <h2 className="h2">Project ackage source</h2>
+            <h2 className="h2">Project package source</h2>
             <span
               className="emoji-container"
               onClick={scrollToTarget}
