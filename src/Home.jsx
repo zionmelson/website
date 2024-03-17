@@ -296,98 +296,90 @@ function Home() {
     return () => tl.kill();
   }, []);
 
+  useEffect(() => {
+    const technologies = gsap.utils.toArray("#sap");
+    const tl = gsap.timeline({ repeat: -1 });
+
+    technologies.forEach((technology) => {
+      const splitText = new SplitText(technology);
+
+      splitText.chars.forEach((char) => {
+        char.classList.add(`chars`);
+      });
+
+      tl.from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: 60,
+          rotateX: -35,
+          stagger: 0.02,
+        },
+        "<"
+      ).to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: -60,
+          rotateX: 35,
+          stagger: 0.02,
+        },
+        "<1.8"
+      );
+    });
+
+    return () => tl.kill();
+  }, []);
+
   return (
     <div className="main">
       {/* intro */}
       <div className="box">
         <div className="vertical-content">
-          {mobile ? (
-            <h1 className="h1">
-              Hire a recently laid-off
-              <div className="span">
-                <h1 className="h1" id="gsap">
-                  full-stack developer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  back-end developer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  systems engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  software architect
-                </h1>
-                <h1 className="h1" id="gsap">
-                  regression engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  cloud engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  blockchain engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  devops engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  database engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  data engineer
-                </h1>
-                <h1 className="h1" id="gsap">
-                  project manager
-                </h1>
-                <h1 className="h1" id="gsap">
-                  designer
-                </h1>
-              </div>
-              for your startup
-            </h1>
-          ) : (
-            <h1 className="h1">
-              Hire recently laid-off
-              <div className="span">
-                <h1 className="h1" id="gsap">
-                  full-stack developers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  back-end developers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  systems engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  software architects
-                </h1>
-                <h1 className="h1" id="gsap">
-                  regression engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  cloud engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  blockchain engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  devops engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  database engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  data engineers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  project managers
-                </h1>
-                <h1 className="h1" id="gsap">
-                  designers
-                </h1>
-              </div>
-              for your startup
-            </h1>
-          )}
+          <h1 className="h1">
+            Hire a recently laid-off
+            <div className="span">
+              <h1 className="h1" id="gsap">
+                full-stack developer
+              </h1>
+              <h1 className="h1" id="gsap">
+                back-end developer
+              </h1>
+              <h1 className="h1" id="gsap">
+                systems engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                software architect
+              </h1>
+              <h1 className="h1" id="gsap">
+                regression engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                cloud engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                blockchain engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                devops engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                database engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                data engineer
+              </h1>
+              <h1 className="h1" id="gsap">
+                project manager
+              </h1>
+              <h1 className="h1" id="gsap">
+                designer
+              </h1>
+            </div>
+            for your startup
+          </h1>
 
           <h2 className="h2">
             we source recently laid-off engineers from tech giants and unicorns
