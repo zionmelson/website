@@ -2066,7 +2066,7 @@ function Home() {
                   Source type
                 </option>
                 <option value="Direct-to-hire">Direct-to-Hire</option>
-                <option value="Project-based">Project ackage</option>
+                <option value="Project Package">Project package</option>
               </select>
               {sourceType === "Direct-to-hire" && (
                 <select
@@ -2126,7 +2126,7 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
-            <h2 className="h2">Project package source</h2>
+            <h2 className="h2">Project package</h2>
             <span
               className="emoji-container"
               onClick={scrollToTarget}
@@ -2137,7 +2137,7 @@ function Home() {
             <h5 className="h5">30-day guarantee</h5>
           </div>
           <div className="pricing-content">
-            <h2 className="h2">Direct-to-hire source</h2>
+            <h2 className="h2">Direct-to-Hire</h2>
             <span
               className="emoji-container"
               onClick={scrollToTarget}
