@@ -1643,7 +1643,7 @@ function Home() {
                         width: "100%",
                       }}
                     >
-                      Frank Secord
+                      Frank Serkland
                     </h2>
                     <h5 className="h5">
                       Frank is a senior Java Engineer with over 12 years of
@@ -1912,14 +1912,6 @@ function Home() {
                 flexDirection: "column",
               }}
             >
-              <h2
-                className="h2"
-                style={{
-                  width: "100%",
-                }}
-              >
-                Pratik Silver
-              </h2>
               <h5
                 className="h5"
                 style={{ marginBottom: "1rem", width: "100%" }}
