@@ -296,43 +296,6 @@ function Home() {
     return () => tl.kill();
   }, []);
 
-  useEffect(() => {
-    const technologies = gsap.utils.toArray("#sap");
-    const tl = gsap.timeline({ repeat: -1 });
-
-    technologies.forEach((technology) => {
-      const splitText = new SplitText(technology);
-
-      splitText.chars.forEach((char) => {
-        char.classList.add(`chars`);
-      });
-
-      tl.from(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          y: 60,
-          rotateX: -35,
-          stagger: 0.02,
-        },
-        "<"
-      ).to(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          y: -60,
-          rotateX: 35,
-          stagger: 0.02,
-        },
-        "<1.8"
-      );
-    });
-
-    return () => tl.kill();
-  }, []);
-
   return (
     <div className="main">
       {/* intro */}
