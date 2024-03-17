@@ -79,8 +79,8 @@ function Home() {
           </h2>
           <Lottie animationData={animation} />
           <h3 className="h3">
-            we place laid off engineers at companies who have raised at least a
-            series A to B funding round.
+            we place laid off engineers at startup companies who have raised
+            series A to B funding rounds.
           </h3>
         </div>
       </div>

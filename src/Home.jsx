@@ -31,7 +31,7 @@ import instacart from "./assets/svg/instacart.svg";
 import toast from "./assets/svg/toast.svg";
 import expedia from "./assets/svg/expedia.svg";
 import snap from "./assets/svg/snap.svg";
-import affrim from "./assets/svg/affrim.svg";
+import affirm from "./assets/svg/affirm.svg";
 import google from "./assets/svg/google.svg";
 import buzzfeed from "./assets/svg/buzzfeed.svg";
 import rivian from "./assets/svg/rivian.svg";
@@ -390,8 +390,7 @@ function Home() {
           )}
 
           <h2 className="h2">
-            we source recently laid-off senior developers from tech giants and
-            unicorns
+            we source recently laid-off engineers from tech giants and unicorns
           </h2>
           {mobile ? (
             <div className="icons" style={{ marginBottom: "2rem" }}>
@@ -430,13 +429,13 @@ function Home() {
           >
             <h1 className="h1">Hiring recently laid off engineers</h1>
             <h3 className="h3">
-              The recent major tech lay-offs have created an opportunity for
-              startup companies who need to hire, welcome new, vetted
+              The recent major tech layoffs have created an opportunity for
+              startup companies that need to hire and welcome new, vetted
               engineering teams.
             </h3>
             <h5 className="h5">
               At learnmutiny we have focused our work to revolve around this
-              newly shapen reality, and help make the onboarding of recent
+              newly shapen reality and help make the onboarding of recent
               lay-offs as seamless as possible.
             </h5>
             <div
@@ -462,7 +461,7 @@ function Home() {
                           scrollToProject();
                         }}
                       >
-                        project based staffing
+                        project package
                       </button>
                     </h5>
                     <h5 className="h5">
@@ -495,7 +494,7 @@ function Home() {
                         }}
                       >
                         <h1 className="number">
-                          <Number n={180} />
+                          <Number n={210} />
                         </h1>
                         <h5 className="h5">Engineers sourced</h5>
                       </div>
@@ -557,7 +556,7 @@ function Home() {
                           scrollToProject();
                         }}
                       >
-                        project based staffing
+                        project package
                       </button>
                     </h5>
                     <h5 className="h5">
@@ -579,7 +578,7 @@ function Home() {
                         }}
                       >
                         <h1 className="number">
-                          <Number n={180} />
+                          <Number n={210} />
                         </h1>
                         <h5 className="h5">Engineers sourced</h5>
                       </div>
@@ -612,14 +611,14 @@ function Home() {
             </div>
             <h1 className="h1">Our Services</h1>
           </div>
-          {/* project based staffing */}
+          {/* project package */}
           <div
             className="vertical-content"
             ref={projectRef}
             style={{ width: "100%" }}
           >
             <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
-              <h2 className="h2">Project Based Staffing</h2>
+              <h2 className="h2">Project Package</h2>
               <Lottie animationData={group} style={{ width: "15rem" }} />
               <div
                 className="sourcing-info"
@@ -631,29 +630,27 @@ function Home() {
               >
                 <h3 className="h3">1. Initial Due Diligence Screening</h3>
                 <h5 className="h5">
-                  Within our initial due diligence screening, we aim to condense
-                  down the exact requirements and timelines for a successful
+                  Our goal with the initial due diligence screening is to
+                  condense down the exact requirements and timelines for
+                  successful project deployment.
+                </h5>
+                <h5 className="h5">
+                  During this process, our consultants work with your team to
+                  understand the current state of your application and the
+                  desired state of the application. Our team has industry
+                  experience in the most commonly used technologies and cloud
+                  infrastructures and can help your team plan accordingly for
                   project deployment.
                 </h5>
                 <h5 className="h5">
-                  During this process our consultants will work with your team
-                  to understand the current state of our application and the
-                  desired state of the application. Our team is experienced with
-                  the most commonly used technologies and cloud infrastructures
-                  in the industry, and can help your team plan accordingly for
-                  project deployment.
+                  Our project package source allows you to customize the exact
+                  position and role of every engineer on the team for the
+                  project. These teams are tailored to the needs of your company
+                  during our consultation.
                 </h5>
                 <h5 className="h5">
-                  Our project based staffing source allows for teams to
-                  customize the exact positions and roles that are needed for
-                  each project. We allow for teams to select positions that are
-                  specialized for the exact requirements from your consultation
-                  as a package.
-                </h5>
-                <h5 className="h5">
-                  Within each of our project packages you can pick and choose
-                  the specificed engineers, at market salary rates, that are
-                  needed for your project.
+                  Within each of our project packages, you can pick and choose
+                  the specific engineers at market rates for your project.
                 </h5>
                 {mobile ? null : (
                   <div className="due-diligence-content">
@@ -1189,18 +1186,18 @@ function Home() {
                           className="emoji-container"
                           id="github-container"
                           onClick={() =>
-                            addCompany({ name: "Affrim", logo: affrim })
+                            addCompany({ name: "Affirm", logo: affirm })
                           }
                           style={{
                             padding: "1rem",
                           }}
                         >
                           <img
-                            src={affrim}
+                            src={affirm}
                             className="emoji-2"
                             alt="calendar"
                           />
-                          Affrim
+                          Affirm
                         </span>
                         <span
                           className="emoji-container"
@@ -1272,19 +1269,23 @@ function Home() {
               {isOpen == 2 && (
                 <div className="sourcing-info">
                   <h3 className="h3">2. Talent Source</h3>
+                  <h4 className="h4">
+                    We offer sourcing services to mitigate the fluctuations of
+                    our pipeline to give you a tailored search based on your
+                    engineering needs.
+                  </h4>
                   <h5 className="h5">
                     Due to the nature of our talent pipeline, there tends to be
                     variability in the availability of engineers for each
-                    project. We work with recently laid-off engineers that are
-                    looking to join project-based teams immediately.
+                    project. We work with recently laid-off engineers looking to
+                    join project-based teams immediately.
                   </h5>
                   <h5 className="h5">
-                    Depending on job market conditions, we may have sudden
-                    influxs of engineers that are specialized in a specific
-                    technology or cloud infrastructure. Because of this, we
-                    could have a wide range of engineering talent that is ready
-                    to join project-based teams, or we could have a limited
-                    engineer talent.
+                    Depending on job market conditions, we may have a sudden
+                    influx of engineers who specialize in a specific technology
+                    or cloud infrastructure. Because of this, we could have a
+                    wide range of engineering talent ready to join project-based
+                    teams, or we could have limited engineering talent.
                   </h5>
                   <h5 className="h5">
                     <button className="emoji-container">
@@ -1298,11 +1299,11 @@ function Home() {
                     interviews and technical assessments.
                   </h5>
                   <h5 className="h5">
-                    We have crafted our project based staffing to be as easy as
+                    We have crafted our project package to be as easy as
                     possible for your team to onboard a new engineering team. We
-                    utilize a simple and easy to understand billing process that
-                    allows for your team to understand the exact costs of the
-                    project, and plan accordingly.
+                    utilize a simple and easy-to-understand billing process that
+                    helps you to understand the precise cost of the project and
+                    plan accordingly.
                   </h5>
                   <span
                     className="emoji-container"
@@ -1317,13 +1318,13 @@ function Home() {
                   </span>
                   <h5 className="h5">
                     All invoices via Stripe are sent out at the end of each
-                    month, and are due within 15 days of receipt.
+                    month, and are due within 15 days of invoice.
                   </h5>
                   <h3 className="h3">4. Required Check-ups</h3>
                   <h5 className="h5">
-                    During the duration of the project, our team check-ups with
-                    your team and our package engineers to ensure that the
-                    project checkpoints are being met.
+                    Throughout the project, we will check up with you and your
+                    team of engineers to ensure that project milestones are
+                    being met.
                   </h5>
                 </div>
               )}
@@ -1366,25 +1367,25 @@ function Home() {
                 <h3 className="h3">1. Initial Due Diligence Screening</h3>
                 <h5 className="h5">
                   We work with your team to understand the current state of your
-                  company and the role you are looking to fill.
+                  company and the position you are looking to fill.
                 </h5>
                 <h5 className="h5">
                   Our team will work with you to understand the technical
-                  requirements and company culture fit to help us to understand
-                  the complexity of the role and help us source the ideal
-                  engineer for your team.
+                  requirements and company culture fit to help us determine the
+                  complexity of the role and help us source the ideal engineer
+                  for your team.
                 </h5>
                 <h5 className="h5">
-                  During this process our consultants will work with your team
-                  to understand the exact requirements for the role, our team is
-                  experienced with the most commonly used technologies and cloud
-                  infrastructures in the industry and can help your team
-                  understand the hidden complexities for the search.
+                  During this process, our consultants will work with your team
+                  to understand the exact requirements for the role. Our team
+                  has industry experience in the most commonly used technologies
+                  and cloud infrastructures and can help you understand the
+                  hidden complexities of the search.
                 </h5>
 
                 <h5 className="h5">
-                  During this process we also lay-out the timelines of each step
-                  in our sourcing process.
+                  During this process, we also lay out the timelines for each
+                  step in our sourcing process.
                 </h5>
                 <span
                   className="emoji-container"
@@ -1513,14 +1514,14 @@ function Home() {
                 <div className="sourcing-info">
                   <h3 className="h3">2. Talent Source</h3>
                   <h5 className="h5">
-                    We have pre-screened engineers that are available to join
-                    startup teams immediately, yet they may not always be the
-                    right fit for your team.
+                    We have pre-screened engineers available to join startup
+                    teams immediately, yet they may not always be the right fit
+                    for your team.
                   </h5>
                   <h5 className="h5">
-                    Because of this, our team will shift our pipeline towards
-                    sourcing an engineer that fits the exact requirements of our
-                    Initial Due Diligence Screening.
+                    Because of this, our team will shift our pipeline toward
+                    sourcing an engineer that fits the exact requirements we
+                    found during our Initial Due Diligence Screening.
                   </h5>
                   <h5 className="h4">
                     <button
@@ -1556,14 +1557,14 @@ function Home() {
                   </h5>
                   <h3 className="h3">4. Required Check-up</h3>
                   <h5 className="h5">
-                    After the engineer has been placed, we check-up with your
+                    After an engineer is placed, we will follow up with your
                     team and the engineer to ensure that the placement and
                     culture fit works for both parties.
                   </h5>
                   <h5 className="h5">
-                    If the engineer is not meeting the requirements of the role,
-                    or if the culture fit is not working out, we reconduct our
-                    sourcing process and source a replacement engineer.
+                    If the engineer does not meet the requirements of the role
+                    or culture fit, we reconduct our sourcing process and source
+                    a replacement engineer.
                   </h5>
                 </div>
               )}
@@ -1648,9 +1649,8 @@ function Home() {
                       Frank is a senior Java Engineer with over 12 years of
                       professional experience split between startups and Fortune
                       500 companies. He has worked with some of the largest
-                      companies in the world including Linkedin, Paypal, and
-                      Apple. Frank was recently let go from Apple within the
-                      last year.
+                      companies in the world including LinkedIn, Paypal, and
+                      Apple. Frank was let go from Apple within the last year.
                     </h5>
                     <h5 className="h5">
                       <button
@@ -1759,10 +1759,10 @@ function Home() {
                       Coty Rothery
                     </h2>
                     <h5 className="h5">
-                      Coty is a highly talented self taught engineer. His
+                      Coty is a highly talented self-taught engineer. His
                       experience resides in the Backend using GO, Rust, and
                       Javascript. He was the 94th employee at StockX where he
-                      worked on everything from design of third party
+                      worked on everything from design of third-party
                       applications, architecture, cloud computing, and DevOps.
                     </h5>
 
@@ -1875,11 +1875,10 @@ function Home() {
                     <h5 className="h5">
                       Pratik was recently laid off from Cashapp. He was a mobile
                       engineering manager with 12 years of experience working
-                      with both Android and IOS developments. At Cash App he was
-                      involved in the processes behind the temperature changing
-                      debit card and the pink debit card. When they were
-                      released, they were the fastest growing debit cards in the
-                      world.
+                      with Android and IOS developments. At Cash App, he was
+                      involved in the processes behind the temperature-changing
+                      and pink debit card. When released, they were the
+                      fastest-growing debit cards in the world.
                     </h5>
 
                     <h5 className="h5">
@@ -2075,7 +2074,7 @@ function Home() {
                   Source type
                 </option>
                 <option value="Direct-to-hire">Direct-to-Hire</option>
-                <option value="Project-based">Project Based Staffing</option>
+                <option value="Project-based">Project ackage</option>
               </select>
               {sourceType === "Direct-to-hire" && (
                 <select
@@ -2135,7 +2134,7 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
-            <h2 className="h2">Project based staffing source</h2>
+            <h2 className="h2">Project ackage source</h2>
             <span
               className="emoji-container"
               onClick={scrollToTarget}
@@ -2143,7 +2142,7 @@ function Home() {
             >
               contact sales
             </span>
-            <h5 className="h5">with a 30-day guarantee</h5>
+            <h5 className="h5">30-day guarantee</h5>
           </div>
           <div className="pricing-content">
             <h2 className="h2">Direct-to-hire source</h2>
@@ -2154,7 +2153,7 @@ function Home() {
             >
               contact sales
             </span>
-            <h5 className="h5">with replacement guarantee</h5>
+            <h5 className="h5">replacement guarantee</h5>
           </div>
         </div>
       </div>
