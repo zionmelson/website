@@ -40,8 +40,10 @@ export default function Navbar() {
               <a href="/about">
                 <div className="link-container">about</div>
               </a>
-              <a href="/developer">
-                <div className="link-container">developer</div>
+              <a href="/hire">
+                <h5 className="h5">
+                  <button className="emoji-container">hire an engineer</button>
+                </h5>
               </a>
             </div>
           </div>
@@ -65,8 +67,10 @@ export default function Navbar() {
           </li>
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
             {" "}
-            <a href="/developer">
-              <h4 className="h4">developer</h4>
+            <a href="/hire">
+              <h5 className="h5">
+                <button className="emoji-container">hire an engineer</button>
+              </h5>
             </a>
           </li>
         </ul>

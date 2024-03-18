@@ -36,10 +36,12 @@
 .navigation {
   font-size: 1.1rem;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  justify-content: end;
   flex-direction: row;
   margin-bottom: 1rem;
+  gap: 2rem;
+  width: 100%;
 }
 
 .scrolled {
@@ -133,6 +135,13 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar {
