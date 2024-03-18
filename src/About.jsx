@@ -9,13 +9,14 @@ import {
   FaNpm,
   FaNode,
 } from "react-icons/fa";
+import Lottie from "lottie-react";
 
 import zion from "./assets/jpeg/zion.jpeg";
-import maxmillian from "./assets/jpeg/maxmillian.jpeg";
-import atlanta from "./assets/svg/atlanta.svg";
+import maxmillian from "./assets/jpeg/max.jpeg";
 
-import Lottie from "lottie-react";
 import animation from "./assets/json/animate.json";
+
+import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
 import instagram from "./assets/svg/instagram.svg";
