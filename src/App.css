@@ -37,6 +37,17 @@
   font-family: Inter, sans-serif;
 }
 
+.number {
+  font-size: 2.25rem;
+  transition: all 0.2s linear;
+}
+
+.number:hover {
+  cursor: pointer;
+  scale: 1.25;
+  transition: all 0.2s linear;
+}
+
 #gsap {
   margin: 0;
   line-height: 0;
@@ -124,6 +135,61 @@
 
 #white .layoff-content {
   color: #fff;
+}
+
+.stats-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 2px solid #fff;
+  background: linear-gradient(135deg, #111111, #404040);
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+#white .stats-content {
+  color: #fff;
+}
+
+.due-diligence-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1rem;
+  border: 2px solid #fff;
+  background: linear-gradient(135deg, #111111, #404040);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sourcing-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  border: 2px solid #fff;
+  background: linear-gradient(135deg, #111111, #404040);
+  padding: 2rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+#white .sourcing-content {
+  color: #fff;
+}
+
+.sourcing-info {
+  text-align: start;
+  margin-bottom: 1rem;
+  width: 90%;
 }
 
 .pricing-content {
@@ -255,6 +321,22 @@
   border: 2px solid #302f31;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.buttons:hover {
+  background-color: #e0e0e0;
+  color: #111111;
+  cursor: pointer;
+}
+
 .emoji-container:hover {
   background-color: #e0e0e0;
   color: #111111;
@@ -271,7 +353,13 @@
 
 .headshots {
   width: 20rem;
+  border-radius: 0.5rem;
+  border: 2px solid #fff;
   margin: 1rem;
+}
+
+#white .headshots {
+  border: 2px solid #302f31;
 }
 
 .privacy {
@@ -342,10 +430,6 @@
 
 #discord {
   color: #7289da;
-}
-
-#support:hover {
-  background: #ffa3d4;
 }
 
 #ai-container:hover {
@@ -702,7 +786,7 @@
   }
 
   .horizontal-content {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
@@ -713,6 +797,10 @@
     align-items: center;
     justify-content: flex-start;
     text-align: center;
+  }
+
+  .sourcing-info {
+    width: 100%;
   }
 
   .memoji-container {
@@ -731,6 +819,24 @@
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease-in;
+  }
+
+  .layoff-content {
+    padding: 1rem;
+  }
+
+  .due-diligence-content {
+    width: full;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .stats-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .headshots {
