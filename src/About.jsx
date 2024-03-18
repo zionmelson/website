@@ -125,8 +125,8 @@ function Home() {
               <img
                 src={zion}
                 loading="eagar"
-                decoding="async"
                 fetchPriority="high"
+                decoding="async"
                 className="headshots"
                 alt="zion"
               />
@@ -145,8 +145,8 @@ function Home() {
               <img
                 src={maxmillian}
                 loading="eagar"
-                decoding="async"
                 fetchPriority="high"
+                decoding="async"
                 className="headshots"
                 alt="maxmillian"
               />
