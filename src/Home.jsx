@@ -175,7 +175,9 @@ function Home() {
   };
 
   useEffect(() => {
-    const newDate = new Date().toLocaleDateString();
+    const today = new Date();
+    const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000 * 4);
+    const newDate = yesterday.toLocaleDateString();
     setDate(newDate);
   }, []);
 
