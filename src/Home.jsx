@@ -755,143 +755,24 @@ function Home() {
                     </div>
                   </div>
                 )}
-                <div
-                  className="due-diligence-content"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "start",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
+                {mobile ? (
                   <div
-                    className="vertical-content"
+                    className="due-diligence-content"
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      justifyContent: "center",
                       alignItems: "center",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                      padding: "0.5rem",
                     }}
                   >
                     <div
-                      className="horizontal-content"
+                      className="vertical-content"
                       style={{
-                        display: "flex",
-                        width: "100%",
-                        marginBottom: "1rem",
+                        margin: "0.5rem",
                       }}
                     >
-                      <div className="vertical-content">
-                        <h5 className="h5">
-                          <button className="emoji-container">
-                            Project Manager
-                          </button>
-                        </h5>
-                        <div
-                          className="horizontal-content"
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-evenly",
-                            width: "100%",
-                          }}
-                        >
-                          <button
-                            className="buttons"
-                            onClick={() => removeFromPackages("projectManager")}
-                          >
-                            <FaMinus className="operator" />
-                          </button>
-                          <button
-                            className="buttons"
-                            onClick={() => addToPackages("projectManager")}
-                          >
-                            <FaPlus className="operator" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="horizontal-content"
-                      style={{
-                        display: "flex",
-                        width: "100%",
-                        marginBottom: "1rem",
-                      }}
-                    >
-                      <div className="vertical-content">
-                        <h5 className="h5">
-                          <button className="emoji-container">
-                            Software Engineer
-                          </button>
-                        </h5>
-                        <div
-                          className="horizontal-content"
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-evenly",
-                            width: "100%",
-                          }}
-                        >
-                          <button
-                            className="buttons"
-                            onClick={() =>
-                              removeFromPackages("softwareEngineer")
-                            }
-                          >
-                            <FaMinus className="operator" />
-                          </button>
-                          <button
-                            className="buttons"
-                            onClick={() => addToPackages("softwareEngineer")}
-                          >
-                            <FaPlus className="operator" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      className="horizontal-content"
-                      style={{
-                        display: "flex",
-                        width: "100%",
-                        marginBottom: "1rem",
-                      }}
-                    >
-                      <div className="vertical-content">
-                        <h5 className="h5">
-                          <button className="emoji-container">
-                            Graphic Designer
-                          </button>
-                        </h5>
-                        <div
-                          className="horizontal-content"
-                          style={{
-                            display: "flex",
-                            justifyContent: "space-evenly",
-                            width: "100%",
-                          }}
-                        >
-                          <button
-                            className="buttons"
-                            onClick={() =>
-                              removeFromPackages("graphicDesigner")
-                            }
-                          >
-                            <FaMinus className="operator" />
-                          </button>
-                          <button
-                            className="buttons"
-                            onClick={() => addToPackages("graphicDesigner")}
-                          >
-                            <FaPlus className="operator" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {mobile ? (
-                    <div className="vertical-content">
                       <h5 className="h5">
                         <button className="emoji-container">
                           {packages.projectManager} PMs
@@ -908,7 +789,277 @@ function Home() {
                         </button>
                       </h5>
                     </div>
-                  ) : (
+                    <div
+                      className="vertical-content"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+
+                        margin: "0.5rem",
+                      }}
+                    >
+                      <div
+                        className="horizontal-content"
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <div className="vertical-content">
+                          <h5 className="h5">
+                            <button className="emoji-container">
+                              Project Manager
+                            </button>
+                          </h5>
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-evenly",
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="buttons"
+                              onClick={() =>
+                                removeFromPackages("projectManager")
+                              }
+                            >
+                              <FaMinus className="operator" />
+                            </button>
+                            <button
+                              className="buttons"
+                              onClick={() => addToPackages("projectManager")}
+                            >
+                              <FaPlus className="operator" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="horizontal-content"
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <div className="vertical-content">
+                          <h5 className="h5">
+                            <button className="emoji-container">
+                              Software Engineer
+                            </button>
+                          </h5>
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-evenly",
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="buttons"
+                              onClick={() =>
+                                removeFromPackages("softwareEngineer")
+                              }
+                            >
+                              <FaMinus className="operator" />
+                            </button>
+                            <button
+                              className="buttons"
+                              onClick={() => addToPackages("softwareEngineer")}
+                            >
+                              <FaPlus className="operator" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="horizontal-content"
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <div className="vertical-content">
+                          <h5 className="h5">
+                            <button className="emoji-container">
+                              Graphic Designer
+                            </button>
+                          </h5>
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-evenly",
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="buttons"
+                              onClick={() =>
+                                removeFromPackages("graphicDesigner")
+                              }
+                            >
+                              <FaMinus className="operator" />
+                            </button>
+                            <button
+                              className="buttons"
+                              onClick={() => addToPackages("graphicDesigner")}
+                            >
+                              <FaPlus className="operator" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className="due-diligence-content"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                      padding: "1rem",
+                    }}
+                  >
+                    <div
+                      className="vertical-content"
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+
+                        margin: "0.5rem",
+                      }}
+                    >
+                      <div
+                        className="horizontal-content"
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <div className="vertical-content">
+                          <h5 className="h5">
+                            <button className="emoji-container">
+                              Project Manager
+                            </button>
+                          </h5>
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-evenly",
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="buttons"
+                              onClick={() =>
+                                removeFromPackages("projectManager")
+                              }
+                            >
+                              <FaMinus className="operator" />
+                            </button>
+                            <button
+                              className="buttons"
+                              onClick={() => addToPackages("projectManager")}
+                            >
+                              <FaPlus className="operator" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="horizontal-content"
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <div className="vertical-content">
+                          <h5 className="h5">
+                            <button className="emoji-container">
+                              Software Engineer
+                            </button>
+                          </h5>
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-evenly",
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="buttons"
+                              onClick={() =>
+                                removeFromPackages("softwareEngineer")
+                              }
+                            >
+                              <FaMinus className="operator" />
+                            </button>
+                            <button
+                              className="buttons"
+                              onClick={() => addToPackages("softwareEngineer")}
+                            >
+                              <FaPlus className="operator" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="horizontal-content"
+                        style={{
+                          display: "flex",
+                          width: "100%",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        <div className="vertical-content">
+                          <h5 className="h5">
+                            <button className="emoji-container">
+                              Graphic Designer
+                            </button>
+                          </h5>
+                          <div
+                            className="horizontal-content"
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-evenly",
+                              width: "100%",
+                            }}
+                          >
+                            <button
+                              className="buttons"
+                              onClick={() =>
+                                removeFromPackages("graphicDesigner")
+                              }
+                            >
+                              <FaMinus className="operator" />
+                            </button>
+                            <button
+                              className="buttons"
+                              onClick={() => addToPackages("graphicDesigner")}
+                            >
+                              <FaPlus className="operator" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div className="vertical-content">
                       <h5 className="h5">from</h5>
                       <div
@@ -918,10 +1069,8 @@ function Home() {
                           flexDirection: "row",
                           flexWrap: "wrap",
                           alignItems: "start",
-                          justifyContent: "end",
+                          justifyContent: "center",
                           gap: "0.5rem",
-                          width: "35rem",
-                          height: "10rem",
                         }}
                       >
                         <span
@@ -1270,8 +1419,8 @@ function Home() {
                         </span>
                       </div>
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
                 <h5
                   className="h5"
                   style={{
