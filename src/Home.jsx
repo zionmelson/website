@@ -111,8 +111,8 @@ function Home() {
 
   const [packages, setPackages] = useState({
     projectManager: 0,
-    seniorEngineer: 0,
-    juniorEngineer: 0,
+    softwareEngineer: 0,
+    graphicDesigner: 0,
   });
 
   const [bio, setBio] = useState(1);
@@ -683,10 +683,10 @@ function Home() {
                             Project Managers: {packages.projectManager}
                           </h3>
                           <h3 className="h3">
-                            Senior Engineers: {packages.seniorEngineer}
+                            Software Engineers: {packages.softwareEngineer}
                           </h3>
                           <h3 className="h3">
-                            Junior Engineers: {packages.juniorEngineer}
+                            Graphic Designers: {packages.graphicDesigner}
                           </h3>
                         </div>
                       </div>
@@ -765,12 +765,19 @@ function Home() {
                     width: "100%",
                   }}
                 >
-                  <div className="vertical-content">
+                  <div
+                    className="vertical-content"
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
                     <div
                       className="horizontal-content"
                       style={{
                         display: "flex",
-                        justifyContent: "space-between",
                         width: "100%",
                         marginBottom: "1rem",
                       }}
@@ -808,7 +815,6 @@ function Home() {
                       className="horizontal-content"
                       style={{
                         display: "flex",
-                        justifyContent: "space-between",
                         width: "100%",
                         marginBottom: "1rem",
                       }}
@@ -816,7 +822,7 @@ function Home() {
                       <div className="vertical-content">
                         <h5 className="h5">
                           <button className="emoji-container">
-                            Senior Engineer
+                            Software Engineer
                           </button>
                         </h5>
                         <div
@@ -829,13 +835,15 @@ function Home() {
                         >
                           <button
                             className="buttons"
-                            onClick={() => removeFromPackages("seniorEngineer")}
+                            onClick={() =>
+                              removeFromPackages("softwareEngineer")
+                            }
                           >
                             <FaMinus className="operator" />
                           </button>
                           <button
                             className="buttons"
-                            onClick={() => addToPackages("seniorEngineer")}
+                            onClick={() => addToPackages("softwareEngineer")}
                           >
                             <FaPlus className="operator" />
                           </button>
@@ -846,7 +854,6 @@ function Home() {
                       className="horizontal-content"
                       style={{
                         display: "flex",
-                        justifyContent: "space-between",
                         width: "100%",
                         marginBottom: "1rem",
                       }}
@@ -854,7 +861,7 @@ function Home() {
                       <div className="vertical-content">
                         <h5 className="h5">
                           <button className="emoji-container">
-                            Junior Engineer
+                            Graphic Designer
                           </button>
                         </h5>
                         <div
@@ -867,13 +874,15 @@ function Home() {
                         >
                           <button
                             className="buttons"
-                            onClick={() => removeFromPackages("juniorEngineer")}
+                            onClick={() =>
+                              removeFromPackages("graphicDesigner")
+                            }
                           >
                             <FaMinus className="operator" />
                           </button>
                           <button
                             className="buttons"
-                            onClick={() => addToPackages("juniorEngineer")}
+                            onClick={() => addToPackages("graphicDesigner")}
                           >
                             <FaPlus className="operator" />
                           </button>
@@ -890,12 +899,12 @@ function Home() {
                       </h5>
                       <h5 className="h5">
                         <button className="emoji-container">
-                          {packages.seniorEngineer} SEs
+                          {packages.softwareEngineer} SEs
                         </button>
                       </h5>
                       <h5 className="h5">
                         <button className="emoji-container">
-                          {packages.juniorEngineer} JEs
+                          {packages.graphicDesigner} JEs
                         </button>
                       </h5>
                     </div>
