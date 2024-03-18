@@ -11,8 +11,8 @@ import {
 } from "react-icons/fa";
 import Lottie from "lottie-react";
 
-import zion from "./assets/jpeg/zion.jpeg";
-import maxmillian from "./assets/jpeg/max.jpeg";
+import zion from "./assets/png/zion.png";
+import maxmillian from "./assets/png/max.png";
 
 import animation from "./assets/json/animate.json";
 
@@ -122,7 +122,14 @@ function Home() {
           <h1 className="h1">Meet the team</h1>
           <div className="horizontal-content">
             <div className="headshot">
-              <img src={zion} className="headshots" alt="zion" />
+              <img
+                src={zion}
+                loading="eagar"
+                fetchPriority="high"
+                decoding="async"
+                className="headshots"
+                alt="zion"
+              />
               <h5 className="h5">zion | managing partner</h5>
               <a
                 href="https://linkedin.com/in/zionmelson"
@@ -135,7 +142,14 @@ function Home() {
               </a>
             </div>
             <div className="headshot">
-              <img src={maxmillian} className="headshots" alt="maxmillian" />
+              <img
+                src={maxmillian}
+                loading="eagar"
+                fetchPriority="high"
+                decoding="async"
+                className="headshots"
+                alt="maxmillian"
+              />
               <h5 className="h5">maxmillian | managing partner</h5>
               <a
                 href="https://www.linkedin.com/in/mxmilan/"
