@@ -9,6 +9,7 @@ import { IoPartlySunny } from "react-icons/io5";
 
 import Home from "./Home";
 import About from "./About";
+import Hire from "./Hire";
 import Developer from "./Developer";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
@@ -61,6 +62,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/hire" element={<Hire />} />
             <Route path="/developer" element={<Developer />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
