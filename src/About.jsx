@@ -25,9 +25,6 @@ import github from "./assets/svg/github.svg";
 import linkedin from "./assets/svg/linkedin.svg";
 import x from "./assets/svg/X.svg";
 
-import gsap from "gsap";
-import SplitText from "split-text-js";
-
 import "./App.css";
 import { useEffect } from "react";
 
@@ -39,43 +36,6 @@ function Home() {
   const handleImageLoad = () => {
     setIsLoaded(true);
   };
-
-  useEffect(() => {
-    const technologies = gsap.utils.toArray("#gsap");
-    const tl = gsap.timeline({ repeat: -1 });
-
-    technologies.forEach((technology) => {
-      const splitText = new SplitText(technology);
-
-      splitText.chars.forEach((char) => {
-        char.classList.add(`chars`);
-      });
-
-      tl.from(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          rotateX: -90,
-          y: 80,
-          stagger: 0.02,
-        },
-        "<"
-      ).to(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          rotateX: 90,
-          y: -80,
-          stagger: 0.02,
-        },
-        "<1.8"
-      );
-    });
-
-    return () => tl.kill();
-  }, []);
 
   useEffect(() => {
     console.log("isLoaded", isLoaded);

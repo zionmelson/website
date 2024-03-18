@@ -13,6 +13,11 @@
   color: #fff;
   z-index: 2;
 }
+/* 
+#white .navbar {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+} */
 
 .footer {
   width: 100%;
@@ -41,6 +46,10 @@
   background-color: rgba(19, 19, 19, 0.9);
   height: 4rem;
   align-items: flex-end;
+}
+
+#white .scrolled {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-text {

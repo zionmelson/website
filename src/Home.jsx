@@ -78,6 +78,23 @@ function Number({ n }) {
   );
 }
 
+function Percent({ n }) {
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: n,
+    delay: 900,
+    config: { mass: 10, tension: 20, friction: 25 },
+  });
+
+  return (
+    <animated.div
+      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+    >
+      {number.to((n) => `${n.toFixed(0)}%`)}
+    </animated.div>
+  );
+}
+
 function Home() {
   const [formData, setFormData] = useState({
     first: "",
@@ -354,7 +371,9 @@ function Home() {
                 </>
               ) : (
                 <>
-                  <h1 className="h1">loading...</h1>
+                  <h1 className="h1" id="loading">
+                    loading...
+                  </h1>
                 </>
               )}
             </div>
@@ -490,9 +509,9 @@ function Home() {
                         }}
                       >
                         <h1 className="number">
-                          <Number n={10} />
+                          <Percent n={94} />
                         </h1>
-                        <h5 className="h5">Companies worked with</h5>
+                        <h5 className="h5">Placement satisfaction</h5>
                       </div>
                     </div>
                     <h5
@@ -572,9 +591,9 @@ function Home() {
                         }}
                       >
                         <h1 className="number">
-                          <Number n={10} />
+                          <Percent n={94} />
                         </h1>
-                        <h5 className="h5">Companies worked with</h5>
+                        <h5 className="h5">Placement satisfaction</h5>
                       </div>
                     </div>
                   </div>

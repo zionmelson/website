@@ -408,6 +408,10 @@
   transform: scale(1.1);
 }
 
+#white #loading {
+  color: #fff;
+}
+
 #cashapp {
   color: #00c805;
 }
