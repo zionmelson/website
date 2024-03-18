@@ -198,25 +198,45 @@ function Home() {
 
   const scrollToTarget = () => {
     if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = -100;
+      const top =
+        targetRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        offsetTop;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
   const scrollToSourced = () => {
     if (sourcedRef.current) {
-      sourcedRef.current.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = -50;
+      const top =
+        sourcedRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        offsetTop;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
   const scrollToDirect = () => {
     if (directRef.current) {
-      directRef.current.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = -50;
+      const top =
+        directRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        offsetTop;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
   const scrollToProject = () => {
     if (projectRef.current) {
-      projectRef.current.scrollIntoView({ behavior: "smooth" });
+      const offsetTop = -50;
+      const top =
+        projectRef.current.getBoundingClientRect().top +
+        window.pageYOffset +
+        offsetTop;
+      window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
@@ -450,7 +470,6 @@ function Home() {
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(2);
                           scrollToProject();
                         }}
                       >
@@ -461,7 +480,6 @@ function Home() {
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(1);
                           scrollToDirect();
                         }}
                       >
@@ -545,7 +563,6 @@ function Home() {
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(2);
                           scrollToProject();
                         }}
                       >
@@ -556,7 +573,6 @@ function Home() {
                       <button
                         className="emoji-container"
                         onClick={() => {
-                          toggleOpen(1);
                           scrollToDirect();
                         }}
                       >
@@ -2123,10 +2139,10 @@ function Home() {
             <h2 className="h2">Project package</h2>
             <span
               className="emoji-container"
-              onClick={scrollToTarget}
+              onClick={scrollToProject}
               style={{ marginBottom: "1rem" }}
             >
-              contact sales
+              build package
             </span>
             <h5 className="h5">30-day guarantee</h5>
           </div>
@@ -2135,10 +2151,10 @@ function Home() {
             <h2 className="h2">Direct-to-Hire</h2>
             <span
               className="emoji-container"
-              onClick={scrollToTarget}
+              onClick={scrollToSourced}
               style={{ marginBottom: "1rem" }}
             >
-              contact sales
+              view an engineer
             </span>
             <h5 className="h5">replacement guarantee</h5>
           </div>
