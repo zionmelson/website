@@ -9,13 +9,14 @@ import {
   FaNpm,
   FaNode,
 } from "react-icons/fa";
+import { useRef, useState } from "react";
 import Lottie from "lottie-react";
 
 import zion from "./assets/png/zion.png";
-import maxmillian from "./assets/png/max.png";
-
+import zionBlurry from "./assets/png/zionBlurry.png";
+import maxmillian from "./assets/png/maxmillian.png";
+import maxmillianBlurry from "./assets/png/maxmillianBlurry.png";
 import animation from "./assets/json/animate.json";
-
 import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
@@ -31,6 +32,14 @@ import "./App.css";
 import { useEffect } from "react";
 
 function Home() {
+  const blurredImageDivRef = useRef(null);
+  const imgRef = useRef(null);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+  const handleImageLoad = () => {
+    setIsLoaded(true);
+  };
+
   useEffect(() => {
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
@@ -67,6 +76,29 @@ function Home() {
 
     return () => tl.kill();
   }, []);
+
+  useEffect(() => {
+    console.log("isLoaded", isLoaded);
+    if (isLoaded) {
+      console.log("img loaded");
+      const blurredImageDiv = blurredImageDivRef.current;
+      const img = imgRef.current;
+
+      const loaded = () => {
+        if (blurredImageDiv) {
+          console.log("blurredImageDiv loaded");
+        }
+      };
+
+      if (isLoaded) {
+        console.log("img loaded");
+        loaded();
+      } else {
+        console.log("img not loaded");
+        img.addEventListener("load", loaded);
+      }
+    }
+  }, [isLoaded]);
 
   return (
     //
@@ -122,14 +154,41 @@ function Home() {
           <h1 className="h1">Meet the team</h1>
           <div className="horizontal-content">
             <div className="headshot">
-              <img
-                src={zion}
-                loading="eagar"
-                fetchPriority="high"
-                decoding="async"
-                className="headshots"
-                alt="zion"
-              />
+              {isLoaded ? (
+                <div>
+                  <img
+                    src={zion}
+                    loading="eagar"
+                    decoding="async"
+                    className="headshots"
+                    alt="zion"
+                  />
+                </div>
+              ) : (
+                <div
+                  ref={blurredImageDivRef}
+                  className="blurred-image"
+                  style={{
+                    backgroundImage: `url(${zionBlurry})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    animation: "pulse 2.5s infinite",
+                    filter: "blur(10px)",
+                    borderRadius: "0.5rem",
+                    border: "2px solid #fff",
+                  }}
+                >
+                  <img
+                    onLoad={handleImageLoad}
+                    src={zion}
+                    loading="eagar"
+                    decoding="async"
+                    className="headshots"
+                    alt="zion"
+                    ref={imgRef}
+                  />
+                </div>
+              )}
               <h5 className="h5">zion | managing partner</h5>
               <a
                 href="https://linkedin.com/in/zionmelson"
@@ -142,14 +201,39 @@ function Home() {
               </a>
             </div>
             <div className="headshot">
-              <img
-                src={maxmillian}
-                loading="eagar"
-                fetchPriority="high"
-                decoding="async"
-                className="headshots"
-                alt="maxmillian"
-              />
+              {isLoaded ? (
+                <div>
+                  <img
+                    src={maxmillian}
+                    loading="eagar"
+                    decoding="async"
+                    className="headshots"
+                    alt="maxmillian"
+                  />
+                </div>
+              ) : (
+                <div
+                  ref={blurredImageDivRef}
+                  className="blurred-image"
+                  style={{
+                    backgroundImage: `url(${maxmillianBlurry})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    animation: "pulse 2.5s infinite",
+                    filter: "blur(10px)",
+                  }}
+                >
+                  <img
+                    onLoad={handleImageLoad}
+                    src={maxmillian}
+                    loading="eagar"
+                    decoding="async"
+                    className="headshots"
+                    alt="maxmillian"
+                    ref={imgRef}
+                  />
+                </div>
+              )}
               <h5 className="h5">maxmillian | managing partner</h5>
               <a
                 href="https://www.linkedin.com/in/mxmilan/"

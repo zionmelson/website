@@ -17,6 +17,8 @@ import { useSpring, animated } from "react-spring";
 import Lottie from "lottie-react";
 import developer from "./assets/json/developer.json";
 import group from "./assets/json/group.json";
+import rocket from "./assets/json/rocket.json";
+import team from "./assets/json/team.json";
 
 import cashapp from "./assets/svg/cashapp.svg";
 import stock from "./assets/svg/stock.svg";
@@ -107,6 +109,7 @@ function Home() {
   const [mobile, setMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   const [sourceType, setSourceType] = useState("");
   const [date, setDate] = useState("");
@@ -260,41 +263,47 @@ function Home() {
   };
 
   useEffect(() => {
-    const technologies = gsap.utils.toArray("#gsap");
-    const tl = gsap.timeline({ repeat: -1 });
+    console.log("isLoaded", loaded);
 
-    technologies.forEach((technology) => {
-      const splitText = new SplitText(technology);
+    if (loaded) {
+      const technologies = gsap.utils.toArray("#gsap");
+      const tl = gsap.timeline({ repeat: -1 });
 
-      splitText.chars.forEach((char) => {
-        char.classList.add(`chars`);
+      technologies.forEach((technology) => {
+        const splitText = new SplitText(technology);
+
+        splitText.chars.forEach((char) => {
+          char.classList.add(`chars`);
+        });
+
+        tl.from(
+          splitText.chars,
+          {
+            opacity: 0,
+            fontWeight: 700,
+            y: 60,
+            rotateX: -35,
+            stagger: 0.02,
+          },
+          "<"
+        ).to(
+          splitText.chars,
+          {
+            opacity: 0,
+            fontWeight: 700,
+            y: -60,
+            rotateX: 35,
+            stagger: 0.02,
+          },
+          "<1.8"
+        );
       });
 
-      tl.from(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          y: 60,
-          rotateX: -35,
-          stagger: 0.02,
-        },
-        "<"
-      ).to(
-        splitText.chars,
-        {
-          opacity: 0,
-          fontWeight: 700,
-          y: -60,
-          rotateX: 35,
-          stagger: 0.02,
-        },
-        "<1.8"
-      );
-    });
+      return () => tl.kill();
+    }
 
-    return () => tl.kill();
-  }, []);
+    setLoaded(true);
+  }, [loaded]);
 
   return (
     <div className="main">
@@ -304,42 +313,50 @@ function Home() {
           <h1 className="h1">
             Hire a recently laid-off
             <div className="span">
-              <h1 className="h1" id="gsap">
-                full-stack developer
-              </h1>
-              <h1 className="h1" id="gsap">
-                back-end developer
-              </h1>
-              <h1 className="h1" id="gsap">
-                systems engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                software architect
-              </h1>
-              <h1 className="h1" id="gsap">
-                regression engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                cloud engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                blockchain engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                devops engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                database engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                data engineer
-              </h1>
-              <h1 className="h1" id="gsap">
-                project manager
-              </h1>
-              <h1 className="h1" id="gsap">
-                designer
-              </h1>
+              {loaded ? (
+                <>
+                  <h1 className="h1" id="gsap">
+                    full-stack developer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    back-end developer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    systems engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    software architect
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    regression engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    cloud engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    blockchain engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    devops engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    database engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    data engineer
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    project manager
+                  </h1>
+                  <h1 className="h1" id="gsap">
+                    designer
+                  </h1>
+                </>
+              ) : (
+                <>
+                  <h1 className="h1">loading...</h1>
+                </>
+              )}
             </div>
             for your startup
           </h1>
@@ -2081,6 +2098,7 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
+            <Lottie animationData={rocket} style={{ width: "10rem" }} />
             <h2 className="h2">Project package</h2>
             <span
               className="emoji-container"
@@ -2092,6 +2110,7 @@ function Home() {
             <h5 className="h5">30-day guarantee</h5>
           </div>
           <div className="pricing-content">
+            <Lottie animationData={team} style={{ width: "10rem" }} />
             <h2 className="h2">Direct-to-Hire</h2>
             <span
               className="emoji-container"
