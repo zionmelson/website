@@ -17,6 +17,8 @@ import { useSpring, animated } from "react-spring";
 import Lottie from "lottie-react";
 import developer from "./assets/json/developer.json";
 import group from "./assets/json/group.json";
+import rocket from "./assets/json/rocket.json";
+import team from "./assets/json/team.json";
 
 import cashapp from "./assets/svg/cashapp.svg";
 import stock from "./assets/svg/stock.svg";
@@ -2096,6 +2098,7 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
+            <Lottie animationData={rocket} style={{ width: "10rem" }} />
             <h2 className="h2">Project package</h2>
             <span
               className="emoji-container"
@@ -2107,6 +2110,7 @@ function Home() {
             <h5 className="h5">30-day guarantee</h5>
           </div>
           <div className="pricing-content">
+            <Lottie animationData={team} style={{ width: "10rem" }} />
             <h2 className="h2">Direct-to-Hire</h2>
             <span
               className="emoji-container"
