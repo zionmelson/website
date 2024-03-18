@@ -12,6 +12,8 @@ import { SiCashapp } from "react-icons/si";
 import { FaMeta } from "react-icons/fa6";
 import { TbBrandAirbnb } from "react-icons/tb";
 
+import { Link } from "react-router-dom";
+
 import { useSpring, animated } from "react-spring";
 
 import Lottie from "lottie-react";
@@ -436,11 +438,11 @@ function Home() {
             </div>
           )}
           <h2 className="h2">and place them at your startup company</h2>
-          <h5 className="h5">
-            <button className="emoji-container" onClick={scrollToTarget}>
-              hire an engineer
-            </button>
-          </h5>
+          <Link to="/hire">
+            <h5 className="h5">
+              <button className="emoji-container">hire an engineer</button>
+            </h5>
+          </Link>
         </div>
       </div>
       {/* sourcing */}
