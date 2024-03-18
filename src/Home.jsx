@@ -1382,23 +1382,6 @@ function Home() {
                           className="emoji-container"
                           id="github-container"
                           onClick={() =>
-                            addCompany({ name: "Bumble", logo: bumble })
-                          }
-                          style={{
-                            padding: "1rem",
-                          }}
-                        >
-                          <img
-                            src={bumble}
-                            className="emoji-2"
-                            alt="calendar"
-                          />
-                          Bumble
-                        </span>
-                        <span
-                          className="emoji-container"
-                          id="github-container"
-                          onClick={() =>
                             addCompany({ name: "Meta", logo: meta })
                           }
                           style={{
