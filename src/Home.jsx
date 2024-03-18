@@ -43,6 +43,18 @@ import meetup from "./assets/svg/meetup.svg";
 import amazon from "./assets/svg/amazon.svg";
 import logo from "./assets/svg/logo.svg";
 import stripe from "./assets/svg/stripe.svg";
+import linkedin from "./assets/svg/linkedin-2.svg";
+import discord from "./assets/svg/discord.svg";
+import uber from "./assets/svg/uber.svg";
+import airbnb from "./assets/svg/airbnb.svg";
+import spotify from "./assets/svg/spotify.svg";
+import twitch from "./assets/svg/twitch.svg";
+import ebay from "./assets/svg/ebay.svg";
+import paypal from "./assets/svg/paypal.svg";
+import facebook from "./assets/svg/facebook.svg";
+import twitter from "./assets/svg/twitter.svg";
+import pinterest from "./assets/svg/pinterest.svg";
+import tiktok from "./assets/svg/tiktok.svg";
 
 import github from "./assets/svg/github.svg";
 import aws from "./assets/svg/aws.svg";
@@ -785,7 +797,7 @@ function Home() {
                       </h5>
                       <h5 className="h5">
                         <button className="emoji-container">
-                          {packages.graphicDesigner} JEs
+                          {packages.graphicDesigner} GDs
                         </button>
                       </h5>
                     </div>
@@ -924,7 +936,7 @@ function Home() {
                     className="due-diligence-content"
                     style={{
                       display: "flex",
-                      flexDirection: "column",
+                      flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "space-evenly",
                       width: "100%",
@@ -938,8 +950,7 @@ function Home() {
                         flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "center",
-
-                        margin: "0.5rem",
+                        width: "30%",
                       }}
                     >
                       <div
@@ -1060,7 +1071,12 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="vertical-content">
+                    <div
+                      className="vertical-content"
+                      style={{
+                        width: "100%",
+                      }}
+                    >
                       <h5 className="h5">from</h5>
                       <div
                         className="vertical-content"
@@ -1101,6 +1117,194 @@ function Home() {
                           className="emoji-container"
                           id="github-container"
                           onClick={() =>
+                            addCompany({ name: "Discord", logo: discord })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={discord}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Discord
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Uber", logo: uber })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={uber} className="emoji-2" alt="calendar" />
+                          Uber
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Airbnb", logo: airbnb })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={airbnb}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Airbnb
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Spotify", logo: spotify })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={spotify}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Spotify
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Twitch", logo: twitch })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={twitch}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Twitch
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Ebay", logo: ebay })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img src={ebay} className="emoji-2" alt="calendar" />
+                          Ebay
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Paypal", logo: paypal })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={paypal}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Paypal
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Facebook", logo: facebook })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={facebook}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Facebook
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "X", logo: twitter })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={twitter}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          X
+                        </span>
+
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "Pinterest", logo: pinterest })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={pinterest}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Pinterest
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "TikTok", logo: tiktok })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={tiktok}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          TikTok
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
                             addCompany({ name: "Apple", logo: apple })
                           }
                           style={{
@@ -1109,6 +1313,23 @@ function Home() {
                         >
                           <img src={apple} className="emoji-2" alt="calendar" />
                           Apple
+                        </span>
+                        <span
+                          className="emoji-container"
+                          id="github-container"
+                          onClick={() =>
+                            addCompany({ name: "LinkedIn", logo: linkedin })
+                          }
+                          style={{
+                            padding: "1rem",
+                          }}
+                        >
+                          <img
+                            src={linkedin}
+                            className="emoji-2"
+                            alt="calendar"
+                          />
+                          Linkedin
                         </span>
                         <span
                           className="emoji-container"
