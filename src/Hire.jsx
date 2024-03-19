@@ -177,6 +177,15 @@ export default function Hire() {
           developer: "",
           message: "",
         });
+
+        setPackages({
+          projectManager: 0,
+          softwareEngineer: 0,
+          graphicDesigner: 0,
+        });
+
+        setCompanies([]);
+        setFormData({ ...formData, companies: [] });
       } else {
         console.error("response error:", data.error, response.status);
         setSubmissionStatus("failure");
@@ -241,49 +250,423 @@ export default function Hire() {
 
   return (
     <div className="main">
-      {submitted && submissionStatus === "success" ? (
-        <h1 className="h1">Hired an engineer 😉</h1>
-      ) : (
-        <h1 className="h1">Build your team</h1>
-      )}
-      {mobile ? null : (
-        <div
-          className="due-diligence-content"
-          style={{
-            width: "80%",
-          }}
-        >
+      <div className="box">
+        {submitted && submissionStatus === "success" ? (
+          <h1 className="h1">Building your team 😉</h1>
+        ) : (
+          <>
+            <h1 className="h1">Build your team</h1>
+            <h3 className="h3">Here is where you can submit your</h3>
+          </>
+        )}
+        <span className="emoji-container" style={{ marginBottom: "1rem" }}>
+          <h5 className="h5" style={{ marginBottom: "0" }}>
+            Project Package
+          </h5>
+        </span>
+
+        {mobile ? null : (
           <div
-            className="horizontal-content"
+            className="due-diligence-content"
             style={{
-              justifyContent: "space-evenly",
               width: "100%",
             }}
           >
-            <div className="horizontal-content">
+            <div
+              className="horizontal-content"
+              style={{
+                justifyContent: "space-evenly",
+                width: "100%",
+              }}
+            >
+              <div className="horizontal-content">
+                <div
+                  className="vertical-content"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                  }}
+                >
+                  <h3 className="h3">
+                    Project Managers: {packages.projectManager}
+                  </h3>
+                  <h3 className="h3">
+                    Software Engineers: {packages.softwareEngineer}
+                  </h3>
+                  <h3 className="h3">
+                    Graphic Designers: {packages.graphicDesigner}
+                  </h3>
+                </div>
+              </div>
               <div
                 className="vertical-content"
                 style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  width: "100%",
+                  width: "50%",
                 }}
               >
-                <h3 className="h3">
-                  Project Managers: {packages.projectManager}
-                </h3>
-                <h3 className="h3">
-                  Software Engineers: {packages.softwareEngineer}
-                </h3>
-                <h3 className="h3">
-                  Graphic Designers: {packages.graphicDesigner}
-                </h3>
+                <h5 className="h5">your team will be sourced from</h5>
+                {companies.length > 0 ? (
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      flexWrap: "wrap",
+                      gap: "1rem",
+                    }}
+                  >
+                    {companies.map((company) => (
+                      <span
+                        className="emoji-container"
+                        key={company.name}
+                        style={{
+                          padding: "1rem",
+                        }}
+                      >
+                        <button
+                          onClick={() => removeCompany(company)}
+                          style={{
+                            marginRight: "0.5rem",
+                            color: "red",
+                          }}
+                        >
+                          <FaMinusCircle className="operator" />
+                        </button>
+                        <img src={company.logo} className="emoji-2" />
+                        {company.name}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      flexWrap: "wrap",
+                      gap: "1rem",
+                    }}
+                  >
+                    <span
+                      className="emoji-container"
+                      id="github-container"
+                      style={{
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={logo} className="emoji-2" />
+                      learnmutiny.io
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+        {mobile ? (
+          <div
+            className="due-diligence-content"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+              width: "100%",
+              padding: "1rem",
+            }}
+          >
+            <div
+              className="vertical-content"
+              style={{
+                margin: "0.5rem",
+              }}
+            >
+              <h5 className="h5">
+                <button className="emoji-container">
+                  {packages.projectManager} PMs
+                </button>
+              </h5>
+              <h5 className="h5">
+                <button className="emoji-container">
+                  {packages.softwareEngineer} SEs
+                </button>
+              </h5>
+              <h5 className="h5">
+                <button className="emoji-container">
+                  {packages.graphicDesigner} GDs
+                </button>
+              </h5>
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+
+                margin: "0.5rem",
+              }}
+            >
+              <div
+                className="horizontal-content"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  marginBottom: "1rem",
+                }}
+              >
+                <div className="vertical-content">
+                  <h5 className="h5">
+                    <button className="emoji-container">Project Manager</button>
+                  </h5>
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                    }}
+                  >
+                    <button
+                      className="buttons"
+                      onClick={() => removeFromPackages("projectManager")}
+                    >
+                      <FaMinus className="operator" />
+                    </button>
+                    <button
+                      className="buttons"
+                      onClick={() => addToPackages("projectManager")}
+                    >
+                      <FaPlus className="operator" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="horizontal-content"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  marginBottom: "1rem",
+                }}
+              >
+                <div className="vertical-content">
+                  <h5 className="h5">
+                    <button className="emoji-container">
+                      Software Engineer
+                    </button>
+                  </h5>
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                    }}
+                  >
+                    <button
+                      className="buttons"
+                      onClick={() => removeFromPackages("softwareEngineer")}
+                    >
+                      <FaMinus className="operator" />
+                    </button>
+                    <button
+                      className="buttons"
+                      onClick={() => addToPackages("softwareEngineer")}
+                    >
+                      <FaPlus className="operator" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="horizontal-content"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  marginBottom: "1rem",
+                }}
+              >
+                <div className="vertical-content">
+                  <h5 className="h5">
+                    <button className="emoji-container">
+                      Graphic Designer
+                    </button>
+                  </h5>
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                    }}
+                  >
+                    <button
+                      className="buttons"
+                      onClick={() => removeFromPackages("graphicDesigner")}
+                    >
+                      <FaMinus className="operator" />
+                    </button>
+                    <button
+                      className="buttons"
+                      onClick={() => addToPackages("graphicDesigner")}
+                    >
+                      <FaPlus className="operator" />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div
               className="vertical-content"
               style={{
-                width: "50%",
+                width: "100%",
+              }}
+            >
+              <h5 className="h5">from</h5>
+              <div
+                className="vertical-content"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
+                  alignItems: "start",
+                  justifyContent: "center",
+                  gap: "0.5rem",
+                }}
+              >
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "EA", logo: ea })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={ea} className="emoji-2" alt="calendar" />
+                  EA
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Uber", logo: uber })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={uber} className="emoji-2" alt="calendar" />
+                  Uber
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Snapchat", logo: snap })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={snap} className="emoji-2" alt="calendar" />
+                  Snapchat
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Spotify", logo: spotify })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={spotify} className="emoji-2" alt="calendar" />
+                  Spotify
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Twitch", logo: twitch })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={twitch} className="emoji-2" alt="calendar" />
+                  Twitch
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Google", logo: google })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={google} className="emoji-2" alt="calendar" />
+                  Google
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Paypal", logo: paypal })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={paypal} className="emoji-2" alt="calendar" />
+                  Paypal
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Meta", logo: meta })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={meta} className="emoji-2" alt="calendar" />
+                  Meta
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Instacart", logo: instacart })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={instacart} className="emoji-2" alt="calendar" />
+                  Instacart
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Cashapp", logo: cashapp })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={cashapp} className="emoji-2" alt="calendar" />
+                  Cashapp
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Mozilla", logo: mozilla })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={mozilla} className="emoji-2" alt="calendar" />
+                  Mozilla
+                </span>
+              </div>
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                marginTop: "2rem",
               }}
             >
               <h5 className="h5">your team will be sourced from</h5>
@@ -343,1037 +726,696 @@ export default function Hire() {
               )}
             </div>
           </div>
-        </div>
-      )}
-      {mobile ? (
-        <div
-          className="due-diligence-content"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            width: "100%",
-            padding: "1rem",
-          }}
-        >
+        ) : (
           <div
-            className="vertical-content"
-            style={{
-              margin: "0.5rem",
-            }}
-          >
-            <h5 className="h5">
-              <button className="emoji-container">
-                {packages.projectManager} PMs
-              </button>
-            </h5>
-            <h5 className="h5">
-              <button className="emoji-container">
-                {packages.softwareEngineer} SEs
-              </button>
-            </h5>
-            <h5 className="h5">
-              <button className="emoji-container">
-                {packages.graphicDesigner} GDs
-              </button>
-            </h5>
-          </div>
-          <div
-            className="vertical-content"
+            className="due-diligence-content"
             style={{
               display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
+              flexDirection: "row",
               alignItems: "center",
-
-              margin: "0.5rem",
-            }}
-          >
-            <div
-              className="horizontal-content"
-              style={{
-                display: "flex",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              <div className="vertical-content">
-                <h5 className="h5">
-                  <button className="emoji-container">Project Manager</button>
-                </h5>
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
-                  <button
-                    className="buttons"
-                    onClick={() => removeFromPackages("projectManager")}
-                  >
-                    <FaMinus className="operator" />
-                  </button>
-                  <button
-                    className="buttons"
-                    onClick={() => addToPackages("projectManager")}
-                  >
-                    <FaPlus className="operator" />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="horizontal-content"
-              style={{
-                display: "flex",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              <div className="vertical-content">
-                <h5 className="h5">
-                  <button className="emoji-container">Software Engineer</button>
-                </h5>
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
-                  <button
-                    className="buttons"
-                    onClick={() => removeFromPackages("softwareEngineer")}
-                  >
-                    <FaMinus className="operator" />
-                  </button>
-                  <button
-                    className="buttons"
-                    onClick={() => addToPackages("softwareEngineer")}
-                  >
-                    <FaPlus className="operator" />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="horizontal-content"
-              style={{
-                display: "flex",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              <div className="vertical-content">
-                <h5 className="h5">
-                  <button className="emoji-container">Graphic Designer</button>
-                </h5>
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
-                  <button
-                    className="buttons"
-                    onClick={() => removeFromPackages("graphicDesigner")}
-                  >
-                    <FaMinus className="operator" />
-                  </button>
-                  <button
-                    className="buttons"
-                    onClick={() => addToPackages("graphicDesigner")}
-                  >
-                    <FaPlus className="operator" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="vertical-content"
-            style={{
+              justifyContent: "space-evenly",
               width: "100%",
+              padding: "1rem",
             }}
           >
-            <h5 className="h5">from</h5>
             <div
               className="vertical-content"
               style={{
                 display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                alignItems: "start",
+                flexDirection: "column",
                 justifyContent: "center",
-                gap: "0.5rem",
+                alignItems: "center",
+                width: "30%",
               }}
             >
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "EA", logo: ea })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={ea} className="emoji-2" alt="calendar" />
-                EA
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Uber", logo: uber })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={uber} className="emoji-2" alt="calendar" />
-                Uber
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Snapchat", logo: snap })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={snap} className="emoji-2" alt="calendar" />
-                Snapchat
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Spotify", logo: spotify })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={spotify} className="emoji-2" alt="calendar" />
-                Spotify
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Twitch", logo: twitch })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={twitch} className="emoji-2" alt="calendar" />
-                Twitch
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Google", logo: google })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={google} className="emoji-2" alt="calendar" />
-                Google
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Paypal", logo: paypal })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={paypal} className="emoji-2" alt="calendar" />
-                Paypal
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Meta", logo: meta })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={meta} className="emoji-2" alt="calendar" />
-                Meta
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() =>
-                  addCompany({ name: "Instacart", logo: instacart })
-                }
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={instacart} className="emoji-2" alt="calendar" />
-                Instacart
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Cashapp", logo: cashapp })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={cashapp} className="emoji-2" alt="calendar" />
-                Cashapp
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Mozilla", logo: mozilla })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={mozilla} className="emoji-2" alt="calendar" />
-                Mozilla
-              </span>
-            </div>
-          </div>
-          <div
-            className="vertical-content"
-            style={{
-              marginTop: "2rem",
-            }}
-          >
-            <h5 className="h5">your team will be sourced from</h5>
-            {companies.length > 0 ? (
               <div
                 className="horizontal-content"
                 style={{
                   display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  gap: "1rem",
+                  width: "100%",
+                  marginBottom: "1rem",
                 }}
               >
-                {companies.map((company) => (
-                  <span
-                    className="emoji-container"
-                    key={company.name}
+                <div className="vertical-content">
+                  <h5 className="h5">
+                    <button className="emoji-container">Project Manager</button>
+                  </h5>
+                  <div
+                    className="horizontal-content"
                     style={{
-                      padding: "1rem",
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      width: "100%",
                     }}
                   >
                     <button
-                      onClick={() => removeCompany(company)}
-                      style={{
-                        marginRight: "0.5rem",
-                        color: "red",
-                      }}
+                      className="buttons"
+                      onClick={() => removeFromPackages("projectManager")}
                     >
-                      <FaMinusCircle className="operator" />
+                      <FaMinus className="operator" />
                     </button>
-                    <img src={company.logo} className="emoji-2" />
-                    {company.name}
-                  </span>
-                ))}
+                    <button
+                      className="buttons"
+                      onClick={() => addToPackages("projectManager")}
+                    >
+                      <FaPlus className="operator" />
+                    </button>
+                  </div>
+                </div>
               </div>
-            ) : (
               <div
                 className="horizontal-content"
                 style={{
                   display: "flex",
+                  width: "100%",
+                  marginBottom: "1rem",
+                }}
+              >
+                <div className="vertical-content">
+                  <h5 className="h5">
+                    <button className="emoji-container">
+                      Software Engineer
+                    </button>
+                  </h5>
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                    }}
+                  >
+                    <button
+                      className="buttons"
+                      onClick={() => removeFromPackages("softwareEngineer")}
+                    >
+                      <FaMinus className="operator" />
+                    </button>
+                    <button
+                      className="buttons"
+                      onClick={() => addToPackages("softwareEngineer")}
+                    >
+                      <FaPlus className="operator" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="horizontal-content"
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  marginBottom: "1rem",
+                }}
+              >
+                <div className="vertical-content">
+                  <h5 className="h5">
+                    <button className="emoji-container">
+                      Graphic Designer
+                    </button>
+                  </h5>
+                  <div
+                    className="horizontal-content"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-evenly",
+                      width: "100%",
+                    }}
+                  >
+                    <button
+                      className="buttons"
+                      onClick={() => removeFromPackages("graphicDesigner")}
+                    >
+                      <FaMinus className="operator" />
+                    </button>
+                    <button
+                      className="buttons"
+                      onClick={() => addToPackages("graphicDesigner")}
+                    >
+                      <FaPlus className="operator" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                width: "100%",
+              }}
+            >
+              <h5 className="h5">from</h5>
+              <div
+                className="vertical-content"
+                style={{
+                  display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
-                  gap: "1rem",
+                  alignItems: "start",
+                  justifyContent: "center",
+                  gap: "0.5rem",
                 }}
               >
                 <span
                   className="emoji-container"
                   id="github-container"
+                  onClick={() => addCompany({ name: "StockX", logo: stock })}
                   style={{
                     padding: "1rem",
                   }}
                 >
-                  <img src={logo} className="emoji-2" />
-                  learnmutiny.io
+                  <img src={stock} className="emoji-2" alt="calendar" />
+                  StockX
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "EA", logo: ea })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={ea} className="emoji-2" alt="calendar" />
+                  EA
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Discord", logo: discord })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={discord} className="emoji-2" alt="calendar" />
+                  Discord
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Uber", logo: uber })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={uber} className="emoji-2" alt="calendar" />
+                  Uber
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Airbnb", logo: airbnb })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={airbnb} className="emoji-2" alt="calendar" />
+                  Airbnb
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Spotify", logo: spotify })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={spotify} className="emoji-2" alt="calendar" />
+                  Spotify
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Twitch", logo: twitch })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={twitch} className="emoji-2" alt="calendar" />
+                  Twitch
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Ebay", logo: ebay })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={ebay} className="emoji-2" alt="calendar" />
+                  Ebay
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Paypal", logo: paypal })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={paypal} className="emoji-2" alt="calendar" />
+                  Paypal
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Facebook", logo: facebook })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={facebook} className="emoji-2" alt="calendar" />
+                  Facebook
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "X", logo: twitter })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={twitter} className="emoji-2" alt="calendar" />X
+                </span>
+
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Pinterest", logo: pinterest })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={pinterest} className="emoji-2" alt="calendar" />
+                  Pinterest
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "TikTok", logo: tiktok })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={tiktok} className="emoji-2" alt="calendar" />
+                  TikTok
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Apple", logo: apple })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={apple} className="emoji-2" alt="calendar" />
+                  Apple
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "LinkedIn", logo: linkedin })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={linkedin} className="emoji-2" alt="calendar" />
+                  Linkedin
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Amazon", logo: amazon })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={amazon} className="emoji-2" alt="calendar" />
+                  Amazon
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Meetup", logo: meetup })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={meetup} className="emoji-2" alt="calendar" />
+                  Meetup
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Zoom", logo: zoom })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={zoom} className="emoji-2" alt="calendar" />
+                  Zoom
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Meta", logo: meta })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={meta} className="emoji-2" alt="calendar" />
+                  Meta
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "DocuSign", logo: docusign })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={docusign} className="emoji-2" alt="calendar" />
+                  DocuSign
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Expedia", logo: expedia })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={expedia} className="emoji-2" alt="calendar" />
+                  Expedia
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Toast", logo: toast })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={toast} className="emoji-2" alt="calendar" />
+                  Toast
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Instacart", logo: instacart })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={instacart} className="emoji-2" alt="calendar" />
+                  Instacart
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Cashapp", logo: cashapp })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={cashapp} className="emoji-2" alt="calendar" />
+                  Cashapp
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Metamask", logo: metamask })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={metamask} className="emoji-2" alt="calendar" />
+                  Metamask
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Bumble", logo: bumble })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={bumble} className="emoji-2" alt="calendar" />
+                  Bumble
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Grammarly", logo: grammarly })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={grammarly} className="emoji-2" alt="calendar" />
+                  Grammarly
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Google", logo: google })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={google} className="emoji-2" alt="calendar" />
+                  Google
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Snapchat", logo: snap })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={snap} className="emoji-2" alt="calendar" />
+                  Snapchat
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Affirm", logo: affirm })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={affirm} className="emoji-2" alt="calendar" />
+                  Affirm
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() =>
+                    addCompany({ name: "Buzzfeed", logo: buzzfeed })
+                  }
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={buzzfeed} className="emoji-2" alt="calendar" />
+                  Buzzfeed
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Rivian", logo: rivian })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={rivian} className="emoji-2" alt="calendar" />
+                  Rivian
+                </span>
+                <span
+                  className="emoji-container"
+                  id="github-container"
+                  onClick={() => addCompany({ name: "Mozilla", logo: mozilla })}
+                  style={{
+                    padding: "1rem",
+                  }}
+                >
+                  <img src={mozilla} className="emoji-2" alt="calendar" />
+                  Mozilla
                 </span>
               </div>
-            )}
+            </div>
           </div>
-        </div>
-      ) : (
+        )}
         <div
-          className="due-diligence-content"
+          className="box"
           style={{
             display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            width: "80%",
-            padding: "1rem",
+            justifyContent: "start",
+            width: "100%",
           }}
+          ref={targetRef}
         >
-          <div
-            className="vertical-content"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "30%",
-            }}
-          >
-            <div
-              className="horizontal-content"
-              style={{
-                display: "flex",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              <div className="vertical-content">
-                <h5 className="h5">
-                  <button className="emoji-container">Project Manager</button>
-                </h5>
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
-                  <button
-                    className="buttons"
-                    onClick={() => removeFromPackages("projectManager")}
-                  >
-                    <FaMinus className="operator" />
-                  </button>
-                  <button
-                    className="buttons"
-                    onClick={() => addToPackages("projectManager")}
-                  >
-                    <FaPlus className="operator" />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="horizontal-content"
-              style={{
-                display: "flex",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              <div className="vertical-content">
-                <h5 className="h5">
-                  <button className="emoji-container">Software Engineer</button>
-                </h5>
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
-                  <button
-                    className="buttons"
-                    onClick={() => removeFromPackages("softwareEngineer")}
-                  >
-                    <FaMinus className="operator" />
-                  </button>
-                  <button
-                    className="buttons"
-                    onClick={() => addToPackages("softwareEngineer")}
-                  >
-                    <FaPlus className="operator" />
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              className="horizontal-content"
-              style={{
-                display: "flex",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              <div className="vertical-content">
-                <h5 className="h5">
-                  <button className="emoji-container">Graphic Designer</button>
-                </h5>
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-evenly",
-                    width: "100%",
-                  }}
-                >
-                  <button
-                    className="buttons"
-                    onClick={() => removeFromPackages("graphicDesigner")}
-                  >
-                    <FaMinus className="operator" />
-                  </button>
-                  <button
-                    className="buttons"
-                    onClick={() => addToPackages("graphicDesigner")}
-                  >
-                    <FaPlus className="operator" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="vertical-content"
-            style={{
-              width: "100%",
-            }}
-          >
-            <h5 className="h5">from</h5>
-            <div
-              className="vertical-content"
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                alignItems: "start",
-                justifyContent: "center",
-                gap: "0.5rem",
-              }}
-            >
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "StockX", logo: stock })}
-                style={{
-                  padding: "1rem",
-                }}
+          <div className="vertical-content" style={{ width: "100%" }}>
+            {submitted && submissionStatus === "success" ? (
+              <>
+                <p>We have received your submission!</p>
+                <p> Our consultation team will reach out shortly.</p>
+              </>
+            ) : (
+              <form
+                className="vertical-content"
+                style={{ gap: "1rem", width: "100%", display: "flex" }}
+                onSubmit={handleSubmit}
               >
-                <img src={stock} className="emoji-2" alt="calendar" />
-                StockX
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "EA", logo: ea })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={ea} className="emoji-2" alt="calendar" />
-                EA
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Discord", logo: discord })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={discord} className="emoji-2" alt="calendar" />
-                Discord
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Uber", logo: uber })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={uber} className="emoji-2" alt="calendar" />
-                Uber
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Airbnb", logo: airbnb })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={airbnb} className="emoji-2" alt="calendar" />
-                Airbnb
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Spotify", logo: spotify })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={spotify} className="emoji-2" alt="calendar" />
-                Spotify
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Twitch", logo: twitch })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={twitch} className="emoji-2" alt="calendar" />
-                Twitch
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Ebay", logo: ebay })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={ebay} className="emoji-2" alt="calendar" />
-                Ebay
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Paypal", logo: paypal })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={paypal} className="emoji-2" alt="calendar" />
-                Paypal
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Facebook", logo: facebook })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={facebook} className="emoji-2" alt="calendar" />
-                Facebook
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "X", logo: twitter })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={twitter} className="emoji-2" alt="calendar" />X
-              </span>
-
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() =>
-                  addCompany({ name: "Pinterest", logo: pinterest })
-                }
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={pinterest} className="emoji-2" alt="calendar" />
-                Pinterest
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "TikTok", logo: tiktok })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={tiktok} className="emoji-2" alt="calendar" />
-                TikTok
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Apple", logo: apple })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={apple} className="emoji-2" alt="calendar" />
-                Apple
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "LinkedIn", logo: linkedin })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={linkedin} className="emoji-2" alt="calendar" />
-                Linkedin
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Amazon", logo: amazon })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={amazon} className="emoji-2" alt="calendar" />
-                Amazon
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Meetup", logo: meetup })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={meetup} className="emoji-2" alt="calendar" />
-                Meetup
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Zoom", logo: zoom })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={zoom} className="emoji-2" alt="calendar" />
-                Zoom
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Meta", logo: meta })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={meta} className="emoji-2" alt="calendar" />
-                Meta
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "DocuSign", logo: docusign })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={docusign} className="emoji-2" alt="calendar" />
-                DocuSign
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Expedia", logo: expedia })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={expedia} className="emoji-2" alt="calendar" />
-                Expedia
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Toast", logo: toast })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={toast} className="emoji-2" alt="calendar" />
-                Toast
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() =>
-                  addCompany({ name: "Instacart", logo: instacart })
-                }
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={instacart} className="emoji-2" alt="calendar" />
-                Instacart
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Cashapp", logo: cashapp })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={cashapp} className="emoji-2" alt="calendar" />
-                Cashapp
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Metamask", logo: metamask })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={metamask} className="emoji-2" alt="calendar" />
-                Metamask
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Bumble", logo: bumble })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={bumble} className="emoji-2" alt="calendar" />
-                Bumble
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() =>
-                  addCompany({ name: "Grammarly", logo: grammarly })
-                }
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={grammarly} className="emoji-2" alt="calendar" />
-                Grammarly
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Google", logo: google })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={google} className="emoji-2" alt="calendar" />
-                Google
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Snapchat", logo: snap })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={snap} className="emoji-2" alt="calendar" />
-                Snapchat
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Affirm", logo: affirm })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={affirm} className="emoji-2" alt="calendar" />
-                Affirm
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Buzzfeed", logo: buzzfeed })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={buzzfeed} className="emoji-2" alt="calendar" />
-                Buzzfeed
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Rivian", logo: rivian })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={rivian} className="emoji-2" alt="calendar" />
-                Rivian
-              </span>
-              <span
-                className="emoji-container"
-                id="github-container"
-                onClick={() => addCompany({ name: "Mozilla", logo: mozilla })}
-                style={{
-                  padding: "1rem",
-                }}
-              >
-                <img src={mozilla} className="emoji-2" alt="calendar" />
-                Mozilla
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
-      <div
-        className="box"
-        style={{
-          display: "flex",
-          justifyContent: "start",
-          width: "100%",
-        }}
-        ref={targetRef}
-      >
-        <div className="vertical-content" style={{ width: "100%" }}>
-          {submitted && submissionStatus === "success" ? (
-            <>
-              <p>We have received your submission!</p>
-              <p> Our consultation team will reach out shortly.</p>
-            </>
-          ) : (
-            <form
-              className="vertical-content"
-              style={{ gap: "1rem", width: "100%", display: "flex" }}
-              onSubmit={handleSubmit}
-            >
-              <input
-                type="text"
-                placeholder="First name"
-                className="input"
-                name="first"
-                value={formData.first}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                placeholder="Last name"
-                className="input"
-                name="last"
-                value={formData.last}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                placeholder="Company name"
-                className="input"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                placeholder="Company email"
-                className="input"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <select
-                type="text"
-                placeholder="Company title"
-                className="input"
-                name="title"
-                value={formData.title}
-                onChange={handleChange}
-                required
-              >
-                <option value="" selected disabled hidden>
-                  Company title
-                </option>
-                <option value="Engineer/Analyst">Engineer or Analyst</option>
-                <option value="Associate">Associate</option>
-                <option value="Director/Principal">
-                  Director or Principal
-                </option>
-                <option value="VP/Head">VP or Head of Division</option>
-                <option value="Co-Founder">Co-Founder or Chief Officer</option>
-                <option value="other">Other</option>
-              </select>
-              <select
-                type="text"
-                placeholder="Source type"
-                className="input"
-                name="search"
-                value={formData.search}
-                onChange={handleChange}
-                required
-              >
-                <option value="" selected disabled hidden>
-                  Source type
-                </option>
-                <option value="Direct-to-hire">Direct-to-Hire</option>
-                <option value="Project Package">Project package</option>
-              </select>
-              {sourceType === "Direct-to-hire" && (
+                <input
+                  type="text"
+                  placeholder="First name"
+                  className="input"
+                  name="first"
+                  value={formData.first}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  className="input"
+                  name="last"
+                  value={formData.last}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Company name"
+                  className="input"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Company email"
+                  className="input"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
                 <select
                   type="text"
-                  placeholder="Developer"
+                  placeholder="Company title"
                   className="input"
-                  name="developer"
-                  value={formData.developer}
+                  name="title"
+                  value={formData.title}
                   onChange={handleChange}
                   required
                 >
-                  <option value="" disabled hidden>
-                    Select a engineer type
+                  <option value="" selected disabled hidden>
+                    Company title
                   </option>
-                  <option value="Staff Engineer">Staff Engineer</option>
-                  <option value="Principal Engineer">Principal Engineer</option>
-                  <option value="Director of Engineering">
-                    Director of Engineering
+                  <option value="Engineer/Analyst">Engineer or Analyst</option>
+                  <option value="Associate">Associate</option>
+                  <option value="Director/Principal">
+                    Director or Principal
                   </option>
-                  <option value="VP of Engineering">VP of Engineering</option>
-                  <option value="Co-Founding Engineer">
-                    Co-Founding Engineer
+                  <option value="VP/Head">VP or Head of Division</option>
+                  <option value="Co-Founder">
+                    Co-Founder or Chief Officer
                   </option>
-                  <option value="CTO">CTO</option>
+                  <option value="other">Other</option>
                 </select>
-              )}
-              <textarea
-                type="text"
-                placeholder="Message (optional)"
-                className="input"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-              />
-              <button
-                className="emoji-container-submit"
-                type="submit"
-                onClick={scrollToTarget}
-              >
-                <h4 className="h4" style={{ margin: 0 }}>
-                  Submit
-                </h4>
-              </button>
-            </form>
-          )}
-          {loading && !submitted ? <p>Submitting...</p> : null}
-          {submissionStatus === "failure" && (
-            <>
-              <p>Failed to submit the form. Please try again.</p>
-              <p>{error}</p>
-            </>
-          )}
+                <select
+                  type="text"
+                  placeholder="Source type"
+                  className="input"
+                  name="search"
+                  value={formData.search}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" selected disabled hidden>
+                    Source type
+                  </option>
+                  <option value="Direct-to-hire">Direct-to-Hire</option>
+                  <option value="Project Package">Project package</option>
+                </select>
+                {sourceType === "Direct-to-hire" && (
+                  <select
+                    type="text"
+                    placeholder="Developer"
+                    className="input"
+                    name="developer"
+                    value={formData.developer}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled hidden>
+                      Select a engineer type
+                    </option>
+                    <option value="Staff Engineer">Staff Engineer</option>
+                    <option value="Principal Engineer">
+                      Principal Engineer
+                    </option>
+                    <option value="Director of Engineering">
+                      Director of Engineering
+                    </option>
+                    <option value="VP of Engineering">VP of Engineering</option>
+                    <option value="Co-Founding Engineer">
+                      Co-Founding Engineer
+                    </option>
+                    <option value="CTO">CTO</option>
+                  </select>
+                )}
+                <textarea
+                  type="text"
+                  placeholder="Message (optional)"
+                  className="input"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+                <button
+                  className="emoji-container-submit"
+                  type="submit"
+                  onClick={scrollToTarget}
+                >
+                  <h4 className="h4" style={{ margin: 0 }}>
+                    Submit
+                  </h4>
+                </button>
+              </form>
+            )}
+            {loading && !submitted ? <p>Submitting...</p> : null}
+            {submissionStatus === "failure" && (
+              <>
+                <p>Failed to submit the form. Please try again.</p>
+                <p>{error}</p>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </div>
