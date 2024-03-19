@@ -296,6 +296,15 @@ function Home() {
           developer: "",
           message: "",
         });
+
+        setPackages({
+          projectManager: 0,
+          softwareEngineer: 0,
+          graphicDesigner: 0,
+        });
+
+        setCompanies([]);
+        setFormData({ ...formData, companies: [] });
       } else {
         console.error("response error:", data.error, response.status);
         setSubmissionStatus("failure");
