@@ -1700,7 +1700,7 @@ function Home() {
                   </span>
                   <h5 className="h5">
                     All invoices via Bill.com are sent out at the end of each
-                    month, and are due within 15 days of invoice.
+                    month, and are due within 5 days of invoice.
                   </h5>
                   <h3 className="h3">4. Required Check-ups</h3>
                   <h5 className="h5">
