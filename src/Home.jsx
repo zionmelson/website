@@ -44,7 +44,7 @@ import zoom from "./assets/svg/zoom.svg";
 import meetup from "./assets/svg/meetup.svg";
 import amazon from "./assets/svg/amazon.svg";
 import logo from "./assets/svg/logo.svg";
-import stripe from "./assets/svg/stripe.svg";
+import bill from "./assets/svg/bill.svg";
 import linkedin from "./assets/svg/linkedin-2.svg";
 import discord from "./assets/svg/discord.svg";
 import uber from "./assets/svg/uber.svg";
@@ -1695,11 +1695,11 @@ function Home() {
                       padding: "1rem",
                     }}
                   >
-                    <img src={stripe} className="emoji-2" alt="calendar" />
-                    Stripe
+                    <img src={bill} className="emoji-2" alt="calendar" />
+                    Bill.com
                   </span>
                   <h5 className="h5">
-                    All invoices via Stripe are sent out at the end of each
+                    All invoices via Bill.com are sent out at the end of each
                     month, and are due within 15 days of invoice.
                   </h5>
                   <h3 className="h3">4. Required Check-ups</h3>
