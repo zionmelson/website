@@ -2464,6 +2464,7 @@ function Home() {
                     Select a engineer type
                   </option>
                   <option value="Staff Engineer">Staff Engineer</option>
+                  <option value="Senior Engineer">Senior Engineer</option>
                   <option value="Principal Engineer">Principal Engineer</option>
                   <option value="Director of Engineering">
                     Director of Engineering
@@ -2517,7 +2518,7 @@ function Home() {
             >
               build package
             </span>
-            <h5 className="h5">30-day guarantee</h5>
+            <h5 className="h5">lifetime guarantee</h5>
           </div>
           <div className="pricing-content">
             <Lottie animationData={team} style={{ width: "10rem" }} />

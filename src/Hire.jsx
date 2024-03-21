@@ -1376,6 +1376,7 @@ export default function Hire() {
                       Select a engineer type
                     </option>
                     <option value="Staff Engineer">Staff Engineer</option>
+                    <option value="Senior Engineer">Senior Engineer</option>
                     <option value="Principal Engineer">
                       Principal Engineer
                     </option>
