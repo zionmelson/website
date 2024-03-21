@@ -506,7 +506,7 @@ function Home() {
                           scrollToDirect();
                         }}
                       >
-                        direct-to-hire
+                        Direct-to-hire
                       </button>
                     </h5>
                   </div>
