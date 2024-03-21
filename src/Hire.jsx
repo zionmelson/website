@@ -261,7 +261,7 @@ export default function Hire() {
         )}
         <span className="emoji-container" style={{ marginBottom: "1rem" }}>
           <h5 className="h5" style={{ marginBottom: "0" }}>
-            Project Package
+            Scrum Package
           </h5>
         </span>
 
@@ -1360,7 +1360,7 @@ export default function Hire() {
                     Source type
                   </option>
                   <option value="Direct-to-hire">Direct-to-Hire</option>
-                  <option value="Project Package">Project package</option>
+                  <option value="Scrum Package">Scrum Package</option>
                 </select>
                 {sourceType === "Direct-to-hire" && (
                   <select
