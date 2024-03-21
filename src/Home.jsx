@@ -496,7 +496,7 @@ function Home() {
                           scrollToProject();
                         }}
                       >
-                        project package
+                        Scrum package
                       </button>
                     </h5>
                     <h5 className="h5">
@@ -589,7 +589,7 @@ function Home() {
                           scrollToProject();
                         }}
                       >
-                        project package
+                        Scrum package
                       </button>
                     </h5>
                     <h5 className="h5">
@@ -599,7 +599,7 @@ function Home() {
                           scrollToDirect();
                         }}
                       >
-                        direct-to-hire
+                        Direct-to-Hire
                       </button>
                     </h5>
                     <div className="stats-content">
@@ -643,14 +643,14 @@ function Home() {
             </div>
             <h1 className="h1">Our Services</h1>
           </div>
-          {/* project package */}
+          {/* scrum package */}
           <div
             className="vertical-content"
             ref={projectRef}
             style={{ width: "100%" }}
           >
             <div className={`sourcing-content ${isOpen ? "open" : ""}`}>
-              <h2 className="h2">Project Package</h2>
+              <h2 className="h2">Scrum Package</h2>
               <Lottie animationData={group} style={{ width: "15rem" }} />
               <div
                 className="sourcing-info"
@@ -675,14 +675,14 @@ function Home() {
                   project deployment.
                 </h5>
                 <h5 className="h5">
-                  Our project package source allows you to customize the exact
+                  Our Scrum package source allows you to customize the exact
                   position and role of every engineer on the team for the
                   project. These teams are tailored to the needs of your company
                   during our consultation.
                 </h5>
                 <h5 className="h5">
-                  Within each of our project packages, you can pick and choose
-                  the specific engineers at market rates for your project.
+                  Within each of our Scrum packages, you can pick and choose the
+                  specific engineers at market rates for your project.
                 </h5>
                 {mobile ? null : (
                   <div className="due-diligence-content">
@@ -1681,11 +1681,11 @@ function Home() {
                     interviews and technical assessments.
                   </h5>
                   <h5 className="h5">
-                    We have crafted our project package to be as easy as
-                    possible for your team to onboard a new engineering team. We
-                    utilize a simple and easy-to-understand billing process that
-                    helps you to understand the precise cost of the project and
-                    plan accordingly.
+                    We have crafted our Scrum package to be as easy as possible
+                    for your team to onboard a new engineering team. We utilize
+                    a simple and easy-to-understand billing process that helps
+                    you to understand the precise cost of the project and plan
+                    accordingly.
                   </h5>
                   <span
                     className="emoji-container"
@@ -2448,7 +2448,7 @@ function Home() {
                   Source type
                 </option>
                 <option value="Direct-to-hire">Direct-to-Hire</option>
-                <option value="Project Package">Project package</option>
+                <option value="Scrum Package">Scrum Package</option>
               </select>
               {sourceType === "Direct-to-hire" && (
                 <select
@@ -2509,7 +2509,7 @@ function Home() {
           <h1 className="h1">Let&apos;s get started</h1>
           <div className="pricing-content">
             <Lottie animationData={rocket} style={{ width: "10rem" }} />
-            <h2 className="h2">Project package</h2>
+            <h2 className="h2">Scrum Package</h2>
             <span
               className="emoji-container"
               onClick={scrollToProject}
