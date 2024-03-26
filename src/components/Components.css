@@ -83,6 +83,13 @@
   transform: scale(1.1);
 }
 
+.footer-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .normal-logo {
   width: 12rem;
   height: 4rem;
@@ -211,18 +218,25 @@
   }
 
   .footer {
-    width: 100%;
-    font-size: 0.7rem;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .socials {
+    display: flex;
+  }
 
-  .social {
-    width: 3rem;
+  .footer-numbers {
+    display: flex;
   }
 }
 
