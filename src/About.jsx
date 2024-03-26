@@ -124,7 +124,7 @@ function Home() {
                   />
                 </div>
               )}
-              <h5 className="h5">zion | managing partner</h5>
+              <h5 className="h5">zion | partner</h5>
               <a
                 href="https://linkedin.com/in/zionmelson"
                 target="_blank"
@@ -169,7 +169,7 @@ function Home() {
                   />
                 </div>
               )}
-              <h5 className="h5">maxmillian | managing partner</h5>
+              <h5 className="h5">maxmillian | partner</h5>
               <a
                 href="https://www.linkedin.com/in/mxmilan/"
                 target="_blank"
