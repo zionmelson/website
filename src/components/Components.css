@@ -21,23 +21,26 @@
 
 .footer {
   width: 100%;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   padding: 0.5rem;
-  padding-left: 4rem;
-  background: linear-gradient(20deg, #111111, #302f31);
+  background-color: rgba(15, 15, 15, 0.3);
   color: #fff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: start;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+  backdrop-filter: blur(5px);
+  transition: 0.3s linear;
+  color: #fff;
+  z-index: 2;
 }
 
 .navigation {
   font-size: 1.1rem;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: row;
   margin-bottom: 1rem;
   gap: 2rem;
@@ -73,11 +76,18 @@
 }
 
 .social {
-  width: 4rem;
+  width: 2.5rem;
 }
 
 .social:hover {
   transform: scale(1.1);
+}
+
+.footer-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .normal-logo {
@@ -208,18 +218,25 @@
   }
 
   .footer {
-    width: 100%;
-    font-size: 0.7rem;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .socials {
+    display: flex;
+  }
 
-  .social {
-    width: 3rem;
+  .footer-numbers {
+    display: flex;
   }
 }
 

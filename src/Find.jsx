@@ -7,15 +7,11 @@ import maxmillianBlurry from "./assets/png/maxmillianBlurry.png";
 import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
-import instagram from "./assets/svg/instagram.svg";
-import github from "./assets/svg/github.svg";
-import linkedin from "./assets/svg/linkedin.svg";
-import x from "./assets/svg/X.svg";
 
 import "./App.css";
 import { useEffect } from "react";
 
-function Home() {
+function Find() {
   const blurredImageDivRef = useRef(null);
   const imgRef = useRef(null);
 
@@ -111,6 +107,7 @@ function Home() {
                     filter: "blur(10px)",
                     borderRadius: "0.5rem",
                     border: "2px solid #fff",
+                    height: "100%",
                   }}
                 >
                   <img
@@ -156,6 +153,9 @@ function Home() {
                     backgroundSize: "cover",
                     animation: "pulse 2.5s infinite",
                     filter: "blur(10px)",
+                    borderRadius: "0.5rem",
+                    border: "2px solid #fff",
+                    height: "100%",
                   }}
                 >
                   <img
@@ -195,41 +195,10 @@ function Home() {
           <span className="emoji-container" style={{ marginBottom: "1rem" }}>
             support@learnmutiny.io
           </span>
-          <div className="socials">
-            <a
-              href="https://www.instagram.com/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-              className="social"
-            >
-              <img src={instagram} alt="instagram" />
-            </a>
-            <a
-              href="https://www.github.com/learnmutiny-io/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={github} alt="github" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={linkedin} alt="linkedin" />
-            </a>
-            <a
-              href="https://www.twitter.com/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={x} alt="x" />
-            </a>
-          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Find;
