@@ -702,13 +702,13 @@ function Home() {
                           }}
                         >
                           <h3 className="h3">
-                            Project Managers: {packages.projectManager}
+                            Managers: {packages.projectManager}
                           </h3>
                           <h3 className="h3">
-                            Software Engineers: {packages.softwareEngineer}
+                            Engineers: {packages.softwareEngineer}
                           </h3>
                           <h3 className="h3">
-                            Graphic Designers: {packages.graphicDesigner}
+                            Designers: {packages.graphicDesigner}
                           </h3>
                         </div>
                       </div>
@@ -797,17 +797,17 @@ function Home() {
                     >
                       <h5 className="h5">
                         <button className="emoji-container">
-                          {packages.projectManager} PMs
+                          {packages.projectManager} Managers
                         </button>
                       </h5>
                       <h5 className="h5">
                         <button className="emoji-container">
-                          {packages.softwareEngineer} SEs
+                          {packages.softwareEngineer} Engineers
                         </button>
                       </h5>
                       <h5 className="h5">
                         <button className="emoji-container">
-                          {packages.graphicDesigner} GDs
+                          {packages.graphicDesigner} Designers
                         </button>
                       </h5>
                     </div>
@@ -833,7 +833,7 @@ function Home() {
                         <div className="vertical-content">
                           <h5 className="h5">
                             <button className="emoji-container">
-                              Project Manager
+                              💼 Manager
                             </button>
                           </h5>
                           <div
@@ -872,7 +872,7 @@ function Home() {
                         <div className="vertical-content">
                           <h5 className="h5">
                             <button className="emoji-container">
-                              Software Engineer
+                              💻 Engineer
                             </button>
                           </h5>
                           <div
@@ -911,7 +911,7 @@ function Home() {
                         <div className="vertical-content">
                           <h5 className="h5">
                             <button className="emoji-container">
-                              Graphic Designer
+                              🎨 Designer
                             </button>
                           </h5>
                           <div
@@ -974,7 +974,7 @@ function Home() {
                         <div className="vertical-content">
                           <h5 className="h5">
                             <button className="emoji-container">
-                              Project Manager
+                              💼 Manager
                             </button>
                           </h5>
                           <div
@@ -1013,7 +1013,7 @@ function Home() {
                         <div className="vertical-content">
                           <h5 className="h5">
                             <button className="emoji-container">
-                              Software Engineer
+                              💻 Engineer
                             </button>
                           </h5>
                           <div
@@ -1052,7 +1052,7 @@ function Home() {
                         <div className="vertical-content">
                           <h5 className="h5">
                             <button className="emoji-container">
-                              Graphic Designer
+                              🎨 Designer
                             </button>
                           </h5>
                           <div

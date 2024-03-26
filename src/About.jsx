@@ -1,14 +1,3 @@
-import {
-  FaAngular,
-  FaPython,
-  FaRust,
-  FaJs,
-  FaDocker,
-  FaEthereum,
-  FaLaravel,
-  FaNpm,
-  FaNode,
-} from "react-icons/fa";
 import { useRef, useState } from "react";
 
 import zion from "./assets/png/zion.png";
@@ -70,11 +59,14 @@ function Home() {
   return (
     //
     <div className="main">
-      {/* intro */}
+      {/* value */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">Sourcing senior engineers for startups</h1>
-          <h2 className="h2">find your next position at</h2>
+          <h1 className="h1">We take a different approach</h1>
+          <h3 className="h3">
+            all of our positions are remote and are announced on our discord
+            server.
+          </h3>
           <span
             className="emoji-container"
             style={{
@@ -90,49 +82,6 @@ function Home() {
             height="500"
             sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
           ></iframe>
-        </div>
-      </div>
-      {/* value */}
-      <div className="box">
-        <div className="vertical-content">
-          <h1 className="h1">Find your next position</h1>
-          <h2 className="h2">we take a different approach</h2>
-          <h3 className="h3">
-            at learnmutiny our mission is to match you to companies that align
-            with your career goals. <br />
-          </h3>
-          {window.screen.width > 768 ? (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <FaPython id="python" className="icon" />
-              <FaRust id="rust" className="icon" />
-              <FaJs id="js" className="icon" />
-              <FaAngular id="angular" className="icon" />
-              <FaDocker id="docker" className="icon" />
-              <FaEthereum id="solidity" className="icon" />
-              <FaLaravel id="laravel" className="icon" />
-              <FaNpm id="npm" className="icon" />
-              <FaNode id="node" className="icon" />
-            </div>
-          ) : (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <FaPython id="python" className="icon" />
-              <FaRust id="rust" className="icon" />
-              <FaJs id="js" className="icon" />
-              <FaAngular id="angular" className="icon" />
-            </div>
-          )}
-
-          <a
-            href="https://discord.com/invite/ZbGfyErE3w"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="emoji-container">
-              <h3 className="h3" style={{ marginBottom: "0" }}>
-                join discord
-              </h3>
-            </span>
-          </a>
         </div>
       </div>
       {/* partners */}

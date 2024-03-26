@@ -250,13 +250,20 @@ export default function Hire() {
 
   return (
     <div className="main">
-      <div className="box">
+      <div
+        className="box"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         {submitted && submissionStatus === "success" ? (
           <h1 className="h1">Building your team 😉</h1>
         ) : (
           <>
             <h1 className="h1">Build your team</h1>
-            <h3 className="h3">Here is where you can submit your</h3>
           </>
         )}
         <span className="emoji-container" style={{ marginBottom: "1rem" }}>
@@ -288,15 +295,9 @@ export default function Hire() {
                     width: "100%",
                   }}
                 >
-                  <h3 className="h3">
-                    Project Managers: {packages.projectManager}
-                  </h3>
-                  <h3 className="h3">
-                    Software Engineers: {packages.softwareEngineer}
-                  </h3>
-                  <h3 className="h3">
-                    Graphic Designers: {packages.graphicDesigner}
-                  </h3>
+                  <h3 className="h3">Managers: {packages.projectManager}</h3>
+                  <h3 className="h3">Engineers: {packages.softwareEngineer}</h3>
+                  <h3 className="h3">Designers: {packages.graphicDesigner}</h3>
                 </div>
               </div>
               <div
@@ -384,17 +385,17 @@ export default function Hire() {
             >
               <h5 className="h5">
                 <button className="emoji-container">
-                  {packages.projectManager} PMs
+                  {packages.projectManager} Managers
                 </button>
               </h5>
               <h5 className="h5">
                 <button className="emoji-container">
-                  {packages.softwareEngineer} SEs
+                  {packages.softwareEngineer} Engineers
                 </button>
               </h5>
               <h5 className="h5">
                 <button className="emoji-container">
-                  {packages.graphicDesigner} GDs
+                  {packages.graphicDesigner} Designers
                 </button>
               </h5>
             </div>
@@ -419,7 +420,7 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">Project Manager</button>
+                    <button className="emoji-container">💼 Manager</button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -454,9 +455,7 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">
-                      Software Engineer
-                    </button>
+                    <button className="emoji-container">💻 Engineer</button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -491,9 +490,7 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">
-                      Graphic Designer
-                    </button>
+                    <button className="emoji-container">🎨 Designer</button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -758,7 +755,7 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">Project Manager</button>
+                    <button className="emoji-container">💼 Manager</button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -793,9 +790,7 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">
-                      Software Engineer
-                    </button>
+                    <button className="emoji-container">💻 Engineer</button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -830,9 +825,7 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">
-                      Graphic Designer
-                    </button>
+                    <button className="emoji-container">🎨 Designer</button>
                   </h5>
                   <div
                     className="horizontal-content"
