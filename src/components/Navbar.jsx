@@ -37,7 +37,7 @@ export default function Navbar() {
               <a href="/">
                 <div className="link-container">home</div>
               </a>
-              <a href="/about">
+              <a href="/find-work">
                 <div className="link-container">find work</div>
               </a>
               <a href="/hire">
@@ -61,7 +61,7 @@ export default function Navbar() {
             </a>
           </li>
           <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
-            <a href="/about">
+            <a href="/find-work">
               <h4 className="h4">find work</h4>
             </a>
           </li>
