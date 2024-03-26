@@ -193,7 +193,6 @@ function Home() {
         <div className="vertical-content" style={{ padding: "2rem" }}>
           <h1 className="h1">Contact</h1>
           <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            <img src={logo} className="emoji" alt="mu" />
             support@learnmutiny.io
           </span>
           <div className="socials">

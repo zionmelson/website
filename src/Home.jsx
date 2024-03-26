@@ -495,7 +495,7 @@ function Home() {
                           scrollToProject();
                         }}
                       >
-                        Scrum package
+                        Scrum Package
                       </button>
                     </h5>
                     <h5 className="h5">
@@ -505,7 +505,7 @@ function Home() {
                           scrollToDirect();
                         }}
                       >
-                        Direct-to-hire
+                        Direct-to-Hire
                       </button>
                     </h5>
                   </div>
@@ -588,7 +588,7 @@ function Home() {
                           scrollToProject();
                         }}
                       >
-                        Scrum package
+                        Scrum Package
                       </button>
                     </h5>
                     <h5 className="h5">
