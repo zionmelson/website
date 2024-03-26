@@ -424,7 +424,6 @@ function Home() {
             </div>
             for your startup
           </h1>
-
           <h2 className="h2">
             we source recently laid-off engineers from tech giants and unicorns
           </h2>

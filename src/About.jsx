@@ -10,13 +10,11 @@ import {
   FaNode,
 } from "react-icons/fa";
 import { useRef, useState } from "react";
-import Lottie from "lottie-react";
 
 import zion from "./assets/png/zion.png";
 import zionBlurry from "./assets/png/zionBlurry.png";
 import maxmillian from "./assets/png/maxmillian.png";
 import maxmillianBlurry from "./assets/png/maxmillianBlurry.png";
-import animation from "./assets/json/animate.json";
 import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
@@ -37,8 +35,17 @@ function Home() {
     setIsLoaded(true);
   };
 
+  const setDiscord = async () => {
+    const data = await fetch(
+      "https://discord.com/api/guilds/984461709806804992/widget.json"
+    );
+    const json = await data.json();
+
+    console.log(json);
+  };
+
   useEffect(() => {
-    console.log("isLoaded", isLoaded);
+    setDiscord();
     if (isLoaded) {
       console.log("img loaded");
       const blurredImageDiv = blurredImageDivRef.current;
@@ -67,14 +74,22 @@ function Home() {
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1">Sourcing senior engineers for startups</h1>
-          <h2 className="h2">
-            find your next full-time position with learnmutiny
-          </h2>
-          <Lottie animationData={animation} />
-          <h3 className="h3">
-            we place laid off engineers at startup companies who have raised
-            series A to B funding rounds.
-          </h3>
+          <h2 className="h2">find your next position at</h2>
+          <span
+            className="emoji-container"
+            style={{
+              marginBottom: "1rem",
+            }}
+          >
+            <img src={logo} className="emoji" alt="mu" />
+            learnmutiny.io
+          </span>
+          <iframe
+            src="https://discord.com/widget?id=984461709806804992&theme=dark"
+            width="350"
+            height="500"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          ></iframe>
         </div>
       </div>
       {/* value */}
@@ -106,6 +121,18 @@ function Home() {
               <FaAngular id="angular" className="icon" />
             </div>
           )}
+
+          <a
+            href="https://discord.com/invite/ZbGfyErE3w"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="emoji-container">
+              <h3 className="h3" style={{ marginBottom: "0" }}>
+                join discord
+              </h3>
+            </span>
+          </a>
         </div>
       </div>
       {/* partners */}
