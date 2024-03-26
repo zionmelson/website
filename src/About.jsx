@@ -1,22 +1,9 @@
-import {
-  FaAngular,
-  FaPython,
-  FaRust,
-  FaJs,
-  FaDocker,
-  FaEthereum,
-  FaLaravel,
-  FaNpm,
-  FaNode,
-} from "react-icons/fa";
 import { useRef, useState } from "react";
-import Lottie from "lottie-react";
 
 import zion from "./assets/png/zion.png";
 import zionBlurry from "./assets/png/zionBlurry.png";
 import maxmillian from "./assets/png/maxmillian.png";
 import maxmillianBlurry from "./assets/png/maxmillianBlurry.png";
-import animation from "./assets/json/animate.json";
 import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
@@ -37,8 +24,17 @@ function Home() {
     setIsLoaded(true);
   };
 
+  const setDiscord = async () => {
+    const data = await fetch(
+      "https://discord.com/api/guilds/984461709806804992/widget.json"
+    );
+    const json = await data.json();
+
+    console.log(json);
+  };
+
   useEffect(() => {
-    console.log("isLoaded", isLoaded);
+    setDiscord();
     if (isLoaded) {
       console.log("img loaded");
       const blurredImageDiv = blurredImageDivRef.current;
@@ -63,49 +59,28 @@ function Home() {
   return (
     //
     <div className="main">
-      {/* intro */}
-      <div className="box">
-        <div className="vertical-content">
-          <h1 className="h1">Sourcing senior engineers for startups</h1>
-          <h2 className="h2">
-            find your next full-time position with learnmutiny
-          </h2>
-          <Lottie animationData={animation} />
-          <h3 className="h3">
-            we place laid off engineers at startup companies who have raised
-            series A to B funding rounds.
-          </h3>
-        </div>
-      </div>
       {/* value */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">Find your next position</h1>
-          <h2 className="h2">we take a different approach</h2>
+          <h1 className="h1">We take a different approach</h1>
           <h3 className="h3">
-            at learnmutiny our mission is to match you to companies that align
-            with your career goals. <br />
+            all of our positions are remote and are announced on our server.
           </h3>
-          {window.screen.width > 768 ? (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <FaPython id="python" className="icon" />
-              <FaRust id="rust" className="icon" />
-              <FaJs id="js" className="icon" />
-              <FaAngular id="angular" className="icon" />
-              <FaDocker id="docker" className="icon" />
-              <FaEthereum id="solidity" className="icon" />
-              <FaLaravel id="laravel" className="icon" />
-              <FaNpm id="npm" className="icon" />
-              <FaNode id="node" className="icon" />
-            </div>
-          ) : (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <FaPython id="python" className="icon" />
-              <FaRust id="rust" className="icon" />
-              <FaJs id="js" className="icon" />
-              <FaAngular id="angular" className="icon" />
-            </div>
-          )}
+          <span
+            className="emoji-container"
+            style={{
+              marginBottom: "1rem",
+            }}
+          >
+            <img src={logo} className="emoji" alt="mu" />
+            learnmutiny.io
+          </span>
+          <iframe
+            src="https://discord.com/widget?id=984461709806804992&theme=dark"
+            width="350"
+            height="500"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+          ></iframe>
         </div>
       </div>
       {/* partners */}
@@ -149,7 +124,7 @@ function Home() {
                   />
                 </div>
               )}
-              <h5 className="h5">zion | managing partner</h5>
+              <h5 className="h5">zion | partner</h5>
               <a
                 href="https://linkedin.com/in/zionmelson"
                 target="_blank"
@@ -194,7 +169,7 @@ function Home() {
                   />
                 </div>
               )}
-              <h5 className="h5">maxmillian | managing partner</h5>
+              <h5 className="h5">maxmillian | partner</h5>
               <a
                 href="https://www.linkedin.com/in/mxmilan/"
                 target="_blank"
@@ -210,23 +185,14 @@ function Home() {
             our team is invested in uplifting the startup ecosystem in the
             southeast.
           </h5>
-          <h5 className="h5" id="bio">
-            learnmutiny is giving back to the startup community and turning ATL
-            into a tech hub.
-          </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
       </div>
       {/* contact */}
       <div className="box">
         <div className="vertical-content" style={{ padding: "2rem" }}>
-          <h1 className="h1">Contact us</h1>
-          <span
-            className="emoji-container"
-            id="support"
-            style={{ marginBottom: "1rem" }}
-          >
-            <img src={logo} className="emoji" alt="mu" />
+          <h1 className="h1">Contact</h1>
+          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
             support@learnmutiny.io
           </span>
           <div className="socials">
