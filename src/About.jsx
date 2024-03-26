@@ -64,8 +64,7 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">We take a different approach</h1>
           <h3 className="h3">
-            all of our positions are remote and are announced on our discord
-            server.
+            all of our positions are remote and are announced on our server.
           </h3>
           <span
             className="emoji-container"
@@ -186,22 +185,14 @@ function Home() {
             our team is invested in uplifting the startup ecosystem in the
             southeast.
           </h5>
-          <h5 className="h5" id="bio">
-            learnmutiny is giving back to the startup community and turning ATL
-            into a tech hub.
-          </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
       </div>
       {/* contact */}
       <div className="box">
         <div className="vertical-content" style={{ padding: "2rem" }}>
-          <h1 className="h1">Contact us</h1>
-          <span
-            className="emoji-container"
-            id="support"
-            style={{ marginBottom: "1rem" }}
-          >
+          <h1 className="h1">Contact</h1>
+          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
             <img src={logo} className="emoji" alt="mu" />
             support@learnmutiny.io
           </span>
