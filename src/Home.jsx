@@ -130,6 +130,7 @@ function Home() {
   });
 
   const [bio, setBio] = useState(1);
+  const [discordCount, setDiscordCount] = useState(0);
 
   const [companies, setCompanies] = useState([]);
 
@@ -199,7 +200,18 @@ function Home() {
     setIsOpen(num);
   };
 
+  const setDiscord = async () => {
+    const data = await fetch(
+      "https://discord.com/api/guilds/984461709806804992/widget.json"
+    );
+    const json = await data.json();
+
+    setDiscordCount(json.members.length);
+    console.log(json.members.length);
+  };
+
   useEffect(() => {
+    setDiscord();
     if (window.screen.width < 780) {
       setMobile(true);
     }
@@ -527,7 +539,7 @@ function Home() {
                         }}
                       >
                         <h1 className="number">
-                          <Number n={210} />
+                          <Number n={210 + discordCount} />
                         </h1>
                         <h5 className="h5">Engineers sourced</h5>
                       </div>
