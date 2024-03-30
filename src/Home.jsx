@@ -621,7 +621,7 @@ function Home() {
                         }}
                       >
                         <h1 className="number">
-                          <Number n={210} />
+                          <Number n={210 + discordCount} />
                         </h1>
                         <h5 className="h5">Engineers sourced</h5>
                       </div>
