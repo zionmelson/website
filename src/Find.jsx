@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
 
-import zion from "./assets/png/zion.png";
-import zionBlurry from "./assets/png/zionBlurry.png";
-import maxmillian from "./assets/png/maxmillian.png";
-import maxmillianBlurry from "./assets/png/maxmillianBlurry.png";
+import zion from "./assets/webp/zion.webp";
+import zionBlurry from "./assets/webp/zionBlurry.webp";
+import maxmillian from "./assets/webp/maxmillian.webp";
+import maxmillianBlurry from "./assets/webp/maxmillianBlurry.webp";
 import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
