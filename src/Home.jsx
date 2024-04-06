@@ -460,7 +460,7 @@ function Home() {
           <h2 className="h2">and place them at your startup company</h2>
           <Link to="/hire">
             <h5 className="h5">
-              <button className="emoji-container">hire an engineer</button>
+              <button className="emoji-container">book a demo</button>
             </h5>
           </Link>
         </div>
@@ -1982,7 +1982,7 @@ function Home() {
               )}
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire an engineer
+                  book a demo
                 </button>
               </h5>
             </div>
@@ -2115,7 +2115,7 @@ function Home() {
               </div>
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire an engineer
+                  book a demo
                 </button>
               </h5>
             </div>
@@ -2229,7 +2229,7 @@ function Home() {
               </div>
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire an engineer
+                  book a demo
                 </button>
               </h5>
             </div>
@@ -2344,7 +2344,7 @@ function Home() {
               </div>
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire an engineer
+                  book a demo
                 </button>
               </h5>
             </div>
@@ -2374,9 +2374,9 @@ function Home() {
       >
         <div className="vertical-content" style={{ width: "100%" }}>
           {submitted && submissionStatus === "success" ? (
-            <h1 className="h1">Hired an engineer 😉</h1>
+            <h1 className="h1">Booked a demo 😉</h1>
           ) : (
-            <h1 className="h1">Hire an engineer</h1>
+            <h1 className="h1">Book a demo</h1>
           )}
           {submitted && submissionStatus === "success" ? (
             <>

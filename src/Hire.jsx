@@ -260,10 +260,10 @@ export default function Hire() {
         }}
       >
         {submitted && submissionStatus === "success" ? (
-          <h1 className="h1">Building your team 😉</h1>
+          <h1 className="h1">Scheduled a demo 😉</h1>
         ) : (
           <>
-            <h1 className="h1">Build your team</h1>
+            <h1 className="h1">Schedule a demo</h1>
           </>
         )}
         <span className="emoji-container" style={{ marginBottom: "1rem" }}>
