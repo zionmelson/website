@@ -69,7 +69,7 @@ export default function Navbar() {
             {" "}
             <a href="/hire">
               <h5 className="h5">
-                <button className="emoji-container">hire an engineer</button>
+                <button className="emoji-container">book a demo</button>
               </h5>
             </a>
           </li>
