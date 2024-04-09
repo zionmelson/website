@@ -3,7 +3,7 @@ import "./Components.css";
 import { useState, useEffect } from "react";
 
 import bear from "../assets/svg/bear.svg";
-import learnmutiny from "../assets/svg/learnmutiny.svg";
+import learnmutiny from "../assets/svg/learnmutiny-io.svg";
 
 import { FaBars } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";

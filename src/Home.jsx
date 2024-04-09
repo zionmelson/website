@@ -65,10 +65,6 @@ import azure from "./assets/svg/azure.svg";
 import docker from "./assets/svg/docker.svg";
 import terraform from "./assets/svg/terraform.svg";
 
-import jonathan from "./assets/png/jonathan.png";
-import ian from "./assets/png/ian.png";
-import smiley from "./assets/png/silver.png";
-
 import gsap from "gsap";
 import SplitText from "split-text-js";
 import { useEffect, useState, useRef } from "react";
@@ -129,7 +125,6 @@ function Home() {
     graphicDesigner: 0,
   });
 
-  const [bio, setBio] = useState(1);
   const [discordCount, setDiscordCount] = useState(0);
 
   const [companies, setCompanies] = useState([]);
@@ -189,13 +184,6 @@ function Home() {
     setFormData({ ...formData, packages: { ...packages, [engineer]: 0 } });
   };
 
-  useEffect(() => {
-    const today = new Date();
-    const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000 * 4);
-    const newDate = yesterday.toLocaleDateString();
-    setDate(newDate);
-  }, []);
-
   const toggleOpen = (num) => {
     setIsOpen(num);
   };
@@ -211,6 +199,11 @@ function Home() {
   };
 
   useEffect(() => {
+    const today = new Date();
+    const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000 * 4);
+    const newDate = yesterday.toLocaleDateString();
+
+    setDate(newDate);
     setDiscord();
     if (window.screen.width < 780) {
       setMobile(true);
@@ -389,55 +382,64 @@ function Home() {
             <div className="span">
               {loaded ? (
                 <>
-                  <h1 className="h1" id="gsap">
+                  <h2 className="h1" id="gsap">
                     full-stack developer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     back-end developer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     systems engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     software architect
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     regression engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     cloud engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     blockchain engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     devops engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     database engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     data engineer
-                  </h1>
-                  <h1 className="h1" id="gsap">
+                  </h2>
+                  <h2 className="h1" id="gsap">
                     project manager
-                  </h1>
-                  <h1 className="h1" id="gsap">
-                    designer
-                  </h1>
+                  </h2>
+                  <h2 className="h1" id="gsap">
+                    ui/ux designer
+                  </h2>
+                  <h2 className="h1" id="gsap">
+                    graphic designer
+                  </h2>
+                  <h2 className="h1" id="gsap">
+                    product manager
+                  </h2>
+                  <h2 className="h1" id="gsap">
+                    scrum master
+                  </h2>
                 </>
               ) : (
                 <>
-                  <h1 className="h1" id="loading">
+                  <h2 className="h1" id="loading">
                     loading...
-                  </h1>
+                  </h2>
                 </>
               )}
             </div>
             for your startup
           </h1>
           <h2 className="h2">
-            we source recently laid-off engineers from tech giants and unicorns
+            we source recently laid-off talent from tech giants and unicorns
           </h2>
           {mobile ? (
             <div className="icons" style={{ marginBottom: "2rem" }}>
@@ -474,7 +476,7 @@ function Home() {
               textAlign: "start",
             }}
           >
-            <h1 className="h1">Hiring recently laid off engineers</h1>
+            <h1 className="h1">Hiring laid-off talent</h1>
             <h3 className="h3">
               The recent major tech layoffs have created an opportunity for
               startup companies that need to hire and welcome new, vetted
@@ -494,15 +496,26 @@ function Home() {
                 justifyContent: "space-between",
               }}
             >
-              {!mobile ? (
-                <>
-                  <div>
-                    <h2 className="h2">
-                      We offer 2 distinct sourcing services
-                    </h2>
+              <>
+                <div
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
                     <h5 className="h5">
                       <button
                         className="emoji-container"
+                        style={{
+                          width: "100%",
+                        }}
                         onClick={() => {
                           scrollToProject();
                         }}
@@ -513,6 +526,9 @@ function Home() {
                     <h5 className="h5">
                       <button
                         className="emoji-container"
+                        style={{
+                          width: "100%",
+                        }}
                         onClick={() => {
                           scrollToDirect();
                         }}
@@ -522,137 +538,28 @@ function Home() {
                     </h5>
                   </div>
                   <div className="stats-content">
-                    <div
-                      className="horizontal-content"
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        width: "100%",
-                      }}
-                    >
-                      <div
-                        className="vertical-content"
-                        style={{
-                          justifyContent: "center",
-                          width: "50%",
-                        }}
-                      >
-                        <h1 className="number">
-                          <Number n={210 + discordCount} />
-                        </h1>
-                        <h5 className="h5">Engineers sourced</h5>
-                      </div>
-                      <div
-                        className="vertical-content"
-                        style={{
-                          justifyContent: "center",
-                          width: "50%",
-                        }}
-                      >
-                        <h1 className="number">
-                          <Number n={40} />
-                        </h1>
-                        <h5 className="h5">Engineers matched</h5>
-                      </div>
-                      <div
-                        className="vertical-content"
-                        style={{
-                          justifyContent: "center",
-                          width: "50%",
-                        }}
-                      >
-                        <h1 className="number">
-                          <Percent n={94} />
-                        </h1>
-                        <h5 className="h5">Placement satisfaction</h5>
-                      </div>
+                    <div className="vertical-content">
+                      <h6 className="number">
+                        <Number n={210 + discordCount} />
+                      </h6>
+                      <h5 className="h5">Engineers sourced</h5>
                     </div>
-                    <h5
-                      className="h4"
-                      style={{
-                        marginTop: "1rem",
-                        marginBottom: "0",
-                      }}
-                    >
-                      <button
-                        className="emoji-container"
-                        onClick={() => {
-                          scrollToSourced();
-                          setBio(1);
-                        }}
-                      >
-                        view our sourced engineers
-                      </button>
-                    </h5>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div>
-                    <h2 className="h2">
-                      We offer 2 distinct sourcing services
-                    </h2>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => {
-                          scrollToProject();
-                        }}
-                      >
-                        Scrum Package
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => {
-                          scrollToDirect();
-                        }}
-                      >
-                        Direct-to-Hire
-                      </button>
-                    </h5>
-                    <div className="stats-content">
-                      <div
-                        className="vertical-content"
-                        style={{
-                          width: "50%",
-                        }}
-                      >
-                        <h1 className="number">
-                          <Number n={210 + discordCount} />
-                        </h1>
-                        <h5 className="h5">Engineers sourced</h5>
-                      </div>
-                      <div
-                        className="vertical-content"
-                        style={{
-                          width: "50%",
-                        }}
-                      >
-                        <h1 className="number">
-                          <Number n={40} />
-                        </h1>
-                        <h5 className="h5">Engineers matched</h5>
-                      </div>
-                      <div
-                        className="vertical-content"
-                        style={{
-                          width: "50%",
-                        }}
-                      >
-                        <h1 className="number">
-                          <Percent n={94} />
-                        </h1>
-                        <h5 className="h5">Placement satisfaction</h5>
-                      </div>
+                    <div className="vertical-content">
+                      <h6 className="number">
+                        <Number n={40} />
+                      </h6>
+                      <h5 className="h5">Engineers matched</h5>
+                    </div>
+                    <div className="vertical-content">
+                      <h6 className="number">
+                        <Percent n={94} />
+                      </h6>
+                      <h5 className="h5">Placement satisfaction</h5>
                     </div>
                   </div>
-                </>
-              )}
+                </div>
+              </>
             </div>
-            <h1 className="h1">Our Services</h1>
           </div>
           {/* scrum package */}
           <div
@@ -2004,362 +1911,22 @@ function Home() {
             width: "100%",
           }}
         >
-          <div>
-            <h1 className="h1">Recently sourced laid off engineers</h1>
-          </div>
-          <div
-            className="layoff-content"
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div className="memoji-container">
-              <img src={jonathan} alt="frank" className="memoji" />
-            </div>
-            {!mobile && (
-              <div
-                className="vertical-content"
-                style={{
-                  width: "50%",
-                }}
-              >
-                {bio === 1 ? (
-                  <div
-                    style={{
-                      textAlign: "start",
-                    }}
-                  >
-                    <h2
-                      className="h2"
-                      style={{
-                        width: "100%",
-                      }}
-                    >
-                      Frank Serkland
-                    </h2>
-                    <h5 className="h5">
-                      Frank is a senior Java Engineer with over 12 years of
-                      professional experience split between startups and Fortune
-                      500 companies. He has worked with some of the largest
-                      companies in the world including LinkedIn, Paypal, and
-                      Apple. Frank was let go from Apple within the last year.
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => setBio(0)}
-                      >
-                        close bio
-                      </button>
-                    </h5>
-                  </div>
-                ) : (
-                  <>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => setBio(1)}
-                      >
-                        view full bio
-                      </button>
-                    </h5>
-                  </>
-                )}
-              </div>
-            )}
-            <div
-              className="horizontal-content"
-              style={{
-                margin: "0",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <h5
-                className="h5"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                senior back-end developer
-              </h5>
-              <div
-                className="horizontal-content-small"
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <span
-                  className="emoji-container"
-                  style={{
-                    marginBottom: "1rem",
-                    padding: "1rem",
-                    border: "2px solid #fff",
-                  }}
-                >
-                  <img src={apple} className="emoji-2" alt="calendar" />
-                  Apple
-                </span>
-                <h5
-                  className="h5"
-                  style={{ marginBottom: "1rem", width: "100%" }}
-                >
-                  laid-off on December 2023
-                </h5>
-              </div>
-              <h5 className="h5">
-                <button className="emoji-container" onClick={scrollToTarget}>
-                  book a demo
-                </button>
-              </h5>
-            </div>
-          </div>
-          <div
-            className="layoff-content"
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div className="memoji-container">
-              <img src={ian} alt="Coty" className="memoji" />
-            </div>
-            {!mobile && (
-              <div
-                className="vertical-content"
-                style={{
-                  width: "50%",
-                }}
-              >
-                {bio === 2 ? (
-                  <div
-                    style={{
-                      textAlign: "start",
-                    }}
-                  >
-                    <h2
-                      className="h2"
-                      style={{
-                        width: "100%",
-                      }}
-                    >
-                      Coty Rothery
-                    </h2>
-                    <h5 className="h5">
-                      Coty is a highly talented self-taught engineer. His
-                      experience resides in the Backend using GO, Rust, and
-                      Javascript. He was the 94th employee at StockX where he
-                      worked on everything from design of third-party
-                      applications, architecture, cloud computing, and DevOps.
-                    </h5>
-
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => setBio(0)}
-                      >
-                        close bio
-                      </button>
-                    </h5>
-                  </div>
-                ) : (
-                  <>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => setBio(2)}
-                      >
-                        view full bio
-                      </button>
-                    </h5>
-                  </>
-                )}
-              </div>
-            )}
-            <div
-              className="horizontal-content"
-              style={{
-                margin: "0",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <h5
-                className="h5"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                senior software engineer
-              </h5>
-              <div
-                className="horizontal-content-small"
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <span
-                  className="emoji-container"
-                  style={{
-                    marginBottom: "1rem",
-                    padding: "1rem",
-                    border: "2px solid #fff",
-                  }}
-                >
-                  <img src={stock} className="emoji-2" alt="calendar" />
-                  StockX
-                </span>
-                <h5
-                  className="h5"
-                  style={{ marginBottom: "1rem", width: "100%" }}
-                >
-                  laid-off on January 2024
-                </h5>
-              </div>
-              <h5 className="h5">
-                <button className="emoji-container" onClick={scrollToTarget}>
-                  book a demo
-                </button>
-              </h5>
-            </div>
-          </div>
-          <div
-            className="layoff-content"
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <div className="memoji-container">
-              <img src={smiley} alt="Pratik" className="memoji" />
-            </div>
-            {!mobile && (
-              <div
-                className="vertical-content"
-                style={{
-                  width: "50%",
-                }}
-              >
-                {bio === 3 ? (
-                  <div
-                    style={{
-                      textAlign: "start",
-                    }}
-                  >
-                    <h2
-                      className="h2"
-                      style={{
-                        width: "100%",
-                      }}
-                    >
-                      Pratik Phadke
-                    </h2>
-                    <h5 className="h5">
-                      Pratik was recently laid off from Cashapp. He was a mobile
-                      engineering manager with 12 years of experience working
-                      with Android and IOS developments. At Cash App, he was
-                      involved in the processes behind the temperature-changing
-                      and pink debit card. When released, they were the
-                      fastest-growing debit cards in the world.
-                    </h5>
-
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => setBio(0)}
-                      >
-                        close bio
-                      </button>
-                    </h5>
-                  </div>
-                ) : (
-                  <>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        onClick={() => setBio(3)}
-                      >
-                        view full bio
-                      </button>
-                    </h5>
-                  </>
-                )}
-              </div>
-            )}
-            <div
-              className="horizontal-content"
-              style={{
-                margin: "0",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <h5
-                className="h5"
-                style={{ marginBottom: "1rem", width: "100%" }}
-              >
-                mobile engineering manager
-              </h5>
-              <div
-                className="horizontal-content-small"
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row",
-                  flexWrap: "wrap",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  padding: 0,
-                  margin: 0,
-                }}
-              >
-                <span
-                  className="emoji-container"
-                  style={{
-                    marginBottom: "1rem",
-                    padding: "1rem",
-                    border: "2px solid #fff",
-                  }}
-                >
-                  <img src={cashapp} className="emoji-2" alt="calendar" />
-                  Cashapp
-                </span>
-                <h5
-                  className="h5"
-                  style={{ marginBottom: "1rem", width: "100%" }}
-                >
-                  laid-off on February 2024
-                </h5>
-              </div>
-              <h5 className="h5">
-                <button className="emoji-container" onClick={scrollToTarget}>
-                  book a demo
-                </button>
-              </h5>
-            </div>
-          </div>
-          <h5
-            className="h4"
-            style={{
-              marginTop: "1rem",
-              marginBottom: "0",
-            }}
-          >
-            <button className="emoji-container" onClick={scrollToTarget}>
-              view more engineers
-            </button>
-          </h5>
+          <h1 className="h1">Sourced laid-off talent</h1>
+          {mobile ? (
+            <iframe
+              src="https://discord.com/widget?id=984461709806804992&theme=dark"
+              width="400"
+              height="500"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+          ) : (
+            <iframe
+              src="https://discord.com/widget?id=984461709806804992&theme=dark"
+              width="600"
+              height="500"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+          )}
         </div>
       </div>
       {/* submit */}
@@ -2518,7 +2085,7 @@ function Home() {
       {/* pricing */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">Let&apos;s get started</h1>
+          <h2 className="h1">Let&apos;s get started</h2>
           <div className="pricing-content">
             <Lottie animationData={rocket} style={{ width: "10rem" }} />
             <h2 className="h2">Scrum Package</h2>
