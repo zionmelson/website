@@ -260,10 +260,10 @@ export default function Hire() {
         }}
       >
         {submitted && submissionStatus === "success" ? (
-          <h1 className="h1">Scheduled a demo 😉</h1>
+          <h1 className="h1">Hired a team 😉</h1>
         ) : (
           <>
-            <h1 className="h1">Schedule a demo</h1>
+            <h1 className="h1">Hire a team</h1>
           </>
         )}
         <span className="emoji-container" style={{ marginBottom: "1rem" }}>
@@ -271,100 +271,100 @@ export default function Hire() {
             Scrum Package
           </h5>
         </span>
-
-        {mobile ? null : (
+        <div
+          className="due-diligence-content"
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
           <div
-            className="due-diligence-content"
+            className="horizontal-content"
             style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
               width: "100%",
             }}
           >
             <div
-              className="horizontal-content"
+              className="vertical-content"
               style={{
-                justifyContent: "space-evenly",
                 width: "100%",
+                marginBottom: "1rem",
               }}
             >
-              <div className="horizontal-content">
+              <h5 className="h5">your team will be sourced from</h5>
+              {companies.length > 0 ? (
                 <div
-                  className="vertical-content"
+                  className="horizontal-content"
                   style={{
                     display: "flex",
-                    flexDirection: "column",
-                    width: "100%",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    gap: "1rem",
                   }}
                 >
-                  <h3 className="h3">Managers: {packages.projectManager}</h3>
-                  <h3 className="h3">Engineers: {packages.softwareEngineer}</h3>
-                  <h3 className="h3">Designers: {packages.graphicDesigner}</h3>
-                </div>
-              </div>
-              <div
-                className="vertical-content"
-                style={{
-                  width: "50%",
-                }}
-              >
-                <h5 className="h5">your team will be sourced from</h5>
-                {companies.length > 0 ? (
-                  <div
-                    className="horizontal-content"
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "wrap",
-                      gap: "1rem",
-                    }}
-                  >
-                    {companies.map((company) => (
-                      <span
-                        className="emoji-container"
-                        key={company.name}
-                        style={{
-                          padding: "1rem",
-                        }}
-                      >
-                        <button
-                          onClick={() => removeCompany(company)}
-                          style={{
-                            marginRight: "0.5rem",
-                            color: "red",
-                          }}
-                        >
-                          <FaMinusCircle className="operator" />
-                        </button>
-                        <img src={company.logo} className="emoji-2" />
-                        {company.name}
-                      </span>
-                    ))}
-                  </div>
-                ) : (
-                  <div
-                    className="horizontal-content"
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "wrap",
-                      gap: "1rem",
-                    }}
-                  >
+                  {companies.map((company) => (
                     <span
                       className="emoji-container"
-                      id="github-container"
+                      key={company.name}
                       style={{
                         padding: "1rem",
                       }}
                     >
-                      <img src={logo} className="emoji-2" />
-                      learnmutiny.io
+                      <button
+                        onClick={() => removeCompany(company)}
+                        style={{
+                          marginRight: "0.5rem",
+                          color: "red",
+                        }}
+                      >
+                        <FaMinusCircle className="operator" />
+                      </button>
+                      <img src={company.logo} className="emoji-2" />
+                      {company.name}
                     </span>
-                  </div>
-                )}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  className="horizontal-content"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
+                    gap: "1rem",
+                  }}
+                >
+                  <span
+                    className="emoji-container"
+                    id="github-container"
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={logo} className="emoji-2" />
+                    learnmutiny.io
+                  </span>
+                </div>
+              )}
+            </div>
+            <div
+              className="vertical-content"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "100%",
+              }}
+            >
+              <h3 className="h3">Managers: {packages.projectManager}</h3>
+              <h3 className="h3">Engineers: {packages.softwareEngineer}</h3>
+              <h3 className="h3">Designers: {packages.graphicDesigner}</h3>
             </div>
           </div>
-        )}
+        </div>
         {mobile ? (
           <div
             className="due-diligence-content"
@@ -377,28 +377,6 @@ export default function Hire() {
               padding: "1rem",
             }}
           >
-            <div
-              className="vertical-content"
-              style={{
-                margin: "0.5rem",
-              }}
-            >
-              <h5 className="h5">
-                <button className="emoji-container">
-                  {packages.projectManager} Managers
-                </button>
-              </h5>
-              <h5 className="h5">
-                <button className="emoji-container">
-                  {packages.softwareEngineer} Engineers
-                </button>
-              </h5>
-              <h5 className="h5">
-                <button className="emoji-container">
-                  {packages.graphicDesigner} Designers
-                </button>
-              </h5>
-            </div>
             <div
               className="vertical-content"
               style={{
@@ -659,68 +637,6 @@ export default function Hire() {
                   Mozilla
                 </span>
               </div>
-            </div>
-            <div
-              className="vertical-content"
-              style={{
-                marginTop: "2rem",
-              }}
-            >
-              <h5 className="h5">your team will be sourced from</h5>
-              {companies.length > 0 ? (
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    flexWrap: "wrap",
-                    gap: "1rem",
-                  }}
-                >
-                  {companies.map((company) => (
-                    <span
-                      className="emoji-container"
-                      key={company.name}
-                      style={{
-                        padding: "1rem",
-                      }}
-                    >
-                      <button
-                        onClick={() => removeCompany(company)}
-                        style={{
-                          marginRight: "0.5rem",
-                          color: "red",
-                        }}
-                      >
-                        <FaMinusCircle className="operator" />
-                      </button>
-                      <img src={company.logo} className="emoji-2" />
-                      {company.name}
-                    </span>
-                  ))}
-                </div>
-              ) : (
-                <div
-                  className="horizontal-content"
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    flexWrap: "wrap",
-                    gap: "1rem",
-                  }}
-                >
-                  <span
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                    }}
-                  >
-                    <img src={logo} className="emoji-2" />
-                    learnmutiny.io
-                  </span>
-                </div>
-              )}
             </div>
           </div>
         ) : (

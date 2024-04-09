@@ -15,6 +15,8 @@ function Find() {
   const blurredImageDivRef = useRef(null);
   const imgRef = useRef(null);
 
+  const [mobile, setMobile] = useState(false);
+
   const [isLoaded, setIsLoaded] = useState(false);
   const handleImageLoad = () => {
     setIsLoaded(true);
@@ -30,9 +32,12 @@ function Find() {
   };
 
   useEffect(() => {
+    if (window.screen.width < 780) {
+      setMobile(true);
+    }
+
     setDiscord();
     if (isLoaded) {
-      console.log("img loaded");
       const blurredImageDiv = blurredImageDivRef.current;
       const img = imgRef.current;
 
@@ -60,7 +65,7 @@ function Find() {
         <div className="vertical-content">
           <h1 className="h1">We take a different approach</h1>
           <h3 className="h3">
-            all of our positions are remote and are announced on our server.
+            all of our positions are announced on our server.
           </h3>
           <span
             className="emoji-container"
@@ -71,12 +76,21 @@ function Find() {
             <img src={logo} className="emoji" alt="mu" />
             learnmutiny.io
           </span>
-          <iframe
-            src="https://discord.com/widget?id=984461709806804992&theme=dark"
-            width="350"
-            height="500"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-          ></iframe>
+          {mobile ? (
+            <iframe
+              src="https://discord.com/widget?id=984461709806804992&theme=dark"
+              width="400"
+              height="500"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+          ) : (
+            <iframe
+              src="https://discord.com/widget?id=984461709806804992&theme=dark"
+              width="600"
+              height="500"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            ></iframe>
+          )}
         </div>
       </div>
       {/* partners */}
@@ -191,7 +205,7 @@ function Find() {
       {/* contact */}
       <div className="box">
         <div className="vertical-content" style={{ padding: "2rem" }}>
-          <h1 className="h1">Contact</h1>
+          <h2 className="h1">Contact</h2>
           <span className="emoji-container" style={{ marginBottom: "1rem" }}>
             support@learnmutiny.io
           </span>
