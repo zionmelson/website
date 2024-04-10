@@ -79,7 +79,7 @@ function Find() {
           {mobile ? (
             <iframe
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
-              width="400"
+              width="300"
               height="500"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
             ></iframe>
