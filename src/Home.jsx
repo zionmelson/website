@@ -184,10 +184,6 @@ function Home() {
     setFormData({ ...formData, packages: { ...packages, [engineer]: 0 } });
   };
 
-  const toggleOpen = (num) => {
-    setIsOpen(num);
-  };
-
   const setDiscord = async () => {
     const data = await fetch(
       "https://discord.com/api/guilds/984461709806804992/widget.json"
@@ -1566,87 +1562,16 @@ function Home() {
                 </h5>
               </div>
 
-              {isOpen == 2 && (
-                <div className="sourcing-info">
-                  <h3 className="h3">2. Talent Source</h3>
-                  <h4 className="h4">
-                    We offer sourcing services to mitigate the fluctuations of
-                    our pipeline to give you a tailored search based on your
-                    engineering needs.
-                  </h4>
-                  <h5 className="h5">
-                    Due to the nature of our talent pipeline, there tends to be
-                    variability in the availability of engineers for each
-                    project. We work with recently laid-off engineers looking to
-                    join project-based teams immediately.
-                  </h5>
-                  <h5 className="h5">
-                    Depending on job market conditions, we may have a sudden
-                    influx of engineers who specialize in a specific technology
-                    or cloud infrastructure. Because of this, we could have a
-                    wide range of engineering talent ready to join project-based
-                    teams, or we could have limited engineering talent.
-                  </h5>
-                  <h5 className="h5">
-                    <button className="emoji-container">
-                      last source: {date}
-                    </button>
-                  </h5>
-                  <h3 className="h3">3. Placement Procedure</h3>
-                  <h5 className="h5">
-                    Once we have identified the ideal engineering package for
-                    your team, we will work with your team to schedule
-                    interviews and technical assessments.
-                  </h5>
-                  <h5 className="h5">
-                    We have crafted our Scrum package to be as easy as possible
-                    for your team to onboard a new engineering team. We utilize
-                    a simple and easy-to-understand billing process that helps
-                    you to understand the precise cost of the project and plan
-                    accordingly.
-                  </h5>
-                  <span
-                    className="emoji-container"
-                    id="aws-container"
-                    style={{
-                      marginBottom: "1rem",
-                      padding: "1rem",
-                    }}
-                  >
-                    <img src={bill} className="emoji-2" alt="calendar" />
-                    Bill.com
-                  </span>
-                  <h5 className="h5">
-                    All invoices via Bill.com are sent out at the end of each
-                    month, and are due within 5 days of invoice.
-                  </h5>
-                  <h3 className="h3">4. Required Check-ups</h3>
-                  <h5 className="h5">
-                    Throughout the project, we will check up with you and your
-                    team of engineers to ensure that project milestones are
-                    being met.
-                  </h5>
-                </div>
-              )}
-              {isOpen == 2 ? (
+              <a
+                href="https://app.eraser.io/workspace/WWEnxOiYsAFp622GpW9M?origin=share"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => toggleOpen(0)}
-                  >
-                    close view
-                  </button>
+                  <button className="emoji-container">view full process</button>
                 </h5>
-              ) : (
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => toggleOpen(2)}
-                  >
-                    view full process
-                  </button>
-                </h5>
-              )}
+              </a>
+
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
                   hire a recently laid-off team
@@ -1810,83 +1735,16 @@ function Home() {
                   </span>
                 )}
               </div>
-              {isOpen == 1 && (
-                <div className="sourcing-info">
-                  <h3 className="h3">2. Talent Source</h3>
-                  <h5 className="h5">
-                    We have pre-screened engineers available to join startup
-                    teams immediately, yet they may not always be the right fit
-                    for your team.
-                  </h5>
-                  <h5 className="h5">
-                    Because of this, our team will shift our pipeline toward
-                    sourcing an engineer that fits the exact requirements we
-                    found during our Initial Due Diligence Screening.
-                  </h5>
-                  <h5 className="h4">
-                    <button
-                      className="emoji-container"
-                      onClick={() => {
-                        scrollToSourced();
-                        setBio(1);
-                      }}
-                    >
-                      view our sourced engineers
-                    </button>
-                  </h5>
-                  <h3 className="h3">3. Placement Procedure</h3>
-                  <h5 className="h5">
-                    Once we have identified the ideal engineer for your team, we
-                    will work with your team to schedule interviews and
-                    technical assessments.
-                  </h5>
-                  <h5 className="h5">
-                    Depending on the complexity and day-to-day requirements of
-                    the role, we will conduct either a standard or executive
-                    search.
-                  </h5>
-                  <h5 className="h5">
-                    Standard search positions typically require a lower level of
-                    experience and complexity, i.e. Staff Engineers, Principal
-                    Engineers, & Engineering Directors.
-                  </h5>
-                  <h5 className="h5">
-                    Executive search positions typically require a higher level
-                    of experience and complexity, i.e. Co-Founding Engineer, VP
-                    of Engineering, & CTOs.
-                  </h5>
-                  <h3 className="h3">4. Required Check-up</h3>
-                  <h5 className="h5">
-                    After an engineer is placed, we will follow up with your
-                    team and the engineer to ensure that the placement and
-                    culture fit works for both parties.
-                  </h5>
-                  <h5 className="h5">
-                    If the engineer does not meet the requirements of the role
-                    or culture fit, we reconduct our sourcing process and source
-                    a replacement engineer.
-                  </h5>
-                </div>
-              )}
-              {isOpen == 1 ? (
+              <a
+                href="https://app.eraser.io/workspace/hnBS71Or5zh5z26MQ4r1?origin=share"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => toggleOpen(0)}
-                  >
-                    close view
-                  </button>
+                  <button className="emoji-container">view full process</button>
                 </h5>
-              ) : (
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    onClick={() => toggleOpen(1)}
-                  >
-                    view full process
-                  </button>
-                </h5>
-              )}
+              </a>
+
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
                   book a demo
