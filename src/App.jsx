@@ -57,7 +57,6 @@ function App() {
               style={{ color: "#fff" }}
             />
           )}
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/find-work" element={<Find />} />
@@ -66,8 +65,8 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="*" element={<Error />} />
           </Routes>
+          <Footer />
         </div>
-        <Footer />
         <Analytics />
       </ThemeContext.Provider>
     </>
