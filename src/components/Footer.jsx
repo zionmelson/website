@@ -61,6 +61,13 @@ export default function Footer() {
               >
                 <img className="social" src={x} alt="x" />
               </a>
+              <a
+                href="https://medium.com/@learnmutiny"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={medium} alt="medium" />
+              </a>
             </div>
           </div>
           <div className="footer-links">
