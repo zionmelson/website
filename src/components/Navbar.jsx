@@ -58,19 +58,18 @@ export default function Navbar() {
             <img src={bear} className="bear-logo" alt="logo" />
           </div>
         </a>
-        <ul className="navigation">
-          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
+        <ul className={`navigation ${scrolled ? "nav-scroll" : ""}`}>
+          <li className="nav-text">
             <a href="/">
               <h4 className="h4">home</h4>
             </a>
           </li>
-          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
+          <li className="nav-text">
             <a href="/find-work">
               <h4 className="h4">find work</h4>
             </a>
           </li>
-          <li className={`nav-text ${scrolled ? "text-scrolled" : ""}`}>
-            {" "}
+          <li className="nav-text">
             <a href="/hire">
               <h5 className="h5">
                 <button className="emoji-container">book a demo</button>

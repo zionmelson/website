@@ -32,43 +32,52 @@ export default function Footer() {
               </h5>
             </span>
           </div>
-          <div className="socials">
-            <a
-              href="https://www.instagram.com/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-              className="social"
+          <div className="vertical-content">
+            <h5
+              style={{
+                marginBottom: "0",
+              }}
             >
-              <img src={instagram} alt="instagram" />
-            </a>
-            <a
-              href="https://discord.gg/ZbGfyErE3w"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={discord} alt="discord" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={linkedin} alt="linkedin" />
-            </a>
-            <a
-              href="https://www.twitter.com/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={x} alt="x" />
-            </a>
-            <a
-              href="https://www.youtube.com/@learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={youtube} alt="youtube" />
-            </a>
+              follow us
+            </h5>
+            <div className="socials">
+              <a
+                href="https://www.instagram.com/learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+                className="social"
+              >
+                <img src={instagram} alt="instagram" />
+              </a>
+              <a
+                href="https://discord.gg/ZbGfyErE3w"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={discord} alt="discord" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={linkedin} alt="linkedin" />
+              </a>
+              <a
+                href="https://www.twitter.com/learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={x} alt="x" />
+              </a>
+              <a
+                href="https://www.youtube.com/@learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={youtube} alt="youtube" />
+              </a>
+            </div>
           </div>
           <div className="footer-links">
             <h5>© 2024 learnmutiny. All rights reserved.</h5>
@@ -91,43 +100,52 @@ export default function Footer() {
               <h5>Privacy Policy</h5>
             </a>
           </div>
-          <div className="socials">
-            <a
-              href="https://www.instagram.com/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-              className="social"
+          <div className="vertical-content">
+            <h5
+              style={{
+                marginBottom: "0",
+              }}
             >
-              <img src={instagram} alt="instagram" />
-            </a>
-            <a
-              href="https://discord.gg/ZbGfyErE3w"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={discord} alt="discord" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={linkedin} alt="linkedin" />
-            </a>
-            <a
-              href="https://www.twitter.com/learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={x} alt="x" />
-            </a>
-            <a
-              href="https://www.youtube.com/@learnmutiny/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img className="social" src={youtube} alt="youtube" />
-            </a>
+              follow us
+            </h5>
+            <div className="socials">
+              <a
+                href="https://www.instagram.com/learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+                className="social"
+              >
+                <img src={instagram} alt="instagram" />
+              </a>
+              <a
+                href="https://discord.gg/ZbGfyErE3w"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={discord} alt="discord" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={linkedin} alt="linkedin" />
+              </a>
+              <a
+                href="https://www.twitter.com/learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={x} alt="x" />
+              </a>
+              <a
+                href="https://www.youtube.com/@learnmutiny/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={youtube} alt="youtube" />
+              </a>
+            </div>
           </div>
           <div className="footer-numbers">
             <span className="emoji-container">
