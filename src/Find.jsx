@@ -67,15 +67,17 @@ function Find() {
           <h3 className="h3">
             all of our positions are announced on our server.
           </h3>
-          <span
-            className="emoji-container"
-            style={{
-              marginBottom: "1rem",
-            }}
-          >
-            <img src={logo} className="emoji" alt="mu" />
-            learnmutiny.io
-          </span>
+          <h5 className="h5">
+            <button
+              className="emoji-container"
+              style={{
+                marginBottom: "1rem",
+              }}
+            >
+              <img src={logo} className="emoji" alt="mu" />
+              learnmutiny.io
+            </button>
+          </h5>
           {mobile ? (
             <iframe
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
@@ -86,7 +88,7 @@ function Find() {
           ) : (
             <iframe
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
-              width="600"
+              width="500"
               height="500"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
             ></iframe>
@@ -206,9 +208,14 @@ function Find() {
       <div className="box">
         <div className="vertical-content" style={{ padding: "2rem" }}>
           <h2 className="h1">Contact</h2>
-          <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-            support@learnmutiny.io
-          </span>
+          <h5 className="h5">
+            <button
+              className="emoji-container"
+              style={{ marginBottom: "1rem" }}
+            >
+              support@learnmutiny.io
+            </button>
+          </h5>
         </div>
       </div>
     </div>

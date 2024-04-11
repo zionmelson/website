@@ -266,11 +266,13 @@ export default function Hire() {
             <h1 className="h1">Hire a team</h1>
           </>
         )}
-        <span className="emoji-container" style={{ marginBottom: "1rem" }}>
-          <h5 className="h5" style={{ marginBottom: "0" }}>
+
+        <h5 className="h5" style={{ marginBottom: "0" }}>
+          <button className="emoji-container" style={{ marginBottom: "1rem" }}>
             Scrum Package
-          </h5>
-        </span>
+          </button>
+        </h5>
+
         <div
           className="due-diligence-content"
           style={{
@@ -292,7 +294,7 @@ export default function Hire() {
               className="vertical-content"
               style={{
                 width: "100%",
-                marginBottom: "1rem",
+                padding: "1rem",
               }}
             >
               <h5 className="h5">your team will be sourced from</h5>
@@ -307,25 +309,26 @@ export default function Hire() {
                   }}
                 >
                   {companies.map((company) => (
-                    <span
-                      className="emoji-container"
-                      key={company.name}
-                      style={{
-                        padding: "1rem",
-                      }}
-                    >
+                    <h5 className="h5" key={company.name}>
                       <button
-                        onClick={() => removeCompany(company)}
+                        className="emoji-container"
                         style={{
-                          marginRight: "0.5rem",
-                          color: "red",
+                          padding: "1rem",
                         }}
                       >
-                        <FaMinusCircle className="operator" />
+                        <button
+                          onClick={() => removeCompany(company)}
+                          style={{
+                            marginRight: "0.5rem",
+                            color: "red",
+                          }}
+                        >
+                          <FaMinusCircle className="operator" />
+                        </button>
+                        <img src={company.logo} className="emoji-2" />
+                        {company.name}
                       </button>
-                      <img src={company.logo} className="emoji-2" />
-                      {company.name}
-                    </span>
+                    </h5>
                   ))}
                 </div>
               ) : (
@@ -338,30 +341,20 @@ export default function Hire() {
                     gap: "1rem",
                   }}
                 >
-                  <span
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                    }}
-                  >
-                    <img src={logo} className="emoji-2" />
-                    learnmutiny.io
-                  </span>
+                  <h5 className="h5">
+                    <button
+                      className="emoji-container"
+                      id="github-container"
+                      style={{
+                        padding: "1rem",
+                      }}
+                    >
+                      <img src={logo} className="emoji-2" />
+                      learnmutiny.io
+                    </button>
+                  </h5>
                 </div>
               )}
-            </div>
-            <div
-              className="vertical-content"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                width: "100%",
-              }}
-            >
-              <h3 className="h3">Managers: {packages.projectManager}</h3>
-              <h3 className="h3">Engineers: {packages.softwareEngineer}</h3>
-              <h3 className="h3">Designers: {packages.graphicDesigner}</h3>
             </div>
           </div>
         </div>
@@ -398,7 +391,9 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">💼 Manager</button>
+                    <button className="emoji-container">
+                      Managers: {packages.projectManager}
+                    </button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -433,7 +428,9 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">💻 Engineer</button>
+                    <button className="emoji-container">
+                      Engineers: {packages.softwareEngineer}
+                    </button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -468,7 +465,9 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">🎨 Designer</button>
+                    <button className="emoji-container">
+                      Designers: {packages.graphicDesigner}
+                    </button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -512,130 +511,157 @@ export default function Hire() {
                   gap: "0.5rem",
                 }}
               >
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "EA", logo: ea })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={ea} className="emoji-2" alt="calendar" />
-                  EA
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Uber", logo: uber })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={uber} className="emoji-2" alt="calendar" />
-                  Uber
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Snapchat", logo: snap })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={snap} className="emoji-2" alt="calendar" />
-                  Snapchat
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Spotify", logo: spotify })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={spotify} className="emoji-2" alt="calendar" />
-                  Spotify
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Twitch", logo: twitch })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={twitch} className="emoji-2" alt="calendar" />
-                  Twitch
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Google", logo: google })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={google} className="emoji-2" alt="calendar" />
-                  Google
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Paypal", logo: paypal })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={paypal} className="emoji-2" alt="calendar" />
-                  Paypal
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Meta", logo: meta })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={meta} className="emoji-2" alt="calendar" />
-                  Meta
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Instacart", logo: instacart })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={instacart} className="emoji-2" alt="calendar" />
-                  Instacart
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Cashapp", logo: cashapp })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={cashapp} className="emoji-2" alt="calendar" />
-                  Cashapp
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Mozilla", logo: mozilla })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={mozilla} className="emoji-2" alt="calendar" />
-                  Mozilla
-                </span>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "EA", logo: ea })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={ea} className="emoji-2" alt="calendar" />
+                    EA
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Uber", logo: uber })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={uber} className="emoji-2" alt="calendar" />
+                    Uber
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Snapchat", logo: snap })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={snap} className="emoji-2" alt="calendar" />
+                    Snapchat
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Spotify", logo: spotify })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={spotify} className="emoji-2" alt="calendar" />
+                    Spotify
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Twitch", logo: twitch })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={twitch} className="emoji-2" alt="calendar" />
+                    Twitch
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Google", logo: google })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={google} className="emoji-2" alt="calendar" />
+                    Google
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Paypal", logo: paypal })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={paypal} className="emoji-2" alt="calendar" />
+                    Paypal
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Meta", logo: meta })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={meta} className="emoji-2" alt="calendar" />
+                    Meta
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Instacart", logo: instacart })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={instacart} className="emoji-2" alt="calendar" />
+                    Instacart
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Cashapp", logo: cashapp })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={cashapp} className="emoji-2" alt="calendar" />
+                    Cashapp
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Mozilla", logo: mozilla })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={mozilla} className="emoji-2" alt="calendar" />
+                    Mozilla
+                  </button>
+                </h5>
               </div>
             </div>
           </div>
@@ -671,7 +697,9 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">💼 Manager</button>
+                    <button className="emoji-container">
+                      Managers: {packages.projectManager}
+                    </button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -706,7 +734,9 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">💻 Engineer</button>
+                    <button className="emoji-container">
+                      Engineers: {packages.softwareEngineer}
+                    </button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -741,7 +771,9 @@ export default function Hire() {
               >
                 <div className="vertical-content">
                   <h5 className="h5">
-                    <button className="emoji-container">🎨 Designer</button>
+                    <button className="emoji-container">
+                      Designers: {packages.graphicDesigner}
+                    </button>
                   </h5>
                   <div
                     className="horizontal-content"
@@ -785,393 +817,460 @@ export default function Hire() {
                   gap: "0.5rem",
                 }}
               >
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "StockX", logo: stock })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={stock} className="emoji-2" alt="calendar" />
-                  StockX
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "EA", logo: ea })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={ea} className="emoji-2" alt="calendar" />
-                  EA
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Discord", logo: discord })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={discord} className="emoji-2" alt="calendar" />
-                  Discord
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Uber", logo: uber })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={uber} className="emoji-2" alt="calendar" />
-                  Uber
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Airbnb", logo: airbnb })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={airbnb} className="emoji-2" alt="calendar" />
-                  Airbnb
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Spotify", logo: spotify })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={spotify} className="emoji-2" alt="calendar" />
-                  Spotify
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Twitch", logo: twitch })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={twitch} className="emoji-2" alt="calendar" />
-                  Twitch
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Ebay", logo: ebay })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={ebay} className="emoji-2" alt="calendar" />
-                  Ebay
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Paypal", logo: paypal })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={paypal} className="emoji-2" alt="calendar" />
-                  Paypal
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Facebook", logo: facebook })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={facebook} className="emoji-2" alt="calendar" />
-                  Facebook
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "X", logo: twitter })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={twitter} className="emoji-2" alt="calendar" />X
-                </span>
-
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Pinterest", logo: pinterest })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={pinterest} className="emoji-2" alt="calendar" />
-                  Pinterest
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "TikTok", logo: tiktok })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={tiktok} className="emoji-2" alt="calendar" />
-                  TikTok
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Apple", logo: apple })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={apple} className="emoji-2" alt="calendar" />
-                  Apple
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "LinkedIn", logo: linkedin })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={linkedin} className="emoji-2" alt="calendar" />
-                  Linkedin
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Amazon", logo: amazon })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={amazon} className="emoji-2" alt="calendar" />
-                  Amazon
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Meetup", logo: meetup })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={meetup} className="emoji-2" alt="calendar" />
-                  Meetup
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Zoom", logo: zoom })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={zoom} className="emoji-2" alt="calendar" />
-                  Zoom
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Meta", logo: meta })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={meta} className="emoji-2" alt="calendar" />
-                  Meta
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "DocuSign", logo: docusign })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={docusign} className="emoji-2" alt="calendar" />
-                  DocuSign
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Expedia", logo: expedia })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={expedia} className="emoji-2" alt="calendar" />
-                  Expedia
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Toast", logo: toast })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={toast} className="emoji-2" alt="calendar" />
-                  Toast
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Instacart", logo: instacart })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={instacart} className="emoji-2" alt="calendar" />
-                  Instacart
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Cashapp", logo: cashapp })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={cashapp} className="emoji-2" alt="calendar" />
-                  Cashapp
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Metamask", logo: metamask })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={metamask} className="emoji-2" alt="calendar" />
-                  Metamask
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Bumble", logo: bumble })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={bumble} className="emoji-2" alt="calendar" />
-                  Bumble
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Grammarly", logo: grammarly })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={grammarly} className="emoji-2" alt="calendar" />
-                  Grammarly
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Google", logo: google })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={google} className="emoji-2" alt="calendar" />
-                  Google
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Snapchat", logo: snap })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={snap} className="emoji-2" alt="calendar" />
-                  Snapchat
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Affirm", logo: affirm })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={affirm} className="emoji-2" alt="calendar" />
-                  Affirm
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() =>
-                    addCompany({ name: "Buzzfeed", logo: buzzfeed })
-                  }
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={buzzfeed} className="emoji-2" alt="calendar" />
-                  Buzzfeed
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Rivian", logo: rivian })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={rivian} className="emoji-2" alt="calendar" />
-                  Rivian
-                </span>
-                <span
-                  className="emoji-container"
-                  id="github-container"
-                  onClick={() => addCompany({ name: "Mozilla", logo: mozilla })}
-                  style={{
-                    padding: "1rem",
-                  }}
-                >
-                  <img src={mozilla} className="emoji-2" alt="calendar" />
-                  Mozilla
-                </span>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "StockX", logo: stock })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={stock} className="emoji-2" alt="calendar" />
+                    StockX
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "EA", logo: ea })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={ea} className="emoji-2" alt="calendar" />
+                    EA
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Discord", logo: discord })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={discord} className="emoji-2" alt="calendar" />
+                    Discord
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Uber", logo: uber })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={uber} className="emoji-2" alt="calendar" />
+                    Uber
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Airbnb", logo: airbnb })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={airbnb} className="emoji-2" alt="calendar" />
+                    Airbnb
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Spotify", logo: spotify })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={spotify} className="emoji-2" alt="calendar" />
+                    Spotify
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Twitch", logo: twitch })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={twitch} className="emoji-2" alt="calendar" />
+                    Twitch
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Ebay", logo: ebay })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={ebay} className="emoji-2" alt="calendar" />
+                    Ebay
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Paypal", logo: paypal })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={paypal} className="emoji-2" alt="calendar" />
+                    Paypal
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Facebook", logo: facebook })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={facebook} className="emoji-2" alt="calendar" />
+                    Facebook
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "X", logo: twitter })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={twitter} className="emoji-2" alt="calendar" />X
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Pinterest", logo: pinterest })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={pinterest} className="emoji-2" alt="calendar" />
+                    Pinterest
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "TikTok", logo: tiktok })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={tiktok} className="emoji-2" alt="calendar" />
+                    TikTok
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Apple", logo: apple })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={apple} className="emoji-2" alt="calendar" />
+                    Apple
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "LinkedIn", logo: linkedin })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={linkedin} className="emoji-2" alt="calendar" />
+                    Linkedin
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Amazon", logo: amazon })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={amazon} className="emoji-2" alt="calendar" />
+                    Amazon
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Meetup", logo: meetup })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={meetup} className="emoji-2" alt="calendar" />
+                    Meetup
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Zoom", logo: zoom })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={zoom} className="emoji-2" alt="calendar" />
+                    Zoom
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Meta", logo: meta })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={meta} className="emoji-2" alt="calendar" />
+                    Meta
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "DocuSign", logo: docusign })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={docusign} className="emoji-2" alt="calendar" />
+                    DocuSign
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Expedia", logo: expedia })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={expedia} className="emoji-2" alt="calendar" />
+                    Expedia
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Toast", logo: toast })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={toast} className="emoji-2" alt="calendar" />
+                    Toast
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Instacart", logo: instacart })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={instacart} className="emoji-2" alt="calendar" />
+                    Instacart
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Cashapp", logo: cashapp })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={cashapp} className="emoji-2" alt="calendar" />
+                    Cashapp
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Metamask", logo: metamask })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={metamask} className="emoji-2" alt="calendar" />
+                    Metamask
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Bumble", logo: bumble })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={bumble} className="emoji-2" alt="calendar" />
+                    Bumble
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Grammarly", logo: grammarly })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={grammarly} className="emoji-2" alt="calendar" />
+                    Grammarly
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Google", logo: google })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={google} className="emoji-2" alt="calendar" />
+                    Google
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Snapchat", logo: snap })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={snap} className="emoji-2" alt="calendar" />
+                    Snapchat
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Affirm", logo: affirm })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={affirm} className="emoji-2" alt="calendar" />
+                    Affirm
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Buzzfeed", logo: buzzfeed })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={buzzfeed} className="emoji-2" alt="calendar" />
+                    Buzzfeed
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Rivian", logo: rivian })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={rivian} className="emoji-2" alt="calendar" />
+                    Rivian
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Mozilla", logo: mozilla })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={mozilla} className="emoji-2" alt="calendar" />
+                    Mozilla
+                  </button>
+                </h5>
               </div>
             </div>
           </div>
@@ -1308,7 +1407,7 @@ export default function Hire() {
                   onChange={handleChange}
                 />
                 <button
-                  className="emoji-container-submit"
+                  className="emoji-container"
                   type="submit"
                   onClick={scrollToTarget}
                 >
