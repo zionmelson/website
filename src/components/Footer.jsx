@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import discord from "../assets/svg/discord.svg";
 import linkedin from "../assets/svg/linkedin-2.svg";
 import x from "../assets/svg/twitter.svg";
+import medium from "../assets/svg/medium.svg";
 
 import "./Components.css";
 
@@ -112,6 +113,13 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <img className="social" src={x} alt="x" />
+              </a>
+              <a
+                href="https://medium.com/@learnmutiny"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={medium} alt="medium" />
               </a>
             </div>
           </div>
