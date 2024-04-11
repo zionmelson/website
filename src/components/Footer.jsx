@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import discord from "../assets/svg/discord.svg";
 import linkedin from "../assets/svg/linkedin-2.svg";
 import x from "../assets/svg/twitter.svg";
-import youtube from "../assets/svg/youtube.svg";
 
 import "./Components.css";
 
@@ -61,13 +60,6 @@ export default function Footer() {
               >
                 <img className="social" src={x} alt="x" />
               </a>
-              <a
-                href="https://www.youtube.com/@learnmutiny/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img className="social" src={youtube} alt="youtube" />
-              </a>
             </div>
           </div>
           <div className="footer-links">
@@ -120,13 +112,6 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <img className="social" src={x} alt="x" />
-              </a>
-              <a
-                href="https://www.youtube.com/@learnmutiny/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img className="social" src={youtube} alt="youtube" />
               </a>
             </div>
           </div>
