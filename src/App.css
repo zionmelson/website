@@ -77,17 +77,17 @@
 }
 
 .App {
-  background: linear-gradient(20deg, #111111, #171717);
-  color: #ffffff;
+  background: #111111;
   transition: all 0.5s linear;
   min-height: 100vh;
+  color: #fff;
 }
 
 .App-white {
-  background: linear-gradient(20deg, #fffcfc, #5cbff9);
-  color: #302f31;
+  background: #5cbff9;
   transition: all 0.5s linear;
   min-height: 100vh;
+  color: #302f31;
 }
 
 .main {
@@ -128,13 +128,13 @@
   justify-content: center;
   border-radius: 2rem;
   border: 2px solid #fff;
-  background: linear-gradient(135deg, #111111, #404040);
   padding: 2rem;
   margin-bottom: 1rem;
 }
 
 #white .layoff-content {
-  color: #fff;
+  color: #302f31;
+  border: 2px solid #302f31;
 }
 
 .stats-content {
@@ -144,13 +144,13 @@
   border-radius: 2rem;
   gap: 2rem;
   border: 2px solid #fff;
-  background: linear-gradient(135deg, #111111, #404040);
   padding: 2rem;
   margin-bottom: 1rem;
 }
 
 #white .stats-content {
-  color: #fff;
+  color: #302f31;
+  border: 2px solid #302f31;
 }
 
 .due-diligence-content {
@@ -161,13 +161,12 @@
   justify-content: center;
   border-radius: 1rem;
   border: 2px solid #fff;
-  background: linear-gradient(135deg, #111111, #404040);
-  padding: 1rem;
   margin-bottom: 1rem;
 }
 
 #white .due-diligence-content {
-  color: #fff;
+  color: #302f31;
+  border: 2px solid #302f31;
 }
 
 .sourcing-content {
@@ -178,14 +177,14 @@
   justify-content: center;
   border-radius: 2rem;
   border: 2px solid #fff;
-  background: linear-gradient(135deg, #111111, #404040);
   padding: 2rem;
   margin-bottom: 1rem;
   transition: transform 0.3s ease-in-out;
 }
 
 #white .sourcing-content {
-  color: #fff;
+  color: #302f31;
+  border: 2px solid #302f31;
 }
 
 .sourcing-info {
@@ -200,7 +199,6 @@
   align-items: center;
   justify-content: center;
   border: 2px solid #fff;
-  background: linear-gradient(135deg, #111111, #404040);
   border-radius: 2rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -208,7 +206,8 @@
 }
 
 #white .pricing-content {
-  color: #fff;
+  color: #302f31;
+  border: 2px solid #302f31;
 }
 
 .span {
@@ -222,9 +221,24 @@
   padding: 0.5rem;
   padding-left: 1rem;
   border-radius: 0.4rem;
-  background: #302f31;
+  background: transparent;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
+}
+
+#white .input {
+  color: #302f31;
+  border: 2px solid #302f31;
+}
+
+.input::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+#white .input::placeholder {
+  color: #302f31;
+  opacity: 1; /* Firefox */
 }
 
 .coming-soon-container {
@@ -255,34 +269,6 @@
   padding: 0;
 }
 
-.memoji {
-  width: 10rem;
-  padding: 0;
-  transition: all 0.2s ease-in;
-  z-index: 0;
-}
-
-.memoji:hover {
-  transform: scale(1.1);
-  transition: all 0.2s ease-in;
-}
-
-.memoji-container {
-  width: 10rem;
-  border: 3px solid #302f31;
-  background: linear-gradient(135deg, #111111, #222123);
-  border-radius: 60rem;
-  padding: 1rem;
-  transition: all 0.2s ease-in;
-  z-index: 1;
-}
-
-.memoji-container:hover {
-  border-color: #e0e0e0;
-  transition: all 0.2s ease-in;
-  scale: 1.1;
-}
-
 .emoji-2 {
   width: 1.5rem;
   margin-right: 0.5rem;
@@ -294,7 +280,6 @@
   font-size: 1rem;
   display: flex;
   flex-direction: row;
-  background-color: #333333;
   padding: 0.5rem;
   border-radius: 60rem;
   align-items: center;
@@ -302,24 +287,11 @@
   transition: all 0.2s ease-in;
   padding: 1rem;
   border: 2px solid #fff;
-}
-
-#white .emoji-container {
   color: #fff;
 }
 
-.emoji-container-submit {
-  height: 2rem;
-  font-size: 1rem;
-  display: flex;
-  flex-direction: row;
-  background-color: #333333;
-  padding: 0.5rem;
-  border-radius: 60rem;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease-in;
-  padding: 1rem;
+#white .emoji-container {
+  color: #302f31;
   border: 2px solid #302f31;
 }
 
@@ -331,6 +303,11 @@
   padding: 0.5rem;
   border-radius: 50%;
   border: 2px solid #fff;
+}
+
+#white .buttons {
+  color: #302f31;
+  border: 2px solid #302f31;
 }
 
 .buttons:hover {
@@ -438,298 +415,6 @@
   color: #7289da;
 }
 
-#ai-container:hover {
-  background-color: #1bb5bd;
-  color: #fff;
-}
-
-#android:hover {
-  color: #32de84;
-}
-
-#android-active {
-  color: #32de84;
-}
-
-#android-container:hover {
-  background-color: #32de84;
-  color: #fff;
-}
-
-#apple:hover {
-  color: #b3b3b3;
-}
-
-#apple-active {
-  color: #b3b3b3;
-}
-
-#apple-container:hover {
-  background-color: #b3b3b3;
-  color: #fff;
-}
-
-#react:hover {
-  color: #61dafb;
-}
-
-#react-active {
-  color: #61dafb;
-}
-
-#react-container:hover {
-  background-color: #61dafb;
-  color: #fff;
-}
-
-#redux:hover {
-  color: #764abc;
-}
-
-#redux-active {
-  color: #764abc;
-}
-
-#redux-container:hover {
-  background-color: #764abc;
-  color: #fff;
-}
-
-#python:hover {
-  color: #3e7bac;
-}
-
-#python-active {
-  color: #3e7bac;
-}
-
-#python-container:hover {
-  background-color: #3e7bac;
-  color: #fff;
-}
-
-#rust:hover {
-  color: #e15b28;
-}
-
-#rust-active {
-  color: #e15b28;
-}
-
-#rust-container:hover {
-  background-color: #e15b28;
-  color: #fff;
-}
-
-#mysql:hover {
-  color: #00638e;
-}
-
-#mysql-active {
-  color: #00638e;
-}
-
-#mysql-container:hover {
-  background-color: #00638e;
-  color: #fff;
-}
-
-#js:hover {
-  color: #f0dc4e;
-}
-
-#js-active {
-  color: #f0dc4e;
-}
-
-#javascript-container:hover {
-  background-color: #f0dc4e;
-  color: #fff;
-}
-
-#ts:hover {
-  color: #007cd2;
-}
-
-#ts-active {
-  color: #007cd2;
-}
-
-#typescript-container:hover {
-  background-color: #007cd2;
-  color: #fff;
-}
-
-#graphql:hover {
-  color: #fa0daf;
-}
-
-#graphql-active {
-  color: #fa0daf;
-}
-
-#graphql-container:hover {
-  background-color: #fa0daf;
-  color: #fff;
-}
-
-#angular:hover {
-  color: #c3002f;
-}
-
-#angular-active {
-  color: #c3002f;
-}
-
-#angular-container:hover {
-  background-color: #c3002f;
-  color: #fff;
-}
-
-#docker:hover {
-  color: #3262e5;
-}
-
-#docker-active {
-  color: #3262e5;
-}
-
-#docker-container:hover {
-  background-color: #3262e5;
-  color: #fff;
-}
-
-#solidity:hover {
-  color: #464972;
-}
-
-#solidity-active {
-  color: #464972;
-}
-
-#solidity-container:hover {
-  background-color: #464972;
-  color: #fff;
-}
-
-#vue:hover {
-  color: #00bb7f;
-}
-
-#vue-active {
-  color: #00bb7f;
-}
-
-#vue-container:hover {
-  background-color: #00bb7f;
-  color: #fff;
-}
-
-#flutter:hover {
-  color: #00c8fd;
-}
-
-#flutter-active {
-  color: #00c8fd;
-}
-
-#flutter-container:hover {
-  background-color: #00c8fd;
-  color: #fff;
-}
-
-#laravel:hover {
-  color: #ff2d20;
-}
-
-#laravel-active {
-  color: #ff2d20;
-}
-
-#laravel-container:hover {
-  background-color: #ff2d20;
-  color: #fff;
-}
-
-#npm:hover {
-  color: #bc423b;
-}
-
-#npm-active {
-  color: #bc423b;
-}
-
-#npm-container:hover {
-  background-color: #bc423b;
-  color: #fff;
-}
-
-#node:hover {
-  color: #669c4f;
-}
-
-#node-active {
-  color: #669c4f;
-}
-
-#node-container:hover {
-  background-color: #669c4f;
-  color: #fff;
-}
-
-#dotnet:hover {
-  color: #5729dd;
-}
-
-#dotnet-active {
-  color: #5729dd;
-}
-
-#dotnet-container:hover {
-  background-color: #5729dd;
-  color: #fff;
-}
-
-#go:hover {
-  color: #25d9e3;
-}
-
-#go-active {
-  color: #25d9e3;
-}
-
-#go-container:hover {
-  background-color: #25d9e3;
-  color: #fff;
-}
-
-#csuite:hover {
-  background-color: #1e4d68;
-  color: #ffffff;
-}
-#senior:hover {
-  background-color: #681e1e;
-  color: #ffffff;
-}
-
-#midtier:hover {
-  background-color: #f4ff5d6f;
-  color: #ffffff;
-}
-
-#junior:hover {
-  background-color: #1e6827;
-  color: #ffffff;
-}
-#star-container:hover {
-  background-color: #f4ff5d6f;
-  color: #ffffff;
-}
-
-#bio {
-  width: 50%;
-}
-
 @media (max-width: 767px) {
   .h1 {
     font-size: 2rem;
@@ -820,7 +505,6 @@
   .emoji-container {
     min-width: 6rem;
     height: 2rem;
-    background-color: #333333;
     padding: 0.3;
     align-items: center;
     justify-content: center;

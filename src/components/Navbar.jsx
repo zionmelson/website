@@ -35,14 +35,18 @@ export default function Navbar() {
           <div className="navigation-screen">
             <div className="links">
               <a href="/">
-                <div className="link-container">home</div>
+                <h5 className="h5">
+                  <div className="link-container">home</div>
+                </h5>
               </a>
               <a href="/find-work">
-                <div className="link-container">find work</div>
+                <h5 className="h5">
+                  <div className="link-container">find work</div>
+                </h5>
               </a>
               <a href="/hire">
                 <h5 className="h5">
-                  <button className="emoji-container">hire an engineer</button>
+                  <button className="link-container">book a demo</button>
                 </h5>
               </a>
             </div>
