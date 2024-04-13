@@ -788,6 +788,7 @@ function Home() {
                         justifyContent: "center",
                         alignItems: "center",
                         margin: "0.5rem",
+                        width: "100%",
                       }}
                     >
                       <div
@@ -833,7 +834,6 @@ function Home() {
                         className="horizontal-content"
                         style={{
                           display: "flex",
-                          width: "100%",
                           marginBottom: "1rem",
                         }}
                       >
