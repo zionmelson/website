@@ -86,6 +86,7 @@ export default function Hire() {
           [engineer]: updatedPackages[engineer],
         },
       }));
+
       return updatedPackages;
     });
   };
@@ -257,8 +258,13 @@ export default function Hire() {
     const saved = localStorage.getItem("companies");
     const cachedPackages = localStorage.getItem("packages");
 
+    console.log("cached packages:", JSON.parse(cachedPackages));
+
     if (cachedPackages) {
-      setPackages(JSON.parse(cachedPackages));
+      setPackages(() => {
+        const updatedPackages = JSON.parse(cachedPackages);
+        return updatedPackages;
+      });
       setFormData({ ...formData, packages: JSON.parse(cachedPackages) });
     }
 
