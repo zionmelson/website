@@ -196,23 +196,44 @@ function Home() {
   };
 
   const addToPackages = (engineer) => {
-    setPackages((prevPackages) => ({
-      ...prevPackages,
-      [engineer]: Math.min(10, prevPackages[engineer] + 1),
-    }));
+    setPackages((prevPackages) => {
+      const updatedPackages = {
+        ...prevPackages,
+        [engineer]: Math.min(10, prevPackages[engineer] + 1),
+      };
 
-    localStorage.setItem("packages", JSON.stringify(packages));
+      localStorage.setItem("packages", JSON.stringify(updatedPackages));
 
-    setFormData({ ...formData, packages: { ...packages, [engineer]: 1 } });
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        packages: {
+          ...prevFormData.packages,
+          [engineer]: updatedPackages[engineer],
+        },
+      }));
+      return updatedPackages;
+    });
   };
 
   const removeFromPackages = (engineer) => {
-    setPackages((prevPackages) => ({
-      ...prevPackages,
-      [engineer]: Math.max(0, prevPackages[engineer] - 1),
-    }));
+    setPackages((prevPackages) => {
+      const updatedPackages = {
+        ...prevPackages,
+        [engineer]: Math.max(0, prevPackages[engineer] - 1),
+      };
 
-    setFormData({ ...formData, packages: packages });
+      localStorage.setItem("packages", JSON.stringify(updatedPackages));
+
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        packages: {
+          ...prevFormData.packages,
+          [engineer]: updatedPackages[engineer],
+        },
+      }));
+
+      return updatedPackages;
+    });
   };
 
   const setDiscord = async () => {
@@ -395,7 +416,7 @@ function Home() {
     setTimeout(() => setLoaded(true), 1250);
 
     return () => tl.kill();
-  }, [loaded]);
+  }, [loaded, packages]);
 
   return (
     <div className="main">

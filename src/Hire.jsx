@@ -70,6 +70,47 @@ export default function Hire() {
 
   const [sourceType, setSourceType] = useState("");
 
+  const addToPackages = (engineer) => {
+    setPackages((prevPackages) => {
+      const updatedPackages = {
+        ...prevPackages,
+        [engineer]: Math.min(10, prevPackages[engineer] + 1),
+      };
+
+      localStorage.setItem("packages", JSON.stringify(updatedPackages));
+
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        packages: {
+          ...prevFormData.packages,
+          [engineer]: updatedPackages[engineer],
+        },
+      }));
+      return updatedPackages;
+    });
+  };
+
+  const removeFromPackages = (engineer) => {
+    setPackages((prevPackages) => {
+      const updatedPackages = {
+        ...prevPackages,
+        [engineer]: Math.max(0, prevPackages[engineer] - 1),
+      };
+
+      localStorage.setItem("packages", JSON.stringify(updatedPackages));
+
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        packages: {
+          ...prevFormData.packages,
+          [engineer]: updatedPackages[engineer],
+        },
+      }));
+
+      return updatedPackages;
+    });
+  };
+
   const addCompany = (newCompany) => {
     const saved = localStorage.getItem("companies");
 
@@ -128,26 +169,6 @@ export default function Hire() {
     console.log("company removed:", company);
     console.log("previous companies:", companies);
     console.log("cached:", JSON.parse(saved));
-  };
-
-  const addToPackages = (engineer) => {
-    setPackages((prevPackages) => ({
-      ...prevPackages,
-      [engineer]: Math.min(10, prevPackages[engineer] + 1),
-    }));
-
-    localStorage.setItem("packages", JSON.stringify(packages));
-
-    setFormData({ ...formData, packages: { ...packages, [engineer]: 1 } });
-  };
-
-  const removeFromPackages = (engineer) => {
-    setPackages((prevPackages) => ({
-      ...prevPackages,
-      [engineer]: Math.max(0, prevPackages[engineer] - 1),
-    }));
-
-    setFormData({ ...formData, packages: { ...packages, [engineer]: 0 } });
   };
 
   const scrollToTarget = () => {
