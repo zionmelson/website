@@ -36,9 +36,6 @@ import pinterest from "./assets/svg/pinterest.svg";
 import tiktok from "./assets/svg/tiktok.svg";
 import logo from "./assets/svg/logo.svg";
 
-import gsap from "gsap";
-import SplitText from "split-text-js";
-
 import "./App.css";
 
 export default function Hire() {
@@ -65,15 +62,17 @@ export default function Hire() {
 
   const [submissionStatus, setSubmissionStatus] = useState(null);
   const [error, setError] = useState(null);
-  const [mobile, setMobile] = useState(false);
+  const targetRef = useRef(null);
 
+  const [mobile, setMobile] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [loaded, setLoaded] = useState(false);
 
   const [sourceType, setSourceType] = useState("");
 
   const addCompany = (newCompany) => {
+    const saved = localStorage.getItem("companies");
+
     if (
       companies.length < 6 &&
       !companies.find((company) => company.name === newCompany.name)
@@ -81,12 +80,21 @@ export default function Hire() {
       setCompanies((prevCompanies) => [...prevCompanies, newCompany]);
       setFormData({ ...formData, companies: [...companies, newCompany] });
 
+      localStorage.setItem(newCompany.name, JSON.stringify(newCompany));
+      localStorage.setItem(
+        "companies",
+        JSON.stringify([...companies, newCompany])
+      );
+
       console.log("company added:", newCompany);
-      console.log("companies:", companies);
+      console.log("previous companies:", companies);
+      console.log("cached:", JSON.parse(saved));
     }
   };
 
   const removeCompany = (company) => {
+    const saved = localStorage.getItem("companies");
+
     setCompanies((prevCompanies) =>
       prevCompanies.filter((prevCompany) => prevCompany.name !== company.name)
     );
@@ -96,6 +104,16 @@ export default function Hire() {
         (prevCompany) => prevCompany.name !== company
       ),
     });
+    localStorage.removeItem(company.name);
+    const updatedCompanies = companies.filter(
+      (prevCompany) => prevCompany.name !== company.name
+    );
+    console.log("updated companies:", updatedCompanies);
+    localStorage.setItem("companies", JSON.stringify(updatedCompanies));
+
+    console.log("company removed:", company);
+    console.log("previous companies:", companies);
+    console.log("cached:", JSON.parse(saved));
   };
 
   const addToPackages = (engineer) => {
@@ -103,6 +121,8 @@ export default function Hire() {
       ...prevPackages,
       [engineer]: Math.min(10, prevPackages[engineer] + 1),
     }));
+
+    localStorage.setItem("packages", JSON.stringify(packages));
 
     setFormData({ ...formData, packages: { ...packages, [engineer]: 1 } });
   };
@@ -115,14 +135,6 @@ export default function Hire() {
 
     setFormData({ ...formData, packages: { ...packages, [engineer]: 0 } });
   };
-
-  useEffect(() => {
-    if (window.screen.width < 780) {
-      setMobile(true);
-    }
-  }, []);
-
-  const targetRef = useRef(null);
 
   const scrollToTarget = () => {
     if (targetRef.current) {
@@ -167,6 +179,9 @@ export default function Hire() {
         setSubmissionStatus("success");
         setSubmitted(true);
 
+        localStorage.removeItem("companies");
+        localStorage.removeItem("packages");
+
         setFormData({
           first: "",
           last: "",
@@ -206,47 +221,27 @@ export default function Hire() {
   };
 
   useEffect(() => {
-    console.log("isLoaded", loaded);
+    const saved = localStorage.getItem("companies");
+    const cachedPackages = localStorage.getItem("packages");
 
-    if (loaded) {
-      const technologies = gsap.utils.toArray("#gsap");
-      const tl = gsap.timeline({ repeat: -1 });
-
-      technologies.forEach((technology) => {
-        const splitText = new SplitText(technology);
-
-        splitText.chars.forEach((char) => {
-          char.classList.add(`chars`);
-        });
-
-        tl.from(
-          splitText.chars,
-          {
-            opacity: 0,
-            fontWeight: 700,
-            y: 60,
-            rotateX: -35,
-            stagger: 0.02,
-          },
-          "<"
-        ).to(
-          splitText.chars,
-          {
-            opacity: 0,
-            fontWeight: 700,
-            y: -60,
-            rotateX: 35,
-            stagger: 0.02,
-          },
-          "<1.8"
-        );
-      });
-
-      return () => tl.kill();
+    if (cachedPackages) {
+      setPackages(JSON.parse(cachedPackages));
+      setFormData({ ...formData, packages: JSON.parse(cachedPackages) });
     }
 
-    setLoaded(true);
-  }, [loaded]);
+    if (saved) {
+      setCompanies([]);
+      JSON.parse(saved).forEach((company) => {
+        let name = localStorage.getItem(company.name);
+        console.log("name:", JSON.parse(name));
+        setCompanies((prevCompanies) => [...prevCompanies, JSON.parse(name)]);
+      });
+    }
+
+    if (window.screen.width < 1000) {
+      setMobile(true);
+    }
+  }, []);
 
   return (
     <div className="main">
@@ -260,19 +255,12 @@ export default function Hire() {
         }}
       >
         {submitted && submissionStatus === "success" ? (
-          <h1 className="h1">Hired a team 😉</h1>
+          <h1 className="h1">Got it. 👍</h1>
         ) : (
           <>
-            <h1 className="h1">Hire a team</h1>
+            <h1 className="h1">Ready to hire?</h1>
           </>
         )}
-
-        <h5 className="h5" style={{ marginBottom: "0" }}>
-          <button className="emoji-container" style={{ marginBottom: "1rem" }}>
-            Scrum Package
-          </button>
-        </h5>
-
         <div
           className="due-diligence-content"
           style={{
@@ -377,7 +365,6 @@ export default function Hire() {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-
                 margin: "0.5rem",
               }}
             >
@@ -1367,8 +1354,8 @@ export default function Hire() {
                   <option value="" selected disabled hidden>
                     Source type
                   </option>
-                  <option value="Direct-to-hire">Direct-to-Hire</option>
                   <option value="Scrum Package">Scrum Package</option>
+                  <option value="Direct-to-hire">Direct-to-Hire</option>
                 </select>
                 {sourceType === "Direct-to-hire" && (
                   <select
@@ -1381,21 +1368,23 @@ export default function Hire() {
                     required
                   >
                     <option value="" disabled hidden>
-                      Select a engineer type
+                      Select a position
                     </option>
+                    <option value="Staff Engineer">Product Manager</option>
+                    <option value="Staff Engineer">UI/UX Engineer</option>
                     <option value="Staff Engineer">Staff Engineer</option>
                     <option value="Senior Engineer">Senior Engineer</option>
                     <option value="Principal Engineer">
                       Principal Engineer
                     </option>
-                    <option value="Director of Engineering">
-                      Director of Engineering
+                    <option value="Engineering Director">
+                      Engineering Director
                     </option>
-                    <option value="VP of Engineering">VP of Engineering</option>
-                    <option value="Co-Founding Engineer">
-                      Co-Founding Engineer
-                    </option>
-                    <option value="CTO">CTO</option>
+                    <option value="Graphic Designer">Graphic Designer</option>
+                    <option value="Animator">Animator</option>
+                    <option value="Vice President">Vice President</option>
+                    <option value="Officer">Officer</option>
+                    <option value="Co-Founder">Co-Founder</option>
                   </select>
                 )}
                 <textarea
@@ -1409,6 +1398,9 @@ export default function Hire() {
                 <button
                   className="emoji-container"
                   type="submit"
+                  style={{
+                    marginBottom: "1rem",
+                  }}
                   onClick={scrollToTarget}
                 >
                   <h4 className="h4" style={{ margin: 0 }}>

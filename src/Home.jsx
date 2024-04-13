@@ -58,11 +58,8 @@ import pinterest from "./assets/svg/pinterest.svg";
 import tiktok from "./assets/svg/tiktok.svg";
 
 import github from "./assets/svg/github.svg";
-import aws from "./assets/svg/aws.svg";
-import gcp from "./assets/svg/gcp.svg";
-import azure from "./assets/svg/azure.svg";
-import docker from "./assets/svg/docker.svg";
-import terraform from "./assets/svg/terraform.svg";
+import figma from "./assets/svg/figma.svg";
+import notion from "./assets/svg/notion.svg";
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
@@ -118,13 +115,13 @@ function Home() {
     packages: {},
   });
 
+  const [discordCount, setDiscordCount] = useState(0);
+
   const [packages, setPackages] = useState({
     projectManager: 0,
     softwareEngineer: 0,
     graphicDesigner: 0,
   });
-
-  const [discordCount, setDiscordCount] = useState(0);
 
   const [companies, setCompanies] = useState([]);
 
@@ -139,6 +136,8 @@ function Home() {
   const [sourceType, setSourceType] = useState("");
 
   const addCompany = (newCompany) => {
+    const saved = localStorage.getItem("companies");
+
     if (
       companies.length < 6 &&
       !companies.find((company) => company.name === newCompany.name)
@@ -146,12 +145,21 @@ function Home() {
       setCompanies((prevCompanies) => [...prevCompanies, newCompany]);
       setFormData({ ...formData, companies: [...companies, newCompany] });
 
+      localStorage.setItem(newCompany.name, JSON.stringify(newCompany));
+      localStorage.setItem(
+        "companies",
+        JSON.stringify([...companies, newCompany])
+      );
+
       console.log("company added:", newCompany);
-      console.log("companies:", companies);
+      console.log("previous companies:", companies);
+      console.log("cached:", JSON.parse(saved));
     }
   };
 
   const removeCompany = (company) => {
+    const saved = localStorage.getItem("companies");
+
     setCompanies((prevCompanies) =>
       prevCompanies.filter((prevCompany) => prevCompany.name !== company.name)
     );
@@ -161,6 +169,16 @@ function Home() {
         (prevCompany) => prevCompany.name !== company
       ),
     });
+    localStorage.removeItem(company.name);
+    const updatedCompanies = companies.filter(
+      (prevCompany) => prevCompany.name !== company.name
+    );
+    console.log("updated companies:", updatedCompanies);
+    localStorage.setItem("companies", JSON.stringify(updatedCompanies));
+
+    console.log("company removed:", company);
+    console.log("previous companies:", companies);
+    console.log("cached:", JSON.parse(saved));
   };
 
   const addToPackages = (engineer) => {
@@ -168,6 +186,8 @@ function Home() {
       ...prevPackages,
       [engineer]: Math.min(10, prevPackages[engineer] + 1),
     }));
+
+    localStorage.setItem("packages", JSON.stringify(packages));
 
     setFormData({ ...formData, packages: { ...packages, [engineer]: 1 } });
   };
@@ -178,7 +198,7 @@ function Home() {
       [engineer]: Math.max(0, prevPackages[engineer] - 1),
     }));
 
-    setFormData({ ...formData, packages: { ...packages, [engineer]: 0 } });
+    setFormData({ ...formData, packages: packages });
   };
 
   const setDiscord = async () => {
@@ -191,13 +211,6 @@ function Home() {
     console.log(json.members.length);
   };
 
-  useEffect(() => {
-    setDiscord();
-    if (window.screen.width < 780) {
-      setMobile(true);
-    }
-  }, []);
-
   const targetRef = useRef(null);
   const sourcedRef = useRef(null);
   const directRef = useRef(null);
@@ -208,17 +221,6 @@ function Home() {
       const offsetTop = -100;
       const top =
         targetRef.current.getBoundingClientRect().top +
-        window.pageYOffset +
-        offsetTop;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
-  };
-
-  const scrollToSourced = () => {
-    if (sourcedRef.current) {
-      const offsetTop = -75;
-      const top =
-        sourcedRef.current.getBoundingClientRect().top +
         window.pageYOffset +
         offsetTop;
       window.scrollTo({ top, behavior: "smooth" });
@@ -279,6 +281,9 @@ function Home() {
         setSubmissionStatus("success");
         setSubmitted(true);
 
+        localStorage.removeItem("companies");
+        localStorage.removeItem("packages");
+
         setFormData({
           first: "",
           last: "",
@@ -288,12 +293,8 @@ function Home() {
           search: "",
           developer: "",
           message: "",
-        });
-
-        setPackages({
-          projectManager: 0,
-          softwareEngineer: 0,
-          graphicDesigner: 0,
+          companies: [],
+          packages: {},
         });
 
         setCompanies([]);
@@ -318,7 +319,32 @@ function Home() {
   };
 
   useEffect(() => {
-    console.log("isLoaded", loaded);
+    const saved = localStorage.getItem("companies");
+    const cachedPackages = localStorage.getItem("packages");
+
+    console.log("saved companies:", JSON.parse(saved));
+    console.log("cached packages:", JSON.parse(cachedPackages));
+
+    if (cachedPackages) {
+      setPackages(JSON.parse(cachedPackages));
+      setFormData({ ...formData, packages: JSON.parse(cachedPackages) });
+    }
+
+    if (saved) {
+      setCompanies([]);
+      JSON.parse(saved).forEach((company) => {
+        let name = localStorage.getItem(company.name);
+        setCompanies((prevCompanies) => [...prevCompanies, JSON.parse(name)]);
+      });
+    }
+
+    if (window.screen.width < 1000) {
+      setMobile(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    setDiscord();
 
     if (loaded) {
       const technologies = gsap.utils.toArray("#gsap");
@@ -366,7 +392,7 @@ function Home() {
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1">
-            Hire a recently laid-off
+            Hire a big tech
             <div className="span">
               {loaded ? (
                 <>
@@ -427,7 +453,7 @@ function Home() {
             for your startup
           </h1>
           <h2 className="h2">
-            we source recently laid-off talent from tech giants and unicorns
+            we source tech talent from tech giants and unicorns
           </h2>
           {mobile ? (
             <div className="icons" style={{ marginBottom: "2rem" }}>
@@ -464,17 +490,12 @@ function Home() {
               textAlign: "start",
             }}
           >
-            <h1 className="h1">Hiring laid-off talent</h1>
+            <h1 className="h1">Hiring big tech talent</h1>
             <h3 className="h3">
-              The recent major tech layoffs have created an opportunity for
-              startup companies that need to hire and welcome new, vetted
-              engineering teams.
+              We provide startup founders with the flexibily and ease of
+              onboarding vetted engineering teams from large tech companies.
             </h3>
-            <h5 className="h5">
-              At learnmutiny we have focused our work to revolve around this
-              newly shapen reality and help make the onboarding of recent
-              lay-offs as seamless as possible.
-            </h5>
+            <h5 className="h5">Our sourcing packages:</h5>
             <div
               style={{
                 marginTop: "1rem",
@@ -568,17 +589,9 @@ function Home() {
               >
                 <h3 className="h3">1. Initial Due Diligence Screening</h3>
                 <h5 className="h5">
-                  Our goal with the initial due diligence screening is to
-                  condense down the exact requirements and timelines for
+                  Our goal with our initial due diligence screening is
+                  condensing down the exact requirements and timelines for
                   successful project deployment.
-                </h5>
-                <h5 className="h5">
-                  During this process, our consultants work with your team to
-                  understand the current state of your application and the
-                  desired state of the application. Our team has industry
-                  experience in the most commonly used technologies and cloud
-                  infrastructures and can help your team plan accordingly for
-                  project deployment.
                 </h5>
                 {mobile ? null : (
                   <div className="due-diligence-content">
@@ -1113,128 +1126,123 @@ function Home() {
                     <div
                       className="vertical-content"
                       style={{
+                        width: "35%",
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
                         alignItems: "center",
-                        width: "30%",
                       }}
                     >
                       <div
-                        className="horizontal-content"
+                        className="vertical-content"
                         style={{
                           display: "flex",
                           width: "100%",
                           marginBottom: "1rem",
                         }}
                       >
-                        <div className="vertical-content">
-                          <h5 className="h5">
-                            <button className="emoji-container">
-                              Managers: {packages.projectManager}
-                            </button>
-                          </h5>
-                          <div
-                            className="horizontal-content"
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-evenly",
-                              width: "100%",
-                            }}
+                        <h5 className="h5">
+                          <button className="emoji-container">
+                            Managers: {packages.projectManager}
+                          </button>
+                        </h5>
+                        <div
+                          className="horizontal-content"
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            gap: "2rem",
+                            width: "100%",
+                          }}
+                        >
+                          <button
+                            className="buttons"
+                            onClick={() => removeFromPackages("projectManager")}
                           >
-                            <button
-                              className="buttons"
-                              onClick={() =>
-                                removeFromPackages("projectManager")
-                              }
-                            >
-                              <FaMinus className="operator" />
-                            </button>
-                            <button
-                              className="buttons"
-                              onClick={() => addToPackages("projectManager")}
-                            >
-                              <FaPlus className="operator" />
-                            </button>
-                          </div>
+                            <FaMinus className="operator" />
+                          </button>
+                          <button
+                            className="buttons"
+                            onClick={() => addToPackages("projectManager")}
+                          >
+                            <FaPlus className="operator" />
+                          </button>
                         </div>
                       </div>
                       <div
-                        className="horizontal-content"
+                        className="vertical-content"
                         style={{
                           display: "flex",
                           width: "100%",
                           marginBottom: "1rem",
                         }}
                       >
-                        <div className="vertical-content">
-                          <h5 className="h5">
-                            <button className="emoji-container">
-                              Engineers: {packages.softwareEngineer}
-                            </button>
-                          </h5>
-                          <div
-                            className="horizontal-content"
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-evenly",
-                              width: "100%",
-                            }}
+                        <h5 className="h5">
+                          <button className="emoji-container">
+                            Engineers: {packages.softwareEngineer}
+                          </button>
+                        </h5>
+                        <div
+                          className="horizontal-content"
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            gap: "2rem",
+                            width: "100%",
+                          }}
+                        >
+                          <button
+                            className="buttons"
+                            onClick={() =>
+                              removeFromPackages("softwareEngineer")
+                            }
                           >
-                            <button
-                              className="buttons"
-                              onClick={() =>
-                                removeFromPackages("softwareEngineer")
-                              }
-                            >
-                              <FaMinus className="operator" />
-                            </button>
-                            <button
-                              className="buttons"
-                              onClick={() => addToPackages("softwareEngineer")}
-                            >
-                              <FaPlus className="operator" />
-                            </button>
-                          </div>
+                            <FaMinus className="operator" />
+                          </button>
+                          <button
+                            className="buttons"
+                            onClick={() => addToPackages("softwareEngineer")}
+                          >
+                            <FaPlus className="operator" />
+                          </button>
                         </div>
                       </div>
                       <div
-                        className="horizontal-content"
+                        className="vertical-content"
                         style={{
                           display: "flex",
                           width: "100%",
                           marginBottom: "1rem",
                         }}
                       >
-                        <div className="vertical-content">
-                          <h5 className="h5">
-                            <button className="emoji-container">
-                              Designers: {packages.graphicDesigner}
-                            </button>
-                          </h5>
-                          <div
-                            className="horizontal-content"
-                            style={{
-                              display: "flex",
-                              justifyContent: "space-evenly",
-                              width: "100%",
-                            }}
+                        <h5 className="h5">
+                          <button className="emoji-container">
+                            Designers: {packages.graphicDesigner}
+                          </button>
+                        </h5>
+                        <div
+                          className="horizontal-content"
+                          style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            gap: "2rem",
+                            width: "100%",
+                          }}
+                        >
+                          <button
+                            className="buttons"
+                            onClick={() =>
+                              removeFromPackages("graphicDesigner")
+                            }
                           >
-                            <button
-                              className="buttons"
-                              onClick={() =>
-                                removeFromPackages("graphicDesigner")
-                              }
-                            >
-                              <FaMinus className="operator" />
-                            </button>
-                            <button
-                              className="buttons"
-                              onClick={() => addToPackages("graphicDesigner")}
-                            >
-                              <FaPlus className="operator" />
-                            </button>
-                          </div>
+                            <FaMinus className="operator" />
+                          </button>
+                          <button
+                            className="buttons"
+                            onClick={() => addToPackages("graphicDesigner")}
+                          >
+                            <FaPlus className="operator" />
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -1894,7 +1902,7 @@ function Home() {
 
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire recently laid-off team
+                  hire a team
                 </button>
               </h5>
             </div>
@@ -1913,161 +1921,46 @@ function Home() {
                 <h5 className="h5">
                   Our team will work with you to understand the technical
                   requirements and company culture fit to help us determine the
-                  complexity of the role and help us source the ideal engineer
-                  for your team.
-                </h5>
-                <h5 className="h5">
-                  During this process, our consultants will work with your team
-                  to understand the exact requirements for the role. Our team
-                  has industry experience in the most commonly used technologies
-                  and cloud infrastructures and can help you understand the
-                  hidden complexities of the search.
+                  ideal employee for your team.
                 </h5>
                 <h5 className="h5">
                   <button
                     className="emoji-container"
                     id="github-container"
                     style={{
-                      marginBottom: "1rem",
                       padding: "1rem",
                       width: "100%",
+                      marginBottom: "0.5rem",
                     }}
                   >
                     <img src={github} className="emoji-2" alt="calendar" />
                     GitHub
                   </button>
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    style={{
+                      padding: "1rem",
+                      width: "100%",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    <img src={figma} className="emoji-2" alt="calendar" />
+                    Figma
+                  </button>
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    style={{
+                      padding: "1rem",
+                      width: "100%",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    <img src={notion} className="emoji-2" alt="calendar" />
+                    Notion
+                  </button>
                 </h5>
-                {mobile ? (
-                  <span
-                    style={{
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "1rem",
-                    }}
-                  >
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="aws-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={aws} className="emoji-2" alt="calendar" />
-                        AWS
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="azure-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={azure} className="emoji-2" alt="calendar" />
-                        Azure
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="docker-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={docker} className="emoji-2" alt="calendar" />
-                        Docker
-                      </button>
-                    </h5>
-                  </span>
-                ) : (
-                  <span
-                    style={{
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      flexDirection: "row",
-                      gap: "1rem",
-                    }}
-                  >
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="aws-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={aws} className="emoji-2" alt="calendar" />
-                        AWS
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="gcp-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={gcp} className="emoji-2" alt="calendar" />
-                        Google Cloud
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="azure-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={azure} className="emoji-2" alt="calendar" />
-                        Azure
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="docker-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img src={docker} className="emoji-2" alt="calendar" />
-                        Docker
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        id="terraform-container"
-                        style={{
-                          marginBottom: "1rem",
-                          padding: "1rem",
-                        }}
-                      >
-                        <img
-                          src={terraform}
-                          className="emoji-2"
-                          alt="calendar"
-                        />
-                        Terraform
-                      </button>
-                    </h5>
-                  </span>
-                )}
               </div>
               <a
                 href="https://app.eraser.io/workspace/hnBS71Or5zh5z26MQ4r1?origin=share"
@@ -2088,7 +1981,7 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* lay-offs */}
+      {/* discord */}
       <div
         className="box"
         style={{
@@ -2103,7 +1996,7 @@ function Home() {
             width: "100%",
           }}
         >
-          <h1 className="h1">Sourced laid-off talent</h1>
+          <h1 className="h1">Looking for work?</h1>
           {mobile ? (
             <iframe
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
@@ -2133,9 +2026,9 @@ function Home() {
       >
         <div className="vertical-content" style={{ width: "100%" }}>
           {submitted && submissionStatus === "success" ? (
-            <h1 className="h1">Booked a demo 😉</h1>
+            <h1 className="h1">Got it. 👍</h1>
           ) : (
-            <h1 className="h1">Book a demo</h1>
+            <h1 className="h1">Looking to hire?</h1>
           )}
           {submitted && submissionStatus === "success" ? (
             <>
@@ -2193,7 +2086,7 @@ function Home() {
                 onChange={handleChange}
                 required
               >
-                <option value="" selected disabled hidden>
+                <option value="" disabled hidden>
                   Company title
                 </option>
                 <option value="Engineer/Analyst">Engineer or Analyst</option>
@@ -2214,11 +2107,11 @@ function Home() {
                 onChange={handleChange}
                 required
               >
-                <option value="" selected disabled hidden>
+                <option value="" disabled hidden>
                   Source type
                 </option>
-                <option value="Direct-to-hire">Direct-to-Hire</option>
                 <option value="Scrum Package">Scrum Package</option>
+                <option value="Direct-to-hire">Direct-to-Hire</option>
               </select>
               {sourceType === "Direct-to-hire" && (
                 <select
@@ -2231,19 +2124,21 @@ function Home() {
                   required
                 >
                   <option value="" disabled hidden>
-                    Select a engineer type
+                    Select a position
                   </option>
+                  <option value="Staff Engineer">Product Manager</option>
+                  <option value="Staff Engineer">UI/UX Engineer</option>
                   <option value="Staff Engineer">Staff Engineer</option>
                   <option value="Senior Engineer">Senior Engineer</option>
                   <option value="Principal Engineer">Principal Engineer</option>
-                  <option value="Director of Engineering">
-                    Director of Engineering
+                  <option value="Engineering Director">
+                    Engineering Director
                   </option>
-                  <option value="VP of Engineering">VP of Engineering</option>
-                  <option value="Co-Founding Engineer">
-                    Co-Founding Engineer
-                  </option>
-                  <option value="CTO">CTO</option>
+                  <option value="Graphic Designer">Graphic Designer</option>
+                  <option value="Animator">Animator</option>
+                  <option value="Vice President">Vice President</option>
+                  <option value="Officer">Officer</option>
+                  <option value="Co-Founder">Co-Founder</option>
                 </select>
               )}
               <textarea
@@ -2258,6 +2153,9 @@ function Home() {
                 className="emoji-container"
                 type="submit"
                 onClick={scrollToTarget}
+                style={{
+                  marginBottom: "1rem",
+                }}
               >
                 <h4 className="h4" style={{ margin: 0 }}>
                   Submit
@@ -2298,10 +2196,10 @@ function Home() {
             <h5 className="h5">
               <button
                 className="emoji-container"
-                onClick={scrollToSourced}
+                onClick={scrollToDirect}
                 style={{ marginBottom: "1rem" }}
               >
-                view our talent
+                get started
               </button>
             </h5>
             <h5 className="h5">replacement guarantee</h5>
