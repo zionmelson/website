@@ -138,12 +138,26 @@ function Home() {
   const addCompany = (newCompany) => {
     const saved = localStorage.getItem("companies");
 
+    console.log("form:", formData);
+
     if (
       companies.length < 6 &&
       !companies.find((company) => company.name === newCompany.name)
     ) {
-      setCompanies((prevCompanies) => [...prevCompanies, newCompany]);
-      setFormData({ ...formData, companies: [...companies, newCompany] });
+      setCompanies((prevCompanies) => {
+        const updatedCompanies = [...prevCompanies, newCompany];
+        return updatedCompanies;
+      });
+
+      setFormData((prevData) => {
+        console.log("Previous Data:", prevData);
+        const updatedData = {
+          ...prevData,
+          companies: [...prevData.companies, newCompany],
+        };
+        console.log("Updated Data:", updatedData);
+        return updatedData;
+      });
 
       localStorage.setItem(newCompany.name, JSON.stringify(newCompany));
       localStorage.setItem(
@@ -298,7 +312,11 @@ function Home() {
         });
 
         setCompanies([]);
-        setFormData({ ...formData, companies: [] });
+        setPackages({
+          projectManager: 0,
+          softwareEngineer: 0,
+          graphicDesigner: 0,
+        });
       } else {
         console.error("response error:", data.error, response.status);
         setSubmissionStatus("failure");
@@ -380,7 +398,7 @@ function Home() {
       );
     });
 
-    setTimeout(() => setLoaded(true), 500);
+    setTimeout(() => setLoaded(true), 800);
 
     return () => tl.kill();
   }, [loaded]);

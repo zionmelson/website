@@ -134,6 +134,13 @@
   display: none;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 767px) {
   .link-container {
     min-width: 10rem;
@@ -146,13 +153,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
-
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .navbar {
@@ -242,6 +242,18 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .link-container {
+    min-width: 10rem;
+    height: 2.5rem;
+    background-color: #302f31;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .navbar {
     padding-right: 5rem;
     padding-left: 5rem;
