@@ -248,7 +248,7 @@
   top: 8rem;
   cursor: pointer;
   animation: shake 0.9s ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 
 .daytime:hover {
