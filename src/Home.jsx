@@ -395,7 +395,7 @@ function Home() {
     setTimeout(() => setLoaded(true), 1250);
 
     return () => tl.kill();
-  }, [loaded, formData]);
+  }, [loaded]);
 
   return (
     <div className="main">
