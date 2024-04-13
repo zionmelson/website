@@ -396,7 +396,10 @@ function Home() {
     setDiscord();
 
     if (cachedPackages) {
-      setPackages(JSON.parse(cachedPackages));
+      setPackages(() => {
+        const updatedPackages = JSON.parse(cachedPackages);
+        return updatedPackages;
+      });
       setFormData({ ...formData, packages: JSON.parse(cachedPackages) });
     }
 
@@ -416,7 +419,7 @@ function Home() {
     setTimeout(() => setLoaded(true), 1250);
 
     return () => tl.kill();
-  }, [loaded, packages]);
+  }, [loaded]);
 
   return (
     <div className="main">
