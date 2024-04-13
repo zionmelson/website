@@ -339,6 +339,7 @@ function Home() {
     }
 
     if (window.screen.width < 1000) {
+      // setTimeout(() => setMobile(true), 200);
       setMobile(true);
     }
   }, []);
@@ -455,14 +456,23 @@ function Home() {
           <h2 className="h2">
             we source tech talent from tech giants and unicorns
           </h2>
-          {mobile ? (
+          {mobile && loaded && (
             <div className="icons" style={{ marginBottom: "2rem" }}>
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
               <RiTwitterXFill id="X" className="icon" />
               <TbBrandAirbnb id="airbnb" className="icon" />
             </div>
-          ) : (
+          )}
+          {mobile && !loaded && (
+            <div className="icons" style={{ marginBottom: "2rem" }}>
+              <SiCashapp id="cashapp" className="icon" />
+              <FaMeta id="meta" className="icon" />
+              <RiTwitterXFill id="X" className="icon" />
+              <TbBrandAirbnb id="airbnb" className="icon" />
+            </div>
+          )}
+          {!mobile && loaded && (
             <div className="icons" style={{ marginBottom: "2rem" }}>
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
@@ -471,6 +481,16 @@ function Home() {
               <FaUber id="uber" className="icon" />
               <FaStripeS id="stripe" className="icon" />
               <FaDiscord id="discord" className="icon" />
+            </div>
+          )}
+          {!mobile && !loaded && (
+            <div className="icons" style={{ marginBottom: "2rem" }}>
+              <img
+                src={logo}
+                style={{
+                  width: "5rem",
+                }}
+              />
             </div>
           )}
           <h2 className="h2">and place them at your startup company</h2>
