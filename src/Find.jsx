@@ -72,7 +72,7 @@ function Find() {
                 display: "flex",
                 alignItems: "flex-start",
                 justifyContent: "flex-start",
-                gap: "0.15rem",
+                gap: "0.25rem",
                 marginBottom: "1rem",
               }}
             >
@@ -81,7 +81,7 @@ function Find() {
                 style={{ marginTop: "0.3rem" }}
               />
               <h3 className="h3" style={{ marginBottom: "0" }}>
-                all of our live positions are announced on our server.
+                live positions are announced in our server.
               </h3>
             </span>
           ) : (
@@ -96,7 +96,7 @@ function Find() {
             >
               <FaRegDotCircle className="record" />
               <h3 className="h3" style={{ marginBottom: "0" }}>
-                all of our live positions are announced on our server.
+                live positions are announced in our server.
               </h3>
             </span>
           )}
