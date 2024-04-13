@@ -8,6 +8,8 @@ import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
 import logo from "./assets/svg/logo.svg";
 
+import { FaRegDotCircle } from "react-icons/fa";
+
 import "./App.css";
 import { useEffect } from "react";
 
@@ -32,7 +34,7 @@ function Find() {
   };
 
   useEffect(() => {
-    if (window.screen.width < 780) {
+    if (window.screen.width < 1100) {
       setMobile(true);
     }
 
@@ -64,9 +66,20 @@ function Find() {
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1">We take a different approach</h1>
-          <h3 className="h3">
-            all of our positions are announced on our server.
-          </h3>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0.25rem",
+              marginBottom: "1rem",
+            }}
+          >
+            <FaRegDotCircle className="record" />
+            <h3 className="h3" style={{ marginBottom: "0" }}>
+              all of our live positions are announced on our server.
+            </h3>
+          </span>
           <h5 className="h5">
             <button
               className="emoji-container"
