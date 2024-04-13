@@ -337,36 +337,10 @@ function Home() {
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem("companies");
-    const cachedPackages = localStorage.getItem("packages");
-
-    console.log("saved companies:", JSON.parse(saved));
-    console.log("cached packages:", JSON.parse(cachedPackages));
-
-    if (cachedPackages) {
-      setPackages(JSON.parse(cachedPackages));
-      setFormData({ ...formData, packages: JSON.parse(cachedPackages) });
-    }
-
-    if (saved) {
-      setCompanies([]);
-      JSON.parse(saved).forEach((company) => {
-        let name = localStorage.getItem(company.name);
-        setCompanies((prevCompanies) => [...prevCompanies, JSON.parse(name)]);
-      });
-    }
-
-    if (window.screen.width < 1000) {
-      // setTimeout(() => setMobile(true), 200);
-      setMobile(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    setDiscord();
-
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
+    const saved = localStorage.getItem("companies");
+    const cachedPackages = localStorage.getItem("packages");
 
     technologies.forEach((technology) => {
       const splitText = new SplitText(technology);
@@ -398,10 +372,30 @@ function Home() {
       );
     });
 
-    setTimeout(() => setLoaded(true), 800);
+    setDiscord();
+
+    if (cachedPackages) {
+      setPackages(JSON.parse(cachedPackages));
+      setFormData({ ...formData, packages: JSON.parse(cachedPackages) });
+    }
+
+    if (saved) {
+      setCompanies([]);
+      JSON.parse(saved).forEach((company) => {
+        let name = localStorage.getItem(company.name);
+        setCompanies((prevCompanies) => [...prevCompanies, JSON.parse(name)]);
+      });
+    }
+
+    if (window.screen.width < 1000) {
+      // setTimeout(() => setMobile(true), 200);
+      setMobile(true);
+    }
+
+    setTimeout(() => setLoaded(true), 1250);
 
     return () => tl.kill();
-  }, [loaded]);
+  }, [loaded, formData]);
 
   return (
     <div className="main">
@@ -474,41 +468,30 @@ function Home() {
           <h2 className="h2">
             we source tech talent from tech giants and unicorns
           </h2>
-          {mobile && loaded && (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
+          {loaded && (
+            <div
+              className={`icons ${mobile ? "mobile" : ""}`}
+              style={{ marginBottom: "2rem", height: "5rem" }}
+            >
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
               <RiTwitterXFill id="X" className="icon" />
               <TbBrandAirbnb id="airbnb" className="icon" />
+              {!mobile && (
+                <>
+                  <FaUber id="uber" className="icon" />
+                  <FaStripeS id="stripe" className="icon" />
+                  <FaDiscord id="discord" className="icon" />
+                </>
+              )}
             </div>
           )}
-          {mobile && !loaded && (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <SiCashapp id="cashapp" className="icon" />
-              <FaMeta id="meta" className="icon" />
-              <RiTwitterXFill id="X" className="icon" />
-              <TbBrandAirbnb id="airbnb" className="icon" />
-            </div>
-          )}
-          {!mobile && loaded && (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <SiCashapp id="cashapp" className="icon" />
-              <FaMeta id="meta" className="icon" />
-              <RiTwitterXFill id="X" className="icon" />
-              <TbBrandAirbnb id="airbnb" className="icon" />
-              <FaUber id="uber" className="icon" />
-              <FaStripeS id="stripe" className="icon" />
-              <FaDiscord id="discord" className="icon" />
-            </div>
-          )}
-          {!mobile && !loaded && (
-            <div className="icons" style={{ marginBottom: "2rem" }}>
-              <img
-                src={logo}
-                style={{
-                  width: "5rem",
-                }}
-              />
+          {!loaded && (
+            <div
+              className={`icons ${mobile ? "mobile" : ""}`}
+              style={{ marginBottom: "2rem", height: "5rem" }}
+            >
+              <img src={logo} id="icon" />
             </div>
           )}
           <h2 className="h2">and place them at your startup company</h2>
