@@ -346,44 +346,42 @@ function Home() {
   useEffect(() => {
     setDiscord();
 
-    if (loaded) {
-      const technologies = gsap.utils.toArray("#gsap");
-      const tl = gsap.timeline({ repeat: -1 });
+    const technologies = gsap.utils.toArray("#gsap");
+    const tl = gsap.timeline({ repeat: -1 });
 
-      technologies.forEach((technology) => {
-        const splitText = new SplitText(technology);
+    technologies.forEach((technology) => {
+      const splitText = new SplitText(technology);
 
-        splitText.chars.forEach((char) => {
-          char.classList.add(`chars`);
-        });
-
-        tl.from(
-          splitText.chars,
-          {
-            opacity: 0,
-            fontWeight: 700,
-            y: 60,
-            rotateX: -35,
-            stagger: 0.02,
-          },
-          "<"
-        ).to(
-          splitText.chars,
-          {
-            opacity: 0,
-            fontWeight: 700,
-            y: -60,
-            rotateX: 35,
-            stagger: 0.02,
-          },
-          "<1.8"
-        );
+      splitText.chars.forEach((char) => {
+        char.classList.add(`chars`);
       });
 
-      return () => tl.kill();
-    }
+      tl.from(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: 60,
+          rotateX: -35,
+          stagger: 0.02,
+        },
+        "<"
+      ).to(
+        splitText.chars,
+        {
+          opacity: 0,
+          fontWeight: 700,
+          y: -60,
+          rotateX: 35,
+          stagger: 0.02,
+        },
+        "<1.8"
+      );
+    });
 
-    setLoaded(true);
+    setTimeout(() => setLoaded(true), 500);
+
+    return () => tl.kill();
   }, [loaded]);
 
   return (
@@ -393,63 +391,67 @@ function Home() {
         <div className="vertical-content">
           <h1 className="h1">
             Hire a big tech
-            <div className="span">
-              {loaded ? (
-                <>
-                  <h2 className="h1" id="gsap">
-                    full-stack developer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    back-end developer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    systems engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    software architect
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    regression engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    cloud engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    blockchain engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    devops engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    database engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    data engineer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    project manager
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    ui/ux designer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    graphic designer
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    product manager
-                  </h2>
-                  <h2 className="h1" id="gsap">
-                    scrum master
-                  </h2>
-                </>
-              ) : (
-                <>
-                  <h2 className="h1" id="loading">
-                    loading...
-                  </h2>
-                </>
-              )}
-            </div>
+            {loaded ? (
+              <div className="span">
+                {loaded ? (
+                  <>
+                    <h2 className="h1" id="gsap">
+                      full-stack developer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      back-end developer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      systems engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      software architect
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      regression engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      cloud engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      blockchain engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      devops engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      database engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      data engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      project manager
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      ui/ux designer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      graphic designer
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      product manager
+                    </h2>
+                    <h2 className="h1" id="gsap">
+                      scrum master
+                    </h2>
+                  </>
+                ) : (
+                  <>
+                    <h2 className="h1" id="loading">
+                      loading...
+                    </h2>
+                  </>
+                )}
+              </div>
+            ) : (
+              <div className="span"></div>
+            )}
             for your startup
           </h1>
           <h2 className="h2">
