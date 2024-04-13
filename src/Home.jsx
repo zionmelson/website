@@ -443,9 +443,7 @@ function Home() {
                   </>
                 ) : (
                   <>
-                    <h2 className="h1" id="loading">
-                      loading...
-                    </h2>
+                    <div className="span"></div>
                   </>
                 )}
               </div>
