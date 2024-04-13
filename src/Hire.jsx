@@ -73,12 +73,26 @@ export default function Hire() {
   const addCompany = (newCompany) => {
     const saved = localStorage.getItem("companies");
 
+    console.log("form:", formData);
+
     if (
       companies.length < 6 &&
       !companies.find((company) => company.name === newCompany.name)
     ) {
-      setCompanies((prevCompanies) => [...prevCompanies, newCompany]);
-      setFormData({ ...formData, companies: [...companies, newCompany] });
+      setCompanies((prevCompanies) => {
+        const updatedCompanies = [...prevCompanies, newCompany];
+        return updatedCompanies;
+      });
+
+      setFormData((prevData) => {
+        console.log("Previous Data:", prevData);
+        const updatedData = {
+          ...prevData,
+          companies: [...prevData.companies, newCompany],
+        };
+        console.log("Updated Data:", updatedData);
+        return updatedData;
+      });
 
       localStorage.setItem(newCompany.name, JSON.stringify(newCompany));
       localStorage.setItem(
@@ -198,9 +212,7 @@ export default function Hire() {
           softwareEngineer: 0,
           graphicDesigner: 0,
         });
-
         setCompanies([]);
-        setFormData({ ...formData, companies: [] });
       } else {
         console.error("response error:", data.error, response.status);
         setSubmissionStatus("failure");

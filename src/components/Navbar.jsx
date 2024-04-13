@@ -31,27 +31,6 @@ export default function Navbar() {
   return (
     <>
       <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        {isNavOpen && (
-          <div className="navigation-screen">
-            <div className="links">
-              <a href="/">
-                <h5 className="h5">
-                  <div className="link-container">home</div>
-                </h5>
-              </a>
-              <a href="/find-work">
-                <h5 className="h5">
-                  <div className="link-container">find work</div>
-                </h5>
-              </a>
-              <a href="/hire">
-                <h5 className="h5">
-                  <button className="link-container">book a demo</button>
-                </h5>
-              </a>
-            </div>
-          </div>
-        )}
         <a href="/">
           <div className={`normal-logo ${scrolled ? "logo-scrolled" : ""}`}>
             <img src={learnmutiny} className="og-logo" alt="logo" />
@@ -77,6 +56,27 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
+        {isNavOpen && (
+          <div className="navigation-screen">
+            <div className="links">
+              <a href="/">
+                <h5 className="h5">
+                  <div className="link-container">home</div>
+                </h5>
+              </a>
+              <a href="/find-work">
+                <h5 className="h5">
+                  <div className="link-container">find work</div>
+                </h5>
+              </a>
+              <a href="/hire">
+                <h5 className="h5">
+                  <button className="link-container">book a demo</button>
+                </h5>
+              </a>
+            </div>
+          </div>
+        )}
         {isNavOpen ? (
           <div className="navigation-buttons-mobile">
             <button onClick={toggleMenu}>
