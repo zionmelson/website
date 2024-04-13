@@ -546,26 +546,6 @@ function Home() {
                       </button>
                     </h5>
                   </div>
-                  <div className="stats-content">
-                    <div className="vertical-content">
-                      <h6 className="number">
-                        <Number n={210 + discordCount} />
-                      </h6>
-                      <h5 className="h5">Engineers sourced</h5>
-                    </div>
-                    <div className="vertical-content">
-                      <h6 className="number">
-                        <Number n={40} />
-                      </h6>
-                      <h5 className="h5">Engineers matched</h5>
-                    </div>
-                    <div className="vertical-content">
-                      <h6 className="number">
-                        <Percent n={94} />
-                      </h6>
-                      <h5 className="h5">Placement satisfaction</h5>
-                    </div>
-                  </div>
                 </div>
               </>
             </div>
@@ -1978,6 +1958,26 @@ function Home() {
                 </button>
               </h5>
             </div>
+          </div>
+        </div>
+        <div className="stats-content">
+          <div className="vertical-content">
+            <h6 className="number">
+              <Number n={210 + discordCount} />
+            </h6>
+            <h5 className="h5">Engineers sourced</h5>
+          </div>
+          <div className="vertical-content">
+            <h6 className="number">
+              <Number n={40} />
+            </h6>
+            <h5 className="h5">Engineers matched</h5>
+          </div>
+          <div className="vertical-content">
+            <h6 className="number">
+              <Percent n={94} />
+            </h6>
+            <h5 className="h5">Placement satisfaction</h5>
           </div>
         </div>
       </div>
