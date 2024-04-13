@@ -410,7 +410,12 @@ export default function Hire() {
                   marginBottom: "1rem",
                 }}
               >
-                <div className="vertical-content">
+                <div
+                  className="vertical-content"
+                  style={{
+                    width: "100%",
+                  }}
+                >
                   <h5 className="h5">
                     <button className="emoji-container">
                       Managers: {packages.projectManager}
@@ -420,7 +425,8 @@ export default function Hire() {
                     className="horizontal-content"
                     style={{
                       display: "flex",
-                      justifyContent: "space-evenly",
+                      justifyContent: "center",
+                      gap: "2rem",
                       width: "100%",
                     }}
                   >
@@ -447,7 +453,12 @@ export default function Hire() {
                   marginBottom: "1rem",
                 }}
               >
-                <div className="vertical-content">
+                <div
+                  className="vertical-content"
+                  style={{
+                    width: "100%",
+                  }}
+                >
                   <h5 className="h5">
                     <button className="emoji-container">
                       Engineers: {packages.softwareEngineer}
@@ -457,7 +468,7 @@ export default function Hire() {
                     className="horizontal-content"
                     style={{
                       display: "flex",
-                      justifyContent: "space-evenly",
+                      gap: "2rem",
                       width: "100%",
                     }}
                   >
@@ -484,7 +495,12 @@ export default function Hire() {
                   marginBottom: "1rem",
                 }}
               >
-                <div className="vertical-content">
+                <div
+                  className="vertical-content"
+                  style={{
+                    width: "100%",
+                  }}
+                >
                   <h5 className="h5">
                     <button className="emoji-container">
                       Designers: {packages.graphicDesigner}
@@ -494,7 +510,7 @@ export default function Hire() {
                     className="horizontal-content"
                     style={{
                       display: "flex",
-                      justifyContent: "space-evenly",
+                      gap: "2rem",
                       width: "100%",
                     }}
                   >
