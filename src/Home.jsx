@@ -1969,7 +1969,7 @@ function Home() {
           </div>
           <div className="vertical-content">
             <h6 className="number">
-              <Number n={40} />
+              <Number n={40 + discordCount / 4} />
             </h6>
             <h5 className="h5">Engineers matched</h5>
           </div>
