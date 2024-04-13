@@ -66,20 +66,40 @@ function Find() {
       <div className="box">
         <div className="vertical-content">
           <h1 className="h1">We take a different approach</h1>
-          <span
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "0.25rem",
-              marginBottom: "1rem",
-            }}
-          >
-            <FaRegDotCircle className="record" />
-            <h3 className="h3" style={{ marginBottom: "0" }}>
-              all of our live positions are announced on our server.
-            </h3>
-          </span>
+          {mobile ? (
+            <span
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                justifyContent: "flex-start",
+                gap: "0.15rem",
+                marginBottom: "1rem",
+              }}
+            >
+              <FaRegDotCircle
+                className="record"
+                style={{ marginTop: "0.3rem" }}
+              />
+              <h3 className="h3" style={{ marginBottom: "0" }}>
+                all of our live positions are announced on our server.
+              </h3>
+            </span>
+          ) : (
+            <span
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.25rem",
+                marginBottom: "1rem",
+              }}
+            >
+              <FaRegDotCircle className="record" />
+              <h3 className="h3" style={{ marginBottom: "0" }}>
+                all of our live positions are announced on our server.
+              </h3>
+            </span>
+          )}
           <h5 className="h5">
             <button
               className="emoji-container"
