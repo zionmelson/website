@@ -398,7 +398,7 @@ export default function Hire() {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                margin: "0.5rem",
+                margin: "0.1rem",
                 width: "100%",
               }}
             >
@@ -406,6 +406,7 @@ export default function Hire() {
                 className="horizontal-content"
                 style={{
                   display: "flex",
+                  width: "100%",
                   marginBottom: "1rem",
                 }}
               >
