@@ -542,7 +542,6 @@ export default function Hire() {
                 width: "100%",
               }}
             >
-              <h5 className="h5">from</h5>
               <div
                 className="vertical-content"
                 style={{
@@ -848,7 +847,6 @@ export default function Hire() {
                 width: "100%",
               }}
             >
-              <h5 className="h5">from</h5>
               <div
                 className="vertical-content"
                 style={{

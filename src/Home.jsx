@@ -909,7 +909,6 @@ function Home() {
                         width: "100%",
                       }}
                     >
-                      <h5 className="h5">from</h5>
                       <div
                         className="vertical-content"
                         style={{
@@ -1269,7 +1268,6 @@ function Home() {
                         width: "100%",
                       }}
                     >
-                      <h5 className="h5">from</h5>
                       <div
                         className="vertical-content"
                         style={{
