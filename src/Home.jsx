@@ -358,6 +358,8 @@ function Home() {
   };
 
   useEffect(() => {
+    setDiscord();
+
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
     const saved = localStorage.getItem("companies");
@@ -392,8 +394,6 @@ function Home() {
         "<1.8"
       );
     });
-
-    setDiscord();
 
     if (cachedPackages) {
       setPackages(() => {
@@ -610,14 +610,10 @@ function Home() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "end",
+                  textAlign: "center",
                 }}
               >
-                <h3 className="h3">1. Initial Due Diligence Screening</h3>
-                <h5 className="h5">
-                  Our goal with our initial due diligence screening is
-                  condensing down the exact requirements and timelines for
-                  successful project deployment.
-                </h5>
+                <h3 className="h1">Build your team</h3>
                 {mobile ? null : (
                   <div className="due-diligence-content">
                     <div
@@ -1927,7 +1923,7 @@ function Home() {
 
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire a team
+                  hire team
                 </button>
               </h5>
             </div>
@@ -1942,12 +1938,6 @@ function Home() {
               <h2 className="h2">Direct-to-Hire Placements</h2>
               <Lottie animationData={developer} style={{ width: "10rem" }} />
               <div className="sourcing-info">
-                <h3 className="h3">1. Initial Due Diligence Screening</h3>
-                <h5 className="h5">
-                  Our team will work with you to understand the technical
-                  requirements and company culture fit to help us determine the
-                  ideal employee for your team.
-                </h5>
                 <h5 className="h5">
                   <button
                     className="emoji-container"
