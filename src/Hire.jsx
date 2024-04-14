@@ -424,7 +424,7 @@ export default function Hire() {
                 >
                   <h5 className="h5">
                     <button className="emoji-container">
-                      Managers: {packages.projectManager}
+                      {packages.projectManager} Managers
                     </button>
                   </h5>
                   <div
@@ -467,7 +467,7 @@ export default function Hire() {
                 >
                   <h5 className="h5">
                     <button className="emoji-container">
-                      Engineers: {packages.softwareEngineer}
+                      {packages.softwareEngineer} Engineers
                     </button>
                   </h5>
                   <div
@@ -509,7 +509,7 @@ export default function Hire() {
                 >
                   <h5 className="h5">
                     <button className="emoji-container">
-                      Designers: {packages.graphicDesigner}
+                      {packages.graphicDesigner} Designers
                     </button>
                   </h5>
                   <div
