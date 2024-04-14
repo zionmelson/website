@@ -412,7 +412,7 @@ function Home() {
       setMobile(true);
     }
 
-    setTimeout(() => setLoaded(true), 1250);
+    setTimeout(() => setLoaded(true), 800);
 
     return () => tl.kill();
   }, [loaded]);
