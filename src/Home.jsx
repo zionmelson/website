@@ -1949,7 +1949,7 @@ function Home() {
                     }}
                   >
                     <img src={github} className="emoji-2" alt="calendar" />
-                    GitHub
+                    Software Engineers
                   </button>
                   <button
                     className="emoji-container"
@@ -1961,7 +1961,7 @@ function Home() {
                     }}
                   >
                     <img src={figma} className="emoji-2" alt="calendar" />
-                    Figma
+                    Graphic Designers
                   </button>
                   <button
                     className="emoji-container"
@@ -1973,7 +1973,7 @@ function Home() {
                     }}
                   >
                     <img src={notion} className="emoji-2" alt="calendar" />
-                    Notion
+                    Product Managers
                   </button>
                 </h5>
               </div>
