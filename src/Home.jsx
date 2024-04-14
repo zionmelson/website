@@ -57,10 +57,6 @@ import twitter from "./assets/svg/twitter.svg";
 import pinterest from "./assets/svg/pinterest.svg";
 import tiktok from "./assets/svg/tiktok.svg";
 
-import github from "./assets/svg/github.svg";
-import figma from "./assets/svg/figma.svg";
-import notion from "./assets/svg/notion.svg";
-
 import gsap from "gsap";
 import SplitText from "split-text-js";
 import { useEffect, useState, useRef } from "react";
@@ -1936,46 +1932,8 @@ function Home() {
           >
             <div className="sourcing-content">
               <h2 className="h2">Direct-to-Hire Placements</h2>
-              <Lottie animationData={developer} style={{ width: "10rem" }} />
               <div className="sourcing-info">
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                      width: "100%",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    <img src={github} className="emoji-2" alt="calendar" />
-                    Software Engineers
-                  </button>
-                  <button
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                      width: "100%",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    <img src={figma} className="emoji-2" alt="calendar" />
-                    Graphic Designers
-                  </button>
-                  <button
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                      width: "100%",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    <img src={notion} className="emoji-2" alt="calendar" />
-                    Product Managers
-                  </button>
-                </h5>
+                <Lottie animationData={developer} style={{ width: "10rem" }} />
               </div>
               <a
                 href="https://app.eraser.io/workspace/hnBS71Or5zh5z26MQ4r1?origin=share"

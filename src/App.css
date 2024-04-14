@@ -187,12 +187,6 @@
   border: 2px solid #302f31;
 }
 
-.sourcing-info {
-  text-align: start;
-  margin-bottom: 1rem;
-  width: 90%;
-}
-
 .pricing-content {
   display: flex;
   flex-direction: column;
@@ -520,10 +514,6 @@
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-  }
-
-  .sourcing-info {
-    width: 100%;
   }
 
   .emoji {
