@@ -218,7 +218,7 @@ function Find() {
                   />
                 </div>
               )}
-              <h5 className="h5">maxmillian | partner</h5>
+              <h5 className="h5">max | partner</h5>
               <a
                 href="https://www.linkedin.com/in/mxmilan/"
                 target="_blank"

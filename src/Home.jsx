@@ -57,10 +57,6 @@ import twitter from "./assets/svg/twitter.svg";
 import pinterest from "./assets/svg/pinterest.svg";
 import tiktok from "./assets/svg/tiktok.svg";
 
-import github from "./assets/svg/github.svg";
-import figma from "./assets/svg/figma.svg";
-import notion from "./assets/svg/notion.svg";
-
 import gsap from "gsap";
 import SplitText from "split-text-js";
 import { useEffect, useState, useRef } from "react";
@@ -358,6 +354,8 @@ function Home() {
   };
 
   useEffect(() => {
+    setDiscord();
+
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
     const saved = localStorage.getItem("companies");
@@ -393,8 +391,6 @@ function Home() {
       );
     });
 
-    setDiscord();
-
     if (cachedPackages) {
       setPackages(() => {
         const updatedPackages = JSON.parse(cachedPackages);
@@ -416,7 +412,7 @@ function Home() {
       setMobile(true);
     }
 
-    setTimeout(() => setLoaded(true), 1250);
+    setTimeout(() => setLoaded(true), 800);
 
     return () => tl.kill();
   }, [loaded]);
@@ -610,14 +606,10 @@ function Home() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "end",
+                  textAlign: "center",
                 }}
               >
-                <h3 className="h3">1. Initial Due Diligence Screening</h3>
-                <h5 className="h5">
-                  Our goal with our initial due diligence screening is
-                  condensing down the exact requirements and timelines for
-                  successful project deployment.
-                </h5>
+                <h3 className="h1">Build your team</h3>
                 {mobile ? null : (
                   <div className="due-diligence-content">
                     <div
@@ -917,7 +909,6 @@ function Home() {
                         width: "100%",
                       }}
                     >
-                      <h5 className="h5">from</h5>
                       <div
                         className="vertical-content"
                         style={{
@@ -1277,7 +1268,6 @@ function Home() {
                         width: "100%",
                       }}
                     >
-                      <h5 className="h5">from</h5>
                       <div
                         className="vertical-content"
                         style={{
@@ -1927,7 +1917,7 @@ function Home() {
 
               <h5 className="h5">
                 <button className="emoji-container" onClick={scrollToTarget}>
-                  hire a team
+                  hire team
                 </button>
               </h5>
             </div>
@@ -1940,52 +1930,8 @@ function Home() {
           >
             <div className="sourcing-content">
               <h2 className="h2">Direct-to-Hire Placements</h2>
-              <Lottie animationData={developer} style={{ width: "10rem" }} />
               <div className="sourcing-info">
-                <h3 className="h3">1. Initial Due Diligence Screening</h3>
-                <h5 className="h5">
-                  Our team will work with you to understand the technical
-                  requirements and company culture fit to help us determine the
-                  ideal employee for your team.
-                </h5>
-                <h5 className="h5">
-                  <button
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                      width: "100%",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    <img src={github} className="emoji-2" alt="calendar" />
-                    GitHub
-                  </button>
-                  <button
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                      width: "100%",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    <img src={figma} className="emoji-2" alt="calendar" />
-                    Figma
-                  </button>
-                  <button
-                    className="emoji-container"
-                    id="github-container"
-                    style={{
-                      padding: "1rem",
-                      width: "100%",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    <img src={notion} className="emoji-2" alt="calendar" />
-                    Notion
-                  </button>
-                </h5>
+                <Lottie animationData={developer} style={{ width: "10rem" }} />
               </div>
               <a
                 href="https://app.eraser.io/workspace/hnBS71Or5zh5z26MQ4r1?origin=share"
