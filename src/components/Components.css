@@ -27,11 +27,12 @@
   color: #fff;
   display: flex;
   flex-direction: row;
-  text-align: start;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   backdrop-filter: blur(5px);
   transition: 0.3s linear;
+  padding-right: 10rem;
+  padding-left: 10rem;
 }
 
 .navigation {
@@ -224,6 +225,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
   }
 
   .footer-links {

@@ -231,8 +231,7 @@ function Find() {
             </div>
           </div>
           <h5 className="h5" id="bio">
-            our team is invested in uplifting the startup ecosystem in the
-            southeast.
+            our team is invested in uplifting the startup ecosystem.
           </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
