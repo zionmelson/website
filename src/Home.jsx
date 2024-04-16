@@ -243,7 +243,6 @@ function Home() {
   };
 
   const targetRef = useRef(null);
-  const sourcedRef = useRef(null);
   const directRef = useRef(null);
   const projectRef = useRef(null);
 
@@ -1970,39 +1969,6 @@ function Home() {
             </h6>
             <h5 className="h5">Placement satisfaction</h5>
           </div>
-        </div>
-      </div>
-      {/* discord */}
-      <div
-        className="box"
-        style={{
-          display: "flex",
-          justifyContent: "start",
-        }}
-        ref={sourcedRef}
-      >
-        <div
-          className="vertical-content"
-          style={{
-            width: "100%",
-          }}
-        >
-          <h1 className="h1">Looking for work?</h1>
-          {mobile ? (
-            <iframe
-              src="https://discord.com/widget?id=984461709806804992&theme=dark"
-              width="300"
-              height="500"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            ></iframe>
-          ) : (
-            <iframe
-              src="https://discord.com/widget?id=984461709806804992&theme=dark"
-              width="500"
-              height="500"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            ></iframe>
-          )}
         </div>
       </div>
       {/* submit */}
