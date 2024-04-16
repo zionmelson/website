@@ -22,11 +22,6 @@ export default function Footer() {
           <div className="footer-numbers">
             <span className="emoji-container">
               <h5 className="h5" style={{ marginBottom: "0" }}>
-                470-881-1711
-              </h5>
-            </span>
-            <span className="emoji-container">
-              <h5 className="h5" style={{ marginBottom: "0" }}>
                 404-956-7771
               </h5>
             </span>
