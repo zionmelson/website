@@ -34,6 +34,7 @@ import facebook from "./assets/svg/facebook.svg";
 import twitter from "./assets/svg/twitter.svg";
 import pinterest from "./assets/svg/pinterest.svg";
 import tiktok from "./assets/svg/tiktok.svg";
+import tesla from "./assets/svg/tesla.svg";
 import logo from "./assets/svg/logo.svg";
 
 import "./App.css";
@@ -583,6 +584,19 @@ export default function Hire() {
                   <button
                     className="emoji-container"
                     id="github-container"
+                    onClick={() => addCompany({ name: "Tesla", logo: tesla })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={tesla} className="emoji-2" alt="calendar" />
+                    Tesla
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
                     onClick={() => addCompany({ name: "Snapchat", logo: snap })}
                     style={{
                       padding: "1rem",
@@ -897,6 +911,19 @@ export default function Hire() {
                   >
                     <img src={discord} className="emoji-2" alt="calendar" />
                     Discord
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() => addCompany({ name: "Tesla", logo: tesla })}
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={tesla} className="emoji-2" alt="calendar" />
+                    Tesla
                   </button>
                 </h5>
                 <h5 className="h5">
