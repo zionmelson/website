@@ -237,6 +237,7 @@ function Home() {
     const data = await fetch(
       "https://discord.com/api/guilds/984461709806804992/widget.json"
     );
+
     const json = await data.json();
 
     setDiscordCount(json.members.length);
@@ -2056,8 +2057,8 @@ function Home() {
                 required
               />
               <input
-                type="text"
-                placeholder="Company name"
+                type="url"
+                placeholder="Company website"
                 className="input"
                 name="company"
                 value={formData.company}

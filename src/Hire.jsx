@@ -1383,8 +1383,8 @@ export default function Hire() {
                   required
                 />
                 <input
-                  type="text"
-                  placeholder="Company name"
+                  type="url"
+                  placeholder="Company website"
                   className="input"
                   name="company"
                   value={formData.company}

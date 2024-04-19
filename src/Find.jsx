@@ -114,8 +114,10 @@ function Find() {
           {mobile ? (
             <iframe
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
-              width="300"
+              width="500"
               height="500"
+              allowtransparency="true"
+              frameborder="0"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
             ></iframe>
           ) : (
@@ -123,6 +125,8 @@ function Find() {
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
               width="500"
               height="500"
+              allowtransparency="true"
+              frameborder="0"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
             ></iframe>
           )}
