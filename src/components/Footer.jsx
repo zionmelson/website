@@ -57,7 +57,7 @@ export default function Footer() {
                 <img className="social" src={x} alt="x" />
               </a>
               <a
-                href="https://medium.com/@learnmutiny"
+                href="https://medium.com/@learnmutiny.io"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -117,7 +117,7 @@ export default function Footer() {
                 <img className="social" src={x} alt="x" />
               </a>
               <a
-                href="https://medium.com/@learnmutiny"
+                href="https://medium.com/@learnmutiny.io"
                 target="_blank"
                 rel="noreferrer"
               >
