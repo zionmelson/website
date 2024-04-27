@@ -2027,11 +2027,17 @@ function Home() {
           ) : (
             <h1 className="h1">Looking to hire?</h1>
           )}
-          {submitted && submissionStatus === "success" ? (
+          {submitted && submissionStatus === "success" && (
             <>
               <p>We have received your submission!</p>
               <p> Our consultation team will reach out shortly.</p>
             </>
+          )}
+          {loading ? (
+            <div>
+              <img src={logo} style={{ width: "10rem" }} alt="logo" />
+              <p>Submitting...</p>
+            </div>
           ) : (
             <form
               className="vertical-content"
@@ -2083,7 +2089,7 @@ function Home() {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled hidden>
+                <option value="" selected disabled hidden>
                   Company title
                 </option>
                 <option value="Engineer/Analyst">Engineer or Analyst</option>
@@ -2104,7 +2110,7 @@ function Home() {
                 onChange={handleChange}
                 required
               >
-                <option value="" disabled hidden>
+                <option value="" selected disabled hidden>
                   Source type
                 </option>
                 <option value="Scrum Package">Scrum Package</option>
@@ -2149,10 +2155,10 @@ function Home() {
               <button
                 className="emoji-container"
                 type="submit"
-                onClick={scrollToTarget}
                 style={{
                   marginBottom: "1rem",
                 }}
+                onClick={scrollToTarget}
               >
                 <h4 className="h4" style={{ margin: 0 }}>
                   Submit
@@ -2160,7 +2166,6 @@ function Home() {
               </button>
             </form>
           )}
-          {loading && !submitted ? <p>Submitting...</p> : null}
           {submissionStatus === "failure" && (
             <>
               <p>Failed to submit the form. Please try again.</p>
