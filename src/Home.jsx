@@ -470,7 +470,7 @@ function Home() {
                       graphic designer
                     </h2>
                     <h2 className="h1" id="gsap">
-                      animator
+                      animation engineer
                     </h2>
                     <h2 className="h1" id="gsap">
                       product manager
@@ -496,7 +496,10 @@ function Home() {
           {loaded && (
             <div
               className={`icons ${mobile ? "mobile" : ""}`}
-              style={{ marginBottom: "2rem", height: "5rem" }}
+              style={{
+                marginBottom: "2rem",
+                height: "5rem",
+              }}
             >
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />

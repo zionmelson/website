@@ -365,7 +365,7 @@
   width: 3.5rem;
   height: 3.5rem;
   margin: 1rem;
-  animation: rise 1s ease-in-out forwards;
+  animation: rise 2s forwards;
 }
 
 #icon {
