@@ -1353,11 +1353,17 @@ export default function Hire() {
           ref={targetRef}
         >
           <div className="vertical-content" style={{ width: "100%" }}>
-            {submitted && submissionStatus === "success" ? (
+            {submitted && submissionStatus === "success" && (
               <>
                 <p>We have received your submission!</p>
                 <p> Our consultation team will reach out shortly.</p>
               </>
+            )}
+            {loading ? (
+              <div>
+                <img src={logo} style={{ width: "10rem" }} alt="logo" />
+                <p>Submitting...</p>
+              </div>
             ) : (
               <form
                 className="vertical-content"
@@ -1490,7 +1496,6 @@ export default function Hire() {
                 </button>
               </form>
             )}
-            {loading && !submitted ? <p>Submitting...</p> : null}
             {submissionStatus === "failure" && (
               <>
                 <p>Failed to submit the form. Please try again.</p>
