@@ -243,7 +243,7 @@ function Find() {
       {/* contact */}
       <div className="box">
         <div className="vertical-content" style={{ padding: "2rem" }}>
-          <h2 className="h1">Contact</h2>
+          <p style={{ marginBottom: "1rem" }}>Questions?</p>
           <h5 className="h5">
             <button
               className="emoji-container"
