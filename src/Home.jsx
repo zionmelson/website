@@ -470,6 +470,9 @@ function Home() {
                       graphic designer
                     </h2>
                     <h2 className="h1" id="gsap">
+                      animation engineer
+                    </h2>
+                    <h2 className="h1" id="gsap">
                       product manager
                     </h2>
                     <h2 className="h1" id="gsap">
@@ -493,7 +496,10 @@ function Home() {
           {loaded && (
             <div
               className={`icons ${mobile ? "mobile" : ""}`}
-              style={{ marginBottom: "2rem", height: "5rem" }}
+              style={{
+                marginBottom: "2rem",
+                height: "5rem",
+              }}
             >
               <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
@@ -1145,7 +1151,7 @@ function Home() {
                             Mozilla
                           </button>
                         </h5>
-                        <h5 className="h5">
+                        {/* <h5 className="h5">
                           <button
                             className="emoji-container"
                             id="github-container"
@@ -1162,7 +1168,7 @@ function Home() {
                             </button>
                             add a company
                           </button>
-                        </h5>
+                        </h5> */}
                       </div>
                     </div>
                   </div>
@@ -1958,7 +1964,7 @@ function Home() {
                             Mozilla
                           </button>
                         </h5>
-                        <h5 className="h5">
+                        {/* <h5 className="h5">
                           <button
                             className="emoji-container"
                             id="github-container"
@@ -1975,7 +1981,7 @@ function Home() {
                             </button>
                             add a company
                           </button>
-                        </h5>
+                        </h5> */}
                       </div>
                     </div>
                   </div>

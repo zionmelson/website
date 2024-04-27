@@ -6,7 +6,6 @@ import maxmillian from "./assets/webp/maxmillian.webp";
 import maxmillianBlurry from "./assets/webp/maxmillianBlurry.webp";
 import atlanta from "./assets/svg/atlanta.svg";
 import link from "./assets/svg/link.svg";
-import logo from "./assets/svg/logo.svg";
 
 import { FaRegDotCircle } from "react-icons/fa";
 
@@ -65,7 +64,7 @@ function Find() {
       {/* value */}
       <div className="box">
         <div className="vertical-content">
-          <h1 className="h1">We take a different approach</h1>
+          <h1 className="h1">Find work</h1>
           {mobile ? (
             <span
               style={{
@@ -100,17 +99,6 @@ function Find() {
               </h3>
             </span>
           )}
-          <h5 className="h5">
-            <button
-              className="emoji-container"
-              style={{
-                marginBottom: "1rem",
-              }}
-            >
-              <img src={logo} className="emoji" alt="mu" />
-              learnmutiny.io
-            </button>
-          </h5>
           {mobile ? (
             <iframe
               src="https://discord.com/widget?id=984461709806804992&theme=dark"
@@ -174,16 +162,25 @@ function Find() {
                   />
                 </div>
               )}
-              <h5 className="h5">zion | partner</h5>
-              <a
-                href="https://linkedin.com/in/zionmelson"
-                target="_blank"
-                rel="noreferrer"
+              <span
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
-                <span className="emoji-container">
+                <h5 className="h5" style={{ margin: 0 }}>
+                  zion | partner
+                </h5>
+                <a
+                  href="https://linkedin.com/in/zionmelson"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={link} className="emoji" alt="mu" />
-                </span>
-              </a>
+                </a>
+              </span>
             </div>
             <div className="headshot">
               {isLoaded ? (
@@ -222,20 +219,30 @@ function Find() {
                   />
                 </div>
               )}
-              <h5 className="h5">max | partner</h5>
-              <a
-                href="https://www.linkedin.com/in/mxmilan/"
-                target="_blank"
-                rel="noreferrer"
+              <span
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
-                <span className="emoji-container">
+                <h5 className="h5" style={{ margin: 0 }}>
+                  max | partner
+                </h5>
+                <a
+                  href="https://www.linkedin.com/in/mxmilan/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img src={link} className="emoji" alt="mu" />
-                </span>
-              </a>
+                </a>
+              </span>
             </div>
           </div>
           <h5 className="h5" id="bio">
-            our team is invested in uplifting the startup ecosystem.
+            our team is focused on creating a more open conversation about the
+            future of work.
           </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
