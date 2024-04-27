@@ -470,6 +470,9 @@ function Home() {
                       graphic designer
                     </h2>
                     <h2 className="h1" id="gsap">
+                      animator
+                    </h2>
+                    <h2 className="h1" id="gsap">
                       product manager
                     </h2>
                     <h2 className="h1" id="gsap">
@@ -1145,7 +1148,7 @@ function Home() {
                             Mozilla
                           </button>
                         </h5>
-                        <h5 className="h5">
+                        {/* <h5 className="h5">
                           <button
                             className="emoji-container"
                             id="github-container"
@@ -1162,7 +1165,7 @@ function Home() {
                             </button>
                             add a company
                           </button>
-                        </h5>
+                        </h5> */}
                       </div>
                     </div>
                   </div>
@@ -1958,7 +1961,7 @@ function Home() {
                             Mozilla
                           </button>
                         </h5>
-                        <h5 className="h5">
+                        {/* <h5 className="h5">
                           <button
                             className="emoji-container"
                             id="github-container"
@@ -1975,7 +1978,7 @@ function Home() {
                             </button>
                             add a company
                           </button>
-                        </h5>
+                        </h5> */}
                       </div>
                     </div>
                   </div>
