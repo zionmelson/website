@@ -6,6 +6,7 @@ import {
   FaPlus,
   FaMinus,
   FaMinusCircle,
+  FaPlusCircle,
 } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { SiCashapp } from "react-icons/si";
@@ -1144,6 +1145,24 @@ function Home() {
                             Mozilla
                           </button>
                         </h5>
+                        <h5 className="h5">
+                          <button
+                            className="emoji-container"
+                            id="github-container"
+                            style={{
+                              padding: "1rem",
+                            }}
+                          >
+                            <button
+                              style={{
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              <FaPlusCircle className="operator" />
+                            </button>
+                            add a company
+                          </button>
+                        </h5>
                       </div>
                     </div>
                   </div>
@@ -1937,6 +1956,24 @@ function Home() {
                               alt="calendar"
                             />
                             Mozilla
+                          </button>
+                        </h5>
+                        <h5 className="h5">
+                          <button
+                            className="emoji-container"
+                            id="github-container"
+                            style={{
+                              padding: "1rem",
+                            }}
+                          >
+                            <button
+                              style={{
+                                marginRight: "0.5rem",
+                              }}
+                            >
+                              <FaPlusCircle className="operator" />
+                            </button>
+                            add a company
                           </button>
                         </h5>
                       </div>
