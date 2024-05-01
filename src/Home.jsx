@@ -248,6 +248,10 @@ function Home() {
   const directRef = useRef(null);
   const projectRef = useRef(null);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const scrollToTarget = () => {
     if (targetRef.current) {
       const offsetTop = -100;
@@ -522,7 +526,7 @@ function Home() {
             </div>
           )}
           <h2 className="h2">and place them at your startup company</h2>
-          <Link to="/hire">
+          <Link onClick={scrollToTop} to="/hire">
             <h5 className="h5">
               <button className="emoji-container">book a demo</button>
             </h5>
