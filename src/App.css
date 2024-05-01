@@ -59,10 +59,6 @@
   font-size: 2.5rem;
 }
 
-#white .chars {
-  color: #fff;
-}
-
 .h1,
 .h2,
 .h3,
@@ -84,7 +80,7 @@
 }
 
 .App-white {
-  background: #5cbff9;
+  background: #fff;
   transition: all 0.5s linear;
   min-height: 100vh;
   color: #302f31;
@@ -309,6 +305,11 @@
   cursor: pointer;
 }
 
+#white .emoji-container:hover {
+  background-color: rgba(214, 214, 214, 0.9);
+  cursor: pointer;
+}
+
 .headshot {
   display: flex;
   flex-direction: column;
@@ -427,6 +428,12 @@
 
 #X {
   color: #fff;
+  transition: all 0.2s linear;
+}
+
+#white #X {
+  color: #302f31;
+  transition: all 0.2s linear;
 }
 
 #airbnb {
@@ -609,19 +616,19 @@
     transform: rotate(0deg);
   }
   16.6% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   33.3% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   66.6% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   82.6% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   100% {
     transform: rotate(0deg);
