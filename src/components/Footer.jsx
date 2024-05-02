@@ -4,6 +4,7 @@ import discord from "../assets/svg/discord.svg";
 import linkedin from "../assets/svg/linkedin-2.svg";
 import x from "../assets/svg/twitter.svg";
 import medium from "../assets/svg/medium.svg";
+import spotify from "../assets/svg/spotify.svg";
 
 import "./Components.css";
 
@@ -62,6 +63,13 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <img className="social" src={medium} alt="medium" />
+              </a>
+              <a
+                href="https://podcasters.spotify.com/pod/show/learnmutinyio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={spotify} alt="medium" />
               </a>
             </div>
           </div>
@@ -122,6 +130,13 @@ export default function Footer() {
                 rel="noreferrer"
               >
                 <img className="social" src={medium} alt="medium" />
+              </a>
+              <a
+                href="https://podcasters.spotify.com/pod/show/learnmutinyio"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="social" src={spotify} alt="medium" />
               </a>
             </div>
           </div>

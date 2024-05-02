@@ -39,13 +39,13 @@
 
 .number {
   font-size: 2.25rem;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 
 .number:hover {
   cursor: pointer;
   scale: 1.25;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 
 #gsap {
@@ -57,10 +57,6 @@
 
 .chars {
   font-size: 2.5rem;
-}
-
-#white .chars {
-  color: #fff;
 }
 
 .h1,
@@ -78,14 +74,14 @@
 
 .App {
   background: #111111;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
   min-height: 100vh;
   color: #fff;
 }
 
 .App-white {
-  background: #5cbff9;
-  transition: all 0.5s linear;
+  background: #fff;
+  transition: all 0.3s linear;
   min-height: 100vh;
   color: #302f31;
 }
@@ -273,7 +269,7 @@
   border-radius: 60rem;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-in;
   padding: 1.1rem;
   border: 2px solid #fff;
   color: #fff;
@@ -306,6 +302,11 @@
 
 .emoji-container:hover {
   background-color: rgba(214, 214, 214, 0.2);
+  cursor: pointer;
+}
+
+#white .emoji-container:hover {
+  background-color: rgba(214, 214, 214, 0.9);
   cursor: pointer;
 }
 
@@ -343,7 +344,7 @@
 
 .record {
   color: red;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
 }
 
 .icons {
@@ -405,7 +406,7 @@
   width: 3.5rem;
   height: 3.5rem;
   margin: 1rem;
-  transition: all 0.2s linear;
+  transition: all 0.3s linear;
   scale: 1.1;
 }
 
@@ -427,6 +428,12 @@
 
 #X {
   color: #fff;
+  transition: all 0.3s linear;
+}
+
+#white #X {
+  color: #302f31;
+  transition: all 0.3s linear;
 }
 
 #airbnb {
@@ -525,7 +532,7 @@
     height: 2rem;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease-in;
+    transition: all 0.3s ease-in;
   }
 
   .layoff-content {
@@ -609,19 +616,19 @@
     transform: rotate(0deg);
   }
   16.6% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   33.3% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   66.6% {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
   }
   82.6% {
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   100% {
     transform: rotate(0deg);

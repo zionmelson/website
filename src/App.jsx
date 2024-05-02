@@ -45,17 +45,9 @@ function App() {
         >
           <Navbar />
           {theme === "" ? (
-            <PiMoonStarsDuotone
-              className="daytime"
-              onClick={toggleTheme}
-              style={{ color: "yellow" }}
-            />
+            <PiMoonStarsDuotone className="daytime" onClick={toggleTheme} />
           ) : (
-            <IoPartlySunny
-              className="daytime"
-              onClick={toggleTheme}
-              style={{ color: "#fff" }}
-            />
+            <IoPartlySunny className="daytime" onClick={toggleTheme} />
           )}
           <Routes>
             <Route path="/" element={<Home />} />
