@@ -118,6 +118,19 @@ function Find() {
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
             ></iframe>
           )}
+          <a
+            href="https://discord.gg/gbq3YTBS6B"
+            target="_blank"
+            rel="noreferrer"
+            className="emoji-container"
+            style={{
+              margin: "0.5rem",
+            }}
+          >
+            <h5 className="h5" style={{ marginBottom: 0 }}>
+              join our discord
+            </h5>
+          </a>
         </div>
       </div>
       {/* partners */}
