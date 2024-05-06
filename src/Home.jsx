@@ -250,6 +250,8 @@ function Home() {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    toggleFullScreen();
   };
 
   const scrollToTarget = () => {
@@ -541,9 +543,6 @@ function Home() {
               <button className="emoji-container">book a demo</button>
             </h5>
           </Link>
-          <button onClick={toggleFullScreen} className="emoji-container">
-            full screen
-          </button>
         </div>
       </div>
       {/* sourcing */}
