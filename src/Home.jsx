@@ -285,6 +285,16 @@ function Home() {
     }
   };
 
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  };
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     if (e.target.name === "search") {
@@ -531,6 +541,9 @@ function Home() {
               <button className="emoji-container">book a demo</button>
             </h5>
           </Link>
+          <button onClick={toggleFullScreen} className="emoji-container">
+            full screen
+          </button>
         </div>
       </div>
       {/* sourcing */}
