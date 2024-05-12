@@ -13,7 +13,9 @@ developerHash.json
 *.local
 .env
 .eslintrc.cjs
-api
+form
+discord
+socket
 interface.js
 emails
 X509-cert-8430854247275277362.pem

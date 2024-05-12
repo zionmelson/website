@@ -48,6 +48,17 @@
   transition: all 0.3s linear;
 }
 
+.number-2 {
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+}
+
+.number-2:hover {
+  cursor: pointer;
+  scale: 1.25;
+  transition: all 0.3s linear;
+}
+
 #gsap {
   margin: 0;
   line-height: 0;
@@ -138,13 +149,28 @@
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
+  border: 2px solid #fff;
   gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.stats-content-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 2rem;
   border: 2px solid #fff;
   padding: 2rem;
   margin-bottom: 1rem;
 }
 
 #white .stats-content {
+  color: #302f31;
+  border: 2px solid #302f31;
+}
+
+#white .stats-content-2 {
   color: #302f31;
   border: 2px solid #302f31;
 }
@@ -547,6 +573,12 @@
 
   .stats-content {
     flex-direction: column;
+  }
+
+  .stats-content-2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .headshots {
