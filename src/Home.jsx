@@ -415,10 +415,6 @@ function Home() {
       let body = JSON.parse(event.data).body;
       console.log("message from server:", body);
 
-      if (body.message === "discord_num") {
-        return;
-      }
-
       if (body.message === "discord_count") {
         let memberCount = await body.memberCount;
         let activeCount = await body.activeCount;
@@ -464,6 +460,10 @@ function Home() {
         // setAmazonCount(amazon);
         // setPaypalCount(paypal);
         // setIbmCount(ibm);
+
+        if (body.message === "discord_num") {
+          return;
+        }
       }
     });
 
