@@ -90,19 +90,19 @@ function Find() {
 
   const [isBlurredImageLoaded, setIsBlurredImageLoaded] = useState(false);
 
-  const [memberCount, setMemberCount] = useState(0);
-  const [activeCount, setActiveCount] = useState(0);
-  const [interviewedRateCount, setInterviewedRateCount] = useState(0);
+  const [memberCount, setMemberCount] = useState(275);
+  const [activeCount, setActiveCount] = useState(211);
+  const [interviewedRateCount, setInterviewedRateCount] = useState(14);
 
-  const [metaCount, setMetaCount] = useState(0);
-  const [appleCount, setAppleCount] = useState(0);
-  const [googleCount, setGoogleCount] = useState(0);
-  const [netflixCount, setNetflixCount] = useState(0);
-  const [teslaCount, setTeslaCount] = useState(0);
-  const [microsoftCount, setMicrosoftCount] = useState(0);
-  const [amazonCount, setAmazonCount] = useState(0);
-  const [paypalCount, setPaypalCount] = useState(0);
-  const [ibmCount, setIbmCount] = useState(0);
+  const [metaCount, setMetaCount] = useState(8);
+  const [appleCount, setAppleCount] = useState(5);
+  const [googleCount, setGoogleCount] = useState(8);
+  const [netflixCount, setNetflixCount] = useState(1);
+  const [teslaCount, setTeslaCount] = useState(8);
+  const [microsoftCount, setMicrosoftCount] = useState(9);
+  const [amazonCount, setAmazonCount] = useState(13);
+  const [paypalCount, setPaypalCount] = useState(2);
+  const [ibmCount, setIbmCount] = useState(5);
 
   const handleImageLoad = () => {
     setIsBlurredImageLoaded(true);
@@ -189,6 +189,8 @@ function Find() {
         img.addEventListener("load", loaded);
       }
     }
+
+    console.log(metaCount);
   }, [isBlurredImageLoaded, theme]);
 
   return (
