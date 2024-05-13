@@ -75,6 +75,23 @@ const socket = new WebSocket(
   "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
 );
 
+socket.addEventListener("open", () => {
+  console.log("connected to server");
+
+  socket.send(
+    JSON.stringify({
+      action: "message",
+      body: {
+        message: "discord_num",
+      },
+    })
+  );
+});
+
+socket.addEventListener("close", () => {
+  console.log("disconnected from server");
+});
+
 function Number({ n }) {
   const { number } = useSpring({
     from: { number: 0 },
@@ -393,23 +410,6 @@ function Home() {
     const tl = gsap.timeline({ repeat: -1 });
     const saved = localStorage.getItem("companies");
     const cachedPackages = localStorage.getItem("packages");
-
-    socket.addEventListener("open", () => {
-      console.log("connected to server");
-
-      socket.send(
-        JSON.stringify({
-          action: "message",
-          body: {
-            message: "discord_num",
-          },
-        })
-      );
-    });
-
-    socket.addEventListener("close", () => {
-      console.log("disconnected from server");
-    });
 
     socket.addEventListener("message", async (event) => {
       let body = JSON.parse(event.data).body;
