@@ -1,6 +1,6 @@
 /* eslint-disable use-isnan */
 /* eslint-disable react/prop-types */
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 import {
   FaUber,
   FaStripeS,
@@ -71,20 +71,9 @@ import { useEffect, useState, useRef } from "react";
 
 import "./App.css";
 
-const socket = io("", {
-  cors: "*",
-  transports: ["websocket"],
-});
-
-socket.on("connect", () => {
-  console.log("connected to server");
-
-  socket.send("discord_num");
-});
-
-socket.on("disconnect", () => {
-  console.log("disconnected from server");
-});
+const socket = new WebSocket(
+  "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
+);
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -396,57 +385,86 @@ function Home() {
 
   useEffect(() => {
     setTheme(theme);
+    if (window.screen.width < 1100) {
+      setMobile(true);
+    }
+
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
     const saved = localStorage.getItem("companies");
     const cachedPackages = localStorage.getItem("packages");
 
-    socket.on("message", async (data) => {
-      console.log("message from server:", data);
+    socket.addEventListener("open", () => {
+      console.log("connected to server");
 
-      if (data === "discord_num") {
+      socket.send(
+        JSON.stringify({
+          action: "message",
+          body: {
+            message: "discord_num",
+          },
+        })
+      );
+    });
+
+    socket.addEventListener("close", () => {
+      console.log("disconnected from server");
+    });
+
+    socket.addEventListener("message", async (event) => {
+      let body = JSON.parse(event.data).body;
+      console.log("message from server:", body);
+
+      if (body.message === "discord_num") {
         return;
       }
 
-      let memberCount = await data.memberCount;
-      let activeCount = await data.activeCount;
-      let appliedCount = await data.appliedCount;
-      let interviewedCount = await data.interviewedCount;
-      let interviewedRate = (await interviewedCount) / appliedCount;
+      if (body.message === "discord_count") {
+        let memberCount = await body.memberCount;
+        let activeCount = await body.activeCount;
+        let appliedCount = await body.appliedCount;
+        let interviewedCount = await body.interviewedCount;
+        let interviewedRate = (await interviewedCount) / appliedCount;
 
-      let meta = await data.metaCount;
-      let apple = await data.appleCount;
-      let google = await data.googleCount;
-      let netflix = await data.netflixCount;
-      let tesla = await data.teslaCount;
-      let microsoft = await data.microsoftCount;
-      let amazon = await data.amazonCount;
-      let paypal = await data.paypalCount;
-      let ibm = await data.ibmCount;
+        let meta = await body.metaCount;
+        let apple = await body.appleCount;
+        let google = await body.googleCount;
+        let netflix = await body.netflixCount;
+        let tesla = await body.teslaCount;
+        let microsoft = await body.microsoftCount;
+        let amazon = await body.amazonCount;
+        let paypal = await body.paypalCount;
+        let ibm = await body.ibmCount;
 
-      console.log(meta);
-      console.log(apple);
-      console.log(google);
-      console.log(netflix);
-      console.log(tesla);
-      console.log(microsoft);
-      console.log(amazon);
-      console.log(paypal);
-      console.log(ibm);
+        console.log(
+          memberCount,
+          activeCount,
+          interviewedRate,
+          meta,
+          apple,
+          google,
+          netflix,
+          tesla,
+          microsoft,
+          amazon,
+          paypal,
+          ibm
+        );
 
-      setMemberCount(memberCount);
-      setActiveCount(activeCount);
-      setInterviewedRateCount(interviewedRate * 100);
+        setMemberCount(memberCount);
+        setActiveCount(activeCount);
+        setInterviewedRateCount(interviewedRate * 100);
 
-      // setMetaCount(meta);
-      // setAppleCount(apple);
-      // setGoogleCount(google);
-      // setNetflixCount(netflix);
-      // setTeslaCount(tesla);
-      // setMicrosoftCount(microsoft);
-      // setAmazonCount(amazon);
-      // setPaypalCount(paypal);
-      // setIbmCount(ibm);
+        // setMetaCount(meta);
+        // setAppleCount(apple);
+        // setGoogleCount(google);
+        // setNetflixCount(netflix);
+        // setTeslaCount(tesla);
+        // setMicrosoftCount(microsoft);
+        // setAmazonCount(amazon);
+        // setPaypalCount(paypal);
+        // setIbmCount(ibm);
+      }
     });
 
     technologies.forEach((technology) => {
@@ -493,11 +511,6 @@ function Home() {
         let name = localStorage.getItem(company.name);
         setCompanies((prevCompanies) => [...prevCompanies, JSON.parse(name)]);
       });
-    }
-
-    if (window.screen.width < 1000) {
-      // setTimeout(() => setMobile(true), 200);
-      setMobile(true);
     }
 
     setTimeout(() => setLoaded(true), 800);
@@ -624,7 +637,7 @@ function Home() {
               width: "100%",
             }}
           >
-            <h1 className="h1">Hiring big tech talent</h1>
+            <h1 className="h1">Hire big tech talent</h1>
             <div className="stats-content">
               <div className="vertical-content">
                 <h6 className="number">
@@ -644,61 +657,6 @@ function Home() {
                 </h6>
                 <h5 className="h5">Interviewed rate 📊</h5>
               </div>
-            </div>
-
-            <h5 className="h5">Our sourcing packages:</h5>
-            <div
-              style={{
-                marginTop: "1rem",
-                marginBottom: "1rem",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-              }}
-            >
-              <>
-                <div
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        style={{
-                          width: "100%",
-                        }}
-                        onClick={() => {
-                          scrollToProject();
-                        }}
-                      >
-                        Scrum Package
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        style={{
-                          width: "100%",
-                        }}
-                        onClick={() => {
-                          scrollToDirect();
-                        }}
-                      >
-                        Direct-to-Hire
-                      </button>
-                    </h5>
-                  </div>
-                </div>
-              </>
             </div>
           </div>
           {/* scrum package */}

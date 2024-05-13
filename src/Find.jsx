@@ -1,6 +1,6 @@
 /* eslint-disable use-isnan */
 /* eslint-disable react/prop-types */
-import { io } from "socket.io-client";
+// import { io } from "socket.io-client";
 
 import { useRef, useState, useEffect } from "react";
 import { FaRegDotCircle } from "react-icons/fa";
@@ -26,18 +26,24 @@ import link from "./assets/svg/link.svg";
 
 import "./App.css";
 
-const socket = io("", {
-  cors: "*",
-  transports: ["websocket"],
-});
+const socket = new WebSocket(
+  "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
+);
 
-socket.on("connect", () => {
+socket.addEventListener("open", () => {
   console.log("connected to server");
 
-  socket.send("discord_num");
+  socket.send(
+    JSON.stringify({
+      action: "message",
+      body: {
+        message: "discord_num",
+      },
+    })
+  );
 });
 
-socket.on("disconnect", () => {
+socket.addEventListener("close", () => {
   console.log("disconnected from server");
 });
 
@@ -103,57 +109,65 @@ function Find() {
   };
 
   useEffect(() => {
+    setTheme(theme);
     if (window.screen.width < 1100) {
       setMobile(true);
     }
 
-    setTheme(theme);
-    socket.on("message", async (data) => {
-      console.log("message from server:", data);
+    socket.addEventListener("message", async (event) => {
+      let body = JSON.parse(event.data).body;
+      console.log("message from server:", body);
 
-      if (data === "discord_num") {
-        return;
+      if (body.message === "discord_count") {
+        let memberCount = await body.memberCount;
+        let activeCount = await body.activeCount;
+        let appliedCount = await body.appliedCount;
+        let interviewedCount = await body.interviewedCount;
+        let interviewedRate = (await interviewedCount) / appliedCount;
+
+        let meta = await body.metaCount;
+        let apple = await body.appleCount;
+        let google = await body.googleCount;
+        let netflix = await body.netflixCount;
+        let tesla = await body.teslaCount;
+        let microsoft = await body.microsoftCount;
+        let amazon = await body.amazonCount;
+        let paypal = await body.paypalCount;
+        let ibm = await body.ibmCount;
+
+        console.log(
+          memberCount,
+          activeCount,
+          interviewedRate,
+          meta,
+          apple,
+          google,
+          netflix,
+          tesla,
+          microsoft,
+          amazon,
+          paypal,
+          ibm
+        );
+
+        setMemberCount(memberCount);
+        setActiveCount(activeCount);
+        setInterviewedRateCount(interviewedRate * 100);
+
+        setMetaCount(meta);
+        setAppleCount(apple);
+        setGoogleCount(google);
+        setNetflixCount(netflix);
+        setTeslaCount(tesla);
+        setMicrosoftCount(microsoft);
+        setAmazonCount(amazon);
+        setPaypalCount(paypal);
+        setIbmCount(ibm);
       }
 
-      let memberCount = await data.memberCount;
-      let activeCount = await data.activeCount;
-      let appliedCount = await data.appliedCount;
-      let interviewedCount = await data.interviewedCount;
-      let interviewedRate = (await interviewedCount) / appliedCount;
-
-      let meta = await data.metaCount;
-      let apple = await data.appleCount;
-      let google = await data.googleCount;
-      let netflix = await data.netflixCount;
-      let tesla = await data.teslaCount;
-      let microsoft = await data.microsoftCount;
-      let amazon = await data.amazonCount;
-      let paypal = await data.paypalCount;
-      let ibm = await data.ibmCount;
-
-      console.log(meta);
-      console.log(apple);
-      console.log(google);
-      console.log(netflix);
-      console.log(tesla);
-      console.log(microsoft);
-      console.log(amazon);
-      console.log(paypal);
-      console.log(ibm);
-
-      setMemberCount(memberCount);
-      setActiveCount(activeCount);
-      setInterviewedRateCount(interviewedRate * 100);
-
-      setMetaCount(meta);
-      setAppleCount(apple);
-      setGoogleCount(google);
-      setNetflixCount(netflix);
-      setTeslaCount(tesla);
-      setMicrosoftCount(microsoft);
-      setAmazonCount(amazon);
-      setPaypalCount(paypal);
-      setIbmCount(ibm);
+      if (body.message === "discord_num") {
+        return;
+      }
     });
 
     if (isBlurredImageLoaded) {
@@ -305,7 +319,7 @@ function Find() {
           </div>
         </div>
         <a
-          href="https://discord.gg/gbq3YTBS6B"
+          href="https://discord.gg/WKj3uz6sZZ"
           target="_blank"
           rel="noreferrer"
           className="emoji-container"
