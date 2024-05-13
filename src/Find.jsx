@@ -31,7 +31,7 @@ const socket = new WebSocket(
 );
 
 socket.addEventListener("open", () => {
-  console.log("connected to server");
+  console.log("connected to server 🚀");
 
   socket.send(
     JSON.stringify({
@@ -166,6 +166,7 @@ function Find() {
       }
 
       if (body.message === "discord_num") {
+        console.log("discord_num");
         return;
       }
     });

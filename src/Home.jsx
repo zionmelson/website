@@ -16,7 +16,7 @@ import { TbBrandAirbnb } from "react-icons/tb";
 
 import { Link } from "react-router-dom";
 
-import { useSpring, animated } from "react-spring";
+// import { useSpring, animated } from "react-spring";
 
 import Lottie from "lottie-react";
 import developer from "./assets/json/developer.json";
@@ -71,60 +71,60 @@ import { useEffect, useState, useRef } from "react";
 
 import "./App.css";
 
-const socket = new WebSocket(
-  "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
-);
+// const socket = new WebSocket(
+//   "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
+// );
 
-socket.addEventListener("open", () => {
-  console.log("connected to server");
+// socket.addEventListener("open", () => {
+//   console.log("connected to server 🚀");
 
-  socket.send(
-    JSON.stringify({
-      action: "message",
-      body: {
-        message: "discord_num",
-      },
-    })
-  );
-});
+//   socket.send(
+//     JSON.stringify({
+//       action: "message",
+//       body: {
+//         message: "discord_num",
+//       },
+//     })
+//   );
+// });
 
-socket.addEventListener("close", () => {
-  console.log("disconnected from server");
-});
+// socket.addEventListener("close", () => {
+//   console.log("disconnected from server");
+// });
 
-function Number({ n }) {
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: n,
-    delay: 900,
-    config: { mass: 10, tension: 20, friction: 25 },
-  });
+// function Number({ n }) {
+//   const { number } = useSpring({
+//     from: { number: 0 },
+//     number: n,
+//     delay: 900,
+//     config: { mass: 10, tension: 20, friction: 25 },
+//   });
 
-  return (
-    <animated.div
-      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
-    >
-      {number.to((n) => `${n.toFixed(0)}+`)}
-    </animated.div>
-  );
-}
+//   return (
+//     <animated.div
+//       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+//     >
+//       {number.to((n) => `${n.toFixed(0)}+`)}
+//     </animated.div>
+//   );
+// }
 
-function Percent({ n }) {
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: n,
-    delay: 900,
-    config: { mass: 10, tension: 20, friction: 25 },
-  });
+// function Percent({ n }) {
+//   const { number } = useSpring({
+//     from: { number: 0 },
+//     number: n,
+//     delay: 900,
+//     config: { mass: 10, tension: 20, friction: 25 },
+//   });
 
-  return (
-    <animated.div
-      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
-    >
-      {number.to((n) => `${n.toFixed(0)}%`)}
-    </animated.div>
-  );
-}
+//   return (
+//     <animated.div
+//       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+//     >
+//       {number.to((n) => `${n.toFixed(0)}%`)}
+//     </animated.div>
+//   );
+// }
 
 function Home() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
@@ -141,9 +141,9 @@ function Home() {
     packages: {},
   });
 
-  const [memberCount, setMemberCount] = useState(0);
-  const [activeCount, setActiveCount] = useState(0);
-  const [interviewedRateCount, setInterviewedRateCount] = useState(0);
+  // const [memberCount, setMemberCount] = useState(0);
+  // const [activeCount, setActiveCount] = useState(0);
+  // const [interviewedRateCount, setInterviewedRateCount] = useState(0);
 
   const [packages, setPackages] = useState({
     projectManager: 0,
@@ -406,66 +406,66 @@ function Home() {
       setMobile(true);
     }
 
+    // socket.addEventListener("message", async (event) => {
+    //   let body = JSON.parse(event.data).body;
+    //   console.log("message from server:", body);
+
+    //   if (body.message === "discord_count") {
+    //     let memberCount = await body.memberCount;
+    //     let activeCount = await body.activeCount;
+    //     let appliedCount = await body.appliedCount;
+    //     let interviewedCount = await body.interviewedCount;
+    //     let interviewedRate = (await interviewedCount) / appliedCount;
+
+    //     let meta = await body.metaCount;
+    //     let apple = await body.appleCount;
+    //     let google = await body.googleCount;
+    //     let netflix = await body.netflixCount;
+    //     let tesla = await body.teslaCount;
+    //     let microsoft = await body.microsoftCount;
+    //     let amazon = await body.amazonCount;
+    //     let paypal = await body.paypalCount;
+    //     let ibm = await body.ibmCount;
+
+    //     console.log(
+    //       memberCount,
+    //       activeCount,
+    //       interviewedRate,
+    //       meta,
+    //       apple,
+    //       google,
+    //       netflix,
+    //       tesla,
+    //       microsoft,
+    //       amazon,
+    //       paypal,
+    //       ibm
+    //     );
+
+    //     setMemberCount(memberCount);
+    //     setActiveCount(activeCount);
+    //     setInterviewedRateCount(interviewedRate * 100);
+
+    //     // setMetaCount(meta);
+    //     // setAppleCount(apple);
+    //     // setGoogleCount(google);
+    //     // setNetflixCount(netflix);
+    //     // setTeslaCount(tesla);
+    //     // setMicrosoftCount(microsoft);
+    //     // setAmazonCount(amazon);
+    //     // setPaypalCount(paypal);
+    //     // setIbmCount(ibm);
+
+    //     if (body.message === "discord_num") {
+    //       return;
+    //     }
+    //   }
+    // });
+
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
     const saved = localStorage.getItem("companies");
     const cachedPackages = localStorage.getItem("packages");
-
-    socket.addEventListener("message", async (event) => {
-      let body = JSON.parse(event.data).body;
-      console.log("message from server:", body);
-
-      if (body.message === "discord_count") {
-        let memberCount = await body.memberCount;
-        let activeCount = await body.activeCount;
-        let appliedCount = await body.appliedCount;
-        let interviewedCount = await body.interviewedCount;
-        let interviewedRate = (await interviewedCount) / appliedCount;
-
-        let meta = await body.metaCount;
-        let apple = await body.appleCount;
-        let google = await body.googleCount;
-        let netflix = await body.netflixCount;
-        let tesla = await body.teslaCount;
-        let microsoft = await body.microsoftCount;
-        let amazon = await body.amazonCount;
-        let paypal = await body.paypalCount;
-        let ibm = await body.ibmCount;
-
-        console.log(
-          memberCount,
-          activeCount,
-          interviewedRate,
-          meta,
-          apple,
-          google,
-          netflix,
-          tesla,
-          microsoft,
-          amazon,
-          paypal,
-          ibm
-        );
-
-        setMemberCount(memberCount);
-        setActiveCount(activeCount);
-        setInterviewedRateCount(interviewedRate * 100);
-
-        // setMetaCount(meta);
-        // setAppleCount(apple);
-        // setGoogleCount(google);
-        // setNetflixCount(netflix);
-        // setTeslaCount(tesla);
-        // setMicrosoftCount(microsoft);
-        // setAmazonCount(amazon);
-        // setPaypalCount(paypal);
-        // setIbmCount(ibm);
-
-        if (body.message === "discord_num") {
-          return;
-        }
-      }
-    });
 
     technologies.forEach((technology) => {
       const splitText = new SplitText(technology);
@@ -638,7 +638,7 @@ function Home() {
             }}
           >
             <h1 className="h1">Hire big tech talent</h1>
-            <div className="stats-content">
+            {/* <div className="stats-content">
               <div className="vertical-content">
                 <h6 className="number">
                   <Number n={memberCount} />
@@ -657,7 +657,7 @@ function Home() {
                 </h6>
                 <h5 className="h5">Interviewed rate 📊</h5>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* scrum package */}
           <div
