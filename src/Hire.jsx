@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { FaPlus, FaMinus, FaMinusCircle } from "react-icons/fa";
 
 import cashapp from "./assets/svg/cashapp.svg";
+import netflix from "./assets/svg/netflix.svg";
+import microsoft from "./assets/svg/microsoft.svg";
 import stock from "./assets/svg/stock.svg";
 import apple from "./assets/svg/apple.svg";
 import metamask from "./assets/svg/metamask.svg";
@@ -571,6 +573,36 @@ export default function Hire() {
                   <button
                     className="emoji-container"
                     id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Netflix", logo: netflix })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={netflix} className="emoji-2" alt="calendar" />
+                    Netflix
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Microsoft", logo: microsoft })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={microsoft} className="emoji-2" alt="calendar" />
+                    Microsoft
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
                     onClick={() => addCompany({ name: "Uber", logo: uber })}
                     style={{
                       padding: "1rem",
@@ -924,6 +956,36 @@ export default function Hire() {
                   >
                     <img src={tesla} className="emoji-2" alt="calendar" />
                     Tesla
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Netflix", logo: netflix })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={netflix} className="emoji-2" alt="calendar" />
+                    Netflix
+                  </button>
+                </h5>
+                <h5 className="h5">
+                  <button
+                    className="emoji-container"
+                    id="github-container"
+                    onClick={() =>
+                      addCompany({ name: "Microsoft", logo: microsoft })
+                    }
+                    style={{
+                      padding: "1rem",
+                    }}
+                  >
+                    <img src={microsoft} className="emoji-2" alt="calendar" />
+                    Microsoft
                   </button>
                 </h5>
                 <h5 className="h5">

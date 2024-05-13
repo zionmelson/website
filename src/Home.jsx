@@ -1,4 +1,6 @@
+/* eslint-disable use-isnan */
 /* eslint-disable react/prop-types */
+// import { io } from "socket.io-client";
 import {
   FaUber,
   FaStripeS,
@@ -14,7 +16,7 @@ import { TbBrandAirbnb } from "react-icons/tb";
 
 import { Link } from "react-router-dom";
 
-import { useSpring, animated } from "react-spring";
+// import { useSpring, animated } from "react-spring";
 
 import Lottie from "lottie-react";
 import developer from "./assets/json/developer.json";
@@ -22,6 +24,7 @@ import group from "./assets/json/group.json";
 import rocket from "./assets/json/rocket.json";
 import team from "./assets/json/team.json";
 
+import netflix from "./assets/svg/netflix.svg";
 import cashapp from "./assets/svg/cashapp.svg";
 import stock from "./assets/svg/stock.svg";
 import apple from "./assets/svg/apple.svg";
@@ -43,6 +46,7 @@ import mozilla from "./assets/svg/mozilla.svg";
 import zoom from "./assets/svg/zoom.svg";
 import meetup from "./assets/svg/meetup.svg";
 import amazon from "./assets/svg/amazon.svg";
+import microsoft from "./assets/svg/microsoft.svg";
 import logo from "./assets/svg/logo.svg";
 import linkedin from "./assets/svg/linkedin-2.svg";
 import discord from "./assets/svg/discord.svg";
@@ -57,6 +61,9 @@ import twitter from "./assets/svg/twitter.svg";
 import pinterest from "./assets/svg/pinterest.svg";
 import tiktok from "./assets/svg/tiktok.svg";
 import tesla from "./assets/svg/tesla.svg";
+// import ibm from "./assets/svg/ibm.svg";
+// import amazonBlack from "./assets/svg/amazonBlack.svg";
+// import ibmWhite from "./assets/svg/ibmWhite.svg";
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
@@ -64,41 +71,63 @@ import { useEffect, useState, useRef } from "react";
 
 import "./App.css";
 
-function Number({ n }) {
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: n,
-    delay: 900,
-    config: { mass: 10, tension: 20, friction: 25 },
-  });
+// const socket = new WebSocket(
+//   "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
+// );
 
-  return (
-    <animated.div
-      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
-    >
-      {number.to((n) => `${n.toFixed(0)}+`)}
-    </animated.div>
-  );
-}
+// socket.addEventListener("open", () => {
+//   console.log("connected to server 🚀");
 
-function Percent({ n }) {
-  const { number } = useSpring({
-    from: { number: 0 },
-    number: n,
-    delay: 900,
-    config: { mass: 10, tension: 20, friction: 25 },
-  });
+//   socket.send(
+//     JSON.stringify({
+//       action: "message",
+//       body: {
+//         message: "discord_num",
+//       },
+//     })
+//   );
+// });
 
-  return (
-    <animated.div
-      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
-    >
-      {number.to((n) => `${n.toFixed(0)}%`)}
-    </animated.div>
-  );
-}
+// socket.addEventListener("close", () => {
+//   console.log("disconnected from server");
+// });
+
+// function Number({ n }) {
+//   const { number } = useSpring({
+//     from: { number: 0 },
+//     number: n,
+//     delay: 900,
+//     config: { mass: 10, tension: 20, friction: 25 },
+//   });
+
+//   return (
+//     <animated.div
+//       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+//     >
+//       {number.to((n) => `${n.toFixed(0)}+`)}
+//     </animated.div>
+//   );
+// }
+
+// function Percent({ n }) {
+//   const { number } = useSpring({
+//     from: { number: 0 },
+//     number: n,
+//     delay: 900,
+//     config: { mass: 10, tension: 20, friction: 25 },
+//   });
+
+//   return (
+//     <animated.div
+//       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+//     >
+//       {number.to((n) => `${n.toFixed(0)}%`)}
+//     </animated.div>
+//   );
+// }
 
 function Home() {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
   const [formData, setFormData] = useState({
     first: "",
     last: "",
@@ -112,7 +141,9 @@ function Home() {
     packages: {},
   });
 
-  const [discordCount, setDiscordCount] = useState(0);
+  // const [memberCount, setMemberCount] = useState(0);
+  // const [activeCount, setActiveCount] = useState(0);
+  // const [interviewedRateCount, setInterviewedRateCount] = useState(0);
 
   const [packages, setPackages] = useState({
     projectManager: 0,
@@ -129,6 +160,16 @@ function Home() {
   const [mobile, setMobile] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loaded, setLoaded] = useState(false);
+
+  // const [metaCount, setMetaCount] = useState(0);
+  // const [appleCount, setAppleCount] = useState(0);
+  // const [googleCount, setGoogleCount] = useState(0);
+  // const [netflixCount, setNetflixCount] = useState(0);
+  // const [teslaCount, setTeslaCount] = useState(0);
+  // const [microsoftCount, setMicrosoftCount] = useState(0);
+  // const [amazonCount, setAmazonCount] = useState(0);
+  // const [paypalCount, setPaypalCount] = useState(0);
+  // const [ibmCount, setIbmCount] = useState(0);
 
   const [sourceType, setSourceType] = useState("");
 
@@ -233,23 +274,14 @@ function Home() {
     });
   };
 
-  const setDiscord = async () => {
-    const data = await fetch(
-      "https://discord.com/api/guilds/984461709806804992/widget.json"
-    );
-
-    const json = await data.json();
-
-    setDiscordCount(json.members.length);
-    console.log(json.members.length);
-  };
-
   const targetRef = useRef(null);
   const directRef = useRef(null);
   const projectRef = useRef(null);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    toggleFullScreen();
   };
 
   const scrollToTarget = () => {
@@ -282,6 +314,16 @@ function Home() {
         window.pageYOffset +
         offsetTop;
       window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
     }
   };
 
@@ -359,7 +401,66 @@ function Home() {
   };
 
   useEffect(() => {
-    setDiscord();
+    setTheme(theme);
+    if (window.screen.width < 1100) {
+      setMobile(true);
+    }
+
+    // socket.addEventListener("message", async (event) => {
+    //   let body = JSON.parse(event.data).body;
+    //   console.log("message from server:", body);
+
+    //   if (body.message === "discord_count") {
+    //     let memberCount = await body.memberCount;
+    //     let activeCount = await body.activeCount;
+    //     let appliedCount = await body.appliedCount;
+    //     let interviewedCount = await body.interviewedCount;
+    //     let interviewedRate = (await interviewedCount) / appliedCount;
+
+    //     let meta = await body.metaCount;
+    //     let apple = await body.appleCount;
+    //     let google = await body.googleCount;
+    //     let netflix = await body.netflixCount;
+    //     let tesla = await body.teslaCount;
+    //     let microsoft = await body.microsoftCount;
+    //     let amazon = await body.amazonCount;
+    //     let paypal = await body.paypalCount;
+    //     let ibm = await body.ibmCount;
+
+    //     console.log(
+    //       memberCount,
+    //       activeCount,
+    //       interviewedRate,
+    //       meta,
+    //       apple,
+    //       google,
+    //       netflix,
+    //       tesla,
+    //       microsoft,
+    //       amazon,
+    //       paypal,
+    //       ibm
+    //     );
+
+    //     setMemberCount(memberCount);
+    //     setActiveCount(activeCount);
+    //     setInterviewedRateCount(interviewedRate * 100);
+
+    //     // setMetaCount(meta);
+    //     // setAppleCount(apple);
+    //     // setGoogleCount(google);
+    //     // setNetflixCount(netflix);
+    //     // setTeslaCount(tesla);
+    //     // setMicrosoftCount(microsoft);
+    //     // setAmazonCount(amazon);
+    //     // setPaypalCount(paypal);
+    //     // setIbmCount(ibm);
+
+    //     if (body.message === "discord_num") {
+    //       return;
+    //     }
+    //   }
+    // });
 
     const technologies = gsap.utils.toArray("#gsap");
     const tl = gsap.timeline({ repeat: -1 });
@@ -412,15 +513,10 @@ function Home() {
       });
     }
 
-    if (window.screen.width < 1000) {
-      // setTimeout(() => setMobile(true), 200);
-      setMobile(true);
-    }
-
     setTimeout(() => setLoaded(true), 800);
 
     return () => tl.kill();
-  }, [loaded]);
+  }, [loaded, theme]);
 
   return (
     <div className="main">
@@ -539,68 +635,29 @@ function Home() {
           <div
             style={{
               width: "100%",
-              textAlign: "start",
             }}
           >
-            <h1 className="h1">Hiring big tech talent</h1>
-            <h3 className="h3">
-              We provide startup founders with the flexibily and ease of
-              onboarding vetted engineering teams from large tech companies.
-            </h3>
-            <h5 className="h5">Our sourcing packages:</h5>
-            <div
-              style={{
-                marginTop: "1rem",
-                marginBottom: "1rem",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-              }}
-            >
-              <>
-                <div
-                  style={{
-                    width: "100%",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                    }}
-                  >
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        style={{
-                          width: "100%",
-                        }}
-                        onClick={() => {
-                          scrollToProject();
-                        }}
-                      >
-                        Scrum Package
-                      </button>
-                    </h5>
-                    <h5 className="h5">
-                      <button
-                        className="emoji-container"
-                        style={{
-                          width: "100%",
-                        }}
-                        onClick={() => {
-                          scrollToDirect();
-                        }}
-                      >
-                        Direct-to-Hire
-                      </button>
-                    </h5>
-                  </div>
-                </div>
-              </>
-            </div>
+            <h1 className="h1">Hire big tech talent</h1>
+            {/* <div className="stats-content">
+              <div className="vertical-content">
+                <h6 className="number">
+                  <Number n={memberCount} />
+                </h6>
+                <h5 className="h5">Members joined 👋</h5>
+              </div>
+              <div className="vertical-content">
+                <h6 className="number">
+                  <Number n={activeCount} />
+                </h6>
+                <h5 className="h5">Looking for work 💸</h5>
+              </div>
+              <div className="vertical-content">
+                <h6 className="number">
+                  <Percent n={interviewedRateCount} />
+                </h6>
+                <h5 className="h5">Interviewed rate 📊</h5>
+              </div>
+            </div> */}
           </div>
           {/* scrum package */}
           <div
@@ -1026,6 +1083,44 @@ function Home() {
                             className="emoji-container"
                             id="github-container"
                             onClick={() =>
+                              addCompany({ name: "Netflix", logo: netflix })
+                            }
+                            style={{
+                              padding: "1rem",
+                            }}
+                          >
+                            <img
+                              src={netflix}
+                              className="emoji-2"
+                              alt="calendar"
+                            />
+                            Netflix
+                          </button>
+                        </h5>
+                        <h5 className="h5">
+                          <button
+                            className="emoji-container"
+                            id="github-container"
+                            onClick={() =>
+                              addCompany({ name: "Microsoft", logo: microsoft })
+                            }
+                            style={{
+                              padding: "1rem",
+                            }}
+                          >
+                            <img
+                              src={microsoft}
+                              className="emoji-2"
+                              alt="calendar"
+                            />
+                            Microsoft
+                          </button>
+                        </h5>
+                        <h5 className="h5">
+                          <button
+                            className="emoji-container"
+                            id="github-container"
+                            onClick={() =>
                               addCompany({ name: "Twitch", logo: twitch })
                             }
                             style={{
@@ -1376,6 +1471,44 @@ function Home() {
                               alt="calendar"
                             />
                             Tesla
+                          </button>
+                        </h5>
+                        <h5 className="h5">
+                          <button
+                            className="emoji-container"
+                            id="github-container"
+                            onClick={() =>
+                              addCompany({ name: "Netflix", logo: netflix })
+                            }
+                            style={{
+                              padding: "1rem",
+                            }}
+                          >
+                            <img
+                              src={netflix}
+                              className="emoji-2"
+                              alt="calendar"
+                            />
+                            Netflix
+                          </button>
+                        </h5>
+                        <h5 className="h5">
+                          <button
+                            className="emoji-container"
+                            id="github-container"
+                            onClick={() =>
+                              addCompany({ name: "Microsoft", logo: microsoft })
+                            }
+                            style={{
+                              padding: "1rem",
+                            }}
+                          >
+                            <img
+                              src={microsoft}
+                              className="emoji-2"
+                              alt="calendar"
+                            />
+                            Microsoft
                           </button>
                         </h5>
                         <h5 className="h5">
@@ -2034,26 +2167,6 @@ function Home() {
                 </button>
               </h5>
             </div>
-          </div>
-        </div>
-        <div className="stats-content">
-          <div className="vertical-content">
-            <h6 className="number">
-              <Number n={210 + discordCount} />
-            </h6>
-            <h5 className="h5">Engineers sourced</h5>
-          </div>
-          <div className="vertical-content">
-            <h6 className="number">
-              <Number n={40 + discordCount / 4} />
-            </h6>
-            <h5 className="h5">Engineers matched</h5>
-          </div>
-          <div className="vertical-content">
-            <h6 className="number">
-              <Percent n={94} />
-            </h6>
-            <h5 className="h5">Placement satisfaction</h5>
           </div>
         </div>
       </div>
