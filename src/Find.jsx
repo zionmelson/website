@@ -90,7 +90,7 @@ function Find() {
 
   const [isBlurredImageLoaded, setIsBlurredImageLoaded] = useState(false);
 
-  const [memberCount, setMemberCount] = useState(275);
+  const [memberCount, setMemberCount] = useState(274);
   const [activeCount, setActiveCount] = useState(211);
   const [interviewedRateCount, setInterviewedRateCount] = useState(14);
 
