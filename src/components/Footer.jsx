@@ -37,7 +37,7 @@ export default function Footer() {
             </h5>
             <div className="socials">
               <a
-                href="https://discord.gg/ZbGfyErE3w"
+                href="https://discord.gg/WKj3uz6sZZ"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -104,7 +104,7 @@ export default function Footer() {
             </h5>
             <div className="socials">
               <a
-                href="https://discord.gg/ZbGfyErE3w"
+                href="https://discord.gg/WKj3uz6sZZ"
                 target="_blank"
                 rel="noreferrer"
               >
