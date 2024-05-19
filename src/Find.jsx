@@ -9,7 +9,7 @@ import { useSpring, animated } from "react-spring";
 import meta from "./assets/svg/meta.svg";
 import apple from "./assets/svg/apple.svg";
 import google from "./assets/svg/google.svg";
-import netflix from "./assets/svg/netflix.svg";
+import spotify from "./assets/svg/spotify.svg";
 import tesla from "./assets/svg/tesla.svg";
 import microsoft from "./assets/svg/microsoft.svg";
 import amazon from "./assets/svg/amazon.svg";
@@ -97,7 +97,7 @@ function Find() {
   const [metaCount, setMetaCount] = useState(8);
   const [appleCount, setAppleCount] = useState(5);
   const [googleCount, setGoogleCount] = useState(8);
-  const [netflixCount, setNetflixCount] = useState(1);
+  const [spotifyCount, setSpotifyCount] = useState(4);
   const [teslaCount, setTeslaCount] = useState(8);
   const [microsoftCount, setMicrosoftCount] = useState(9);
   const [amazonCount, setAmazonCount] = useState(13);
@@ -128,7 +128,7 @@ function Find() {
         let meta = await body.metaCount;
         let apple = await body.appleCount;
         let google = await body.googleCount;
-        let netflix = await body.netflixCount;
+        let spotify = await body.spotifyCount;
         let tesla = await body.teslaCount;
         let microsoft = await body.microsoftCount;
         let amazon = await body.amazonCount;
@@ -142,7 +142,7 @@ function Find() {
           meta,
           apple,
           google,
-          netflix,
+          spotify,
           tesla,
           microsoft,
           amazon,
@@ -157,7 +157,7 @@ function Find() {
         setMetaCount(meta);
         setAppleCount(apple);
         setGoogleCount(google);
-        setNetflixCount(netflix);
+        setSpotifyCount(spotify);
         setTeslaCount(tesla);
         setMicrosoftCount(microsoft);
         setAmazonCount(amazon);
@@ -275,9 +275,9 @@ function Find() {
             </h6>
           </div>
           <div className="horizontal-content">
-            <img src={netflix} className="emoji-2" alt="netflix" />
+            <img src={spotify} className="emoji-2" alt="spotify" />
             <h6 className="number-2">
-              <Number n={netflixCount} />
+              <Number n={spotifyCount} />
             </h6>
           </div>
           <div className="horizontal-content">
@@ -331,7 +331,7 @@ function Find() {
           }}
         >
           <h5 className="h5" style={{ marginBottom: 0 }}>
-            join our discord
+            join our server
           </h5>
         </a>
       </div>
