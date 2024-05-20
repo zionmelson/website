@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <div className="main">
       <div className="vertical-content">
-        <h1 className="h1">privacy policy</h1>
+        <h1 className="h1">Privacy Policy</h1>
       </div>
       <p className="h5">
         IF YOU DO NOT ACCEPT THIS PRIVACY POLICY, THEN YOU ARE NOT AUTHORIZED TO

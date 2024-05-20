@@ -87,6 +87,9 @@
   background: #111111;
   transition: all 0.3s linear;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #fff;
 }
 
@@ -94,6 +97,9 @@
   background: #fff;
   transition: all 0.3s linear;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #302f31;
 }
 

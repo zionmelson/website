@@ -4,7 +4,7 @@ export default function Terms() {
   return (
     <div className="main">
       <div className="vertical-content">
-        <h1 className="h1">terms of service</h1>
+        <h1 className="h1">Terms of Service</h1>
       </div>
       <div className="privacy">
         <p className="h5">

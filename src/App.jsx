@@ -37,31 +37,30 @@ function App() {
     setTheme(theme === "white" ? "" : "white");
   };
   return (
-    <>
+    <div
+      className={theme === "" ? "App" : "App-white"}
+      id={theme === "" ? "" : "white"}
+    >
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <div
-          className={theme === "" ? "App" : "App-white"}
-          id={theme === "" ? "" : "white"}
-        >
-          <Navbar />
-          {theme === "" ? (
-            <PiMoonStarsDuotone className="daytime" onClick={toggleTheme} />
-          ) : (
-            <IoPartlySunny className="daytime" onClick={toggleTheme} />
-          )}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/find-work" element={<Find />} />
-            <Route path="/hire" element={<Hire />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
-          <Footer />
-        </div>
+        <Navbar />
+        {theme === "" ? (
+          <PiMoonStarsDuotone className="daytime" onClick={toggleTheme} />
+        ) : (
+          <IoPartlySunny className="daytime" onClick={toggleTheme} />
+        )}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/find-work" element={<Find />} />
+          <Route path="/hire" element={<Hire />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+
+        <Footer />
         <Analytics />
       </ThemeContext.Provider>
-    </>
+    </div>
   );
 }
 
