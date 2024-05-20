@@ -90,19 +90,19 @@ function Find() {
 
   const [isBlurredImageLoaded, setIsBlurredImageLoaded] = useState(false);
 
-  const [memberCount, setMemberCount] = useState(274);
-  const [activeCount, setActiveCount] = useState(211);
-  const [interviewedRateCount, setInterviewedRateCount] = useState(14);
+  const [memberCount, setMemberCount] = useState(409);
+  const [activeCount, setActiveCount] = useState(360);
+  const [interviewedRateCount, setInterviewedRateCount] = useState(8);
 
-  const [metaCount, setMetaCount] = useState(8);
-  const [appleCount, setAppleCount] = useState(5);
-  const [googleCount, setGoogleCount] = useState(8);
+  const [metaCount, setMetaCount] = useState(13);
+  const [appleCount, setAppleCount] = useState(10);
+  const [googleCount, setGoogleCount] = useState(15);
   const [spotifyCount, setSpotifyCount] = useState(4);
-  const [teslaCount, setTeslaCount] = useState(8);
-  const [microsoftCount, setMicrosoftCount] = useState(9);
-  const [amazonCount, setAmazonCount] = useState(13);
-  const [paypalCount, setPaypalCount] = useState(2);
-  const [ibmCount, setIbmCount] = useState(5);
+  const [teslaCount, setTeslaCount] = useState(12);
+  const [microsoftCount, setMicrosoftCount] = useState(14);
+  const [amazonCount, setAmazonCount] = useState(21);
+  const [paypalCount, setPaypalCount] = useState(4);
+  const [ibmCount, setIbmCount] = useState(8);
 
   const handleImageLoad = () => {
     setIsBlurredImageLoaded(true);
