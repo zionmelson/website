@@ -30,6 +30,11 @@
   padding-left: 10rem;
 }
 
+#white .footer {
+  background-color: rgba(231, 231, 231, 0.9);
+  color: #302f31;
+}
+
 .navigation {
   font-size: 1.1rem;
   display: flex;
