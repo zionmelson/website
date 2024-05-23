@@ -30,11 +30,6 @@
   padding-left: 10rem;
 }
 
-#white .footer {
-  background-color: rgba(231, 231, 231, 0.9);
-  color: #302f31;
-}
-
 .navigation {
   font-size: 1.1rem;
   display: flex;
@@ -54,16 +49,11 @@
 
 .scrolled {
   background-color: rgba(19, 19, 19, 0.9);
-
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-bottom: 0;
-}
-
-#white .scrolled {
-  background-color: rgba(15, 15, 15, 0.3);
 }
 
 .nav-text {
@@ -86,13 +76,6 @@
 
 .social:hover {
   transform: scale(1.1);
-}
-
-.footer-numbers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1rem;
 }
 
 .normal-logo {
@@ -239,10 +222,6 @@
     align-items: center;
   }
   .socials {
-    display: flex;
-  }
-
-  .footer-numbers {
     display: flex;
   }
 }
