@@ -146,7 +146,6 @@ function Home() {
             <div
               className={`icons ${mobile ? "mobile" : ""}`}
               style={{
-                marginBottom: "2rem",
                 height: "5rem",
               }}
             >
