@@ -444,8 +444,8 @@ function Find() {
             </div>
           </div>
           <h5 className="h5" id="bio">
-            our team is focused on creating a more open conversation about the
-            future of work.
+            focused on creating a more open conversation about the future of
+            work.
           </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
