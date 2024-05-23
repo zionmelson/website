@@ -49,7 +49,7 @@ export default function Navbar() {
             </a>
           </li>
           <li className="nav-text">
-            <a href="/hire">
+            <a href="https://discord.gg/SG9RvqWb88">
               <h5 className="h5">
                 <button className="emoji-container">book a demo</button>
               </h5>
@@ -69,7 +69,7 @@ export default function Navbar() {
                   <div className="link-container">find work</div>
                 </h5>
               </a>
-              <a href="/hire">
+              <a href="https://discord.gg/SG9RvqWb88">
                 <h5 className="h5">
                   <button className="link-container">book a demo</button>
                 </h5>

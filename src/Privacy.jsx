@@ -3,7 +3,7 @@ import "./App.css";
 export default function Privacy() {
   return (
     <div className="main">
-      <div className="vertical-content">
+      <div className="vertical">
         <h1 className="h1">Privacy Policy</h1>
       </div>
       <p className="h5">

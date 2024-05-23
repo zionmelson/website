@@ -5,23 +5,16 @@ import "./App.css";
 export default function Error() {
   return (
     <div className="main">
-      <div
-        className="box"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <h2 className="h2">where are you going? 🧐</h2>
-        <a href="/">
-          <span className="emoji-container">
+      <h2 className="h2">404 😬</h2>
+      <a href="/">
+        <h5 className="h5">
+          <button className="emoji-container">
             <img src={bear} className="emoji" alt="mu" />
-            get back to safety
-          </span>
-        </a>
-      </div>
+            get back home
+          </button>
+        </h5>
+      </a>
+      <h3 className="h3">yikes...</h3>
     </div>
   );
 }

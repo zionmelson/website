@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import discord from "../assets/svg/discord.svg";
 import linkedin from "../assets/svg/linkedin-2.svg";
 import x from "../assets/svg/twitter.svg";
 import medium from "../assets/svg/medium.svg";
@@ -20,29 +19,9 @@ export default function Footer() {
     <div className="footer">
       {mobile ? (
         <>
-          <div className="footer-numbers">
-            <span className="emoji-container">
-              <h5 className="h5" style={{ marginBottom: "0" }}>
-                404-956-7771
-              </h5>
-            </span>
-          </div>
-          <div className="vertical-content">
-            <h5
-              style={{
-                marginBottom: "0",
-              }}
-            >
-              follow us
-            </h5>
+          <div className="vertical">
+            <h5 className="h5">follow us</h5>
             <div className="socials">
-              <a
-                href="https://discord.gg/WKj3uz6sZZ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img className="social" src={discord} alt="discord" />
-              </a>
               <a
                 href="https://www.linkedin.com/company/learnmutiny/"
                 target="_blank"
@@ -94,22 +73,8 @@ export default function Footer() {
               <h5>Privacy Policy</h5>
             </a>
           </div>
-          <div className="vertical-content">
-            <h5
-              style={{
-                marginBottom: "0",
-              }}
-            >
-              follow us
-            </h5>
+          <div className="vertical">
             <div className="socials">
-              <a
-                href="https://discord.gg/WKj3uz6sZZ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img className="social" src={discord} alt="discord" />
-              </a>
               <a
                 href="https://www.linkedin.com/company/learnmutiny/"
                 target="_blank"
@@ -139,13 +104,6 @@ export default function Footer() {
                 <img className="social" src={spotify} alt="medium" />
               </a>
             </div>
-          </div>
-          <div className="footer-numbers">
-            <span className="emoji-container">
-              <h5 className="h5" style={{ marginBottom: "0" }}>
-                404-956-7771
-              </h5>
-            </span>
           </div>
         </>
       )}

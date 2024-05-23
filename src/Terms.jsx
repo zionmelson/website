@@ -3,7 +3,7 @@ import "./App.css";
 export default function Terms() {
   return (
     <div className="main">
-      <div className="vertical-content">
+      <div className="vertical">
         <h1 className="h1">Terms of Service</h1>
       </div>
       <div className="privacy">
