@@ -142,7 +142,7 @@ function Home() {
           <h2 className="h2">
             we source tech talent from tech giants and unicorns
           </h2>
-          {loaded && (
+          {loaded ? (
             <div
               className={`icons ${mobile ? "mobile" : ""}`}
               style={{
@@ -161,11 +161,10 @@ function Home() {
                 </>
               )}
             </div>
-          )}
-          {!loaded && (
+          ) : (
             <div
               className={`icons ${mobile ? "mobile" : ""}`}
-              style={{ marginBottom: "2rem", height: "5rem" }}
+              style={{ height: "5rem" }}
             >
               <img src={logo} id="icon" />
             </div>
