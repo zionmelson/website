@@ -43,7 +43,7 @@
     "socket.io-client": "^4.7.5",
     "split-text-js": "^1.0.3",
     "split-type": "^0.3.4",
-    "stripe": "^14.18.0",
+    "stripe": "^14.25.0",
     "ws": "^8.17.0"
   },
   "devDependencies": {

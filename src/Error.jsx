@@ -6,7 +6,7 @@ export default function Error() {
   return (
     <div className="main">
       <h2 className="h2">404 😬</h2>
-      <a href="/">
+      <a href="https://discord.gg/SG9RvqWb88">
         <h5 className="h5">
           <button className="emoji-container">
             <img src={bear} className="emoji" alt="mu" />

@@ -18,8 +18,10 @@ discord
 socket
 interface.js
 emails
-X509-cert-8430854247275277362.pem
-src/pages
+certificate.crt
+private.key
+csr.csr
+
 
 # Editor directories and files
 .vscode/*
