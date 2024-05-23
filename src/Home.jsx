@@ -135,7 +135,11 @@ function Home() {
                 )}
               </div>
             ) : (
-              <div className="span"></div>
+              <div className="span">
+                <h2 className="h1" id="gsap">
+                  loading...
+                </h2>
+              </div>
             )}
             for your startup
           </h1>
