@@ -145,14 +145,14 @@ function Home() {
                 height: "5rem",
               }}
             >
-              <FaMeta id="meta" className="icon" />
-              <FaApple id="apple" className="icon" />
-              <FaGoogle id="google" className="icon" />
+              <FaMeta className="icon" />
+              <FaApple className="icon" />
+              <FaGoogle className="icon" />
               {!mobile && (
                 <>
-                  <RiTwitterXFill id="X" className="icon" />
-                  <FaUber id="uber" className="icon" />
-                  <FaMicrosoft id="microsoft" className="icon" />
+                  <RiTwitterXFill className="icon" />
+                  <FaUber className="icon" />
+                  <FaMicrosoft className="icon" />
                 </>
               )}
             </div>
