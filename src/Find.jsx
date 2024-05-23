@@ -155,7 +155,7 @@ function Find() {
                 style={{ marginTop: "0.3rem" }}
               />
               <h3 className="h3" style={{ marginBottom: "0" }}>
-                live positions are announced in our server.
+                live positions are announced in our server
               </h3>
             </span>
           ) : (
@@ -319,7 +319,7 @@ function Find() {
           </div>
           <h5 className="h5" id="bio">
             focused on creating a more open conversation about the future of
-            work.
+            work
           </h5>
           <img src={atlanta} className="emoji" alt="mu" />
         </div>
