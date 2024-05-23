@@ -176,7 +176,7 @@ function Home() {
           <h2 className="h2">and place them at your startup</h2>
           <Link to="https://discord.gg/SG9RvqWb88">
             <h5 className="h5">
-              <button className="emoji-container">book a demo</button>
+              <button className="emoji-container">start free trial 🚀</button>
             </h5>
           </Link>
         </div>
