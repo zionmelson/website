@@ -125,13 +125,6 @@ export default function Footer() {
                 <img className="social" src={spotify} alt="medium" />
               </a>
             </div>
-            <h5
-              style={{
-                marginBottom: "0",
-              }}
-            >
-              follow us
-            </h5>
           </div>
         </>
       )}
