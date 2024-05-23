@@ -1,6 +1,5 @@
-/* eslint-disable use-isnan */
 /* eslint-disable react/prop-types */
-// import { io } from "socket.io-client";
+
 import { FaMeta } from "react-icons/fa6";
 import { FaUber, FaMicrosoft, FaGoogle, FaApple } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
