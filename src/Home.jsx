@@ -148,9 +148,9 @@ function Home() {
               <FaMeta className="icon" />
               <FaApple className="icon" />
               <FaGoogle className="icon" />
+              <RiTwitterXFill className="icon" />
               {!mobile && (
                 <>
-                  <RiTwitterXFill className="icon" />
                   <FaUber className="icon" />
                   <FaMicrosoft className="icon" />
                 </>
