@@ -20,13 +20,6 @@ export default function Footer() {
     <div className="footer">
       {mobile ? (
         <>
-          <div className="footer-numbers">
-            <span className="emoji-container">
-              <h5 className="h5" style={{ marginBottom: "0" }}>
-                404-956-7771
-              </h5>
-            </span>
-          </div>
           <div className="vertical-content">
             <h5
               style={{
@@ -95,13 +88,6 @@ export default function Footer() {
             </a>
           </div>
           <div className="vertical-content">
-            <h5
-              style={{
-                marginBottom: "0",
-              }}
-            >
-              follow us
-            </h5>
             <div className="socials">
               <a
                 href="https://discord.gg/WKj3uz6sZZ"
@@ -139,13 +125,13 @@ export default function Footer() {
                 <img className="social" src={spotify} alt="medium" />
               </a>
             </div>
-          </div>
-          <div className="footer-numbers">
-            <span className="emoji-container">
-              <h5 className="h5" style={{ marginBottom: "0" }}>
-                404-956-7771
-              </h5>
-            </span>
+            <h5
+              style={{
+                marginBottom: "0",
+              }}
+            >
+              follow us
+            </h5>
           </div>
         </>
       )}
