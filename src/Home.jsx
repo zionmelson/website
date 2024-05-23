@@ -1,11 +1,9 @@
 /* eslint-disable use-isnan */
 /* eslint-disable react/prop-types */
 // import { io } from "socket.io-client";
-import { FaUber, FaStripeS, FaDiscord } from "react-icons/fa";
-import { RiTwitterXFill } from "react-icons/ri";
-import { SiCashapp } from "react-icons/si";
 import { FaMeta } from "react-icons/fa6";
-import { TbBrandAirbnb } from "react-icons/tb";
+import { FaUber, FaMicrosoft, FaGoogle, FaApple } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
 
 import { Link } from "react-router-dom";
 
@@ -148,15 +146,14 @@ function Home() {
                 height: "5rem",
               }}
             >
-              <SiCashapp id="cashapp" className="icon" />
               <FaMeta id="meta" className="icon" />
-              <RiTwitterXFill id="X" className="icon" />
-              <TbBrandAirbnb id="airbnb" className="icon" />
+              <FaApple id="apple" className="icon" />
+              <FaGoogle id="google" className="icon" />
               {!mobile && (
                 <>
+                  <RiTwitterXFill id="X" className="icon" />
                   <FaUber id="uber" className="icon" />
-                  <FaStripeS id="stripe" className="icon" />
-                  <FaDiscord id="discord" className="icon" />
+                  <FaMicrosoft id="microsoft" className="icon" />
                 </>
               )}
             </div>

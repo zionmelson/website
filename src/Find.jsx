@@ -75,19 +75,19 @@ function Percent({ n }) {
 function Find() {
   const [mobile, setMobile] = useState(false);
 
-  const [memberCount, setMemberCount] = useState(409);
-  const [activeCount, setActiveCount] = useState(360);
-  const [interviewedRateCount, setInterviewedRateCount] = useState(8);
+  const [memberCount, setMemberCount] = useState(443);
+  const [activeCount, setActiveCount] = useState(391);
+  const [interviewedRateCount, setInterviewedRateCount] = useState(14);
 
-  const [metaCount, setMetaCount] = useState(13);
+  const [metaCount, setMetaCount] = useState(12);
   const [appleCount, setAppleCount] = useState(10);
-  const [googleCount, setGoogleCount] = useState(15);
+  const [googleCount, setGoogleCount] = useState(16);
   const [spotifyCount, setSpotifyCount] = useState(4);
-  const [teslaCount, setTeslaCount] = useState(12);
-  const [microsoftCount, setMicrosoftCount] = useState(14);
+  const [teslaCount, setTeslaCount] = useState(11);
+  const [microsoftCount, setMicrosoftCount] = useState(16);
   const [amazonCount, setAmazonCount] = useState(21);
   const [paypalCount, setPaypalCount] = useState(4);
-  const [ibmCount, setIbmCount] = useState(8);
+  const [ibmCount, setIbmCount] = useState(9);
 
   useEffect(() => {
     if (window.screen.width < 1100) {

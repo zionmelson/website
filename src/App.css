@@ -237,6 +237,7 @@
   width: 3.5rem;
   height: 3.5rem;
   margin: 1rem;
+  color: #686868;
   animation: rise 2s forwards;
 }
 
@@ -283,31 +284,6 @@
 
 .icon:hover {
   transform: scale(1.1);
-}
-
-#cashapp {
-  color: #00c805;
-}
-
-#meta {
-  color: #0081fb;
-}
-
-#X {
-  color: #fff;
-  transition: all 0.3s linear;
-}
-
-#airbnb {
-  color: #ff5a5f;
-}
-
-#stripe {
-  color: #5433ff;
-}
-
-#discord {
-  color: #7289da;
 }
 
 @media (max-width: 767px) {
