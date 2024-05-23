@@ -94,24 +94,42 @@ function Find() {
       setMobile(true);
     }
     socket.addEventListener("message", async (event) => {
-      let body = JSON.parse(event.data).body;
+      let message = JSON.parse(event.data).body.message;
 
-      if (body.message === "discord_count") {
-        let memberCount = await body.memberCount;
-        let activeCount = await body.activeCount;
-        let appliedCount = await body.appliedCount;
-        let interviewedCount = await body.interviewedCount;
-        let interviewedRate = (await interviewedCount) / appliedCount;
+      if (message === "discord_count") {
+        let memberCount = await message.memberCount;
+        let activeCount = await message.activeCount;
+        let appliedCount = await message.appliedCount;
+        let interviewedCount = await message.interviewedCount;
+        let interviewedRate = interviewedCount / appliedCount;
+        let meta = await message.metaCount;
+        let apple = await message.appleCount;
+        let google = await message.googleCount;
+        let spotify = await message.spotifyCount;
+        let tesla = await message.teslaCount;
+        let microsoft = await message.microsoftCount;
+        let amazon = await message.amazonCount;
+        let paypal = await message.paypalCount;
+        let ibm = await message.ibmCount;
 
-        let meta = await body.metaCount;
-        let apple = await body.appleCount;
-        let google = await body.googleCount;
-        let spotify = await body.spotifyCount;
-        let tesla = await body.teslaCount;
-        let microsoft = await body.microsoftCount;
-        let amazon = await body.amazonCount;
-        let paypal = await body.paypalCount;
-        let ibm = await body.ibmCount;
+        if (
+          activeCount === undefined ||
+          appliedCount === undefined ||
+          interviewedCount === undefined ||
+          interviewedRate === undefined ||
+          meta === undefined ||
+          apple === undefined ||
+          google === undefined ||
+          spotify === undefined ||
+          tesla === undefined ||
+          microsoft === undefined ||
+          amazon === undefined ||
+          paypal === undefined ||
+          ibm === undefined
+        ) {
+          setMemberCount(memberCount);
+          return;
+        }
 
         setMemberCount(memberCount);
         setActiveCount(activeCount);
@@ -128,7 +146,7 @@ function Find() {
         setIbmCount(ibm);
       }
 
-      if (body.message === "discord_num") {
+      if (message === "discord_num") {
         return;
       }
     });
