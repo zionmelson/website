@@ -170,7 +170,7 @@ function Find() {
             >
               <FaRegDotCircle className="record" />
               <h3 className="h3" style={{ marginBottom: "0" }}>
-                live positions are announced in our server.
+                live positions are announced in our server
               </h3>
             </span>
           )}
