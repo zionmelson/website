@@ -9,7 +9,6 @@ import { IoPartlySunny } from "react-icons/io5";
 
 import Home from "./Home";
 import Find from "./Find";
-import Hire from "./Hire";
 import Privacy from "./Privacy";
 import Terms from "./Terms";
 import Error from "./Error";
@@ -51,7 +50,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/find-work" element={<Find />} />
-          <Route path="/hire" element={<Hire />} />
+
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="*" element={<Error />} />
