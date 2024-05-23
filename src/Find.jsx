@@ -321,20 +321,8 @@ function Find() {
             </h6>
           </div>
         </div>
-        <a
-          href="https://discord.gg/WKj3uz6sZZ"
-          target="_blank"
-          rel="noreferrer"
-          className="emoji-container"
-          style={{
-            margin: "0.5rem",
-          }}
-        >
-          <h5 className="h5" style={{ marginBottom: 0 }}>
-            join our server
-          </h5>
-        </a>
       </div>
+
       {/* partners */}
       <div className="box">
         <div className="vertical-content">
