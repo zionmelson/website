@@ -18,19 +18,15 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function Home() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "");
-
   const [mobile, setMobile] = useState(false);
-
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    setTheme(theme);
     if (window.screen.width < 1100) {
       setMobile(true);
     }
 
-    const technologies = gsap.utils.toArray("#gsap");
+    const technologies = gsap.utils.toArray("#animation");
     const tl = gsap.timeline({ repeat: -1 });
 
     technologies.forEach((technology) => {
@@ -66,65 +62,64 @@ function Home() {
     setTimeout(() => setLoaded(true), 800);
 
     return () => tl.kill();
-  }, [loaded, theme]);
+  }, [loaded]);
 
   return (
     <div className="main">
-      {/* intro */}
       <div className="box">
-        <div className="vertical-content">
+        <div className="vertical">
           <h1 className="h1">
             Hire a big tech
             {loaded ? (
               <div className="span">
                 {loaded ? (
                   <>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       full-stack developer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       back-end developer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       systems engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       software architect
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       regression engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       cloud engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       blockchain engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       devops engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       database engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       data engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       project manager
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       ui/ux designer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       graphic designer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       animation engineer
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       product manager
                     </h2>
-                    <h2 className="h1" id="gsap">
+                    <h2 className="h1" id="animation">
                       scrum master
                     </h2>
                   </>
@@ -136,7 +131,7 @@ function Home() {
               </div>
             ) : (
               <div className="span">
-                <h2 className="h1" id="gsap">
+                <h2 className="h1" id="animation">
                   loading...
                 </h2>
               </div>
