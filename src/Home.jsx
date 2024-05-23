@@ -1,13 +1,5 @@
 /* eslint-disable react/prop-types */
 
-import { FaMeta } from "react-icons/fa6";
-import { FaUber, FaMicrosoft, FaGoogle, FaApple } from "react-icons/fa";
-import { RiTwitterXFill } from "react-icons/ri";
-
-import { Link } from "react-router-dom";
-
-import logo from "./assets/svg/logo.svg";
-
 import gsap from "gsap";
 import SplitText from "split-text-js";
 import { useEffect, useState } from "react";
@@ -15,14 +7,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function Home() {
-  const [mobile, setMobile] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    if (window.screen.width < 1100) {
-      setMobile(true);
-    }
-
     const technologies = gsap.utils.toArray("#animation");
     const tl = gsap.timeline({ repeat: -1 });
 
@@ -56,7 +43,7 @@ function Home() {
       );
     });
 
-    setTimeout(() => setLoaded(true), 800);
+    setTimeout(() => setLoaded(true), 850);
 
     return () => tl.kill();
   }, [loaded]);
@@ -138,40 +125,14 @@ function Home() {
           <h2 className="h2">
             we source tech talent from tech giants and unicorns
           </h2>
-          {loaded ? (
-            <div
-              className={`icons ${mobile ? "mobile" : ""}`}
-              style={{
-                height: "5rem",
-              }}
-            >
-              <FaMeta className="icon" />
-              <FaApple className="icon" />
-              <FaGoogle className="icon" />
-              <RiTwitterXFill className="icon" />
-              {!mobile && (
-                <>
-                  <FaUber className="icon" />
-                  <FaMicrosoft className="icon" />
-                </>
-              )}
-            </div>
-          ) : (
-            <div
-              className={`icons ${mobile ? "mobile" : ""}`}
-              style={{ height: "5rem" }}
-            >
-              <img src={logo} id="icon" />
-            </div>
-          )}
-          <h2 className="h2">and place them at your startup</h2>
-          <Link to="https://discord.gg/SG9RvqWb88">
-            <h5 className="h5">
-              <button className="emoji-container">start free trial 🚀</button>
-            </h5>
-          </Link>
+          <h3 className="h3">and place them at your startup</h3>
         </div>
       </div>
+      <a href="https://discord.gg/SG9RvqWb88">
+        <h5 className="h5">
+          <button className="emoji-container">start free trial 🚀</button>
+        </h5>
+      </a>
     </div>
   );
 }
