@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-import discord from "../assets/svg/discord.svg";
 import linkedin from "../assets/svg/linkedin-2.svg";
 import x from "../assets/svg/twitter.svg";
 import medium from "../assets/svg/medium.svg";
@@ -29,13 +28,6 @@ export default function Footer() {
               follow us
             </h5>
             <div className="socials">
-              <a
-                href="https://discord.gg/WKj3uz6sZZ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img className="social" src={discord} alt="discord" />
-              </a>
               <a
                 href="https://www.linkedin.com/company/learnmutiny/"
                 target="_blank"
@@ -89,13 +81,6 @@ export default function Footer() {
           </div>
           <div className="vertical-content">
             <div className="socials">
-              <a
-                href="https://discord.gg/WKj3uz6sZZ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img className="social" src={discord} alt="discord" />
-              </a>
               <a
                 href="https://www.linkedin.com/company/learnmutiny/"
                 target="_blank"
