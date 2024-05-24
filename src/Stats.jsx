@@ -96,6 +96,8 @@ function Stats() {
   const socketRef = useRef();
 
   useEffect(() => {
+    const date = new Date();
+    setTime(formatDateTime(date));
     setInterval(() => {
       const date = new Date();
       setTime(formatDateTime(date));
