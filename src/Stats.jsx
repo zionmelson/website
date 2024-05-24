@@ -96,7 +96,11 @@ function Stats() {
   const socketRef = useRef();
 
   useEffect(() => {
-    setTime(formatDateTime(new Date()));
+    setInterval(() => {
+      const date = new Date();
+      setTime(formatDateTime(date));
+    }, 1000);
+
     socketRef.current = new WebSocket(
       "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
     );
