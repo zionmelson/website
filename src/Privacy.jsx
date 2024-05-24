@@ -3,15 +3,9 @@ import "./App.css";
 export default function Privacy() {
   return (
     <div className="main">
-      <div className="vertical">
-        <h1 className="h1">Privacy Policy</h1>
-      </div>
-      <p className="h5">
-        IF YOU DO NOT ACCEPT THIS PRIVACY POLICY, THEN YOU ARE NOT AUTHORIZED TO
-        USE THIS SITE!
-      </p>
-      <div className="privacy">
-        <p className="h5">
+      <div className="vbox">
+        <h2 className="h2">Privacy Policy</h2>
+        <p className="p">
           At learnmutiny Limited Liability Company (“learnmutiny”), we respect
           your concerns about privacy. This Privacy Policy describes what
           information we collect about you, how we collect it, how we use it,
@@ -29,11 +23,9 @@ export default function Privacy() {
           disclosures of information about you) that are described in this
           Privacy Policy.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">1. What information do we collect?</h4>
         <p className="h4">(a) Information you provide to us.</p>
-        <p className="h5">
+        <p className="p">
           We and our third party service providers (“Service Providers”) may
           collect certain information from or about you in connection with your
           use of, or your submissions directly to us or via the Site (together,
@@ -45,7 +37,7 @@ export default function Privacy() {
           communication by which such correspondence was made.
         </p>
         <p className="h4">(b) Information collected via technology.</p>
-        <p className="h5">
+        <p className="p">
           The servers used to host and operate the Site may collect certain data
           pertaining to you, including data regarding the source from which you
           are directed to the Site, the equipment and communications method that
@@ -72,15 +64,13 @@ export default function Privacy() {
           and content accessing. Web Beacons. Pages of the Site and our e-mails
           may contain small electronic files known as web beacons (also referred
           to as clear gifs, pixel tags and single-pixel gifs) that permit
-          learnmutiny, for example, to count users who have visited those pages
-          or opened an e-mail and for other related Site statistics (for
+          learnmutiny.io, for example, to count users who have visited those
+          pages or opened an e-mail and for other related Site statistics (for
           example, recording the popularity of certain Site content and
           verifying system and server integrity).
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">2. Interest-based advertising.</h4>
-        <p className="h5">
+        <p className="p">
           Advertising agencies, advertising networks, and other companies may
           place advertisements on the Site, and on the Internet generally, and
           may use their own cookies, web beacons, and other technology to
@@ -95,10 +85,8 @@ export default function Privacy() {
           have any questions about an advertisement or other targeted content,
           you should contact the responsible provider directly.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">3. How do we use your information?</h4>
-        <p className="h5">
+        <p className="p">
           We may use Collected Information to communicate special offers,
           promotions and information about our company to you via email or the
           telephone. If you do not wish to receive these emails you will have
@@ -123,30 +111,27 @@ export default function Privacy() {
           store Collected Information for as long as needed for the purposes
           indicated in this Privacy Policy, which may be indefinitely.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">4. How do we use your information?</h4>
-        <p className="h5">
+        <p className="p">
           We collect information to provide a more personalized and relevant
           experience and high-quality services. If you give us your email
           address when you inquire about the Site or sign up, we will send you
-          emails about offers, services details and news at learnmutiny. If you
-          want to opt-out of receiving emails, simply click on the unsubscribe
-          link located on the bottom of all of our emails. Although we strive to
-          update our email list as frequently as possible, you might receive
-          another contact before we are able to remove you. Please note that you
-          will continue to receive services-related communications as it
-          pertains to your learnmutiny account. learnmutiny may use any of your
-          contact information held on file (including Email, Mailing, Phone &
-          Fax) to communicate with you in relation to day to day administrative
-          activities, such as billing and important service alerts.
+          emails about offers, services details and news at learnmutiny.io. If
+          you want to opt-out of receiving emails, simply click on the
+          unsubscribe link located on the bottom of all of our emails. Although
+          we strive to update our email list as frequently as possible, you
+          might receive another contact before we are able to remove you. Please
+          note that you will continue to receive services-related communications
+          as it pertains to your learnmutiny.io account. learnmutiny.io may use
+          any of your contact information held on file (including Email,
+          Mailing, Phone & Fax) to communicate with you in relation to day to
+          day administrative activities, such as billing and important service
+          alerts.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">
           5. We only share user information in the ways described below.
         </h4>
-        <p className="h5">
+        <p className="p">
           We employ other companies and individuals to perform functions on our
           behalf. Examples include creating and maintaining our Site, processing
           credit card information, sending postal mail and e-mail, removing
@@ -164,21 +149,19 @@ export default function Privacy() {
           release account and other Collected Information when we believe
           release is necessary to comply with law, enforce or apply our Terms of
           Use and other agreements, or protect the rights, property, or safety
-          of learnMutiny, our users, or others. This includes exchanging
+          of learnmutiny.io, our users, or others. This includes exchanging
           information with other companies and organizations for fraud
           protection, and for making tax and other labor-related filings,
-          including government filings. If all or part of learnmutiny is sold,
-          merged, or otherwise transferred to another entity, whether as a going
-          concern or as part of bankruptcy, liquidation or similar proceeding,
-          we may transfer Collected Information to such entity as part of that
-          transaction. Finally, we may disclose Collected Information to other
-          third parties with your consent.
+          including government filings. If all or part of learnmutiny.io is
+          sold, merged, or otherwise transferred to another entity, whether as a
+          going concern or as part of bankruptcy, liquidation or similar
+          proceeding, we may transfer Collected Information to such entity as
+          part of that transaction. Finally, we may disclose Collected
+          Information to other third parties with your consent.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">6. What choices do you have?</h4>
-        <p className="h5">
-          When corresponding with learnmutiny or our representatives, or when
+        <p className="p">
+          When corresponding with learnmutiny.io or our representatives, or when
           making a request for information or otherwise interacting with us or
           others through the Site, you choose what information to supply, what
           questions or comments to submit, whether you wish to receive further
@@ -191,12 +174,10 @@ export default function Privacy() {
           would like to ask us about our data collection and information
           security practices.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">
           7. How do we protect information collected about you?
         </h4>
-        <p className="h5">
+        <p className="p">
           We have put in place certain security measures to safeguard Collected
           Information, but the storage and communication of Collected
           Information can never be completely secure. Hence, we do not guarantee
@@ -205,10 +186,8 @@ export default function Privacy() {
           secure. If you become aware of any breach of Site security or this
           Privacy Policy, please notify us immediately.
         </p>
-      </div>
-      <div className="privacy">
         <h4 className="h4">8. We may change this Privacy Policy.</h4>
-        <p className="h5">
+        <p className="p">
           From time to time, we may change our privacy practices, and this
           Privacy Policy, because of changes in relevant and applicable legal or
           regulatory requirements, our business practices, or in our attempts to
@@ -220,10 +199,8 @@ export default function Privacy() {
           such changes. We encourage you to regularly review the current version
           of this Privacy Policy on the Site.
         </p>
-      </div>
-      <div className="privacy">
-        <h4 className="h4">9. How can you contact learnmutiny?</h4>
-        <p className="h5">
+        <h4 className="h4">9. How can you contact learnmutiny.io?</h4>
+        <p className="p">
           If you have questions regarding our Privacy Policy or other areas of
           our Site, please contact us. Your feedback is always welcome and
           appreciated. Learnmutiny Limited Liability Company, Email:
