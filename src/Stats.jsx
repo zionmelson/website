@@ -11,7 +11,6 @@ import tesla from "./svg/tesla.svg";
 import microsoft from "./svg/microsoft.svg";
 import amazon from "./svg/amazon.svg";
 import paypal from "./svg/paypal.svg";
-import ibm from "./svg/ibm.svg";
 
 import "./App.css";
 
@@ -93,7 +92,6 @@ function Stats() {
   const [microsoftCount, setMicrosoftCount] = useState(19);
   const [amazonCount, setAmazonCount] = useState(21);
   const [paypalCount, setPaypalCount] = useState(4);
-  const [ibmCount, setIbmCount] = useState(10);
 
   const socketRef = useRef();
 
@@ -139,7 +137,6 @@ function Stats() {
       let microsoft = await body.microsoftCount;
       let amazon = await body.amazonCount;
       let paypal = await body.paypalCount;
-      let ibm = await body.ibmCount;
 
       if (
         activeCount === undefined ||
@@ -153,8 +150,7 @@ function Stats() {
         tesla === undefined ||
         microsoft === undefined ||
         amazon === undefined ||
-        paypal === undefined ||
-        ibm === undefined
+        paypal === undefined
       ) {
         setMemberCount(memberCount);
         return;
@@ -171,7 +167,6 @@ function Stats() {
       setMicrosoftCount(microsoft);
       setAmazonCount(amazon);
       setPaypalCount(paypal);
-      setIbmCount(ibm);
     }
 
     if (body.message === "discord_num") {
@@ -247,12 +242,6 @@ function Stats() {
             <img src={paypal} className="emoji" alt="paypal" />
             <h6 className="number">
               <Number n={paypalCount} />
-            </h6>
-          </div>
-          <div className="vbox">
-            <img src={ibm} className="emoji" alt="ibm" />
-            <h6 className="number">
-              <Number n={ibmCount} />
             </h6>
           </div>
         </div>
