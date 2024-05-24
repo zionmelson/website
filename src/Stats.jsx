@@ -27,7 +27,7 @@ function Number({ n }) {
     <animated.div
       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
     >
-      {number.to((n) => `${n.toFixed(0)}+`)}
+      {number.to((n) => `${n.toFixed(0)}`)}
     </animated.div>
   );
 }
@@ -185,7 +185,7 @@ function Stats() {
       <span className="span">
         <h3 className="h3">{time}</h3>
       </span>
-      <div className="vbox">
+      <div className="vbox" style={{ gap: "2.5rem" }}>
         <div className="vbox">
           <h6 className="number">
             <Number n={memberCount} />
@@ -200,56 +200,56 @@ function Stats() {
           </h6>
           <h3 className="h3">Interviewed rate 📊</h3>
         </div>
-        <div className="hbox">
-          <div className="hbox">
+        <div className="hbox" style={{ gap: "2.5rem" }}>
+          <div className="vbox">
             <img src={meta} className="emoji" alt="meta" />
             <h6 className="number">
               <Number n={metaCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={apple} className="emoji" alt="apple" />
             <h6 className="number">
               <Number n={appleCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={google} className="emoji" alt="google" />
             <h6 className="number">
               <Number n={googleCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={spotify} className="emoji" alt="spotify" />
             <h6 className="number">
               <Number n={spotifyCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={tesla} className="emoji" alt="tesla" />
             <h6 className="number">
               <Number n={teslaCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={microsoft} className="emoji" alt="microsoft" />
             <h6 className="number">
               <Number n={microsoftCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={amazon} className="emoji" alt="amazon" />
             <h6 className="number">
               <Number n={amazonCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={paypal} className="emoji" alt="paypal" />
             <h6 className="number">
               <Number n={paypalCount} />
             </h6>
           </div>
-          <div className="hbox">
+          <div className="vbox">
             <img src={ibm} className="emoji" alt="ibm" />
             <h6 className="number">
               <Number n={ibmCount} />

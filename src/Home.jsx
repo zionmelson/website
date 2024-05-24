@@ -46,7 +46,7 @@ function Home() {
 
   return (
     <div className="main">
-      <div className="vbox">
+      <div className="vbox" style={{ gap: "0.5rem" }}>
         <h1 className="h1">
           Hire a big tech
           {loaded ? (
@@ -84,8 +84,10 @@ function Home() {
           )}
           for your startup
         </h1>
-        <h2 className="h3">get direct access to the top tech talent</h2>
-        <h3 className="h3">and place them at your startup</h3>
+        <div className="vbox">
+          <h2 className="h3">get direct access to the top tech talent</h2>
+          <h3 className="h3">and place them at your startup</h3>
+        </div>
         <a href="https://discord.gg/JFa3ygDzwt">
           <h3 className="h3">
             <button className="button">start free trial 🚀</button>
