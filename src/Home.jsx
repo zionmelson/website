@@ -85,7 +85,7 @@ function Home() {
           for your startup
         </h1>
         <h2 className="h3">
-          we source tech talent from tech giants and unicorns
+          get direct access to job-seekers from tech giants and unicorns
         </h2>
         <h3 className="h3">and place them at your startup</h3>
         <a href="https://discord.gg/JFa3ygDzwt">
