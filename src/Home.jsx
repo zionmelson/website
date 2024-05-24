@@ -84,7 +84,7 @@ function Home() {
           )}
           for your startup
         </h1>
-        <h2 className="h3">get direct access to the big tech talent</h2>
+        <h2 className="h3">get direct access to the top tech talent</h2>
         <h3 className="h3">and place them at your startup</h3>
         <a href="https://discord.gg/JFa3ygDzwt">
           <h3 className="h3">
