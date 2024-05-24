@@ -1,1 +1,2 @@
-### Find your next job at a startup 🚀
+### Find your next job at a startup
+### https://learnmutiny.io
