@@ -12,8 +12,8 @@ import tesla from "./svg/tesla.svg";
 import microsoft from "./svg/microsoft.svg";
 import amazon from "./svg/amazon.svg";
 import paypal from "./svg/paypal.svg";
-
-import loadingGif from "./gif/loading.gif";
+import online from "./svg/online.svg";
+import offline from "./svg/offline.svg";
 
 import "./App.css";
 
@@ -85,6 +85,8 @@ function Stats() {
   const [time, setTime] = useState(0);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [showInitialMessage, setShowInitialMessage] = useState(true);
+
   const [memberCount, setMemberCount] = useState(437);
   const [activeCount, setActiveCount] = useState(392);
   const [interviewedRateCount, setInterviewedRateCount] = useState(14);
@@ -100,29 +102,44 @@ function Stats() {
 
   const socketRef = useRef();
 
+  const messages = [
+    "I think you're in bad spot g 😅",
+    "Get T-Mobile 😅",
+    "Time to leave Boost mobile 🫣",
+    "Really? Cricket Wirless? 😬",
+    "Free McDonald's wifi is crazy 🍔",
+    "If this clock is still running, upgrade your service 👇",
+    "You're missing out on the good stuff 😅",
+    "Did the counter stop? 🫤",
+    "Maybe try a different carrier? 🤔",
+  ];
+
   useEffect(() => {
     const date = new Date();
 
     setTime(formatDateTime(date));
-    setInterval(() => {
+    const interval = setInterval(() => {
       const date = new Date();
       setTime(formatDateTime(date));
     }, 1000);
 
-    setInterval(() => {
+    const displayRandomMessage = () => {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      const randomMessage = messages[randomIndex];
       setLoading(true);
-      setMessage("check your wifi 😅");
+      setMessage(randomMessage);
+
+      const randomTimeout = Math.random() * (35000 - 9000) + 5000; // Random timeout between 5 and 30 seconds
+      setTimeout(displayRandomMessage, randomTimeout);
+    };
+
+    const showInitialMessageTimeout = setTimeout(() => {
+      setShowInitialMessage(false);
     }, 5000);
 
-    setInterval(() => {
-      setLoading(false);
-      setMessage("");
-    }, 10000);
-
-    setInterval(() => {
-      setLoading(true);
-      setMessage("check your wifi 😅");
-    }, 15000);
+    const waitForInitialMessage = setTimeout(() => {
+      displayRandomMessage();
+    }, 7500);
 
     socketRef.current = new WebSocket(
       "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
@@ -144,6 +161,9 @@ function Stats() {
 
     return () => {
       socket.removeEventListener("message", handleMessage);
+      clearInterval(interval);
+      clearTimeout(showInitialMessageTimeout);
+      clearTimeout(waitForInitialMessage);
     };
   }, []);
 
@@ -205,15 +225,28 @@ function Stats() {
   return (
     //
     <div className="main">
-      {loading ? (
+      {showInitialMessage ? (
         <div className="vbox">
-          <h3 className="h3">{loading ? message : ""}</h3>
           <img
-            src={loadingGif}
+            src={online}
             onError={(e) => (e.target.style.display = "none")}
             className="emoji"
             alt="loading"
           />
+        </div>
+      ) : (
+        <div className="vbox">
+          <img
+            src={offline}
+            onError={(e) => (e.target.style.display = "none")}
+            className="emoji"
+            alt="loading"
+          />
+        </div>
+      )}
+      {loading ? (
+        <div className="vbox">
+          <h3 className="h3">{loading ? message : ""}</h3>
         </div>
       ) : null}
       <span className="span">
