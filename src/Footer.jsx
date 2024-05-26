@@ -2,6 +2,7 @@ import link from "./svg/link.svg";
 import x from "./svg/twitter.svg";
 import medium from "./svg/medium.svg";
 import spotify from "./svg/spotify.svg";
+import discord from "./svg/discord.svg";
 
 export default function Footer() {
   return (
@@ -44,6 +45,13 @@ export default function Footer() {
             rel="noreferrer"
           >
             <img className="emoji" src={spotify} alt="spot" />
+          </a>
+          <a
+            href="https://discord.com/servers/learnmutiny-io-984461709806804992"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img className="emoji" src={discord} alt="discord" />
           </a>
         </div>
       </div>

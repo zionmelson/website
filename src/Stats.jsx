@@ -173,9 +173,7 @@ function Stats() {
       setMicrosoftCount(microsoft);
       setAmazonCount(amazon);
       setPaypalCount(paypal);
-    }
-
-    if (body.message === "discord_num") {
+    } else {
       return;
     }
   };
