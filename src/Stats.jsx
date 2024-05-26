@@ -84,6 +84,7 @@ function formatDateTime(date) {
 function Stats() {
   const [time, setTime] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
   const [memberCount, setMemberCount] = useState(437);
   const [activeCount, setActiveCount] = useState(392);
   const [interviewedRateCount, setInterviewedRateCount] = useState(14);
@@ -99,21 +100,6 @@ function Stats() {
 
   const socketRef = useRef();
 
-  let randomInt;
-
-  const funnyMessage = [
-    "🤔 Thinking...",
-    "🤨 Thinking...",
-    "😏 Thinking...",
-    "🤯 Thinking...",
-    "🤓 Thinking...",
-    "🧐 Thinking...",
-    "😎 Thinking...",
-    "🤩 Thinking...",
-    "🤪 Thinking...",
-    "🤑 Thinking...",
-  ];
-
   useEffect(() => {
     const date = new Date();
 
@@ -125,17 +111,17 @@ function Stats() {
 
     setInterval(() => {
       setLoading(true);
-      randomInt = Math.floor(Math.random() * funnyMessage.length);
+      setMessage("check your wifi 😅");
     }, 5000);
 
     setInterval(() => {
       setLoading(false);
-      randomInt = Math.floor(Math.random() * funnyMessage.length);
+      setMessage("");
     }, 10000);
 
     setInterval(() => {
       setLoading(true);
-      randomInt = Math.floor(Math.random() * funnyMessage.length);
+      setMessage("check your wifi 😅");
     }, 15000);
 
     socketRef.current = new WebSocket(
@@ -221,8 +207,13 @@ function Stats() {
     <div className="main">
       {loading ? (
         <div className="vbox">
-          <img src={loadingGif} className="emoji" alt="loading" />
-          <h3 className="h3">{loading ? funnyMessage[randomInt] : " "}</h3>
+          <h3 className="h3">{loading ? message : ""}</h3>
+          <img
+            src={loadingGif}
+            onError={(e) => (e.target.style.display = "none")}
+            className="emoji"
+            alt="loading"
+          />
         </div>
       ) : null}
       <span className="span">
