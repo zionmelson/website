@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 
 import { useState, useEffect, useRef } from "react";
@@ -11,6 +12,8 @@ import tesla from "./svg/tesla.svg";
 import microsoft from "./svg/microsoft.svg";
 import amazon from "./svg/amazon.svg";
 import paypal from "./svg/paypal.svg";
+
+import loadingGif from "./gif/loading.gif";
 
 import "./App.css";
 
@@ -80,6 +83,7 @@ function formatDateTime(date) {
 
 function Stats() {
   const [time, setTime] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [memberCount, setMemberCount] = useState(437);
   const [activeCount, setActiveCount] = useState(392);
   const [interviewedRateCount, setInterviewedRateCount] = useState(14);
@@ -95,13 +99,44 @@ function Stats() {
 
   const socketRef = useRef();
 
+  let randomInt;
+
+  const funnyMessage = [
+    "🤔 Thinking...",
+    "🤨 Thinking...",
+    "😏 Thinking...",
+    "🤯 Thinking...",
+    "🤓 Thinking...",
+    "🧐 Thinking...",
+    "😎 Thinking...",
+    "🤩 Thinking...",
+    "🤪 Thinking...",
+    "🤑 Thinking...",
+  ];
+
   useEffect(() => {
     const date = new Date();
+
     setTime(formatDateTime(date));
     setInterval(() => {
       const date = new Date();
       setTime(formatDateTime(date));
     }, 1000);
+
+    setInterval(() => {
+      setLoading(true);
+      randomInt = Math.floor(Math.random() * funnyMessage.length);
+    }, 5000);
+
+    setInterval(() => {
+      setLoading(false);
+      randomInt = Math.floor(Math.random() * funnyMessage.length);
+    }, 10000);
+
+    setInterval(() => {
+      setLoading(true);
+      randomInt = Math.floor(Math.random() * funnyMessage.length);
+    }, 15000);
 
     socketRef.current = new WebSocket(
       "wss://23c8np7196.execute-api.us-east-1.amazonaws.com/production/"
@@ -144,6 +179,9 @@ function Stats() {
       let amazon = await body.amazonCount;
       let paypal = await body.paypalCount;
 
+      setLoading(false);
+      console.log(memberCount);
+
       if (
         activeCount === undefined ||
         appliedCount === undefined ||
@@ -181,6 +219,12 @@ function Stats() {
   return (
     //
     <div className="main">
+      {loading ? (
+        <div className="vbox">
+          <img src={loadingGif} className="emoji" alt="loading" />
+          <h3 className="h3">{loading ? funnyMessage[randomInt] : " "}</h3>
+        </div>
+      ) : null}
       <span className="span">
         <h3 className="h3">{time}</h3>
       </span>
