@@ -80,13 +80,6 @@
   padding: 1rem;
 }
 
-#animation {
-  margin: 0;
-  line-height: 0;
-  height: 0;
-  width: auto;
-}
-
 .emoji {
   width: 2.5rem;
 }
@@ -118,4 +111,11 @@
   padding: 1rem;
   border: 2px solid #fff;
   border-radius: 60rem;
+}
+
+#animation {
+  margin: 0;
+  line-height: 0;
+  height: 0;
+  width: auto;
 }
