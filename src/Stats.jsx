@@ -4,16 +4,16 @@
 import { useState, useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 
-import meta from "./svg/meta.svg";
-import apple from "./svg/apple.svg";
-import google from "./svg/google.svg";
-import spotify from "./svg/spotify.svg";
-import tesla from "./svg/tesla.svg";
-import microsoft from "./svg/microsoft.svg";
-import amazon from "./svg/amazon.svg";
-import paypal from "./svg/paypal.svg";
-import online from "./svg/online.svg";
-import offline from "./svg/offline.svg";
+import meta from "./images/meta.svg";
+import apple from "./images/apple.svg";
+import google from "./images/google.svg";
+import spotify from "./images/spotify.svg";
+import tesla from "./images/tesla.svg";
+import microsoft from "./images/microsoft.svg";
+import amazon from "./images/amazon.svg";
+import paypal from "./images/paypal.svg";
+import online from "./images/online.svg";
+import offline from "./images/offline.svg";
 
 import "./App.css";
 

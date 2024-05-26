@@ -1,8 +1,8 @@
-import link from "./svg/link.svg";
-import x from "./svg/twitter.svg";
-import medium from "./svg/medium.svg";
-import spotify from "./svg/spotify.svg";
-import discord from "./svg/discord.svg";
+import link from "./images/link.svg";
+import x from "./images/twitter.svg";
+import medium from "./images/medium.svg";
+import spotify from "./images/spotify.svg";
+import discord from "./images/discord.svg";
 
 export default function Footer() {
   return (
