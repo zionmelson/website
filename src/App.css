@@ -8,6 +8,7 @@
   --white: #fff;
   --blue: #5cbff9;
   --green: #59ff2f;
+  background-color: var(--black);
 }
 
 * {
