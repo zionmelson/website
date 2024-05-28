@@ -87,18 +87,18 @@ function Stats() {
   const [message, setMessage] = useState("");
   const [showInitialMessage, setShowInitialMessage] = useState(true);
 
-  const [memberCount, setMemberCount] = useState(437);
-  const [activeCount, setActiveCount] = useState(392);
-  const [interviewedRateCount, setInterviewedRateCount] = useState(14);
+  const [memberCount, setMemberCount] = useState(480);
+  const [activeCount, setActiveCount] = useState(471);
+  const [interviewedRateCount, setInterviewedRateCount] = useState(12);
 
-  const [metaCount, setMetaCount] = useState(13);
+  const [metaCount, setMetaCount] = useState(14);
   const [appleCount, setAppleCount] = useState(10);
-  const [googleCount, setGoogleCount] = useState(18);
+  const [googleCount, setGoogleCount] = useState(20);
   const [spotifyCount, setSpotifyCount] = useState(4);
   const [teslaCount, setTeslaCount] = useState(11);
-  const [microsoftCount, setMicrosoftCount] = useState(19);
-  const [amazonCount, setAmazonCount] = useState(21);
-  const [paypalCount, setPaypalCount] = useState(4);
+  const [microsoftCount, setMicrosoftCount] = useState(20);
+  const [amazonCount, setAmazonCount] = useState(22);
+  const [paypalCount, setPaypalCount] = useState(5);
 
   const socketRef = useRef();
 
