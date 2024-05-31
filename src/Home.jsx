@@ -88,7 +88,7 @@ function Home() {
           <h2 className="h3">get direct access to the top tech talent</h2>
           <h3 className="h3">and place them at your startup</h3>
         </div>
-        <a href="https://discord.com/invite/E8QPwRWjbS">
+        <a href="https://discord.gg/WKj3uz6sZZ">
           <h3 className="h3">
             <button className="button">start free trial 🚀</button>
           </h3>
