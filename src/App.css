@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Open+Sans&display=swap);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #111111;
+  --white: #fff;
+  --blue: #5cbff9;
+  --green: #59ff2f;
+  background-color: var(--black);
+}
+
+* {
+  overscroll-behavior: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--white);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.h1 {
+  font-size: 2.5rem;
+}
+
+.h2 {
+  font-size: 1.5rem;
+}
+
+.h3 {
+  font-size: 1rem;
+}
+
+.h4 {
+  font-size: 1rem;
+}
+
+.p {
+  font-size: 0.5rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.live {
+  color: var(--green);
+}
+
+.animation {
+  color: var(--blue);
+  padding: 1rem;
+}
+
+.emoji {
+  width: 2.5rem;
+}
+
+.number {
+  font-size: 2.25rem;
+  transition: all 0.3s linear;
+}
+
+.number:hover {
+  cursor: pointer;
+  scale: 1.05;
+  transition: all 0.3s linear;
+}
+
+.span {
+  display: flex;
+  align-items: "center";
+  justify-content: "center";
+  gap: "0.5rem";
+}
+
+.button {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 2px solid #fff;
+  border-radius: 60rem;
+}
+
+#animation {
+  margin: 0;
+  line-height: 0;
+  height: 0;
+  width: auto;
+}
