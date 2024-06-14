@@ -82,17 +82,17 @@ function formatDateTime(date) {
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [memberCount, setMemberCount] = useState(590);
-  const [activeCount, setActiveCount] = useState(572);
-  const [interviewedRateCount, setInterviewedRateCount] = useState(14);
+  const [memberCount, setMemberCount] = useState(605);
+  const [activeCount, setActiveCount] = useState(591);
+  const [interviewedRateCount, setInterviewedRateCount] = useState(24);
 
-  const [metaCount, setMetaCount] = useState(22);
+  const [metaCount, setMetaCount] = useState(24);
   const [appleCount, setAppleCount] = useState(16);
-  const [googleCount, setGoogleCount] = useState(26);
+  const [googleCount, setGoogleCount] = useState(30);
   const [spotifyCount, setSpotifyCount] = useState(4);
-  const [teslaCount, setTeslaCount] = useState(17);
-  const [microsoftCount, setMicrosoftCount] = useState(23);
-  const [amazonCount, setAmazonCount] = useState(33);
+  const [teslaCount, setTeslaCount] = useState(18);
+  const [microsoftCount, setMicrosoftCount] = useState(25);
+  const [amazonCount, setAmazonCount] = useState(34);
   const [paypalCount, setPaypalCount] = useState(5);
 
   const socketRef = useRef();
@@ -256,6 +256,18 @@ function Stats() {
           </div>
         </div>
       </div>
+      <a
+        href="https://www.producthunt.com/posts/hire-learnmutiny-io?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hire&#0045;learnmutiny&#0045;io"
+        target="_blank"
+      >
+        <img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=463297"
+          alt="hire&#0032;learnmutiny&#0046;io - Hire&#0032;tech&#0032;people&#0032;without&#0032;a&#0032;Recruiter&#0032;🤯 | Product Hunt"
+          style={{ width: "250px", height: "54px", marginTop: "1rem" }}
+          width="250"
+          height="54"
+        />
+      </a>
     </div>
   );
 }
