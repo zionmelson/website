@@ -94,6 +94,18 @@ function Home() {
           </h3>
         </a>
       </div>
+      <a
+        href="https://www.producthunt.com/posts/hire-learnmutiny-io?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hire&#0045;learnmutiny&#0045;io"
+        target="_blank"
+      >
+        <img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=463297"
+          alt="hire&#0032;learnmutiny&#0046;io - Hire&#0032;tech&#0032;people&#0032;without&#0032;a&#0032;Recruiter&#0032;🤯 | Product Hunt"
+          style={{ width: "250px", height: "54px", marginTop: "1rem" }}
+          width="250"
+          height="54"
+        />
+      </a>
     </div>
   );
 }
