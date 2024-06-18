@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
 
 import gsap from "gsap";
@@ -85,7 +86,7 @@ function Home() {
           for your startup
         </h1>
         <div className="vbox">
-          <h2 className="h3">get access to our talent all on Discord 🤖</h2>
+          <h2 className="h3">Hire our talent all on Discord 🤖</h2>
         </div>
         <a href="https://discord.gg/WKj3uz6sZZ">
           <h3 className="h3">
