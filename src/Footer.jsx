@@ -10,12 +10,12 @@ export default function Footer() {
       <div className="vbox" style={{ gap: "1.5rem" }}>
         <div className="vbox" style={{ gap: "0.25rem" }}>
           <p className="p">© 2024 learnmutiny.io. All rights reserved.</p>
-          <a className="p" href="/terms">
+          {/* <a className="p" href="/terms">
             Terms of Service
           </a>
           <a className="p" href="/privacy">
             Privacy Policy
-          </a>
+          </a> */}
         </div>
         <div className="hbox" style={{ gap: "0.5rem" }}>
           <a

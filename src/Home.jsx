@@ -85,8 +85,7 @@ function Home() {
           for your startup
         </h1>
         <div className="vbox">
-          <h2 className="h3">get direct access to the top tech talent</h2>
-          <h3 className="h3">without the need of a Recruiter 🤯</h3>
+          <h2 className="h3">get access to our talent all on Discord 🤖</h2>
         </div>
         <a href="https://discord.gg/WKj3uz6sZZ">
           <h3 className="h3">
