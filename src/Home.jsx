@@ -95,7 +95,11 @@ function Home() {
         </a>
       </div>
       <a
+<<<<<<< HEAD
         href="https://www.producthunt.com/products/hire-learnmutiny-io?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hire&#0045;learnmutiny&#0045;io"
+=======
+        href="https://www.producthunt.com/posts/hire-learnmutiny-io?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hire&#0045;learnmutiny&#0045;io"
+>>>>>>> 3aaf1653fc7fa9c04a08d3466b77753a85c05b8c
         target="_blank"
       >
         <img
