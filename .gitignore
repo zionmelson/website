@@ -8,13 +8,15 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist-ssr
-developerHash.json
 *.local
 .env
 .eslintrc.cjs
-api
-src/assets/mp4
+discord
+stripe
+certificate.crt
+private.key
+csr.csr
+
 
 # Editor directories and files
 .vscode/*
