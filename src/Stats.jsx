@@ -83,7 +83,7 @@ function Stats() {
   const [time, setTime] = useState(0);
 
   const [memberCount, setMemberCount] = useState(605);
-  const [activeCount, setActiveCount] = useState(591);
+  const [approvedCount, setApprovedCount] = useState(591);
   const [interviewedRateCount, setInterviewedRateCount] = useState(24);
 
   const [metaCount, setMetaCount] = useState(24);
@@ -94,6 +94,9 @@ function Stats() {
   const [microsoftCount, setMicrosoftCount] = useState(25);
   const [amazonCount, setAmazonCount] = useState(34);
   const [paypalCount, setPaypalCount] = useState(5);
+
+  // not used yet
+  // const [xStartupCount, setXStartupCount] = useState(62);
 
   const socketRef = useRef();
 
@@ -135,7 +138,6 @@ function Stats() {
 
     if (body.message === "discord_count") {
       let memberCount = await body.memberCount;
-      let activeCount = await body.activeCount;
       let appliedCount = await body.appliedCount;
       let interviewedCount = await body.interviewedCount;
       let interviewedRate = interviewedCount / appliedCount;
@@ -147,11 +149,22 @@ function Stats() {
       let microsoft = await body.microsoftCount;
       let amazon = await body.amazonCount;
       let paypal = await body.paypalCount;
+      let xStartup = await body.xStartupCount;
+
+      let approved =
+        meta +
+        apple +
+        google +
+        spotify +
+        tesla +
+        microsoft +
+        amazon +
+        paypal +
+        xStartup;
 
       console.log(memberCount);
 
       if (
-        activeCount === undefined ||
         appliedCount === undefined ||
         interviewedCount === undefined ||
         interviewedRate === undefined ||
@@ -169,7 +182,6 @@ function Stats() {
       }
 
       setMemberCount(memberCount);
-      setActiveCount(activeCount);
       setInterviewedRateCount(interviewedRate * 100);
       setMetaCount(meta);
       setAppleCount(apple);
@@ -179,6 +191,8 @@ function Stats() {
       setMicrosoftCount(microsoft);
       setAmazonCount(amazon);
       setPaypalCount(paypal);
+      // setXStartupCount(xStartup);
+      setApprovedCount(approved);
     } else {
       return;
     }
@@ -193,17 +207,17 @@ function Stats() {
       <div className="vbox" style={{ gap: "2.5rem" }}>
         <div className="vbox">
           <h6 className="number">
-            <Number n={memberCount} />
-          </h6>
-          <h3 className="h3">Members joined 👋</h3>
-          <h6 className="number">
-            <Number n={activeCount} />
-          </h6>
-          <h3 className="h3">Looking for work 💸</h3>
-          <h6 className="number">
             <Percent n={interviewedRateCount} />
           </h6>
           <h3 className="h3">Interviewed rate 📊</h3>
+          <h6 className="number">
+            <Number n={approvedCount} />
+          </h6>
+          <h3 className="h3">Approved for work 💸</h3>
+          <h6 className="number">
+            <Number n={memberCount} />
+          </h6>
+          <h3 className="h3">Members joined 👋</h3>
         </div>
         <div className="hbox" style={{ gap: "2.5rem" }}>
           <div className="vbox">
@@ -259,6 +273,7 @@ function Stats() {
       <a
         href="https://www.producthunt.com/posts/hire-learnmutiny-io?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-hire&#0045;learnmutiny&#0045;io"
         target="_blank"
+        rel="noreferrer"
       >
         <img
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=463297"
