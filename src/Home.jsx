@@ -90,7 +90,7 @@ function Home() {
         </div>
         <a href="https://discord.gg/WKj3uz6sZZ">
           <h3 className="h3">
-            <button className="button">start free trial 🚀</button>
+            <button className="button">start hiring 🚀</button>
           </h3>
         </a>
       </div>
