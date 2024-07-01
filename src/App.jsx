@@ -5,8 +5,6 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./Home";
 import Stats from "./Stats";
-import Privacy from "./Privacy";
-import Terms from "./Terms";
 import Error from "./Error";
 import Footer from "./Footer";
 
@@ -23,8 +21,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stats" element={<Stats />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
