@@ -4,7 +4,7 @@ export default function Error() {
   return (
     <div className="main">
       <h1 className="h1">Let&apos;s get started</h1>
-      <a href="https://discord.gg/WKj3uz6sZZ">
+      <a href="https://discord.gg/pd3UPhUJvV">
         <h3 className="h3">
           <button className="button"> welcome 🚀</button>
         </h3>
