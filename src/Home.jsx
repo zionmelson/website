@@ -86,7 +86,7 @@ function Home() {
           <h1 className="h1">on Discord</h1>
           <img src={discord} className="emoji" alt="Discord" />
         </span>
-        <a href="https://discord.gg/WKj3uz6sZZ" style={{ marginTop: "0.5rem" }}>
+        <a href="https://discord.gg/pd3UPhUJvV" style={{ marginTop: "0.5rem" }}>
           <h3 className="h3">
             <button className="button">start hiring 🚀</button>
           </h3>
