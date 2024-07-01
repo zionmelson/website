@@ -1,8 +1,6 @@
 import link from "./images/link.svg";
 import x from "./images/twitter.svg";
-import medium from "./images/medium.svg";
 import spotify from "./images/spotify.svg";
-import discord from "./images/discord.svg";
 
 export default function Footer() {
   return (
@@ -10,12 +8,6 @@ export default function Footer() {
       <div className="vbox" style={{ gap: "1.5rem" }}>
         <div className="vbox" style={{ gap: "0.25rem" }}>
           <p className="p">© 2024 learnmutiny.io. All rights reserved.</p>
-          {/* <a className="p" href="/terms">
-            Terms of Service
-          </a>
-          <a className="p" href="/privacy">
-            Privacy Policy
-          </a> */}
         </div>
         <div className="hbox" style={{ gap: "0.5rem" }}>
           <a
@@ -33,25 +25,11 @@ export default function Footer() {
             <img className="emoji" src={x} alt="x" />
           </a>
           <a
-            href="https://medium.com/@learnmutiny.io"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img className="emoji" src={medium} alt="medium" />
-          </a>
-          <a
             href="https://podcasters.spotify.com/pod/show/learnmutinyio"
             target="_blank"
             rel="noreferrer"
           >
             <img className="emoji" src={spotify} alt="spot" />
-          </a>
-          <a
-            href="https://discord.com/servers/learnmutiny-io-984461709806804992"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img className="emoji" src={discord} alt="discord" />
           </a>
         </div>
       </div>

@@ -209,15 +209,15 @@ function Stats() {
           <h6 className="number">
             <Percent n={interviewedRateCount} />
           </h6>
-          <h3 className="h3">Interviewed rate 📊</h3>
+          <h3 className="h3">interviewed rate 📊</h3>
           <h6 className="number">
             <Number n={approvedCount} />
           </h6>
-          <h3 className="h3">Approved for work 💸</h3>
+          <h3 className="h3">filtered talent 🔍</h3>
           <h6 className="number">
             <Number n={memberCount} />
           </h6>
-          <h3 className="h3">Members joined 👋</h3>
+          <h3 className="h3">members joined 👋</h3>
         </div>
         <div className="hbox" style={{ gap: "2.5rem" }}>
           <div className="vbox">
