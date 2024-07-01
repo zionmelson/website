@@ -3,7 +3,9 @@
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import discord from "./images/discord.svg";
 
 import "./App.css";
 
@@ -47,47 +49,43 @@ function Home() {
 
   return (
     <div className="main">
-      <div className="vbox" style={{ gap: "0.5rem" }}>
-        <h1 className="h1">
-          Hire a big tech
-          {loaded ? (
-            <div className="animation">
-              {loaded ? (
-                <>
-                  <h1 className="h1" id="animation">
-                    engineer
-                  </h1>
-                  <h1 className="h1" id="animation">
-                    designer
-                  </h1>
-                  <h1 className="h1" id="animation">
-                    manager
-                  </h1>
-                  <h1 className="h1" id="animation">
-                    recruiter
-                  </h1>
-                  <h1 className="h1" id="animation">
-                    executive
-                  </h1>
-                </>
-              ) : (
-                <>
-                  <div className="animation"></div>
-                </>
-              )}
-            </div>
-          ) : (
-            <div className="animation">
-              <h2 className="h1" id="animation">
-                loading...
-              </h2>
-            </div>
-          )}
-          for your startup
-        </h1>
-        <div className="vbox">
-          <h2 className="h3">Hire tech talent on Discord 🤖</h2>
+      <div className="vbox">
+        <div className="hbox" style={{ gap: "0.5rem" }}>
+          <h1 className="h1" id="hire">
+            Hire
+          </h1>
+          <div
+            className="vbox"
+            style={{
+              width: "12.5rem",
+              textAlign: "start",
+              alignItems: "start",
+            }}
+          >
+            {loaded ? (
+              <>
+                <h1 className="h1" id="animation">
+                  engineers
+                </h1>
+                <h1 className="h1" id="animation">
+                  designers
+                </h1>
+                <h1 className="h1" id="animation">
+                  managers
+                </h1>
+                <h1 className="h1" id="animation">
+                  recruiters
+                </h1>
+              </>
+            ) : (
+              <></>
+            )}
+          </div>
         </div>
+        <span className="hbox" style={{ gap: "0.5rem" }}>
+          <h1 className="h1">on Discord</h1>
+          <img src={discord} className="emoji" alt="Discord" />
+        </span>
         <a href="https://discord.gg/WKj3uz6sZZ">
           <h3 className="h3">
             <button className="button">start hiring 🚀</button>

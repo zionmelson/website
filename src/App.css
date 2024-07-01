@@ -76,11 +76,6 @@
   color: var(--green);
 }
 
-.animation {
-  color: var(--blue);
-  padding: 1rem;
-}
-
 .emoji {
   width: 2.5rem;
 }
@@ -119,4 +114,20 @@
   line-height: 0;
   height: 0;
   width: auto;
+  color: var(--blue);
+}
+
+#hire {
+  animation: slideOver 1s ease;
+}
+
+@keyframes slideOver {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
