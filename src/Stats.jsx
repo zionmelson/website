@@ -82,18 +82,18 @@ function formatDateTime(date) {
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [interviewedRateCount, setInterviewedRateCount] = useState(23);
-  const [approvedCount, setApprovedCount] = useState(259);
-  const [memberCount, setMemberCount] = useState(701);
+  const [interviewedRateCount, setInterviewedRateCount] = useState(24);
+  const [approvedCount, setApprovedCount] = useState(316);
+  const [memberCount, setMemberCount] = useState(1008);
 
-  const [metaCount, setMetaCount] = useState(28);
-  const [appleCount, setAppleCount] = useState(17);
-  const [googleCount, setGoogleCount] = useState(34);
+  const [paypalCount, setPaypalCount] = useState(6);
   const [spotifyCount, setSpotifyCount] = useState(5);
-  const [teslaCount, setTeslaCount] = useState(21);
-  const [microsoftCount, setMicrosoftCount] = useState(30);
-  const [amazonCount, setAmazonCount] = useState(43);
-  const [paypalCount, setPaypalCount] = useState(5);
+  const [appleCount, setAppleCount] = useState(17);
+  const [googleCount, setGoogleCount] = useState(38);
+  const [amazonCount, setAmazonCount] = useState(46);
+  const [microsoftCount, setMicrosoftCount] = useState(33);
+  const [teslaCount, setTeslaCount] = useState(22);
+  const [metaCount, setMetaCount] = useState(30);
 
   // not used yet
   // const [xStartupCount, setXStartupCount] = useState(62);
@@ -221,9 +221,15 @@ function Stats() {
         </div>
         <div className="hbox" style={{ gap: "2.5rem" }}>
           <div className="vbox">
-            <img src={meta} className="emoji" alt="meta" />
+            <img src={paypal} className="emoji" alt="paypal" />
             <h6 className="number">
-              <Number n={metaCount} />
+              <Number n={paypalCount} />
+            </h6>
+          </div>
+          <div className="vbox">
+            <img src={spotify} className="emoji" alt="spotify" />
+            <h6 className="number">
+              <Number n={spotifyCount} />
             </h6>
           </div>
           <div className="vbox">
@@ -239,15 +245,9 @@ function Stats() {
             </h6>
           </div>
           <div className="vbox">
-            <img src={spotify} className="emoji" alt="spotify" />
+            <img src={amazon} className="emoji" alt="amazon" />
             <h6 className="number">
-              <Number n={spotifyCount} />
-            </h6>
-          </div>
-          <div className="vbox">
-            <img src={tesla} className="emoji" alt="tesla" />
-            <h6 className="number">
-              <Number n={teslaCount} />
+              <Number n={amazonCount} />
             </h6>
           </div>
           <div className="vbox">
@@ -257,15 +257,15 @@ function Stats() {
             </h6>
           </div>
           <div className="vbox">
-            <img src={amazon} className="emoji" alt="amazon" />
+            <img src={tesla} className="emoji" alt="tesla" />
             <h6 className="number">
-              <Number n={amazonCount} />
+              <Number n={teslaCount} />
             </h6>
           </div>
           <div className="vbox">
-            <img src={paypal} className="emoji" alt="paypal" />
+            <img src={meta} className="emoji" alt="meta" />
             <h6 className="number">
-              <Number n={paypalCount} />
+              <Number n={metaCount} />
             </h6>
           </div>
         </div>
