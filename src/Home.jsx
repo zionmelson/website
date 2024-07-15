@@ -52,7 +52,7 @@ function Home() {
       <div className="vbox">
         <div className="hbox" style={{ gap: "0.5rem" }}>
           <h1 className="h1" id="hire">
-            shop for
+            Hire
           </h1>
           <div
             className="vbox"
