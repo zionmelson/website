@@ -82,18 +82,17 @@ function formatDateTime(date) {
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [interviewedRateCount, setInterviewedRateCount] = useState(24);
-  const [approvedCount, setApprovedCount] = useState(316);
-  const [memberCount, setMemberCount] = useState(1008);
+  const [approvedCount, setApprovedCount] = useState(408);
+  const [memberCount, setMemberCount] = useState(1510);
 
   const [paypalCount, setPaypalCount] = useState(6);
   const [spotifyCount, setSpotifyCount] = useState(5);
-  const [appleCount, setAppleCount] = useState(17);
-  const [googleCount, setGoogleCount] = useState(38);
-  const [amazonCount, setAmazonCount] = useState(46);
-  const [microsoftCount, setMicrosoftCount] = useState(33);
-  const [teslaCount, setTeslaCount] = useState(22);
-  const [metaCount, setMetaCount] = useState(30);
+  const [appleCount, setAppleCount] = useState(20);
+  const [googleCount, setGoogleCount] = useState(39);
+  const [amazonCount, setAmazonCount] = useState(51);
+  const [microsoftCount, setMicrosoftCount] = useState(35);
+  const [teslaCount, setTeslaCount] = useState(37);
+  const [metaCount, setMetaCount] = useState(33);
 
   // not used yet
   // const [xStartupCount, setXStartupCount] = useState(62);
@@ -182,7 +181,6 @@ function Stats() {
       }
 
       setMemberCount(memberCount);
-      setInterviewedRateCount(interviewedRate * 100);
       setMetaCount(meta);
       setAppleCount(apple);
       setGoogleCount(google);
@@ -207,9 +205,9 @@ function Stats() {
       <div className="vbox" style={{ gap: "2.5rem" }}>
         <div className="vbox">
           <h6 className="number">
-            <Percent n={interviewedRateCount} />
+            <Percent n={(approvedCount / memberCount) * 100} />
           </h6>
-          <h3 className="h3">interviewed rate 📊</h3>
+          <h3 className="h3">approval rate 📊</h3>
           <h6 className="number">
             <Number n={approvedCount} />
           </h6>
