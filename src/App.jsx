@@ -8,6 +8,9 @@ import Stats from "./Stats";
 import Error from "./Error";
 import Footer from "./Footer";
 
+import Terms from "./Terms";
+import Privacy from "./Privacy";
+
 import "./App.css";
 
 const siteId = 3788387;
@@ -21,6 +24,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
