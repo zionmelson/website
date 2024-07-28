@@ -52,7 +52,7 @@ function Home() {
       <div className="vbox">
         <div className="hbox" style={{ gap: "0.5rem" }}>
           <h1 className="h1" id="hire">
-            Hire
+            Find
           </h1>
           <div
             className="vbox"
@@ -91,7 +91,7 @@ function Home() {
           style={{ marginTop: "0.5rem" }}
         >
           <h3 className="h3">
-            <button className="button">start hiring 🚀</button>
+            <button className="button">start searching 🚀</button>
           </h3>
         </a>
       </div>
