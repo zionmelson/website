@@ -1,2 +1,2 @@
-### Find your next job at a startup 🚀
-### learnmutiny.io
+### chat with top talent on
+## learnmutiny.io
