@@ -7,6 +7,7 @@ import Home from "./Home";
 import Stats from "./Stats";
 import Error from "./Error";
 import Footer from "./Footer";
+import Careers from "./Careers";
 
 import Terms from "./Terms";
 import Privacy from "./Privacy";
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/stats" element={<Stats />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<Error />} />
