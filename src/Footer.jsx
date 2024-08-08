@@ -1,5 +1,4 @@
 import link from "./images/link.svg";
-import x from "./images/twitter.svg";
 import spotify from "./images/spotify.svg";
 
 export default function Footer() {
@@ -17,13 +16,7 @@ export default function Footer() {
           >
             <img className="emoji" src={link} alt="link" />
           </a>
-          <a
-            href="https://www.twitter.com/learnmutiny/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img className="emoji" src={x} alt="x" />
-          </a>
+
           <a
             href="https://podcasters.spotify.com/pod/show/learnmutinyio"
             target="_blank"
