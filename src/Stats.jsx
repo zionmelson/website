@@ -160,7 +160,7 @@ function Stats() {
         paypal +
         xStartup;
 
-      console.log(memberCount);
+      console.log(amountRaised);
 
       if (
         meta === undefined ||
