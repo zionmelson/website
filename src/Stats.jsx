@@ -208,7 +208,7 @@ function Stats() {
           <h6 className="number">
             <Number n={approvedCount} />
           </h6>
-          <h3 className="h3">filtered talent 🔍</h3>
+          <h3 className="h3">approved talent 🔍</h3>
           <h6 className="number">
             <Number n={memberCount} />
           </h6>
