@@ -138,7 +138,7 @@ function Stats() {
 
     if (body.message === "discord_count") {
       let memberCount = await body.memberCount;
-      let amountRaised = await body.raised;
+      let amountRaised = await body.raisedAmount;
       let meta = await body.metaCount;
       let apple = await body.appleCount;
       let google = await body.googleCount;
