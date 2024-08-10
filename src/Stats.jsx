@@ -32,7 +32,7 @@ function Number({ n }) {
   );
 }
 
-function Percent({ n }) {
+function Money({ n }) {
   const { number } = useSpring({
     from: { number: 0 },
     number: n,
@@ -44,7 +44,7 @@ function Percent({ n }) {
     <animated.div
       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
     >
-      {number.to((n) => `${n.toFixed(0)}%`)}
+      {number.to((n) => `$${n.toFixed(0)}`)}
     </animated.div>
   );
 }
@@ -84,6 +84,7 @@ function Stats() {
 
   const [approvedCount, setApprovedCount] = useState(539);
   const [memberCount, setMemberCount] = useState(3322);
+  const [raisedAmount, setRaisedAmount] = useState(0);
 
   const [paypalCount, setPaypalCount] = useState(7);
   const [spotifyCount, setSpotifyCount] = useState(5);
@@ -137,9 +138,7 @@ function Stats() {
 
     if (body.message === "discord_count") {
       let memberCount = await body.memberCount;
-      let appliedCount = await body.appliedCount;
-      let interviewedCount = await body.interviewedCount;
-      let interviewedRate = interviewedCount / appliedCount;
+      let amountRaised = await body.raised;
       let meta = await body.metaCount;
       let apple = await body.appleCount;
       let google = await body.googleCount;
@@ -164,9 +163,6 @@ function Stats() {
       console.log(memberCount);
 
       if (
-        appliedCount === undefined ||
-        interviewedCount === undefined ||
-        interviewedRate === undefined ||
         meta === undefined ||
         apple === undefined ||
         google === undefined ||
@@ -181,6 +177,7 @@ function Stats() {
       }
 
       setMemberCount(memberCount);
+      setRaisedAmount(amountRaised);
       setMetaCount(meta);
       setAppleCount(apple);
       setGoogleCount(google);
@@ -205,9 +202,9 @@ function Stats() {
       <div className="vbox" style={{ gap: "2.5rem" }}>
         <div className="vbox">
           <h6 className="number">
-            <Percent n={(approvedCount / memberCount) * 100} />
+            <Money n={raisedAmount} />
           </h6>
-          <h3 className="h3">approval rate 📊</h3>
+          <h3 className="h3">raised by founders 💸</h3>
           <h6 className="number">
             <Number n={approvedCount} />
           </h6>
