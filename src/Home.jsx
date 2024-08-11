@@ -58,8 +58,7 @@ function Home() {
             className="vbox"
             style={{
               width: "12.5rem",
-              textAlign: "start",
-              alignItems: "start",
+              height: "1.5rem",
             }}
           >
             {loaded ? (
@@ -84,19 +83,16 @@ function Home() {
               <></>
             )}
           </div>
-        </div>
-        <span className="hbox" style={{ gap: "0.5rem" }}>
           <h1 className="h1">on Discord</h1>
-          <img src={discord} className="emoji" alt="Discord" />
-        </span>
-        <a
-          href="https://discord.gg/learnmutiny"
-          style={{ marginTop: "0.5rem" }}
-        >
-          <h3 className="h3">
-            <button className="button">start chatting 🚀</button>
-          </h3>
-        </a>
+          <a
+            href="https://discord.gg/learnmutiny"
+            style={{ marginTop: "0.5rem" }}
+          >
+            <h3 className="h3">
+              <img src={discord} className="emoji" alt="Discord" />
+            </h3>
+          </a>
+        </div>
       </div>
     </div>
   );
