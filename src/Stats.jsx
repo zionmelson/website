@@ -32,6 +32,23 @@ function Number({ n }) {
   );
 }
 
+function Money({ n }) {
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: n / 1000000,
+    delay: 900,
+    config: { mass: 10, tension: 20, friction: 25 },
+  });
+
+  return (
+    <animated.div
+      style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
+    >
+      {number.to((n) => `$${n.toFixed(2)}m`)}
+    </animated.div>
+  );
+}
+
 function formatDateTime(date) {
   const months = [
     "January",
@@ -62,6 +79,13 @@ function formatDateTime(date) {
   return `${month} ${day}, ${year} ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
 }
 
+function formatToDollars(number) {
+  return number.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+}
+
 function Stats() {
   const [time, setTime] = useState(0);
 
@@ -82,13 +106,6 @@ function Stats() {
   // const [xStartupCount, setXStartupCount] = useState(62);
 
   const socketRef = useRef();
-
-  function formatToDollars(number) {
-    return number.toLocaleString("en-US", {
-      style: "currency",
-      currency: "USD",
-    });
-  }
 
   useEffect(() => {
     const date = new Date();
@@ -167,7 +184,7 @@ function Stats() {
       }
 
       setMemberCount(memberCount);
-      setRaisedAmount(formatToDollars(amountRaised));
+      setRaisedAmount(amountRaised.toFixed(2));
       setMetaCount(meta);
       setAppleCount(apple);
       setGoogleCount(google);
@@ -192,7 +209,7 @@ function Stats() {
       <div className="vbox" style={{ gap: "2.5rem" }}>
         <div className="vbox">
           <h6 className="number">
-            <Number n={raisedAmount} />
+            <Money n={raisedAmount} />
           </h6>
           <h3 className="h3">raised by founders 💸</h3>
           <h6 className="number">
