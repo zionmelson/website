@@ -35,7 +35,7 @@ function Number({ n }) {
 function Money({ n }) {
   const { number } = useSpring({
     from: { number: 0 },
-    number: n,
+    number: n / 1000000,
     delay: 900,
     config: { mass: 10, tension: 20, friction: 25 },
   });
@@ -44,7 +44,7 @@ function Money({ n }) {
     <animated.div
       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
     >
-      {number.to((n) => `$${n.toFixed(0)}`)}
+      {number.to((n) => `$${n.toFixed(2)}m`)}
     </animated.div>
   );
 }
@@ -77,6 +77,13 @@ function formatDateTime(date) {
   const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
   return `${month} ${day}, ${year} ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
+}
+
+function formatToDollars(number) {
+  return number.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
 }
 
 function Stats() {
