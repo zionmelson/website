@@ -184,7 +184,7 @@ function Stats() {
       }
 
       setMemberCount(memberCount);
-      setRaisedAmount(amountRaised.toFixed(2));
+      setRaisedAmount(amountRaised);
       setMetaCount(meta);
       setAppleCount(apple);
       setGoogleCount(google);
