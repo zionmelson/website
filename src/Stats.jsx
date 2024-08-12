@@ -89,18 +89,18 @@ function formatToDollars(number) {
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [approvedCount, setApprovedCount] = useState(539);
-  const [memberCount, setMemberCount] = useState(3322);
-  const [raisedAmount, setRaisedAmount] = useState(0);
+  const [raisedAmount, setRaisedAmount] = useState(18520000);
+  const [approvedCount, setApprovedCount] = useState(548);
+  const [memberCount, setMemberCount] = useState(3500);
 
-  const [paypalCount, setPaypalCount] = useState(7);
+  const [paypalCount, setPaypalCount] = useState(8);
   const [spotifyCount, setSpotifyCount] = useState(5);
-  const [appleCount, setAppleCount] = useState(21);
-  const [googleCount, setGoogleCount] = useState(44);
-  const [amazonCount, setAmazonCount] = useState(62);
+  const [appleCount, setAppleCount] = useState(23);
+  const [googleCount, setGoogleCount] = useState(45);
+  const [amazonCount, setAmazonCount] = useState(63);
   const [microsoftCount, setMicrosoftCount] = useState(48);
-  const [teslaCount, setTeslaCount] = useState(40);
-  const [metaCount, setMetaCount] = useState(35);
+  const [teslaCount, setTeslaCount] = useState(39);
+  const [metaCount, setMetaCount] = useState(36);
 
   // not used yet
   // const [xStartupCount, setXStartupCount] = useState(62);
