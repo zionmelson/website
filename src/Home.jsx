@@ -75,9 +75,6 @@ function Home() {
                 <h1 className="h1" id="animation">
                   recruiters
                 </h1>
-                <h1 className="h1" id="animation">
-                  founders
-                </h1>
               </>
             ) : (
               <></>
