@@ -6,6 +6,7 @@ import SplitText from "split-text-js";
 import { useEffect, useRef, useState } from "react";
 
 import discord from "./images/discord.svg";
+import tinder from "./images/tinder.svg";
 
 import "./App.css";
 
@@ -51,45 +52,23 @@ function Home() {
     <div className="main">
       <div className="vbox">
         <div className="hbox" style={{ gap: "0.5rem" }}>
-          <h1 className="h1" id="hire">
-            Chat with
-          </h1>
-          <div
-            className="vbox"
-            style={{
-              width: "12.5rem",
-              height: "1.5rem",
-            }}
-          >
-            {loaded ? (
-              <>
-                <h1 className="h1" id="animation">
-                  engineers
-                </h1>
-                <h1 className="h1" id="animation">
-                  designers
-                </h1>
-                <h1 className="h1" id="animation">
-                  managers
-                </h1>
-                <h1 className="h1" id="animation">
-                  recruiters
-                </h1>
-              </>
-            ) : (
-              <></>
-            )}
+          <h1 className="h1">it's like</h1>
+          <div className="hbox">
+            <h1 className="h1" style={{ color: "#ee3e73" }}>
+              Tinder
+            </h1>
+            <img src={tinder} className="emoji" alt="tinder" />
           </div>
-          <h1 className="h1">on Discord</h1>
-          <a
-            href="https://discord.gg/learnmutiny"
-            style={{ marginTop: "0.5rem" }}
-          >
-            <h3 className="h3">
-              <img src={discord} className="emoji" alt="Discord" />
-            </h3>
-          </a>
+          <h1 className="h1">for startups</h1>
         </div>
+        <a
+          href="https://discord.gg/learnmutiny"
+          style={{ marginTop: "0.5rem" }}
+        >
+          <h3 className="h3">
+            <img src={discord} className="emoji" alt="Discord" />
+          </h3>
+        </a>
       </div>
     </div>
   );
