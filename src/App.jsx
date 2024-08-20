@@ -1,5 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights";
+import { SpeedInsights } from "@vercel/speed-insights/next/react";
 import Hotjar from "@hotjar/browser";
 
 import { Route, Routes } from "react-router-dom";
