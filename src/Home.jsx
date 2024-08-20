@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/prop-types */
+import { track } from "@vercel/analytics";
 
 import gsap from "gsap";
 import SplitText from "split-text-js";
@@ -64,6 +65,7 @@ function Home() {
         <a
           href="https://discord.gg/learnmutiny"
           style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
         >
           <h3 className="h3">
             <img src={discord} className="emoji" alt="Discord" />
