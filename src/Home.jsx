@@ -54,10 +54,10 @@ function Home() {
         <div className="hbox" style={{ gap: "0.5rem" }}>
           <h1 className="h1">it's like</h1>
           <div className="hbox">
-            <h1 className="h1" style={{ color: "#ee3e73" }}>
-              Tinder
-            </h1>
             <img src={tinder} className="emoji" alt="tinder" />
+            <h1 className="h1" style={{ color: "#ee3e73" }}>
+              tinder
+            </h1>
           </div>
           <h1 className="h1">for startups</h1>
         </div>
