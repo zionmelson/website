@@ -43,6 +43,7 @@ function Home() {
           style={{
             color: "#111111",
             lineHeight: "0",
+            marginTop: "1rem",
           }}
         >
           <h1>
