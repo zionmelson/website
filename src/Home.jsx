@@ -9,16 +9,12 @@ import "./App.css";
 
 function Home() {
   return (
-  <div className="main">
-    <div className="vbox">
-      <div className="hbox" style={{ gap: "0.5rem" }}>
-          <h1 className="h1">it's like</h1>
-          <div className="hbox">
-            <img src={tinder} className="emoji" alt="tinder" />
-              <h1 className="h1" style={{ color: "#ee3e73" }}>
-                it's like
-              </h1>
-          </div>
+    <div className="main">
+      <div className="vbox">
+        <div className="hbox" style={{ gap: "0.5rem" }}>
+          <h1 className="h1" style={{ color: "#ee3e73" }}>
+            it's like
+          </h1>
           <div className="hbox">
             <img src={tinder} className="emoji" alt="tinder" />
             <h1 className="h1" style={{ color: "#f05a64" }}>
@@ -60,8 +56,8 @@ function Home() {
           secure the FAANG talent that will drive your company's innovation and
           growth.
         </p>
+      </div>
     </div>
-  </div>
   );
 }
 
