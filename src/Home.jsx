@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 import { track } from "@vercel/analytics";
 
-import discord from "./images/discord.svg";
 import tinder from "./images/tinder.svg";
 
 import "./App.css";
@@ -23,17 +22,23 @@ function Home() {
           </div>
           <h1 className="h1">for startups</h1>
         </div>
-        <div
-          className="vbox"
-          style={{
-            background: "#5964f1",
-            width: "15rem",
-            height: "2.5rem",
-            borderRadius: "0.5rem",
-          }}
+        <a
+          href="https://discord.gg/learnmutiny"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
         >
-          pop a mint ❄️
-        </div>
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "15rem",
+              height: "5rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            pop a mint ❄️
+          </div>
+        </a>
         <p className="p" style={{ display: "none" }}>
           AI-Powered FAANG Talent Sourcing: Revolutionizing Tech Recruitment Are
           you looking to hire top-tier talent from FAANG companies (Facebook,
