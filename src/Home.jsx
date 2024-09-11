@@ -39,33 +39,85 @@ function Home() {
             pop a mint ❄️
           </div>
         </a>
-        <p className="p" style={{ display: "none" }}>
-          AI-Powered FAANG Talent Sourcing: Revolutionizing Tech Recruitment Are
-          you looking to hire top-tier talent from FAANG companies (Facebook,
-          Amazon, Apple, Netflix, Google)? Our cutting-edge recruitment agency
-          leverages artificial intelligence and Discord community engagement to
-          connect you with the cream of the tech industry crop. Why Choose Our
-          AI-Driven Recruitment Solution? Advanced AI Algorithms: Our
-          proprietary machine learning models identify and evaluate
-          high-potential candidates with unparalleled accuracy. Discord Talent
-          Pool: Access a vibrant community of tech professionals actively
-          discussing industry trends and showcasing their skills. Streamlined
-          Hiring Process: Automated screening and matching save you time and
-          resources in your talent acquisition efforts. Key Benefits: Access to
-          Elite FAANG Talent: Tap into a network of experienced professionals
-          from the world's leading tech companies. Innovative Sourcing
-          Techniques: Utilize AI-powered bots to engage and assess candidates in
-          real-time on Discord. Data-Driven Insights: Leverage analytics to make
-          informed decisions about potential hires and market trends. Efficient
-          Candidate Matching: Our AI algorithms ensure perfect alignment between
-          job requirements and candidate skills. Continuous Learning: Our
-          systems constantly evolve, staying ahead of the dynamic tech
-          recruitment landscape. Our Tech Stack: Artificial Intelligence Machine
-          Learning Natural Language Processing Discord API Integration Big Data
-          Analytics Embrace the future of tech recruitment. Partner with us to
-          secure the FAANG talent that will drive your company's innovation and
-          growth.
-        </p>
+        <article
+          style={{
+            color: "#111111",
+            lineHeight: "0",
+          }}
+        >
+          <h1>
+            AI-Powered FAANG Talent Sourcing: Revolutionizing Tech Recruitment
+          </h1>
+
+          <p>
+            Are you looking to hire top-tier talent from FAANG companies
+            (Facebook, Amazon, Apple, Netflix, Google)? Our cutting-edge
+            recruitment agency leverages artificial intelligence and Discord
+            community engagement to connect you with the cream of the tech
+            industry crop.
+          </p>
+
+          <h2>Why Choose Our AI-Driven Recruitment Solution?</h2>
+          <ul>
+            <li>
+              <strong>Advanced AI Algorithms:</strong> Our proprietary machine
+              learning models identify and evaluate high-potential candidates
+              with unparalleled accuracy.
+            </li>
+            <li>
+              <strong>Discord Talent Pool:</strong> Access a vibrant community
+              of tech professionals actively discussing industry trends and
+              showcasing their skills.
+            </li>
+            <li>
+              <strong>Streamlined Hiring Process:</strong> Automated screening
+              and matching save you time and resources in your talent
+              acquisition efforts.
+            </li>
+          </ul>
+
+          <h2>Key Benefits</h2>
+          <ul>
+            <li>
+              <strong>Access to Elite FAANG Talent:</strong> Tap into a network
+              of experienced professionals from the world's leading tech
+              companies.
+            </li>
+            <li>
+              <strong>Innovative Sourcing Techniques:</strong> Utilize
+              AI-powered bots to engage and assess candidates in real-time on
+              Discord.
+            </li>
+            <li>
+              <strong>Data-Driven Insights:</strong> Leverage analytics to make
+              informed decisions about potential hires and market trends.
+            </li>
+            <li>
+              <strong>Efficient Candidate Matching:</strong> Our AI algorithms
+              ensure perfect alignment between job requirements and candidate
+              skills.
+            </li>
+            <li>
+              <strong>Continuous Learning:</strong> Our systems constantly
+              evolve, staying ahead of the dynamic tech recruitment landscape.
+            </li>
+          </ul>
+
+          <h2>Our Tech Stack</h2>
+          <ul>
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning</li>
+            <li>Natural Language Processing</li>
+            <li>Discord API Integration</li>
+            <li>Big Data Analytics</li>
+          </ul>
+
+          <p>
+            Embrace the future of tech recruitment. Partner with us to secure
+            the FAANG talent that will drive your company's innovation and
+            growth.
+          </p>
+        </article>
       </div>
     </div>
   );
