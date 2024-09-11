@@ -25,7 +25,7 @@
     "react-router-dom": "^6.22.3",
     "react-spring": "^9.7.3",
     "split-text-js": "^1.0.3",
-    "vite": "^5.2.11"
+    "vite": "^5.4.4"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
