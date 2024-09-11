@@ -25,9 +25,14 @@ function Home() {
         </div>
         <div
           className="vbox"
-          style={{ background: "purple", width: "15rem", height: "15rem" }}
+          style={{
+            background: "#5964f1",
+            width: "15rem",
+            height: "2.5rem",
+            borderRadius: "0.5rem",
+          }}
         >
-          pop a mint
+          pop a mint ❄️
         </div>
         <p className="p" style={{ display: "none" }}>
           AI-Powered FAANG Talent Sourcing: Revolutionizing Tech Recruitment Are
