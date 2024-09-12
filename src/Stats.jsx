@@ -79,28 +79,21 @@ function formatDateTime(date) {
   return `${month} ${day}, ${year} ${formattedHours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
 }
 
-function formatToDollars(number) {
-  return number.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD",
-  });
-}
-
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [raisedAmount, setRaisedAmount] = useState(18520000);
-  const [approvedCount, setApprovedCount] = useState(548);
-  const [memberCount, setMemberCount] = useState(3500);
+  const [raisedAmount, setRaisedAmount] = useState(33525000);
+  const [approvedCount, setApprovedCount] = useState(558);
+  const [memberCount, setMemberCount] = useState(4032);
 
-  const [paypalCount, setPaypalCount] = useState(8);
-  const [spotifyCount, setSpotifyCount] = useState(5);
-  const [appleCount, setAppleCount] = useState(23);
-  const [googleCount, setGoogleCount] = useState(45);
-  const [amazonCount, setAmazonCount] = useState(63);
-  const [microsoftCount, setMicrosoftCount] = useState(48);
-  const [teslaCount, setTeslaCount] = useState(39);
-  const [metaCount, setMetaCount] = useState(36);
+  const [paypalCount, setPaypalCount] = useState(9);
+  const [spotifyCount, setSpotifyCount] = useState(6);
+  const [appleCount, setAppleCount] = useState(22);
+  const [googleCount, setGoogleCount] = useState(44);
+  const [amazonCount, setAmazonCount] = useState(62);
+  const [microsoftCount, setMicrosoftCount] = useState(51);
+  const [teslaCount, setTeslaCount] = useState(40);
+  const [metaCount, setMetaCount] = useState(39);
 
   // not used yet
   // const [xStartupCount, setXStartupCount] = useState(62);
