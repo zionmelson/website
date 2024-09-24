@@ -82,19 +82,18 @@ function formatDateTime(date) {
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [raisedAmount, setRaisedAmount] = useState(33525000);
-  const [approvedCount, setApprovedCount] = useState(558);
-  const [memberCount, setMemberCount] = useState(4032);
+  const [raisedAmount, setRaisedAmount] = useState(214625000);
+  const [approvedCount, setApprovedCount] = useState(578);
+  const [memberCount, setMemberCount] = useState(5000);
 
   const [paypalCount, setPaypalCount] = useState(9);
-  const [spotifyCount, setSpotifyCount] = useState(6);
-  const [appleCount, setAppleCount] = useState(22);
+  const [spotifyCount, setSpotifyCount] = useState(10);
+  const [appleCount, setAppleCount] = useState(23);
   const [googleCount, setGoogleCount] = useState(44);
-  const [amazonCount, setAmazonCount] = useState(62);
-  const [microsoftCount, setMicrosoftCount] = useState(51);
-  const [teslaCount, setTeslaCount] = useState(40);
-  const [metaCount, setMetaCount] = useState(39);
-
+  const [amazonCount, setAmazonCount] = useState(70);
+  const [microsoftCount, setMicrosoftCount] = useState(49);
+  const [teslaCount, setTeslaCount] = useState(41);
+  const [metaCount, setMetaCount] = useState(45);
   // not used yet
   // const [xStartupCount, setXStartupCount] = useState(62);
 
