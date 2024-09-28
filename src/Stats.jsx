@@ -35,7 +35,7 @@ function Number({ n }) {
 function Money({ n }) {
   const { number } = useSpring({
     from: { number: 0 },
-    number: n / 1000000,
+    number: isNaN(n) ? 0 : n,
     delay: 900,
     config: { mass: 10, tension: 20, friction: 25 },
   });
@@ -44,7 +44,20 @@ function Money({ n }) {
     <animated.div
       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
     >
-      {number.to((n) => `$${n.toFixed(2)}m`)}
+      {number.to((num) => {
+        if (isNaN(num) || num === 0) return "$0.00";
+
+        const billion = 1000000000;
+        const million = 1000000;
+
+        if (num >= billion) {
+          return `$${(num / billion).toFixed(2)}b`;
+        } else if (num >= million) {
+          return `$${(num / million).toFixed(2)}m`;
+        } else {
+          return `$${num.toFixed(2)}`;
+        }
+      })}
     </animated.div>
   );
 }
