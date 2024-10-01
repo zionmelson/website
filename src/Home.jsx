@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { track } from "@vercel/analytics";
 
-import tinder from "./images/tinder.svg";
+import discord from "./images/discord.svg";
 
 import "./App.css";
 
@@ -11,13 +11,18 @@ function Home() {
     <div className="main">
       <div className="vbox">
         <div className="hbox" style={{ gap: "0.5rem" }}>
-          <h1 className="h1" style={{ color: "#ee3e73" }}>
-            it's like
-          </h1>
+          <span>
+            <h1 className="h1" style={{ color: "white" }}>
+              hire people on Discord
+            </h1>
+            <h1 className="h1" style={{ color: "#5761f6" }}>
+              Discord
+            </h1>
+          </span>
           <div className="hbox">
-            <img src={tinder} className="emoji" alt="tinder" />
-            <h1 className="h1" style={{ color: "#f05a64" }}>
-              tinder
+            <img src={discord} className="emoji" alt="discord" />
+            <h1 className="h1" style={{ color: "white" }}>
+              forever.
             </h1>
           </div>
           <h1 className="h1">for startups</h1>
