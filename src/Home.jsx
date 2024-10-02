@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="main">
       <div className="vbox">
-        <div className="hbox" style={{ gap: "0.5rem" }}>
+        <div className="hbox" style={{ gap: "0.25rem" }}>
           <h1 className="h1" style={{ color: "white" }}>
             hire people on
           </h1>
@@ -20,7 +20,6 @@ function Home() {
           <div className="hbox">
             <img src={discord} className="emoji" alt="discord" />
           </div>
-          <h1 className="h1">forever.</h1>
         </div>
         <a
           href="https://discord.gg/learnmutiny"
