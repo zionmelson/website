@@ -21,7 +21,7 @@ export default function Error() {
                 borderRadius: "0.5rem",
               }}
             >
-              pop a mint ❄️
+              start 🕹️
             </div>
           </a>
         </h3>
