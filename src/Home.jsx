@@ -35,7 +35,7 @@ function Home() {
               borderRadius: "0.5rem",
             }}
           >
-            pop a mint ❄️
+            start 🕹️
           </div>
         </a>
         <article
