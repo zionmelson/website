@@ -21,7 +21,7 @@ export default function Error() {
                 borderRadius: "0.5rem",
               }}
             >
-              start 🕹️
+              PRESS START 🕹️
             </div>
           </a>
         </h3>
