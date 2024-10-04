@@ -35,7 +35,7 @@ function Home() {
               borderRadius: "0.5rem",
             }}
           >
-            start 🕹️
+            PRESS START 🕹️
           </div>
         </a>
         <article
