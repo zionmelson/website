@@ -16,7 +16,7 @@ export default function Error() {
               className="vbox"
               style={{
                 background: "#5964f1",
-                width: "10rem",
+                width: "12.5rem",
                 height: "3.5rem",
                 borderRadius: "0.5rem",
               }}
