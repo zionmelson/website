@@ -45,7 +45,7 @@ function Money({ n }) {
       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
     >
       {number.to((num) => {
-        if (isNaN(num) || num === 0) return "$214.62";
+        if (isNaN(num) || num === 0) return "$214.62m";
 
         const billion = 1000000000;
         const million = 1000000;
