@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="main">
       <div className="vbox">
-        <div className="hbox" style={{ gap: "0.25rem" }}>
+        <div className="hbox" style={{ gap: "0.5rem" }}>
           <h1 className="h1" style={{ color: "white" }}>
             hire people on
           </h1>
