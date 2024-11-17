@@ -35,7 +35,24 @@ function Home() {
               borderRadius: "0.5rem",
             }}
           >
-            PRESS START 🕹️
+            welcome 👋
+          </div>
+        </a>
+        <a
+          href="https://www.learnmutiny.io/stats"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "12.5rem",
+              height: "3.5rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            stats 📊
           </div>
         </a>
         <article
