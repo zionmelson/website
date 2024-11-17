@@ -20,11 +20,17 @@
   flex-direction: column;
   font-family: Inter, sans-serif;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100vh; /* fallback */
+  min-height: -webkit-fill-available; /* for iOS Safari */
   background: var(--black);
   color: var(--white);
   gap: 1rem;
   padding: 1rem;
+}
+
+/* For iOS Safari */
+html {
+  height: -webkit-fill-available;
 }
 
 .h1 {
