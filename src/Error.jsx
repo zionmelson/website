@@ -5,44 +5,46 @@ export default function Error() {
   return (
     <div className="main">
       <h1 className="h1">Let&apos;s get started</h1>
-      <a href="https://discord.gg/learnmutiny">
+      <div className="hbox" style={{ gap: "0.5rem" }}>
         <h3 className="h3">
-            <a
-          href="https://discord.gg/learnmutiny"
-          style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
-        >
-          <div
-            className="vbox"
-            style={{
-              background: "#5964f1",
-              width: "10.5rem",
-              height: "3rem",
-              borderRadius: "0.5rem",
-            }}
+          <a
+            href="https://discord.gg/learnmutiny"
+            style={{ marginTop: "0.5rem" }}
+            onClick={() => track("discord")}
           >
-            welcome 👋
-          </div>
-        </a>
-        <a
-          href="https://www.learnmutiny.io/stats"
-          style={{ marginTop: "0.5rem" }}
-          onClick={() => track("stats")}
-        >
-          <div
-            className="vbox"
-            style={{
-              background: "#999999",
-              width: "10.5rem",
-              height: "3rem",
-              borderRadius: "0.5rem",
-            }}
-          >
-            stats 📊
-          </div>
-        </a>
+            <div
+              className="vbox"
+              style={{
+                background: "#5964f1",
+                width: "10.5rem",
+                height: "3rem",
+                borderRadius: "0.5rem",
+              }}
+            >
+              welcome 👋
+            </div>
+          </a>
         </h3>
-      </a>
+        <h3 className="h3">
+          <a
+            href="https://www.learnmutiny.io/stats"
+            style={{ marginTop: "0.5rem" }}
+            onClick={() => track("stats")}
+          >
+            <div
+              className="vbox"
+              style={{
+                background: "#999999",
+                width: "10.5rem",
+                height: "3rem",
+                borderRadius: "0.5rem",
+              }}
+            >
+              stats 📊
+            </div>
+          </a>
+        </h3>
+      </div>
       <article
         style={{
           color: "#111111",
