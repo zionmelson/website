@@ -46,8 +46,7 @@ function Home() {
           <div
             className="vbox"
             style={{
-              color: "black",
-              background: "#cbcbcb",
+              background: "#b6b6b6",
               width: "10.5rem",
               height: "3rem",
               borderRadius: "0.5rem",
