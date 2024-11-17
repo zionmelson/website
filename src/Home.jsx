@@ -30,8 +30,8 @@ function Home() {
             className="vbox"
             style={{
               background: "#5964f1",
-              width: "12.5rem",
-              height: "3.5rem",
+              width: "10.5rem",
+              height: "3rem",
               borderRadius: "0.5rem",
             }}
           >
@@ -46,9 +46,9 @@ function Home() {
           <div
             className="vbox"
             style={{
-              background: "#5964f1",
-              width: "12.5rem",
-              height: "3.5rem",
+              background: "#cbcbcb",
+              width: "10.5rem",
+              height: "3rem",
               borderRadius: "0.5rem",
             }}
           >
