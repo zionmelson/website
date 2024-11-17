@@ -45,7 +45,7 @@ function Money({ n }) {
       style={{ fontFamily: "Inter, sans-serif", fontWeight: "700" }}
     >
       {number.to((num) => {
-        if (isNaN(num) || num === 0) return "$214.62m";
+        if (isNaN(num)) return "$588.52m";
 
         const billion = 1000000000;
         const million = 1000000;
@@ -95,18 +95,18 @@ function formatDateTime(date) {
 function Stats() {
   const [time, setTime] = useState(0);
 
-  const [raisedAmount, setRaisedAmount] = useState(214625000);
-  const [approvedCount, setApprovedCount] = useState(578);
-  const [memberCount, setMemberCount] = useState(5000);
+  const [raisedAmount, setRaisedAmount] = useState(588525000);
+  const [approvedCount, setApprovedCount] = useState(615);
+  const [memberCount, setMemberCount] = useState(8142);
 
-  const [paypalCount, setPaypalCount] = useState(9);
-  const [spotifyCount, setSpotifyCount] = useState(10);
-  const [appleCount, setAppleCount] = useState(23);
-  const [googleCount, setGoogleCount] = useState(44);
-  const [amazonCount, setAmazonCount] = useState(70);
-  const [microsoftCount, setMicrosoftCount] = useState(49);
-  const [teslaCount, setTeslaCount] = useState(41);
-  const [metaCount, setMetaCount] = useState(45);
+  const [paypalCount, setPaypalCount] = useState(8);
+  const [spotifyCount, setSpotifyCount] = useState(13);
+  const [appleCount, setAppleCount] = useState(25);
+  const [googleCount, setGoogleCount] = useState(51);
+  const [amazonCount, setAmazonCount] = useState(83);
+  const [microsoftCount, setMicrosoftCount] = useState(56);
+  const [teslaCount, setTeslaCount] = useState(40);
+  const [metaCount, setMetaCount] = useState(50);
   // not used yet
   // const [xStartupCount, setXStartupCount] = useState(62);
 
