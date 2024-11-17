@@ -7,23 +7,40 @@ export default function Error() {
       <h1 className="h1">Let&apos;s get started</h1>
       <a href="https://discord.gg/learnmutiny">
         <h3 className="h3">
-          <a
-            href="https://discord.gg/learnmutiny"
-            style={{ marginTop: "0.5rem" }}
-            onClick={() => track("discord")}
+            <a
+          href="https://discord.gg/learnmutiny"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
           >
-            <div
-              className="vbox"
-              style={{
-                background: "#5964f1",
-                width: "12.5rem",
-                height: "3.5rem",
-                borderRadius: "0.5rem",
-              }}
-            >
-              PRESS START 🕹️
-            </div>
-          </a>
+            welcome 👋
+          </div>
+        </a>
+        <a
+          href="https://www.learnmutiny.io/stats"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("stats")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#999999",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            stats 📊
+          </div>
+        </a>
         </h3>
       </a>
       <article
