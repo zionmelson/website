@@ -28,11 +28,6 @@
   padding: 1rem;
 }
 
-/* For iOS Safari */
-html {
-  height: -webkit-fill-available;
-}
-
 .h1 {
   font-size: 2.5rem;
 }
