@@ -41,7 +41,7 @@ function Home() {
         <a
           href="https://www.learnmutiny.io/stats"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("stats")}
         >
           <div
             className="vbox"
