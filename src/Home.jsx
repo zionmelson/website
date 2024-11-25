@@ -59,7 +59,7 @@ function Home() {
           style={{
             color: "#111111",
             lineHeight: "0",
-            marginTop: "1rem",
+            marginTop: "0.5rem",
           }}
           itemscope
           itemtype="https://schema.org/TechArticle"
@@ -148,7 +148,7 @@ function Home() {
             </p>
           </footer>
         </article>
-        <article style={{ color: "#111111", lineHeight: "0", marginTop: "1rem" }} itemscope itemtype="https://schema.org/TechArticle">
+        <article style={{ color: "#111111", lineHeight: "0", marginTop: "0.5rem" }} itemscope itemtype="https://schema.org/TechArticle">
   <h1 itemprop="headline">
     Discord-First Tech Recruitment: Building Quality-Focused Communities
   </h1>
@@ -220,7 +220,7 @@ function Home() {
     </p>
   </footer>
 </article>
-        <article style={{ color: "#111111", lineHeight: "0", marginTop: "1rem" }} itemscope itemtype="https://schema.org/TechArticle">
+        <article style={{ color: "#111111", lineHeight: "0", marginTop: "0.5rem" }} itemscope itemtype="https://schema.org/TechArticle">
   <h1 itemprop="headline">
     Monetize Your FAANG Network: LinkedIn to Discord Referral Program
   </h1>
