@@ -22,7 +22,7 @@ function Home() {
           </div>
         </div>
         <a
-          href="https://discord.gg/learnmutiny"
+          href="discord:///channels/984461709806804992/1271366853343707177"
           style={{ marginTop: "0.5rem" }}
           onClick={() => track("discord")}
         >
