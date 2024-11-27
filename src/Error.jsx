@@ -21,7 +21,7 @@ export default function Error() {
                 borderRadius: "0.5rem",
               }}
             >
-              welcome 👋
+              find jobs ⭐️
             </div>
           </a>
         </h3>
