@@ -39,6 +39,40 @@ function Home() {
           </div>
         </a>
         <a
+          href="discord:///channels/984461709806804992/1275968297476685854"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            find vcs 💵
+          </div>
+        </a>
+        <a
+          href="discord:///channels/984461709806804992/1257840738096386048"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            find startups 🕹️
+          </div>
+        </a>
+        <a
           href="https://www.learnmutiny.io/stats"
           style={{ marginTop: "0.5rem" }}
           onClick={() => track("stats")}
