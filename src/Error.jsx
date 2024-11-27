@@ -7,6 +7,23 @@ export default function Error() {
       <h1 className="h1">Let&apos;s get started</h1>
       <div className="vbox" style={{ gap: "0.5rem" }}>
           <a
+          href="https://discord.gg/learnmutiny"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            join us 👋
+          </div>
+        </a>
+        <a
           href="discord:///channels/984461709806804992/1271366853343707177"
           style={{ marginTop: "0.5rem" }}
           onClick={() => track("jobs")}
@@ -14,30 +31,13 @@ export default function Error() {
           <div
             className="vbox"
             style={{
-              background: "#5964f1",
+              background: "#248045",
               width: "10.5rem",
               height: "3rem",
               borderRadius: "0.5rem",
             }}
           >
             find jobs ⭐️
-          </div>
-        </a>
-        <a
-          href="discord:///channels/984461709806804992/1275968297476685854"
-          style={{ marginTop: "0.5rem" }}
-          onClick={() => track("vcs")}
-        >
-          <div
-            className="vbox"
-            style={{
-              background: "#5964f1",
-              width: "10.5rem",
-              height: "3rem",
-              borderRadius: "0.5rem",
-            }}
-          >
-            find vcs 💵
           </div>
         </a>
         <a
@@ -48,7 +48,7 @@ export default function Error() {
           <div
             className="vbox"
             style={{
-              background: "#5964f1",
+              background: "#248045",
               width: "10.5rem",
               height: "3rem",
               borderRadius: "0.5rem",
@@ -57,23 +57,23 @@ export default function Error() {
             find startups 🕹️
           </div>
         </a>
-          <a
-            href="https://www.learnmutiny.io/stats"
-            style={{ marginTop: "0.5rem" }}
-            onClick={() => track("stats")}
+        <a
+          href="https://www.learnmutiny.io/stats"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("stats")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#999999",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
           >
-            <div
-              className="vbox"
-              style={{
-                background: "#999999",
-                width: "10.5rem",
-                height: "3rem",
-                borderRadius: "0.5rem",
-              }}
-            >
-              stats 📊
-            </div>
-          </a>
+            stats 📊
+          </div>
+        </a>
       </div>
       <article
         style={{
