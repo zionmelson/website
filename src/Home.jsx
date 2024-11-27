@@ -35,7 +35,7 @@ function Home() {
               borderRadius: "0.5rem",
             }}
           >
-            welcome 👋
+            find jobs ⭐️
           </div>
         </a>
         <a
