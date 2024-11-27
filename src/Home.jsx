@@ -23,6 +23,23 @@ function Home() {
         </div>
         <div className="vbox" style={{ gap: "0.5rem" }}>
         <a
+          href="https://discord.gg/learnmutiny"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            join us 👋
+          </div>
+        </a>
+        <a
           href="discord:///channels/984461709806804992/1271366853343707177"
           style={{ marginTop: "0.5rem" }}
           onClick={() => track("jobs")}
@@ -30,30 +47,13 @@ function Home() {
           <div
             className="vbox"
             style={{
-              background: "#5964f1",
+              background: "#248045",
               width: "10.5rem",
               height: "3rem",
               borderRadius: "0.5rem",
             }}
           >
             find jobs ⭐️
-          </div>
-        </a>
-        <a
-          href="discord:///channels/984461709806804992/1275968297476685854"
-          style={{ marginTop: "0.5rem" }}
-          onClick={() => track("vcs")}
-        >
-          <div
-            className="vbox"
-            style={{
-              background: "#5964f1",
-              width: "10.5rem",
-              height: "3rem",
-              borderRadius: "0.5rem",
-            }}
-          >
-            find vcs 💵
           </div>
         </a>
         <a
@@ -64,7 +64,7 @@ function Home() {
           <div
             className="vbox"
             style={{
-              background: "#5964f1",
+              background: "#248045",
               width: "10.5rem",
               height: "3rem",
               borderRadius: "0.5rem",
