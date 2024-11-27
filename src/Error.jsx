@@ -9,7 +9,7 @@ export default function Error() {
           <a
           href="discord:///channels/984461709806804992/1271366853343707177"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("jobs")}
         >
           <div
             className="vbox"
@@ -26,7 +26,7 @@ export default function Error() {
         <a
           href="discord:///channels/984461709806804992/1275968297476685854"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("vcs")}
         >
           <div
             className="vbox"
@@ -43,7 +43,7 @@ export default function Error() {
         <a
           href="discord:///channels/984461709806804992/1257840738096386048"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("startups")}
         >
           <div
             className="vbox"
