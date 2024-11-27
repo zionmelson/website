@@ -29,10 +29,6 @@ function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
-         <Route path="/discord-jobs" element={() => {
-    window.location.href = 'discord:///channels/984461709806804992/1271366853343707177';
-    return null;
-  }} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
