@@ -8,7 +8,7 @@ export default function Error() {
       <div className="hbox" style={{ gap: "0.5rem" }}>
         <h3 className="h3">
           <a
-            href="https://discord.gg/learnmutiny"
+            href="discord:///channels/984461709806804992/1271366853343707177"
             style={{ marginTop: "0.5rem" }}
             onClick={() => track("discord")}
           >
