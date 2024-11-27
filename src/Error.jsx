@@ -5,27 +5,58 @@ export default function Error() {
   return (
     <div className="main">
       <h1 className="h1">Let&apos;s get started</h1>
-      <div className="hbox" style={{ gap: "0.5rem" }}>
-        <h3 className="h3">
+      <div className="vbox" style={{ gap: "0.5rem" }}>
           <a
-            href="discord:///channels/984461709806804992/1271366853343707177"
-            style={{ marginTop: "0.5rem" }}
-            onClick={() => track("discord")}
+          href="discord:///channels/984461709806804992/1271366853343707177"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
           >
-            <div
-              className="vbox"
-              style={{
-                background: "#5964f1",
-                width: "10.5rem",
-                height: "3rem",
-                borderRadius: "0.5rem",
-              }}
-            >
-              find jobs ⭐️
-            </div>
-          </a>
-        </h3>
-        <h3 className="h3">
+            find jobs ⭐️
+          </div>
+        </a>
+        <a
+          href="discord:///channels/984461709806804992/1275968297476685854"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            find vcs 💵
+          </div>
+        </a>
+        <a
+          href="discord:///channels/984461709806804992/1257840738096386048"
+          style={{ marginTop: "0.5rem" }}
+          onClick={() => track("discord")}
+        >
+          <div
+            className="vbox"
+            style={{
+              background: "#5964f1",
+              width: "10.5rem",
+              height: "3rem",
+              borderRadius: "0.5rem",
+            }}
+          >
+            find startups 🕹️
+          </div>
+        </a>
           <a
             href="https://www.learnmutiny.io/stats"
             style={{ marginTop: "0.5rem" }}
@@ -43,7 +74,6 @@ export default function Error() {
               stats 📊
             </div>
           </a>
-        </h3>
       </div>
       <article
         style={{
