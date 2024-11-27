@@ -21,10 +21,11 @@ function Home() {
             <img src={discord} className="emoji" alt="discord" />
           </div>
         </div>
+        <div className="vbox" style={{ gap: "0.5rem" }}>
         <a
           href="discord:///channels/984461709806804992/1271366853343707177"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("jobs")}
         >
           <div
             className="vbox"
@@ -41,7 +42,7 @@ function Home() {
         <a
           href="discord:///channels/984461709806804992/1275968297476685854"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("vcs")}
         >
           <div
             className="vbox"
@@ -58,7 +59,7 @@ function Home() {
         <a
           href="discord:///channels/984461709806804992/1257840738096386048"
           style={{ marginTop: "0.5rem" }}
-          onClick={() => track("discord")}
+          onClick={() => track("startups")}
         >
           <div
             className="vbox"
@@ -89,6 +90,7 @@ function Home() {
             stats 📊
           </div>
         </a>
+        </div>
         <article
           style={{
             color: "#111111",
