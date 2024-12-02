@@ -53,7 +53,7 @@ function Home() {
               borderRadius: "0.5rem",
             }}
           >
-            see jobs ⭐️
+            see jobs 👀
           </div>
         </a>
         <a
