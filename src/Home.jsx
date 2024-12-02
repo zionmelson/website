@@ -53,24 +53,7 @@ function Home() {
               borderRadius: "0.5rem",
             }}
           >
-            find jobs ⭐️
-          </div>
-        </a>
-        <a
-          href="discord:///channels/984461709806804992/1257840738096386048"
-          style={{ marginTop: "0.5rem" }}
-          onClick={() => track("startups")}
-        >
-          <div
-            className="vbox"
-            style={{
-              background: "#248045",
-              width: "10.5rem",
-              height: "3rem",
-              borderRadius: "0.5rem",
-            }}
-          >
-            find startups 🕹️
+            see jobs ⭐️
           </div>
         </a>
         <a
