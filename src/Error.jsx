@@ -8,7 +8,7 @@ export default function Error() {
       <div className="vbox" style={{ gap: "0.5rem" }}>
           <a
           href="https://discord.gg/learnmutiny"
-          style={{ marginTop: "0.3rem" }}
+          style={{ marginTop: "0.5rem" }}
           onClick={() => track("discord")}
         >
           <div
@@ -25,7 +25,7 @@ export default function Error() {
         </a>
         <a
           href="discord:///channels/984461709806804992/1271366853343707177"
-          style={{ marginTop: "0.3rem" }}
+          style={{ marginTop: "0.5rem" }}
           onClick={() => track("jobs")}
         >
           <div
@@ -42,7 +42,7 @@ export default function Error() {
         </a>
         <a
           href="https://www.learnmutiny.io/stats"
-          style={{ marginTop: "0.3rem" }}
+          style={{ marginTop: "0.5rem" }}
           onClick={() => track("stats")}
         >
           <div
@@ -62,7 +62,7 @@ export default function Error() {
           style={{
             color: "#111111",
             lineHeight: "0",
-            marginTop: "0.5rem",
+            marginTop: "0rem",
           }}
           itemscope
           itemtype="https://schema.org/TechArticle"
@@ -151,7 +151,7 @@ export default function Error() {
             </p>
           </footer>
         </article>
-        <article style={{ color: "#111111", lineHeight: "0", marginTop: "0.3rem" }} itemscope itemtype="https://schema.org/TechArticle">
+        <article style={{ color: "#111111", lineHeight: "0", marginTop: "0rem" }} itemscope itemtype="https://schema.org/TechArticle">
   <h1 itemprop="headline">
     Discord-First Tech Recruitment: Building Quality-Focused Communities
   </h1>
@@ -223,7 +223,7 @@ export default function Error() {
     </p>
   </footer>
 </article>
-        <article style={{ color: "#111111", lineHeight: "0", marginTop: "0.3rem" }} itemscope itemtype="https://schema.org/TechArticle">
+        <article style={{ color: "#111111", lineHeight: "0", marginTop: "0rem" }} itemscope itemtype="https://schema.org/TechArticle">
   <h1 itemprop="headline">
     Monetize Your FAANG Network: LinkedIn to Discord Referral Program
   </h1>
@@ -307,7 +307,7 @@ export default function Error() {
     </p>
   </footer>
 </article>
-<article style={{ color: "#111111", lineHeight: "0", marginTop: "0.3rem" }} itemscope itemtype="https://schema.org/TechArticle">
+<article style={{ color: "#111111", lineHeight: "0", marginTop: "0rem" }} itemscope itemtype="https://schema.org/TechArticle">
   <h1 itemprop="headline">
     Build Your Professional Network: Community-Driven Tech Recruitment
   </h1>
@@ -391,7 +391,7 @@ export default function Error() {
     </p>
   </footer>
 </article>
-<article style={{ color: "#111111", lineHeight: "0", marginTop: "0.3rem" }} itemscope itemtype="https://schema.org/TechArticle">
+<article style={{ color: "#111111", lineHeight: "0", marginTop: "0rem" }} itemscope itemtype="https://schema.org/TechArticle">
   <h1 itemprop="headline">
     Revolutionary Tech Recruitment: Why Discord is the Future of Hiring
   </h1>
