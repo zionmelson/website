@@ -12,7 +12,7 @@ function Home() {
       <div className="vbox">
         <div className="hbox" style={{ gap: "0.5rem" }}>
           <h1 className="h1" style={{ color: "white" }}>
-            hire people on
+            find jobs on
           </h1>
           <h1 className="h1" style={{ color: "#5761f6" }}>
             Discord
